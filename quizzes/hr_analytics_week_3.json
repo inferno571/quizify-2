@@ -1,0 +1,114 @@
+{
+  "id": "hr-analytics-week-3",
+  "title": "HR Analytics - Week 3 Assignment 3",
+  "subject": "HR Analytics",
+  "date": "09/10/2026",
+  "questions": [
+    {
+      "question": "1. A manufacturing company with an outdated work culture and poor employer branding is struggling to attract candidates even after posting on multiple platforms. Which influence, as listed under constraints on choosing a recruiting source, most directly explains this problem?",
+      "options": [
+        "Limited budgetary support",
+        "Restrictive policies of the government",
+        "Poor image",
+        "Conservative internal policies"
+      ],
+      "correctAnswer": "Poor image",
+      "explanation": "An outdated culture and weak reputation constitute a 'Poor image' constraint, discouraging talented applicants regardless of advertising reach."
+    },
+    {
+      "question": "2. Which of the following correctly pairs a recruitment source with its category?",
+      "options": [
+        "Job bidding — External Method",
+        "Employee referrals — External Method",
+        "Educational institutions — Internal Method",
+        "Promotions and transfer — Internal Method"
+      ],
+      "correctAnswer": "Promotions and transfer — Internal Method",
+      "explanation": "Promotions and transfers source talent from within the existing workforce, making them Internal Methods."
+    },
+    {
+      "question": "3. FinServe, a financial services firm, identifies gaps in gender and ethnic diversity, particularly in senior management. Which combination of strategies most directly addresses this challenge?",
+      "options": [
+        "Increasing salaries and offering remote work options.",
+        "Partnering with diverse professional organizations, mentorship programs, and unconscious bias training.",
+        "Reducing qualification requirements and using only internal promotions.",
+        "Outsourcing recruitment exclusively to third-party agencies."
+      ],
+      "correctAnswer": "Partnering with diverse professional organizations, mentorship programs, and unconscious bias training.",
+      "explanation": "Addressing systemic leadership diversity gaps requires targeted sourcing partners, career mentorship pathways, and reducing cognitive bias in promotion and hiring."
+    },
+    {
+      "question": "4. DiversityDesigns, a graphic design agency, wants to attract candidates from non-traditional and self-taught backgrounds. Which of the following actions directly supports this goal in the 'Identifying HR Requirements' step?",
+      "options": [
+        "Publishing job ads only on LinkedIn and Naukri.",
+        "Requiring CISSP and CISM certifications for all applicants.",
+        "Using inclusive language, avoiding unnecessary jargon, and highlighting flexible working arrangements in job descriptions.",
+        "Limiting applications to candidates with formal degrees from recognized universities."
+      ],
+      "correctAnswer": "Using inclusive language, avoiding unnecessary jargon, and highlighting flexible working arrangements in job descriptions.",
+      "explanation": "Inclusive language and eliminating rigid jargon/degree barriers opens requirements to competent non-traditional talent."
+    },
+    {
+      "question": "5. A company adopted a __________ recruitment strategy, which involves removing names and other identifying information from resumes and applications, to minimize unconscious bias during candidate screening.",
+      "options": [
+        "Blind",
+        "Panel-based",
+        "Competency-based",
+        "Structured"
+      ],
+      "correctAnswer": "Blind",
+      "explanation": "Blind recruitment redacts personal demographic identifiers (name, gender, photo, age) to prevent unconscious bias during screening."
+    },
+    {
+      "question": "6. A company adopting the 'hire for attitude, train for skill' philosophy primarily focuses on evaluating candidates' technical expertise and domain knowledge rather than their alignment with company values.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "False",
+      "explanation": "'Hire for attitude, train for skill' explicitly prioritizes mindset, work ethic, and cultural value alignment over existing technical knowledge."
+    },
+    {
+      "question": "7. An organization is experiencing high time-to-hire and is unable to identify which sourcing channels deliver the best candidates. Which combination of technological tools would best address both challenges simultaneously?",
+      "options": [
+        "Using spreadsheets for manual tracking combined with periodic reviews by HR managers.",
+        "Increasing the number of job postings on paid portals and conducting monthly HR audits.",
+        "Deploying an Applicant Tracking System (ATS) integrated with job boards and a Candidate Relationship Management (CRM) tool.",
+        "Setting up an internal HR helpdesk and training managers in Excel-based reporting."
+      ],
+      "correctAnswer": "Deploying an Applicant Tracking System (ATS) integrated with job boards and a Candidate Relationship Management (CRM) tool.",
+      "explanation": "An integrated ATS and CRM automates candidate pipeline workflows, shortens cycle times, and attributes source efficacy."
+    },
+    {
+      "question": "8. An IT company facing a sudden spike in project demand needs to scale its workforce for 6 months without the long-term commitment of permanent hiring. At the same time, the HR team wants to evaluate the effectiveness of the current recruitment source before committing further. Which combination of strategies would be most appropriate?",
+      "options": [
+        "Use temporary employees as an alternative to recruiting and evaluate the source using yield ratios.",
+        "Opt for employee leasing and evaluate the source using surveys and studies.",
+        "Use subcontracting and evaluate the source using the recruitment process flowchart.",
+        "Use outsourcing as an alternative to recruiting and evaluate the source using time-lapse data."
+      ],
+      "correctAnswer": "Use temporary employees as an alternative to recruiting and evaluate the source using yield ratios.",
+      "explanation": "Temporary staffing fulfills short-term surge needs without permanent headcount commitments, and yield ratios measure applicant conversion per source."
+    },
+    {
+      "question": "9. LinkedIn's primary strategy for external hiring was to focus on active job seekers, candidates who were actively looking for new employment at the time of recruitment.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "False",
+      "explanation": "LinkedIn's breakthrough value proposition was targeting passive candidates—professionals not actively browsing job boards but open to opportunities."
+    },
+    {
+      "question": "10. Any company’s average time to hire software engineers was 60 days, which was above the industry average. What two interventions might that company implement to reduce this gap?",
+      "options": [
+        "Increasing recruiter headcount and conducting walk-in interviews.",
+        "Reducing the number of interview rounds and offering higher salaries.",
+        "Partnering with universities and deploying campus placement drives.",
+        "Implementing an AI-powered screening tool and a self-service interview scheduling system."
+      ],
+      "correctAnswer": "Implementing an AI-powered screening tool and a self-service interview scheduling system.",
+      "explanation": "AI-automated resume screening and self-service interview scheduling eliminate administrative bottlenecks and scheduling delays."
+    }
+  ]
+}

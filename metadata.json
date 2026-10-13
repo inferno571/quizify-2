@@ -1,0 +1,6 @@
+{
+  "name": "Quizify PDF",
+  "description": "Upload a PDF containing multiple-choice questions to automatically generate an interactive quiz using Gemini.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}

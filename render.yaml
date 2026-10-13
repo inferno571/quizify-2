@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: quizify-backend
+    env: go
+    rootDir: backend
+    buildCommand: go build -o server main.go
+    startCommand: ./server
+    envVars:
+      - key: PORT
+        value: 8080
+
+  - type: web
+    name: quizify-frontend
+    env: node
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: API_URL
+        value: https://quizify-1-15tm.onrender.com

@@ -1,0 +1,96 @@
+{
+  "id": "dlnlp-assignment-5",
+  "title": "DLNLP Assignment 5 Solutions",
+  "subject": "DLNLP",
+  "date": "10/10/2026",
+  "questions": [
+    {
+      "question": "1. An encoder–decoder Transformer translates a 6-token source to a 5-token target. Consider the two attention sub-layers of one decoder block while computing representation of target position 3. Which option correctly states source of Q, K, V and visible key positions?",
+      "options": [
+        "Masked self-attention: Q from the decoder, K, V from the encoder output; 3 visible positions. Cross-attention: Q, K, V all from the encoder; 6 visible positions.",
+        "Masked self-attention: Q, K, V all from the decoder; 5 visible positions, since teacher forcing makes the whole target available. Cross-attention: Q from the encoder, K, V from the decoder; 6 visible positions.",
+        "Masked self-attention: Q, K, V all from the decoder; 3 visible positions. Cross-attention: Q from the decoder, K, V from the output of the top encoder block; 6 visible positions.",
+        "Masked self-attention: Q, K, V all from the decoder; 3 visible positions. Cross-attention: Q from the decoder, K, V from the top encoder block; 3 visible positions, because the same causal mask is applied there as well."
+      ],
+      "correctAnswer": "Masked self-attention: Q, K, V all from the decoder; 3 visible positions. Cross-attention: Q from the decoder, K, V from the output of the top encoder block; 6 visible positions.",
+      "explanation": "Masked self-attention operates within the target sequence with causal mask hiding positions 4 and 5 (so 3 visible keys: 1, 2, 3). Cross-attention uses Q from the decoder and K, V from the full top encoder block (all 6 source positions visible)."
+    },
+    {
+      "question": "2. A single-head encoder self-attention layer has dmodel = 3 and dk = dv = 2. Token embeddings are x1 = [1, 0, 1], x2 = [0, 1, 2]. Projections are WQ = [[1, 0], [0, 1], [1, 0]], WK = [[1, 1], [0, -1], [0, 1]], WV = [[2, 0], [0, 1], [0, 1]]. Scores scaled by √dk. With e^1.414 ≈ 4.113, e^0 = 1, what is the self-attention output a1 for token 1?",
+      "options": [
+        "[ 1.609, 1.391 ]",
+        "[ 1.762, 1.238 ]",
+        "[ 0.392, 2.608 ]",
+        "[ 1.000, 2.000 ]"
+      ],
+      "correctAnswer": "[ 1.609, 1.391 ]",
+      "explanation": "q1 = [2, 0]; k1 = [1, 2], k2 = [0, 1]; v1 = [2, 1], v2 = [0, 3]. Dot products: q1·k1 = 2, q1·k2 = 0. Scaled by √2: [1.414, 0]. Softmax weights: α = [0.804, 0.196]. Output a1 = 0.804[2, 1] + 0.196[0, 3] = [1.609, 1.391]."
+    },
+    {
+      "question": "3. Two multi-head attention layers have dmodel = 96. Config A: h = 6, dq = dk = dv = 16. Config B: h = 12, dq = dk = dv = 8. Ignoring biases, what is the total number of parameters in WQ, WK, WV and WO for A and B respectively?",
+      "options": [
+        "27,648 and 27,648",
+        "36,864 and 36,864",
+        "36,864 and 73,728",
+        "13,824 and 11,520"
+      ],
+      "correctAnswer": "36,864 and 36,864",
+      "explanation": "In both configurations h × dk = 96 = dmodel. Projections cost 3 × dmodel × (h × dk) = 3 × 96 × 96 = 27,648. Output projection WO costs 96 × 96 = 9,216. Total for each = 36,864."
+    },
+    {
+      "question": "4. A sparse mixture-of-experts layer contains E = 8 experts and routes each token independently with top-k routing, k = 2. A sequence of 6 tokens passes through the layer. How many token–expert feed-forward computations are performed, how many for Switch layer, and what fraction of all possible pairs is evaluated in the first case?",
+      "options": [
+        "12; 6; 25%",
+        "48; 48; 100%",
+        "12; 12; 25%",
+        "2; 1; ≈ 4.2%"
+      ],
+      "correctAnswer": "12; 6; 25%",
+      "explanation": "With k = 2: 6 × 2 = 12 computations. Switch layer has k = 1: 6 × 1 = 6 computations. Total possible pairs = 6 × 8 = 48, so 12 / 48 = 25%."
+    },
+    {
+      "question": "5. In one attention head a query has dot products 2, 0 and −2 with the three keys of the sequence, and dk = 4. What is the attention distribution over the three keys?",
+      "options": [
+        "[ 0.867, 0.117, 0.016 ]",
+        "[ 0.506, 0.307, 0.186 ]",
+        "[ 0.665, 0.245, 0.090 ]",
+        "[ 0.333, 0.333, 0.333 ]"
+      ],
+      "correctAnswer": "[ 0.665, 0.245, 0.090 ]",
+      "explanation": "Scale by √dk = 2: scores become [1, 0, -1]. Softmax denominators = 2.718 + 1 + 0.368 = 4.086. Probabilities = [2.718/4.086, 1/4.086, 0.368/4.086] = [0.665, 0.245, 0.090]."
+    },
+    {
+      "question": "6. A sequence of N = 4096 tokens is processed by a Linformer-style layer, which replaces the N × N attention-score matrix with an N × k matrix, k = 128. How many entries does each matrix contain, by what factor does the number of score entries fall, and is a 20× reduction achieved?",
+      "options": [
+        "16,777,216 and 524,288; a 16× reduction; the target is not met.",
+        "8,388,608 and 524,288; a 16× reduction; the target is not met.",
+        "16,777,216 and 16,384; a 1024× reduction; the target is met.",
+        "16,777,216 and 524,288; a 32× reduction; the target is met."
+      ],
+      "correctAnswer": "16,777,216 and 524,288; a 32× reduction; the target is met.",
+      "explanation": "N² = 4096² = 16,777,216. N × k = 4096 × 128 = 524,288. Reduction factor = N / k = 4096 / 128 = 32× (≥ 20×, target met)."
+    },
+    {
+      "question": "7. A sparse mixture-of-experts layer has N = 4 experts with router logits (1, 2, 0, −1). Softmax gate values p = [0.237, 0.644, 0.087, 0.032], k = 2. Expert outputs: E1 = [1, 0], E2 = [0, 2], E3 = [2, 2], E4 = [-1, 1]. What are y and the output a Switch layer would produce?",
+      "options": [
+        "y = [ 0.237, 1.288 ]; Switch: [ 0, 1.288 ]",
+        "y = [ 0.269, 1.462 ]; Switch: [ 0, 2.000 ]",
+        "y = [ 0.379, 1.494 ]; Switch: [ 0, 1.288 ]",
+        "y = [ 1.000, 4.000 ]; Switch: [ 0, 4.000 ]"
+      ],
+      "correctAnswer": "y = [ 0.237, 1.288 ]; Switch: [ 0, 1.288 ]",
+      "explanation": "Top-2 experts are E2 (p2 = 0.644) and E1 (p1 = 0.237). Combined y = 0.644[0, 2] + 0.237[1, 0] = [0.237, 1.288]. Switch layer takes top-1 (E2): 0.644[0, 2] = [0, 1.288]."
+    },
+    {
+      "question": "8. A decoder self-attention layer processes a sequence of 7 tokens; entry (i, j) of the 7 × 7 score matrix is masked whenever j > i. How many entries survive the mask, and what fraction of the corresponding encoder count is that?",
+      "options": [
+        "28 entries; ≈ 0.667",
+        "28 entries; ≈ 0.571",
+        "21 entries; ≈ 0.429",
+        "49 entries; 1.000"
+      ],
+      "correctAnswer": "28 entries; ≈ 0.571",
+      "explanation": "Sum for i=1 to 7 is 7 × 8 / 2 = 28 entries. Encoder computes 7² = 49 entries. Fraction = 28 / 49 = 4/7 ≈ 0.571."
+    }
+  ]
+}

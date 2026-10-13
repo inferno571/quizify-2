@@ -1,0 +1,118 @@
+{
+  "id": "dlnlp-assignment-11",
+  "title": "DLNLP Assignment 11 Solutions",
+  "subject": "DLNLP",
+  "date": "10/10/2026",
+  "questions": [
+    {
+      "question": "1. Adopt the Chinchilla rule of thumb that, at the compute-optimal point, a model should see D* ≈ 20 N* training tokens, with C ≈ 6N D. For a budget of C = 1.2 × 10^24 FLOPs, what are N* and D*? If budget is raised 100×, what are the new optima?",
+      "options": [
+        "N* ≈ 100B, D* ≈ 2T; at 100× compute, N* ≈ 1T and D* ≈ 20T.",
+        "N* ≈ 45B, D* ≈ 4.5T; at 100× compute, N* ≈ 450B and D* ≈ 45T.",
+        "N* ≈ 100B, D* ≈ 2T; at 100× compute, N* ≈ 10T and D* stays ≈ 2T, since extra compute should go to parameters.",
+        "N* ≈ 1T, D* ≈ 200B; at 100× compute, N* ≈ 10T and D* ≈ 2T."
+      ],
+      "correctAnswer": "N* ≈ 100B, D* ≈ 2T; at 100× compute, N* ≈ 1T and D* ≈ 20T.",
+      "explanation": "C = 6 · N* · (20 N*) = 120 N*². 120 N*² = 1.2 × 10^24 => N*² = 10^22 => N* = 10^11 = 100B. D* = 20 N* = 2T. With 100× compute, both N and D scale with √100 = 10×, giving N* = 1T and D* = 20T."
+    },
+    {
+      "question": "2. The lecture states that Kaplan et al. (2020) scaling laws are 'flawed' because of how learning-rate schedules were handled. Which statement most accurately describes the problem and its effect on conclusions?",
+      "options": [
+        "Kaplan et al. only trained models below 1M parameters, so the power laws were extrapolated across too many orders of magnitude; the schedule had no effect.",
+        "Kaplan et al. estimated compute as 2N FLOPs per token instead of 6N, underestimating data cost and biasing the laws towards larger datasets.",
+        "Kaplan et al. tuned a different learning-rate schedule for every run, which added hyperparameter noise that flattened the data exponent α_D.",
+        "Kaplan et al. used the same learning-rate schedule for every run regardless of the number of training tokens. The loss recorded for shorter token budgets was therefore not what a schedule matched to that budget would reach, which biased the fitted N–D trade-off towards scaling model size faster than data."
+      ],
+      "correctAnswer": "Kaplan et al. used the same learning-rate schedule for every run regardless of the number of training tokens. The loss recorded for shorter token budgets was therefore not what a schedule matched to that budget would reach, which biased the fitted N–D trade-off towards scaling model size faster than data.",
+      "explanation": "Kaplan et al. used a single long cosine LR schedule for all training runs, measuring intermediate checkpoints when the LR had not yet decayed properly. This penalized smaller token runs and led to the flawed conclusion that parameter count should scale faster than token count."
+    },
+    {
+      "question": "3. A standard (bias-free) FFN with hidden size 4d uses two matrices, W1 in R^{4d x d} and W2 in R^{d x 4d}. A SwiGLU FFN computes FFN_SwiGLU(x) = (Swish(xW) * xV)W2 using three matrices. To keep the parameter count equal to standard FFN, what hidden size h must SwiGLU use, and how many parameters per layer result for d = 4096 (as in LLaMA-7B)?",
+      "options": [
+        "h = 8d/3 ≈ 10,923 (LLaMA rounds this to 11,008), giving 3dh = 8d² ≈ 1.34 × 10^8 parameters per layer.",
+        "h = 4d = 16,384, because the gating branch shares weights with W, giving 8d² ≈ 1.34 × 10^8 parameters.",
+        "h = 2d = 8,192, giving 6d² ≈ 1.01 × 10^8 parameters, which matches the standard FFN after rounding.",
+        "h = 16d/3 ≈ 21,845, giving 16d² ≈ 2.68 × 10^8 parameters, since gating doubles the effective width."
+      ],
+      "correctAnswer": "h = 8d/3 ≈ 10,923 (LLaMA rounds this to 11,008), giving 3dh = 8d² ≈ 1.34 × 10^8 parameters per layer.",
+      "explanation": "Standard FFN has 2 × 4d × d = 8d² parameters. SwiGLU has 3 × h × d parameters. Equating 3hd = 8d² yields h = 8d/3 ≈ 10,923 (rounded to 11,008 in LLaMA), giving 8d² ≈ 1.34 × 10^8 parameters."
+    },
+    {
+      "question": "4. Gated Linear Units (GLU) are defined as the component-wise product of two linear projections, one of which first passes through a sigmoid. The same paper also proposes omitting the activation altogether ('bilinear' layer). Which statement is correct?",
+      "options": [
+        "The bilinear layer (xW + b) * (xV + c) is a linear function of x, so a bilinear FFN collapses into a single linear map and adds no expressive power.",
+        "In GLU both projections pass through a sigmoid, and the product of two sigmoids acts as a soft AND gate.",
+        "The bilinear layer has no pointwise activation but is still non-linear in x: each output is the product of two affine functions of x, i.e. a second-order interaction. In GLU the sigmoid branch acts as a gate in [0, 1]; SwiGLU replaces the sigmoid with Swish, so its 'gate' branch is no longer bounded to [0, 1] and can be negative.",
+        "SwiGLU keeps the sigmoid gate of GLU and additionally applies Swish to the other (value) branch, so its gate remains bounded to [0, 1]."
+      ],
+      "correctAnswer": "The bilinear layer has no pointwise activation but is still non-linear in x: each output is the product of two affine functions of x, i.e. a second-order interaction. In GLU the sigmoid branch acts as a gate in [0, 1]; SwiGLU replaces the sigmoid with Swish, so its 'gate' branch is no longer bounded to [0, 1] and can be negative.",
+      "explanation": "Multiplying two linear projections of x produces quadratic/second-order cross terms, making it non-linear even without activation functions. SwiGLU replaces sigmoid with Swish(x) = x · σ(βx), which is unbounded above and can take negative values."
+    },
+    {
+      "question": "5. Let x = [1, 3, 5, 7], with gain g = 1, bias b = 0 and ε = 0. Using the population variance (1/n), what are the RMSNorm and LayerNorm outputs?",
+      "options": [
+        "RMSNorm ≈ [1.342, 0.447, 0.447, 1.342]; LayerNorm ≈ [0.218, 0.655, 1.091, 1.528]",
+        "RMSNorm ≈ [0.25, 0.75, 1.25, 1.75]; LayerNorm ≈ [−1.342, −0.447, 0.447, 1.342]",
+        "RMSNorm ≈ [0.109, 0.327, 0.546, 0.764]; LayerNorm ≈ [−1.342, −0.447, 0.447, 1.342]",
+        "RMSNorm ≈ [0.218, 0.655, 1.091, 1.528]; LayerNorm ≈ [−1.342, −0.447, 0.447, 1.342]"
+      ],
+      "correctAnswer": "RMSNorm ≈ [0.218, 0.655, 1.091, 1.528]; LayerNorm ≈ [−1.342, −0.447, 0.447, 1.342]",
+      "explanation": "RMS = sqrt((1 + 9 + 25 + 49) / 4) = sqrt(84 / 4) = sqrt(21) ≈ 4.583. RMSNorm = x / 4.583 ≈ [0.218, 0.655, 1.091, 1.528]. Mean μ = 4; variance σ² = ((9 + 1 + 1 + 9)/4) = 5; σ = sqrt(5) ≈ 2.236. LayerNorm = (x - 4)/2.236 ≈ [-1.342, -0.447, 0.447, 1.342]."
+    },
+    {
+      "question": "6. A RoPE model trained with L = 2048 is extended to L' = 8192 using Position Interpolation (PI), mapping position m -> m L/L'. Consider tokens at positions 6000 and 6004. What are the interpolated positions, what happens to their relative offset, and why is a short fine-tune recommended?",
+      "options": [
+        "6000 -> 1500 and 6004 -> 1504; PI preserves relative offsets exactly, so no fine-tuning is needed.",
+        "6000 -> 1500 and 6004 -> 1501; the offset of 4 shrinks to 1. Every position now falls inside [0, 2048], so no unseen rotation angles arise, but neighbouring tokens are 4× closer than in training. A short fine-tune (on the order of 1000s of examples, e.g. from the Pile) lets the model adapt to this finer resolution.",
+        "6000 -> 6000 mod 2048 = 1904 and 6004 -> 1908 (wrap-around); the offset is preserved, and fine-tuning removes the aliasing.",
+        "6000 -> 24,000 and 6004 -> 24,016 (scaling by L'/L); the offset grows to 16, and fine-tuning is needed to learn the larger angles."
+      ],
+      "correctAnswer": "6000 -> 1500 and 6004 -> 1501; the offset of 4 shrinks to 1. Every position now falls inside [0, 2048], so no unseen rotation angles arise, but neighbouring tokens are 4× closer than in training. A short fine-tune (on the order of 1000s of examples, e.g. from the Pile) lets the model adapt to this finer resolution.",
+      "explanation": "Scaling by L/L' = 2048/8192 = 1/4 scales 6000 -> 1500 and 6004 -> 1501, shrinking the relative distance by 4×. Position angles stay within original training bounds, but fine-tuning adapts the model to the higher resolution."
+    },
+    {
+      "question": "7. The phrase 'the cat ... sleeping' appears in two sentences: in the first, 'cat' is at position 2 and 'sleeping' at 5; in the second, at 102 and 105. Content vectors are identical. Which statement is correct?",
+      "options": [
+        "The two query–key scores are identical under additive sinusoidal embeddings, but differ under RoPE, because RoPE encodes absolute angles mθ.",
+        "Under RoPE the later occurrence has a larger score, because rotation scales the norm of q and k in proportion to position.",
+        "Under RoPE the scores are identical, because (R_m q)^T (R_n k) = q^T R_{n-m} k depends only on n − m = 3 and rotation preserves norms. Under additive sinusoidal embeddings the score expands into content–position cross terms that depend on absolute positions, so the scores generally differ.",
+        "Both schemes give identical scores, because each depends only on the relative offset."
+      ],
+      "correctAnswer": "Under RoPE the scores are identical, because (R_m q)^T (R_n k) = q^T R_{n-m} k depends only on n − m = 3 and rotation preserves norms. Under additive sinusoidal embeddings the score expands into content–position cross terms that depend on absolute positions, so the scores generally differ.",
+      "explanation": "RoPE orthogonal rotation matrices satisfy R_m^T R_n = R_{n-m}, ensuring that dot products depend exclusively on the relative offset (5 - 2 = 105 - 102 = 3). Additive embeddings contain absolute position inner products."
+    },
+    {
+      "question": "8. In the kNN-augmented layer, one head has gate bias bg = 2, so g = σ(bg). kNN search returns two memories with scaled dot-product scores 1 and 0, and values v1 = [1, 0], v2 = [0, 1]. Local attention gives Vc = [0, 1]. With Vo = g Vm + (1 − g) Vc, what is Vo?",
+      "options": [
+        "Vo ≈ [0.731, 0.269]",
+        "Vo ≈ [0.644, 0.356]",
+        "Vo ≈ [0.087, 0.913]",
+        "Vo ≈ [0.250, 0.750]"
+      ],
+      "correctAnswer": "Vo ≈ [0.644, 0.356]",
+      "explanation": "g = σ(2) ≈ 0.8808. Softmax over scores [1, 0]: e^1 / (e^1 + 1) = 2.718 / 3.718 ≈ 0.731; e^0 / 3.718 ≈ 0.269. Vm = 0.731[1, 0] + 0.269[0, 1] = [0.731, 0.269]. Vo = 0.8808[0.731, 0.269] + (1 - 0.8808)[0, 1] = [0.6439, 0.237 + 0.119] ≈ [0.644, 0.356]."
+    },
+    {
+      "question": "9. Self-Route (Li et al., 2024) sends every query to RAG prompt (5k tokens). 70% queries are answered in step one; remaining 30% are re-run with full long context (100k tokens). What is average input tokens per query, and savings vs always using LC?",
+      "options": [
+        "≈ 33.5k tokens per query; ≈ 66.5% saving.",
+        "≈ 30k tokens per query; 70% saving.",
+        "≈ 35k tokens per query; 65% saving.",
+        "100k tokens per query; no saving, because every query must also go through LC to verify the RAG answer."
+      ],
+      "correctAnswer": "≈ 35k tokens per query; 65% saving.",
+      "explanation": "All 100% queries take 5k tokens in step 1. 30% take an additional 100k in step 2. Average tokens = 5k + 0.30 × 100k = 5k + 30k = 35k tokens. Compared to always 100k, savings = (100k - 35k)/100k = 65%."
+    },
+    {
+      "question": "10. Several 'fixed-size cache' designs are discussed for bounding inference memory: unweighted running average, RNN-like learned memory, and compressed key-value pairs. Which design principle does the lecture endorse for compressed-KV?",
+      "options": [
+        "Keep distant context explicitly and compress recent tokens, because recent tokens are the most predictable and carry the least information.",
+        "A cumulative (unweighted) average of past key-value pairs can be updated in O(1) and still lets any individual earlier value be recovered exactly, so it is lossless.",
+        "Keep the local context explicitly with minimal information loss and store long-range context in a more compressed form (e.g. a few summary slots produced by averaging or a learned network), so cache size stays bounded without losing detail in the nearby window.",
+        "An RNN-like memory update mt = f(mt-1, kt, vt) requires storing every past (k, v) pair at inference in order to recompute f, so it gives no memory savings."
+      ],
+      "correctAnswer": "Keep the local context explicitly with minimal information loss and store long-range context in a more compressed form (e.g. a few summary slots produced by averaging or a learned network), so cache size stays bounded without losing detail in the nearby window.",
+      "explanation": "The core design principle keeps full, uncompressed KV precision for recent local tokens where fine-grained syntactic/semantic attention is essential, while compressing older, distant context into summary tokens/slots."
+    }
+  ]
+}

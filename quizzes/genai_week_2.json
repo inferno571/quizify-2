@@ -1,0 +1,118 @@
+{
+  "id": "genai-week-2",
+  "title": "Fundamentals of Generative AI - Week 2 Assignment 2",
+  "subject": "Fundamentals of Generative AI",
+  "date": "10/10/2026",
+  "questions": [
+    {
+      "question": "1. An autoencoder has an input dimension of 100 and a latent dimension of 120. It achieves almost zero reconstruction error without any regularization. Which conclusion is most appropriate?",
+      "options": [
+        "The model must have learned a compact representation",
+        "The model may have learned a trivial identity-like mapping",
+        "The model is necessarily a denoising autoencoder",
+        "The latent representation must contain less information than the input"
+      ],
+      "correctAnswer": "The model may have learned a trivial identity-like mapping",
+      "explanation": "Because the latent dimension (120) is larger than the input dimension (100), an unregularized overcomplete autoencoder can simply memorize an identity mapping without learning meaningful features."
+    },
+    {
+      "question": "2. A dataset contains standardized continuous-valued features that can take negative as well as positive values. Which decoder output and loss combination is most appropriate?",
+      "options": [
+        "Sigmoid output with binary cross-entropy",
+        "Softmax output with categorical cross-entropy",
+        "Linear output with mean squared error",
+        "ReLU output with binary cross-entropy"
+      ],
+      "correctAnswer": "Linear output with mean squared error",
+      "explanation": "For continuous standardized features that span both positive and negative real numbers, a linear output layer with mean squared error (MSE) reconstruction loss is the standard principled choice."
+    },
+    {
+      "question": "3. An encoder maps a 6-dimensional input to a 3-dimensional latent vector using a weight matrix of shape 6×3. Under the tied-weights assumption, what should be the shape of the decoder weight matrix?",
+      "options": [
+        "6 × 3",
+        "3 × 6",
+        "3 × 3",
+        "6 × 6"
+      ],
+      "correctAnswer": "3 × 6",
+      "explanation": "Tied weights constrain the decoder weight matrix to be the transpose of the encoder weight matrix: (6 × 3)^T = 3 × 6."
+    },
+    {
+      "question": "4. A convolutional autoencoder uses transposed convolution in the decoder. The reconstructed images contain regular grid-like bright and dark patterns. Which modification is most directly intended to reduce this problem?",
+      "options": [
+        "Replace the convolutional encoder with a dense encoder",
+        "Increase the number of latent dimensions indefinitely",
+        "Use upsampling followed by ordinary convolution",
+        "Remove all nonlinear activation functions"
+      ],
+      "correctAnswer": "Use upsampling followed by ordinary convolution",
+      "explanation": "Checkerboard/grid artifacts arise from uneven overlap in transposed convolutions. Replacing them with nearest-neighbor or bilinear upsampling followed by standard convolution directly resolves this issue."
+    },
+    {
+      "question": "5. A clean binary input vector contains 20 components. Masking noise independently sets each component to zero with probability 0.30. What is the expected number of components masked in one corrupted input?",
+      "options": [
+        "3",
+        "6",
+        "14",
+        "20"
+      ],
+      "correctAnswer": "6",
+      "explanation": "Expected value E[X] = n × p = 20 × 0.30 = 6 components."
+    },
+    {
+      "question": "6. In a denoising autoencoder, which pair is used during training?",
+      "options": [
+        "Clean input as input and corrupted input as target",
+        "Corrupted input as input and the same corrupted input as target",
+        "Corrupted input as input and clean input as target",
+        "Random latent vector as input and clean input as target"
+      ],
+      "correctAnswer": "Corrupted input as input and clean input as target",
+      "explanation": "A denoising autoencoder (DAE) receives a corrupted version x̃ as input and is trained to recover the original clean input x as its target."
+    },
+    {
+      "question": "7. In a sparse autoencoder, the desired average activation of a hidden neuron is 0.05, but its actual average activation is 0.40. Which statement is correct?",
+      "options": [
+        "The sparsity penalty for this neuron will be zero",
+        "The neuron is less active than desired",
+        "The neuron is too active and receives a relatively large sparsity penalty",
+        "The reconstruction loss must automatically become zero"
+      ],
+      "correctAnswer": "The neuron is too active and receives a relatively large sparsity penalty",
+      "explanation": "Since the neuron's average activation (0.40) is substantially higher than the target threshold ρ = 0.05, KL divergence imposes a heavy sparsity penalty to suppress it."
+    },
+    {
+      "question": "8. A sparse autoencoder contains many hidden neurons, but only a few neurons are active for any given input. Why can it still learn useful representations despite having an overcomplete hidden layer?",
+      "options": [
+        "The sparsity constraint prevents all hidden neurons from being freely active at the same time",
+        "The decoder is removed during training",
+        "The input is always compressed to fewer dimensions",
+        "The hidden activations are forced to be exactly equal for every input"
+      ],
+      "correctAnswer": "The sparsity constraint prevents all hidden neurons from being freely active at the same time",
+      "explanation": "By penalizing dense activations, the sparsity constraint acts as an information bottleneck that forces the network to discover salient statistical patterns rather than learning an unconstrained identity map."
+    },
+    {
+      "question": "9. An input has 8 dimensions, and the hidden representation of a contractive auto encoder has 3 dimensions. What is the shape of the Jacobian of the hidden representation with respect to the input?",
+      "options": [
+        "8 × 8",
+        "3 × 3",
+        "8 × 3",
+        "3 × 8"
+      ],
+      "correctAnswer": "3 × 8",
+      "explanation": "The Jacobian matrix J = ∂h / ∂x contains partial derivatives of the 3 hidden outputs with respect to the 8 input features, giving dimension 3 × 8."
+    },
+    {
+      "question": "10. A standard autoencoder reconstructs every training sample with very low error, but its latent codes perform poorly in clustering and classification. What is the most accurate conclusion?",
+      "options": [
+        "Low reconstruction error guarantees that the latent representation is semantically meaningful",
+        "The decoder must be using an incorrect activation function",
+        "Good reconstruction does not necessarily imply that the latent features are useful for downstream tasks",
+        "The latent dimension must always be increased"
+      ],
+      "correctAnswer": "Good reconstruction does not necessarily imply that the latent features are useful for downstream tasks",
+      "explanation": "Reconstruction objective only measures fidelity of signal reproduction; without proper regularization or inductive biases, the latent space can lack semantic structure or separability."
+    }
+  ]
+}

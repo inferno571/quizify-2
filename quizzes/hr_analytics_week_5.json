@@ -1,0 +1,118 @@
+{
+  "id": "hr-analytics-week-5",
+  "title": "HR Analytics - Week 5 Assignment 5",
+  "subject": "HR Analytics",
+  "date": "10/10/2026",
+  "questions": [
+    {
+      "question": "1. What aspects does the 'Effectiveness of Selection Method' table assess?",
+      "options": [
+        "Resume quality",
+        "Communication skills",
+        "Person-job fit, performance rating, and cost",
+        "Training effectiveness"
+      ],
+      "correctAnswer": "Person-job fit, performance rating, and cost",
+      "explanation": "The 'Effectiveness of Selection Method' framework evaluates selection instruments across multidimensional criteria including person-job fit, resulting performance ratings, and associated costs."
+    },
+    {
+      "question": "2. Which metric in recruitment visualization is used to assess recruitment efficiency?",
+      "options": [
+        "Yield ratio",
+        "Absenteeism",
+        "Diversity index",
+        "Attrition rate"
+      ],
+      "correctAnswer": "Yield ratio",
+      "explanation": "The yield ratio indicates the percentage of candidates who pass from one stage of the recruitment funnel to the next, serving as a key indicator of recruitment efficiency."
+    },
+    {
+      "question": "3. Which recruitment source fulfilled the highest percentage of high-level role expectations?",
+      "options": [
+        "Consultants",
+        "Employee Referrals",
+        "Job Portal",
+        "Campus hiring"
+      ],
+      "correctAnswer": "Employee Referrals",
+      "explanation": "Employee referrals typically yield higher quality candidates with stronger cultural fit and higher fulfillment of role expectations, especially for high-level positions."
+    },
+    {
+      "question": "4. What is the ideal characteristic of an effective testing component in the selection process?",
+      "options": [
+        "Ease of administration",
+        "Low candidate drop rate",
+        "High salary correlation",
+        "Predictive of job performance"
+      ],
+      "correctAnswer": "Predictive of job performance",
+      "explanation": "The primary hallmark of an effective selection test or assessment is its predictive validity—its empirical ability to accurately forecast future on-the-job performance."
+    },
+    {
+      "question": "5. Which measure is used to evaluate how accurately selection analytics predict candidate performance?",
+      "options": [
+        "Number of selection rounds",
+        "Actual vs. predicted performance",
+        "Hiring manager's intuition",
+        "Duration of the interview"
+      ],
+      "correctAnswer": "Actual vs. predicted performance",
+      "explanation": "Evaluating predictive models in selection analytics requires comparing candidates' predicted scores/performance against their actual post-hire job performance."
+    },
+    {
+      "question": "6. Which factors are considered when determining the 'Cost per Joinee'?",
+      "options": [
+        "Hiring manager's rating",
+        "Interview duration",
+        "Total recruitment expenditure and number of joinees",
+        "Salary band only"
+      ],
+      "correctAnswer": "Total recruitment expenditure and number of joinees",
+      "explanation": "Cost per Joinee (or Cost per Hire) is calculated by dividing total recruitment costs (advertising, agency fees, recruiter time, etc.) by the total number of successful joinees."
+    },
+    {
+      "question": "7. In outcome-based selection analysis, which situation represents a 'false negative'?",
+      "options": [
+        "An unsuccessful candidate is hired",
+        "A successful candidate is not hired",
+        "An unsuccessful candidate is not hired",
+        "A successful candidate is hired"
+      ],
+      "correctAnswer": "A successful candidate is not hired",
+      "explanation": "In selection analytics, a false negative (Type II error) occurs when a candidate who would have been successful on the job is rejected (not hired)."
+    },
+    {
+      "question": "8. What may result from using an inappropriate cut score in the selection process?",
+      "options": [
+        "Higher salaries offered",
+        "Reduced cost per hire",
+        "Increased false positives or false negatives",
+        "Perfect employee performance"
+      ],
+      "correctAnswer": "Increased false positives or false negatives",
+      "explanation": "Setting an incorrect cutoff score distorts classification: an excessively high cut score increases false negatives (rejecting good candidates), while an excessively low cut score increases false positives (hiring unqualified candidates)."
+    },
+    {
+      "question": "9. In selection analytics, what does the term 'Fit Percentage' indicate?",
+      "options": [
+        "Degree of alignment among the job, team, supervisor, and organization",
+        "Resume match rate",
+        "Ratio of candidates to recruiters",
+        "Level of salary satisfaction"
+      ],
+      "correctAnswer": "Degree of alignment among the job, team, supervisor, and organization",
+      "explanation": "'Fit Percentage' measures holistic alignment across person-job, person-team, person-supervisor, and person-organization dimensions."
+    },
+    {
+      "question": "10. Which data set is most appropriate for identifying potential bias in the hiring process?",
+      "options": [
+        "Cost per joinee",
+        "Gender-wise hiring ratio",
+        "Average number of interview questions",
+        "Tenure by marital status"
+      ],
+      "correctAnswer": "Gender-wise hiring ratio",
+      "explanation": "Demographic breakdown ratios such as the gender-wise hiring ratio (and pass-through rates by demographic group) are used to detect adverse impact and systemic bias in hiring."
+    }
+  ]
+}

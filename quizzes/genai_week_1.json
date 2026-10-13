@@ -1,0 +1,118 @@
+{
+  "id": "genai-week-1",
+  "title": "Fundamentals of Generative AI - Week 1 Assignment 1",
+  "subject": "Fundamentals of Generative AI",
+  "date": "08/10/2026",
+  "questions": [
+    {
+      "question": "1. A model is trained on digit images without labels and later generates new digit-like images. Which distribution is the model primarily learning?",
+      "options": [
+        "p(y|x)",
+        "p(x, y)",
+        "p(x)",
+        "p(y)"
+      ],
+      "correctAnswer": "p(x)",
+      "explanation": "An unsupervised generative model trained on unlabeled digit images learns the true underlying marginal distribution of the input data p(x) in order to sample new digit-like images."
+    },
+    {
+      "question": "2. A generative model is trained to generate a medical image only when the condition \"tumor present\" is provided. Which probability distribution best describes this task?",
+      "options": [
+        "p(x)",
+        "p(y|x)",
+        "p(x|y)",
+        "p(x,y) only"
+      ],
+      "correctAnswer": "p(x|y)",
+      "explanation": "Conditional generative models generate samples x conditioned on a given attribute or label y (here, y = 'tumor present'). Thus, it models the conditional distribution p(x|y)."
+    },
+    {
+      "question": "3. A decoder produces one output value for every binary pixel, and each value must represent the probability that the pixel is 1. Which output-layer and loss combination is most appropriate?",
+      "options": [
+        "Linear activation with mean squared error",
+        "Sigmoid activation with binary cross-entropy",
+        "Softmax activation with categorical cross-entropy",
+        "ReLU activation with mean squared error"
+      ],
+      "correctAnswer": "Sigmoid activation with binary cross-entropy",
+      "explanation": "For independent binary pixels where each output represents the probability of pixel value being 1 (in range [0, 1]), the sigmoid activation function combined with binary cross-entropy loss is the theoretically principled choice."
+    },
+    {
+      "question": "4. Why can stacking multiple linear layers without nonlinear activation functions not produce a genuinely deep nonlinear model?",
+      "options": [
+        "Linear layers cannot contain biases",
+        "The composition of linear transformations is still a linear transformation",
+        "Linear layers always produce zero gradients",
+        "Multiple linear layers can only be used for classification"
+      ],
+      "correctAnswer": "The composition of linear transformations is still a linear transformation",
+      "explanation": "Mathematically, the composition of any sequence of linear (or affine) transformations W_2(W_1 x + b_1) + b_2 collapses into a single affine transformation W'x + b'. Without non-linear activation functions, depth adds no representational power."
+    },
+    {
+      "question": "5. A weight has current value: w = 4, The learning rate is: η = 0.1, The gradient is: ∂L/∂w = -3. Using the gradient-descent update rule: w_new = w - η(∂L/∂w). What is the updated weight?",
+      "options": [
+        "3.7",
+        "4.0",
+        "4.3",
+        "7.0"
+      ],
+      "correctAnswer": "4.3",
+      "explanation": "Applying the gradient descent update rule: w_new = w - η * (∂L/∂w) = 4 - 0.1 * (-3) = 4 + 0.3 = 4.3."
+    },
+    {
+      "question": "6. An optimizer accumulates the squared gradients of a parameter over all previous training steps. After many updates, its effective learning rate becomes extremely small. Which optimizer is being described?",
+      "options": [
+        "Momentum",
+        "AdaGrad",
+        "RMSProp",
+        "Standard mini-batch SGD"
+      ],
+      "correctAnswer": "AdaGrad",
+      "explanation": "AdaGrad divides the learning rate by the square root of the sum of all historical squared gradients without decay. As steps accumulate, the denominator grows monotonically, causing the effective step size to diminish prematurely."
+    },
+    {
+      "question": "7. Which statement correctly distinguishes RMSProp from AdaGrad?",
+      "options": [
+        "RMSProp uses only the current gradient and ignores previous gradients",
+        "RMSProp accumulates all past squared gradients without decay",
+        "RMSProp uses an exponentially weighted moving average of recent squared gradients",
+        "RMSProp does not use adaptive learning rates"
+      ],
+      "correctAnswer": "RMSProp uses an exponentially weighted moving average of recent squared gradients",
+      "explanation": "Unlike AdaGrad which accumulates all past squared gradients indefinitely, RMSProp uses an exponentially decaying moving average of past squared gradients, allowing it to adapt to recent curvature without diminishing the learning rate to zero."
+    },
+    {
+      "question": "8. A convolutional layer receives an input of size: 32 × 32 × 3. It uses 8 filters, Filter size: 3 × 3, Stride: 1, Padding: 0. What is the output size?",
+      "options": [
+        "30 × 30 × 8",
+        "32 × 32 × 8",
+        "30 × 30 × 3",
+        "32 × 32 × 3"
+      ],
+      "correctAnswer": "30 × 30 × 8",
+      "explanation": "Spatial output dimension = (W - K + 2P)/S + 1 = (32 - 3 + 0)/1 + 1 = 30. With 8 filters applied across the input channels, the output depth is 8. Hence, the resulting feature map size is 30 × 30 × 8."
+    },
+    {
+      "question": "9. A convolutional layer uses:\n• Filter size: 5 × 5\n• Input channels: 3\n• Number of filters: 6\n• One bias per filter\nHow many trainable parameters does the layer contain?",
+      "options": [
+        "450",
+        "456",
+        "480",
+        "906"
+      ],
+      "correctAnswer": "456",
+      "explanation": "Each filter contains (5 × 5 × 3) weights + 1 bias = 75 + 1 = 76 parameters. For 6 filters: 76 × 6 = 456 trainable parameters."
+    },
+    {
+      "question": "10. A CNN produces a feature tensor of size: 4 × 4 × 3. This tensor is passed directly to a Flatten layer. How many values are present in the flattened vector?",
+      "options": [
+        "12",
+        "16",
+        "32",
+        "48"
+      ],
+      "correctAnswer": "48",
+      "explanation": "A Flatten layer unrolls all elements of the multi-dimensional tensor into a 1D vector: 4 × 4 × 3 = 48 values."
+    }
+  ]
+}

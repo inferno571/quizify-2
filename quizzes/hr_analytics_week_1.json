@@ -1,0 +1,116 @@
+{
+  "id": "hr-analytics-week-1",
+  "title": "HR Analytics - Week 1 Assignment 1",
+  "subject": "HR Analytics",
+  "date": "09/10/2026",
+  "questions": [
+    {
+      "question": "1. Which of the following is NOT an example of a descriptive analytics tool used in HR?",
+      "options": [
+        "Mean and standard deviation",
+        "Counts and ratios",
+        "Decision trees and random forests",
+        "Mode and median"
+      ],
+      "correctAnswer": "Decision trees and random forests",
+      "explanation": "Decision trees and random forests are predictive analytics / machine learning tools, whereas mean, median, standard deviation, counts, and ratios are descriptive analytics tools."
+    },
+    {
+      "question": "2. HR analytics differs from HRMIS primarily because HR analytics has the potential to connect HR processes and decisions with ______.",
+      "options": [
+        "Employee satisfaction scores only",
+        "Regulatory compliance requirements",
+        "Payroll and compensation structures",
+        "Organization performance"
+      ],
+      "correctAnswer": "Organization performance",
+      "explanation": "HR analytics connects HR processes and strategic decisions directly with organizational performance and business outcomes, moving beyond operational record-keeping typical of HRMIS."
+    },
+    {
+      "question": "3. According to the criteria for good HR activity metrics, every metric must explicitly describe what it does NOT include. This rule primarily ensures ______.",
+      "options": [
+        "That metrics are visually appealing in dashboards",
+        "Clarity and prevention of misinterpretation of calculations",
+        "That metrics are aligned with competitor benchmarks",
+        "That only positive outcomes are measured and reported"
+      ],
+      "correctAnswer": "Clarity and prevention of misinterpretation of calculations",
+      "explanation": "Explicitly stating exclusions ensures clarity, consistent definitions, and prevents misinterpretation or manipulation in metric calculation."
+    },
+    {
+      "question": "4. According to the criteria for good HR activity metrics, an organization should capture and track all possible metrics, even those not currently being used, to build a comprehensive data history.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "False",
+      "explanation": "Tracking unnecessary metrics leads to metric clutter, wasted resources, and analysis paralysis. Effective metrics focus specifically on actionable, strategically aligned needs."
+    },
+    {
+      "question": "5. A good HR problem definition must cover three elements. Which of the following correctly lists all three?",
+      "options": [
+        "A statement of what, a statement of why, and a desired state or outcome",
+        "A statement of who, a statement of when, and a budget estimate",
+        "A statement of the problem, a timeline, and a team assignment",
+        "A cost-benefit analysis, a risk assessment, and an expected output"
+      ],
+      "correctAnswer": "A statement of what, a statement of why, and a desired state or outcome",
+      "explanation": "A complete problem definition requires articulating what the issue is, why it matters, and the target/desired outcome."
+    },
+    {
+      "question": "6. The overconfidence trap is described as particularly dangerous because it prevents analysts and decision makers from ______.",
+      "options": [
+        "Using advanced statistical tools",
+        "Questioning their methods, motivation, and the way they communicate findings",
+        "Collaborating with HR business partners",
+        "Collecting sufficient sample data for analysis"
+      ],
+      "correctAnswer": "Questioning their methods, motivation, and the way they communicate findings",
+      "explanation": "The overconfidence trap makes analysts overly certain about conclusions, preventing critical questioning of assumptions, methods, and communication."
+    },
+    {
+      "question": "7. Which of the following best describes the 'overfitting trap' in HR analytics?",
+      "options": [
+        "The analyst uses too few variables to build a reliable model",
+        "The analyst collects more data than is needed for the analysis",
+        "The visualization uses too many chart types, causing confusion",
+        "The model performs well on training data but poorly on new real-world data"
+      ],
+      "correctAnswer": "The model performs well on training data but poorly on new real-world data",
+      "explanation": "Overfitting occurs when a statistical or machine learning model fits noise and specific artifacts of historical training data, failing on new real-world data."
+    },
+    {
+      "question": "8. In the stakeholder engagement framework for HR analytics, data owners, technology owners, and subject matter experts are classified as ______.",
+      "options": [
+        "Stakeholders served",
+        "Stakeholders depended upon",
+        "Stakeholders impacted",
+        "Stakeholders managed"
+      ],
+      "correctAnswer": "Stakeholders depended upon",
+      "explanation": "Analysts depend upon data owners, IT/technology owners, and SMEs to acquire data access, infrastructure, and contextual validation."
+    },
+    {
+      "question": "9. Which of the following correctly lists the four components of the 'Six Skills for Success' category called 'Business Acumen'?",
+      "options": [
+        "Data awareness, Statistical methods, Visualization, Writing",
+        "Problem definition, Project management, Change management, Stakeholder management",
+        "Financial literacy, Political astuteness, Internal awareness, External awareness",
+        "HR sub-functions, HR interdependencies, Privacy, Ethics"
+      ],
+      "correctAnswer": "Financial literacy, Political astuteness, Internal awareness, External awareness",
+      "explanation": "The Business Acumen competency includes Financial literacy, Political astuteness, Internal organizational awareness, and External market awareness."
+    },
+    {
+      "question": "10. Which of the following statements best describes the relationship between KPIs and HR metrics?",
+      "options": [
+        "KPIs and HR metrics are completely unrelated measurement tools",
+        "HR metrics are a broader category, and every KPI is a metric",
+        "KPIs replace traditional HR metrics in modern organizations",
+        "HR metrics only apply to recruitment; KPIs apply to all functions"
+      ],
+      "correctAnswer": "HR metrics are a broader category, and every KPI is a metric",
+      "explanation": "Metrics represent the broader umbrella of all measurable values; KPIs are a strategic subset of metrics focused on critical goals."
+    }
+  ]
+}

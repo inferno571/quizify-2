@@ -1,0 +1,118 @@
+{
+  "id": "genai-week-6",
+  "title": "Fundamentals of Generative AI - Week 6 Assignment 6",
+  "subject": "Fundamentals of Generative AI",
+  "date": "10/10/2026",
+  "questions": [
+    {
+      "question": "1. Which of the following is the primary advantage of CycleGAN over Pix2Pix?",
+      "options": [
+        "It requires paired training images.",
+        "It performs image classification.",
+        "It can learn image-to-image translation using unpaired datasets.",
+        "It generates only grayscale images."
+      ],
+      "correctAnswer": "It can learn image-to-image translation using unpaired datasets.",
+      "explanation": "CycleGAN learns bidirectional mappings between domains without requiring paired corresponding examples in the training set."
+    },
+    {
+      "question": "2. In CycleGAN, the cycle consistency loss ensures that:",
+      "options": [
+        "The discriminator always wins over the generator.",
+        "The translated image can be converted back to the original image.",
+        "Images have higher resolution.",
+        "The latent vectors follow a Gaussian distribution"
+      ],
+      "correctAnswer": "The translated image can be converted back to the original image.",
+      "explanation": "Cycle consistency enforces F(G(x)) ≈ x and G(F(y)) ≈ y, preventing mode collapse and ensuring content preservation."
+    },
+    {
+      "question": "3. Which additional input distinguishes a Conditional GAN (cGAN) from a traditional GAN?",
+      "options": [
+        "Learning rate",
+        "Noise vector only",
+        "Condition or label information",
+        "Batch size"
+      ],
+      "correctAnswer": "Condition or label information",
+      "explanation": "cGAN conditions both the generator and discriminator on auxiliary information such as class labels or conditioning images."
+    },
+    {
+      "question": "4. Pix2Pix is primarily designed for:",
+      "options": [
+        "Unpaired image translation",
+        "Paired image-to-image translation",
+        "Image classification",
+        "Object detection"
+      ],
+      "correctAnswer": "Paired image-to-image translation",
+      "explanation": "Pix2Pix is a supervised framework for paired image-to-image translation (e.g., edges-to-photo, map-to-aerial)."
+    },
+    {
+      "question": "5. Which loss function is unique to Pix2Pix compared to a standard GAN?",
+      "options": [
+        "Cross-entropy loss only",
+        "L1 reconstruction loss combined with adversarial loss",
+        "Cycle consistency loss",
+        "Triplet loss"
+      ],
+      "correctAnswer": "L1 reconstruction loss combined with adversarial loss",
+      "explanation": "Pix2Pix combines conditional adversarial loss with an L1 reconstruction loss between the generated image and paired ground truth."
+    },
+    {
+      "question": "6. StyleGAN controls image generation primarily through:",
+      "options": [
+        "Cycle consistency loss",
+        "Style vectors injected at multiple layers of the generator",
+        "Paired datasets",
+        "Reinforcement learning"
+      ],
+      "correctAnswer": "Style vectors injected at multiple layers of the generator",
+      "explanation": "StyleGAN feeds intermediate style vectors w into Adaptive Instance Normalization (AdaIN) layers at each resolution stage of the synthesis network."
+    },
+    {
+      "question": "7. Which component in StyleGAN helps reduce the entanglement of latent features?",
+      "options": [
+        "PatchGAN discriminator",
+        "Mapping network",
+        "Cycle consistency module",
+        "Skip connections"
+      ],
+      "correctAnswer": "Mapping network",
+      "explanation": "The 8-layer MLP mapping network maps Gaussian latent z into an intermediate style space W, which avoids warping and disentangles semantic factors."
+    },
+    {
+      "question": "8. Which of the following applications is best suited for CycleGAN rather than Pix2Pix?",
+      "options": [
+        "Converting architectural sketches into building photographs using paired data",
+        "Translating horses into zebras without paired examples",
+        "Image super-resolution using paired images",
+        "Semantic segmentation from labeled datasets"
+      ],
+      "correctAnswer": "Translating horses into zebras without paired examples",
+      "explanation": "Horse-to-zebra translation is an unpaired translation task where no direct 1-to-1 correspondences exist."
+    },
+    {
+      "question": "9. In Pix2Pix, the discriminator commonly evaluates:",
+      "options": [
+        "Individual pixels independently",
+        "The entire dataset statistics only",
+        "Local image patches (PatchGAN)",
+        "Only the latent vectors"
+      ],
+      "correctAnswer": "Local image patches (PatchGAN)",
+      "explanation": "PatchGAN penalizes high-frequency structural errors by classifying whether each N×N local image patch is real or fake."
+    },
+    {
+      "question": "10. Which statement correctly compares StyleGAN and Conditional GAN?",
+      "options": [
+        "Both require paired datasets",
+        "StyleGAN mainly provides fine-grained control over image style, whereas cGAN controls generation using external conditions or labels.",
+        "StyleGAN uses cycle consistency loss while cGAN does not.",
+        "cGAN cannot generate realistic images."
+      ],
+      "correctAnswer": "StyleGAN mainly provides fine-grained control over image style, whereas cGAN controls generation using external conditions or labels.",
+      "explanation": "StyleGAN focuses on unsupervised hierarchical feature control across multiple scales, while cGAN directs outputs based on explicit input conditioning labels."
+    }
+  ]
+}

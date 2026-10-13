@@ -1,0 +1,116 @@
+{
+  "id": "hr-analytics-week-11",
+  "title": "HR Analytics - Week 11 Assignment 11",
+  "subject": "HR Analytics",
+  "date": "10/10/2026",
+  "questions": [
+    {
+      "question": "1. Pay mix policies included analysis of base wage, benefits, and:",
+      "options": [
+        "transportation allowance",
+        "long-term incentives",
+        "taxation credits",
+        "inventory rewards"
+      ],
+      "correctAnswer": "long-term incentives",
+      "explanation": "A complete total rewards pay mix encompasses base pay, short- and long-term incentives, and employee benefits."
+    },
+    {
+      "question": "2. State true and false Job evaluation points are linked with compensation and benefits amounts.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "True",
+      "explanation": "Job evaluation points establish relative internal job worth, which directly determines salary grades and compensation bands."
+    },
+    {
+      "question": "3. Compensation matrices primarily help organizations align compensation with:",
+      "options": [
+        "job worth and evaluation points",
+        "warehouse efficiency",
+        "taxation compliance",
+        "transportation scheduling"
+      ],
+      "correctAnswer": "job worth and evaluation points",
+      "explanation": "Compensation matrices align pay ranges and merit increase distributions with evaluated job worth and performance levels."
+    },
+    {
+      "question": "4. Impact of pay increase on employees compared old employees with:",
+      "options": [
+        "contractual workers",
+        "consultants",
+        "new employees",
+        "interns"
+      ],
+      "correctAnswer": "new employees",
+      "explanation": "Pay increase impact analyses examine internal equity and salary compression by comparing tenured (old) employees with newly hired employees."
+    },
+    {
+      "question": "5. Quartile-wise salary analysis is mainly used for identifying:",
+      "options": [
+        "supply chain gaps",
+        "pay-gap patterns",
+        "transportation inefficiencies",
+        "inventory shortages"
+      ],
+      "correctAnswer": "pay-gap patterns",
+      "explanation": "Quartile-wise distribution analysis identifies internal wage discrepancies, demographic pay gaps, and salary compression."
+    },
+    {
+      "question": "6. Employee benefit analysis included retirement plans and:",
+      "options": [
+        "transportation insurance",
+        "taxation assistance",
+        "warehouse maintenance",
+        "wellness programs"
+      ],
+      "correctAnswer": "wellness programs",
+      "explanation": "Comprehensive benefits packages typically pair traditional retirement plans with health and employee wellness programs."
+    },
+    {
+      "question": "7. Work attendance was one qualifying criterion for ________ incentive plans.",
+      "options": [
+        "departmental",
+        "individual",
+        "regional",
+        "operational"
+      ],
+      "correctAnswer": "individual",
+      "explanation": "Individual incentive plans frequently require meeting baseline attendance and punctuality thresholds before bonuses are paid."
+    },
+    {
+      "question": "8. Companywide incentive plans may be linked to operational efficiency and:",
+      "options": [
+        "transportation expenses",
+        "office maintenance",
+        "employee stock earnings",
+        "inventory movement"
+      ],
+      "correctAnswer": "employee stock earnings",
+      "explanation": "Enterprise-wide incentive schemes (such as profit-sharing and ESOPs) align employee rewards with overall company operational efficiency and stock performance."
+    },
+    {
+      "question": "9. Compa Ratio is calculated using employee pay rate and:",
+      "options": [
+        "pay range midpoint",
+        "annual tax rate",
+        "transportation allowance",
+        "inventory value"
+      ],
+      "correctAnswer": "pay range midpoint",
+      "explanation": "Compa-Ratio is calculated as (Actual Salary / Pay Range Midpoint), measuring where an employee sits relative to market reference pay."
+    },
+    {
+      "question": "10. Hiring management trainees was suggested to build a talent ________.",
+      "options": [
+        "network",
+        "matrix",
+        "pipeline",
+        "database"
+      ],
+      "correctAnswer": "pipeline",
+      "explanation": "Management trainee programs systematically develop entry-level high-potential candidates to build a steady talent pipeline for future leadership roles."
+    }
+  ]
+}

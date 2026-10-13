@@ -1,0 +1,118 @@
+{
+  "id": "hr-analytics-week-9",
+  "title": "HR Analytics - Week 9 Assignment 9",
+  "subject": "HR Analytics",
+  "date": "10/10/2026",
+  "questions": [
+    {
+      "question": "1. Performance appraisal is primarily concerned with:",
+      "options": [
+        "Monitoring organizational finance activities",
+        "Expanding external customer relationships",
+        "Evaluating employee work behavior and potential",
+        "Managing technological infrastructure systems"
+      ],
+      "correctAnswer": "Evaluating employee work behavior and potential",
+      "explanation": "Performance appraisal systematically evaluates an employee's job performance, work behaviors, and future potential against established criteria."
+    },
+    {
+      "question": "2. Performance management differs from performance appraisal because it:",
+      "options": [
+        "focuses only on salary revisions",
+        "emphasizes only annual reporting systems",
+        "excludes employee development processes",
+        "includes evaluation, improvement, and rewards"
+      ],
+      "correctAnswer": "includes evaluation, improvement, and rewards",
+      "explanation": "Performance appraisal is a periodic evaluation event, whereas performance management is an ongoing, continuous process integrating goal setting, evaluation, development, and reward systems."
+    },
+    {
+      "question": "3. After measuring actual performance, organizations compare results with ________.",
+      "options": [
+        "compensation plans",
+        "standards",
+        "labor unions",
+        "inventories"
+      ],
+      "correctAnswer": "standards",
+      "explanation": "The performance evaluation cycle involves setting standards, measuring actual performance, and comparing actual performance against those predetermined standards."
+    },
+    {
+      "question": "4. Which method belongs to multiple-person evaluation methods?",
+      "options": [
+        "Essay evaluation",
+        "Paired comparison",
+        "Critical incidents",
+        "Checklist method"
+      ],
+      "correctAnswer": "Paired comparison",
+      "explanation": "Paired comparison is a relative, multiple-person evaluation technique where each employee's performance is compared directly against every other peer in the group."
+    },
+    {
+      "question": "5. Which performance appraisal method uses specific, observable behavioural examples as anchors to define different levels of employee performance?",
+      "options": [
+        "KRA",
+        "BARS",
+        "MBO",
+        "HRA"
+      ],
+      "correctAnswer": "BARS",
+      "explanation": "Behaviorally Anchored Rating Scales (BARS) combine qualitative critical incidents with quantitative ratings by using specific behavioral examples as numerical anchors."
+    },
+    {
+      "question": "6. 360-degree appraisal mainly provides:",
+      "options": [
+        "confidential anonymous feedback",
+        "annual tax computation records",
+        "product development estimates",
+        "inventory utilization statistics"
+      ],
+      "correctAnswer": "confidential anonymous feedback",
+      "explanation": "360-degree appraisal gathers multisource feedback from peers, subordinates, supervisors, and internal customers, typically anonymized to ensure candid input."
+    },
+    {
+      "question": "7. If innovation is a company’s strategic objective, performance standards should include metrics related to:",
+      "options": [
+        "administrative hierarchy",
+        "employee attendance frequency",
+        "new ideas and implemented projects",
+        "warehouse inventory movement"
+      ],
+      "correctAnswer": "new ideas and implemented projects",
+      "explanation": "Performance metrics should align directly with strategic priorities; for an innovation-led strategy, metrics measure idea generation, patent filings, and successful project rollouts."
+    },
+    {
+      "question": "8. InnovateTech included participation in cross-functional ________ as part of performance standards.",
+      "options": [
+        "outsourcing",
+        "auditing",
+        "training",
+        "marketing"
+      ],
+      "correctAnswer": "training",
+      "explanation": "Cross-functional training participation enhances organizational versatility and collaborative problem-solving, making it a key performance standard criterion."
+    },
+    {
+      "question": "9. Quantitative criteria include measurable factors such as sales figures and project completion ________.",
+      "options": [
+        "behaviors",
+        "policies",
+        "attitudes",
+        "times"
+      ],
+      "correctAnswer": "times",
+      "explanation": "Project completion time (duration/deadlines) and sales figures are objective, quantifiable performance metrics, unlike subjective traits or attitudes."
+    },
+    {
+      "question": "10. Intentional performance rating distortion refers to:",
+      "options": [
+        "deliberate manipulation of ratings",
+        "accidental system calculation errors",
+        "technological communication failures",
+        "legal auditing inconsistencies"
+      ],
+      "correctAnswer": "deliberate manipulation of ratings",
+      "explanation": "Intentional rating distortion occurs when raters consciously inflate or deflate employee ratings for political reasons, impression management, or avoiding conflict."
+    }
+  ]
+}

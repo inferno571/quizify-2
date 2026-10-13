@@ -1,0 +1,118 @@
+{
+  "id": "dlnlp-assignment-1",
+  "title": "DLNLP Assignment 1 Solution",
+  "subject": "DLNLP",
+  "date": "09/10/2026",
+  "questions": [
+    {
+      "question": "1. A bigram model approximates P(w_i | w_1, ..., w_{i-1}) as:",
+      "options": [
+        "P(w_i)",
+        "P(w_i | w_{i-1})",
+        "P(w_i | w_{i-1}, w_{i-2})",
+        "P(w_{i-1} | w_i)"
+      ],
+      "correctAnswer": "P(w_i | w_{i-1})",
+      "explanation": "The (first-order) Markov assumption underlying a bigram model conditions each word only on the single previous word."
+    },
+    {
+      "question": "2. Using the reference confusion matrix, what is the overall accuracy of the model?\n\n| | Predicted Positive | Predicted Negative |\n|---|---|---|\n| Actual Positive | 40 | 10 |\n| Actual Negative | 20 | 30 |",
+      "options": [
+        "0.6",
+        "0.67",
+        "0.70",
+        "0.75"
+      ],
+      "correctAnswer": "0.70",
+      "explanation": "Accuracy = (TP + TN) / Total = (40 + 30) / (40 + 10 + 20 + 30) = 70 / 100 = 0.70."
+    },
+    {
+      "question": "3. A test set W = w_1 w_2 (N = 2 words) has model probabilities P(w_1) = 1/2 and P(w_2) = 1/8. What is the perplexity PP(W)? Assume the word choices are conditionally independent.",
+      "options": [
+        "4",
+        "2",
+        "8",
+        "16"
+      ],
+      "correctAnswer": "4",
+      "explanation": "Perplexity PP(W) = P(w_1 w_2)^(-1/N) = (P(w_1) * P(w_2))^(-1/2) = (1/2 * 1/8)^(-1/2) = (1/16)^(-1/2) = sqrt(16) = 4."
+    },
+    {
+      "question": "4. Word embeddings (e.g., from Word2Vec or the embedding layer of an LLM) are useful primarily because they:",
+      "options": [
+        "Reduce all words to a single scalar value",
+        "Guarantee zero probability for unseen words",
+        "Represent words as dense vectors capturing semantic and syntactic similarity",
+        "Eliminate the need for training data"
+      ],
+      "correctAnswer": "Represent words as dense vectors capturing semantic and syntactic similarity",
+      "explanation": "Embeddings map words to dense continuous vectors so that semantically and syntactically related words lie close together in vector space, unlike sparse one-hot representations."
+    },
+    {
+      "question": "5. In a corpus, the bigram \"and the\" occurs 2 times, the unigram \"and\" occurs 48 times, and the vocabulary size is V = 500. Under Add-1 smoothing, P(\"the\" | \"and\") is approximately:",
+      "options": [
+        "0.0055",
+        "0.0417",
+        "0.0020",
+        "0.5000"
+      ],
+      "correctAnswer": "0.0055",
+      "explanation": "P_Add-1(w_2 | w_1) = (C(w_1, w_2) + 1) / (C(w_1) + V) = (2 + 1) / (48 + 500) = 3 / 548 ≈ 0.0055."
+    },
+    {
+      "question": "6. Consider the training corpus (with sentence boundaries):\n<s> the cat runs </s>\n<s> the dog runs </s>\n<s> the cat sleeps </s>\n\nUsing MLE, what is the bigram probability P(cat | the)?",
+      "options": [
+        "1/3",
+        "1/2",
+        "2/3",
+        "1"
+      ],
+      "correctAnswer": "2/3",
+      "explanation": "\"the\" occurs 3 times. It is followed by \"cat\" twice and \"dog\" once. P(cat | the) = count(the, cat) / count(the) = 2/3."
+    },
+    {
+      "question": "7. What is the effect of Add-1 smoothing on the relative probabilities of a frequent word pair versus an infrequent word pair?",
+      "options": [
+        "It widens the gap between their probabilities",
+        "It narrows (compresses) the gap between their probabilities, moving both toward a more uniform distribution",
+        "It leaves all relative probabilities unchanged",
+        "It sets both probabilities exactly equal"
+      ],
+      "correctAnswer": "It narrows (compresses) the gap between their probabilities, moving both toward a more uniform distribution",
+      "explanation": "By uniformly adding 1 to every count, Add-1 smoothing takes a large amount of probability mass from high-count pairs and gives it to low/zero-count pairs, compressing the gap between frequent and infrequent pairs (it can over-smooth)."
+    },
+    {
+      "question": "8. In corpus C, the bigram probability P(paper | question) = 0.25 and count(\"question\") = 800. If the vocabulary size is V = 1000, what is P(paper | question) after Add-1 smoothing?",
+      "options": [
+        "0.112",
+        "0.250",
+        "0.100",
+        "0.212"
+      ],
+      "correctAnswer": "0.112",
+      "explanation": "C(question, paper) = P(paper | question) * C(question) = 0.25 * 800 = 200. P_Add-1(paper | question) = (C(w_1, w_2) + 1) / (C(w_1) + V) = (200 + 1) / (800 + 1000) = 201 / 1800 ≈ 0.112."
+    },
+    {
+      "question": "9. Why do unigram models perform especially poorly in the Shannon \"predict the next word\" game (e.g., \"For breakfast I ate my usual ___\")?",
+      "options": [
+        "Because unigrams overfit long contexts",
+        "Because unigrams require the entire vocabulary to be labeled",
+        "Because unigrams ignore all preceding words and predict based only on individual word frequencies",
+        "Because unigrams cannot assign probabilities at all"
+      ],
+      "correctAnswer": "Because unigrams ignore all preceding words and predict based only on individual word frequencies",
+      "explanation": "A unigram model assigns probabilities to words independent of context. Since it ignores the preceding words entirely, it cannot use the context that makes the next word predictable, so it is terrible at next-word prediction."
+    },
+    {
+      "question": "10. A unigram language model that treats all words as equally likely achieves a perplexity of 100 on a test set. What is the probability the model assigns to each individual word?",
+      "options": [
+        "0.01",
+        "0.001",
+        "0.1",
+        "1.0"
+      ],
+      "correctAnswer": "0.01",
+      "explanation": "For equal probabilities, perplexity PP(W) = V = 100. The probability assigned to each individual word is P(w) = 1 / V = 1 / 100 = 0.01."
+    }
+  ]
+}

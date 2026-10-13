@@ -1,0 +1,118 @@
+{
+  "id": "dlnlp-assignment-9",
+  "title": "DLNLP Assignment 9 Solutions",
+  "subject": "DLNLP",
+  "date": "10/10/2026",
+  "questions": [
+    {
+      "question": "1. Which statement about the formal definition of an induction head is FALSE?",
+      "options": [
+        "Prefix matching: the head attends back to previous tokens that were followed by the current and/or recent token.",
+        "Copying: the head's output increases the logit corresponding to the attended-to token.",
+        "The two properties are required to hold on a repeated sequence of completely random tokens.",
+        "A single head in a one-layer attention-only transformer can satisfy both properties, which is why one-layer models also exhibit the in-context learning phase change."
+      ],
+      "correctAnswer": "A single head in a one-layer attention-only transformer can satisfy both properties, which is why one-layer models also exhibit the in-context learning phase change.",
+      "explanation": "Induction heads require at least two attention layers to form (composition of a previous-token head with an induction head); one-layer attention models cannot implement induction heads."
+    },
+    {
+      "question": "2. In-context learning score is loss at 500th token minus loss at 50th token. Model loss at 50th token is 3.10 nats and at 500th token is 2.68 nats. What is the score and how should a shift from −0.05 to this value be interpreted?",
+      "options": [
+        "+0.42; the model has become worse at using long context.",
+        "−0.42; the model has become substantially better at using long context.",
+        "0.865; the ratio indicates a mild improvement.",
+        "−0.42; but the sign is uninformative, since only the magnitude is comparable across models."
+      ],
+      "correctAnswer": "−0.42; the model has become substantially better at using long context.",
+      "explanation": "Score = 2.68 - 3.10 = -0.42. A more negative score indicates the model exploits context much more effectively (phase change)."
+    },
+    {
+      "question": "3. Regarding counterintuitive findings about in-context demonstrations, which conclusion is FALSE?",
+      "options": [
+        "Replacing the labels in the demonstrations with random labels degrades in-context learning performance only marginally.",
+        "Removing the demonstrations entirely ('No Demos') hurts far more than corrupting their labels, so demonstrations still carry substantial value.",
+        "Accuracy rises steeply as k goes from 0 to roughly 4–8 demonstrations and then largely flattens, for both gold and random labels.",
+        "Since random labels barely hurt, the demonstrations convey no usable information about the task, and their only function is to pad the context to a sufficient length."
+      ],
+      "correctAnswer": "Since random labels barely hurt, the demonstrations convey no usable information about the task, and their only function is to pad the context to a sufficient length.",
+      "explanation": "Demonstrations convey substantial information regarding the input distribution, format, and label space, which is why 'No Demos' performs far worse."
+    },
+    {
+      "question": "4. Which statement about chain-of-thought prompting is FALSE?",
+      "options": [
+        "Because CoT exposes intermediate steps, a correct final answer certifies that every intermediate step was also valid.",
+        "CoT decomposes a complex problem into smaller sequential reasoning steps, mirroring human problem solving.",
+        "Zero-shot CoT dispenses with worked exemplars and instead instructs the model to reason step by step.",
+        "CoT is an in-context learning approach and applies to most well-trained off-the-shelf LLMs without gradient updates."
+      ],
+      "correctAnswer": "Because CoT exposes intermediate steps, a correct final answer certifies that every intermediate step was also valid.",
+      "explanation": "CoT makes reasoning transparent, but LLMs can still arrive at correct final answers through unfaithful or invalid intermediate steps."
+    },
+    {
+      "question": "5. Self-consistency samples 5 reasoning paths: P1->42 (log p=-3.0), P2->42 (log p=-4.5), P3->18 (log p=-1.2), P4->18 (log p=-3.5), P5->42 (log p=-6.0). Unweighted majority vote vs probability-weighted vote: Which is correct? (e^-1.2≈0.301, e^-3.0≈0.050, e^-3.5≈0.030, e^-4.5≈0.011, e^-6.0≈0.002)",
+      "options": [
+        "Both votes return 42.",
+        "The unweighted vote returns 42; the weighted vote returns 18.",
+        "Both votes return 18.",
+        "The unweighted vote returns 18; the weighted vote returns 42."
+      ],
+      "correctAnswer": "The unweighted vote returns 42; the weighted vote returns 18.",
+      "explanation": "Unweighted count: 42 has 3 votes, 18 has 2 votes -> 42 wins. Weighted probabilities: 42 gets 0.050+0.011+0.002 = 0.063, while 18 gets 0.301+0.030 = 0.331 -> 18 wins."
+    },
+    {
+      "question": "6. A Tree-of-Thoughts system uses BFS. At each expansion the LLM generates b = 5 thought candidates in 1 query. Each candidate is scored by a separate evaluator query. Top k = 2 are retained. Root needs 1 generation query, depth d = 4. What is the total number of LLM queries?",
+      "options": [
+        "35",
+        "7",
+        "42",
+        "45"
+      ],
+      "correctAnswer": "42",
+      "explanation": "Generation queries: Root = 1; levels 2, 3, 4 each have k=2 retained nodes generating -> 1 + 2×3 = 7. Evaluation queries: Level 1 has 5 candidates; levels 2, 3, 4 each have 2×5 = 10 candidates -> 5 + 30 = 35. Total = 7 + 35 = 42 queries."
+    },
+    {
+      "question": "7. For an API call, Toolformer measures Li(ε) = 1.85, Li(e(ci, ε)) = 1.60 and Li(e(ci, ri)) = 1.05, filtering threshold τf = 0.40. What happens to this API call?",
+      "options": [
+        "Retained, with a loss reduction of 0.55.",
+        "Retained, with a loss reduction of 0.80.",
+        "Discarded, since the reduction is 0.25 and falls below τf.",
+        "Discarded, since Li− must be taken as Li(ε) and the comparison is then invalid."
+      ],
+      "correctAnswer": "Retained, with a loss reduction of 0.55.",
+      "explanation": "Baseline loss Li- = min(1.85, 1.60) = 1.60. With result: Li+ = 1.05. Reduction = 1.60 - 1.05 = 0.55 ≥ 0.40, so the call is retained."
+    },
+    {
+      "question": "8. AUTOPROMPT augments token replacement with beam search. Trigger of 5 tokens, k = 10 candidates per position, beam width of 3. How many beam scorings are performed in one complete left-to-right pass?",
+      "options": [
+        "15",
+        "30",
+        "50",
+        "150"
+      ],
+      "correctAnswer": "150",
+      "explanation": "At each of 5 positions, each of 3 beams is extended by 10 candidates: 3 × 10 = 30 scorings per position. Across 5 positions: 5 × 30 = 150 scorings."
+    },
+    {
+      "question": "9. Which statement about the families of automatic prompt engineering methods is FALSE?",
+      "options": [
+        "Automated prompt design uses search or generation over a predefined search space and generally outperforms manual engineering.",
+        "Prompt paraphrasing, gradient-based discrete prompt search, and prompt tuning are three distinct families of approaches.",
+        "AUTOPROMPT returns discrete trigger tokens drawn from the vocabulary, so the resulting prompt is a genuine token sequence.",
+        "Prompt tuning also searches over the discrete vocabulary, which is why its learned prompts remain human-readable."
+      ],
+      "correctAnswer": "Prompt tuning also searches over the discrete vocabulary, which is why its learned prompts remain human-readable.",
+      "explanation": "Prompt tuning optimizes continuous 'soft prompt' embeddings directly via backpropagation; they do not map to discrete vocabulary words and are not human-readable."
+    },
+    {
+      "question": "10. In AUTOPROMPT's scoring function p(y | x_prompt) = Σ p([MASK]=w | x_prompt) where each class y has disjoint label-token sets Vy ⊂ V: Which statement is TRUE?",
+      "options": [
+        "The quantities form a proper probability distribution over classes for any choice of label sets.",
+        "Summing over classes gives at most 1, with equality only if label sets jointly cover the entire vocabulary; in general scores must be renormalised.",
+        "The sum over classes always exceeds 1, because each label token is counted once per class.",
+        "The formulation is valid only when |Vy| = 1 for every class."
+      ],
+      "correctAnswer": "Summing over classes gives at most 1, with equality only if label sets jointly cover the entire vocabulary; in general scores must be renormalised.",
+      "explanation": "Because label sets Vy are disjoint subsets of the total vocabulary, the sum of probabilities over classes is ≤ 1, requiring renormalization to form valid class probabilities."
+    }
+  ]
+}

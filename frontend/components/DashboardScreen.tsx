@@ -1,0 +1,669 @@
+import React, { useRef, useState } from 'react';
+import { Quiz, QuizAttempt } from '../lib/types';
+import { 
+  FileText, 
+  Loader2, 
+  CheckCircle, 
+  Clock, 
+  ArrowLeft, 
+  Sparkles, 
+  Brain, 
+  FileUp, 
+  PlusCircle, 
+  Trash2, 
+  Download, 
+  Code,
+  BookOpen,
+  Folder,
+  Layers,
+  GraduationCap
+} from 'lucide-react';
+import { QuizMode } from './LandingScreen';
+import { ImportQuizModal } from './ImportQuizModal';
+
+interface DashboardScreenProps {
+  quizzes: Quiz[];
+  attempts: Record<string, QuizAttempt>;
+  onUpload: (files: File[], instructions?: string) => void;
+  onGenerateFromMaterial: (files: File[], numQuestions: number, difficulty: string, instructions?: string) => void;
+  isLoading: boolean;
+  onTakeQuiz: (id: string) => void;
+  onViewResults: (id: string) => void;
+  onDeleteQuiz?: (id: string) => void;
+  onSaveManualQuiz?: (quiz: Quiz) => void;
+  mode: QuizMode;
+  onBack: () => void;
+}
+
+export function DashboardScreen({ 
+  quizzes, 
+  attempts, 
+  onUpload, 
+  onGenerateFromMaterial, 
+  isLoading, 
+  onTakeQuiz, 
+  onViewResults, 
+  onDeleteQuiz,
+  onSaveManualQuiz,
+  mode, 
+  onBack 
+}: DashboardScreenProps) {
+  const fileInputRef = useRef<HTMLInputElement>(null);
+  const [instructions, setInstructions] = useState("");
+  const [stagedFiles, setStagedFiles] = useState<File[]>([]);
+  const [previews, setPreviews] = useState<string[]>([]);
+  const [isImportModalOpen, setIsImportModalOpen] = useState(false);
+  const [selectedSubject, setSelectedSubject] = useState<string>("all");
+
+  // Generation config (only used in 'generate' mode)
+  const [numQuestions, setNumQuestions] = useState(10);
+  const [difficulty, setDifficulty] = useState('medium');
+
+  // Compute unique subjects
+  const allSubjects = Array.from(new Set(quizzes.map(q => q.subject || "General"))).sort();
+  
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files.length > 0) {
+      addFiles(Array.from(e.target.files));
+      if (fileInputRef.current) {
+        fileInputRef.current.value = "";
+      }
+    }
+  };
+
+  const addFiles = (newFiles: File[]) => {
+    setStagedFiles(prev => [...prev, ...newFiles]);
+    
+    // Generate previews
+    newFiles.forEach(file => {
+      if (file.type.startsWith('image/')) {
+        const reader = new FileReader();
+        reader.onloadend = () => {
+          setPreviews(prev => [...prev, reader.result as string]);
+        };
+        reader.readAsDataURL(file);
+      } else if (file.name.endsWith('.json') || file.type === 'application/json') {
+        setPreviews(prev => [...prev, "JSON_PLACEHOLDER"]);
+      } else if (file.name.endsWith('.txt') || file.type === 'text/plain') {
+        setPreviews(prev => [...prev, "TXT_PLACEHOLDER"]);
+      } else {
+        setPreviews(prev => [...prev, "PDF_PLACEHOLDER"]);
+      }
+    });
+  };
+
+  const removeFile = (index: number) => {
+    setStagedFiles(prev => prev.filter((_, i) => i !== index));
+    setPreviews(prev => prev.filter((_, i) => i !== index));
+  };
+
+  const handlePaste = (e: React.ClipboardEvent) => {
+    const items = e.clipboardData.items;
+    const files: File[] = [];
+    
+    for (let i = 0; i < items.length; i++) {
+      if (items[i].type.indexOf("image") !== -1) {
+        const blob = items[i].getAsFile();
+        if (blob) {
+          files.push(new File([blob], `pasted_image_${Date.now()}_${i}.png`, { type: blob.type }));
+        }
+      }
+    }
+
+    if (files.length > 0) {
+      addFiles(files);
+    }
+  };
+
+  const handleGenerate = () => {
+    if (stagedFiles.length > 0) {
+      if (mode === 'generate') {
+        onGenerateFromMaterial(stagedFiles, numQuestions, difficulty, instructions);
+      } else {
+        onUpload(stagedFiles, instructions);
+      }
+      setStagedFiles([]);
+      setPreviews([]);
+      setInstructions("");
+    }
+  };
+
+  const exportQuizAsJson = (quiz: Quiz) => {
+    const jsonStr = JSON.stringify(quiz, null, 2);
+    const blob = new Blob([jsonStr], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `${quiz.title.toLowerCase().replace(/[^a-z0-9_-]/g, "_")}.json`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  };
+
+  const isGenerate = mode === 'generate';
+  const accentColor = isGenerate ? '#E67E22' : '#2980b9';
+  const accentColorHover = isGenerate ? '#d35400' : '#2471a3';
+
+  // Group quizzes by subject
+  const subjectsToDisplay = selectedSubject === "all" ? allSubjects : [selectedSubject];
+
+  const getSubjectColor = (subj: string) => {
+    const lower = subj.toLowerCase();
+    if (lower.includes('hr') || lower.includes('analytics')) {
+      return { bg: 'bg-emerald-500', lightBg: 'bg-emerald-50', text: 'text-emerald-700', border: 'border-emerald-300' };
+    }
+    if (lower.includes('genai') || lower.includes('generative')) {
+      return { bg: 'bg-orange-500', lightBg: 'bg-orange-50', text: 'text-orange-700', border: 'border-orange-300' };
+    }
+    if (lower.includes('nlp') || lower.includes('dlnlp')) {
+      return { bg: 'bg-purple-600', lightBg: 'bg-purple-50', text: 'text-purple-700', border: 'border-purple-300' };
+    }
+    if (lower.includes('deep') || lower.includes('learning')) {
+      return { bg: 'bg-blue-600', lightBg: 'bg-blue-50', text: 'text-blue-700', border: 'border-blue-300' };
+    }
+    return { bg: 'bg-indigo-600', lightBg: 'bg-indigo-50', text: 'text-indigo-700', border: 'border-indigo-300' };
+  };
+
+  return (
+    <div className="flex bg-white min-h-[85vh] font-sans border-t border-[#dee2e6]">
+      {/* Sidebar */}
+      <div className="w-64 bg-[#f8f9fa] border-r border-[#dee2e6] pt-4 hidden md:flex md:flex-col shrink-0">
+        <button
+          onClick={onBack}
+          className="flex items-center gap-2 px-6 py-3 text-sm font-semibold text-[#2980b9] hover:bg-gray-200 transition cursor-pointer mb-2"
+        >
+          <ArrowLeft className="w-4 h-4" />
+          Back to Home
+        </button>
+        <div className="h-px bg-[#dee2e6] mx-4 mb-2" />
+        
+        <ul className="text-sm font-semibold text-[#495057]">
+          <li className="px-6 py-3 bg-[#e9ecef] border-l-4 text-[#2c3e50] flex items-center gap-2" style={{ borderColor: accentColor }}>
+            {isGenerate ? <Brain className="w-4 h-4" /> : <FileUp className="w-4 h-4" />}
+            {isGenerate ? 'AI Generation' : 'Upload Questions'}
+          </li>
+          <li 
+            onClick={() => setIsImportModalOpen(true)}
+            className="px-6 py-3 hover:bg-gray-200 cursor-pointer text-[#2980b9] flex items-center gap-2"
+          >
+            <PlusCircle className="w-4 h-4" />
+            Add Quiz (Offline)
+          </li>
+        </ul>
+
+        {/* Subjects in Sidebar */}
+        <div className="mt-4 px-6 mb-2 flex items-center justify-between text-xs font-bold text-gray-500 uppercase tracking-wider">
+          <span>Subjects</span>
+          <span className="bg-gray-200 text-gray-700 px-1.5 py-0.5 rounded text-[10px]">{allSubjects.length}</span>
+        </div>
+        <ul className="text-xs font-semibold text-[#495057] space-y-0.5">
+          <li 
+            onClick={() => setSelectedSubject("all")}
+            className={`px-6 py-2.5 flex items-center justify-between cursor-pointer transition ${
+              selectedSubject === "all" ? "bg-blue-50 text-[#2980b9] border-l-4 border-[#2980b9]" : "hover:bg-gray-200"
+            }`}
+          >
+            <div className="flex items-center gap-2">
+              <Layers className="w-3.5 h-3.5" />
+              <span>All Subjects</span>
+            </div>
+            <span className="text-[10px] bg-gray-200 text-gray-700 px-1.5 py-0.5 rounded-full">{quizzes.length}</span>
+          </li>
+          {allSubjects.map((subj) => {
+            const count = quizzes.filter(q => (q.subject || "General") === subj).length;
+            const isSubjActive = selectedSubject === subj;
+            const colors = getSubjectColor(subj);
+            return (
+              <li 
+                key={subj}
+                onClick={() => setSelectedSubject(subj)}
+                className={`px-6 py-2.5 flex items-center justify-between cursor-pointer transition ${
+                  isSubjActive ? `${colors.lightBg} ${colors.text} border-l-4 ${colors.border}` : "hover:bg-gray-200"
+                }`}
+              >
+                <div className="flex items-center gap-2 truncate">
+                  <GraduationCap className="w-3.5 h-3.5 shrink-0" />
+                  <span className="truncate">{subj}</span>
+                </div>
+                <span className="text-[10px] bg-gray-200 text-gray-700 px-1.5 py-0.5 rounded-full shrink-0">{count}</span>
+              </li>
+            );
+          })}
+        </ul>
+
+        {/* Local Permanent Storage badge */}
+        <div className="mt-auto m-4 mb-2 p-3 bg-emerald-50 border border-emerald-200 rounded text-[11px] text-emerald-800">
+          <div className="font-bold flex items-center gap-1.5 mb-1">
+            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            Permanent Local Storage
+          </div>
+          <p className="text-gray-600 leading-tight">
+            Quizzes are saved on disk in <code className="bg-emerald-100/70 px-1 py-0.5 rounded text-[10px]">quizzes/</code>. 100% offline ready.
+          </p>
+        </div>
+
+        {/* Creator Branding Badge */}
+        <div className="mx-4 mb-4 p-3 bg-gradient-to-br from-orange-50 to-amber-50 border border-orange-200/80 rounded text-[11px] text-orange-950 shadow-xs">
+          <div className="font-extrabold flex items-center justify-between text-orange-800 mb-0.5">
+            <span className="flex items-center gap-1">
+              <Sparkles className="w-3.5 h-3.5 text-orange-500" />
+              Quizify 2
+            </span>
+            <span className="text-[9px] bg-orange-200/60 px-1.5 py-0.2 rounded font-bold">v2.0</span>
+          </div>
+          <p className="text-gray-600 text-[10px] leading-tight">
+            Engineered by <span className="font-bold text-gray-800">Saksham Sooden</span>
+          </p>
+        </div>
+      </div>
+
+      {/* Main Content Area */}
+      <div className="flex-1 p-6 md:p-10 bg-white min-w-0" onPaste={handlePaste}>
+        
+        {/* Mode Header */}
+        <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-lg flex items-center justify-center shadow-sm" style={{ 
+              background: `linear-gradient(135deg, ${accentColor}, ${accentColorHover})` 
+            }}>
+              {isGenerate ? <Sparkles className="w-5 h-5 text-white" /> : <FileUp className="w-5 h-5 text-white" />}
+            </div>
+            <div>
+              <div className="flex items-center gap-2">
+                <h1 className="text-xl font-bold text-[#2c3e50]">
+                  {isGenerate ? 'Generate Quiz from Study Material' : 'Upload Questions & Solutions'}
+                </h1>
+                <span className="bg-orange-100 text-orange-700 text-[10px] font-bold px-2 py-0.5 rounded-full border border-orange-200 uppercase tracking-wide">
+                  Quizify 2
+                </span>
+              </div>
+              <p className="text-xs text-gray-500">
+                {isGenerate 
+                  ? 'Quizify 2 AI Engine • Made by Saksham Sooden' 
+                  : 'Quizify 2 Direct Parser • Made by Saksham Sooden'}
+              </p>
+            </div>
+          </div>
+
+          <button
+            onClick={() => setIsImportModalOpen(true)}
+            className="inline-flex items-center gap-2 bg-white border border-[#2980b9] text-[#2980b9] hover:bg-blue-50 px-4 py-2 rounded text-xs font-bold transition shadow-sm cursor-pointer"
+          >
+            <PlusCircle className="w-4 h-4" />
+            Add / Paste Quiz (Offline)
+          </button>
+        </div>
+
+        <p className="text-xs text-gray-500 mb-3 italic">
+          Tip: You can paste images (Ctrl+V), or upload <strong>.json</strong> and <strong>.txt</strong> quiz files directly for instant offline parsing without an API key.
+        </p>
+         
+        {/* Staged Files Preview */}
+        {stagedFiles.length > 0 && (
+          <div className="flex flex-wrap gap-3 mb-4 p-3 bg-white border border-dashed border-[#dee2e6] rounded">
+             {stagedFiles.map((file, idx) => (
+               <div key={idx} className="relative group w-24 h-24 border rounded overflow-hidden bg-gray-50 flex flex-col justify-center items-center">
+                 {previews[idx] === "PDF_PLACEHOLDER" && (
+                   <div className="w-full h-full flex flex-col items-center justify-center text-[10px] text-gray-500 font-bold p-1 text-center">
+                     <FileText className="w-6 h-6 mb-1 text-red-500" />
+                     PDF
+                   </div>
+                 )}
+                 {previews[idx] === "JSON_PLACEHOLDER" && (
+                   <div className="w-full h-full flex flex-col items-center justify-center text-[10px] text-emerald-600 font-bold p-1 text-center bg-emerald-50">
+                     <Code className="w-6 h-6 mb-1 text-emerald-600" />
+                     JSON (Offline)
+                   </div>
+                 )}
+                 {previews[idx] === "TXT_PLACEHOLDER" && (
+                   <div className="w-full h-full flex flex-col items-center justify-center text-[10px] text-blue-600 font-bold p-1 text-center bg-blue-50">
+                     <FileText className="w-6 h-6 mb-1 text-blue-600" />
+                     TXT (Offline)
+                   </div>
+                 )}
+                 {!["PDF_PLACEHOLDER", "JSON_PLACEHOLDER", "TXT_PLACEHOLDER"].includes(previews[idx]) && (
+                   <img src={previews[idx]} alt="preview" className="w-full h-full object-cover" />
+                 )}
+                 <button 
+                   onClick={() => removeFile(idx)}
+                   className="absolute top-0 right-0 bg-red-500 text-white w-5 h-5 flex items-center justify-center text-[10px] rounded-bl opacity-0 group-hover:opacity-100 transition cursor-pointer"
+                 >
+                   &times;
+                 </button>
+                 <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-[8px] px-1 truncate">
+                   {file.name}
+                 </div>
+               </div>
+             ))}
+             <button 
+               onClick={() => fileInputRef.current?.click()}
+               className="w-24 h-24 border-2 border-dashed border-gray-300 rounded flex flex-col items-center justify-center text-gray-400 hover:border-[#2980b9] hover:text-[#2980b9] transition cursor-pointer"
+             >
+               <span className="text-xl">+</span>
+               <span className="text-[10px]">Add More</span>
+             </button>
+          </div>
+        )}
+
+        {/* Generation Config (only for 'generate' mode) */}
+        {isGenerate && stagedFiles.length > 0 && (
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4 p-4 bg-gradient-to-r from-orange-50/60 to-amber-50/40 border border-orange-200/60 rounded-lg">
+            <div>
+              <label className="block text-xs font-semibold text-[#2c3e50] mb-1.5">Number of Questions</label>
+              <input 
+                type="number" 
+                min={1} 
+                max={50} 
+                value={numQuestions}
+                onChange={(e) => setNumQuestions(Math.max(1, Math.min(50, parseInt(e.target.value) || 1)))}
+                className="w-full text-sm p-2.5 border border-[#dee2e6] rounded bg-white text-[#2c3e50] focus:outline-none focus:border-orange-400 transition"
+              />
+            </div>
+            <div>
+              <label className="block text-xs font-semibold text-[#2c3e50] mb-1.5">Difficulty Level</label>
+              <select 
+                value={difficulty}
+                onChange={(e) => setDifficulty(e.target.value)}
+                className="w-full text-sm p-2.5 border border-[#dee2e6] rounded bg-white text-[#2c3e50] focus:outline-none focus:border-orange-400 transition cursor-pointer"
+              >
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+                <option value="mixed">Mixed (All Levels)</option>
+              </select>
+            </div>
+          </div>
+        )}
+
+        <textarea
+          className="w-full text-sm p-3 mb-4 border border-[#dee2e6] rounded bg-white text-[#2c3e50] placeholder-gray-400 focus:outline-none focus:border-[#2980b9] transition"
+          placeholder={isGenerate 
+            ? "Additional instructions (Optional) e.g., 'Focus on chapter 3 and include conceptual questions'" 
+            : "Additional Prompt Instructions (Optional) e.g., 'Make sure to extract 10 questions only'"}
+          rows={2}
+          value={instructions}
+          onChange={(e) => setInstructions(e.target.value)}
+        />
+
+        <div className="flex items-center gap-4 mb-10">
+           <input 
+             type="file" 
+             multiple 
+             accept="application/pdf,image/*,.json,.txt,text/plain,application/json"
+             className="hidden"
+             ref={fileInputRef}
+             onChange={handleFileChange}
+           />
+           {stagedFiles.length === 0 ? (
+             <div className="flex items-center gap-3">
+               <button 
+                 className={`text-white px-5 py-2 text-sm font-semibold rounded-sm tracking-wide flex items-center gap-2 transition cursor-pointer ${isLoading ? 'opacity-70 pointer-events-none' : ''}`}
+                 style={{ backgroundColor: '#2c3e50' }}
+                 onClick={() => fileInputRef.current?.click()}
+                 onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#1a252f')}
+                 onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = '#2c3e50')}
+               >
+                 {isLoading ? <Loader2 className="w-4 h-4 animate-spin" /> : <FileText className="w-4 h-4" />}
+                 {isLoading ? 'Processing...' : isGenerate ? 'Add Study Material' : 'Upload File (PDF / Img / JSON / TXT)'}
+               </button>
+
+               <button
+                 type="button"
+                 onClick={() => setIsImportModalOpen(true)}
+                 className="bg-[#27ae60] hover:bg-[#219150] text-white px-4 py-2 text-sm font-semibold rounded-sm flex items-center gap-2 transition cursor-pointer"
+               >
+                 <PlusCircle className="w-4 h-4" />
+                 Add Quiz Offline
+               </button>
+             </div>
+           ) : (
+             <button 
+               className={`text-white px-6 py-2 text-sm font-bold rounded-sm tracking-wide flex items-center gap-2 shadow-sm transition cursor-pointer ${isLoading ? 'opacity-70 pointer-events-none' : ''}`}
+               style={{ backgroundColor: accentColor }}
+               onClick={handleGenerate}
+               onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = accentColorHover)}
+               onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = accentColor)}
+             >
+               {isLoading ? <Loader2 className="w-4 h-4 animate-spin" /> : 
+                 isGenerate ? <Sparkles className="w-4 h-4" /> : 
+                 <div className="bg-white rounded-full w-5 h-5 flex items-center justify-center text-xs" style={{ color: accentColor }}>!</div>
+               }
+               {isLoading 
+                 ? (isGenerate ? 'Generating Quiz...' : 'Processing...') 
+                 : (isGenerate ? `Generate ${numQuestions} Questions` : `Process Files (${stagedFiles.length})`)}
+             </button>
+           )}
+           
+           {stagedFiles.length > 0 && !isLoading && (
+             <button 
+               onClick={() => { setStagedFiles([]); setPreviews([]); }}
+               className="text-gray-500 hover:text-red-500 text-sm font-medium transition cursor-pointer"
+             >
+               Clear All
+             </button>
+           )}
+        </div>
+
+
+        {/* Subjects Filter Bar */}
+        <div className="mb-8">
+          <div className="flex items-center justify-between border-b border-[#dee2e6] pb-3 mb-4">
+            <div className="flex items-center gap-3">
+              <h2 className="text-2xl font-light text-[#2c3e50]">
+                My Quizzes
+              </h2>
+              <span className="bg-blue-100 text-blue-700 font-bold px-2.5 py-0.5 rounded-full text-xs">
+                {quizzes.length} Total
+              </span>
+            </div>
+            
+            <span className="text-xs text-gray-500 hidden sm:inline">
+              Organized by Subject • Saved permanently
+            </span>
+          </div>
+
+          {/* Subject Tabs */}
+          <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-thin">
+            <button
+              onClick={() => setSelectedSubject("all")}
+              className={`px-3.5 py-1.5 rounded-full text-xs font-bold transition whitespace-nowrap cursor-pointer ${
+                selectedSubject === "all"
+                  ? "bg-[#2c3e50] text-white shadow-sm"
+                  : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+              }`}
+            >
+              All Subjects ({quizzes.length})
+            </button>
+            {allSubjects.map((subj) => {
+              const subjCount = quizzes.filter(q => (q.subject || "General") === subj).length;
+              const isCurrent = selectedSubject === subj;
+              const colors = getSubjectColor(subj);
+              return (
+                <button
+                  key={subj}
+                  onClick={() => setSelectedSubject(subj)}
+                  className={`px-3.5 py-1.5 rounded-full text-xs font-bold transition whitespace-nowrap cursor-pointer flex items-center gap-1.5 ${
+                    isCurrent
+                      ? `${colors.bg} text-white shadow-sm`
+                      : `${colors.lightBg} ${colors.text} hover:opacity-80 border ${colors.border}`
+                  }`}
+                >
+                  <GraduationCap className="w-3.5 h-3.5" />
+                  <span>{subj}</span>
+                  <span className={`text-[10px] px-1.5 py-0.2 rounded-full ${isCurrent ? 'bg-white/30 text-white' : 'bg-black/10'}`}>
+                    {subjCount}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Separate Subject Sections */}
+        {quizzes.length === 0 ? (
+          <div className="text-center py-12 bg-gray-50 border border-dashed border-gray-300 rounded-lg">
+             <p className="text-gray-500 text-sm mb-3">No quizzes have been created yet.</p>
+             <button
+               onClick={() => setIsImportModalOpen(true)}
+               className="inline-flex items-center gap-2 px-4 py-2 bg-[#2980b9] text-white text-xs font-bold rounded hover:bg-[#206796] transition"
+             >
+               <PlusCircle className="w-4 h-4" />
+               Create First Quiz
+             </button>
+          </div>
+        ) : (
+          <div className="space-y-10">
+            {subjectsToDisplay.map((subjectName) => {
+              const subjectQuizzes = quizzes.filter(q => (q.subject || "General") === subjectName);
+              if (subjectQuizzes.length === 0) return null;
+
+              const completedCount = subjectQuizzes.filter(q => !!attempts[q.id]).length;
+              const colors = getSubjectColor(subjectName);
+
+              return (
+                <div key={subjectName} className="bg-white border border-[#dee2e6] rounded-lg shadow-xs overflow-hidden">
+                  
+                  {/* Subject Section Header */}
+                  <div className="p-4 bg-gray-50 border-b border-[#dee2e6] flex flex-wrap items-center justify-between gap-3">
+                    <div className="flex items-center gap-3">
+                      <div className={`w-8 h-8 rounded-md flex items-center justify-center text-white ${colors.bg} shadow-xs`}>
+                        <GraduationCap className="w-4 h-4" />
+                      </div>
+                      <div>
+                        <h3 className="text-base font-bold text-[#2c3e50] flex items-center gap-2">
+                          {subjectName}
+                        </h3>
+                        <p className="text-xs text-gray-500">
+                          {subjectQuizzes.length} {subjectQuizzes.length === 1 ? 'assignment' : 'assignments'} available
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-center gap-2">
+                      <span className="text-xs font-semibold px-2.5 py-1 bg-white border border-gray-200 rounded-full text-gray-700">
+                        Progress: {completedCount}/{subjectQuizzes.length} Completed
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Quizzes Table for this Subject */}
+                  <div className="overflow-x-auto">
+                    <table className="w-full text-left border-collapse">
+                      <thead>
+                        <tr className="bg-white border-b border-[#dee2e6] text-[#6c757d] text-xs uppercase tracking-wider font-semibold">
+                          <th className="p-3 w-12 text-center">S.No.</th>
+                          <th className="p-3">Assignment Title</th>
+                          <th className="p-3 text-center">Date</th>
+                          <th className="p-3 text-center">Questions</th>
+                          <th className="p-3 text-center">Status</th>
+                          <th className="p-3 text-center">Action</th>
+                        </tr>
+                      </thead>
+                      <tbody className="text-sm text-[#2c3e50] divide-y divide-gray-100">
+                        {subjectQuizzes.map((quiz, index) => {
+                          const hasAttempt = !!attempts[quiz.id];
+                          const attemptInfo = attempts[quiz.id];
+
+                          return (
+                            <tr key={quiz.id} className="hover:bg-blue-50/40 transition">
+                              <td className="p-3 text-center text-gray-500 text-xs font-medium">{index + 1}</td>
+                              <td className="p-3 font-medium text-[#2980b9]">
+                                <div className="flex items-center gap-2">
+                                  <span>{quiz.title}</span>
+                                </div>
+                              </td>
+                              <td className="p-3 text-center text-xs text-gray-500">{quiz.date}</td>
+                              <td className="p-3 text-center font-semibold text-xs">{quiz.questions.length}</td>
+                              <td className="p-3 text-center">
+                                {hasAttempt ? (
+                                  <span className="inline-flex items-center gap-1 text-[#27ae60] font-semibold text-xs">
+                                    <CheckCircle className="w-3.5 h-3.5" /> Submitted
+                                    <span className="text-[11px] text-gray-500">
+                                       ({attemptInfo.score}/{quiz.questions.length})
+                                    </span>
+                                  </span>
+                                ) : (
+                                  <span className="inline-flex items-center gap-1 text-[#e67e22] font-semibold text-xs">
+                                    <Clock className="w-3.5 h-3.5" /> Pending
+                                  </span>
+                                )}
+                              </td>
+                              <td className="p-3 text-center">
+                                <div className="flex items-center justify-center gap-1.5 flex-wrap">
+                                  {hasAttempt ? (
+                                    <>
+                                      <button 
+                                        onClick={() => onViewResults(quiz.id)}
+                                        className="text-xs bg-[#f39c12] hover:bg-[#d68910] text-white px-2.5 py-1 rounded font-semibold transition cursor-pointer"
+                                      >
+                                        Results
+                                      </button>
+                                      <button 
+                                        onClick={() => onTakeQuiz(quiz.id)}
+                                        className="text-xs bg-gray-100 hover:bg-gray-200 text-[#2c3e50] border border-gray-300 px-2.5 py-1 rounded font-semibold transition cursor-pointer"
+                                      >
+                                        Retake
+                                      </button>
+                                    </>
+                                  ) : (
+                                    <button 
+                                      onClick={() => onTakeQuiz(quiz.id)}
+                                      className="text-xs bg-[#2980b9] hover:bg-[#2471a3] text-white px-3.5 py-1 rounded font-semibold transition cursor-pointer shadow-xs"
+                                    >
+                                      Take Quiz
+                                    </button>
+                                  )}
+
+                                  {/* Export JSON button */}
+                                  <button
+                                    title="Export Quiz as JSON"
+                                    onClick={() => exportQuizAsJson(quiz)}
+                                    className="p-1.5 text-gray-400 hover:text-blue-600 hover:bg-gray-100 rounded transition cursor-pointer"
+                                  >
+                                    <Download className="w-3.5 h-3.5" />
+                                  </button>
+
+                                  {/* Delete quiz button */}
+                                  {onDeleteQuiz && (
+                                    <button
+                                      title="Delete Quiz"
+                                      onClick={() => {
+                                        if (confirm(`Are you sure you want to delete "${quiz.title}"?`)) {
+                                          onDeleteQuiz(quiz.id);
+                                        }
+                                      }}
+                                      className="p-1.5 text-gray-400 hover:text-red-600 hover:bg-red-50 rounded transition cursor-pointer"
+                                    >
+                                      <Trash2 className="w-3.5 h-3.5" />
+                                    </button>
+                                  )}
+                                </div>
+                              </td>
+                            </tr>
+                          );
+                        })}
+                      </tbody>
+                    </table>
+                  </div>
+
+                </div>
+              );
+            })}
+          </div>
+        )}
+      </div>
+
+      {/* Offline Import Modal */}
+      <ImportQuizModal
+        isOpen={isImportModalOpen}
+        onClose={() => setIsImportModalOpen(false)}
+        onSaveQuiz={(quiz) => {
+          if (onSaveManualQuiz) {
+            onSaveManualQuiz(quiz);
+          }
+        }}
+      />
+    </div>
+  );
+}

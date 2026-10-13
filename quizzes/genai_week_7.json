@@ -1,0 +1,118 @@
+{
+  "id": "genai-week-7",
+  "title": "Fundamentals of Generative AI - Week 7 Assignment 7",
+  "subject": "Fundamentals of Generative AI",
+  "date": "10/10/2026",
+  "questions": [
+    {
+      "question": "1. What is the primary objective of the forward diffusion process in a DDPM?",
+      "options": [
+        "To generate realistic images directly",
+        "To gradually add Gaussian noise until the data resembles pure noise",
+        "To remove noise from an image in a single step",
+        "To classify images into different categories"
+      ],
+      "correctAnswer": "To gradually add Gaussian noise until the data resembles pure noise",
+      "explanation": "The forward diffusion process iteratively corrupts the original image by adding Gaussian noise over T timesteps until it resembles isotropic Gaussian noise."
+    },
+    {
+      "question": "2. During the reverse diffusion process, the neural network is trained to predict:",
+      "options": [
+        "The original image labels",
+        "The noise added at each timestep",
+        "The image resolution",
+        "The latent vector of a GAN"
+      ],
+      "correctAnswer": "The noise added at each timestep",
+      "explanation": "In DDPM, the neural network ϵ_θ(x_t, t) is trained to estimate the noise vector ϵ that was added to corrupt x_0 into x_t."
+    },
+    {
+      "question": "3. Why does the reverse diffusion process require multiple iterations?",
+      "options": [
+        "Because the GPU memory is insufficient.",
+        "Because noise is removed gradually to approximate the reverse probability distribution.",
+        "Because diffusion models cannot process large images.",
+        "Because the generator needs paired training data."
+      ],
+      "correctAnswer": "Because noise is removed gradually to approximate the reverse probability distribution.",
+      "explanation": "The reverse true posterior q(x_{t-1}|x_t) is approximately Gaussian only for sufficiently small noise steps, requiring small iterative denoising steps."
+    },
+    {
+      "question": "4. What is the purpose of the variance schedule (βt) in a diffusion model?",
+      "options": [
+        "To determine the learning rate during training",
+        "To control how much Gaussian noise is added at each timestep",
+        "To initialize network weights",
+        "To calculate image classification accuracy"
+      ],
+      "correctAnswer": "To control how much Gaussian noise is added at each timestep",
+      "explanation": "The variance schedule β_1, ..., β_T controls the noise variance injected at each discrete timestep t."
+    },
+    {
+      "question": "5. Compared to GANs, diffusion models generally:",
+      "options": [
+        "Produce images faster during inference.",
+        "Require paired datasets for training.",
+        "Generate higher-quality and more diverse images but with slower sampling.",
+        "Do not require neural networks."
+      ],
+      "correctAnswer": "Generate higher-quality and more diverse images but with slower sampling.",
+      "explanation": "Diffusion models offer superior sample diversity and training stability, but require iterative multi-step denoising during inference."
+    },
+    {
+      "question": "6. Why are diffusion models generally slower than GANs during image generation?",
+      "options": [
+        "They require a discriminator during inference.",
+        "They generate the image through many iterative denoising steps.",
+        "They require paired training images.",
+        "They train a separate model for every timestep."
+      ],
+      "correctAnswer": "They generate the image through many iterative denoising steps.",
+      "explanation": "Generating an image requires passing through many sequential evaluations (often 50–1000 steps) of the neural network."
+    },
+    {
+      "question": "7. Which statement best describes the difference between the forward and reverse diffusion processes?",
+      "options": [
+        "Both processes add Gaussian noise to the image.",
+        "The forward process removes noise, while the reverse process adds noise.",
+        "The forward process gradually adds noise, whereas the reverse process progressively removes it.",
+        "Both processes use the same trained neural network."
+      ],
+      "correctAnswer": "The forward process gradually adds noise, whereas the reverse process progressively removes it.",
+      "explanation": "The forward process is a fixed Markov chain that destroys structure by adding noise, while the reverse process is a learned neural network that reconstructs data."
+    },
+    {
+      "question": "8. During the reverse diffusion process, the model predicts the noise ϵθ(xt,t) instead of directly predicting the clean image x0. What is the primary reason for this design choice?",
+      "options": [
+        "Predicting noise is computationally cheaper because no neural network is required.",
+        "Noise follows a simple Gaussian distribution, making the learning objective more stable than directly predicting x0.",
+        "Predicting x0 is mathematically impossible.",
+        "It eliminates the need for the forward diffusion process."
+      ],
+      "correctAnswer": "Noise follows a simple Gaussian distribution, making the learning objective more stable than directly predicting x0.",
+      "explanation": "Predicting the zero-mean unit-variance noise simplifies the learning target and leads to reweighted variational bounds that stabilize training."
+    },
+    {
+      "question": "9. Consider the forward diffusion equation where ϵ∼N(0,I). If the coefficients multiplying the image and noise are 0.9 and 0.436, respectively, which statement is correct?",
+      "options": [
+        "The noisy image consists of 90% original image information and 10% Gaussian noise.",
+        "The noisy image consists of 81% original image information and 19% Gaussian noise.",
+        "The coefficients multiplying the image and noise are 0.9 and 0.436, respectively.",
+        "The original image contributes 0.81, while the noise contributes 0.19 directly."
+      ],
+      "correctAnswer": "The coefficients multiplying the image and noise are 0.9 and 0.436, respectively.",
+      "explanation": "In x_t = √(α_bar_t) x_0 + √(1 - α_bar_t) ϵ, for α_bar_t = 0.81, the multiplying weights are √(0.81) = 0.9 and √(0.19) ≈ 0.436."
+    },
+    {
+      "question": "10. In a Denoising Diffusion Probabilistic Model (DDPM), the forward diffusion process is fixed and does not require any training, whereas the reverse diffusion process is learned using a neural network. Why is this design adopted?",
+      "options": [
+        "Because the forward process is deterministic, while the reverse process is stochastic.",
+        "Because adding Gaussian noise follows a known probability distribution, but reversing the process requires learning the complex data distribution.",
+        "Because the reverse process does not involve probability distributions.",
+        "Because the forward process requires labeled training data, while the reverse process does not."
+      ],
+      "correctAnswer": "Because adding Gaussian noise follows a known probability distribution, but reversing the process requires learning the complex data distribution.",
+      "explanation": "Forward noising is analytical because the transition kernel is known, while reverse denoising requires estimating the intractable gradient of the data distribution."
+    }
+  ]
+}

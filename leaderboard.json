@@ -1,0 +1,145 @@
+{
+  "users": [
+    "Saksham Sooden",
+    "Sanyam",
+    "Lauda Lassan"
+  ],
+  "entries": [
+    {
+      "name": "Saksham Sooden",
+      "quizId": "genai-week-8",
+      "score": 10,
+      "totalQuestions": 10,
+      "percentage": 100,
+      "submittedAt": "2026-10-13T15:34:59.481Z"
+    },
+    {
+      "name": "Saksham Sooden",
+      "quizId": "genai-week-7",
+      "score": 9,
+      "totalQuestions": 10,
+      "percentage": 90,
+      "submittedAt": "2026-10-12T18:51:19.473Z"
+    },
+    {
+      "name": "Saksham Sooden",
+      "quizId": "genai-week-9",
+      "score": 8,
+      "totalQuestions": 10,
+      "percentage": 80,
+      "submittedAt": "2026-10-13T15:35:34.784Z"
+    },
+    {
+      "name": "Saksham Sooden",
+      "quizId": "genai-week-3",
+      "score": 4,
+      "totalQuestions": 10,
+      "percentage": 40,
+      "submittedAt": "2026-10-12T22:17:03.697Z"
+    },
+    {
+      "name": "Saksham Sooden",
+      "quizId": "genai-week-4",
+      "score": 9,
+      "totalQuestions": 10,
+      "percentage": 90,
+      "submittedAt": "2026-10-10T19:37:47.942Z"
+    },
+    {
+      "name": "Sanyam",
+      "quizId": "genai-week-4",
+      "score": 8,
+      "totalQuestions": 10,
+      "percentage": 80,
+      "submittedAt": "2026-10-10T19:39:33.499Z"
+    },
+    {
+      "name": "Saksham Sooden",
+      "quizId": "genai-week-10",
+      "score": 10,
+      "totalQuestions": 10,
+      "percentage": 100,
+      "submittedAt": "2026-10-10T19:44:30.294Z"
+    },
+    {
+      "name": "Saksham Sooden",
+      "quizId": "genai-week-11",
+      "score": 6,
+      "totalQuestions": 10,
+      "percentage": 60,
+      "submittedAt": "2026-10-10T19:59:35.203Z"
+    },
+    {
+      "name": "Saksham Sooden",
+      "quizId": "genai-week-2",
+      "score": 5,
+      "totalQuestions": 10,
+      "percentage": 50,
+      "submittedAt": "2026-10-12T22:15:27.075Z"
+    },
+    {
+      "name": "Saksham Sooden",
+      "quizId": "genai-week-1",
+      "score": 9,
+      "totalQuestions": 10,
+      "percentage": 90,
+      "submittedAt": "2026-10-10T20:41:56.842Z"
+    },
+    {
+      "name": "Saksham Sooden",
+      "quizId": "genai-week-5",
+      "score": 7,
+      "totalQuestions": 10,
+      "percentage": 70,
+      "submittedAt": "2026-10-10T20:50:12.685Z"
+    },
+    {
+      "name": "Saksham Sooden",
+      "quizId": "genai-week-6",
+      "score": 7,
+      "totalQuestions": 10,
+      "percentage": 70,
+      "submittedAt": "2026-10-12T22:19:05.861Z"
+    },
+    {
+      "name": "Saksham Sooden",
+      "quizId": "dlnlp-assignment-9",
+      "score": 3,
+      "totalQuestions": 10,
+      "percentage": 30,
+      "submittedAt": "2026-10-12T18:54:00.737Z"
+    },
+    {
+      "name": "Saksham Sooden",
+      "quizId": "dlnlp-assignment-3",
+      "score": 7,
+      "totalQuestions": 7,
+      "percentage": 100,
+      "submittedAt": "2026-10-12T22:06:13.821Z"
+    },
+    {
+      "name": "Saksham Sooden",
+      "quizId": "dlnlp-assignment-4",
+      "score": 7,
+      "totalQuestions": 7,
+      "percentage": 100,
+      "submittedAt": "2026-10-12T23:06:36.359Z"
+    },
+    {
+      "name": "Saksham Sooden",
+      "quizId": "dlnlp-assignment-11",
+      "score": 5,
+      "totalQuestions": 10,
+      "percentage": 50,
+      "submittedAt": "2026-10-12T22:53:47.412Z"
+    },
+    {
+      "name": "Saksham Sooden",
+      "quizId": "dlnlp-assignment-5",
+      "score": 6,
+      "totalQuestions": 8,
+      "percentage": 75,
+      "submittedAt": "2026-10-13T13:05:19.285Z"
+    }
+  ]
+}

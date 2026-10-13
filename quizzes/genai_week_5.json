@@ -1,0 +1,118 @@
+{
+  "id": "genai-week-5",
+  "title": "Fundamentals of Generative AI - Week 5 Assignment 5",
+  "subject": "Fundamentals of Generative AI",
+  "date": "10/10/2026",
+  "questions": [
+    {
+      "question": "1. A VAE trained with pixel-wise mean squared error generates images with correct overall structure but blurred edges and textures. Which explanation is most appropriate?",
+      "options": [
+        "The decoder always ignores the latent vector",
+        "Pixel-wise loss may encourage the decoder to average multiple plausible outputs",
+        "The KL-divergence term forces every generated pixel to become zero",
+        "Gaussian latent variables cannot represent image data"
+      ],
+      "correctAnswer": "Pixel-wise loss may encourage the decoder to average multiple plausible outputs",
+      "explanation": "L2 pixel loss penalizes deviations from the conditional mean, leading the network to generate an average of all plausible sharp textures, which manifests as blurriness."
+    },
+    {
+      "question": "2. During one generator-training step, a noise vector is passed through the generator and then through the discriminator. Which parameters should be updated in this step?",
+      "options": [
+        "Only the discriminator parameters",
+        "Both generator and discriminator parameters",
+        "Only the generator parameters",
+        "Neither network’s parameters"
+      ],
+      "correctAnswer": "Only the generator parameters",
+      "explanation": "During generator optimization, discriminator weights are frozen, and gradients pass back through the discriminator to update only the generator."
+    },
+    {
+      "question": "3. During discriminator training, which target labels should be used?",
+      "options": [
+        "Real samples: 0; generated samples: 1",
+        "Real samples: 1; generated samples: 0",
+        "Real samples: 0.5; generated samples: 0.5",
+        "Both real and generated samples: 1"
+      ],
+      "correctAnswer": "Real samples: 1; generated samples: 0",
+      "explanation": "The standard supervised classification target labels for the discriminator are label 1 for real training data and label 0 for generated/synthetic samples."
+    },
+    {
+      "question": "4. During generator training, the non-saturating binary cross-entropy loss is: LG = −log(D(G(z))). Suppose: D(G(z)) = 0.20. Using the natural logarithm, what is the generator loss, rounded to three decimal places?",
+      "options": [
+        "0.223",
+        "0.800",
+        "1.609",
+        "2.303"
+      ],
+      "correctAnswer": "1.609",
+      "explanation": "LG = -ln(0.20) ≈ 1.609."
+    },
+    {
+      "question": "5. For one real sample and one generated sample, the discriminator loss is: LD = −log(D(x)) − log(1 − D(G(z))). Suppose D(x) = 0.80 and D(G(z)) = 0.30. Using the natural logarithm, what is the total discriminator loss, rounded to three decimal places?",
+      "options": [
+        "0.580",
+        "0.916",
+        "1.427",
+        "2.120"
+      ],
+      "correctAnswer": "0.580",
+      "explanation": "LD = -ln(0.80) - ln(1 - 0.30) = -ln(0.80) - ln(0.70) = 0.2231 + 0.3567 = 0.5798 ≈ 0.580."
+    },
+    {
+      "question": "6. Consider the discriminator objective: log(D(x)) + log(1 − D(G(z))). Which pair of discriminator outputs maximizes this expression most effectively?",
+      "options": [
+        "D(x) → 0 and D(G(z)) → 1",
+        "D(x) → 1 and D(G(z)) → 0",
+        "D(x) → 0.5 and D(G(z)) → 0.5",
+        "D(x) → 1 and D(G(z)) → 1"
+      ],
+      "correctAnswer": "D(x) → 1 and D(G(z)) → 0",
+      "explanation": "When D(x) → 1, log(1) = 0. When D(G(z)) → 0, log(1 - 0) = 0. Their sum reaches 0, which is the global maximum of the negative cross-entropy."
+    },
+    {
+      "question": "7. In the original GAN minimax value function, why can the generator ignore the real-sample term during its update?",
+      "options": [
+        "The real-sample term is always numerically equal to zero",
+        "The real-sample term contains no generator output or generator parameters",
+        "Real samples are not passed to the discriminator",
+        "The discriminator is removed during generator training"
+      ],
+      "correctAnswer": "The real-sample term contains no generator output or generator parameters",
+      "explanation": "The term E_{x~p_data}[log D(x)] is independent of generator parameters θ_G, so its gradient with respect to θ_G is identically zero."
+    },
+    {
+      "question": "8. At the beginning of GAN training, the generated distribution is usually far from the real-data distribution. Which behaviour is most likely?",
+      "options": [
+        "The discriminator easily separates real and generated samples",
+        "The discriminator outputs 0.5 for every sample",
+        "The generator has already reached equilibrium",
+        "The generated samples are necessarily identical to training samples"
+      ],
+      "correctAnswer": "The discriminator easily separates real and generated samples",
+      "explanation": "Because initial generator outputs are unstructured noise, the discriminator can easily distinguish between real and fake samples with near-perfect accuracy."
+    },
+    {
+      "question": "9. At the ideal GAN convergence point, what is the optimal discriminator output for samples from either distribution?",
+      "options": [
+        "0",
+        "0.25",
+        "0.5",
+        "1"
+      ],
+      "correctAnswer": "0.5",
+      "explanation": "At optimal convergence p_g = p_data, giving D*(x) = p_data(x) / (p_data(x) + p_g(x)) = 1/2 = 0.5 everywhere."
+    },
+    {
+      "question": "10. Which statement best describes Nash equilibrium in a GAN?",
+      "options": [
+        "The generator loss becomes zero while the discriminator continues improving",
+        "Both networks produce identical parameter values",
+        "Neither network can improve its own outcome by changing its parameters alone while the other network remains fixed",
+        "The discriminator classifies every generated sample as fake with complete confidence"
+      ],
+      "correctAnswer": "Neither network can improve its own outcome by changing its parameters alone while the other network remains fixed",
+      "explanation": "A Nash equilibrium represents a state in a minimax zero-sum game where neither the generator nor the discriminator can unilaterally decrease its loss."
+    }
+  ]
+}

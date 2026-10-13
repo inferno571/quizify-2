@@ -1,0 +1,114 @@
+{
+  "id": "hr-analytics-week-4",
+  "title": "HR Analytics - Week 4 Assignment 4",
+  "subject": "HR Analytics",
+  "date": "09/10/2026",
+  "questions": [
+    {
+      "question": "1. A candidate who answers 'Yes' to 'Would you like to work for this company?' but 'No' to 'Are you planning to apply for this company?' is classified at which stage of the Employer Brand Image Analysis framework?",
+      "options": [
+        "Awareness stage only.",
+        "Consideration stage — interested but not yet at Preference.",
+        "Preference stage — ready to apply.",
+        "Neither Awareness nor Consideration — they have no interest."
+      ],
+      "correctAnswer": "Consideration stage — interested but not yet at Preference.",
+      "explanation": "They are aware and interested (consideration), but have not yet converted into preference or active intent to apply."
+    },
+    {
+      "question": "2. As per the Employer Branding Value Propositions framework (Complain and Praises Analysis), which of the following correctly describes what 'Praises' data from employees of the 'Best Place to Work' category represents?",
+      "options": [
+        "The reasons why employees leave the organization.",
+        "The marginal cost of external hiring versus internal promotion.",
+        "The metrics are tracked in the Social Media Matrix for career page views.",
+        "The reasons why people come and stay in the organization."
+      ],
+      "correctAnswer": "The reasons why people come and stay in the organization.",
+      "explanation": "'Praises' from employees at benchmark employers reveal key drivers of attraction and employee retention."
+    },
+    {
+      "question": "3. The Internal Branding Matrix includes salary benchmarking and compensation revision as its primary tools for strengthening the employer brand among existing employees.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "False",
+      "explanation": "Internal branding emphasizes culture, shared values, communication, and employee engagement rather than mere transactional compensation changes."
+    },
+    {
+      "question": "4. Which of the following correctly distinguishes 'Surface Diversity' from 'Deep Diversity'?",
+      "options": [
+        "Surface diversity includes attitude and belief; deep diversity includes gender and religion.",
+        "Surface diversity is measured using the Employee Happiness Index; deep diversity is measured using the Employee Knowledge Sharing Index.",
+        "Surface diversity covers observable attributes such as gender, religion, city, and education; deep diversity covers non-observable attributes such as attitude, belief, values, and motivation.",
+        "Surface diversity refers to internal hires; deep diversity refers to external hires with different cultural backgrounds."
+      ],
+      "correctAnswer": "Surface diversity covers observable attributes such as gender, religion, city, and education; deep diversity covers non-observable attributes such as attitude, belief, values, and motivation.",
+      "explanation": "Surface diversity reflects observable demographic attributes, while deep diversity captures underlying cognitive, psychological, and motivational characteristics."
+    },
+    {
+      "question": "5. An HR analytics team wants to evaluate the quality of the recruitment process after candidates have joined. Which of the following post-hire metrics would most directly indicate whether the right people were recruited?",
+      "options": [
+        "Quality of hire and early attrition.",
+        "Rengage rate and application-to-job-offer ratio.",
+        "Number of applications received and cost per application.",
+        "Candidate experience score and job search intensity."
+      ],
+      "correctAnswer": "Quality of hire and early attrition.",
+      "explanation": "Quality of hire (performance appraisals, manager ratings) and early attrition rates directly reflect the accuracy and success of hiring decisions."
+    },
+    {
+      "question": "6. The effectiveness of a recruitment source is evaluated solely based on the number of relevant applications received, with no consideration of cost.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "False",
+      "explanation": "Recruitment source effectiveness evaluates cost per hire, conversion rates, and subsequent performance, not application volume in isolation."
+    },
+    {
+      "question": "7. In the Comprehensive End-to-End Recruitment and Selection Process, which of the following is listed as Best Practice for Developing the Pool?",
+      "options": [
+        "Looking only for external candidates to bring in fresh perspectives.",
+        "Relying on generic competency models to shortlist candidates quickly.",
+        "Developing a large pool that includes both internal and external candidates, and consulting employees.",
+        "Hiring only when a vacancy arises and indulging in irrational optimism about available talent."
+      ],
+      "correctAnswer": "Developing a large pool that includes both internal and external candidates, and consulting employees.",
+      "explanation": "Best practice involves combining internal mobility, external sourcing channels, and employee referral networks."
+    },
+    {
+      "question": "8. Which of the following correctly matches a Type of Interview with its definition?",
+      "options": [
+        "Situational Interview – The recruiter asks questions as they come to mind.",
+        "Structured Interview – The recruiter uses a predetermined set of questions that are clearly job-related.",
+        "Panel Interview – The recruiter presents a hypothetical incident and asks the candidate to respond.",
+        "Behavioural Interview – The focus is on actual work-related incidents, and the applicant is asked to reveal what he or she did in a given situation."
+      ],
+      "correctAnswer": "Behavioural Interview – The focus is on actual work-related incidents, and the applicant is asked to reveal what he or she did in a given situation.",
+      "explanation": "Behavioral interviews operate on the premise that past behavior predicts future performance, probing how candidates handled real past situations."
+    },
+    {
+      "question": "9. A company's HR team finds that: (i) new hires show high early attrition within six months of joining, (ii) interviewers consistently over-rate candidates who present confidently, regardless of technical fit, and (iii) the Audit and Review step is being skipped after each hiring cycle. Which combined approach would most comprehensively address all three issues?",
+      "options": [
+        "Replace all interview rounds with written aptitude tests alone to eliminate interviewer subjectivity.",
+        "Train interviewers to recognize the Halo Effect so that one impressive trait does not distort the overall rating; track early attrition as a post-hire quality signal to assess whether the right candidates were selected; and institutionalize the Audit and Review step to regularly examine and improve hiring practices.",
+        "Focus exclusively on expanding the application pool by including both internal and external candidates to improve the odds of finding the right hire.",
+        "Use only the medical examination and reference check stages to filter candidates before the final placement decision."
+      ],
+      "correctAnswer": "Train interviewers to recognize the Halo Effect so that one impressive trait does not distort the overall rating; track early attrition as a post-hire quality signal to assess whether the right candidates were selected; and institutionalize the Audit and Review step to regularly examine and improve hiring practices.",
+      "explanation": "Mitigating the halo effect ensures objective evaluations, tracking early attrition provides feedback on hiring quality, and audit/review institutionalizes continuous refinement."
+    },
+    {
+      "question": "10. __________ is the ability of a selection tool to measure an attribute consistently, such that repeated administration to the same individual yields approximately identical scores.",
+      "options": [
+        "Reliability",
+        "Validity",
+        "Standardisation",
+        "Suitability"
+      ],
+      "correctAnswer": "Reliability",
+      "explanation": "Reliability is the degree of measurement consistency and stability across repeated administrations."
+    }
+  ]
+}
