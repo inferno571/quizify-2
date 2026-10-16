@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { PlayerBadge } from '../../components/PlayerBadge';
+import { LarpGuideButton } from '../../components/LarpGuideModal';
 
 export default function MainLayout({
   children,
@@ -28,15 +29,17 @@ export default function MainLayout({
           </Link>
         </div>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 sm:gap-3">
+          <LarpGuideButton />
           <PlayerBadge />
-          <div className="flex items-center gap-2 px-3.5 py-1.5 bg-gradient-to-r from-orange-50 to-amber-50 border border-orange-200/80 rounded-full text-xs font-semibold text-orange-700 shadow-sm">
+          <div className="hidden sm:flex items-center gap-2 px-3.5 py-1.5 bg-gradient-to-r from-orange-50 to-amber-50 border border-orange-200/80 rounded-full text-xs font-semibold text-orange-700 shadow-sm">
             <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
             <span className="hidden sm:inline">Crafted by</span>
             <span>Saksham Sooden</span>
           </div>
         </div>
       </header>
+
       <main className="flex-1 bg-white">
         {children}
       </main>

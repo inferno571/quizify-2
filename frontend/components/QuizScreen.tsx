@@ -26,6 +26,8 @@ import {
 import { PlayerNameModal } from './PlayerNameModal';
 import { getSavedProgress, saveQuizProgress, clearQuizProgress } from '../lib/storage';
 import { MathText } from './MathText';
+import { LarpGuideButton } from './LarpGuideModal';
+
 
 const SAKSHAM_NAME = 'Saksham Sooden';
 function isSakshamUser(name: string): boolean {
@@ -756,10 +758,16 @@ export function QuizScreen({ quiz, onComplete, onExit }: QuizScreenProps) {
             </span>
           </div>
 
+          {/* NPTEL LARP Guide */}
+          <div className="hidden md:block">
+            <LarpGuideButton />
+          </div>
+
           {/* Save & Exit Button in Header */}
           <button
             type="button"
             onClick={() => setShowSaveModal(true)}
+
             className="flex items-center gap-1.5 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 px-3 py-1.5 rounded-lg text-xs font-black shadow-sm transition cursor-pointer active:scale-95"
             title="Save your test progress and resume later"
           >

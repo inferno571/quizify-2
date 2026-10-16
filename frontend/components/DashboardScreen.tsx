@@ -25,6 +25,7 @@ import {
 } from 'lucide-react';
 import { QuizMode } from './LandingScreen';
 import { ImportQuizModal } from './ImportQuizModal';
+import { LarpGuideButton } from './LarpGuideModal';
 
 interface DashboardScreenProps {
   quizzes: Quiz[];
@@ -295,14 +296,18 @@ export function DashboardScreen({
             </div>
           </div>
 
-          <button
-            onClick={() => setIsImportModalOpen(true)}
-            className="inline-flex items-center gap-2 bg-white border border-[#2980b9] text-[#2980b9] hover:bg-blue-50 px-4 py-2 rounded text-xs font-bold transition shadow-sm cursor-pointer"
-          >
-            <PlusCircle className="w-4 h-4" />
-            Add / Paste Quiz (Offline)
-          </button>
+          <div className="flex items-center gap-2 flex-wrap">
+            <LarpGuideButton />
+            <button
+              onClick={() => setIsImportModalOpen(true)}
+              className="inline-flex items-center gap-2 bg-white border border-[#2980b9] text-[#2980b9] hover:bg-blue-50 px-4 py-2 rounded text-xs font-bold transition shadow-sm cursor-pointer"
+            >
+              <PlusCircle className="w-4 h-4" />
+              Add / Paste Quiz (Offline)
+            </button>
+          </div>
         </div>
+
 
         <p className="text-xs text-gray-500 mb-3 italic">
           Tip: You can paste images (Ctrl+V), or upload <strong>.json</strong> and <strong>.txt</strong> quiz files directly for instant offline parsing without an API key.
