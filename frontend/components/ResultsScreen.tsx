@@ -270,18 +270,18 @@ export function ResultsScreen({
       
       {/* Top Header Section */}
       {isTwoPlayer ? (
-        <div className="bg-white dark:bg-slate-900 rounded-2xl border border-purple-200/90 dark:border-purple-900/50 p-6 shadow-sm mb-6 overflow-hidden relative">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-6 border-b border-gray-100 dark:border-slate-800">
+        <div className="bg-white dark:bg-[#0c0c0c] rounded-2xl border border-purple-200/90 dark:border-purple-900/50 p-6 shadow-sm mb-6 overflow-hidden relative">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-6 border-b border-gray-100 dark:border-neutral-800">
             <div>
               <div className="flex items-center gap-2 mb-1.5 flex-wrap">
                 <span className="bg-gradient-to-r from-blue-600 to-purple-600 text-white text-xs font-black px-3 py-0.5 rounded-full uppercase tracking-wider shadow-2xs">
                   2-Player Head-to-Head
                 </span>
-                <span className="text-xs text-gray-500 dark:text-slate-400 font-medium">
-                  Quizify 3 • <span className="text-gray-800 dark:text-slate-200 font-semibold">{quiz.title}</span>
+                <span className="text-xs text-gray-500 dark:text-neutral-400 font-medium">
+                  Quizify 3 • <span className="text-gray-800 dark:text-neutral-200 font-semibold">{quiz.title}</span>
                 </span>
               </div>
-              <h2 className="text-2xl font-black text-slate-900 mt-1">
+              <h2 className="text-2xl font-black text-gray-900 dark:text-white mt-1">
                 {finalP1Score > finalP2Score ? (
                   <span className="text-blue-700 flex items-center gap-2">
                     🏆 {p1DisplayName} Wins the Match!
@@ -311,20 +311,20 @@ export function ResultsScreen({
               <div className={`p-4 rounded-xl border text-center min-w-32 transition-all ${
                 finalP1Score > finalP2Score 
                   ? 'bg-blue-50/90 dark:bg-blue-950/50 border-blue-400 dark:border-blue-500 ring-2 ring-blue-400/50 shadow-md' 
-                  : 'bg-white dark:bg-slate-900 border-blue-200 dark:border-blue-800'
+                  : 'bg-white dark:bg-[#0c0c0c] border-blue-200 dark:border-blue-900/60'
               }`}>
                 <div className="flex items-center justify-center gap-1 text-xs font-black text-blue-900 dark:text-blue-300 uppercase tracking-wider mb-1">
                   🔵 {p1DisplayName}
                 </div>
                 <div className="text-3xl font-black text-blue-700 dark:text-blue-400">
-                  {finalP1Score}<span className="text-base text-gray-400 dark:text-slate-500 font-normal">/{quiz.questions.length}</span>
+                  {finalP1Score}<span className="text-base text-gray-400 dark:text-neutral-500 font-normal">/{quiz.questions.length}</span>
                 </div>
                 <div className="text-xs font-bold text-blue-900/80 dark:text-blue-300/80 mt-0.5">
                   {percentage}% Accuracy
                 </div>
               </div>
 
-              <div className="text-center font-black text-xs text-gray-400 dark:text-slate-500 uppercase tracking-widest px-1">
+              <div className="text-center font-black text-xs text-gray-400 dark:text-neutral-500 uppercase tracking-widest px-1">
                 VS
               </div>
 
@@ -332,7 +332,7 @@ export function ResultsScreen({
               <div className={`p-4 rounded-xl border text-center min-w-32 transition-all ${
                 finalP2Score > finalP1Score 
                   ? 'bg-purple-50/90 dark:bg-purple-950/50 border-purple-400 dark:border-purple-500 ring-2 ring-purple-400/50 shadow-md' 
-                  : 'bg-white dark:bg-slate-900 border-purple-200 dark:border-purple-800'
+                  : 'bg-white dark:bg-[#0c0c0c] border-purple-200 dark:border-purple-900/60'
               }`}>
                 <div className="flex items-center justify-center gap-1 text-xs font-black text-purple-900 uppercase tracking-wider mb-1">
                   🟣 {p2DisplayName}
@@ -349,63 +349,63 @@ export function ResultsScreen({
 
           {/* Consensus & Disagreement Breakdown Pill Bar */}
           <div className="pt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 text-xs">
-            <div className="bg-slate-50 border border-slate-200 p-2.5 rounded-lg flex items-center justify-between">
-              <span className="text-gray-600 font-medium">🤝 Agreed Questions:</span>
-              <span className="font-bold text-slate-900">
+            <div className="bg-slate-50 dark:bg-[#070707] border border-slate-200 dark:border-neutral-800 p-2.5 rounded-lg flex items-center justify-between">
+              <span className="text-gray-600 dark:text-neutral-400 font-medium">🤝 Agreed Questions:</span>
+              <span className="font-bold text-gray-900 dark:text-white">
                 {agreedQuestions.length} ({agreedCorrectCount} correct)
               </span>
             </div>
-            <div className="bg-purple-50 border border-purple-200 p-2.5 rounded-lg flex items-center justify-between">
-              <span className="text-purple-800 font-medium">⚔️ Disagreed Questions:</span>
-              <span className="font-black text-purple-950">
+            <div className="bg-purple-50 dark:bg-purple-950/30 border border-purple-200 dark:border-purple-900/60 p-2.5 rounded-lg flex items-center justify-between">
+              <span className="text-purple-800 dark:text-purple-300 font-medium">⚔️ Disagreed Questions:</span>
+              <span className="font-black text-purple-950 dark:text-purple-200">
                 {disagreedQuestions.length}
               </span>
             </div>
-            <div className="bg-blue-50 border border-blue-200 p-2.5 rounded-lg flex items-center justify-between sm:col-span-2 md:col-span-1">
-              <span className="text-blue-800 font-medium">Clash Record:</span>
-              <span className="font-bold text-slate-800">
+            <div className="bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-900/60 p-2.5 rounded-lg flex items-center justify-between sm:col-span-2 md:col-span-1">
+              <span className="text-blue-800 dark:text-blue-300 font-medium">Clash Record:</span>
+              <span className="font-bold text-gray-800 dark:text-neutral-200">
                 🔵 P1: {p1DisagreedWins} • 🟣 P2: {p2DisagreedWins}
               </span>
             </div>
           </div>
         </div>
       ) : (
-        <div className="bg-white dark:bg-slate-900 rounded-xl border border-gray-300 dark:border-slate-800 p-6 shadow-sm mb-6 flex flex-col md:flex-row justify-between items-center gap-6">
+        <div className="bg-white dark:bg-[#0c0c0c] rounded-xl border border-gray-300 dark:border-neutral-800 p-6 shadow-sm mb-6 flex flex-col md:flex-row justify-between items-center gap-6">
            <div>
               <div className="flex items-center gap-2 mb-1.5">
                 <span className="bg-orange-100 dark:bg-orange-950/50 text-orange-700 dark:text-orange-400 text-xs font-bold px-2.5 py-0.5 rounded-full border border-orange-200 dark:border-orange-800 uppercase tracking-wide">
                   Quizify 3
                 </span>
 
-                <span className="text-xs text-gray-500 dark:text-slate-400 font-medium">
-                  Made by <span className="text-gray-800 dark:text-slate-200 font-semibold">Saksham Sooden</span>
+                <span className="text-xs text-gray-500 dark:text-neutral-400 font-medium">
+                  Made by <span className="text-gray-800 dark:text-neutral-200 font-semibold">Saksham Sooden</span>
                 </span>
               </div>
-              <h2 className="text-2xl font-bold tracking-tight text-slate-800 dark:text-white mb-1">Result Summary</h2>
-              <p className="text-gray-600 dark:text-slate-400 text-sm font-medium">{quiz.title}</p>
+              <h2 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white mb-1">Result Summary</h2>
+              <p className="text-gray-600 dark:text-neutral-400 text-sm font-medium">{quiz.title}</p>
            </div>
            <div className="flex items-center gap-6">
               <div className="text-center">
-                 <div className="text-xs font-bold text-gray-500 dark:text-slate-400 uppercase tracking-widest mb-1">Score</div>
+                 <div className="text-xs font-bold text-gray-500 dark:text-neutral-400 uppercase tracking-widest mb-1">Score</div>
                  <div className={`text-4xl font-extrabold ${percentage >= 80 ? 'text-emerald-600 dark:text-emerald-400' : percentage >= 50 ? 'text-amber-500 dark:text-amber-400' : 'text-rose-600 dark:text-rose-400'}`}>
-                   {score}<span className="text-xl text-gray-400 dark:text-slate-500">/{quiz.questions.length}</span>
+                   {score}<span className="text-xl text-gray-400 dark:text-neutral-500">/{quiz.questions.length}</span>
                  </div>
               </div>
-              <div className="w-px h-12 bg-gray-200 dark:bg-slate-800"></div>
+              <div className="w-px h-12 bg-gray-200 dark:bg-neutral-800"></div>
               <div className="text-center min-w-24">
-                 <div className="text-xs font-bold text-gray-500 dark:text-slate-400 uppercase tracking-widest mb-1">Accuracy</div>
-                 <div className="text-3xl font-bold text-slate-700 dark:text-slate-200">{percentage}%</div>
+                 <div className="text-xs font-bold text-gray-500 dark:text-neutral-400 uppercase tracking-widest mb-1">Accuracy</div>
+                 <div className="text-3xl font-bold text-gray-800 dark:text-white">{percentage}%</div>
               </div>
            </div>
         </div>
       )}
 
       {/* Tabs */}
-      <div className="flex border-b border-gray-300 dark:border-slate-800 mb-6 font-medium overflow-x-auto gap-1">
+      <div className="flex border-b border-gray-300 dark:border-neutral-800 mb-6 font-medium overflow-x-auto gap-1">
         <button
           onClick={() => setActiveTab('OVERVIEW')}
           className={`py-3 px-5 text-sm flex items-center gap-2 border-b-2 whitespace-nowrap transition-colors cursor-pointer ${
-            activeTab === 'OVERVIEW' ? 'border-[#2980b9] text-[#2980b9] dark:text-blue-400 font-bold bg-white dark:bg-slate-900' : 'border-transparent text-gray-500 dark:text-slate-400 hover:text-gray-700 dark:hover:text-slate-200 hover:bg-gray-100 dark:hover:bg-slate-800'
+            activeTab === 'OVERVIEW' ? 'border-[#2980b9] text-[#2980b9] dark:text-blue-400 font-bold bg-white dark:bg-[#0c0c0c]' : 'border-transparent text-gray-500 dark:text-neutral-400 hover:text-gray-700 dark:hover:text-neutral-200 hover:bg-gray-100 dark:hover:bg-[#141414]'
           }`}
         >
           Detailed Review
@@ -418,7 +418,7 @@ export function ResultsScreen({
             className={`py-3 px-5 text-sm flex items-center gap-2 border-b-2 whitespace-nowrap transition-colors cursor-pointer ${
               activeTab === 'DISAGREED' 
                 ? 'border-purple-600 text-purple-700 dark:text-purple-300 font-bold bg-purple-50/50 dark:bg-purple-950/30' 
-                : 'border-transparent text-gray-500 dark:text-slate-400 hover:text-gray-700 dark:hover:text-slate-200 hover:bg-gray-100 dark:hover:bg-slate-800'
+                : 'border-transparent text-gray-500 dark:text-neutral-400 hover:text-gray-700 dark:hover:text-neutral-200 hover:bg-gray-100 dark:hover:bg-[#141414]'
             }`}
           >
             <Swords className="w-4 h-4 text-purple-600" />
@@ -439,7 +439,7 @@ export function ResultsScreen({
           className={`py-3 px-5 text-sm flex items-center gap-2 border-b-2 whitespace-nowrap transition-colors cursor-pointer ${
             activeTab === 'MARKED_FOR_REVIEW' 
               ? 'border-purple-600 text-purple-700 dark:text-purple-300 font-bold bg-purple-50/50 dark:bg-purple-950/30' 
-              : 'border-transparent text-gray-500 dark:text-slate-400 hover:text-gray-700 dark:hover:text-slate-200 hover:bg-gray-100 dark:hover:bg-slate-800'
+              : 'border-transparent text-gray-500 dark:text-neutral-400 hover:text-gray-700 dark:hover:text-neutral-200 hover:bg-gray-100 dark:hover:bg-[#141414]'
           }`}
         >
           <Bookmark className="w-4 h-4 text-purple-600 fill-purple-600" />
@@ -456,12 +456,12 @@ export function ResultsScreen({
         <button
           onClick={() => setActiveTab('STARRED')}
           className={`py-3 px-5 text-sm flex items-center gap-2 border-b-2 whitespace-nowrap transition-colors cursor-pointer ${
-            activeTab === 'STARRED' ? 'border-amber-500 text-amber-700 dark:text-amber-400 font-bold bg-white dark:bg-slate-900' : 'border-transparent text-gray-500 dark:text-slate-400 hover:text-gray-700 dark:hover:text-slate-200 hover:bg-gray-100 dark:hover:bg-slate-800'
+            activeTab === 'STARRED' ? 'border-amber-500 text-amber-700 dark:text-amber-400 font-bold bg-white dark:bg-[#0c0c0c]' : 'border-transparent text-gray-500 dark:text-neutral-400 hover:text-gray-700 dark:hover:text-neutral-200 hover:bg-gray-100 dark:hover:bg-[#141414]'
           }`}
         >
           <Star className="w-4 h-4" />
           <span>Important Questions</span>
-          <span className="px-2 py-0.5 rounded-full text-xs font-bold bg-gray-100 dark:bg-slate-800 text-gray-600 dark:text-slate-300">
+          <span className="px-2 py-0.5 rounded-full text-xs font-bold bg-gray-100 dark:bg-neutral-800 text-gray-600 dark:text-neutral-300">
             {importantQuestions.length}
           </span>
         </button>
@@ -469,7 +469,7 @@ export function ResultsScreen({
         <button
           onClick={() => setActiveTab('LEADERBOARD')}
           className={`py-3 px-5 text-sm flex items-center gap-2 border-b-2 whitespace-nowrap transition-colors cursor-pointer ${
-            activeTab === 'LEADERBOARD' ? 'border-yellow-500 text-yellow-700 dark:text-yellow-400 font-bold bg-white dark:bg-slate-900' : 'border-transparent text-gray-500 dark:text-slate-400 hover:text-gray-700 dark:hover:text-slate-200 hover:bg-gray-100 dark:hover:bg-slate-800'
+            activeTab === 'LEADERBOARD' ? 'border-yellow-500 text-yellow-700 dark:text-yellow-400 font-bold bg-white dark:bg-[#0c0c0c]' : 'border-transparent text-gray-500 dark:text-neutral-400 hover:text-gray-700 dark:hover:text-neutral-200 hover:bg-gray-100 dark:hover:bg-[#141414]'
           }`}
         >
           <Trophy className="w-4 h-4" />
@@ -498,7 +498,7 @@ export function ResultsScreen({
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: Math.min(idx * 0.05, 0.5) }}
-                className={`bg-white dark:bg-slate-900 rounded-xl shadow-xs border p-5 md:p-6 relative ${
+                className={`bg-white dark:bg-[#0c0c0c] rounded-xl shadow-xs border p-5 md:p-6 relative ${
                   isCardSuccess ? 'border-emerald-200 dark:border-emerald-900/60' : 'border-rose-200 dark:border-rose-900/60'
                 }`}
               >
@@ -645,7 +645,7 @@ export function ResultsScreen({
                       const isP1Selected = p1Arr.some(a => a.trim().toLowerCase() === opt.trim().toLowerCase());
                       const isP2Selected = p2Arr.some(a => a.trim().toLowerCase() === opt.trim().toLowerCase());
 
-                      let bgClasses = "bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300";
+                      let bgClasses = "bg-white dark:bg-[#0c0c0c] border-slate-200 dark:border-neutral-800 text-gray-800 dark:text-white";
                       if (isCorrectOption) {
                         bgClasses = "bg-emerald-50 dark:bg-emerald-950/40 border-emerald-300 dark:border-emerald-800 text-emerald-900 dark:text-emerald-200";
                       } else if (!isTwoPlayer) {
@@ -662,11 +662,11 @@ export function ResultsScreen({
                         <div key={i} className={`flex p-3 rounded-lg border items-center transition-colors ${bgClasses}`}>
                           <div className={`w-6 h-6 rounded flex items-center justify-center font-bold mr-3 shrink-0 text-xs ${
                             isCorrectOption ? 'bg-emerald-200 dark:bg-emerald-800 text-emerald-800 dark:text-emerald-100' : 
-                            ((isP1Selected || isP2Selected) && !isCorrectOption) ? 'bg-rose-200 dark:bg-rose-800 text-rose-800 dark:text-rose-100' : 'bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400'}`}
+                            ((isP1Selected || isP2Selected) && !isCorrectOption) ? 'bg-rose-200 dark:bg-rose-800 text-rose-800 dark:text-rose-100' : 'bg-gray-100 dark:bg-[#1a1a1a] text-gray-600 dark:text-neutral-200'}`}
                           >
                             {String.fromCharCode(65 + i)}
                           </div>
-                          <span className="leading-tight pr-4 flex-1">
+                          <span className="leading-tight pr-4 flex-1 font-medium text-gray-900 dark:text-white">
                             <MathText text={opt} />
                           </span>
 
@@ -708,9 +708,9 @@ export function ResultsScreen({
                   </div>
 
                   {q.explanation && (
-                    <div className="bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-lg p-4 mt-4">
-                      <h4 className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest mb-2">Explanation</h4>
-                      <div className="text-slate-800 dark:text-slate-200 text-sm leading-relaxed">
+                    <div className="bg-slate-50 dark:bg-[#070707] border border-slate-200 dark:border-neutral-800 rounded-lg p-4 mt-4">
+                      <h4 className="text-xs font-bold text-gray-500 dark:text-neutral-400 uppercase tracking-widest mb-2">Explanation</h4>
+                      <div className="text-gray-800 dark:text-neutral-200 text-sm leading-relaxed">
                         <MathText text={q.explanation} block />
                       </div>
                     </div>

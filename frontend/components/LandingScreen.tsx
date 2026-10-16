@@ -33,8 +33,8 @@ export function LandingScreen({ onSelectMode }: LandingScreenProps) {
           Welcome to <span className="bg-gradient-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent">Quizify 3</span>
         </h1>
 
-        <p className="text-gray-500 dark:text-slate-400 text-base md:text-lg max-w-lg mx-auto leading-relaxed">
-          Crafted with care by <span className="font-semibold text-gray-700 dark:text-slate-200">Saksham Sooden</span>. Choose your path — generate questions from study material or practice instantly.
+        <p className="text-gray-500 dark:text-neutral-400 text-base md:text-lg max-w-lg mx-auto leading-relaxed">
+          Crafted with care by <span className="font-semibold text-gray-700 dark:text-neutral-200">Saksham Sooden</span>. Choose your path — generate questions from study material or practice instantly.
         </p>
       </motion.div>
 
@@ -43,7 +43,7 @@ export function LandingScreen({ onSelectMode }: LandingScreenProps) {
         
         {/* Option 1: Generate from Study Material */}
         <motion.button
-          className="group relative bg-white/70 dark:bg-slate-900/80 backdrop-blur-xl border border-gray-200/80 dark:border-slate-800 rounded-2xl p-8 text-left cursor-pointer overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-orange-500/10 hover:border-orange-300/60 dark:hover:border-orange-500/50 hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-orange-400/50"
+          className="group relative bg-white/70 dark:bg-[#0c0c0c]/90 backdrop-blur-xl border border-gray-200/80 dark:border-neutral-800 rounded-2xl p-8 text-left cursor-pointer overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-orange-500/10 hover:border-orange-300/60 dark:hover:border-orange-500/50 hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-orange-400/50"
           onClick={() => onSelectMode('generate')}
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -62,7 +62,7 @@ export function LandingScreen({ onSelectMode }: LandingScreenProps) {
             <h3 className="text-xl font-bold text-[#2c3e50] dark:text-white mb-2 group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors">
               Generate from Study Material
             </h3>
-            <p className="text-sm text-gray-500 dark:text-slate-400 leading-relaxed mb-5">
+            <p className="text-sm text-gray-500 dark:text-neutral-400 leading-relaxed mb-5">
               Upload your notes, textbooks, or slides and let AI create customized quiz questions with configurable difficulty and count.
             </p>
             
@@ -84,7 +84,7 @@ export function LandingScreen({ onSelectMode }: LandingScreenProps) {
 
         {/* Option 2: Upload Questions File */}
         <motion.button
-          className="group relative bg-white/70 dark:bg-slate-900/80 backdrop-blur-xl border border-gray-200/80 dark:border-slate-800 rounded-2xl p-8 text-left cursor-pointer overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/10 hover:border-blue-300/60 dark:hover:border-blue-500/50 hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-blue-400/50"
+          className="group relative bg-white/70 dark:bg-[#0c0c0c]/90 backdrop-blur-xl border border-gray-200/80 dark:border-neutral-800 rounded-2xl p-8 text-left cursor-pointer overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/10 hover:border-blue-300/60 dark:hover:border-blue-500/50 hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-blue-400/50"
           onClick={() => onSelectMode('upload')}
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -103,7 +103,7 @@ export function LandingScreen({ onSelectMode }: LandingScreenProps) {
             <h3 className="text-xl font-bold text-[#2c3e50] dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
               Upload Questions & Solutions
             </h3>
-            <p className="text-sm text-gray-500 dark:text-slate-400 leading-relaxed mb-5">
+            <p className="text-sm text-gray-500 dark:text-neutral-400 leading-relaxed mb-5">
               Already have a question paper? Upload a PDF or image file containing questions with answers and start practicing instantly.
             </p>
             
@@ -131,8 +131,8 @@ export function LandingScreen({ onSelectMode }: LandingScreenProps) {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 0.5 }}
       >
-        <div className="inline-flex items-center gap-2 text-xs text-gray-500 dark:text-slate-400 bg-white/80 dark:bg-slate-900/80 border border-gray-200/70 dark:border-slate-800 rounded-full px-4 py-1.5 shadow-sm">
-          <span className="font-bold text-[#2c3e50] dark:text-slate-200">Quizify 3</span>
+        <div className="inline-flex items-center gap-2 text-xs text-gray-500 dark:text-neutral-400 bg-white/80 dark:bg-[#0c0c0c]/80 border border-gray-200/70 dark:border-neutral-800 rounded-full px-4 py-1.5 shadow-sm">
+          <span className="font-bold text-[#2c3e50] dark:text-neutral-200">Quizify 3</span>
           <span>•</span>
           <span className="text-orange-600 dark:text-orange-400 font-semibold">Made by Saksham Sooden</span>
         </div>

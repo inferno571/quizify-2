@@ -209,7 +209,7 @@ export function PlayerNameModal({
           className={`relative w-full max-w-md rounded-2xl shadow-2xl overflow-hidden ${
             isSpecial
               ? "bg-gradient-to-br from-yellow-50 via-amber-50 to-orange-50 border-2 border-yellow-400 dark:from-amber-950/80 dark:via-yellow-950/60 dark:to-orange-950/80 dark:border-yellow-500/80"
-              : "bg-white border border-gray-200 dark:bg-slate-900 dark:border-slate-800"
+              : "bg-white border border-gray-200 dark:bg-[#0c0c0c] dark:border-neutral-800"
           }`}
           initial={{ scale: 0.9, opacity: 0, y: 30 }}
           animate={{ scale: 1, opacity: 1, y: 0 }}
@@ -236,10 +236,10 @@ export function PlayerNameModal({
                     <div className="w-20 h-20 rounded-full bg-gradient-to-br from-yellow-400 via-amber-400 to-orange-500 flex items-center justify-center shadow-lg shadow-amber-500/30 ring-4 ring-yellow-300/50">
                       <Crown className="w-10 h-10 text-white drop-shadow-lg" />
                     </div>
-                    <div className="absolute -top-1 -right-1 w-7 h-7 bg-gradient-to-br from-yellow-400 to-amber-500 rounded-full flex items-center justify-center shadow-md ring-2 ring-white dark:ring-slate-900">
+                    <div className="absolute -top-1 -right-1 w-7 h-7 bg-gradient-to-br from-yellow-400 to-amber-500 rounded-full flex items-center justify-center shadow-md ring-2 ring-white dark:ring-[#0c0c0c]">
                       <CheckCircle className="w-4 h-4 text-white" />
                     </div>
-                    <div className="absolute -bottom-1 -left-1 w-6 h-6 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center shadow-md ring-2 ring-white dark:ring-slate-900">
+                    <div className="absolute -bottom-1 -left-1 w-6 h-6 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center shadow-md ring-2 ring-white dark:ring-[#0c0c0c]">
                       <Shield className="w-3 h-3 text-white" />
                     </div>
                   </div>
@@ -264,13 +264,13 @@ export function PlayerNameModal({
                 </>
               ) : (
                 <>
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-gray-100 to-gray-200 dark:from-slate-800 dark:to-slate-700 flex items-center justify-center mx-auto mb-3 shadow-inner">
-                    <UserCircle className="w-10 h-10 text-gray-400 dark:text-slate-400" />
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-gray-100 to-gray-200 dark:from-neutral-800 dark:to-neutral-700 flex items-center justify-center mx-auto mb-3 shadow-inner">
+                    <UserCircle className="w-10 h-10 text-gray-400 dark:text-neutral-400" />
                   </div>
                   <h2 className="text-xl font-bold text-gray-800 dark:text-white mb-1">
                     Enter Your Name
                   </h2>
-                  <p className="text-sm text-gray-500 dark:text-slate-400">
+                  <p className="text-sm text-gray-500 dark:text-neutral-400">
                     Choose your player name to compete on the live leaderboard
                   </p>
                 </>
@@ -296,7 +296,7 @@ export function PlayerNameModal({
                       ? "bg-yellow-100/60 dark:bg-amber-950/60 border-2 border-yellow-400 dark:border-yellow-500/80 text-amber-900 dark:text-amber-200 placeholder-amber-400 dark:placeholder-amber-600 focus:ring-2 focus:ring-yellow-400/50 shadow-inner"
                       : error
                       ? "bg-red-50 dark:bg-red-950/40 border-2 border-red-300 dark:border-red-800 text-red-900 dark:text-red-200 placeholder-red-300 dark:placeholder-red-600 focus:ring-2 focus:ring-red-400/50"
-                      : "bg-gray-50 dark:bg-slate-950 border-2 border-gray-200 dark:border-slate-800 text-gray-800 dark:text-slate-100 placeholder-gray-400 dark:placeholder-slate-500 focus:border-blue-400 dark:focus:border-blue-500 focus:ring-2 focus:ring-blue-400/20"
+                      : "bg-gray-50 dark:bg-[#050505] border-2 border-gray-200 dark:border-neutral-800 text-gray-800 dark:text-white placeholder-gray-400 dark:placeholder-neutral-500 focus:border-blue-400 dark:focus:border-blue-500 focus:ring-2 focus:ring-blue-400/20"
                   }`}
                   autoFocus
                 />

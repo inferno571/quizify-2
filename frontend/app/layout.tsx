@@ -33,8 +33,12 @@ export default function RootLayout({
                   var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
                   if (theme === 'dark') {
                     document.documentElement.classList.add('dark');
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                    document.documentElement.style.colorScheme = 'dark';
                   } else {
                     document.documentElement.classList.remove('dark');
+                    document.documentElement.setAttribute('data-theme', 'light');
+                    document.documentElement.style.colorScheme = 'light';
                   }
                 } catch (e) {}
               })();
@@ -42,7 +46,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${inter.className} min-h-screen flex flex-col font-sans bg-white dark:bg-slate-950 text-[#2c3e50] dark:text-slate-100 transition-colors duration-200`}>
+      <body className={`${inter.className} min-h-screen flex flex-col font-sans bg-white dark:bg-black text-[#2c3e50] dark:text-white transition-colors duration-200`}>
         <ThemeProvider>
           <NgrokHeaderInterceptor />
           {children}

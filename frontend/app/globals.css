@@ -6,19 +6,48 @@
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
 }
 
-body {
-  font-family: var(--font-sans);
-  @apply bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-200;
+/* AMOLED Pitch Black Theme */
+html {
+  color-scheme: light;
 }
 
-.font-katex-math {
-  font-family: 'KaTeX_Math', 'KaTeX_Main', 'Cambria Math', 'Latin Modern Math', 'Times New Roman', serif;
-  font-style: italic;
+html.dark {
+  color-scheme: dark;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #f8fafc;
+  color: #0f172a;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+html.dark body,
+body.dark {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+/* Ensure math & KaTeX text is brilliant crisp white in dark mode */
+.math-rendered-content {
+  color: inherit;
 }
 
 .math-rendered-content .katex {
   font-size: 1.05em;
   text-rendering: geometricPrecision;
+  color: inherit;
+}
+
+.dark .math-rendered-content,
+.dark .katex,
+.dark .katex-display,
+.dark .katex-html,
+.dark .katex-inline-wrapper,
+.dark .font-katex-math,
+.dark .katex *,
+.dark .katex-display * {
+  color: #ffffff !important;
 }
 
 .math-rendered-content .katex-display {
@@ -28,6 +57,11 @@ body {
 
 .katex-inline-wrapper {
   padding: 0 0.1em;
+}
+
+.font-katex-math {
+  font-family: 'KaTeX_Math', 'KaTeX_Main', 'Cambria Math', 'Latin Modern Math', 'Times New Roman', serif;
+  font-style: italic;
 }
 
 /* LARP Flash & Shockwave Animations */
