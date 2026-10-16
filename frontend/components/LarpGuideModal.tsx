@@ -19,7 +19,9 @@ import {
   Calculator,
   FileText,
   AlertTriangle,
-  Scale
+  Scale,
+  GitFork,
+  Binary
 } from 'lucide-react';
 
 /**
@@ -170,7 +172,7 @@ interface LarpGuideModalProps {
 }
 
 export function LarpGuideModal({ isOpen, onClose, onAcknowledge }: LarpGuideModalProps) {
-  const [activeTab, setActiveTab] = useState<'longest' | 'methods' | 'center' | 'linkedin'>('longest');
+  const [activeTab, setActiveTab] = useState<'longest' | 'reverse' | 'methods' | 'center' | 'linkedin'>('longest');
   const [copiedLinkedIn, setCopiedLinkedIn] = useState(false);
 
   if (!isOpen) return null;
@@ -305,6 +307,17 @@ Continuous learning never stops! Looking forward to applying these principles to
               1. Longest Option Theorem
             </button>
             <button
+              onClick={() => setActiveTab('reverse')}
+              className={`flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold rounded-t-lg transition whitespace-nowrap cursor-pointer ${
+                activeTab === 'reverse'
+                  ? 'bg-white dark:bg-[#0c0c0c] text-orange-600 dark:text-orange-400 border-t-2 border-orange-500 border-x border-gray-200 dark:border-x-neutral-800 shadow-xs'
+                  : 'text-gray-600 dark:text-neutral-400 hover:text-gray-900 dark:hover:text-neutral-100 hover:bg-gray-100 dark:hover:bg-[#161616]'
+              }`}
+            >
+              <GitFork className="w-3.5 h-3.5" />
+              2. Reverse Engineering (New!)
+            </button>
+            <button
               onClick={() => setActiveTab('methods')}
               className={`flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold rounded-t-lg transition whitespace-nowrap cursor-pointer ${
                 activeTab === 'methods'
@@ -313,7 +326,7 @@ Continuous learning never stops! Looking forward to applying these principles to
               }`}
             >
               <Zap className="w-3.5 h-3.5" />
-              2. Matching Words &amp; Math Ballpark
+              3. Matching Words &amp; Math Ballpark
             </button>
             <button
               onClick={() => setActiveTab('center')}
@@ -324,7 +337,7 @@ Continuous learning never stops! Looking forward to applying these principles to
               }`}
             >
               <ShieldCheck className="w-3.5 h-3.5" />
-              3. TCS iON Protocol
+              4. TCS iON Protocol
             </button>
             <button
               onClick={() => setActiveTab('linkedin')}
@@ -335,7 +348,7 @@ Continuous learning never stops! Looking forward to applying these principles to
               }`}
             >
               <Award className="w-3.5 h-3.5" />
-              4. LinkedIn Post
+              5. LinkedIn Post
             </button>
           </div>
 
@@ -438,7 +451,220 @@ Continuous learning never stops! Looking forward to applying these principles to
             </div>
           )}
 
-          {/* TAB 2: MATCHING WORDS & MATH BALLPARK */}
+          {/* TAB 2: REVERSE ENGINEERING AXIOM (NEW 2026) */}
+          {activeTab === 'reverse' && (
+            <div className="space-y-4 animate-in fade-in duration-150">
+              
+              {/* Header Box */}
+              <div className="bg-gradient-to-r from-purple-950/40 via-indigo-950/40 to-purple-950/40 p-4 sm:p-5 rounded-xl border border-purple-800/60 dark:border-purple-700/50 shadow-xs space-y-3">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                  <div className="flex items-center gap-2">
+                    <span className="w-8 h-8 rounded-lg bg-purple-500/20 text-purple-700 dark:text-purple-300 font-black text-sm flex items-center justify-center shrink-0 border border-purple-500/30">
+                      <GitFork className="w-4 h-4 text-purple-600 dark:text-purple-400" />
+                    </span>
+                    <div>
+                      <h3 className="text-sm sm:text-base font-extrabold text-gray-900 dark:text-white flex items-center gap-2">
+                        Axiom 2: The Reverse Engineering Principle
+                        <span className="text-[10px] bg-purple-500/20 text-purple-700 dark:text-purple-300 px-2 py-0.5 rounded-full font-black uppercase tracking-wider border border-purple-500/30">
+                          New Axiom
+                        </span>
+                      </h3>
+                      <span className="text-xs text-purple-700 dark:text-purple-300 font-medium">
+                        Distractor Intersection &bull; Component Mode Decomposition
+                      </span>
+                    </div>
+                  </div>
+                  <div className="text-[11px] font-bold text-emerald-800 dark:text-emerald-300 bg-emerald-100/70 dark:bg-emerald-950/60 px-2.5 py-1 rounded-md border border-emerald-300 dark:border-emerald-800 self-start sm:self-auto">
+                    44.6% Accuracy on DL &amp; NLP (Outperforms all axioms!)
+                  </div>
+                </div>
+
+                <p className="text-xs text-gray-700 dark:text-neutral-300 leading-relaxed">
+                  When facing numerical, tuple-based, or multi-clause options where word lengths are nearly identical, 
+                  <strong> reverse engineer the professor&rsquo;s exam design psychology</strong>. 
+                  Exam creators rarely invent 4 entirely independent wrong options from thin air. Instead, they calculate the true answer first, 
+                  and construct distractors by perturbing one variable or prefix at a time.
+                </p>
+              </div>
+
+              {/* Core Mechanism & User's Exact Audio Example */}
+              <div className="bg-white dark:bg-[#0c0c0c] p-4 sm:p-5 rounded-xl border border-gray-200 dark:border-neutral-800 shadow-xs space-y-3">
+                <div className="flex items-center gap-2">
+                  <span className="w-7 h-7 rounded-lg bg-indigo-100 dark:bg-indigo-950/80 text-indigo-800 dark:text-indigo-300 font-black text-xs flex items-center justify-center shrink-0">
+                    2A
+                  </span>
+                  <div>
+                    <h4 className="text-sm font-extrabold text-gray-900 dark:text-white">
+                      The Numerical Prefix/Suffix Intersection
+                    </h4>
+                    <span className="text-[10px] text-gray-500 dark:text-neutral-400 font-semibold">
+                      Eliminate outlier options by tracking component frequency modes
+                    </span>
+                  </div>
+                </div>
+
+                <p className="text-xs text-gray-700 dark:text-neutral-300 leading-relaxed">
+                  If options share repeating prefixes or recurring suffixes, find the <strong>modal intersection</strong> (the option that contains the most frequent sub-elements):
+                </p>
+
+                {/* Visual Audio Walkthrough */}
+                <div className="bg-slate-50 dark:bg-[#050505] p-3.5 rounded-xl border border-slate-200 dark:border-neutral-800 text-xs space-y-2.5 font-mono">
+                  <div className="text-gray-500 dark:text-neutral-400 text-[11px] font-sans font-bold flex items-center justify-between">
+                    <span>Empirical Inspection (Audio Case Study):</span>
+                    <span className="text-purple-600 dark:text-purple-400 font-mono text-[10px]">Prefix Mode: 13,000 (2x) | Suffix Mode: 105 (2x)</span>
+                  </div>
+
+                  <div className="space-y-1.5 pt-1">
+                    <div className="text-emerald-800 dark:text-emerald-300 font-bold bg-emerald-50 dark:bg-emerald-950/50 p-2 rounded-lg border border-emerald-300 dark:border-emerald-800 flex items-center justify-between">
+                      <div>
+                        A) <span className="underline decoration-indigo-400 decoration-2 font-black">13</span>,<span className="underline decoration-purple-400 decoration-2 font-black">105</span> 
+                        <span className="ml-2 text-[10px] font-sans font-normal text-emerald-700 dark:text-emerald-400">&larr; Has both frequent prefix (13k) &amp; frequent suffix (105)</span>
+                      </div>
+                      <span className="text-[10px] bg-emerald-200 dark:bg-emerald-900/60 text-emerald-900 dark:text-emerald-200 px-1.5 py-0.5 rounded font-sans font-black">
+                        CORRECT &bull; LOCK IN
+                      </span>
+                    </div>
+
+                    <div className="text-gray-700 dark:text-neutral-300 p-2 rounded-lg bg-gray-50 dark:bg-[#0a0a0a] border border-gray-200 dark:border-neutral-900 flex items-center justify-between">
+                      <div>
+                        B) <span className="underline decoration-indigo-400 decoration-2 font-semibold">13</span>,405 
+                        <span className="ml-2 text-[10px] font-sans text-gray-500 dark:text-neutral-500">(Shares 13k prefix, but 405 suffix is a distractor)</span>
+                      </div>
+                      <span className="text-[10px] text-gray-400 dark:text-neutral-600 font-sans">Distractor 1</span>
+                    </div>
+
+                    <div className="text-gray-700 dark:text-neutral-300 p-2 rounded-lg bg-gray-50 dark:bg-[#0a0a0a] border border-gray-200 dark:border-neutral-900 flex items-center justify-between">
+                      <div>
+                        C) 14,405 
+                        <span className="ml-2 text-[10px] font-sans text-gray-500 dark:text-neutral-500">(14k prefix is an outlier distractor)</span>
+                      </div>
+                      <span className="text-[10px] text-gray-400 dark:text-neutral-600 font-sans">Distractor 2</span>
+                    </div>
+
+                    <div className="text-gray-700 dark:text-neutral-300 p-2 rounded-lg bg-gray-50 dark:bg-[#0a0a0a] border border-gray-200 dark:border-neutral-900 flex items-center justify-between">
+                      <div>
+                        D) 17,<span className="underline decoration-purple-400 decoration-2 font-semibold">105</span> 
+                        <span className="ml-2 text-[10px] font-sans text-gray-500 dark:text-neutral-500">(Shares 105 suffix, but 17k is an outlier distractor)</span>
+                      </div>
+                      <span className="text-[10px] text-gray-400 dark:text-neutral-600 font-sans">Distractor 3</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-purple-50 dark:bg-purple-950/40 border-l-4 border-purple-500 p-2.5 rounded text-xs text-purple-950 dark:text-purple-200 font-medium leading-relaxed">
+                  <strong>The Reverse Engineering Verdict:</strong> Options sharing components isolate the exact variables the professor was testing. 
+                  The option that sits at the center of the crossfire (sharing elements with multiple neighbors) is almost always the calculated answer.
+                </div>
+              </div>
+
+              {/* Sub-Rule 2B: Two-Part Coordinate / Tuple Convergence */}
+              <div className="bg-white dark:bg-[#0c0c0c] p-4 sm:p-5 rounded-xl border border-gray-200 dark:border-neutral-800 shadow-xs space-y-3">
+                <div className="flex items-center gap-2">
+                  <span className="w-7 h-7 rounded-lg bg-purple-100 dark:bg-purple-950/80 text-purple-800 dark:text-purple-300 font-black text-xs flex items-center justify-center shrink-0">
+                    2B
+                  </span>
+                  <div>
+                    <h4 className="text-sm font-extrabold text-gray-900 dark:text-white">
+                      Tuple &amp; Multi-Value De-Composition
+                    </h4>
+                    <span className="text-[10px] text-purple-700 dark:text-purple-400 font-semibold">
+                      Real DLNLP Assignment Proofs (Week 10, Q6 &amp; Week 3, Q3)
+                    </span>
+                  </div>
+                </div>
+
+                <p className="text-xs text-gray-700 dark:text-neutral-300 leading-relaxed">
+                  In Deep Learning &amp; NLP quizzes, questions frequently ask for two outputs (e.g. weights &amp; biases, vocabulary dimensions, or bounds). 
+                  Split each option by the separator (<code>and</code>, <code>;</code>, or <code>,</code>) and vote on position 1 and position 2:
+                </p>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+                  {/* Case 1 */}
+                  <div className="bg-slate-50 dark:bg-[#080808] p-3 rounded-lg border border-slate-200 dark:border-neutral-800 space-y-1.5">
+                    <div className="font-bold text-gray-900 dark:text-neutral-200 flex items-center justify-between text-[11px]">
+                      <span>DLNLP Week 10, Q6</span>
+                      <span className="text-emerald-700 dark:text-emerald-400 font-bold">100% Reverse Match</span>
+                    </div>
+                    <div className="font-mono text-[11px] space-y-1 text-gray-600 dark:text-neutral-400">
+                      <div>A) 0 and 4 <span className="text-gray-400">(Pos 1: 0, Pos 2: 4)</span></div>
+                      <div>B) 1 and 3 <span className="text-gray-400">(Pos 1: 1, Pos 2: 3)</span></div>
+                      <div className="text-emerald-700 dark:text-emerald-300 font-bold bg-emerald-50 dark:bg-emerald-950/60 px-1.5 py-0.5 rounded border border-emerald-300 dark:border-emerald-800">
+                        C) 0 and 3 &larr; Mode(Pos 1)=0, Mode(Pos 2)=3
+                      </div>
+                      <div>D) 3 and 0 <span className="text-gray-400">(Inversion trap)</span></div>
+                    </div>
+                    <p className="text-[11px] text-gray-500 dark:text-neutral-400 pt-1">
+                      Longest option fails here because all options have 3 words. <strong>Reverse Engineering solves it in 2 seconds.</strong>
+                    </p>
+                  </div>
+
+                  {/* Case 2 */}
+                  <div className="bg-slate-50 dark:bg-[#080808] p-3 rounded-lg border border-slate-200 dark:border-neutral-800 space-y-1.5">
+                    <div className="font-bold text-gray-900 dark:text-neutral-200 flex items-center justify-between text-[11px]">
+                      <span>DLNLP Week 3, Q3 (Skip-Gram Pairs)</span>
+                      <span className="text-emerald-700 dark:text-emerald-400 font-bold">Rescued by Axiom 2</span>
+                    </div>
+                    <div className="font-mono text-[11px] space-y-1 text-gray-600 dark:text-neutral-400">
+                      <div>A) 32 pairs; 4 with charge as target.</div>
+                      <div className="text-emerald-700 dark:text-emerald-300 font-bold bg-emerald-50 dark:bg-emerald-950/60 px-1.5 py-0.5 rounded border border-emerald-300 dark:border-emerald-800">
+                        B) 20 pairs; 4 with charge as target. &larr; WINNER
+                      </div>
+                      <div>C) 20 pairs; 2 with charge as target.</div>
+                      <div>D) 14 pairs; 4 with charge as target.</div>
+                    </div>
+                    <p className="text-[11px] text-gray-500 dark:text-neutral-400 pt-1">
+                      Clause 1 Mode: <code>20 pairs</code> (2x). Clause 2 Mode: <code>4 with charge...</code> (3x). Modal intersection is <strong>Option B</strong>!
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* DLNLP Empirical Benchmark Scorecard */}
+              <div className="bg-gradient-to-br from-slate-900 to-black text-white p-4 sm:p-5 rounded-xl border border-neutral-800 shadow-md space-y-3">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <Trophy className="w-4 h-4 text-amber-400" />
+                    <h4 className="text-xs sm:text-sm font-bold text-amber-300 uppercase tracking-wider">
+                      Deep Learning &amp; NLP (101 Questions) Official LARP Benchmark
+                    </h4>
+                  </div>
+                  <span className="text-[10px] text-neutral-400">12 Weekly Assignments</span>
+                </div>
+
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center text-xs">
+                  <div className="bg-white/5 border border-purple-500/40 rounded-lg p-2.5">
+                    <div className="text-[10px] text-purple-300 font-bold">Reverse Engineering</div>
+                    <div className="text-lg font-black text-purple-400">44.6%</div>
+                    <div className="text-[9px] text-neutral-400">45/101 correct (#1 Best)</div>
+                  </div>
+                  <div className="bg-white/5 border border-white/10 rounded-lg p-2.5">
+                    <div className="text-[10px] text-amber-300 font-bold">Longest Words</div>
+                    <div className="text-lg font-black text-emerald-400">40.6%</div>
+                    <div className="text-[9px] text-neutral-400">41/101 correct</div>
+                  </div>
+                  <div className="bg-white/5 border border-white/10 rounded-lg p-2.5">
+                    <div className="text-[10px] text-blue-300 font-bold">Lexical Overlap</div>
+                    <div className="text-lg font-black text-blue-400">37.6%</div>
+                    <div className="text-[9px] text-neutral-400">38/101 correct</div>
+                  </div>
+                  <div className="bg-white/5 border border-white/10 rounded-lg p-2.5">
+                    <div className="text-[10px] text-red-300 font-bold">Random Guess</div>
+                    <div className="text-lg font-black text-red-400">25.0%</div>
+                    <div className="text-[9px] text-neutral-400">Blind baseline</div>
+                  </div>
+                </div>
+
+                <div className="text-[11px] text-neutral-300 leading-relaxed bg-white/5 p-2.5 rounded-lg border border-white/5">
+                  <strong>Key Takeaway for Exam Day:</strong> In conceptual weeks (e.g. Transformers &amp; Word Embeddings), use <strong>Longest Option</strong> (up to 71.4% win rate). 
+                  In computational weeks (e.g. Week 10 &amp; Week 11), switch to <strong>Reverse Engineering</strong> (70.0% &ndash; 71.4% win rate). 
+                  Both comfortably pass the NPTEL 40% certificate threshold with zero study time!
+                </div>
+              </div>
+
+            </div>
+          )}
+
+          {/* TAB 3: MATCHING WORDS & MATH BALLPARK */}
           {activeTab === 'methods' && (
             <div className="space-y-4 animate-in fade-in duration-150">
               
