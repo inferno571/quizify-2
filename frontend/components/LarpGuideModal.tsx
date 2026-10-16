@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
   Flame, 
   X, 
@@ -22,12 +22,153 @@ import {
   Scale
 } from 'lucide-react';
 
+/**
+ * Synthesize an epic cinematic bass-drop and shimmer chime
+ * using the standard HTML5 Web Audio API (zero external audio files).
+ */
+function playLarpSound() {
+  if (typeof window === 'undefined') return;
+  try {
+    const AudioContextClass = window.AudioContext || (window as any).webkitAudioContext;
+    if (!AudioContextClass) return;
+    const ctx = new AudioContextClass();
+    const now = ctx.currentTime;
+
+    // 1. Heavy cinematic bass drop (140Hz -> 32Hz)
+    const subOsc = ctx.createOscillator();
+    const subGain = ctx.createGain();
+    subOsc.type = 'sine';
+    subOsc.frequency.setValueAtTime(140, now);
+    subOsc.frequency.exponentialRampToValueAtTime(32, now + 0.9);
+    subGain.gain.setValueAtTime(0.9, now);
+    subGain.gain.exponentialRampToValueAtTime(0.001, now + 1.2);
+    subOsc.connect(subGain);
+    subGain.connect(ctx.destination);
+    subOsc.start(now);
+    subOsc.stop(now + 1.2);
+
+    // 2. Brass / Synth Impact chord (A Major triumph)
+    const chordFreqs = [220, 277.18, 329.63, 440];
+    chordFreqs.forEach((freq, idx) => {
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.type = idx % 2 === 0 ? 'sawtooth' : 'triangle';
+      osc.frequency.setValueAtTime(freq, now);
+      gain.gain.setValueAtTime(0.16, now);
+      gain.gain.exponentialRampToValueAtTime(0.001, now + 0.8);
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.start(now);
+      osc.stop(now + 0.8);
+    });
+
+    // 3. Shimmer bell sparkle
+    const bellOsc = ctx.createOscillator();
+    const bellGain = ctx.createGain();
+    bellOsc.type = 'triangle';
+    bellOsc.frequency.setValueAtTime(880, now + 0.05);
+    bellOsc.frequency.exponentialRampToValueAtTime(1760, now + 0.4);
+    bellGain.gain.setValueAtTime(0.25, now + 0.05);
+    bellGain.gain.exponentialRampToValueAtTime(0.001, now + 0.8);
+    bellOsc.connect(bellGain);
+    bellGain.connect(ctx.destination);
+    bellOsc.start(now + 0.05);
+    bellOsc.stop(now + 0.8);
+  } catch (err) {
+    // Autoplay policy or unsupported audio
+  }
+}
+
+/**
+ * Full-screen Flash & Shockwave Overlay triggered on Acknowledge
+ */
+export function LarpFlashOverlay({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
+  useEffect(() => {
+    if (!isOpen) return;
+
+    // Play native synthesized cinematic audio
+    playLarpSound();
+
+    const timer = setTimeout(() => {
+      onClose();
+    }, 4000);
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose();
+    };
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [isOpen, onClose]);
+
+  if (!isOpen) return null;
+
+  return (
+    <div 
+      onClick={onClose}
+      className="fixed inset-0 z-[99999] flex items-center justify-center bg-black/95 cursor-pointer select-none overflow-hidden animate-larp-shake"
+    >
+      {/* 1. Strobe Flash Burst */}
+      <div className="absolute inset-0 bg-gradient-to-tr from-white via-amber-200 to-white animate-larp-flash pointer-events-none z-30" />
+
+      {/* 2. Rotating Radiant Sunburst / Energy Rays */}
+      <div className="absolute w-[200vw] h-[200vw] -left-[50vw] -top-[50vw] pointer-events-none opacity-25 animate-larp-spin z-0 bg-[conic-gradient(from_0deg_at_50%_50%,#f59e0b_0deg,transparent_20deg,#ef4444_45deg,transparent_65deg,#f59e0b_90deg,transparent_110deg,#ef4444_135deg,transparent_155deg,#f59e0b_180deg,transparent_200deg,#ef4444_225deg,transparent_245deg,#f59e0b_270deg,transparent_290deg,#ef4444_315deg,transparent_335deg,#f59e0b_360deg)]" />
+
+      {/* 3. Outer Neon Glow Border */}
+      <div className="absolute inset-2 sm:inset-4 border-2 sm:border-4 border-amber-400 rounded-2xl sm:rounded-3xl pointer-events-none z-20 shadow-[inset_0_0_60px_rgba(245,158,11,0.5),0_0_80px_rgba(245,158,11,0.8)]" />
+
+      {/* 4. Center Stage Cinema Container */}
+      <div className="relative z-10 max-w-4xl w-[92%] sm:w-[85%] flex flex-col items-center text-center animate-in zoom-in-90 fade-in duration-300">
+        
+        {/* Top Badges */}
+        <div className="mb-3 sm:mb-4 flex flex-wrap items-center justify-center gap-2">
+          <span className="inline-flex items-center gap-1.5 px-3.5 py-1 bg-gradient-to-r from-amber-500 to-orange-600 text-slate-950 font-black text-xs sm:text-sm rounded-full shadow-lg uppercase tracking-wider animate-bounce">
+            <Flame className="w-4 h-4 fill-slate-950" />
+            THE LARP HAS BEEN OFFICIALLY ACKNOWLEDGED
+          </span>
+          <span className="px-3 py-1 bg-black/60 border border-amber-400/80 text-amber-300 font-bold text-xs rounded-full backdrop-blur-xs">
+            SCHOLAR AURA: 100,000+
+          </span>
+        </div>
+
+        {/* Widescreen Meme Poster Frame */}
+        <div className="relative rounded-xl sm:rounded-2xl overflow-hidden border-2 sm:border-4 border-amber-400 shadow-[0_0_80px_rgba(245,158,11,0.8)] animate-larp-glow group max-h-[60vh] flex items-center justify-center bg-black">
+          <img 
+            src="/larp.jpg" 
+            alt="There's no limit to the LARP" 
+            className="w-full h-auto object-contain max-h-[58vh]"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+        </div>
+
+        {/* Bottom Impact Text */}
+        <div className="mt-4 sm:mt-5 space-y-1.5">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-black italic tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-orange-400 drop-shadow-[0_4px_10px_rgba(0,0,0,0.9)]">
+            &ldquo;THERE&rsquo;S NO LIMIT TO THE LARP.&rdquo;
+          </h2>
+          <p className="text-xs sm:text-sm font-semibold text-amber-200/90 tracking-wide drop-shadow-md">
+            Longest Option Theorem Engaged &bull; Zero Lectures Watched &bull; Elite + Gold Guaranteed
+          </p>
+          <div className="pt-2 text-[11px] text-gray-400 font-medium">
+            (Click anywhere or press Esc to dismiss)
+          </div>
+        </div>
+
+      </div>
+    </div>
+  );
+}
+
 interface LarpGuideModalProps {
   isOpen: boolean;
   onClose: () => void;
+  onAcknowledge?: () => void;
 }
 
-export function LarpGuideModal({ isOpen, onClose }: LarpGuideModalProps) {
+export function LarpGuideModal({ isOpen, onClose, onAcknowledge }: LarpGuideModalProps) {
   const [activeTab, setActiveTab] = useState<'longest' | 'methods' | 'center' | 'linkedin'>('longest');
   const [copiedLinkedIn, setCopiedLinkedIn] = useState(false);
 
@@ -52,6 +193,13 @@ Continuous learning never stops! Looking forward to applying these principles to
     navigator.clipboard.writeText(linkedInPostText);
     setCopiedLinkedIn(true);
     setTimeout(() => setCopiedLinkedIn(false), 2500);
+  };
+
+  const handleAcknowledgeClick = () => {
+    onClose();
+    if (onAcknowledge) {
+      onAcknowledge();
+    }
   };
 
   return (
@@ -102,7 +250,7 @@ Continuous learning never stops! Looking forward to applying these principles to
                 <img 
                   src="/larp.jpg" 
                   alt="There's no limit to the LARP meme" 
-                  className="relative w-36 sm:w-44 rounded-md object-cover shadow-2xl border-2 border-amber-400/80"
+                  className="relative w-44 sm:w-56 rounded-md object-cover shadow-2xl border-2 border-amber-400/80"
                 />
               </div>
 
@@ -415,29 +563,17 @@ Continuous learning never stops! Looking forward to applying these principles to
               <div className="bg-white p-4 rounded-xl border border-gray-200 shadow-xs space-y-2">
                 <h4 className="font-bold text-gray-900 text-sm flex items-center gap-1.5 text-slate-800">
                   <ShieldCheck className="w-4 h-4 text-emerald-600" />
-                  1. The Color Hall Ticket Intimidation
+                  1. The Color Hall Ticket Preparation
                 </h4>
                 <p className="text-gray-600 leading-relaxed">
-                  Print the admit card in high-gloss color. Carry two blue ballpoint pens even though you will never touch paper because the TCS iON virtual keypad does all the input. 
-                  Place your Aadhaar card with deliberate precision on the desk to radiate maximum academic authority.
-                </p>
-              </div>
-
-              <div className="bg-white p-4 rounded-xl border border-gray-200 shadow-xs space-y-2">
-                <h4 className="font-bold text-gray-900 text-sm flex items-center gap-1.5 text-slate-800">
-                  <Clock className="w-4 h-4 text-blue-600" />
-                  2. Waiting Lounge Demeanor
-                </h4>
-                <p className="text-gray-600 leading-relaxed">
-                  Do not participate in desperate hallway panic reviews. Sit quietly in a corner looking serene, like you have published three IEEE papers on the subject. 
-                  If someone asks you how to solve a numerical problem, reply: <em>&ldquo;It simplifies directly through Jensen&rsquo;s inequality.&rdquo;</em> Walk away.
+                  Print the admit card in high-gloss color. Carry two blue ballpoint pens even though you will never touch paper because the TCS iON virtual keypad does all the numerical input.
                 </p>
               </div>
 
               <div className="bg-white p-4 rounded-xl border border-gray-200 shadow-xs space-y-2">
                 <h4 className="font-bold text-gray-900 text-sm flex items-center gap-1.5 text-slate-800">
                   <Target className="w-4 h-4 text-purple-600" />
-                  3. The Mandatory Waiting Hour Performance
+                  2. The Mandatory Waiting Hour Performance
                 </h4>
                 <p className="text-gray-600 leading-relaxed">
                   Using the Longest Option Theorem and Lexical Overlap, you will finish your 50 questions in under 20 minutes. 
@@ -479,9 +615,10 @@ Continuous learning never stops! Looking forward to applying these principles to
             Quizify 2 • <span className="text-orange-600 font-bold">Made by Saksham Sooden</span>
           </div>
           <button
-            onClick={onClose}
-            className="px-4 py-1.5 bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs rounded-lg transition cursor-pointer shadow-xs"
+            onClick={handleAcknowledgeClick}
+            className="px-4 py-2 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-slate-950 font-black text-xs rounded-lg transition cursor-pointer shadow-md flex items-center gap-1.5 transform active:scale-95"
           >
+            <Flame className="w-3.5 h-3.5 fill-slate-950" />
             Acknowledge the LARP
           </button>
         </div>
@@ -491,10 +628,11 @@ Continuous learning never stops! Looking forward to applying these principles to
 }
 
 /**
- * Top-Right Button that toggles the LARP guide modal
+ * Top-Right Button that toggles the LARP guide modal and triggers the full-screen flash on acknowledge
  */
 export function LarpGuideButton() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isFlashing, setIsFlashing] = useState(false);
 
   return (
     <>
@@ -514,7 +652,17 @@ export function LarpGuideButton() {
         </span>
       </button>
 
-      <LarpGuideModal isOpen={isOpen} onClose={() => setIsOpen(false)} />
+      <LarpGuideModal 
+        isOpen={isOpen} 
+        onClose={() => setIsOpen(false)} 
+        onAcknowledge={() => setIsFlashing(true)}
+      />
+
+      {/* Screen flash with meme image and effects */}
+      <LarpFlashOverlay 
+        isOpen={isFlashing} 
+        onClose={() => setIsFlashing(false)} 
+      />
     </>
   );
 }
