@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import { QuizScreen } from '../../../components/QuizScreen';
 import { PlayerNameModal } from '../../../components/PlayerNameModal';
-import { getQuizzes, getAttempts, saveAttempts } from '../../../lib/storage';
+import { getQuizzes, getAttempts, saveAttempts, clearQuizProgress } from '../../../lib/storage';
 import { DEFAULT_QUIZZES } from '../../../lib/defaultQuizzes';
 import { Quiz, QuizAttempt } from '../../../lib/types';
 
@@ -49,43 +49,78 @@ export default function QuizPage() {
     router.push('/dashboard');
   };
 
-  const handleQuizComplete = async (answers: Record<number, string | string[]>, starred: number[]) => {
+  const handleQuizComplete = async (
+    answers: Record<number, string | string[]>, 
+    starred: number[],
+    twoPlayerInfo?: {
+      isTwoPlayer: boolean;
+      player1Name: string;
+      player2Name: string;
+      player2Answers: Record<number, string | string[]>;
+      conflictQuestions: number[];
+    }
+  ) => {
     if (!quiz) return;
 
     let score = 0;
+    let p2Score = 0;
     const incorrectIndices: number[] = [];
+
+    const checkCorrect = (userAns: string | string[] | undefined, correct: string | string[]) => {
+      if (Array.isArray(correct)) {
+        const userArr = Array.isArray(userAns) ? [...userAns].sort() : [];
+        const correctArr = [...correct].sort();
+        return userArr.length === correctArr.length && 
+          userArr.every((val, i) => val.trim().toLowerCase() === correctArr[i].trim().toLowerCase());
+      } else {
+        const userStr = Array.isArray(userAns) ? userAns[0] || "" : (userAns || "");
+        return userStr.trim().toLowerCase() === correct.trim().toLowerCase();
+      }
+    };
 
     quiz.questions.forEach((q, idx) => {
       const userAnswer = answers[idx];
-      const correct = q.correctAnswer;
-
-      let isCorrect = false;
-
-      if (Array.isArray(correct)) {
-        const userArr = Array.isArray(userAnswer) ? [...userAnswer].sort() : [];
-        const correctArr = [...correct].sort();
-        isCorrect = userArr.length === correctArr.length && 
-          userArr.every((val, i) => val.trim().toLowerCase() === correctArr[i].trim().toLowerCase());
-      } else {
-        const userStr = Array.isArray(userAnswer) ? userAnswer[0] || "" : (userAnswer || "");
-        isCorrect = userStr.trim().toLowerCase() === correct.trim().toLowerCase();
-      }
+      const isCorrect = checkCorrect(userAnswer, q.correctAnswer);
 
       if (isCorrect) {
         score++;
       } else {
         incorrectIndices.push(idx);
       }
+
+      if (twoPlayerInfo?.isTwoPlayer) {
+        const p2Answer = twoPlayerInfo.player2Answers[idx];
+        const isP2Correct = checkCorrect(p2Answer, q.correctAnswer);
+        if (isP2Correct) {
+          p2Score++;
+        }
+      }
     });
 
     const mergedStarred = Array.from(new Set([...starred, ...incorrectIndices]));
-    const attempt: QuizAttempt = { answers, starred: mergedStarred, score };
+    const attempt: QuizAttempt = { 
+      answers, 
+      starred: mergedStarred, 
+      score,
+      markedForReview: starred,
+      isTwoPlayer: twoPlayerInfo?.isTwoPlayer || false,
+      player1Name: twoPlayerInfo?.player1Name || playerName || "Player 1",
+      player2Name: twoPlayerInfo?.player2Name || "Player 2",
+      player1Answers: answers,
+      player2Answers: twoPlayerInfo?.player2Answers,
+      player1Score: score,
+      player2Score: twoPlayerInfo?.isTwoPlayer ? p2Score : undefined,
+      conflictQuestions: twoPlayerInfo?.conflictQuestions,
+    };
     
     const attempts = getAttempts();
     const newAttempts = { ...attempts, [quiz.id]: attempt };
     saveAttempts(newAttempts);
 
-    // Submit score to leaderboard
+    // Clear saved in-progress session since quiz is completed
+    clearQuizProgress(quiz.id);
+
+    // Submit score to leaderboard for Player 1
     if (playerName) {
       try {
         await fetch('/api/leaderboard', {
@@ -101,6 +136,25 @@ export default function QuizPage() {
         });
       } catch (err) {
         console.warn('Failed to submit score to leaderboard:', err);
+      }
+    }
+
+    // Submit score to leaderboard for Player 2 if 2-player mode was used
+    if (twoPlayerInfo?.isTwoPlayer && twoPlayerInfo.player2Name && twoPlayerInfo.player2Name !== playerName) {
+      try {
+        await fetch('/api/leaderboard', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            action: 'submit',
+            name: twoPlayerInfo.player2Name,
+            quizId: quiz.id,
+            score: p2Score,
+            totalQuestions: quiz.questions.length,
+          }),
+        });
+      } catch (err) {
+        console.warn('Failed to submit Player 2 score to leaderboard:', err);
       }
     }
 
@@ -125,5 +179,11 @@ export default function QuizPage() {
     return <div className="p-8 text-center text-gray-500">Setting up...</div>;
   }
 
-  return <QuizScreen quiz={quiz} onComplete={handleQuizComplete} />;
+  return (
+    <QuizScreen 
+      quiz={quiz} 
+      onComplete={handleQuizComplete} 
+      onExit={() => router.push('/dashboard')} 
+    />
+  );
 }

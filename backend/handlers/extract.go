@@ -36,7 +36,8 @@ IMPORTANT RULES:
 1. For the correct_answer field: if the question has ONLY ONE correct answer, provide it as a single STRING with the full text of the correct option exactly as it appears in the options array.
 2. If the question has MULTIPLE correct answers (MSQ / Multiple Select Question), provide correct_answer as an ARRAY OF STRINGS, each being the full text of a correct option exactly as it appears in the options array.
 3. Do NOT use option letters (e.g. A, B, C, D) — always use the full option text.
-4. If the source material indicates "MSQ" or "multiple answers" or "select all that apply" or has multiple correct options marked, use an array for correct_answer.`
+4. If the source material indicates "MSQ" or "multiple answers" or "select all that apply" or has multiple correct options marked, use an array for correct_answer.
+5. For any mathematical formulas, equations, variables, Greek symbols (e.g. \mu, \sigma, \phi, \theta, \beta, \epsilon, \lambda, \rho), superscripts/subscripts, fractions, or distributions (e.g. \mathcal{N}), ALWAYS format them using proper LaTeX syntax enclosed in dollar signs ($...$ for inline math or $$...$$ for display equations) so they render cleanly with LaTeX math fonts without character encoding corruption.`
 
 	if req.Instructions != "" {
 		prompt += fmt.Sprintf("\n\nADDITIONAL USER INSTRUCTIONS:\n%s", req.Instructions)

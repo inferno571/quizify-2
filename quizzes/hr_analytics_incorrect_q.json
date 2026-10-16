@@ -1,0 +1,204 @@
+{
+  "id": "hr-analytics-incorrect-q",
+  "title": "HR Analytics - Incorrect Q",
+  "subject": "HR Analytics",
+  "date": "16/10/2026",
+  "questions": [
+    {
+      "question": "1. HR analytics differs from HRMIS primarily because HR analytics has the potential to connect HR processes and decisions with ______.",
+      "options": [
+        "Employee satisfaction scores only",
+        "Regulatory compliance requirements",
+        "Payroll and compensation structures",
+        "Organization performance"
+      ],
+      "correctAnswer": "Organization performance",
+      "explanation": "HR analytics connects HR processes and strategic decisions directly with organizational performance and business outcomes, moving beyond operational record-keeping typical of HRMIS."
+    },
+    {
+      "question": "2. A manager wants a visual breakdown of \"how many applicants are UG, PG, and PhD\" for a quick presentation. Based on the Excel tools, which would best serve this purpose?",
+      "options": [
+        "Pivot Table",
+        "Pivot Chart",
+        "SN field",
+        "Status of interview field"
+      ],
+      "correctAnswer": "Pivot Chart",
+      "explanation": "A Pivot Chart provides an immediate visual graphical representation coupled with the summary data."
+    },
+    {
+      "question": "3. A manufacturing company with an outdated work culture and poor employer branding is struggling to attract candidates even after posting on multiple platforms. Which influence, as listed under constraints on choosing a recruiting source, most directly explains this problem?",
+      "options": [
+        "Limited budgetary support",
+        "Restrictive policies of the government",
+        "Poor image",
+        "Conservative internal policies"
+      ],
+      "correctAnswer": "Poor image",
+      "explanation": "An outdated culture and weak reputation constitute a 'Poor image' constraint, discouraging talented applicants regardless of advertising reach."
+    },
+    {
+      "question": "4. The Internal Branding Matrix includes salary benchmarking and compensation revision as its primary tools for strengthening the employer brand among existing employees.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "False",
+      "explanation": "Internal branding emphasizes culture, shared values, communication, and employee engagement rather than mere transactional compensation changes."
+    },
+    {
+      "question": "5. Which of the following correctly matches a Type of Interview with its definition?",
+      "options": [
+        "Situational Interview – The recruiter asks questions as they come to mind.",
+        "Structured Interview – The recruiter uses a predetermined set of questions that are clearly job-related.",
+        "Panel Interview – The recruiter presents a hypothetical incident and asks the candidate to respond.",
+        "Behavioural Interview – The focus is on actual work-related incidents, and the applicant is asked to reveal what he or she did in a given situation."
+      ],
+      "correctAnswer": "Behavioural Interview – The focus is on actual work-related incidents, and the applicant is asked to reveal what he or she did in a given situation.",
+      "explanation": "Behavioral interviews operate on the premise that past behavior predicts future performance, probing how candidates handled real past situations."
+    },
+    {
+      "question": "6. Which method provides exposure to diverse functions via advisory groups?",
+      "options": [
+        "Understudy",
+        "Job rotation",
+        "Multiple management",
+        "Case study"
+      ],
+      "correctAnswer": "Multiple management",
+      "explanation": "Multiple management (such as junior boards of directors) gives emerging managers exposure to high-level strategic problems and diverse organizational functions."
+    },
+    {
+      "question": "7. A suitable method for developing reasoning skills is:",
+      "options": [
+        "Role playing",
+        "Business games",
+        "Case study",
+        "Sensitivity training"
+      ],
+      "correctAnswer": "Case study",
+      "explanation": "Case study analysis requires trainees to diagnose complex real-world organizational problems, developing critical analytical and reasoning skills."
+    },
+    {
+      "question": "8. What is an important learning metric from training?",
+      "options": [
+        "Number of holidays taken",
+        "Attitude change",
+        "New dress code adoption",
+        "Marketing strategy redesign"
+      ],
+      "correctAnswer": "Attitude change",
+      "explanation": "Under Kirkpatrick's Level 2 (Learning), changes in attitude, knowledge, and mental models serve as essential learning metrics."
+    },
+    {
+      "question": "9. Training evaluation criteria do NOT include:",
+      "options": [
+        "Sales promotions",
+        "Learning",
+        "Employee reactions",
+        "Business results"
+      ],
+      "correctAnswer": "Sales promotions",
+      "explanation": "Kirkpatrick's four levels of training evaluation are Reaction, Learning, Behavior, and Results. Sales promotions are marketing activities, not training evaluation criteria."
+    },
+    {
+      "question": "10. What character trait is listed in the benchmark skills table?",
+      "options": [
+        "Punctuality",
+        "Compassion and sensitivity",
+        "Typing speed",
+        "Accent clarity"
+      ],
+      "correctAnswer": "Compassion and sensitivity",
+      "explanation": "Benchmark managerial competencies highlight emotional intelligence traits such as compassion and interpersonal sensitivity."
+    },
+    {
+      "question": "11. Which activity is part of internal development programs?",
+      "options": [
+        "External consulting",
+        "Job rotation",
+        "Legal compliance",
+        "Budget proposal writing"
+      ],
+      "correctAnswer": "Job rotation",
+      "explanation": "Job rotation is a primary internal development method for expanding experiential breadth within the firm."
+    },
+    {
+      "question": "12. What method in job experiences matrix involves decision-making under stress?",
+      "options": [
+        "Group exercise",
+        "Adverse business conditions",
+        "Annual party planning",
+        "Time logging"
+      ],
+      "correctAnswer": "Adverse business conditions",
+      "explanation": "Experiencing adverse business conditions challenges leaders to make high-stakes decisions under genuine organizational stress."
+    },
+    {
+      "question": "13. What does 'Making Transitions' in the job experience matrix signify?",
+      "options": [
+        "Time zone shift",
+        "Unfamiliar responsibilities",
+        "Changing passwords",
+        "Location mapping"
+      ],
+      "correctAnswer": "Unfamiliar responsibilities",
+      "explanation": "Transition experiences involve stepping into unfamiliar roles, managing different functional scopes, or leading new initiatives."
+    },
+    {
+      "question": "14. InnovateTech included participation in cross-functional ________ as part of performance standards.",
+      "options": [
+        "outsourcing",
+        "auditing",
+        "training",
+        "marketing"
+      ],
+      "correctAnswer": "training",
+      "explanation": "Cross-functional training participation enhances organizational versatility and collaborative problem-solving, making it a key performance standard criterion."
+    },
+    {
+      "question": "15. In the balanced score approach, return on equity is classified as a:",
+      "options": [
+        "behavioral indicator",
+        "lag indicator",
+        "recruitment indicator",
+        "training indicator"
+      ],
+      "correctAnswer": "lag indicator",
+      "explanation": "Return on equity (ROE) is a financial output metric reflecting past activities and historical performance, making it a classic lag indicator in the Balanced Scorecard framework."
+    },
+    {
+      "question": "16. The 9 Box Matrix evaluates potential rating and:",
+      "options": [
+        "compensation ratio",
+        "training frequency",
+        "attendance score",
+        "performance rating"
+      ],
+      "correctAnswer": "performance rating",
+      "explanation": "The 9-Box Grid is a classic talent management tool that plots employee current performance rating on one axis against future potential rating on the other."
+    },
+    {
+      "question": "17. Motivation, ability, and opportunity are analyzed in order to identify:",
+      "options": [
+        "compensation structures",
+        "causes of underperformance",
+        "recruitment procedures",
+        "leadership succession plans"
+      ],
+      "correctAnswer": "causes of underperformance",
+      "explanation": "The AMO (Ability, Motivation, Opportunity) model is used to diagnose root causes of individual employee performance issues or underperformance."
+    },
+    {
+      "question": "18. Pay mix policies included analysis of base wage, benefits, and:",
+      "options": [
+        "transportation allowance",
+        "long-term incentives",
+        "taxation credits",
+        "inventory rewards"
+      ],
+      "correctAnswer": "long-term incentives",
+      "explanation": "A complete total rewards pay mix encompasses base pay, short- and long-term incentives, and employee benefits."
+    }
+  ]
+}

@@ -1,0 +1,1310 @@
+{
+  "id": "hr-analytics-full-combined-test",
+  "title": "HR Analytics - Full Combined Grand Test (Weeks 1-12)",
+  "subject": "HR Analytics",
+  "date": "14/10/2026",
+  "questions": [
+    {
+      "question": "1. Which of the following is NOT an example of a descriptive analytics tool used in HR?",
+      "options": [
+        "Mean and standard deviation",
+        "Counts and ratios",
+        "Decision trees and random forests",
+        "Mode and median"
+      ],
+      "correctAnswer": "Decision trees and random forests",
+      "explanation": "Decision trees and random forests are predictive analytics / machine learning tools, whereas mean, median, standard deviation, counts, and ratios are descriptive analytics tools."
+    },
+    {
+      "question": "2. HR analytics differs from HRMIS primarily because HR analytics has the potential to connect HR processes and decisions with ______.",
+      "options": [
+        "Employee satisfaction scores only",
+        "Regulatory compliance requirements",
+        "Payroll and compensation structures",
+        "Organization performance"
+      ],
+      "correctAnswer": "Organization performance",
+      "explanation": "HR analytics connects HR processes and strategic decisions directly with organizational performance and business outcomes, moving beyond operational record-keeping typical of HRMIS."
+    },
+    {
+      "question": "3. According to the criteria for good HR activity metrics, every metric must explicitly describe what it does NOT include. This rule primarily ensures ______.",
+      "options": [
+        "That metrics are visually appealing in dashboards",
+        "Clarity and prevention of misinterpretation of calculations",
+        "That metrics are aligned with competitor benchmarks",
+        "That only positive outcomes are measured and reported"
+      ],
+      "correctAnswer": "Clarity and prevention of misinterpretation of calculations",
+      "explanation": "Explicitly stating exclusions ensures clarity, consistent definitions, and prevents misinterpretation or manipulation in metric calculation."
+    },
+    {
+      "question": "4. According to the criteria for good HR activity metrics, an organization should capture and track all possible metrics, even those not currently being used, to build a comprehensive data history.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "False",
+      "explanation": "Tracking unnecessary metrics leads to metric clutter, wasted resources, and analysis paralysis. Effective metrics focus specifically on actionable, strategically aligned needs."
+    },
+    {
+      "question": "5. A good HR problem definition must cover three elements. Which of the following correctly lists all three?",
+      "options": [
+        "A statement of what, a statement of why, and a desired state or outcome",
+        "A statement of who, a statement of when, and a budget estimate",
+        "A statement of the problem, a timeline, and a team assignment",
+        "A cost-benefit analysis, a risk assessment, and an expected output"
+      ],
+      "correctAnswer": "A statement of what, a statement of why, and a desired state or outcome",
+      "explanation": "A complete problem definition requires articulating what the issue is, why it matters, and the target/desired outcome."
+    },
+    {
+      "question": "6. The overconfidence trap is described as particularly dangerous because it prevents analysts and decision makers from ______.",
+      "options": [
+        "Using advanced statistical tools",
+        "Questioning their methods, motivation, and the way they communicate findings",
+        "Collaborating with HR business partners",
+        "Collecting sufficient sample data for analysis"
+      ],
+      "correctAnswer": "Questioning their methods, motivation, and the way they communicate findings",
+      "explanation": "The overconfidence trap makes analysts overly certain about conclusions, preventing critical questioning of assumptions, methods, and communication."
+    },
+    {
+      "question": "7. Which of the following best describes the 'overfitting trap' in HR analytics?",
+      "options": [
+        "The analyst uses too few variables to build a reliable model",
+        "The analyst collects more data than is needed for the analysis",
+        "The visualization uses too many chart types, causing confusion",
+        "The model performs well on training data but poorly on new real-world data"
+      ],
+      "correctAnswer": "The model performs well on training data but poorly on new real-world data",
+      "explanation": "Overfitting occurs when a statistical or machine learning model fits noise and specific artifacts of historical training data, failing on new real-world data."
+    },
+    {
+      "question": "8. In the stakeholder engagement framework for HR analytics, data owners, technology owners, and subject matter experts are classified as ______.",
+      "options": [
+        "Stakeholders served",
+        "Stakeholders depended upon",
+        "Stakeholders impacted",
+        "Stakeholders managed"
+      ],
+      "correctAnswer": "Stakeholders depended upon",
+      "explanation": "Analysts depend upon data owners, IT/technology owners, and SMEs to acquire data access, infrastructure, and contextual validation."
+    },
+    {
+      "question": "9. Which of the following correctly lists the four components of the 'Six Skills for Success' category called 'Business Acumen'?",
+      "options": [
+        "Data awareness, Statistical methods, Visualization, Writing",
+        "Problem definition, Project management, Change management, Stakeholder management",
+        "Financial literacy, Political astuteness, Internal awareness, External awareness",
+        "HR sub-functions, HR interdependencies, Privacy, Ethics"
+      ],
+      "correctAnswer": "Financial literacy, Political astuteness, Internal awareness, External awareness",
+      "explanation": "The Business Acumen competency includes Financial literacy, Political astuteness, Internal organizational awareness, and External market awareness."
+    },
+    {
+      "question": "10. Which of the following statements best describes the relationship between KPIs and HR metrics?",
+      "options": [
+        "KPIs and HR metrics are completely unrelated measurement tools",
+        "HR metrics are a broader category, and every KPI is a metric",
+        "KPIs replace traditional HR metrics in modern organizations",
+        "HR metrics only apply to recruitment; KPIs apply to all functions"
+      ],
+      "correctAnswer": "HR metrics are a broader category, and every KPI is a metric",
+      "explanation": "Metrics represent the broader umbrella of all measurable values; KPIs are a strategic subset of metrics focused on critical goals."
+    },
+    {
+      "question": "11. Which of the following is NOT one of the steps of Data Analytics?",
+      "options": [
+        "Data Collection",
+        "Data Visualization",
+        "Data Encryption",
+        "Findings"
+      ],
+      "correctAnswer": "Data Encryption",
+      "explanation": "Data Analytics steps include Data Collection, Data Cleaning/Processing, Data Visualization, and Findings/Insights. Data Encryption is an information security practice, not an analytics pipeline step."
+    },
+    {
+      "question": "12. Which of the following is a tool for Data Visualization?",
+      "options": [
+        "Power BI",
+        "Photoshop",
+        "AutoCAD",
+        "MATLAB"
+      ],
+      "correctAnswer": "Power BI",
+      "explanation": "Power BI is a leading dedicated business intelligence and data visualization software tool."
+    },
+    {
+      "question": "13. An HR manager wants to know the average work experience of all applicants from a raw Excel dataset. Which Excel feature would be most appropriate to summarize this quickly?",
+      "options": [
+        "Data Studio",
+        "Recommended Pivot tables",
+        "Conditional Formatting",
+        "Pivot Table"
+      ],
+      "correctAnswer": "Pivot Table",
+      "explanation": "Pivot Tables in Excel allow fast aggregation, grouping, and calculation of averages across datasets."
+    },
+    {
+      "question": "14. A manager wants a visual breakdown of \"how many applicants are UG, PG, and PhD\" for a quick presentation. Based on the Excel tools, which would best serve this purpose?",
+      "options": [
+        "Pivot Table",
+        "Pivot Chart",
+        "SN field",
+        "Status of interview field"
+      ],
+      "correctAnswer": "Pivot Chart",
+      "explanation": "A Pivot Chart provides an immediate visual graphical representation coupled with the summary data."
+    },
+    {
+      "question": "15. After inserting a Pivot Table from your applicant dataset, where would you drag the \"City\" field to see the count of applicants per city as rows?",
+      "options": [
+        "Rows area",
+        "Values area",
+        "Filters area",
+        "Columns area"
+      ],
+      "correctAnswer": "Rows area",
+      "explanation": "Dragging 'City' to the Rows area groups the dataset by distinct cities down the rows."
+    },
+    {
+      "question": "16. Recommended Pivot Tables in Excel require the user to manually drag every field into Rows, Columns, and Values.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "False",
+      "explanation": "Recommended Pivot Tables automatically pre-configure layouts and field placements based on data patterns without requiring manual setup."
+    },
+    {
+      "question": "17. Among the Data Visualization tools, which one is a coding/statistical language rather than a dashboard or spreadsheet tool?",
+      "options": [
+        "Tableau",
+        "Data Studio",
+        "R",
+        "Power-BI"
+      ],
+      "correctAnswer": "R",
+      "explanation": "R is a programming and statistical computing language, whereas Tableau, Data Studio, and Power BI are GUI dashboard/BI applications."
+    },
+    {
+      "question": "18. When an HR manager asks, \"How many are UG, PG, and PhD?\" the relevant field from Applicant Analysis used to answer this is ______.",
+      "options": [
+        "Work Experience",
+        "Education",
+        "Department",
+        "Status of interview"
+      ],
+      "correctAnswer": "Education",
+      "explanation": "UG, PG, and PhD are qualification levels stored in the Education field."
+    },
+    {
+      "question": "19. You've built a Pivot Table showing applicant counts by City. To convert this into a visual chart, which route would you use?",
+      "options": [
+        "Formulas → Insert Chart",
+        "PivotTable Analyze/Design → PivotChart",
+        "Review → Chart Tools",
+        "Page Layout → Visualize"
+      ],
+      "correctAnswer": "PivotTable Analyze/Design → PivotChart",
+      "explanation": "PivotCharts are inserted via the PivotTable Analyze/Design contextual ribbon tab in Excel."
+    },
+    {
+      "question": "20. When you drag a text/ID-type field like \"SN\" or \"Gender\" into the Values area of a Pivot Table, which summary function does it default to?",
+      "options": [
+        "Sum",
+        "Product",
+        "Average",
+        "Count"
+      ],
+      "correctAnswer": "Count",
+      "explanation": "Non-numeric or text fields automatically default to the Count summary function in Excel Pivot Tables."
+    },
+    {
+      "question": "21. A manufacturing company with an outdated work culture and poor employer branding is struggling to attract candidates even after posting on multiple platforms. Which influence, as listed under constraints on choosing a recruiting source, most directly explains this problem?",
+      "options": [
+        "Limited budgetary support",
+        "Restrictive policies of the government",
+        "Poor image",
+        "Conservative internal policies"
+      ],
+      "correctAnswer": "Poor image",
+      "explanation": "An outdated culture and weak reputation constitute a 'Poor image' constraint, discouraging talented applicants regardless of advertising reach."
+    },
+    {
+      "question": "22. Which of the following correctly pairs a recruitment source with its category?",
+      "options": [
+        "Job bidding — External Method",
+        "Employee referrals — External Method",
+        "Educational institutions — Internal Method",
+        "Promotions and transfer — Internal Method"
+      ],
+      "correctAnswer": "Promotions and transfer — Internal Method",
+      "explanation": "Promotions and transfers source talent from within the existing workforce, making them Internal Methods."
+    },
+    {
+      "question": "23. FinServe, a financial services firm, identifies gaps in gender and ethnic diversity, particularly in senior management. Which combination of strategies most directly addresses this challenge?",
+      "options": [
+        "Increasing salaries and offering remote work options.",
+        "Partnering with diverse professional organizations, mentorship programs, and unconscious bias training.",
+        "Reducing qualification requirements and using only internal promotions.",
+        "Outsourcing recruitment exclusively to third-party agencies."
+      ],
+      "correctAnswer": "Partnering with diverse professional organizations, mentorship programs, and unconscious bias training.",
+      "explanation": "Addressing systemic leadership diversity gaps requires targeted sourcing partners, career mentorship pathways, and reducing cognitive bias in promotion and hiring."
+    },
+    {
+      "question": "24. DiversityDesigns, a graphic design agency, wants to attract candidates from non-traditional and self-taught backgrounds. Which of the following actions directly supports this goal in the 'Identifying HR Requirements' step?",
+      "options": [
+        "Publishing job ads only on LinkedIn and Naukri.",
+        "Requiring CISSP and CISM certifications for all applicants.",
+        "Using inclusive language, avoiding unnecessary jargon, and highlighting flexible working arrangements in job descriptions.",
+        "Limiting applications to candidates with formal degrees from recognized universities."
+      ],
+      "correctAnswer": "Using inclusive language, avoiding unnecessary jargon, and highlighting flexible working arrangements in job descriptions.",
+      "explanation": "Inclusive language and eliminating rigid jargon/degree barriers opens requirements to competent non-traditional talent."
+    },
+    {
+      "question": "25. A company adopted a __________ recruitment strategy, which involves removing names and other identifying information from resumes and applications, to minimize unconscious bias during candidate screening.",
+      "options": [
+        "Blind",
+        "Panel-based",
+        "Competency-based",
+        "Structured"
+      ],
+      "correctAnswer": "Blind",
+      "explanation": "Blind recruitment redacts personal demographic identifiers (name, gender, photo, age) to prevent unconscious bias during screening."
+    },
+    {
+      "question": "26. A company adopting the 'hire for attitude, train for skill' philosophy primarily focuses on evaluating candidates' technical expertise and domain knowledge rather than their alignment with company values.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "False",
+      "explanation": "'Hire for attitude, train for skill' explicitly prioritizes mindset, work ethic, and cultural value alignment over existing technical knowledge."
+    },
+    {
+      "question": "27. An organization is experiencing high time-to-hire and is unable to identify which sourcing channels deliver the best candidates. Which combination of technological tools would best address both challenges simultaneously?",
+      "options": [
+        "Using spreadsheets for manual tracking combined with periodic reviews by HR managers.",
+        "Increasing the number of job postings on paid portals and conducting monthly HR audits.",
+        "Deploying an Applicant Tracking System (ATS) integrated with job boards and a Candidate Relationship Management (CRM) tool.",
+        "Setting up an internal HR helpdesk and training managers in Excel-based reporting."
+      ],
+      "correctAnswer": "Deploying an Applicant Tracking System (ATS) integrated with job boards and a Candidate Relationship Management (CRM) tool.",
+      "explanation": "An integrated ATS and CRM automates candidate pipeline workflows, shortens cycle times, and attributes source efficacy."
+    },
+    {
+      "question": "28. An IT company facing a sudden spike in project demand needs to scale its workforce for 6 months without the long-term commitment of permanent hiring. At the same time, the HR team wants to evaluate the effectiveness of the current recruitment source before committing further. Which combination of strategies would be most appropriate?",
+      "options": [
+        "Use temporary employees as an alternative to recruiting and evaluate the source using yield ratios.",
+        "Opt for employee leasing and evaluate the source using surveys and studies.",
+        "Use subcontracting and evaluate the source using the recruitment process flowchart.",
+        "Use outsourcing as an alternative to recruiting and evaluate the source using time-lapse data."
+      ],
+      "correctAnswer": "Use temporary employees as an alternative to recruiting and evaluate the source using yield ratios.",
+      "explanation": "Temporary staffing fulfills short-term surge needs without permanent headcount commitments, and yield ratios measure applicant conversion per source."
+    },
+    {
+      "question": "29. LinkedIn's primary strategy for external hiring was to focus on active job seekers, candidates who were actively looking for new employment at the time of recruitment.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "False",
+      "explanation": "LinkedIn's breakthrough value proposition was targeting passive candidates—professionals not actively browsing job boards but open to opportunities."
+    },
+    {
+      "question": "30. Any company’s average time to hire software engineers was 60 days, which was above the industry average. What two interventions might that company implement to reduce this gap?",
+      "options": [
+        "Increasing recruiter headcount and conducting walk-in interviews.",
+        "Reducing the number of interview rounds and offering higher salaries.",
+        "Partnering with universities and deploying campus placement drives.",
+        "Implementing an AI-powered screening tool and a self-service interview scheduling system."
+      ],
+      "correctAnswer": "Implementing an AI-powered screening tool and a self-service interview scheduling system.",
+      "explanation": "AI-automated resume screening and self-service interview scheduling eliminate administrative bottlenecks and scheduling delays."
+    },
+    {
+      "question": "31. A candidate who answers 'Yes' to 'Would you like to work for this company?' but 'No' to 'Are you planning to apply for this company?' is classified at which stage of the Employer Brand Image Analysis framework?",
+      "options": [
+        "Awareness stage only.",
+        "Consideration stage — interested but not yet at Preference.",
+        "Preference stage — ready to apply.",
+        "Neither Awareness nor Consideration — they have no interest."
+      ],
+      "correctAnswer": "Consideration stage — interested but not yet at Preference.",
+      "explanation": "They are aware and interested (consideration), but have not yet converted into preference or active intent to apply."
+    },
+    {
+      "question": "32. As per the Employer Branding Value Propositions framework (Complain and Praises Analysis), which of the following correctly describes what 'Praises' data from employees of the 'Best Place to Work' category represents?",
+      "options": [
+        "The reasons why employees leave the organization.",
+        "The marginal cost of external hiring versus internal promotion.",
+        "The metrics are tracked in the Social Media Matrix for career page views.",
+        "The reasons why people come and stay in the organization."
+      ],
+      "correctAnswer": "The reasons why people come and stay in the organization.",
+      "explanation": "'Praises' from employees at benchmark employers reveal key drivers of attraction and employee retention."
+    },
+    {
+      "question": "33. The Internal Branding Matrix includes salary benchmarking and compensation revision as its primary tools for strengthening the employer brand among existing employees.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "False",
+      "explanation": "Internal branding emphasizes culture, shared values, communication, and employee engagement rather than mere transactional compensation changes."
+    },
+    {
+      "question": "34. Which of the following correctly distinguishes 'Surface Diversity' from 'Deep Diversity'?",
+      "options": [
+        "Surface diversity includes attitude and belief; deep diversity includes gender and religion.",
+        "Surface diversity is measured using the Employee Happiness Index; deep diversity is measured using the Employee Knowledge Sharing Index.",
+        "Surface diversity covers observable attributes such as gender, religion, city, and education; deep diversity covers non-observable attributes such as attitude, belief, values, and motivation.",
+        "Surface diversity refers to internal hires; deep diversity refers to external hires with different cultural backgrounds."
+      ],
+      "correctAnswer": "Surface diversity covers observable attributes such as gender, religion, city, and education; deep diversity covers non-observable attributes such as attitude, belief, values, and motivation.",
+      "explanation": "Surface diversity reflects observable demographic attributes, while deep diversity captures underlying cognitive, psychological, and motivational characteristics."
+    },
+    {
+      "question": "35. An HR analytics team wants to evaluate the quality of the recruitment process after candidates have joined. Which of the following post-hire metrics would most directly indicate whether the right people were recruited?",
+      "options": [
+        "Quality of hire and early attrition.",
+        "Rengage rate and application-to-job-offer ratio.",
+        "Number of applications received and cost per application.",
+        "Candidate experience score and job search intensity."
+      ],
+      "correctAnswer": "Quality of hire and early attrition.",
+      "explanation": "Quality of hire (performance appraisals, manager ratings) and early attrition rates directly reflect the accuracy and success of hiring decisions."
+    },
+    {
+      "question": "36. The effectiveness of a recruitment source is evaluated solely based on the number of relevant applications received, with no consideration of cost.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "False",
+      "explanation": "Recruitment source effectiveness evaluates cost per hire, conversion rates, and subsequent performance, not application volume in isolation."
+    },
+    {
+      "question": "37. In the Comprehensive End-to-End Recruitment and Selection Process, which of the following is listed as Best Practice for Developing the Pool?",
+      "options": [
+        "Looking only for external candidates to bring in fresh perspectives.",
+        "Relying on generic competency models to shortlist candidates quickly.",
+        "Developing a large pool that includes both internal and external candidates, and consulting employees.",
+        "Hiring only when a vacancy arises and indulging in irrational optimism about available talent."
+      ],
+      "correctAnswer": "Developing a large pool that includes both internal and external candidates, and consulting employees.",
+      "explanation": "Best practice involves combining internal mobility, external sourcing channels, and employee referral networks."
+    },
+    {
+      "question": "38. Which of the following correctly matches a Type of Interview with its definition?",
+      "options": [
+        "Situational Interview – The recruiter asks questions as they come to mind.",
+        "Structured Interview – The recruiter uses a predetermined set of questions that are clearly job-related.",
+        "Panel Interview – The recruiter presents a hypothetical incident and asks the candidate to respond.",
+        "Behavioural Interview – The focus is on actual work-related incidents, and the applicant is asked to reveal what he or she did in a given situation."
+      ],
+      "correctAnswer": "Behavioural Interview – The focus is on actual work-related incidents, and the applicant is asked to reveal what he or she did in a given situation.",
+      "explanation": "Behavioral interviews operate on the premise that past behavior predicts future performance, probing how candidates handled real past situations."
+    },
+    {
+      "question": "39. A company's HR team finds that: (i) new hires show high early attrition within six months of joining, (ii) interviewers consistently over-rate candidates who present confidently, regardless of technical fit, and (iii) the Audit and Review step is being skipped after each hiring cycle. Which combined approach would most comprehensively address all three issues?",
+      "options": [
+        "Replace all interview rounds with written aptitude tests alone to eliminate interviewer subjectivity.",
+        "Train interviewers to recognize the Halo Effect so that one impressive trait does not distort the overall rating; track early attrition as a post-hire quality signal to assess whether the right candidates were selected; and institutionalize the Audit and Review step to regularly examine and improve hiring practices.",
+        "Focus exclusively on expanding the application pool by including both internal and external candidates to improve the odds of finding the right hire.",
+        "Use only the medical examination and reference check stages to filter candidates before the final placement decision."
+      ],
+      "correctAnswer": "Train interviewers to recognize the Halo Effect so that one impressive trait does not distort the overall rating; track early attrition as a post-hire quality signal to assess whether the right candidates were selected; and institutionalize the Audit and Review step to regularly examine and improve hiring practices.",
+      "explanation": "Mitigating the halo effect ensures objective evaluations, tracking early attrition provides feedback on hiring quality, and audit/review institutionalizes continuous refinement."
+    },
+    {
+      "question": "40. __________ is the ability of a selection tool to measure an attribute consistently, such that repeated administration to the same individual yields approximately identical scores.",
+      "options": [
+        "Reliability",
+        "Validity",
+        "Standardisation",
+        "Suitability"
+      ],
+      "correctAnswer": "Reliability",
+      "explanation": "Reliability is the degree of measurement consistency and stability across repeated administrations."
+    },
+    {
+      "question": "41. What aspects does the 'Effectiveness of Selection Method' table assess?",
+      "options": [
+        "Resume quality",
+        "Communication skills",
+        "Person-job fit, performance rating, and cost",
+        "Training effectiveness"
+      ],
+      "correctAnswer": "Person-job fit, performance rating, and cost",
+      "explanation": "The 'Effectiveness of Selection Method' framework evaluates selection instruments across multidimensional criteria including person-job fit, resulting performance ratings, and associated costs."
+    },
+    {
+      "question": "42. Which metric in recruitment visualization is used to assess recruitment efficiency?",
+      "options": [
+        "Yield ratio",
+        "Absenteeism",
+        "Diversity index",
+        "Attrition rate"
+      ],
+      "correctAnswer": "Yield ratio",
+      "explanation": "The yield ratio indicates the percentage of candidates who pass from one stage of the recruitment funnel to the next, serving as a key indicator of recruitment efficiency."
+    },
+    {
+      "question": "43. Which recruitment source fulfilled the highest percentage of high-level role expectations?",
+      "options": [
+        "Consultants",
+        "Employee Referrals",
+        "Job Portal",
+        "Campus hiring"
+      ],
+      "correctAnswer": "Employee Referrals",
+      "explanation": "Employee referrals typically yield higher quality candidates with stronger cultural fit and higher fulfillment of role expectations, especially for high-level positions."
+    },
+    {
+      "question": "44. What is the ideal characteristic of an effective testing component in the selection process?",
+      "options": [
+        "Ease of administration",
+        "Low candidate drop rate",
+        "High salary correlation",
+        "Predictive of job performance"
+      ],
+      "correctAnswer": "Predictive of job performance",
+      "explanation": "The primary hallmark of an effective selection test or assessment is its predictive validity—its empirical ability to accurately forecast future on-the-job performance."
+    },
+    {
+      "question": "45. Which measure is used to evaluate how accurately selection analytics predict candidate performance?",
+      "options": [
+        "Number of selection rounds",
+        "Actual vs. predicted performance",
+        "Hiring manager's intuition",
+        "Duration of the interview"
+      ],
+      "correctAnswer": "Actual vs. predicted performance",
+      "explanation": "Evaluating predictive models in selection analytics requires comparing candidates' predicted scores/performance against their actual post-hire job performance."
+    },
+    {
+      "question": "46. Which factors are considered when determining the 'Cost per Joinee'?",
+      "options": [
+        "Hiring manager's rating",
+        "Interview duration",
+        "Total recruitment expenditure and number of joinees",
+        "Salary band only"
+      ],
+      "correctAnswer": "Total recruitment expenditure and number of joinees",
+      "explanation": "Cost per Joinee (or Cost per Hire) is calculated by dividing total recruitment costs (advertising, agency fees, recruiter time, etc.) by the total number of successful joinees."
+    },
+    {
+      "question": "47. In outcome-based selection analysis, which situation represents a 'false negative'?",
+      "options": [
+        "An unsuccessful candidate is hired",
+        "A successful candidate is not hired",
+        "An unsuccessful candidate is not hired",
+        "A successful candidate is hired"
+      ],
+      "correctAnswer": "A successful candidate is not hired",
+      "explanation": "In selection analytics, a false negative (Type II error) occurs when a candidate who would have been successful on the job is rejected (not hired)."
+    },
+    {
+      "question": "48. What may result from using an inappropriate cut score in the selection process?",
+      "options": [
+        "Higher salaries offered",
+        "Reduced cost per hire",
+        "Increased false positives or false negatives",
+        "Perfect employee performance"
+      ],
+      "correctAnswer": "Increased false positives or false negatives",
+      "explanation": "Setting an incorrect cutoff score distorts classification: an excessively high cut score increases false negatives (rejecting good candidates), while an excessively low cut score increases false positives (hiring unqualified candidates)."
+    },
+    {
+      "question": "49. In selection analytics, what does the term 'Fit Percentage' indicate?",
+      "options": [
+        "Degree of alignment among the job, team, supervisor, and organization",
+        "Resume match rate",
+        "Ratio of candidates to recruiters",
+        "Level of salary satisfaction"
+      ],
+      "correctAnswer": "Degree of alignment among the job, team, supervisor, and organization",
+      "explanation": "'Fit Percentage' measures holistic alignment across person-job, person-team, person-supervisor, and person-organization dimensions."
+    },
+    {
+      "question": "50. Which data set is most appropriate for identifying potential bias in the hiring process?",
+      "options": [
+        "Cost per joinee",
+        "Gender-wise hiring ratio",
+        "Average number of interview questions",
+        "Tenure by marital status"
+      ],
+      "correctAnswer": "Gender-wise hiring ratio",
+      "explanation": "Demographic breakdown ratios such as the gender-wise hiring ratio (and pass-through rates by demographic group) are used to detect adverse impact and systemic bias in hiring."
+    },
+    {
+      "question": "51. Which factor helps determine who should receive training first?",
+      "options": [
+        "Education level",
+        "Motivation to learn",
+        "Salary level",
+        "Age"
+      ],
+      "correctAnswer": "Motivation to learn",
+      "explanation": "Readiness for training depends heavily on employee motivation to learn, which predicts engagement, retention, and successful skill transfer."
+    },
+    {
+      "question": "52. What does skill inventory analysis compare?",
+      "options": [
+        "Budget vs. outcomes",
+        "Age vs. performance",
+        "Available vs. required skills",
+        "Training vs. education"
+      ],
+      "correctAnswer": "Available vs. required skills",
+      "explanation": "A skill inventory analysis compares existing (available) workforce competencies against required organizational skills to identify capability gaps."
+    },
+    {
+      "question": "53. Which phase focuses on measuring training outcomes?",
+      "options": [
+        "Assessment",
+        "Implementation",
+        "Alignment",
+        "Evaluation"
+      ],
+      "correctAnswer": "Evaluation",
+      "explanation": "The evaluation phase assesses the effectiveness, learning outcomes, and business impact of training programs."
+    },
+    {
+      "question": "54. What indicates training coverage within the organization?",
+      "options": [
+        "Training budget",
+        "Department size",
+        "Employee trained / Total number of employees",
+        "HR ratio"
+      ],
+      "correctAnswer": "Employee trained / Total number of employees",
+      "explanation": "Training coverage (or penetration rate) is calculated as the ratio of employees who underwent training to the total employee headcount."
+    },
+    {
+      "question": "55. What is the goal of training in contrast to development?",
+      "options": [
+        "Career enhancement",
+        "Current job preparation",
+        "Employee motivation",
+        "Strategic planning"
+      ],
+      "correctAnswer": "Current job preparation",
+      "explanation": "Training focuses on immediate competencies needed for current job performance, whereas development focuses on broader, future career growth."
+    },
+    {
+      "question": "56. What is the correct formula for absenteeism in training?",
+      "options": [
+        "Total training time / Absent employees",
+        "Employees present / Total employees",
+        "Number of employee absent / Total training participants",
+        "Employees trained / Absent employees"
+      ],
+      "correctAnswer": "Number of employee absent / Total training participants",
+      "explanation": "Absenteeism in training is computed as the number of absent participants divided by the total enrolled/nominated training participants."
+    },
+    {
+      "question": "57. What is considered in the importance dimension during task analysis?",
+      "options": [
+        "Age",
+        "Training length",
+        "Criticality of the task",
+        "Training method"
+      ],
+      "correctAnswer": "Criticality of the task",
+      "explanation": "In task analysis, the importance dimension evaluates how critical and essential the specific task is to overall organizational success."
+    },
+    {
+      "question": "58. Who typically initiates training programs?",
+      "options": [
+        "Management",
+        "Employees",
+        "External trainers",
+        "Government"
+      ],
+      "correctAnswer": "Management",
+      "explanation": "Training programs are typically commissioned and initiated by management to bridge strategic skill gaps and enhance productivity."
+    },
+    {
+      "question": "59. What does 'Cost per learning hour received' assess?",
+      "options": [
+        "Learning outcomes",
+        "Staff engagement",
+        "Cost efficiency",
+        "Department needs"
+      ],
+      "correctAnswer": "Cost efficiency",
+      "explanation": "'Cost per learning hour received' is a standard training metric assessing the cost efficiency of learning delivery across participant hours."
+    },
+    {
+      "question": "60. How is teamwork skill level assessed in inventory analysis?",
+      "options": [
+        "Hours of training received",
+        "Performance rating",
+        "Seniority",
+        "Department revenue"
+      ],
+      "correctAnswer": "Performance rating",
+      "explanation": "Soft skills and competencies like teamwork are evaluated in inventory analysis through supervisory and peer performance ratings."
+    },
+    {
+      "question": "61. Coaching is most effective when:",
+      "options": [
+        "Supervisors are uninvolved",
+        "There is an open relationship",
+        "Trainees are left alone",
+        "Feedback is avoided"
+      ],
+      "correctAnswer": "There is an open relationship",
+      "explanation": "Coaching relies on trust, transparent communication, and an open, supportive relationship between coach and coachee."
+    },
+    {
+      "question": "62. Understudy training involves:",
+      "options": [
+        "Lecturing to senior executives",
+        "Replacing peers without guidance",
+        "Acting as a temporary substitute for a manager",
+        "Random job hopping"
+      ],
+      "correctAnswer": "Acting as a temporary substitute for a manager",
+      "explanation": "An understudy is designated to learn a manager's job by assisting and temporarily taking over their responsibilities during their absence."
+    },
+    {
+      "question": "63. Which method provides exposure to diverse functions via advisory groups?",
+      "options": [
+        "Understudy",
+        "Job rotation",
+        "Multiple management",
+        "Case study"
+      ],
+      "correctAnswer": "Multiple management",
+      "explanation": "Multiple management (such as junior boards of directors) gives emerging managers exposure to high-level strategic problems and diverse organizational functions."
+    },
+    {
+      "question": "64. A suitable method for developing reasoning skills is:",
+      "options": [
+        "Role playing",
+        "Business games",
+        "Case study",
+        "Sensitivity training"
+      ],
+      "correctAnswer": "Case study",
+      "explanation": "Case study analysis requires trainees to diagnose complex real-world organizational problems, developing critical analytical and reasoning skills."
+    },
+    {
+      "question": "65. An executive gains cross-functional experience through:",
+      "options": [
+        "Job rotation",
+        "Role play",
+        "Coaching",
+        "Special readings"
+      ],
+      "correctAnswer": "Job rotation",
+      "explanation": "Job rotation systematically moves managers between different functional areas to develop broad cross-functional competence."
+    },
+    {
+      "question": "66. According to the research findings, traditional practices are shifting toward:",
+      "options": [
+        "Eliminating training",
+        "Fixed-role models",
+        "Participation-based development",
+        "Manager-exclusive development"
+      ],
+      "correctAnswer": "Participation-based development",
+      "explanation": "Modern corporate development models emphasize active participation, experiential learning, and collaborative leadership."
+    },
+    {
+      "question": "67. A suggested HR role in the future is to:",
+      "options": [
+        "Control salaries only",
+        "Isolate departments",
+        "Preserve and increase organizational knowledge",
+        "Promote top-down learning only"
+      ],
+      "correctAnswer": "Preserve and increase organizational knowledge",
+      "explanation": "Future HR roles focus on knowledge management—acting as strategic custodians to capture, preserve, and amplify organizational knowledge."
+    },
+    {
+      "question": "68. What is an important learning metric from training?",
+      "options": [
+        "Number of holidays taken",
+        "Attitude change",
+        "New dress code adoption",
+        "Marketing strategy redesign"
+      ],
+      "correctAnswer": "Attitude change",
+      "explanation": "Under Kirkpatrick's Level 2 (Learning), changes in attitude, knowledge, and mental models serve as essential learning metrics."
+    },
+    {
+      "question": "69. An employee’s reaction to training may include:",
+      "options": [
+        "Ignoring training content",
+        "Dismissing instructors",
+        "Satisfaction with course delivery",
+        "Refusing to participate in appraisals"
+      ],
+      "correctAnswer": "Satisfaction with course delivery",
+      "explanation": "Reaction evaluations (Kirkpatrick Level 1) measure participant satisfaction with the training design, facilitator, and delivery."
+    },
+    {
+      "question": "70. Training evaluation criteria do NOT include:",
+      "options": [
+        "Sales promotions",
+        "Learning",
+        "Employee reactions",
+        "Business results"
+      ],
+      "correctAnswer": "Sales promotions",
+      "explanation": "Kirkpatrick's four levels of training evaluation are Reaction, Learning, Behavior, and Results. Sales promotions are marketing activities, not training evaluation criteria."
+    },
+    {
+      "question": "71. What is visualized in the training effectiveness chart?",
+      "options": [
+        "Weather patterns",
+        "Departmental shifts",
+        "Subject-wise performance",
+        "Meal preferences"
+      ],
+      "correctAnswer": "Subject-wise performance",
+      "explanation": "Training effectiveness visualizations compare participant competency outcomes and test scores broken down across subject areas."
+    },
+    {
+      "question": "72. What financial metric is tracked department-wise in training data?",
+      "options": [
+        "Training Cost",
+        "Bonus expenditure",
+        "Rent allocation",
+        "Reimbursement rate"
+      ],
+      "correctAnswer": "Training Cost",
+      "explanation": "Department-wise training cost tracks resource utilization and training budget expenditure per department."
+    },
+    {
+      "question": "73. What duration metric is presented in the training visualization?",
+      "options": [
+        "Employee retention",
+        "Department-wise Training Duration",
+        "Vacation time",
+        "Resignation period"
+      ],
+      "correctAnswer": "Department-wise Training Duration",
+      "explanation": "Visual dashboards track training hours and session duration delivered across individual departments."
+    },
+    {
+      "question": "74. What character trait is listed in the benchmark skills table?",
+      "options": [
+        "Punctuality",
+        "Compassion and sensitivity",
+        "Typing speed",
+        "Accent clarity"
+      ],
+      "correctAnswer": "Compassion and sensitivity",
+      "explanation": "Benchmark managerial competencies highlight emotional intelligence traits such as compassion and interpersonal sensitivity."
+    },
+    {
+      "question": "75. Which is a component of development summary based on self and others’ input?",
+      "options": [
+        "Leave balance",
+        "Listens to others",
+        "Health insurance",
+        "Seating layout"
+      ],
+      "correctAnswer": "Listens to others",
+      "explanation": "360-degree development feedback summaries evaluate active listening competencies based on multisource ratings."
+    },
+    {
+      "question": "76. What is included in interpersonal relationship development?",
+      "options": [
+        "Conflict creation",
+        "Facilitates team success",
+        "Attendance reporting",
+        "Wage compliance"
+      ],
+      "correctAnswer": "Facilitates team success",
+      "explanation": "Interpersonal skill development emphasizes collaboration, trust building, and facilitating collective team achievement."
+    },
+    {
+      "question": "77. Which activity is part of internal development programs?",
+      "options": [
+        "External consulting",
+        "Job rotation",
+        "Legal compliance",
+        "Budget proposal writing"
+      ],
+      "correctAnswer": "Job rotation",
+      "explanation": "Job rotation is a primary internal development method for expanding experiential breadth within the firm."
+    },
+    {
+      "question": "78. What method in job experiences matrix involves decision-making under stress?",
+      "options": [
+        "Group exercise",
+        "Adverse business conditions",
+        "Annual party planning",
+        "Time logging"
+      ],
+      "correctAnswer": "Adverse business conditions",
+      "explanation": "Experiencing adverse business conditions challenges leaders to make high-stakes decisions under genuine organizational stress."
+    },
+    {
+      "question": "79. What does 'Making Transitions' in the job experience matrix signify?",
+      "options": [
+        "Time zone shift",
+        "Unfamiliar responsibilities",
+        "Changing passwords",
+        "Location mapping"
+      ],
+      "correctAnswer": "Unfamiliar responsibilities",
+      "explanation": "Transition experiences involve stepping into unfamiliar roles, managing different functional scopes, or leading new initiatives."
+    },
+    {
+      "question": "80. What element supports the development of a culture?",
+      "options": [
+        "Leave policy",
+        "Feedback mechanism",
+        "Snack availability",
+        "Commute distance"
+      ],
+      "correctAnswer": "Feedback mechanism",
+      "explanation": "Robust feedback mechanisms foster psychological safety, transparency, continuous learning, and healthy organizational culture."
+    },
+    {
+      "question": "81. Performance appraisal is primarily concerned with:",
+      "options": [
+        "Monitoring organizational finance activities",
+        "Expanding external customer relationships",
+        "Evaluating employee work behavior and potential",
+        "Managing technological infrastructure systems"
+      ],
+      "correctAnswer": "Evaluating employee work behavior and potential",
+      "explanation": "Performance appraisal systematically evaluates an employee's job performance, work behaviors, and future potential against established criteria."
+    },
+    {
+      "question": "82. Performance management differs from performance appraisal because it:",
+      "options": [
+        "focuses only on salary revisions",
+        "emphasizes only annual reporting systems",
+        "excludes employee development processes",
+        "includes evaluation, improvement, and rewards"
+      ],
+      "correctAnswer": "includes evaluation, improvement, and rewards",
+      "explanation": "Performance appraisal is a periodic evaluation event, whereas performance management is an ongoing, continuous process integrating goal setting, evaluation, development, and reward systems."
+    },
+    {
+      "question": "83. After measuring actual performance, organizations compare results with ________.",
+      "options": [
+        "compensation plans",
+        "standards",
+        "labor unions",
+        "inventories"
+      ],
+      "correctAnswer": "standards",
+      "explanation": "The performance evaluation cycle involves setting standards, measuring actual performance, and comparing actual performance against those predetermined standards."
+    },
+    {
+      "question": "84. Which method belongs to multiple-person evaluation methods?",
+      "options": [
+        "Essay evaluation",
+        "Paired comparison",
+        "Critical incidents",
+        "Checklist method"
+      ],
+      "correctAnswer": "Paired comparison",
+      "explanation": "Paired comparison is a relative, multiple-person evaluation technique where each employee's performance is compared directly against every other peer in the group."
+    },
+    {
+      "question": "85. Which performance appraisal method uses specific, observable behavioural examples as anchors to define different levels of employee performance?",
+      "options": [
+        "KRA",
+        "BARS",
+        "MBO",
+        "HRA"
+      ],
+      "correctAnswer": "BARS",
+      "explanation": "Behaviorally Anchored Rating Scales (BARS) combine qualitative critical incidents with quantitative ratings by using specific behavioral examples as numerical anchors."
+    },
+    {
+      "question": "86. 360-degree appraisal mainly provides:",
+      "options": [
+        "confidential anonymous feedback",
+        "annual tax computation records",
+        "product development estimates",
+        "inventory utilization statistics"
+      ],
+      "correctAnswer": "confidential anonymous feedback",
+      "explanation": "360-degree appraisal gathers multisource feedback from peers, subordinates, supervisors, and internal customers, typically anonymized to ensure candid input."
+    },
+    {
+      "question": "87. If innovation is a company’s strategic objective, performance standards should include metrics related to:",
+      "options": [
+        "administrative hierarchy",
+        "employee attendance frequency",
+        "new ideas and implemented projects",
+        "warehouse inventory movement"
+      ],
+      "correctAnswer": "new ideas and implemented projects",
+      "explanation": "Performance metrics should align directly with strategic priorities; for an innovation-led strategy, metrics measure idea generation, patent filings, and successful project rollouts."
+    },
+    {
+      "question": "88. InnovateTech included participation in cross-functional ________ as part of performance standards.",
+      "options": [
+        "outsourcing",
+        "auditing",
+        "training",
+        "marketing"
+      ],
+      "correctAnswer": "training",
+      "explanation": "Cross-functional training participation enhances organizational versatility and collaborative problem-solving, making it a key performance standard criterion."
+    },
+    {
+      "question": "89. Quantitative criteria include measurable factors such as sales figures and project completion ________.",
+      "options": [
+        "behaviors",
+        "policies",
+        "attitudes",
+        "times"
+      ],
+      "correctAnswer": "times",
+      "explanation": "Project completion time (duration/deadlines) and sales figures are objective, quantifiable performance metrics, unlike subjective traits or attitudes."
+    },
+    {
+      "question": "90. Intentional performance rating distortion refers to:",
+      "options": [
+        "deliberate manipulation of ratings",
+        "accidental system calculation errors",
+        "technological communication failures",
+        "legal auditing inconsistencies"
+      ],
+      "correctAnswer": "deliberate manipulation of ratings",
+      "explanation": "Intentional rating distortion occurs when raters consciously inflate or deflate employee ratings for political reasons, impression management, or avoiding conflict."
+    },
+    {
+      "question": "91. In the balanced score approach, return on equity is classified as a:",
+      "options": [
+        "behavioral indicator",
+        "lag indicator",
+        "recruitment indicator",
+        "training indicator"
+      ],
+      "correctAnswer": "lag indicator",
+      "explanation": "Return on equity (ROE) is a financial output metric reflecting past activities and historical performance, making it a classic lag indicator in the Balanced Scorecard framework."
+    },
+    {
+      "question": "92. The 9 Box Matrix evaluates potential rating and:",
+      "options": [
+        "compensation ratio",
+        "training frequency",
+        "attendance score",
+        "performance rating"
+      ],
+      "correctAnswer": "performance rating",
+      "explanation": "The 9-Box Grid is a classic talent management tool that plots employee current performance rating on one axis against future potential rating on the other."
+    },
+    {
+      "question": "93. State True and False On-time delivery was identified as a lead indicator for customers.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "True",
+      "explanation": "On-time delivery drives subsequent customer satisfaction and repeat business, serving as a leading indicator of customer loyalty and retention."
+    },
+    {
+      "question": "94. Product defect rate and unit product cost were categorized under:",
+      "options": [
+        "internal business processes",
+        "external customer relations",
+        "workforce engagement",
+        "strategic compensation planning"
+      ],
+      "correctAnswer": "internal business processes",
+      "explanation": "In the Balanced Scorecard, manufacturing quality (defect rate) and cost efficiency belong to the Internal Business Process perspective."
+    },
+    {
+      "question": "95. Motivation, ability, and opportunity are analyzed in order to identify:",
+      "options": [
+        "compensation structures",
+        "causes of underperformance",
+        "recruitment procedures",
+        "leadership succession plans"
+      ],
+      "correctAnswer": "causes of underperformance",
+      "explanation": "The AMO (Ability, Motivation, Opportunity) model is used to diagnose root causes of individual employee performance issues or underperformance."
+    },
+    {
+      "question": "96. Variable pay includes bonuses, incentives, and stock ________.",
+      "options": [
+        "exchange",
+        "allocation",
+        "option",
+        "planning"
+      ],
+      "correctAnswer": "option",
+      "explanation": "Variable compensation comprises performance bonuses, commissions, profit sharing, and equity-based long-term incentives like stock options."
+    },
+    {
+      "question": "97. Which of the following is classified as a non-financial reward?",
+      "options": [
+        "retirement pension",
+        "family picnic",
+        "performance bonus",
+        "stock option"
+      ],
+      "correctAnswer": "family picnic",
+      "explanation": "Social events, recognition certificates, and company picnics provide relational and symbolic value, classifying them as non-financial rewards."
+    },
+    {
+      "question": "98. Skills Gap Analysis identifies differences between current workforce skills and:",
+      "options": [
+        "transportation requirements",
+        "inventory classifications",
+        "future organizational needs",
+        "taxation regulations"
+      ],
+      "correctAnswer": "future organizational needs",
+      "explanation": "Skills gap analysis benchmarks existing workforce capabilities against projected future skills demanded by the organization's strategic goals."
+    },
+    {
+      "question": "99. DEI stands for Diversity, Equity, and:",
+      "options": [
+        "Integrity",
+        "Investment",
+        "Innovation",
+        "Inclusion"
+      ],
+      "correctAnswer": "Inclusion",
+      "explanation": "DEI stands for Diversity, Equity, and Inclusion in modern human resources and organizational development."
+    },
+    {
+      "question": "100. Compensation philosophy mainly defines the organization’s:",
+      "options": [
+        "transportation infrastructure",
+        "employee value proposition",
+        "taxation reporting mechanism",
+        "warehouse planning strategy"
+      ],
+      "correctAnswer": "employee value proposition",
+      "explanation": "An organization's compensation philosophy articulates its strategy for attracting, motivating, and retaining talent through its core Employee Value Proposition (EVP)."
+    },
+    {
+      "question": "101. Pay mix policies included analysis of base wage, benefits, and:",
+      "options": [
+        "transportation allowance",
+        "long-term incentives",
+        "taxation credits",
+        "inventory rewards"
+      ],
+      "correctAnswer": "long-term incentives",
+      "explanation": "A complete total rewards pay mix encompasses base pay, short- and long-term incentives, and employee benefits."
+    },
+    {
+      "question": "102. State true and false Job evaluation points are linked with compensation and benefits amounts.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "True",
+      "explanation": "Job evaluation points establish relative internal job worth, which directly determines salary grades and compensation bands."
+    },
+    {
+      "question": "103. Compensation matrices primarily help organizations align compensation with:",
+      "options": [
+        "job worth and evaluation points",
+        "warehouse efficiency",
+        "taxation compliance",
+        "transportation scheduling"
+      ],
+      "correctAnswer": "job worth and evaluation points",
+      "explanation": "Compensation matrices align pay ranges and merit increase distributions with evaluated job worth and performance levels."
+    },
+    {
+      "question": "104. Impact of pay increase on employees compared old employees with:",
+      "options": [
+        "contractual workers",
+        "consultants",
+        "new employees",
+        "interns"
+      ],
+      "correctAnswer": "new employees",
+      "explanation": "Pay increase impact analyses examine internal equity and salary compression by comparing tenured (old) employees with newly hired employees."
+    },
+    {
+      "question": "105. Quartile-wise salary analysis is mainly used for identifying:",
+      "options": [
+        "supply chain gaps",
+        "pay-gap patterns",
+        "transportation inefficiencies",
+        "inventory shortages"
+      ],
+      "correctAnswer": "pay-gap patterns",
+      "explanation": "Quartile-wise distribution analysis identifies internal wage discrepancies, demographic pay gaps, and salary compression."
+    },
+    {
+      "question": "106. Employee benefit analysis included retirement plans and:",
+      "options": [
+        "transportation insurance",
+        "taxation assistance",
+        "warehouse maintenance",
+        "wellness programs"
+      ],
+      "correctAnswer": "wellness programs",
+      "explanation": "Comprehensive benefits packages typically pair traditional retirement plans with health and employee wellness programs."
+    },
+    {
+      "question": "107. Work attendance was one qualifying criterion for ________ incentive plans.",
+      "options": [
+        "departmental",
+        "individual",
+        "regional",
+        "operational"
+      ],
+      "correctAnswer": "individual",
+      "explanation": "Individual incentive plans frequently require meeting baseline attendance and punctuality thresholds before bonuses are paid."
+    },
+    {
+      "question": "108. Companywide incentive plans may be linked to operational efficiency and:",
+      "options": [
+        "transportation expenses",
+        "office maintenance",
+        "employee stock earnings",
+        "inventory movement"
+      ],
+      "correctAnswer": "employee stock earnings",
+      "explanation": "Enterprise-wide incentive schemes (such as profit-sharing and ESOPs) align employee rewards with overall company operational efficiency and stock performance."
+    },
+    {
+      "question": "109. Compa Ratio is calculated using employee pay rate and:",
+      "options": [
+        "pay range midpoint",
+        "annual tax rate",
+        "transportation allowance",
+        "inventory value"
+      ],
+      "correctAnswer": "pay range midpoint",
+      "explanation": "Compa-Ratio is calculated as (Actual Salary / Pay Range Midpoint), measuring where an employee sits relative to market reference pay."
+    },
+    {
+      "question": "110. Hiring management trainees was suggested to build a talent ________.",
+      "options": [
+        "network",
+        "matrix",
+        "pipeline",
+        "database"
+      ],
+      "correctAnswer": "pipeline",
+      "explanation": "Management trainee programs systematically develop entry-level high-potential candidates to build a steady talent pipeline for future leadership roles."
+    },
+    {
+      "question": "111. Which statement best explains the role of Tableau in HR Analytics?",
+      "options": [
+        "It primarily stores employee records",
+        "It converts data into visual analytical insights",
+        "It primarily manages employee communication",
+        "It primarily develops organizational websites"
+      ],
+      "correctAnswer": "It converts data into visual analytical insights",
+      "explanation": "Tableau is a leading data visualization tool that transforms raw HR datasets into intuitive dashboards and visual insights."
+    },
+    {
+      "question": "112. True OR False Tableau can work with information obtained from different types of data sources.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "True",
+      "explanation": "Tableau natively connects to a wide variety of data sources including spreadsheets, relational SQL databases, cloud warehouses, and flat files."
+    },
+    {
+      "question": "113. Which visualization would be most suitable for comparing values across different departments?",
+      "options": [
+        "Scatter Plot",
+        "Text Document",
+        "Bar Chart",
+        "Data Table"
+      ],
+      "correctAnswer": "Bar Chart",
+      "explanation": "Bar charts are optimal for comparing discrete numerical metrics across categorical groups such as departments."
+    },
+    {
+      "question": "114. The calculation of an average joining delay across employees is an example of:",
+      "options": [
+        "Data connection",
+        "Data aggregation",
+        "Data extraction",
+        "Data formatting"
+      ],
+      "correctAnswer": "Data aggregation",
+      "explanation": "Calculating summary statistics like averages, totals, and counts across individual records is called data aggregation."
+    },
+    {
+      "question": "115. Which feature makes Tableau particularly useful for exploring complex datasets?",
+      "options": [
+        "Fixed reporting structure",
+        "Manual data entry process",
+        "Static document preparation",
+        "Interactive visual exploration"
+      ],
+      "correctAnswer": "Interactive visual exploration",
+      "explanation": "Tableau provides interactive visual exploration, enabling users to filter, slice, drill down, and discover insights in complex datasets."
+    },
+    {
+      "question": "116. Which situation represents multidimensional analysis?",
+      "options": [
+        "Examining one variable in isolation",
+        "Viewing one employee record at a time",
+        "Comparing data across several dimensions",
+        "Studying information in a single fixed view"
+      ],
+      "correctAnswer": "Comparing data across several dimensions",
+      "explanation": "Multidimensional analysis involves evaluating metrics across multiple attributes simultaneously, such as department, job band, gender, and performance level."
+    },
+    {
+      "question": "117. A worksheet in Tableau is best understood as:",
+      "options": [
+        "A collection of connected data sources",
+        "An individual analytical view of data",
+        "A collection of multiple dashboards",
+        "A storage system for employee records"
+      ],
+      "correctAnswer": "An individual analytical view of data",
+      "explanation": "In Tableau, a worksheet contains a single chart or data view, which can subsequently be assembled with other views into dashboards."
+    },
+    {
+      "question": "118. What is the primary benefit of presenting aggregated HR data visually?",
+      "options": [
+        "It increases the number of employee records",
+        "It eliminates the need for source data",
+        "It makes patterns and comparisons easier to interpret",
+        "It prevents users from exploring the underlying data"
+      ],
+      "correctAnswer": "It makes patterns and comparisons easier to interpret",
+      "explanation": "Visual charts facilitate rapid pattern recognition, comparative analysis, and trend identification compared to raw numbers."
+    },
+    {
+      "question": "119. What is the main purpose of creating a calculated field in Tableau?",
+      "options": [
+        "To create a new variable using existing information",
+        "To delete existing variables from the dataset",
+        "To replace the original data source completely",
+        "To convert every variable into a graphical format"
+      ],
+      "correctAnswer": "To create a new variable using existing information",
+      "explanation": "A calculated field allows users to generate new variables and customized metrics by applying mathematical or logical formulas to existing data."
+    },
+    {
+      "question": "120. Which Tableau function is appropriate for finding the difference between two dates?",
+      "options": [
+        "DATEADD",
+        "DATENAME",
+        "DATEPART",
+        "DATEDIFF"
+      ],
+      "correctAnswer": "DATEDIFF",
+      "explanation": "The DATEDIFF function calculates the difference between two date fields in terms of specified units such as days, months, or years."
+    }
+  ]
+}

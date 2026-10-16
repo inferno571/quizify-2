@@ -58,7 +58,8 @@ RULES:
 4. Provide a clear, educational explanation for each answer.
 5. Questions should cover different topics from across the study material.
 6. Make distractors (wrong options) plausible but clearly incorrect upon careful analysis.
-7. Generate a descriptive title for the quiz based on the study material's subject.`, numQuestions, difficultyDesc)
+7. Generate a descriptive title for the quiz based on the study material's subject.
+8. For any mathematical formulas, equations, variables, Greek symbols (e.g. \mu, \sigma, \phi, \theta, \beta, \epsilon, \lambda, \rho), superscripts/subscripts, fractions, or distributions (e.g. \mathcal{N}), ALWAYS format them using proper LaTeX syntax enclosed in dollar signs ($...$ for inline math or $$...$$ for display equations) so they render with LaTeX math fonts properly formatted.`, numQuestions, difficultyDesc)
 
 	if req.Instructions != "" {
 		prompt += fmt.Sprintf("\n\nADDITIONAL USER INSTRUCTIONS:\n%s", req.Instructions)

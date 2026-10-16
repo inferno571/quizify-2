@@ -9,11 +9,13 @@ import {
   getAttempts, 
   syncDiskQuizzes, 
   saveQuizPermanent, 
-  deleteQuizPermanent 
+  deleteQuizPermanent,
+  getAllSavedProgress,
+  clearQuizProgress
 } from '../../../lib/storage';
 import { parseQuizJson, parseQuizFromText } from '../../../lib/localParser';
 import { DEFAULT_QUIZZES } from '../../../lib/defaultQuizzes';
-import { Quiz, QuizAttempt } from '../../../lib/types';
+import { Quiz, QuizAttempt, SavedQuizProgress } from '../../../lib/types';
 import { QuizMode } from '../../../components/LandingScreen';
 
 function inferSubject(name: string): string {
@@ -33,6 +35,7 @@ export default function DashboardContent() {
 
   const [quizzes, setQuizzes] = useState<Quiz[]>(DEFAULT_QUIZZES);
   const [attempts, setAttempts] = useState<Record<string, QuizAttempt>>({});
+  const [savedProgress, setSavedProgress] = useState<Record<string, SavedQuizProgress>>({});
   const [isUploading, setIsUploading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [successMsg, setSuccessMsg] = useState<string | null>(null);
@@ -41,6 +44,7 @@ export default function DashboardContent() {
     // 1. Initial quick load from localStorage / defaultQuizzes
     setQuizzes(getQuizzes());
     setAttempts(getAttempts());
+    setSavedProgress(getAllSavedProgress());
 
     // 2. Sync from local disk permanently
     syncDiskQuizzes().then((synced) => {
@@ -48,6 +52,18 @@ export default function DashboardContent() {
         setQuizzes(synced);
       }
     });
+
+    // 3. Keep in-progress sessions fresh when switching back
+    const handleRefresh = () => {
+      setSavedProgress(getAllSavedProgress());
+      setAttempts(getAttempts());
+    };
+    window.addEventListener('focus', handleRefresh);
+    window.addEventListener('storage', handleRefresh);
+    return () => {
+      window.removeEventListener('focus', handleRefresh);
+      window.removeEventListener('storage', handleRefresh);
+    };
   }, []);
 
   const handleUpload = async (files: File[], instructions?: string) => {
@@ -170,6 +186,11 @@ export default function DashboardContent() {
     router.push('/');
   };
 
+  const handleClearProgress = (quizId: string) => {
+    clearQuizProgress(quizId);
+    setSavedProgress(getAllSavedProgress());
+  };
+
   return (
     <>
       {error && (
@@ -189,6 +210,8 @@ export default function DashboardContent() {
       <DashboardScreen 
         quizzes={quizzes} 
         attempts={attempts} 
+        savedProgress={savedProgress}
+        onClearProgress={handleClearProgress}
         isLoading={isUploading} 
         onUpload={handleUpload} 
         onGenerateFromMaterial={handleGenerateFromMaterial}

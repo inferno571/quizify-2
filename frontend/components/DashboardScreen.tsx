@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { Quiz, QuizAttempt } from '../lib/types';
+import { Quiz, QuizAttempt, SavedQuizProgress } from '../lib/types';
 import { 
   FileText, 
   Loader2, 
@@ -16,7 +16,12 @@ import {
   BookOpen,
   Folder,
   Layers,
-  GraduationCap
+  GraduationCap,
+  Pause,
+  Play,
+  RotateCcw,
+  Bookmark,
+  Users
 } from 'lucide-react';
 import { QuizMode } from './LandingScreen';
 import { ImportQuizModal } from './ImportQuizModal';
@@ -24,6 +29,8 @@ import { ImportQuizModal } from './ImportQuizModal';
 interface DashboardScreenProps {
   quizzes: Quiz[];
   attempts: Record<string, QuizAttempt>;
+  savedProgress?: Record<string, SavedQuizProgress>;
+  onClearProgress?: (quizId: string) => void;
   onUpload: (files: File[], instructions?: string) => void;
   onGenerateFromMaterial: (files: File[], numQuestions: number, difficulty: string, instructions?: string) => void;
   isLoading: boolean;
@@ -38,6 +45,8 @@ interface DashboardScreenProps {
 export function DashboardScreen({ 
   quizzes, 
   attempts, 
+  savedProgress,
+  onClearProgress,
   onUpload, 
   onGenerateFromMaterial, 
   isLoading, 
@@ -515,8 +524,24 @@ export function DashboardScreen({
         ) : (
           <div className="space-y-10">
             {subjectsToDisplay.map((subjectName) => {
-              const subjectQuizzes = quizzes.filter(q => (q.subject || "General") === subjectName);
-              if (subjectQuizzes.length === 0) return null;
+              const rawQuizzes = quizzes.filter(q => (q.subject || "General") === subjectName);
+              if (rawQuizzes.length === 0) return null;
+
+              const combinedQuizzes = rawQuizzes.filter(q => q.id.includes("combined") || q.title.toLowerCase().includes("combined"));
+              const regularQuizzes = rawQuizzes.filter(q => !q.id.includes("combined") && !q.title.toLowerCase().includes("combined"));
+
+              // Sort regular quizzes by assignment/week number (Pending & Incorrect review quizzes sit after regular weeks)
+              const getNum = (str: string) => {
+                if (str.toLowerCase().includes("pending")) return 999;
+                if (str.toLowerCase().includes("incorrect")) return 1000;
+                const m = str.match(/(\d+)/);
+                return m ? parseInt(m[1], 10) : 0;
+              };
+              regularQuizzes.sort((a, b) => getNum(a.title) - getNum(b.title));
+
+
+              const subjectQuizzes = [...combinedQuizzes, ...regularQuizzes];
+              const primaryCombined = combinedQuizzes[0];
 
               const completedCount = subjectQuizzes.filter(q => !!attempts[q.id]).length;
               const colors = getSubjectColor(subjectName);
@@ -535,7 +560,7 @@ export function DashboardScreen({
                           {subjectName}
                         </h3>
                         <p className="text-xs text-gray-500">
-                          {subjectQuizzes.length} {subjectQuizzes.length === 1 ? 'assignment' : 'assignments'} available
+                          {subjectQuizzes.length} {subjectQuizzes.length === 1 ? 'assignment/test' : 'assignments & tests'} available
                         </p>
                       </div>
                     </div>
@@ -546,6 +571,127 @@ export function DashboardScreen({
                       </span>
                     </div>
                   </div>
+
+                  {/* Featured Hero Banner for Full Combined Grand Test if available */}
+                  {primaryCombined && (() => {
+                    const primaryCombinedProgress = savedProgress ? savedProgress[primaryCombined.id] : null;
+
+                    return (
+                    <div className="m-4 p-4 rounded-xl bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 text-white shadow-md border border-indigo-500/30 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                      <div className="flex items-start sm:items-center gap-3.5">
+                        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center text-white shadow-lg shrink-0">
+                          <Sparkles className="w-6 h-6" />
+                        </div>
+                        <div>
+                          <div className="flex items-center gap-2 mb-1 flex-wrap">
+                            <span className="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded bg-amber-400/20 text-amber-300 border border-amber-400/30 flex items-center gap-1">
+                              <Sparkles className="w-3 h-3" /> Full Combined Grand Test
+                            </span>
+                            <span className="text-xs text-indigo-200">
+                              {primaryCombined.questions.length} Total Questions • All {regularQuizzes.length} Assignments Combined
+                            </span>
+                          </div>
+                          <h4 className="text-base font-bold text-white tracking-wide">
+                            {primaryCombined.title}
+                          </h4>
+                          <p className="text-xs text-gray-300">
+                            Complete full-length examination covering the entire subject syllabus.
+                          </p>
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-2.5 shrink-0 flex-wrap">
+                        {primaryCombinedProgress ? (
+                          <div className="flex items-center gap-2">
+                            <div className="text-right mr-2 hidden sm:block">
+                              <div className="text-xs text-amber-300 font-bold flex items-center gap-1 justify-end">
+                                <Pause className="w-3.5 h-3.5 text-amber-400 animate-pulse" /> Paused: Q{primaryCombinedProgress.currentPos + 1}/{primaryCombined.questions.length}
+                              </div>
+                              <div className="text-[10px] text-gray-300">
+                                {Object.keys(primaryCombinedProgress.answers).length} answered
+                              </div>
+                            </div>
+                            <button
+                              onClick={() => onTakeQuiz(primaryCombined.id)}
+                              className="px-4 py-2.5 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-white font-black text-xs rounded-lg shadow-md transition cursor-pointer flex items-center gap-1.5 uppercase tracking-wider"
+                            >
+                              <Play className="w-3.5 h-3.5 fill-white" />
+                              Resume Full Test (Q{primaryCombinedProgress.currentPos + 1})
+                            </button>
+                            {attempts[primaryCombined.id] && (
+                              <button
+                                onClick={() => onViewResults(primaryCombined.id)}
+                                className="px-3.5 py-2 bg-[#f39c12] hover:bg-[#d68910] text-white font-bold text-xs rounded transition cursor-pointer shadow-xs"
+                              >
+                                Results
+                              </button>
+                            )}
+                            {onClearProgress && (
+                              <button
+                                onClick={() => {
+                                  if (confirm(`Restart "${primaryCombined.title}" from Question 1? Current saved progress will be discarded.`)) {
+                                    onClearProgress(primaryCombined.id);
+                                  }
+                                }}
+                                title="Discard saved in-progress session and restart fresh"
+                                className="p-2 bg-white/10 hover:bg-white/20 text-gray-300 hover:text-red-300 rounded-lg text-xs font-semibold border border-white/20 transition cursor-pointer"
+                              >
+                                <RotateCcw className="w-3.5 h-3.5" />
+                              </button>
+                            )}
+                          </div>
+                        ) : attempts[primaryCombined.id] ? (
+                          <div className="flex items-center gap-2">
+                            <div className="text-right mr-2 hidden sm:block">
+                              {attempts[primaryCombined.id].isTwoPlayer ? (
+                                <>
+                                  <div className="text-xs font-bold flex items-center gap-1 justify-end text-purple-300">
+                                    <Users className="w-3.5 h-3.5 text-purple-400" />
+                                    <span>{attempts[primaryCombined.id].player1Name || 'P1'}: {attempts[primaryCombined.id].player1Score ?? attempts[primaryCombined.id].score}</span>
+                                    <span className="text-gray-400">•</span>
+                                    <span>{attempts[primaryCombined.id].player2Name || 'P2'}: {attempts[primaryCombined.id].player2Score ?? 0}</span>
+                                  </div>
+                                  <div className="text-[10px] text-gray-400">
+                                    2-Player Co-op / Versus
+                                  </div>
+                                </>
+                              ) : (
+                                <>
+                                  <div className="text-xs text-emerald-400 font-bold flex items-center gap-1 justify-end">
+                                    <CheckCircle className="w-3.5 h-3.5" /> Score: {attempts[primaryCombined.id].score}/{primaryCombined.questions.length}
+                                  </div>
+                                  <div className="text-[10px] text-gray-400">
+                                    {Math.round((attempts[primaryCombined.id].score / primaryCombined.questions.length) * 100)}% Accuracy
+                                  </div>
+                                </>
+                              )}
+                            </div>
+
+                            <button
+                              onClick={() => onViewResults(primaryCombined.id)}
+                              className="px-3.5 py-2 bg-[#f39c12] hover:bg-[#d68910] text-white font-bold text-xs rounded transition cursor-pointer shadow-xs"
+                            >
+                              Results
+                            </button>
+                            <button
+                              onClick={() => onTakeQuiz(primaryCombined.id)}
+                              className="px-3.5 py-2 bg-white/10 hover:bg-white/20 text-white font-bold text-xs rounded border border-white/20 transition cursor-pointer"
+                            >
+                              Retake Full Test
+                            </button>
+                          </div>
+                        ) : (
+                          <button
+                            onClick={() => onTakeQuiz(primaryCombined.id)}
+                            className="px-4 py-2.5 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 font-black text-xs rounded-lg shadow-md hover:shadow-orange-500/20 transition-all flex items-center gap-2 cursor-pointer uppercase tracking-wider"
+                          >
+                            <Sparkles className="w-4 h-4 fill-slate-950" />
+                            Attempt Full Combined Test
+                          </button>
+                        )}
+                      </div>
+                    </div>
+                    );
+                  })()}
 
                   {/* Quizzes Table for this Subject */}
                   <div className="overflow-x-auto">
@@ -564,25 +710,79 @@ export function DashboardScreen({
                         {subjectQuizzes.map((quiz, index) => {
                           const hasAttempt = !!attempts[quiz.id];
                           const attemptInfo = attempts[quiz.id];
+                          const inProgress = savedProgress ? savedProgress[quiz.id] : null;
+                          const isCombined = quiz.id.includes("combined") || quiz.title.toLowerCase().includes("combined");
+                          const isPendingTest = quiz.id === "genai-pending" || quiz.title.toLowerCase() === "pending";
 
                           return (
-                            <tr key={quiz.id} className="hover:bg-blue-50/40 transition">
+                            <tr key={quiz.id} className={`transition ${
+                              isCombined 
+                                ? "bg-amber-50/50 hover:bg-amber-100/60 border-l-4 border-l-amber-500 font-medium" 
+                                : isPendingTest
+                                ? "bg-orange-50/50 hover:bg-orange-100/60 border-l-4 border-l-orange-500 font-medium"
+                                : inProgress
+                                ? "bg-emerald-50/30 hover:bg-emerald-50/50"
+                                : "hover:bg-blue-50/40"
+                            }`}>
                               <td className="p-3 text-center text-gray-500 text-xs font-medium">{index + 1}</td>
                               <td className="p-3 font-medium text-[#2980b9]">
-                                <div className="flex items-center gap-2">
+                                <div className="flex items-center gap-2 flex-wrap">
                                   <span>{quiz.title}</span>
+                                  {isCombined && (
+                                    <span className="bg-gradient-to-r from-amber-500 to-orange-500 text-white text-[9px] font-black px-1.5 py-0.2 rounded shadow-xs uppercase tracking-wider flex items-center gap-0.5">
+                                      <Sparkles className="w-2.5 h-2.5" /> Full Combined
+                                    </span>
+                                  )}
+                                  {isPendingTest && (
+                                    <span className="bg-gradient-to-r from-orange-500 to-amber-500 text-white text-[9px] font-black px-2 py-0.5 rounded shadow-xs uppercase tracking-wider flex items-center gap-1">
+                                      <Clock className="w-2.5 h-2.5" /> 71 Questions Pending
+                                    </span>
+                                  )}
                                 </div>
                               </td>
                               <td className="p-3 text-center text-xs text-gray-500">{quiz.date}</td>
                               <td className="p-3 text-center font-semibold text-xs">{quiz.questions.length}</td>
                               <td className="p-3 text-center">
-                                {hasAttempt ? (
-                                  <span className="inline-flex items-center gap-1 text-[#27ae60] font-semibold text-xs">
-                                    <CheckCircle className="w-3.5 h-3.5" /> Submitted
-                                    <span className="text-[11px] text-gray-500">
-                                       ({attemptInfo.score}/{quiz.questions.length})
+                                {inProgress ? (
+                                  <div className="inline-flex flex-col items-center gap-0.5">
+                                    <span className="inline-flex items-center gap-1.5 text-amber-700 bg-amber-50 border border-amber-300 px-2 py-0.5 rounded-full font-bold text-xs shadow-2xs">
+                                      <Pause className="w-3 h-3 text-amber-600 animate-pulse" />
+                                      Paused (Q{inProgress.currentPos + 1})
+                                      {inProgress.isTwoPlayer && (
+                                        <span className="px-1 py-0.2 text-[8px] font-black bg-purple-200 text-purple-800 rounded">
+                                          2P
+                                        </span>
+                                      )}
                                     </span>
-                                  </span>
+                                    <span className="text-[10px] text-gray-500 font-medium">
+                                      {Object.keys(inProgress.answers).length}/{quiz.questions.length} answered
+                                    </span>
+                                    {hasAttempt && (
+                                      <span className="text-[9px] text-emerald-700 font-semibold">Prev: {attemptInfo.score}/{quiz.questions.length}</span>
+                                    )}
+                                  </div>
+                                ) : hasAttempt ? (
+                                  <div className="inline-flex flex-col items-center gap-0.5">
+                                    <span className="inline-flex items-center gap-1 text-[#27ae60] font-semibold text-xs">
+                                      <CheckCircle className="w-3.5 h-3.5" /> Submitted
+                                      {attemptInfo.isTwoPlayer && (
+                                        <span className="px-1.5 py-0.2 rounded-full text-[9px] font-black bg-purple-100 text-purple-700 border border-purple-200">
+                                          2P
+                                        </span>
+                                      )}
+                                    </span>
+                                    {attemptInfo.isTwoPlayer ? (
+                                      <span className="text-[10px] text-gray-600 font-medium">
+                                        <span className="text-blue-600 font-bold">{attemptInfo.player1Name || 'P1'}: {attemptInfo.player1Score ?? attemptInfo.score}</span>
+                                        <span className="text-gray-400"> vs </span>
+                                        <span className="text-purple-600 font-bold">{attemptInfo.player2Name || 'P2'}: {attemptInfo.player2Score ?? 0}</span>
+                                      </span>
+                                    ) : (
+                                      <span className="text-[11px] text-gray-500">
+                                         ({attemptInfo.score}/{quiz.questions.length})
+                                      </span>
+                                    )}
+                                  </div>
                                 ) : (
                                   <span className="inline-flex items-center gap-1 text-[#e67e22] font-semibold text-xs">
                                     <Clock className="w-3.5 h-3.5" /> Pending
@@ -591,7 +791,39 @@ export function DashboardScreen({
                               </td>
                               <td className="p-3 text-center">
                                 <div className="flex items-center justify-center gap-1.5 flex-wrap">
-                                  {hasAttempt ? (
+                                  {inProgress ? (
+                                    <>
+                                      <button 
+                                        onClick={() => onTakeQuiz(quiz.id)}
+                                        className="text-xs bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1.5 rounded-md font-bold transition cursor-pointer shadow-xs flex items-center gap-1.5"
+                                        title={`Resume test from Question ${inProgress.currentPos + 1}`}
+                                      >
+                                        <Play className="w-3 h-3 fill-white" />
+                                        Resume (Q{inProgress.currentPos + 1})
+                                      </button>
+                                      {hasAttempt && (
+                                        <button 
+                                          onClick={() => onViewResults(quiz.id)}
+                                          className="text-xs bg-[#f39c12] hover:bg-[#d68910] text-white px-2 py-1 rounded font-semibold transition cursor-pointer"
+                                        >
+                                          Results
+                                        </button>
+                                      )}
+                                      {onClearProgress && (
+                                        <button
+                                          onClick={() => {
+                                            if (confirm(`Restart "${quiz.title}" from Question 1? Current saved progress will be discarded.`)) {
+                                              onClearProgress(quiz.id);
+                                            }
+                                          }}
+                                          title="Discard saved progress and start fresh"
+                                          className="p-1.5 text-gray-400 hover:text-red-600 hover:bg-red-50 border border-gray-200 rounded transition cursor-pointer"
+                                        >
+                                          <RotateCcw className="w-3 h-3" />
+                                        </button>
+                                      )}
+                                    </>
+                                  ) : hasAttempt ? (
                                     <>
                                       <button 
                                         onClick={() => onViewResults(quiz.id)}
@@ -606,6 +838,22 @@ export function DashboardScreen({
                                         Retake
                                       </button>
                                     </>
+                                  ) : isCombined ? (
+                                    <button 
+                                      onClick={() => onTakeQuiz(quiz.id)}
+                                      className="text-xs bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-slate-950 font-black px-3.5 py-1.5 rounded transition cursor-pointer shadow-xs flex items-center gap-1 uppercase tracking-wide"
+                                    >
+                                      <Sparkles className="w-3 h-3 fill-slate-950" />
+                                      Take Full Test
+                                    </button>
+                                  ) : isPendingTest ? (
+                                    <button 
+                                      onClick={() => onTakeQuiz(quiz.id)}
+                                      className="text-xs bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-bold px-3.5 py-1.5 rounded transition cursor-pointer shadow-xs flex items-center gap-1"
+                                    >
+                                      <Play className="w-3 h-3 fill-white" />
+                                      Start Pending Test
+                                    </button>
                                   ) : (
                                     <button 
                                       onClick={() => onTakeQuiz(quiz.id)}

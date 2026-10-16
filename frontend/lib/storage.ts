@@ -1,8 +1,9 @@
-import { Quiz, QuizAttempt } from "./types";
+import { Quiz, QuizAttempt, SavedQuizProgress } from "./types";
 import { DEFAULT_QUIZZES } from "./defaultQuizzes";
 
 const LOCAL_STORAGE_QUIZZES_KEY = 'nptel_quizzes';
 const LOCAL_STORAGE_ATTEMPTS_KEY = 'nptel_attempts';
+const LOCAL_STORAGE_PROGRESS_KEY = 'quizify_in_progress';
 
 export function getQuizzes(): Quiz[] {
   if (typeof window === 'undefined') return DEFAULT_QUIZZES;
@@ -35,7 +36,14 @@ export function getQuizzes(): Quiz[] {
           parsed[idx].title = defQuiz.title;
           modified = true;
         }
-        if (parsed[idx].questions.length !== defQuiz.questions.length) {
+        const curQuestionsJson = JSON.stringify(parsed[idx].questions);
+        const defQuestionsJson = JSON.stringify(defQuiz.questions);
+        if (
+          curQuestionsJson !== defQuestionsJson ||
+          curQuestionsJson.includes('\uFFFD') ||
+          curQuestionsJson.includes('q_?') ||
+          parsed[idx].questions.length !== defQuiz.questions.length
+        ) {
           parsed[idx].questions = defQuiz.questions;
           modified = true;
         }
@@ -81,9 +89,14 @@ export async function syncDiskQuizzes(): Promise<Quiz[]> {
           hasNew = true;
         } else {
           // If title, subject, or questions count differs, update
+          const curQuestionsJson = JSON.stringify(merged[existingIdx].questions);
+          const dqQuestionsJson = JSON.stringify(dq.questions);
           if (
             merged[existingIdx].title !== dq.title ||
             merged[existingIdx].subject !== dq.subject ||
+            curQuestionsJson !== dqQuestionsJson ||
+            curQuestionsJson.includes('\uFFFD') ||
+            curQuestionsJson.includes('q_?') ||
             merged[existingIdx].questions.length !== dq.questions.length
           ) {
             merged[existingIdx] = dq;
@@ -168,5 +181,48 @@ export function saveAttempts(attempts: Record<string, QuizAttempt>): void {
     localStorage.setItem(LOCAL_STORAGE_ATTEMPTS_KEY, JSON.stringify(attempts));
   } catch (e) {
     console.error("Could not save attempts to localStorage", e);
+  }
+}
+
+export function getAllSavedProgress(): Record<string, SavedQuizProgress> {
+  if (typeof window === 'undefined') return {};
+  try {
+    const stored = localStorage.getItem(LOCAL_STORAGE_PROGRESS_KEY);
+    return stored ? JSON.parse(stored) : {};
+  } catch (e) {
+    console.error("Could not load in-progress tests from localStorage", e);
+    return {};
+  }
+}
+
+export function getSavedProgress(quizId: string): SavedQuizProgress | null {
+  const all = getAllSavedProgress();
+  return all[quizId] || null;
+}
+
+export function saveQuizProgress(progress: SavedQuizProgress): void {
+  if (typeof window === 'undefined') return;
+  try {
+    const all = getAllSavedProgress();
+    all[progress.quizId] = {
+      ...progress,
+      savedAt: new Date().toISOString(),
+    };
+    localStorage.setItem(LOCAL_STORAGE_PROGRESS_KEY, JSON.stringify(all));
+  } catch (e) {
+    console.error("Could not save quiz progress to localStorage", e);
+  }
+}
+
+export function clearQuizProgress(quizId: string): void {
+  if (typeof window === 'undefined') return;
+  try {
+    const all = getAllSavedProgress();
+    if (all[quizId]) {
+      delete all[quizId];
+      localStorage.setItem(LOCAL_STORAGE_PROGRESS_KEY, JSON.stringify(all));
+    }
+  } catch (e) {
+    console.error("Could not clear quiz progress from localStorage", e);
   }
 }

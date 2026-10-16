@@ -1,0 +1,789 @@
+{
+  "id": "genai-pending",
+  "title": "Pending",
+  "subject": "Fundamentals of Generative AI",
+  "date": "14/10/2026",
+  "questions": [
+    {
+      "question": "1. A model is trained on digit images without labels and later generates new digit-like images. Which distribution is the model primarily learning?",
+      "options": [
+        "p(y|x)",
+        "p(x, y)",
+        "p(x)",
+        "p(y)"
+      ],
+      "correctAnswer": "p(x)",
+      "explanation": "An unsupervised generative model trained on unlabeled digit images learns the true underlying marginal distribution of the input data p(x) in order to sample new digit-like images."
+    },
+    {
+      "question": "2. A generative model is trained to generate a medical image only when the condition \"tumor present\" is provided. Which probability distribution best describes this task?",
+      "options": [
+        "p(x)",
+        "p(y|x)",
+        "p(x|y)",
+        "p(x,y) only"
+      ],
+      "correctAnswer": "p(x|y)",
+      "explanation": "Conditional generative models generate samples x conditioned on a given attribute or label y (here, y = 'tumor present'). Thus, it models the conditional distribution p(x|y)."
+    },
+    {
+      "question": "3. A decoder produces one output value for every binary pixel, and each value must represent the probability that the pixel is 1. Which output-layer and loss combination is most appropriate?",
+      "options": [
+        "Linear activation with mean squared error",
+        "Sigmoid activation with binary cross-entropy",
+        "Softmax activation with categorical cross-entropy",
+        "ReLU activation with mean squared error"
+      ],
+      "correctAnswer": "Sigmoid activation with binary cross-entropy",
+      "explanation": "For independent binary pixels where each output represents the probability of pixel value being 1 (in range [0, 1]), the sigmoid activation function combined with binary cross-entropy loss is the theoretically principled choice."
+    },
+    {
+      "question": "4. An optimizer accumulates the squared gradients of a parameter over all previous training steps. After many updates, its effective learning rate becomes extremely small. Which optimizer is being described?",
+      "options": [
+        "Momentum",
+        "AdaGrad",
+        "RMSProp",
+        "Standard mini-batch SGD"
+      ],
+      "correctAnswer": "AdaGrad",
+      "explanation": "AdaGrad divides the learning rate by the square root of the sum of all historical squared gradients without decay. As steps accumulate, the denominator grows monotonically, causing the effective step size to diminish prematurely."
+    },
+    {
+      "question": "5. Which statement correctly distinguishes RMSProp from AdaGrad?",
+      "options": [
+        "RMSProp uses only the current gradient and ignores previous gradients",
+        "RMSProp accumulates all past squared gradients without decay",
+        "RMSProp uses an exponentially weighted moving average of recent squared gradients",
+        "RMSProp does not use adaptive learning rates"
+      ],
+      "correctAnswer": "RMSProp uses an exponentially weighted moving average of recent squared gradients",
+      "explanation": "Unlike AdaGrad which accumulates all past squared gradients indefinitely, RMSProp uses an exponentially decaying moving average of past squared gradients, allowing it to adapt to recent curvature without diminishing the learning rate to zero."
+    },
+    {
+      "question": "6. A dataset contains standardized continuous-valued features that can take negative as well as positive values. Which decoder output and loss combination is most appropriate?",
+      "options": [
+        "Sigmoid output with binary cross-entropy",
+        "Softmax output with categorical cross-entropy",
+        "Linear output with mean squared error",
+        "ReLU output with binary cross-entropy"
+      ],
+      "correctAnswer": "Linear output with mean squared error",
+      "explanation": "For continuous standardized features that span both positive and negative real numbers, a linear output layer with mean squared error (MSE) reconstruction loss is the standard principled choice."
+    },
+    {
+      "question": "7. An encoder maps a 6-dimensional input to a 3-dimensional latent vector using a weight matrix of shape 6x3. Under the tied-weights assumption, what should be the shape of the decoder weight matrix?",
+      "options": [
+        "6 x 3",
+        "3 x 6",
+        "3 x 3",
+        "6 x 6"
+      ],
+      "correctAnswer": "3 x 6",
+      "explanation": "Tied weights constrain the decoder weight matrix to be the transpose of the encoder weight matrix: (6 x 3)^T = 3 x 6."
+    },
+    {
+      "question": "8. A clean binary input vector contains 20 components. Masking noise independently sets each component to zero with probability 0.30. What is the expected number of components masked in one corrupted input?",
+      "options": [
+        "3",
+        "6",
+        "14",
+        "20"
+      ],
+      "correctAnswer": "6",
+      "explanation": "Expected value E[X] = n x p = 20 x 0.30 = 6 components."
+    },
+    {
+      "question": "9. In a denoising autoencoder, which pair is used during training?",
+      "options": [
+        "Clean input as input and corrupted input as target",
+        "Corrupted input as input and the same corrupted input as target",
+        "Corrupted input as input and clean input as target",
+        "Random latent vector as input and clean input as target"
+      ],
+      "correctAnswer": "Corrupted input as input and clean input as target",
+      "explanation": "A denoising autoencoder (DAE) receives a corrupted version x~ as input and is trained to recover the original clean input x as its target."
+    },
+    {
+      "question": "10. In a sparse autoencoder, the desired average activation of a hidden neuron is 0.05, but its actual average activation is 0.40. Which statement is correct?",
+      "options": [
+        "The sparsity penalty for this neuron will be zero",
+        "The neuron is less active than desired",
+        "The neuron is too active and receives a relatively large sparsity penalty",
+        "The reconstruction loss must automatically become zero"
+      ],
+      "correctAnswer": "The neuron is too active and receives a relatively large sparsity penalty",
+      "explanation": "Since the neuron's average activation (0.40) is substantially higher than the target threshold $\\rho = 0.05$, KL divergence imposes a heavy sparsity penalty to suppress it."
+    },
+    {
+      "question": "11. A standard autoencoder reconstructs every training sample with very low error, but its latent codes perform poorly in clustering and classification. What is the most accurate conclusion?",
+      "options": [
+        "Low reconstruction error guarantees that the latent representation is semantically meaningful",
+        "The decoder must be using an incorrect activation function",
+        "Good reconstruction does not necessarily imply that the latent features are useful for downstream tasks",
+        "The latent dimension must always be increased"
+      ],
+      "correctAnswer": "Good reconstruction does not necessarily imply that the latent features are useful for downstream tasks",
+      "explanation": "Reconstruction objective only measures fidelity of signal reproduction; without proper regularization or inductive biases, the latent space can lack semantic structure or separability."
+    },
+    {
+      "question": "12. The true data distribution contains two well-separated modes. A limited-capacity model is trained by minimizing forward KL divergence. Which behaviour is most likely?",
+      "options": [
+        "The learned distribution concentrates on only one mode.",
+        "The learned distribution becomes broad enough to cover both modes, including the low-density region between them.",
+        "The learned distribution assigns zero probability between the modes.",
+        "The learned distribution must exactly reproduce both modes"
+      ],
+      "correctAnswer": "The learned distribution becomes broad enough to cover both modes, including the low-density region between them.",
+      "explanation": "Forward KL D_KL(P || Q) is zero-avoiding (mean-seeking/mode-covering): it heavily penalizes Q(x) being small wherever P(x) is non-zero, forcing Q to stretch across all modes."
+    },
+    {
+      "question": "13. Suppose the true distribution contains both cat and dog images, but a limited-capacity model trained using reverse KL divergence generates only sharp cat images. Which statement is most accurate?",
+      "options": [
+        "The model demonstrates mode-covering behaviour",
+        "The model has necessarily learned the complete data distribution",
+        "The model demonstrates mode-seeking behaviour and has missed a valid mode",
+        "The KL divergence between the two distributions must be zero"
+      ],
+      "correctAnswer": "The model demonstrates mode-seeking behaviour and has missed a valid mode",
+      "explanation": "Reverse KL D_KL(Q || P) is zero-forcing (mode-seeking): Q incurs zero penalty for placing zero mass on regions where P > 0, leading it to lock onto a single mode."
+    },
+    {
+      "question": "14. An event occurs with probability: p(x) = 1/8, Using logarithm base 2, what is its self-information?",
+      "options": [
+        "1 bit",
+        "2 bits",
+        "3 bits",
+        "8 bits"
+      ],
+      "correctAnswer": "3 bits",
+      "explanation": "Self-information I(x) = -log2(p(x)) = -log2(1/8) = log2(8) = 3 bits."
+    },
+    {
+      "question": "15. A VAE encoder has a latent dimension of 5. It outputs one mean and one log-variance for every latent dimension. How many scalar values must the encoder output for the latent distribution?",
+      "options": [
+        "5",
+        "7",
+        "10",
+        "15"
+      ],
+      "correctAnswer": "10",
+      "explanation": "For 5 latent dimensions, the encoder predicts 5 mean values $\\mu$ and 5 log-variance values $\\log(\\sigma^2)$, totaling 10 scalar values."
+    },
+    {
+      "question": "16. The Evidence Lower Bound (ELBO) for a VAE contains two main components: 1. Expected reconstruction log-likelihood, 2. KL-divergence regularization. Suppose the encoder distribution becomes very close to the prior, but the decoder assigns very low probability to the observed input.",
+      "options": [
+        "The ELBO must be high because the KL-divergence term is small",
+        "The ELBO may still be low because the reconstruction term is poor",
+        "The reconstruction term does not affect the ELBO",
+        "The VAE has necessarily learned a perfect latent representation"
+      ],
+      "correctAnswer": "The ELBO may still be low because the reconstruction term is poor",
+      "explanation": "$\\text{ELBO} = \\mathbb{E}_q[\\log p(x|z)] - D_{KL}$. Even with $D_{KL} \\approx 0$, a heavily negative reconstruction log-likelihood results in a low overall ELBO."
+    },
+    {
+      "question": "17. The reparameterization trick expresses the latent variable as: $z = \\mu + \\sigma \\odot \\epsilon$ where $\\epsilon \\sim \\mathcal{N}(0, I)$. Which statement is correct during backpropagation?",
+      "options": [
+        "$\\epsilon$ is learned by the encoder and updated using gradient descent",
+        "$\\epsilon$ is treated as constant with respect to $\\mu$ and $\\sigma$, allowing gradients to flow through $\\mu$ and $\\sigma$",
+        "The derivative of $z$ with respect to $\\epsilon$ is zero",
+        "The derivative of $z$ with respect to $\\epsilon$ is always one"
+      ],
+      "correctAnswer": "$\\epsilon$ is treated as constant with respect to $\\mu$ and $\\sigma$, allowing gradients to flow through $\\mu$ and $\\sigma$",
+      "explanation": "The reparameterization trick isolates the stochasticity into independent standard Gaussian noise $\\epsilon$, allowing gradients to backpropagate cleanly through deterministic operations on $\\mu$ and $\\sigma$."
+    },
+    {
+      "question": "18. A VAE is trained on face images. During testing, increasing only z2 changes the person's smile, head orientation, and lighting simultaneously. What does this observation most strongly indicate?",
+      "options": [
+        "The latent representation is perfectly regularized",
+        "The latent representation is entangled",
+        "The decoder has ignored Z2",
+        "The reconstruction loss has become zero"
+      ],
+      "correctAnswer": "The latent representation is entangled",
+      "explanation": "When changing a single latent variable alters multiple independent semantic properties simultaneously, the generative factors are entangled."
+    },
+    {
+      "question": "19. An image dataset contains six important independent factors of variation, but a $\\beta$-VAE has only three latent dimensions. Strong disentanglement is enforced. Which result is most reasonable?",
+      "options": [
+        "Each of the six factors will necessarily receive an independent latent dimension",
+        "Some latent dimensions will automatically split into additional dimensions",
+        "Only some dominant factors may be represented well, while others may be ignored or weakly represented",
+        "The reconstruction loss must become exactly zero"
+      ],
+      "correctAnswer": "Only some dominant factors may be represented well, while others may be ignored or weakly represented",
+      "explanation": "Because capacity (3 latent dimensions) is strictly less than generative factors (6), a strongly regularized bottleneck model captures only the top 3 dominant factors of variance."
+    },
+    {
+      "question": "20. For a one-dimensional latent variable:\n$q_\\phi(z|x) = \\mathcal{N}(\\mu, \\sigma^2)$\nand the prior is:\n$p(z) = \\mathcal{N}(0, 1)$\nThe KL divergence is calculated as:\n$D_{KL} = \\frac{1}{2} [\\mu^2 + \\sigma^2 - \\log(\\sigma^2) - 1]$\nFor: $\\mu = 1$ and $\\sigma^2 = 1$, what is the KL-divergence value?",
+      "options": [
+        "0",
+        "0.25",
+        "0.5",
+        "1"
+      ],
+      "correctAnswer": "0.5",
+      "explanation": "Substituting $\\mu = 1$ and $\\sigma^2 = 1$ into $D_{KL} = \\frac{1}{2} [\\mu^2 + \\sigma^2 - \\log(\\sigma^2) - 1]$ yields $\\frac{1}{2} [1^2 + 1 - \\log(1) - 1] = \\frac{1}{2} [1 + 1 - 0 - 1] = \\frac{1}{2} [1] = 0.5$."
+    },
+    {
+      "question": "21. Which architecture correctly represents a Conditional Variational Autoencoder?",
+      "options": [
+        "Encoder learns $q_\\phi(z|x)$, and decoder learns $p_\\theta(x|z)$",
+        "Encoder learns $q_\\phi(z|x, y)$, and decoder learns $p_\\theta(x|z, y)$",
+        "Encoder learns $q_\\phi(y|x)$, and decoder learns $p_\\theta(x|z)$",
+        "Encoder learns $q_\\phi(z|y)$, and decoder learns $p_\\theta(y|x)$"
+      ],
+      "correctAnswer": "Encoder learns $q_\\phi(z|x, y)$, and decoder learns $p_\\theta(x|z, y)",
+      "explanation": "In a Conditional VAE (CVAE), both the inference network (encoder) and the generative network (decoder) are conditioned on the label or attribute vector $y$."
+    },
+    {
+      "question": "22. During inference, the same latent vector ($z$) is supplied twice to a trained CVAE decoder. In the first case, the condition is $y=[1, 0]$, and in the second case, it is $y=[0, 1]$. What is the most appropriate expectation?",
+      "options": [
+        "The outputs must be identical because ($z$) is unchanged",
+        "The outputs may differ because the decoder uses both ($z$) and ($y$)",
+        "The second condition is ignored during generation",
+        "The latent vector must be sampled again before the condition can affect the output"
+      ],
+      "correctAnswer": "The outputs may differ because the decoder uses both ($z$) and ($y$)",
+      "explanation": "Because the decoder generates reconstructions conditioned jointly on latent code $z$ and condition vector $y$, different conditions $y$ yield different generated outputs even when $z$ is identical."
+    },
+    {
+      "question": "23. Consider the latent-space interpolation formula: $z_\\alpha = (1 - \\alpha)z_A + \\alpha z_B$. Which statement is correct?",
+      "options": [
+        "When $\\alpha = 0$, $z_\\alpha = z_B$, and when $\\alpha = 1$, $z_\\alpha = z_A$",
+        "When $\\alpha = 0.5$, $z_\\alpha$ is always the zero vector",
+        "When $\\alpha = 0$, $z_\\alpha = z_A$, and when $\\alpha = 1$, $z_\\alpha = z_B$",
+        "Values between 0 and 1 always generate latent points outside the line segment joining $z_A$ and $z_B$"
+      ],
+      "correctAnswer": "When $\\alpha = 0$, $z_\\alpha = z_A$, and when $\\alpha = 1$, $z_\\alpha = z_B$",
+      "explanation": "At $\\alpha = 0$, $(1 - 0)z_A + 0 \\cdot z_B = z_A$. At $\\alpha = 1$, $(1 - 1)z_A + 1 \\cdot z_B = z_B$. For $\\alpha \\in [0, 1]$, $z_\\alpha$ traverses the convex line segment connecting $z_A$ to $z_B$."
+    },
+    {
+      "question": "24. A VAE trained with pixel-wise mean squared error generates images with correct overall structure but blurred edges and textures. Which explanation is most appropriate?",
+      "options": [
+        "The decoder always ignores the latent vector",
+        "Pixel-wise loss may encourage the decoder to average multiple plausible outputs",
+        "The KL-divergence term forces every generated pixel to become zero",
+        "Gaussian latent variables cannot represent image data"
+      ],
+      "correctAnswer": "Pixel-wise loss may encourage the decoder to average multiple plausible outputs",
+      "explanation": "L2 pixel loss penalizes deviations from the conditional mean, leading the network to generate an average of all plausible sharp textures, which manifests as blurriness."
+    },
+    {
+      "question": "25. During one generator-training step, a noise vector is passed through the generator and then through the discriminator. Which parameters should be updated in this step?",
+      "options": [
+        "Only the discriminator parameters",
+        "Both generator and discriminator parameters",
+        "Only the generator parameters",
+        "Neither network's parameters"
+      ],
+      "correctAnswer": "Only the generator parameters",
+      "explanation": "During generator optimization, discriminator weights are frozen, and gradients pass back through the discriminator to update only the generator."
+    },
+    {
+      "question": "26. During discriminator training, which target labels should be used?",
+      "options": [
+        "Real samples: 0; generated samples: 1",
+        "Real samples: 1; generated samples: 0",
+        "Real samples: 0.5; generated samples: 0.5",
+        "Both real and generated samples: 1"
+      ],
+      "correctAnswer": "Real samples: 1; generated samples: 0",
+      "explanation": "The standard supervised classification target labels for the discriminator are label 1 for real training data and label 0 for generated/synthetic samples."
+    },
+    {
+      "question": "27. During generator training, the non-saturating binary cross-entropy loss is: $L_G = -\\log(D(G(z)))$. Suppose: $D(G(z)) = 0.20$. Using the natural logarithm, what is the generator loss, rounded to three decimal places?",
+      "options": [
+        "0.223",
+        "0.800",
+        "1.609",
+        "2.303"
+      ],
+      "correctAnswer": "1.609",
+      "explanation": "$L_G = -\\ln(0.20) \\approx 1.609$."
+    },
+    {
+      "question": "28. For one real sample and one generated sample, the discriminator loss is: $L_D = -\\log(D(x)) - \\log(1 - D(G(z)))$. Suppose $D(x) = 0.80$ and $D(G(z)) = 0.30$. Using the natural logarithm, what is the total discriminator loss, rounded to three decimal places?",
+      "options": [
+        "0.580",
+        "0.916",
+        "1.427",
+        "2.120"
+      ],
+      "correctAnswer": "0.580",
+      "explanation": "$L_D = -\\ln(0.80) - \\ln(1 - 0.30) = -\\ln(0.80) - \\ln(0.70) = 0.2231 + 0.3567 = 0.5798 \\approx 0.580$."
+    },
+    {
+      "question": "29. Consider the discriminator objective: log(D(x)) + log(1 - D(G(z))). Which pair of discriminator outputs maximizes this expression most effectively?",
+      "options": [
+        "D(x) \u001a 0 and D(G(z)) \u001a 1",
+        "D(x) \u001a 1 and D(G(z)) \u001a 0",
+        "D(x) \u001a 0.5 and D(G(z)) \u001a 0.5",
+        "D(x) \u001a 1 and D(G(z)) \u001a 1"
+      ],
+      "correctAnswer": "D(x) \u001a 1 and D(G(z)) \u001a 0",
+      "explanation": "When D(x) \u001a 1, log(1) = 0. When D(G(z)) \u001a 0, log(1 - 0) = 0. Their sum reaches 0, which is the global maximum of the negative cross-entropy."
+    },
+    {
+      "question": "30. At the beginning of GAN training, the generated distribution is usually far from the real-data distribution. Which behaviour is most likely?",
+      "options": [
+        "The discriminator easily separates real and generated samples",
+        "The discriminator outputs 0.5 for every sample",
+        "The generator has already reached equilibrium",
+        "The generated samples are necessarily identical to training samples"
+      ],
+      "correctAnswer": "The discriminator easily separates real and generated samples",
+      "explanation": "Because initial generator outputs are unstructured noise, the discriminator can easily distinguish between real and fake samples with near-perfect accuracy."
+    },
+    {
+      "question": "31. Which of the following is the primary advantage of CycleGAN over Pix2Pix?",
+      "options": [
+        "It requires paired training images.",
+        "It performs image classification.",
+        "It can learn image-to-image translation using unpaired datasets.",
+        "It generates only grayscale images."
+      ],
+      "correctAnswer": "It can learn image-to-image translation using unpaired datasets.",
+      "explanation": "CycleGAN learns bidirectional mappings between domains without requiring paired corresponding examples in the training set."
+    },
+    {
+      "question": "32. In CycleGAN, the cycle consistency loss ensures that:",
+      "options": [
+        "The discriminator always wins over the generator.",
+        "The translated image can be converted back to the original image.",
+        "Images have higher resolution.",
+        "The latent vectors follow a Gaussian distribution"
+      ],
+      "correctAnswer": "The translated image can be converted back to the original image.",
+      "explanation": "Cycle consistency enforces $F(G(x)) \\approx x$ and $G(F(y)) \\approx y$, preventing mode collapse and ensuring content preservation."
+    },
+    {
+      "question": "33. Which loss function is unique to Pix2Pix compared to a standard GAN?",
+      "options": [
+        "Cross-entropy loss only",
+        "L1 reconstruction loss combined with adversarial loss",
+        "Cycle consistency loss",
+        "Triplet loss"
+      ],
+      "correctAnswer": "L1 reconstruction loss combined with adversarial loss",
+      "explanation": "Pix2Pix combines conditional adversarial loss with an L1 reconstruction loss between the generated image and paired ground truth."
+    },
+    {
+      "question": "34. StyleGAN controls image generation primarily through:",
+      "options": [
+        "Cycle consistency loss",
+        "Style vectors injected at multiple layers of the generator",
+        "Paired datasets",
+        "Reinforcement learning"
+      ],
+      "correctAnswer": "Style vectors injected at multiple layers of the generator",
+      "explanation": "StyleGAN feeds intermediate style vectors w into Adaptive Instance Normalization (AdaIN) layers at each resolution stage of the synthesis network."
+    },
+    {
+      "question": "35. Which component in StyleGAN helps reduce the entanglement of latent features?",
+      "options": [
+        "PatchGAN discriminator",
+        "Mapping network",
+        "Cycle consistency module",
+        "Skip connections"
+      ],
+      "correctAnswer": "Mapping network",
+      "explanation": "The 8-layer MLP mapping network maps Gaussian latent z into an intermediate style space W, which avoids warping and disentangles semantic factors."
+    },
+    {
+      "question": "36. Which of the following applications is best suited for CycleGAN rather than Pix2Pix?",
+      "options": [
+        "Converting architectural sketches into building photographs using paired data",
+        "Translating horses into zebras without paired examples",
+        "Image super-resolution using paired images",
+        "Semantic segmentation from labeled datasets"
+      ],
+      "correctAnswer": "Translating horses into zebras without paired examples",
+      "explanation": "Horse-to-zebra translation is an unpaired translation task where no direct 1-to-1 correspondences exist."
+    },
+    {
+      "question": "37. Which statement correctly compares StyleGAN and Conditional GAN?",
+      "options": [
+        "Both require paired datasets",
+        "StyleGAN mainly provides fine-grained control over image style, whereas cGAN controls generation using external conditions or labels.",
+        "StyleGAN uses cycle consistency loss while cGAN does not.",
+        "cGAN cannot generate realistic images."
+      ],
+      "correctAnswer": "StyleGAN mainly provides fine-grained control over image style, whereas cGAN controls generation using external conditions or labels.",
+      "explanation": "StyleGAN focuses on unsupervised hierarchical feature control across multiple scales, while cGAN directs outputs based on explicit input conditioning labels."
+    },
+    {
+      "question": "38. During the reverse diffusion process, the neural network is trained to predict:",
+      "options": [
+        "The original image labels",
+        "The noise added at each timestep",
+        "The image resolution",
+        "The latent vector of a GAN"
+      ],
+      "correctAnswer": "The noise added at each timestep",
+      "explanation": "In DDPM, the neural network $\\epsilon_\\theta(x_t, t)$ is trained to estimate the noise vector $\\epsilon$ that was added to corrupt $x_0$ into $x_t$."
+    },
+    {
+      "question": "39. What is the purpose of the variance schedule ($\\beta_t$) in a diffusion model?",
+      "options": [
+        "To determine the learning rate during training",
+        "To control how much Gaussian noise is added at each timestep",
+        "To initialize network weights",
+        "To calculate image classification accuracy"
+      ],
+      "correctAnswer": "To control how much Gaussian noise is added at each timestep",
+      "explanation": "The variance schedule $\\beta_1, \\dots, \\beta_T$ controls the noise variance injected at each discrete timestep $t$."
+    },
+    {
+      "question": "40. Why are diffusion models generally slower than GANs during image generation?",
+      "options": [
+        "They require a discriminator during inference.",
+        "They generate the image through many iterative denoising steps.",
+        "They require paired training images.",
+        "They train a separate model for every timestep."
+      ],
+      "correctAnswer": "They generate the image through many iterative denoising steps.",
+      "explanation": "Generating an image requires passing through many sequential evaluations (often 50-1000 steps) of the neural network."
+    },
+    {
+      "question": "41. Which statement best describes the difference between the forward and reverse diffusion processes?",
+      "options": [
+        "Both processes add Gaussian noise to the image.",
+        "The forward process removes noise, while the reverse process adds noise.",
+        "The forward process gradually adds noise, whereas the reverse process progressively removes it.",
+        "Both processes use the same trained neural network."
+      ],
+      "correctAnswer": "The forward process gradually adds noise, whereas the reverse process progressively removes it.",
+      "explanation": "The forward process is a fixed Markov chain that destroys structure by adding noise, while the reverse process is a learned neural network that reconstructs data."
+    },
+    {
+      "question": "42. During the reverse diffusion process, the model predicts the noise $\\epsilon_\\theta(x_t, t)$ instead of directly predicting the clean image $x_0$. What is the primary reason for this design choice?",
+      "options": [
+        "Predicting noise is computationally cheaper because no neural network is required.",
+        "Noise follows a simple Gaussian distribution, making the learning objective more stable than directly predicting x0.",
+        "Predicting x0 is mathematically impossible.",
+        "It eliminates the need for the forward diffusion process."
+      ],
+      "correctAnswer": "Noise follows a simple Gaussian distribution, making the learning objective more stable than directly predicting x0.",
+      "explanation": "Predicting the zero-mean unit-variance noise simplifies the learning target and leads to reweighted variational bounds that stabilize training."
+    },
+    {
+      "question": "43. Which neural network architecture is most commonly used in modern diffusion models for image generation?",
+      "options": [
+        "VGG16",
+        "ResNet18",
+        "U-Net with attention mechanisms",
+        "AlexNet"
+      ],
+      "correctAnswer": "U-Net with attention mechanisms",
+      "explanation": "Modern diffusion models use an encoder-decoder U-Net backbone equipped with residual blocks, spatial down/up-sampling, and self/cross-attention."
+    },
+    {
+      "question": "44. Which of the following is the primary role of the U-Net in a diffusion model?",
+      "options": [
+        "To classify noisy images into categories.",
+        "To predict the Gaussian noise present in the noisy image at each timestep.",
+        "To generate random latent vectors.",
+        "To optimize the noise schedule."
+      ],
+      "correctAnswer": "To predict the Gaussian noise present in the noisy image at each timestep.",
+      "explanation": "The U-Net takes noisy image $x_t$ and timestep $t$ and predicts the added noise component $\\epsilon$."
+    },
+    {
+      "question": "45. Time-step embeddings are provided to the U-Net because they:",
+      "options": [
+        "Increase image resolution.",
+        "Inform the network about the current stage of the diffusion process.",
+        "Replace positional encoding in transformers.",
+        "Reduce the dataset size."
+      ],
+      "correctAnswer": "Inform the network about the current stage of the diffusion process.",
+      "explanation": "Timestep embeddings provide vital conditioning on current noise variance levels across the reverse diffusion process."
+    },
+    {
+      "question": "46. In classifier-free guidance, image generation is controlled by:",
+      "options": [
+        "A separate image classifier only.",
+        "Interpolating between conditional and unconditional model predictions.",
+        "Removing the noise schedule.",
+        "Training two discriminators."
+      ],
+      "correctAnswer": "Interpolating between conditional and unconditional model predictions.",
+      "explanation": "CFG linearly combines predictions: $\\epsilon_{\\text{guided}} = \\epsilon_{\\text{uncond}} + s \\cdot (\\epsilon_{\\text{cond}} - \\epsilon_{\\text{uncond}})$."
+    },
+    {
+      "question": "47. What is the main purpose of the attention layers inside a diffusion model's U-Net?",
+      "options": [
+        "To reduce the number of diffusion steps.",
+        "To capture long-range dependencies between different regions of the image.",
+        "To replace convolutional layers completely.",
+        "To perform image classification."
+      ],
+      "correctAnswer": "To capture long-range dependencies between different regions of the image.",
+      "explanation": "Self-attention enables the model to integrate global context and correlate distant spatial features across the canvas."
+    },
+    {
+      "question": "48. Which statement best explains why diffusion models are considered more stable to train than GANs?",
+      "options": [
+        "They do not use neural networks.",
+        "They optimize a supervised denoising objective instead of an adversarial min-max game.",
+        "They require much smaller datasets.",
+        "They eliminate the need for loss functions."
+      ],
+      "correctAnswer": "They optimize a supervised denoising objective instead of an adversarial min-max game.",
+      "explanation": "Diffusion models optimize standard L2 mean squared error loss on regression targets, avoiding minimax instability and mode collapse."
+    },
+    {
+      "question": "49. In text-to-image diffusion models such as Stable Diffusion, how is the generated image guided toward the user's prompt?",
+      "options": [
+        "By conditioning the denoising process on text embeddings.",
+        "By changing the learning rate during inference.",
+        "By increasing the image resolution after generation.",
+        "By training a separate GAN for every prompt."
+      ],
+      "correctAnswer": "By conditioning the denoising process on text embeddings.",
+      "explanation": "Pretrained text encoders (like CLIP or T5) generate text embeddings that feed into the U-Net's cross-attention layers."
+    },
+    {
+      "question": "50. Which of the following is a major advantage of Latent Diffusion Models (LDMs) over pixel-space diffusion models?",
+      "options": [
+        "They eliminate the need for a neural network.",
+        "They generate images without any denoising steps.",
+        "They require fewer training images because they use GANs.",
+        "They perform diffusion in a compressed latent space, reducing computation and memory requirements."
+      ],
+      "correctAnswer": "They perform diffusion in a compressed latent space, reducing computation and memory requirements.",
+      "explanation": "Operating in a perceptually equivalent low-dimensional latent space reduces training and sampling computational overhead by orders of magnitude."
+    },
+    {
+      "question": "51. Which NLP preprocessing technique helps reduce different forms of the same word (e.g., 'playing,' 'played,' 'plays') to a common root while considering the word's meaning?",
+      "options": [
+        "Tokenization",
+        "Stop-word removal",
+        "Lemmatization",
+        "Padding"
+      ],
+      "correctAnswer": "Lemmatization",
+      "explanation": "Lemmatization applies vocabulary and morphological analysis to return the base dictionary headword (lemma) of a word."
+    },
+    {
+      "question": "52. Consider an LSTM processing a sentence one word at a time. At a particular time step, the forget gate outputs values close to 1, while the input gate outputs values close to 0. What is the most likely effect on the cell state?",
+      "options": [
+        "The previous cell state is largely retained, and very little new information is added.",
+        "The previous cell state is discarded and replaced entirely with new information.",
+        "Both the previous and new information are ignored, making the cell state zero.",
+        "The hidden state becomes identical to the candidate cell state."
+      ],
+      "correctAnswer": "The previous cell state is largely retained, and very little new information is added.",
+      "explanation": "The cell update is $C_t = f_t * C_{t-1} + i_t * \\tilde{C}_t$. With $f_t \\approx 1$ and $i_t \\approx 0$, the previous cell state is retained and new information is suppressed."
+    },
+    {
+      "question": "53. Which gate in an LSTM decides which information from the previous cell state should be discarded?",
+      "options": [
+        "Input Gate",
+        "Output Gate",
+        "Forget Gate",
+        "Candidate Gate"
+      ],
+      "correctAnswer": "Forget Gate",
+      "explanation": "The forget gate $f_t = \\sigma(W_f \\cdot [h_{t-1}, x_t] + b_f)$ computes values in $[0, 1]$ determining what proportion of historical cell memory to discard."
+    },
+    {
+      "question": "54. Which statement correctly distinguishes the cell state from the hidden state in an LSTM?",
+      "options": [
+        "Both contain identical information.",
+        "The cell state stores long-term information, while the hidden state represents the current output passed to the next layer or timestep.",
+        "The hidden state stores long-term memory, while the cell state stores short-term memory.",
+        "The cell state is only used during training."
+      ],
+      "correctAnswer": "The cell state stores long-term information, while the hidden state represents the current output passed to the next layer or timestep.",
+      "explanation": "The cell state serves as the long-term internal memory carrier, while the hidden state is the filtered external representation."
+    },
+    {
+      "question": "55. Which activation functions are commonly used in the gates of an LSTM?",
+      "options": [
+        "ReLU for all gates",
+        "Sigmoid for gates and tanh for candidate cell state",
+        "Softmax for gates and sigmoid for outputs",
+        "Only tanh for all computations"
+      ],
+      "correctAnswer": "Sigmoid for gates and tanh for candidate cell state",
+      "explanation": "Gates utilize sigmoid activations to output scale factors in [0, 1], while the candidate cell state and cell squashing use tanh in [-1, 1]."
+    },
+    {
+      "question": "56. Why do LSTMs perform better than standard RNNs on long text sequences?",
+      "options": [
+        "They process all words simultaneously.",
+        "Their gating mechanism helps preserve important information and mitigates the vanishing gradient problem",
+        "They eliminate the need for backpropagation.",
+        "They use convolutional filters to analyze text."
+      ],
+      "correctAnswer": "Their gating mechanism helps preserve important information and mitigates the vanishing gradient problem",
+      "explanation": "Additive linear updates along the constant error carousel protect gradients from vanishing over long sequences."
+    },
+    {
+      "question": "57. Why are positional encodings added to the input embeddings in a Transformer?",
+      "options": [
+        "To provide information about the order of tokens since self-attention itself is order-independent.",
+        "To increase the vocabulary size.",
+        "To reduce the number of model parameters.",
+        "To replace token embeddings."
+      ],
+      "correctAnswer": "To provide information about the order of tokens since self-attention itself is order-independent.",
+      "explanation": "Self-attention is permutation-equivariant; positional encodings provide essential word order and structural positioning."
+    },
+    {
+      "question": "58. GPT differs from BERT because GPT:",
+      "options": [
+        "Uses only the encoder stack of the Transformer.",
+        "Uses only the decoder stack with masked self-attention for autoregressive text generation.",
+        "Is trained only on labeled datasets.",
+        "Does not use self-attention."
+      ],
+      "correctAnswer": "Uses only the decoder stack with masked self-attention for autoregressive text generation.",
+      "explanation": "GPT is an autoregressive decoder-only Transformer model designed for left-to-right generation."
+    },
+    {
+      "question": "59. In prompt engineering, what is the primary purpose of providing few-shot examples?",
+      "options": [
+        "To guide the model toward the desired response format or reasoning pattern without updating its parameters.",
+        "To retrain the language model.",
+        "To reduce the vocabulary size.",
+        "To increase the model's training accuracy."
+      ],
+      "correctAnswer": "To guide the model toward the desired response format or reasoning pattern without updating its parameters.",
+      "explanation": "Few-shot prompting provides in-context demonstrations that guide formatting and reasoning behavior without weight optimization."
+    },
+    {
+      "question": "60. Which of the following prompts is an example of Chain-of-Thought (CoT) prompting?",
+      "options": [
+        "Translate the following sentence into French.",
+        "Classify this review as positive or negative.",
+        "Solve the problem step by step before giving the final answer.",
+        "Summarize the following paragraph in one sentence."
+      ],
+      "correctAnswer": "Solve the problem step by step before giving the final answer.",
+      "explanation": "'Let's think step by step' is canonical Chain-of-Thought prompting, directing the model to output intermediate reasoning steps."
+    },
+    {
+      "question": "61. Which statement correctly compares BERT and GPT?",
+      "options": [
+        "BERT uses an encoder-only architecture for bidirectional language understanding, whereas GPT uses a decoder-only architecture for autoregressive text generation.",
+        "BERT and GPT both use encoder-only architectures but differ only in the size of their training datasets.",
+        "GPT is bidirectional and predicts masked tokens, whereas BERT predicts the next word using causal attention.",
+        "Both BERT and GPT require paired input-output datasets during pretraining."
+      ],
+      "correctAnswer": "BERT uses an encoder-only architecture for bidirectional language understanding, whereas GPT uses a decoder-only architecture for autoregressive text generation.",
+      "explanation": "BERT is an encoder-only bidirectional understanding architecture, while GPT is a decoder-only autoregressive causal generation architecture."
+    },
+    {
+      "question": "62. What is the primary motivation for using Retrieval-Augmented Generation (RAG)?",
+      "options": [
+        "To increase the number of parameters in the language model",
+        "To ground generated responses using external information retrieved",
+        "To replace tokenization with document retrieval",
+        "To eliminate the need for a language model"
+      ],
+      "correctAnswer": "To ground generated responses using external information retrieved",
+      "explanation": "RAG reduces hallucinations and grounds responses by fetching factual, up-to-date context from an external corpus."
+    },
+    {
+      "question": "63. Which advantage does RAG provide when the underlying knowledge base changes frequently?",
+      "options": [
+        "The entire language model must be retrained after every change",
+        "The tokenizer automatically learns the new information",
+        "The external index can be updated without retraining the model",
+        "The model permanently memorizes every retrieved document"
+      ],
+      "correctAnswer": "The external index can be updated without retraining the model",
+      "explanation": "Knowledge bases can be dynamically updated, inserted, or removed from the vector database without retraining the foundational LLM."
+    },
+    {
+      "question": "64. What is the primary purpose of a vector database in a dense RAG pipeline?",
+      "options": [
+        "To train the embedding model",
+        "To generate answers without using an LLM and bypassing it",
+        "To convert retrieved passages into labels",
+        "To store vector representations for similarity search"
+      ],
+      "correctAnswer": "To store vector representations for similarity search",
+      "explanation": "Vector databases index dense embedding vectors to enable rapid approximate nearest neighbor (ANN) similarity search."
+    },
+    {
+      "question": "65. Why are long documents commonly divided into smaller chunks before indexing?",
+      "options": [
+        "Language models can only retrieve complete documents",
+        "To allow retrieving more focused and relevant passages",
+        "Chunking increases the number of model parameters",
+        "Chunking removes the need for an embedding model"
+      ],
+      "correctAnswer": "To allow retrieving more focused and relevant passages",
+      "explanation": "Chunking segments documents into semantically focused units that fit context windows and improve retrieval precision."
+    },
+    {
+      "question": "66. What is a major advantage of dense retrieval over purely lexical retrieval?",
+      "options": [
+        "It does not require an indexed corpus",
+        "It can retrieve semantically related passages with different words",
+        "It guarantees that every retrieved document is correlated and correct",
+        "It does not require a similarity function"
+      ],
+      "correctAnswer": "It can retrieve semantically related passages with different words",
+      "explanation": "Dense embeddings encode conceptual semantics, matching queries to documents that express similar ideas with different vocabulary."
+    },
+    {
+      "question": "67. What is the purpose of metadata filtering in document retrieval?",
+      "options": [
+        "To modify the parameters of the embedding model",
+        "To summarize every document before retrieval",
+        "To restrict retrieval using irrelevant attributes",
+        "To replace semantic similarity with random selection"
+      ],
+      "correctAnswer": "To restrict retrieval using irrelevant attributes",
+      "explanation": "Metadata filtering pre-filters or post-filters search space using structured attributes (such as dates, authors, categories, or tags)."
+    },
+    {
+      "question": "68. What is the primary mechanism used by decoder-only LLMs to generate text?",
+      "options": [
+        "Predicting all output tokens simultaneously",
+        "Predicting the next token based on the previous",
+        "Retrieving a response from the training dataset",
+        "Classifying the input into a fixed set of possible responses"
+      ],
+      "correctAnswer": "Predicting all output tokens simultaneously",
+      "explanation": "Selected answer from the submitted assignment. Note: Autoregressive decoder-only language models predict text sequentially based on preceding context."
+    },
+    {
+      "question": "69. What is the purpose of aligning visual or acoustic representations with the language model's representation space?",
+      "options": [
+        "To allow information of different modalities to be jointly processed",
+        "To ensure that all images and audio clips have the same dimension",
+        "To eliminate the need for text instructions",
+        "To convert the non-text modality input tokens to text tokens"
+      ],
+      "correctAnswer": "To allow information of different modalities to be jointly processed",
+      "explanation": "Cross-modal projection/alignment maps vision or audio features into the same embedding space as text tokens, allowing the transformer layers to attend across modalities simultaneously using cross-attention or concatenated sequence self-attention."
+    },
+    {
+      "question": "70. What is meant by bias in the output of an AI model?",
+      "options": [
+        "The model consistently generates only short responses",
+        "The model produces skewed outcomes for certain groups",
+        "The model uses a fixed decoding temperature",
+        "The model requires more computation for minority group prompts"
+      ],
+      "correctAnswer": "The model produces skewed outcomes for certain groups",
+      "explanation": "AI output bias manifests when the model systematically exhibits prejudice, uneven performance, or skewed representations favoring or disfavoring specific demographic or societal groups."
+    },
+    {
+      "question": "71. Which is a major source of social bias in large language models?",
+      "options": [
+        "Stereotypes present in the training data",
+        "Lower learning rate used by LLMs for minority group data",
+        "Different lengths of the model's context window for majority and minority group data",
+        "The number of attention heads used for minority group data"
+      ],
+      "correctAnswer": "Stereotypes present in the training data",
+      "explanation": "LLMs trained on massive web corpora inherit human cultural biases, historical prejudices, and stereotypes reflected in unfiltered text on the internet."
+    }
+  ]
+}

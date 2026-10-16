@@ -8,3 +8,22 @@ body {
   font-family: var(--font-sans);
   @apply bg-slate-50 text-slate-900;
 }
+
+.font-katex-math {
+  font-family: 'KaTeX_Math', 'KaTeX_Main', 'Cambria Math', 'Latin Modern Math', 'Times New Roman', serif;
+  font-style: italic;
+}
+
+.math-rendered-content .katex {
+  font-size: 1.05em;
+  text-rendering: geometricPrecision;
+}
+
+.math-rendered-content .katex-display {
+  margin: 0.5em 0;
+  text-align: left;
+}
+
+.katex-inline-wrapper {
+  padding: 0 0.1em;
+}

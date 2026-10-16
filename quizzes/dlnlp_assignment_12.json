@@ -1,0 +1,85 @@
+{
+  "id": "dlnlp-assignment-12",
+  "title": "DLNLP Assignment 12 Solutions",
+  "subject": "DLNLP",
+  "date": "16/10/2026",
+  "questions": [
+    {
+      "question": "1. For a feed-forward memory cell with key k = (1, 2, -1) and activation f = ReLU, the prefix representation is x = (2, -1, 3). What is the memory coefficient?",
+      "options": [
+        "3",
+        "7",
+        "-3",
+        "0"
+      ],
+      "correctAnswer": "0",
+      "explanation": "Memory coefficient m = ReLU(x · k). Here x · k = 2(1) + (-1)(2) + 3(-1) = 2 - 2 - 3 = -3. Since ReLU(-3) = max(0, -3) = 0, the memory coefficient is 0. This prefix does not trigger the memory cell at all. (Ref: Lecture 58, Slide 7)."
+    },
+    {
+      "question": "2. A neuron’s normalised activation probabilities across three languages are p' = (0.50, 0.25, 0.25). What is its LAPE score in bits?",
+      "options": [
+        "0.50",
+        "1.00",
+        "1.25",
+        "1.50"
+      ],
+      "correctAnswer": "1.50",
+      "explanation": "The Language-Agnostic Probability Entropy (LAPE) score is calculated using entropy in bits (base 2): LAPE = -Σ p'_i * log2(p'_i) = -[0.50 * log2(0.50) + 0.25 * log2(0.25) + 0.25 * log2(0.25)] = -[0.50 * (-1) + 0.25 * (-2) + 0.25 * (-2)] = -[-0.50 - 0.50 - 0.50] = 1.50 bits. (Ref: Lecture 57, Slide 9)."
+    },
+    {
+      "question": "3. For the prompt \"The Eiffel Tower stands in the city of\", the clean run assigns P(o) = 0.86 to the correct object and the corrupted run assigns P*(o) = 0.07. Four separate corrupted-with-restoration runs each restore one hidden state and give the probabilities below:\n\n| State | Restored position / layer | Prestore(o) |\n|---|---|---|\n| S1 | last subject token, layer 6 | 0.41 |\n| S2 | last subject token, layer 15 | 0.63 |\n| S3 | last token, layer 32 | 0.58 |\n| S4 | first subject token, layer 15 | 0.12 |\n\nWhich state has the largest indirect effect, and what is its value?",
+      "options": [
+        "S2, 0.56",
+        "S2, 0.63",
+        "S3, 0.51",
+        "S1, 0.34"
+      ],
+      "correctAnswer": "S2, 0.56",
+      "explanation": "Indirect Effect (IE) is calculated by subtracting the corrupted baseline probability P*(o) = 0.07:\n• IE(S1) = 0.41 - 0.07 = 0.34\n• IE(S2) = 0.63 - 0.07 = 0.56\n• IE(S3) = 0.58 - 0.07 = 0.51\n• IE(S4) = 0.12 - 0.07 = 0.05\nTherefore, S2 has the largest indirect effect of 0.56, showing that the mid-layer state at the last subject token carries the strongest causal contribution. (Ref: Lecture 58, Slide 28)."
+    },
+    {
+      "question": "4. A linear probing classifier consumes a learned scalar mixture of layer representations. For one token, h^(0) = (1, 0, 2), h^(1) = (0, 2, -1), h^(2) = (3, 1, 1), with learned task weights s0 = 0.5, s1 = 0.2, s2 = 0.3. The probe outputs z with w = (2, -1, 1) and b = -1. What is z?",
+      "options": [
+        "2.2",
+        "3.2",
+        "5.0",
+        "6.0"
+      ],
+      "correctAnswer": "2.2",
+      "explanation": "Step 1: Compute layer mixture representation:\nh = s0*h^(0) + s1*h^(1) + s2*h^(2) = 0.5(1, 0, 2) + 0.2(0, 2, -1) + 0.3(3, 1, 1) = (0.5 + 0 + 0.9, 0 + 0.4 + 0.3, 1.0 - 0.2 + 0.3) = (1.4, 0.7, 1.1).\nStep 2: Apply the linear probe:\nz = w · h + b = 2(1.4) - 1(0.7) + 1(1.1) - 1 = 2.8 - 0.7 + 1.1 - 1 = 2.2. (Ref: Lecture 56, Slide 14)."
+    },
+    {
+      "question": "5. A Logit Lens readout at layer 12 produces an intermediate distribution with unnormalised probability weights proportional to (4, 4, 1, 1) over the four candidate tokens (w1, w2, w3, w4); normalising these gives the intermediate distribution p. The model’s final-layer distribution is q = (0.80, 0.10, 0.05, 0.05). What is D_KL(p || q) in bits?",
+      "options": [
+        "0.10",
+        "0.60",
+        "0.50",
+        "1.10"
+      ],
+      "correctAnswer": "0.60",
+      "explanation": "Step 1: Normalise intermediate weights: total = 4 + 4 + 1 + 1 = 10, so p = (0.4, 0.4, 0.1, 0.1).\nStep 2: D_KL(p || q) = Σ p_i * log2(p_i / q_i)\n= 0.4 * log2(0.4 / 0.8) + 0.4 * log2(0.4 / 0.1) + 0.1 * log2(0.1 / 0.05) + 0.1 * log2(0.1 / 0.05)\n= 0.4 * log2(0.5) + 0.4 * log2(4) + 0.1 * log2(2) + 0.1 * log2(2)\n= 0.4(-1) + 0.4(2) + 0.1(1) + 0.1(1) = -0.4 + 0.8 + 0.1 + 0.1 = 0.60 bits. (Ref: Lecture 56, Slide 23)."
+    },
+    {
+      "question": "6. A team unlearns a set of question–answer pairs while using raw novel excerpts as the normal dataset. After the run, the model degrades on essentially all question–answer prompts, including entirely benign ones, yet still completes plain prose fluently. Which failure does this indicate?",
+      "options": [
+        "The forgetting set was too small",
+        "KL was replaced by cross-entropy",
+        "A format shortcut was learned",
+        "The learning rate was too low"
+      ],
+      "correctAnswer": "A format shortcut was learned",
+      "explanation": "When the forgetting dataset and normal dataset differ systematically in format (QA pairs vs novel excerpts), the optimization takes the shortcut of suppressing the entire QA format rather than targeted factual content. Matching format styles between retain and forget sets removes this shortcut. (Ref: Lecture 60, Slide 9)."
+    },
+    {
+      "question": "7. An assistant answers a chemistry question correctly. The user replies \"That is wrong the answer is 12\", and the assistant apologises and adopts 12. Started fresh with the identical question and no pushback, it answers correctly again. Which issue does this pattern most specifically illustrate?",
+      "options": [
+        "Hallucination",
+        "Miscalibration",
+        "Inconsistency",
+        "Sycophancy"
+      ],
+      "correctAnswer": "Sycophancy",
+      "explanation": "The behaviour is triggered specifically by user pushback: the model abandons its own correct answer in deference to the user's assertion. Because the model answers correctly in a neutral session, this is sycophancy (excessive deference to the user) rather than a lack of knowledge or hallucination. (Ref: Lecture 59, Slide 8)."
+    }
+  ]
+}

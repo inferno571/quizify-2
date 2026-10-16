@@ -60,7 +60,7 @@
       "explanation": "Starting with small β allows the autoencoder to bootstrap meaningful reconstruction representations without collapsing latent codes, before gradually increasing β to enforce disentanglement."
     },
     {
-      "question": "6. For a one-dimensional latent variable:\nq_ϕ(z|x) = N(μ, σ²)\nand the prior is:\np(z) = N(0, 1)\nThe KL divergence is calculated as:\nDKL = 1/2 [μ² + σ² - log(σ²) - 1]\nFor: μ = 1 and σ² = 1, what is the KL-divergence value?",
+      "question": "6. For a one-dimensional latent variable:\n$q_\\phi(z|x) = \\mathcal{N}(\\mu, \\sigma^2)$\nand the prior is:\n$p(z) = \\mathcal{N}(0, 1)$\nThe KL divergence is calculated as:\n$D_{KL} = \\frac{1}{2} [\\mu^2 + \\sigma^2 - \\log(\\sigma^2) - 1]$\nFor: $\\mu = 1$ and $\\sigma^2 = 1$, what is the KL-divergence value?",
       "options": [
         "0",
         "0.25",
@@ -68,18 +68,18 @@
         "1"
       ],
       "correctAnswer": "0.5",
-      "explanation": "Substituting μ = 1 and σ² = 1 into DKL = 1/2 [μ² + σ² - log(σ²) - 1] yields 1/2 [1² + 1 - log(1) - 1] = 1/2 [1 + 1 - 0 - 1] = 1/2 [1] = 0.5."
+      "explanation": "Substituting $\\mu = 1$ and $\\sigma^2 = 1$ into $D_{KL} = \\frac{1}{2} [\\mu^2 + \\sigma^2 - \\log(\\sigma^2) - 1]$ yields $\\frac{1}{2} [1^2 + 1 - \\log(1) - 1] = \\frac{1}{2} [1 + 1 - 0 - 1] = \\frac{1}{2} [1] = 0.5."
     },
     {
       "question": "7. Which architecture correctly represents a Conditional Variational Autoencoder?",
       "options": [
-        "Encoder learns q_ϕ(z|x), and decoder learns p_θ(x|z)",
-        "Encoder learns q_ϕ(z|x, y), and decoder learns p_θ(x|z, y)",
-        "Encoder learns q_ϕ(y|x), and decoder learns p_θ(x|z)",
-        "Encoder learns q_ϕ(z|y), and decoder learns p_θ(y|x)"
+        "Encoder learns $q_\\phi(z|x)$, and decoder learns $p_\\theta(x|z)$",
+        "Encoder learns $q_\\phi(z|x, y)$, and decoder learns $p_\\theta(x|z, y)$",
+        "Encoder learns $q_\\phi(y|x)$, and decoder learns $p_\\theta(x|z)$",
+        "Encoder learns $q_\\phi(z|y)$, and decoder learns $p_\\theta(y|x)$"
       ],
-      "correctAnswer": "Encoder learns q_ϕ(z|x, y), and decoder learns p_θ(x|z, y)",
-      "explanation": "In a Conditional VAE (CVAE), both the inference network (encoder) and the generative network (decoder) are conditioned on the label or attribute vector y."
+      "correctAnswer": "Encoder learns $q_\\phi(z|x, y)$, and decoder learns $p_\\theta(x|z, y)",
+      "explanation": "In a Conditional VAE (CVAE), both the inference network (encoder) and the generative network (decoder) are conditioned on the label or attribute vector $y$."
     },
     {
       "question": "8. During inference, the same latent vector (z) is supplied twice to a trained CVAE decoder. In the first case, the condition is y=[1, 0], and in the second case, it is y=[0, 1]. What is the most appropriate expectation?",
