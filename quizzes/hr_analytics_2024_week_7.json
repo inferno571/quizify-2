@@ -1,0 +1,118 @@
+{
+  "id": "hr-analytics-2024-week-7",
+  "title": "HR Analytics (2024) - Week 7 Assignment 7",
+  "subject": "HR Analytics (2024)",
+  "date": "11/09/2024",
+  "questions": [
+    {
+      "question": "1. What is the primary purpose of executive development?",
+      "options": [
+        "To improve job-related skills",
+        "To prepare executives for diverse jobs and future challenges",
+        "To enhance physical fitness",
+        "To provide entertainment"
+      ],
+      "correctAnswer": "To prepare executives for diverse jobs and future challenges",
+      "explanation": "Executive development develops leadership competencies and strategic agility to navigate ambiguous future business challenges."
+    },
+    {
+      "question": "2. Which of the following is a key component of the Tata Group's Managerial Development Programme?",
+      "options": [
+        "International travel opportunities",
+        "Seven-week rural assignment",
+        "Corporate social responsibility projects",
+        "Digital skills training"
+      ],
+      "correctAnswer": "Seven-week rural assignment",
+      "explanation": "The prestigious Tata Administrative Service (TAS) and leadership programmes historically incorporate immersive rural development postings."
+    },
+    {
+      "question": "3. What method is described as a technique where a trainee is asked to investigate various papers that typically confront a manager and respond appropriately?",
+      "options": [
+        "Role play",
+        "In-basket",
+        "Sensitivity training",
+        "Case study"
+      ],
+      "correctAnswer": "In-basket",
+      "explanation": "The in-basket (or in-tray) exercise simulates a managerial inbox with emails, memos, and reports to assess prioritization and decision-making."
+    },
+    {
+      "question": "4. Which organization has customized its management development programs in collaboration with IIM Bangalore?",
+      "options": [
+        "Tata Group",
+        "Wipro",
+        "Cognizant Technologies",
+        "Infosys"
+      ],
+      "correctAnswer": "Cognizant Technologies",
+      "explanation": "Cognizant partnered with IIM Bangalore to design tailored executive leadership and managerial development curriculums."
+    },
+    {
+      "question": "5. What is the main objective of the Infosys Leadership Institute (ILI)?",
+      "options": [
+        "To develop coding skills",
+        "To prepare for overseas assignments",
+        "To develop managerial abilities and on-board leaders",
+        "To train in financial management"
+      ],
+      "correctAnswer": "To develop managerial abilities and on-board leaders",
+      "explanation": "The Infosys Leadership Institute (ILI) at Mysuru focuses on succession planning, executive leadership cultivation, and leadership onboarding."
+    },
+    {
+      "question": "6. Which of the following methods is aimed at promoting self-awareness and its impact on others?",
+      "options": [
+        "Job rotation",
+        "Sensitivity training",
+        "Multiple management",
+        "Business games"
+      ],
+      "correctAnswer": "Sensitivity training",
+      "explanation": "Sensitivity training (T-groups) provides unstructured group interaction to foster interpersonal sensitivity and deep self-awareness."
+    },
+    {
+      "question": "7. What is one of the benefits of using the 'case study' method in executive development?",
+      "options": [
+        "Cost-effective and quick to implement",
+        "Provides a real-life problem-solving experience",
+        "Offers unlimited chances to solve problems",
+        "Focuses on physical development"
+      ],
+      "correctAnswer": "Provides a real-life problem-solving experience",
+      "explanation": "Case studies present authentic, multidimensional organizational dilemmas for trainees to dissect and debate."
+    },
+    {
+      "question": "8. What is the focus of 'on-boarding' programs at Infosys Leadership Institute (ILI)?",
+      "options": [
+        "Financial management",
+        "Global marketing strategies",
+        "Advanced technical training",
+        "Orientation of new recruits on soft skills"
+      ],
+      "correctAnswer": "Orientation of new recruits on soft skills",
+      "explanation": "ILI onboarding integrates behavioral norms, professional communication, corporate values, and interpersonal soft skills."
+    },
+    {
+      "question": "9. Which of the following is NOT listed as a program under the Infosys Leadership Institute (ILI) for developing managerial abilities?",
+      "options": [
+        "Pravesh",
+        "Maestro",
+        "Diplomat",
+        "Visionary"
+      ],
+      "correctAnswer": "Visionary",
+      "explanation": "ILI structured its tiered leadership journey around specific branded tiers like Pravesh, Maestro, and Diplomat; 'Visionary' was not one of those tiers."
+    },
+    {
+      "question": "10. What is one of the demerits of the case study method as highlighted in the document?",
+      "options": [
+        "It is inexpensive to implement",
+        "It often fails to develop analytical abilities.",
+        "It is too realistic and closely mimics the trainee's workplace.",
+        "It requires little preparation or prior knowledge."
+      ],
+      "correctAnswer": "It often fails to develop analytical abilities.",
+      "explanation": "A recognized criticism is that passive or poorly facilitated discussions can devolve into opinions without rigorous data analysis."
+    }
+  ]
+}

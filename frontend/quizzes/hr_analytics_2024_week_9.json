@@ -1,0 +1,116 @@
+{
+  "id": "hr-analytics-2024-week-9",
+  "title": "HR Analytics (2024) - Week 9 Assignment 09",
+  "subject": "HR Analytics (2024)",
+  "date": "25/09/2024",
+  "questions": [
+    {
+      "question": "1. What is the first step in the process of performance evaluation?",
+      "options": [
+        "Measure Actual Performance",
+        "Communicate the Standards",
+        "Establish Performance Standards",
+        "Review Performance Standards"
+      ],
+      "correctAnswer": "Establish Performance Standards",
+      "explanation": "Before performance can be measured or evaluated, objective performance standards and benchmarks must first be defined."
+    },
+    {
+      "question": "2. Aligning performance standards with company objectives is important because it ensures:",
+      "options": [
+        "Better employee morale",
+        "Increased competition among employees",
+        "Contributions are directed towards the company's mission and vision",
+        "Higher profit margins"
+      ],
+      "correctAnswer": "Contributions are directed towards the company's mission and vision",
+      "explanation": "Goal alignment guarantees that individual daily activities translate directly into the strategic mission of the enterprise."
+    },
+    {
+      "question": "3. In the case of 'AutoAdvance,' which component was added to employee performance standards?",
+      "options": [
+        "Customer service",
+        "Continuous improvement",
+        "Work-life balance",
+        "Sales targets"
+      ],
+      "correctAnswer": "Continuous improvement",
+      "explanation": "In the AutoAdvance case, continuous improvement (Kaizen principles) was formalized into employee KPIs."
+    },
+    {
+      "question": "4. What is a key element for continuous improvement in performance management?",
+      "options": [
+        "Annual feedback sessions",
+        "Static performance standards",
+        "Regular assessments and feedback cycles",
+        "Ignoring technology trends"
+      ],
+      "correctAnswer": "Regular assessments and feedback cycles",
+      "explanation": "Continuous improvement relies on frequent, agile check-ins rather than isolated annual reviews."
+    },
+    {
+      "question": "5. Effective communication of performance standards is essential to:",
+      "options": [
+        "Increase employee competition",
+        "Ensure employees understand job expectations",
+        "Reduce transparency in performance evaluations",
+        "Eliminate team collaboration"
+      ],
+      "correctAnswer": "Ensure employees understand job expectations",
+      "explanation": "Clear communication eliminates ambiguity and ensures employees know exactly what targets they need to hit."
+    },
+    {
+      "question": "6. What is the primary purpose of a Gantt chart in performance management?",
+      "options": [
+        "To assess employee behavior",
+        "To track the planned and actual days taken for each step in performance management",
+        "To monitor employee well-being",
+        "To calculate salary increments"
+      ],
+      "correctAnswer": "To track the planned and actual days taken for each step in performance management",
+      "explanation": "Gantt charts visually illustrate timelines, milestone progress, and planned vs. actual schedule variance."
+    },
+    {
+      "question": "7. What is analyzed to find skill rating and goal percentage mismatch?",
+      "options": [
+        "The number of trainings attended",
+        "Employee ratings across various skills and percentage of goal achievement",
+        "Employee attendance",
+        "The time taken for completing tasks"
+      ],
+      "correctAnswer": "Employee ratings across various skills and percentage of goal achievement",
+      "explanation": "Comparing competency assessment ratings against quantitative goal achievement exposes disconnects or evaluation inflation."
+    },
+    {
+      "question": "8. How is the performance review process typically represented in performance analytics?",
+      "options": [
+        "As a fixed annual review",
+        "Through Gantt charts showing the planned and actual days taken for the review process",
+        "Via personal interviews",
+        "By evaluating the time spent in meetings"
+      ],
+      "correctAnswer": "Through Gantt charts showing the planned and actual days taken for the review process",
+      "explanation": "Process analytics relies on Gantt timelines and process mapping to audit evaluation cycles."
+    },
+    {
+      "question": "9. Which of the following reasons is not associated with deflating performance ratings?",
+      "options": [
+        "Shock employees",
+        "Build a record of poor performance",
+        "Encourage employees",
+        "Teach a rebellious employee a lesson"
+      ],
+      "correctAnswer": "Encourage employees",
+      "explanation": "Artificial score deflation is often punitive (shocking, establishing termination grounds, disciplining); it does not encourage workers."
+    },
+    {
+      "question": "10. Employee satisfaction rate is not part of the important metrics listed for performance analysis.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "True",
+      "explanation": "Employee satisfaction is an engagement/climate metric rather than a direct job output metric."
+    }
+  ]
+}

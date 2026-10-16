@@ -1,0 +1,116 @@
+{
+  "id": "hr-analytics-2024-week-4",
+  "title": "HR Analytics (2024) - Week 4 Assignment 4",
+  "subject": "HR Analytics (2024)",
+  "date": "21/08/2024",
+  "questions": [
+    {
+      "question": "1. Selection is the process of:",
+      "options": [
+        "Picking individuals with relevant qualifications",
+        "Recruiting new employees",
+        "Training new employees",
+        "Conducting performance reviews"
+      ],
+      "correctAnswer": "Picking individuals with relevant qualifications",
+      "explanation": "Selection is the process of screening and evaluating candidates to choose those who possess the required qualifications for the job."
+    },
+    {
+      "question": "2. What is the purpose of the selection process?",
+      "options": [
+        "To choose the best candidate",
+        "To balance applicant capabilities with organizational needs",
+        "To conduct interviews",
+        "To offer job placements"
+      ],
+      "correctAnswer": "To balance applicant capabilities with organizational needs",
+      "explanation": "Selection aims to achieve alignment between the candidate's capabilities/competencies and the strategic requirements of the organization."
+    },
+    {
+      "question": "3. What is the first step in the selection process?",
+      "options": [
+        "Reference checks",
+        "Preliminary interview",
+        "Resume/CV review",
+        "Medical examination"
+      ],
+      "correctAnswer": "Resume/CV review",
+      "explanation": "Initial screening starts with reviewing resumes/CVs (or application forms) before proceeding to interviews and evaluations."
+    },
+    {
+      "question": "4. Which of the following is NOT a component of an application blank?",
+      "options": [
+        "Personal data",
+        "Employment data",
+        "Medical history",
+        "Educational data"
+      ],
+      "correctAnswer": "Medical history",
+      "explanation": "Standard application blanks collect personal details, educational qualifications, and work history. Medical history is handled in physical/health evaluations."
+    },
+    {
+      "question": "5. Internal sources of recruitment in India are generally used for temporary positions:",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "False",
+      "explanation": "Internal recruitment is primarily leveraged for regular/permanent promotions and role transfers rather than short-term temporary positions."
+    },
+    {
+      "question": "6. Which method of recruitment in India involves advertisements in newspapers and magazines?",
+      "options": [
+        "Direct method",
+        "Indirect method",
+        "Internal method",
+        "Third-party method"
+      ],
+      "correctAnswer": "Indirect method",
+      "explanation": "Public advertising via press, print media, and magazines is categorized as an indirect recruitment method."
+    },
+    {
+      "question": "7. Which recruitment site is NOT mentioned for use in India?",
+      "options": [
+        "Naukri.com",
+        "Monsterjobs.com",
+        "Google.com",
+        "Timesjob.com"
+      ],
+      "correctAnswer": "Google.com",
+      "explanation": "Naukri, Monsterjobs, and Timesjobs are recognized job portals; Google.com is a general web search engine."
+    },
+    {
+      "question": "8. What is a major problem in the Indian selection process?",
+      "options": [
+        "External influences",
+        "Clear selection procedure",
+        "Standard interviews",
+        "High transparency"
+      ],
+      "correctAnswer": "External influences",
+      "explanation": "Extraneous pressures, nepotism, and external subjective influences are documented challenges in selection systems."
+    },
+    {
+      "question": "9. In Japan, selection is based on:",
+      "options": [
+        "Job security",
+        "Performance of the team",
+        "Individual performance",
+        "Temporary contracts"
+      ],
+      "correctAnswer": "Performance of the team",
+      "explanation": "Japanese organizational culture values collectivism, teamwork, group harmony, and group/team performance."
+    },
+    {
+      "question": "10. Which recruitment practice is common in Japan?",
+      "options": [
+        "Short-term employment",
+        "Annual graduate recruitment",
+        "Hiring based on physical tests",
+        "Seasonal hiring"
+      ],
+      "correctAnswer": "Annual graduate recruitment",
+      "explanation": "Japan traditionally practices 'Shinsotsu Ikkatsu Saiyo' (simultaneous annual recruitment of fresh university graduates)."
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "id": "hr-analytics-2024-week-3",
+  "title": "HR Analytics (2024) - Week 3 Assignment 3",
+  "subject": "HR Analytics (2024)",
+  "date": "14/08/2024",
+  "questions": [
+    {
+      "question": "1. According to the Prospecting Theory, recruitment is the process of:",
+      "options": [
+        "Hiring the best candidates",
+        "Locating and encouraging potential applicants to apply for job openings",
+        "Conducting interviews",
+        "Screening resumes"
+      ],
+      "correctAnswer": "Locating and encouraging potential applicants to apply for job openings",
+      "explanation": "Under prospecting theory, recruitment is viewed as an active outreach process to discover prospective employees and encourage them to apply."
+    },
+    {
+      "question": "2. What is the primary focus of the Mating Theory in recruitment?",
+      "options": [
+        "One-way traffic",
+        "Two-way traffic linking jobs and job seekers",
+        "Screening processes",
+        "Employee retention"
+      ],
+      "correctAnswer": "Two-way traffic linking jobs and job seekers",
+      "explanation": "The mating theory of recruitment conceptualizes hiring as a two-way matching process where both organization and applicant assess mutual suitability."
+    },
+    {
+      "question": "3. Which of the following is NOT a factor restraining a firm while choosing a recruiting source?",
+      "options": [
+        "Poor image",
+        "Attractive job",
+        "Conservative internal policies",
+        "Limited budgetary support"
+      ],
+      "correctAnswer": "Attractive job",
+      "explanation": "An attractive job is an enabling factor / advantage, not a restraining constraint like poor image, budget constraints, or restrictive policies."
+    },
+    {
+      "question": "4. What is the main goal of the recruitment process?",
+      "options": [
+        "Narrowing the applicant pool",
+        "Widening the general pool or attracting more applicants",
+        "Conducting interviews",
+        "Hiring external candidates only"
+      ],
+      "correctAnswer": "Widening the general pool or attracting more applicants",
+      "explanation": "Recruitment focuses on generating a broad and qualified pool of candidates, whereas selection is the phase that narrows the pool."
+    },
+    {
+      "question": "5. Which company was experiencing an explosive growth in 2013 and is the world's largest professional network and employed modern recruitment methods?",
+      "options": [
+        "Google",
+        "Facebook",
+        "LinkedIn",
+        "Microsoft"
+      ],
+      "correctAnswer": "LinkedIn",
+      "explanation": "LinkedIn grew dramatically as the premier global professional social network and pioneered data-driven digital sourcing and recruitment."
+    },
+    {
+      "question": "6. LinkedIn's recruiting techniques include replacing cold calling with:",
+      "options": [
+        "Job fairs",
+        "Online advertisements",
+        "Warm connections through LinkedIn networks",
+        "Headhunters"
+      ],
+      "correctAnswer": "Warm connections through LinkedIn networks",
+      "explanation": "LinkedIn allows recruiters to leverage mutual 1st and 2nd degree connections to introduce warm outreach rather than blind cold calls."
+    },
+    {
+      "question": "7. What approach did LinkedIn use to identify the best candidates?",
+      "options": [
+        "Manual screening",
+        "Data-driven approach",
+        "Random selection",
+        "Traditional interviews"
+      ],
+      "correctAnswer": "Data-driven approach",
+      "explanation": "LinkedIn utilizes algorithmic matching, profile analytics, and data-driven talent insights to surface top talent."
+    },
+    {
+      "question": "8. For external hires, what type of candidates did LinkedIn focus on?",
+      "options": [
+        "Active job seekers",
+        "Passive candidates",
+        "Recent graduates",
+        "Unemployed individuals"
+      ],
+      "correctAnswer": "Passive candidates",
+      "explanation": "LinkedIn's competitive advantage lies in reaching passive candidates—skilled professionals who are currently employed and not actively applying."
+    },
+    {
+      "question": "9. Which site is NOT listed as a famous job search site?",
+      "options": [
+        "naukri.com",
+        "monsterindia.com",
+        "careerindia.com",
+        "google.com"
+      ],
+      "correctAnswer": "google.com",
+      "explanation": "Google is a general web search engine, whereas Naukri, Monster India, and CareerIndia are dedicated job portal sites."
+    },
+    {
+      "question": "10. Which Act is NOT mentioned under the legal factors influencing recruitment?",
+      "options": [
+        "The Factories Act 1948",
+        "The Employment Exchanges Act 1959",
+        "The Companies Act 2013",
+        "The Child Labour Act 1986"
+      ],
+      "correctAnswer": "The Companies Act 2013",
+      "explanation": "Labor laws governing hiring include Factories Act, Employment Exchanges Act, and Child Labour Act; Companies Act 2013 governs corporate governance."
+    }
+  ]
+}

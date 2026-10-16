@@ -1,0 +1,114 @@
+{
+  "id": "hr-analytics-2024-week-8",
+  "title": "HR Analytics (2024) - Week 8 Assignment 8",
+  "subject": "HR Analytics (2024)",
+  "date": "18/09/2024",
+  "questions": [
+    {
+      "question": "1. What is the primary purpose of executive development?",
+      "options": [
+        "To improve job-related skills",
+        "To prepare executives for diverse jobs and future challenges",
+        "To enhance physical fitness",
+        "To provide entertainment"
+      ],
+      "correctAnswer": "To prepare executives for diverse jobs and future challenges",
+      "explanation": "Executive development builds comprehensive leadership capabilities for cross-functional agility and unpredictable future challenges."
+    },
+    {
+      "question": "2. State True OR False: Non-attainment of defined goals indicates that an organization has met all its planned objectives.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "False",
+      "explanation": "Non-attainment means failing to reach planned benchmarks and goals."
+    },
+    {
+      "question": "3. In the action-error cycle, what is a common consequence of not addressing errors promptly?",
+      "options": [
+        "Increased operational efficiency",
+        "Enhanced employee performance",
+        "Escalation of issues and larger negative impacts",
+        "Improved customer satisfaction"
+      ],
+      "correctAnswer": "Escalation of issues and larger negative impacts",
+      "explanation": "Ignoring initial operational errors leads to systemic compounding, escalation of costs, and wider organizational damage."
+    },
+    {
+      "question": "4. Metrics commonly used in _______ to evaluate employee performance include customer satisfaction scores.",
+      "options": [
+        "Employee ratings",
+        "Vendor ratings",
+        "Product ratings",
+        "Customer ratings"
+      ],
+      "correctAnswer": "Customer ratings",
+      "explanation": "Customer ratings and CSAT indices directly gauge frontline staff performance from the client's perspective."
+    },
+    {
+      "question": "5. What characterizes an ineffective performance in the workplace?",
+      "options": [
+        "Increased goal achievement percentage",
+        "Decreased turnover",
+        "Performance rating or goal achievement percent remains the same",
+        "Improved employee satisfaction"
+      ],
+      "correctAnswer": "Performance rating or goal achievement percent remains the same",
+      "explanation": "Stagnation or flatlining despite developmental interventions demonstrates lack of progression and ineffective performance."
+    },
+    {
+      "question": "6. What does the acronym MOOC stand for?",
+      "options": [
+        "Massive Operational Online Course",
+        "Multiple Online Operational Course",
+        "Massive Open Online Course",
+        "Managed Open Online Course"
+      ],
+      "correctAnswer": "Massive Open Online Course",
+      "explanation": "MOOC stands for Massive Open Online Course."
+    },
+    {
+      "question": "7. State True or False: Employee development analytics focuses solely on the financial performance of the company.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "False",
+      "explanation": "Development analytics evaluates skill acquisition, behavioral transformation, leadership readiness, and retention alongside financial ROI."
+    },
+    {
+      "question": "8. How can employee development analytics benefit the organization?",
+      "options": [
+        "By decreasing the number of employees",
+        "By reducing the number of training programs",
+        "By providing data-driven insights for better decision-making",
+        "By eliminating employee feedback"
+      ],
+      "correctAnswer": "By providing data-driven insights for better decision-making",
+      "explanation": "Analytics provides empirical evidence on training efficacy and capability distribution to optimize talent development investments."
+    },
+    {
+      "question": "9. Which tool can be used to measure the effectiveness of coaching and mentoring sessions?",
+      "options": [
+        "Financial statements, Balance Sheets",
+        "Employee performance evaluations and feedback surveys",
+        "Social media metrics",
+        "Marketing analysis"
+      ],
+      "correctAnswer": "Employee performance evaluations and feedback surveys",
+      "explanation": "Multi-rater feedback and 360-degree performance evaluations directly track behavioral shifts resulting from mentorship."
+    },
+    {
+      "question": "10. Which of the following scenarios would be classified as marginally effective?",
+      "options": [
+        "Employee's turnover rate increases significantly",
+        "Employee's performance rating remains the same",
+        "Employee engages in deviant behavior",
+        "Employee's performance rating improves slightly, and turnover decreases"
+      ],
+      "correctAnswer": "Employee's performance rating improves slightly, and turnover decreases",
+      "explanation": "Modest incremental progress accompanied by stabilizing retention is characteristic of marginally effective interventions."
+    }
+  ]
+}

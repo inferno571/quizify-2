@@ -1,0 +1,114 @@
+{
+  "id": "hr-analytics-2024-week-12",
+  "title": "HR Analytics (2024) - Week 12 Assignment 12",
+  "subject": "HR Analytics (2024)",
+  "date": "16/10/2024",
+  "questions": [
+    {
+      "question": "1. What is Tableau primarily used for?",
+      "options": [
+        "Writing code",
+        "Data visualization and analytics",
+        "Web development",
+        "Email marketing"
+      ],
+      "correctAnswer": "Data visualization and analytics",
+      "explanation": "Tableau is a market-leading business intelligence software dedicated to interactive data visualization and analytics."
+    },
+    {
+      "question": "2. State True OR False: Tableau can connect to multiple data sources including Excel, SQL databases, and cloud services.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "True",
+      "explanation": "Tableau features native connectors for spreadsheets, relational databases, cloud data warehouses, and web services."
+    },
+    {
+      "question": "3. Which of the following is NOT a visualization type available in Tableau?",
+      "options": [
+        "Line Chart",
+        "Bar Chart",
+        "Scatter Plot",
+        "Text Document"
+      ],
+      "correctAnswer": "Text Document",
+      "explanation": "Tableau supports graphical chart types (line, bar, scatter, maps); 'Text Document' is a word processing document format."
+    },
+    {
+      "question": "4. What does 'aggregation' mean in Tableau?",
+      "options": [
+        "Filtering data",
+        "Summarizing data, such as calculating totals or averages",
+        "Connecting data sources",
+        "Exporting data"
+      ],
+      "correctAnswer": "Summarizing data, such as calculating totals or averages",
+      "explanation": "Aggregation performs mathematical summaries over data records, such as SUM, AVG, MIN, MAX, and COUNT."
+    },
+    {
+      "question": "5. State True or False: Tableau Public is a free version of Tableau that allows users to publish their visualizations to the web.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "True",
+      "explanation": "Tableau Public is free software where authors share interactive dashboards publicly online."
+    },
+    {
+      "question": "6. How does Tableau help users gain insights from large and complex datasets?",
+      "options": [
+        "By automatically generating reports and summaries",
+        "By providing predefined charts and graphs",
+        "By allowing users to create interactive visualizations and perform ad hoc analysis",
+        "By offering data transformation and blending capabilities"
+      ],
+      "correctAnswer": "By allowing users to create interactive visualizations and perform ad hoc analysis",
+      "explanation": "Tableau's drag-and-drop visual interface lets users interactively explore and query complex data on the fly."
+    },
+    {
+      "question": "7. In Tableau, which component is used to display a summary of data or trends in a visual format?",
+      "options": [
+        "Sheet",
+        "Dashboard",
+        "Data Pane",
+        "Parameter"
+      ],
+      "correctAnswer": "Dashboard",
+      "explanation": "A dashboard combines multiple worksheets and visual trends into a single consolidated view for executive monitoring."
+    },
+    {
+      "question": "8. Which of the following is NOT a file type that Tableau can connect to?",
+      "options": [
+        "Excel",
+        "SQL Database",
+        "PDF",
+        "Google Sheets"
+      ],
+      "correctAnswer": "PDF",
+      "explanation": "While Tableau has added basic tabular text extraction from PDFs, native server-based live structured connectivity applies to Excel, SQL databases, and Google Sheets."
+    },
+    {
+      "question": "9. Tableau allows for _______ analysis, enabling users to explore data from different perspectives.",
+      "options": [
+        "Multidimensional",
+        "Unidirectional",
+        "Linear",
+        "Static"
+      ],
+      "correctAnswer": "Multidimensional",
+      "explanation": "Tableau's OLAP-like visual architecture facilitates multidimensional slicing, dicing, and drill-down analysis across measures and dimensions."
+    },
+    {
+      "question": "10. In Tableau, what is a 'worksheet'?",
+      "options": [
+        "A collection of dashboards",
+        "A single view containing a single visualization",
+        "A database of HR data",
+        "A script for data analysis"
+      ],
+      "correctAnswer": "A single view containing a single visualization",
+      "explanation": "In Tableau, a worksheet contains a single visual representation/view, which can later be assembled into multi-sheet dashboards."
+    }
+  ]
+}

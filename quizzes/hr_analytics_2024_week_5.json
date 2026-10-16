@@ -1,0 +1,116 @@
+{
+  "id": "hr-analytics-2024-week-5",
+  "title": "HR Analytics (2024) - Week 5 Assignment 5",
+  "subject": "HR Analytics (2024)",
+  "date": "28/08/2024",
+  "questions": [
+    {
+      "question": "1. What is the formula used to calculate the quality of hire?",
+      "options": [
+        "Quality of Hire = (PR + HP + HR) / 3",
+        "Quality of Hire = (PR * HP * HR) / 3",
+        "Quality of Hire = PR + HP + HR",
+        "Quality of Hire = PR - HP - HR"
+      ],
+      "correctAnswer": "Quality of Hire = (PR + HP + HR) / 3",
+      "explanation": "Quality of Hire (QoH) averages Job Performance (PR), Hiring Manager Satisfaction / Retention (HP), and New Hire Ramp-up / Retention (HR): (PR + HP + HR) / 3."
+    },
+    {
+      "question": "2. What is the purpose of using the quality of hire formula in the selection process outcome?",
+      "options": [
+        "To decrease employee retention rates",
+        "To increase the number of new hires",
+        "To assess the effectiveness of the hiring process in terms of performance, productivity, and retention",
+        "To evaluate the financial performance of the company"
+      ],
+      "correctAnswer": "To assess the effectiveness of the hiring process in terms of performance, productivity, and retention",
+      "explanation": "Quality of Hire metrics evaluate how successfully the recruitment and selection system brings in productive and lasting employees."
+    },
+    {
+      "question": "3. Which of the following metrics is commonly used in selection analytics to measure the effectiveness of the hiring process?",
+      "options": [
+        "Revenue growth",
+        "Employee satisfaction",
+        "Time to fill",
+        "Market share"
+      ],
+      "correctAnswer": "Time to fill",
+      "explanation": "Time to Fill measures the efficiency and duration of the hiring pipeline, making it a staple recruitment metric."
+    },
+    {
+      "question": "4. State True OR False: Visualization in recruitment and selection analytics helps in presenting complex data in a clear and intuitive manner.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "True",
+      "explanation": "Visualizations transform applicant pipeline and conversion data into actionable, easily interpretable visual insights."
+    },
+    {
+      "question": "5. Which of the following is a potential benefit of implementing selection analytics in an organization?",
+      "options": [
+        "Decreased employee engagement",
+        "Increased turnover rates",
+        "Improved hiring decisions and workforce productivity",
+        "Reduced training opportunities"
+      ],
+      "correctAnswer": "Improved hiring decisions and workforce productivity",
+      "explanation": "Selection analytics uses objective criteria to reduce bias, improve selection accuracy, and increase productivity."
+    },
+    {
+      "question": "6. What is the purpose of conducting predictive analytics in the context of selection?",
+      "options": [
+        "To analyze historical hiring trends",
+        "To identify potential future job openings",
+        "To evaluate the effectiveness of selection methods",
+        "To predict candidate job fit and performance"
+      ],
+      "correctAnswer": "To predict candidate job fit and performance",
+      "explanation": "Predictive selection models forecast candidate job success, cultural fit, and retention probabilities."
+    },
+    {
+      "question": "7. What type of insights can be gained from employee rejection analysis?",
+      "options": [
+        "Performance appraisal scores",
+        "Reasons for candidate disinterest",
+        "Sales revenue projections",
+        "Employee referral bonuses"
+      ],
+      "correctAnswer": "Reasons for candidate disinterest",
+      "explanation": "Analyzing offer rejections sheds light on offer competitiveness, compensation expectations, and candidate experience."
+    },
+    {
+      "question": "8. Why is testing important in the selection process?",
+      "options": [
+        "To increase employee turnover",
+        "To reduce recruitment costs",
+        "To assess candidates' skills and abilities objectively",
+        "To streamline the onboarding process"
+      ],
+      "correctAnswer": "To assess candidates' skills and abilities objectively",
+      "explanation": "Standardized tests provide objective, benchmarked measurement of candidates' technical competencies, cognitive abilities, or behavioral traits."
+    },
+    {
+      "question": "9. What does 'person-organization fit' refer to in recruitment?",
+      "options": [
+        "The candidate's ability to work remotely",
+        "The alignment between candidate values and organizational culture",
+        "The candidate's educational background",
+        "The candidate's previous work experience"
+      ],
+      "correctAnswer": "The alignment between candidate values and organizational culture",
+      "explanation": "Person-Organization (P-O) fit measures congruence between individual beliefs, values, and goals with the organizational culture and mission."
+    },
+    {
+      "question": "10. Assessing person-team fit during recruitment contributes to improved team _______ and cohesion.",
+      "options": [
+        "Productivity",
+        "Turnover",
+        "Absenteeism",
+        "Diversity"
+      ],
+      "correctAnswer": "Productivity",
+      "explanation": "High person-team fit fosters collaborative synergy, boosting overall team productivity and morale."
+    }
+  ]
+}

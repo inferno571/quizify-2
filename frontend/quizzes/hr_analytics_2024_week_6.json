@@ -1,0 +1,116 @@
+{
+  "id": "hr-analytics-2024-week-6",
+  "title": "HR Analytics (2024) - Week 6 Assignment 6",
+  "subject": "HR Analytics (2024)",
+  "date": "04/09/2024",
+  "questions": [
+    {
+      "question": "1. What is the primary goal of training?",
+      "options": [
+        "Improve employee satisfaction",
+        "Increase production efficiency",
+        "Reduce turnover",
+        "Improve performance and bring measurable changes"
+      ],
+      "correctAnswer": "Improve performance and bring measurable changes",
+      "explanation": "Training aims directly at closing skill gaps to enhance current job performance and produce quantifiable positive changes."
+    },
+    {
+      "question": "2. Which of the following is a feature of training?",
+      "options": [
+        "Long-term performance enhancement",
+        "Focus on the individual job",
+        "Future growth orientation",
+        "Theoretical knowledge improvement"
+      ],
+      "correctAnswer": "Focus on the individual job",
+      "explanation": "Training is job-specific and short-term focused, in contrast to education or broad employee development."
+    },
+    {
+      "question": "3. Training is essential for job success because it leads to:",
+      "options": [
+        "Higher production",
+        "Fewer mistakes",
+        "Greater job satisfaction",
+        "All of the above"
+      ],
+      "correctAnswer": "All of the above",
+      "explanation": "Effective training boosts output, reduces operational errors, and enhances employee competence and job satisfaction."
+    },
+    {
+      "question": "4. Training is concerned with:",
+      "options": [
+        "Teaching specific job-related skills",
+        "Personal growth",
+        "Long term career planning",
+        "Conceptual learning"
+      ],
+      "correctAnswer": "Teaching specific job-related skills",
+      "explanation": "Training imparts concrete, actionable skills required to execute specific operational job tasks."
+    },
+    {
+      "question": "5. Development is focussed on:",
+      "options": [
+        "Immediate job skills",
+        "Personal growth for future roles",
+        "Short-term performance",
+        "Job specific tasks"
+      ],
+      "correctAnswer": "Personal growth for future roles",
+      "explanation": "Unlike training which focuses on current job tasks, development is long-term and prepares individuals for future career roles."
+    },
+    {
+      "question": "6. Education differs from training in that it:",
+      "options": [
+        "Is more job-oriented",
+        "Focuses on skill learning",
+        "Is person-oriented and theory based",
+        "Concentrates on short term performance"
+      ],
+      "correctAnswer": "Is person-oriented and theory based",
+      "explanation": "Education emphasizes broad conceptual understanding, philosophical foundations, and personal growth rather than narrow task execution."
+    },
+    {
+      "question": "7. Which of the following is NOT a common training pitfall?",
+      "options": [
+        "Attempting to teach too quickly",
+        "Viewing all trainees as the same",
+        "Offering encouragement and praise",
+        "Giving very little time to practice"
+      ],
+      "correctAnswer": "Offering encouragement and praise",
+      "explanation": "Encouragement and positive reinforcement are instructional best practices, not pitfalls."
+    },
+    {
+      "question": "8. Which principle is NOT part of the learning principles in training?",
+      "options": [
+        "Modelling",
+        "Feedback",
+        "Theoretical learning",
+        "Spaced practice"
+      ],
+      "correctAnswer": "Theoretical learning",
+      "explanation": "Adult learning in corporate training centers on behavioral modelling, immediate feedback, and spaced repetition rather than abstract theoretical lectures."
+    },
+    {
+      "question": "9. The 'Bible' for McDonald's employees refers to ___________.",
+      "options": [
+        "Employee handbook",
+        "Recruitment manual",
+        "Operations and training manual",
+        "HR policy document"
+      ],
+      "correctAnswer": "Operations and training manual",
+      "explanation": "McDonald's comprehensive Operations and Training Manual standardizes all kitchen and service procedures globally."
+    },
+    {
+      "question": "10. Financial investment is generally not a focus of training.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "True",
+      "explanation": "Training focuses on human capital development and behavior modification rather than managing financial portfolios."
+    }
+  ]
+}

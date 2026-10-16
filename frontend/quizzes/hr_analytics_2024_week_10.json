@@ -1,0 +1,118 @@
+{
+  "id": "hr-analytics-2024-week-10",
+  "title": "HR Analytics (2024) - Week 10 Assignment 10",
+  "subject": "HR Analytics (2024)",
+  "date": "02/10/2024",
+  "questions": [
+    {
+      "question": "1. What is the main purpose of performance measurement in driving business outcomes?",
+      "options": [
+        "To increase salaries",
+        "To assess the effectiveness of organizational performance measurement in achieving goals",
+        "To track the number of meetings",
+        "To decrease employee workload"
+      ],
+      "correctAnswer": "To assess the effectiveness of organizational performance measurement in achieving goals",
+      "explanation": "Performance measurement verifies whether strategic execution aligns with corporate objectives and delivers desired business results."
+    },
+    {
+      "question": "2. Which approach is used to align individual goals with organizational goals?",
+      "options": [
+        "Customer satisfaction approach",
+        "Balanced score approach",
+        "Leadership approach",
+        "Talent retention approach"
+      ],
+      "correctAnswer": "Balanced score approach",
+      "explanation": "The Balanced Scorecard (BSC) framework cascades overarching corporate goals down into divisional and individual KPIs."
+    },
+    {
+      "question": "3. Which of the following is a lead measure in internal learning and growth?",
+      "options": [
+        "Rate of new product development",
+        "Employee job satisfaction",
+        "Developing strategic competencies",
+        "Product defect rate"
+      ],
+      "correctAnswer": "Developing strategic competencies",
+      "explanation": "Developing strategic competencies is a leading driver that enables future innovation and business performance."
+    },
+    {
+      "question": "4. Which stakeholder is responsible for strategic indicators under the internal business processes in the balanced score approach?",
+      "options": [
+        "Accounting professionals",
+        "Internal customers",
+        "External customers",
+        "Employees"
+      ],
+      "correctAnswer": "Internal customers",
+      "explanation": "Internal process quality is directly consumed and driven by internal customers within the workflow value chain."
+    },
+    {
+      "question": "5. What is the Variable Performance Linked Pay (VPLP) used for in compensation?",
+      "options": [
+        "To reward employees for length of service",
+        "To link compensation directly to performance achievements",
+        "To provide non-financial benefits",
+        "To ensure equal pay across all departments"
+      ],
+      "correctAnswer": "To link compensation directly to performance achievements",
+      "explanation": "VPLP ties variable financial incentives to measurable objective achievement and key performance indicators."
+    },
+    {
+      "question": "6. Which of the following factors affects compensation plans within an organization?",
+      "options": [
+        "Gender and age",
+        "Work-life balance preferences",
+        "Family status",
+        "Job responsibilities and market competitiveness"
+      ],
+      "correctAnswer": "Job responsibilities and market competitiveness",
+      "explanation": "Legitimate compensation planning is grounded in job evaluations (scope/responsibilities) and external market benchmark rates."
+    },
+    {
+      "question": "7. In Skills Gap Analysis, what is the primary goal?",
+      "options": [
+        "To assess the availability of financial resources",
+        "To identify the differences between current workforce skills and the skills required to achieve strategic goals",
+        "To monitor employee engagement levels",
+        "To create salary structures based on job levels"
+      ],
+      "correctAnswer": "To identify the differences between current workforce skills and the skills required to achieve strategic goals",
+      "explanation": "Skills gap analysis quantifies current organizational proficiencies against target competencies needed to fulfill strategy."
+    },
+    {
+      "question": "8. Which metric helps in evaluating the effectiveness of a compensation strategy?",
+      "options": [
+        "Employee satisfaction scores and turnover rates",
+        "Number of promotions per year",
+        "Number of hours worked",
+        "Salary increments provided"
+      ],
+      "correctAnswer": "Employee satisfaction scores and turnover rates",
+      "explanation": "Compensation strategy health is reflected in low regrettable turnover and strong compensation satisfaction survey results."
+    },
+    {
+      "question": "9. Adaptation in HRM refers to:",
+      "options": [
+        "Monitoring employee engagement",
+        "Adjusting HR strategies in response to industry changes",
+        "Setting up flexible working hours",
+        "Improving employee wellness programs"
+      ],
+      "correctAnswer": "Adjusting HR strategies in response to industry changes",
+      "explanation": "Strategic HR adaptation entails aligning policies and talent capabilities with shifts in external competitive environments."
+    },
+    {
+      "question": "10. What was the focus of DataCorp's compensation strategy in the case study?",
+      "options": [
+        "Increasing employee benefits",
+        "Linking individual pay more closely with performance",
+        "Implementing job rotation programs",
+        "Creating a retirement savings plan"
+      ],
+      "correctAnswer": "Linking individual pay more closely with performance",
+      "explanation": "The DataCorp case study highlights redesigning compensation to strengthen the pay-for-performance connection."
+    }
+  ]
+}

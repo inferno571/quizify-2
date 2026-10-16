@@ -20,6 +20,7 @@ import { QuizMode } from '../../../components/LandingScreen';
 
 function inferSubject(name: string): string {
   const lower = name.toLowerCase();
+  if (lower.includes("2024") && (lower.includes("hr") || lower.includes("analytics"))) return "HR Analytics (2024)";
   if (lower.includes("hr") || lower.includes("analytics")) return "HR Analytics";
   if (lower.includes("nlp") || lower.includes("dlnlp")) return "DLNLP";
   if (lower.includes("genai") || lower.includes("generative")) return "Generative AI";

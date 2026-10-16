@@ -1,0 +1,112 @@
+{
+  "id": "hr-analytics-2024-week-2",
+  "title": "HR Analytics (2024) - Week 2 Assignment 2",
+  "subject": "HR Analytics (2024)",
+  "date": "07/08/2024",
+  "questions": [
+    {
+      "question": "1. What is the first step in the data analytics process?",
+      "options": [
+        "Data Preparation",
+        "Data Collection",
+        "Data Analysis",
+        "Data Visualization"
+      ],
+      "correctAnswer": "Data Collection",
+      "explanation": "The analytics workflow begins with data collection (gathering raw data from relevant sources) before cleaning, preparing, analyzing, or visualizing."
+    },
+    {
+      "question": "2. What does Power BI stand for?",
+      "options": [
+        "Business Intelligence",
+        "Business Insights",
+        "Business Integration",
+        "Business Innovation"
+      ],
+      "correctAnswer": "Business Intelligence",
+      "explanation": "In Microsoft Power BI, 'BI' stands for Business Intelligence."
+    },
+    {
+      "question": "3. What is a common tool for creating data visualizations in Excel?",
+      "options": [
+        "PivotTable",
+        "VLOOKUP",
+        "SUM function",
+        "Data Validation"
+      ],
+      "correctAnswer": "PivotTable",
+      "explanation": "PivotTables (and associated PivotCharts) are the foundational Excel tools for aggregating, summarizing, and visually exploring complex tabular data."
+    },
+    {
+      "question": "4. What is the purpose of data preparation in the data analytics process?",
+      "options": [
+        "To visualize data",
+        "To clean and organize data for analysis",
+        "To collect data",
+        "To present findings"
+      ],
+      "correctAnswer": "To clean and organize data for analysis",
+      "explanation": "Data preparation involves transforming, structuring, and cleaning raw datasets so they are suitable for robust analysis."
+    },
+    {
+      "question": "5. Which Excel feature is used to create visual representations of data?",
+      "options": [
+        "Data Validation",
+        "Charts and Graphs",
+        "Data Bars",
+        "Pivot Tables"
+      ],
+      "correctAnswer": "Charts and Graphs",
+      "explanation": "Excel's Charts and Graphs feature provides explicit graphical representations (bar, column, line, scatter) of numerical data."
+    },
+    {
+      "question": "6. State True OR False: Findings should not be presented in a clear and concise manner to facilitate decision-making.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "False",
+      "explanation": "Analytics findings must be communicated clearly and concisely so stakeholders can make well-informed business decisions."
+    },
+    {
+      "question": "7. Which of the following is NOT a visualization best practice in Power BI?",
+      "options": [
+        "Using appropriate color schemes",
+        "Adding too much detail to visualizations",
+        "Ensuring readability and clarity",
+        "Providing clear titles and labels"
+      ],
+      "correctAnswer": "Adding too much detail to visualizations",
+      "explanation": "Overcrowding or cluttering dashboards with excessive detail obscures insights and degrades usability."
+    },
+    {
+      "question": "8. State True OR False: Data collection can include importing data from online databases, Excel files, and CSV files.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "True",
+      "explanation": "Data collection commonly involves ingesting data from varied external and internal formats including SQL/online databases, CSVs, and Excel spreadsheets."
+    },
+    {
+      "question": "9. State True OR False: Data visualization does not help in identifying patterns and trends in the data.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "False",
+      "explanation": "Visualizations are specifically designed to reveal patterns, trends, outliers, and correlations that are difficult to see in raw tabular numbers."
+    },
+    {
+      "question": "10. One of the primary goals of data visualization is to make _______ easier to understand.",
+      "options": [
+        "Decisions",
+        "Calculations",
+        "Data",
+        "Programming"
+      ],
+      "correctAnswer": "Data",
+      "explanation": "The core objective of data visualization is translating complex data into graphical representations that make data easier to understand."
+    }
+  ]
+}

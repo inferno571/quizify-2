@@ -1,0 +1,114 @@
+{
+  "id": "hr-analytics-2024-week-1",
+  "title": "HR Analytics (2024) - Week 1 Assignment 1",
+  "subject": "HR Analytics (2024)",
+  "date": "07/08/2024",
+  "questions": [
+    {
+      "question": "1. HR Analytics can help in which of the following ways?",
+      "options": [
+        "Increasing product sales",
+        "Reducing the company's marketing budget",
+        "Enhancing customer service quality",
+        "Improving employee retention"
+      ],
+      "correctAnswer": "Improving employee retention",
+      "explanation": "HR Analytics focuses on workforce data and talent management, helping organizations improve employee retention, engagement, and productivity."
+    },
+    {
+      "question": "2. In HR Analytics, what does 'data cleaning' refer to?",
+      "options": [
+        "Archiving old employee records",
+        "Organizing employee files",
+        "Encrypting sensitive data",
+        "Correcting or removing inaccurate data from datasets"
+      ],
+      "correctAnswer": "Correcting or removing inaccurate data from datasets",
+      "explanation": "Data cleaning (or data cleansing) is the process of identifying and correcting or removing corrupt, inaccurate, incomplete, or duplicate data from a dataset."
+    },
+    {
+      "question": "3. What does KPI stand for?",
+      "options": [
+        "Key Product Indicator",
+        "Key Profit Indicator",
+        "Key Performance Indicator",
+        "Key Project Indicator"
+      ],
+      "correctAnswer": "Key Performance Indicator",
+      "explanation": "KPI stands for Key Performance Indicator, a quantifiable measure used to evaluate the success of an organization or employee in reaching targets."
+    },
+    {
+      "question": "4. State True OR False: HRIS is primarily used for customer relationship management.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "False",
+      "explanation": "HRIS (Human Resource Information System) is used for managing human resources and employee data, whereas CRM (Customer Relationship Management) is used for customer relationships."
+    },
+    {
+      "question": "5. What type of analytics answers the question 'What did happen'?",
+      "options": [
+        "Predictive analytics",
+        "Descriptive analytics",
+        "Diagnostic analytics",
+        "Prescriptive analytics"
+      ],
+      "correctAnswer": "Descriptive analytics",
+      "explanation": "Descriptive analytics summarizes historical data to understand 'what happened' in the past."
+    },
+    {
+      "question": "6. What is the average value of a data set called?",
+      "options": [
+        "Median",
+        "Mode",
+        "Mean",
+        "Standard deviation"
+      ],
+      "correctAnswer": "Mean",
+      "explanation": "The mean is calculated by summing all values and dividing by the total count, representing the mathematical average."
+    },
+    {
+      "question": "7. What does the LAMP model in HR analytics stand for?",
+      "options": [
+        "Logic, Analytics, Measures, Processes",
+        "Leadership, Analytics, Management, Performance",
+        "Learning, Assessment, Measurement, Planning",
+        "Logic, Assessment, Metrics, Procedures"
+      ],
+      "correctAnswer": "Logic, Analytics, Measures, Processes",
+      "explanation": "The LAMP model, introduced by Cascio and Boudreau, stands for Logic, Analytics, Measures, and Process."
+    },
+    {
+      "question": "8. State True OR False: The HR scorecard is only used for measuring employee satisfaction.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "False",
+      "explanation": "The HR Scorecard links HR activities and competencies to broader organizational strategy and business outcomes, not merely employee satisfaction."
+    },
+    {
+      "question": "9. What is the primary focus of prescriptive analytics?",
+      "options": [
+        "Describing past events",
+        "Explaining why past events happened",
+        "Predicting future events",
+        "Suggesting actions to achieve desired outcomes"
+      ],
+      "correctAnswer": "Suggesting actions to achieve desired outcomes",
+      "explanation": "Prescriptive analytics goes beyond predicting outcomes by recommending optimal actions and decision options to achieve desired business results."
+    },
+    {
+      "question": "10. Which of the following is NOT a common data source for HR Analytics?",
+      "options": [
+        "Employee performance records",
+        "Customer feedback",
+        "Attendance records",
+        "Compensation details"
+      ],
+      "correctAnswer": "Customer feedback",
+      "explanation": "HR Analytics primarily leverages internal workforce data like attendance, performance evaluations, and compensation. Customer feedback is a marketing/sales metric."
+    }
+  ]
+}

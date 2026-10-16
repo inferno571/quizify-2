@@ -1,0 +1,114 @@
+{
+  "id": "hr-analytics-2024-week-11",
+  "title": "HR Analytics (2024) - Week 11 Assignment 11",
+  "subject": "HR Analytics (2024)",
+  "date": "09/10/2024",
+  "questions": [
+    {
+      "question": "1. What does 'compensation analytics' primarily focus on?",
+      "options": [
+        "Tracking employee attendance",
+        "Analyzing and optimizing employee compensation structures",
+        "Organizing company events",
+        "Designing office layouts"
+      ],
+      "correctAnswer": "Analyzing and optimizing employee compensation structures",
+      "explanation": "Compensation analytics evaluates wage structures, equity, incentive plans, and competitiveness to design cost-effective reward packages."
+    },
+    {
+      "question": "2. What is a 'pay mix policy'?",
+      "options": [
+        "The number of employees in each department",
+        "The combination of different types of compensation (salary, bonuses, benefits) offered to employees",
+        "The schedule of employee evaluations",
+        "The distribution of work hours among employees"
+      ],
+      "correctAnswer": "The combination of different types of compensation (salary, bonuses, benefits) offered to employees",
+      "explanation": "Pay mix specifies the ratio of fixed base salary, short-term bonuses, long-term equity, and employee benefits in total rewards."
+    },
+    {
+      "question": "3. State True or False: Pay increases can negatively affect employee morale if they are perceived as unfair.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "True",
+      "explanation": "According to equity theory, perceived inequities or favoritism in pay increases breed resentment and lower workplace morale."
+    },
+    {
+      "question": "4. What is the formula to calculate the percentage change in the Consumer Price Index (CPI)?",
+      "options": [
+        "(Current CPI - Previous CPI) / Current CPI * 100",
+        "(Previous CPI - Current CPI) / Previous CPI * 100",
+        "(Current CPI - Previous CPI) / Previous CPI * 100",
+        "(Previous CPI - Current CPI) / Current CPI * 100"
+      ],
+      "correctAnswer": "(Current CPI - Previous CPI) / Previous CPI * 100",
+      "explanation": "Percentage change measures inflation relative to the base period: ((Current CPI - Previous CPI) / Previous CPI) * 100."
+    },
+    {
+      "question": "5. What action might be taken if an employee has a very low Compa-Ratio?",
+      "options": [
+        "Decrease their pay",
+        "Maintain their current pay",
+        "Consider a pay increase to bring their salary closer to the midpoint",
+        "Reassign them to a different department"
+      ],
+      "correctAnswer": "Consider a pay increase to bring their salary closer to the midpoint",
+      "explanation": "A low compa-ratio (e.g. < 0.80) signals underpayment relative to the market/band midpoint, warranting an upward equity adjustment."
+    },
+    {
+      "question": "6. State True OR False: A Compa-Ratio of 1 indicates that the employee's pay is exactly at the midpoint of the pay range.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "True",
+      "explanation": "Compa-Ratio = Actual Salary / Range Midpoint. A value of 1.0 (or 100%) indicates pay matches the exact midpoint."
+    },
+    {
+      "question": "7. The midpoint in a pay range is determined by analyzing:",
+      "options": [
+        "Employee performance reviews",
+        "Annual company profits",
+        "Employee attendance records",
+        "Compensation survey data"
+      ],
+      "correctAnswer": "Compensation survey data",
+      "explanation": "Pay grade midpoints are benchmarked against competitive salary market data obtained from compensation surveys."
+    },
+    {
+      "question": "8. What does KRA stand for?",
+      "options": [
+        "Key Resource Allocation",
+        "Key Result Areas",
+        "Key Revenue Analysis",
+        "Key Recruitment Areas"
+      ],
+      "correctAnswer": "Key Result Areas",
+      "explanation": "KRA stands for Key Result Areas, defining the core outcomes an employee is accountable for delivering."
+    },
+    {
+      "question": "9. PMS, in HR terminology, refers to:",
+      "options": [
+        "Pay Management System",
+        "Project Monitoring System",
+        "Performance Management System",
+        "Personnel Management Strategy"
+      ],
+      "correctAnswer": "Performance Management System",
+      "explanation": "PMS stands for Performance Management System, encompassing goal-setting, performance tracking, appraisal, and development."
+    },
+    {
+      "question": "10. One of the key objectives of compensation analytics is to ensure _______ between employee pay and organizational goals.",
+      "options": [
+        "Alignment",
+        "Disparity",
+        "Inconsistency",
+        "Segregation"
+      ],
+      "correctAnswer": "Alignment",
+      "explanation": "Strategic compensation analytics ensures incentive structures align with organizational strategic goals."
+    }
+  ]
+}

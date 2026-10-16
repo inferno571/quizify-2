@@ -8771,6 +8771,2689 @@ export const DEFAULT_QUIZZES: Quiz[] = [
         "explanation": "A complete total rewards pay mix encompasses base pay, short- and long-term incentives, and employee benefits."
       }
     ]
-  }
+  },
+{
+  "id": "hr-analytics-2024-full-combined",
+  "title": "HR Analytics (2024) - Full Combined Grand Test (Weeks 1-12)",
+  "subject": "HR Analytics (2024)",
+  "date": "16/10/2024",
+  "questions": [
+    {
+      "question": "1. HR Analytics can help in which of the following ways?",
+      "options": [
+        "Increasing product sales",
+        "Reducing the company's marketing budget",
+        "Enhancing customer service quality",
+        "Improving employee retention"
+      ],
+      "correctAnswer": "Improving employee retention",
+      "explanation": "HR Analytics focuses on workforce data and talent management, helping organizations improve employee retention, engagement, and productivity."
+    },
+    {
+      "question": "2. In HR Analytics, what does 'data cleaning' refer to?",
+      "options": [
+        "Archiving old employee records",
+        "Organizing employee files",
+        "Encrypting sensitive data",
+        "Correcting or removing inaccurate data from datasets"
+      ],
+      "correctAnswer": "Correcting or removing inaccurate data from datasets",
+      "explanation": "Data cleaning (or data cleansing) is the process of identifying and correcting or removing corrupt, inaccurate, incomplete, or duplicate data from a dataset."
+    },
+    {
+      "question": "3. What does KPI stand for?",
+      "options": [
+        "Key Product Indicator",
+        "Key Profit Indicator",
+        "Key Performance Indicator",
+        "Key Project Indicator"
+      ],
+      "correctAnswer": "Key Performance Indicator",
+      "explanation": "KPI stands for Key Performance Indicator, a quantifiable measure used to evaluate the success of an organization or employee in reaching targets."
+    },
+    {
+      "question": "4. State True OR False: HRIS is primarily used for customer relationship management.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "False",
+      "explanation": "HRIS (Human Resource Information System) is used for managing human resources and employee data, whereas CRM (Customer Relationship Management) is used for customer relationships."
+    },
+    {
+      "question": "5. What type of analytics answers the question 'What did happen'?",
+      "options": [
+        "Predictive analytics",
+        "Descriptive analytics",
+        "Diagnostic analytics",
+        "Prescriptive analytics"
+      ],
+      "correctAnswer": "Descriptive analytics",
+      "explanation": "Descriptive analytics summarizes historical data to understand 'what happened' in the past."
+    },
+    {
+      "question": "6. What is the average value of a data set called?",
+      "options": [
+        "Median",
+        "Mode",
+        "Mean",
+        "Standard deviation"
+      ],
+      "correctAnswer": "Mean",
+      "explanation": "The mean is calculated by summing all values and dividing by the total count, representing the mathematical average."
+    },
+    {
+      "question": "7. What does the LAMP model in HR analytics stand for?",
+      "options": [
+        "Logic, Analytics, Measures, Processes",
+        "Leadership, Analytics, Management, Performance",
+        "Learning, Assessment, Measurement, Planning",
+        "Logic, Assessment, Metrics, Procedures"
+      ],
+      "correctAnswer": "Logic, Analytics, Measures, Processes",
+      "explanation": "The LAMP model, introduced by Cascio and Boudreau, stands for Logic, Analytics, Measures, and Process."
+    },
+    {
+      "question": "8. State True OR False: The HR scorecard is only used for measuring employee satisfaction.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "False",
+      "explanation": "The HR Scorecard links HR activities and competencies to broader organizational strategy and business outcomes, not merely employee satisfaction."
+    },
+    {
+      "question": "9. What is the primary focus of prescriptive analytics?",
+      "options": [
+        "Describing past events",
+        "Explaining why past events happened",
+        "Predicting future events",
+        "Suggesting actions to achieve desired outcomes"
+      ],
+      "correctAnswer": "Suggesting actions to achieve desired outcomes",
+      "explanation": "Prescriptive analytics goes beyond predicting outcomes by recommending optimal actions and decision options to achieve desired business results."
+    },
+    {
+      "question": "10. Which of the following is NOT a common data source for HR Analytics?",
+      "options": [
+        "Employee performance records",
+        "Customer feedback",
+        "Attendance records",
+        "Compensation details"
+      ],
+      "correctAnswer": "Customer feedback",
+      "explanation": "HR Analytics primarily leverages internal workforce data like attendance, performance evaluations, and compensation. Customer feedback is a marketing/sales metric."
+    },
+    {
+      "question": "11. What is the first step in the data analytics process?",
+      "options": [
+        "Data Preparation",
+        "Data Collection",
+        "Data Analysis",
+        "Data Visualization"
+      ],
+      "correctAnswer": "Data Collection",
+      "explanation": "The analytics workflow begins with data collection (gathering raw data from relevant sources) before cleaning, preparing, analyzing, or visualizing."
+    },
+    {
+      "question": "12. What does Power BI stand for?",
+      "options": [
+        "Business Intelligence",
+        "Business Insights",
+        "Business Integration",
+        "Business Innovation"
+      ],
+      "correctAnswer": "Business Intelligence",
+      "explanation": "In Microsoft Power BI, 'BI' stands for Business Intelligence."
+    },
+    {
+      "question": "13. What is a common tool for creating data visualizations in Excel?",
+      "options": [
+        "PivotTable",
+        "VLOOKUP",
+        "SUM function",
+        "Data Validation"
+      ],
+      "correctAnswer": "PivotTable",
+      "explanation": "PivotTables (and associated PivotCharts) are the foundational Excel tools for aggregating, summarizing, and visually exploring complex tabular data."
+    },
+    {
+      "question": "14. What is the purpose of data preparation in the data analytics process?",
+      "options": [
+        "To visualize data",
+        "To clean and organize data for analysis",
+        "To collect data",
+        "To present findings"
+      ],
+      "correctAnswer": "To clean and organize data for analysis",
+      "explanation": "Data preparation involves transforming, structuring, and cleaning raw datasets so they are suitable for robust analysis."
+    },
+    {
+      "question": "15. Which Excel feature is used to create visual representations of data?",
+      "options": [
+        "Data Validation",
+        "Charts and Graphs",
+        "Data Bars",
+        "Pivot Tables"
+      ],
+      "correctAnswer": "Charts and Graphs",
+      "explanation": "Excel's Charts and Graphs feature provides explicit graphical representations (bar, column, line, scatter) of numerical data."
+    },
+    {
+      "question": "16. State True OR False: Findings should not be presented in a clear and concise manner to facilitate decision-making.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "False",
+      "explanation": "Analytics findings must be communicated clearly and concisely so stakeholders can make well-informed business decisions."
+    },
+    {
+      "question": "17. Which of the following is NOT a visualization best practice in Power BI?",
+      "options": [
+        "Using appropriate color schemes",
+        "Adding too much detail to visualizations",
+        "Ensuring readability and clarity",
+        "Providing clear titles and labels"
+      ],
+      "correctAnswer": "Adding too much detail to visualizations",
+      "explanation": "Overcrowding or cluttering dashboards with excessive detail obscures insights and degrades usability."
+    },
+    {
+      "question": "18. State True OR False: Data collection can include importing data from online databases, Excel files, and CSV files.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "True",
+      "explanation": "Data collection commonly involves ingesting data from varied external and internal formats including SQL/online databases, CSVs, and Excel spreadsheets."
+    },
+    {
+      "question": "19. State True OR False: Data visualization does not help in identifying patterns and trends in the data.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "False",
+      "explanation": "Visualizations are specifically designed to reveal patterns, trends, outliers, and correlations that are difficult to see in raw tabular numbers."
+    },
+    {
+      "question": "20. One of the primary goals of data visualization is to make _______ easier to understand.",
+      "options": [
+        "Decisions",
+        "Calculations",
+        "Data",
+        "Programming"
+      ],
+      "correctAnswer": "Data",
+      "explanation": "The core objective of data visualization is translating complex data into graphical representations that make data easier to understand."
+    },
+    {
+      "question": "21. According to the Prospecting Theory, recruitment is the process of:",
+      "options": [
+        "Hiring the best candidates",
+        "Locating and encouraging potential applicants to apply for job openings",
+        "Conducting interviews",
+        "Screening resumes"
+      ],
+      "correctAnswer": "Locating and encouraging potential applicants to apply for job openings",
+      "explanation": "Under prospecting theory, recruitment is viewed as an active outreach process to discover prospective employees and encourage them to apply."
+    },
+    {
+      "question": "22. What is the primary focus of the Mating Theory in recruitment?",
+      "options": [
+        "One-way traffic",
+        "Two-way traffic linking jobs and job seekers",
+        "Screening processes",
+        "Employee retention"
+      ],
+      "correctAnswer": "Two-way traffic linking jobs and job seekers",
+      "explanation": "The mating theory of recruitment conceptualizes hiring as a two-way matching process where both organization and applicant assess mutual suitability."
+    },
+    {
+      "question": "23. Which of the following is NOT a factor restraining a firm while choosing a recruiting source?",
+      "options": [
+        "Poor image",
+        "Attractive job",
+        "Conservative internal policies",
+        "Limited budgetary support"
+      ],
+      "correctAnswer": "Attractive job",
+      "explanation": "An attractive job is an enabling factor / advantage, not a restraining constraint like poor image, budget constraints, or restrictive policies."
+    },
+    {
+      "question": "24. What is the main goal of the recruitment process?",
+      "options": [
+        "Narrowing the applicant pool",
+        "Widening the general pool or attracting more applicants",
+        "Conducting interviews",
+        "Hiring external candidates only"
+      ],
+      "correctAnswer": "Widening the general pool or attracting more applicants",
+      "explanation": "Recruitment focuses on generating a broad and qualified pool of candidates, whereas selection is the phase that narrows the pool."
+    },
+    {
+      "question": "25. Which company was experiencing an explosive growth in 2013 and is the world's largest professional network and employed modern recruitment methods?",
+      "options": [
+        "Google",
+        "Facebook",
+        "LinkedIn",
+        "Microsoft"
+      ],
+      "correctAnswer": "LinkedIn",
+      "explanation": "LinkedIn grew dramatically as the premier global professional social network and pioneered data-driven digital sourcing and recruitment."
+    },
+    {
+      "question": "26. LinkedIn's recruiting techniques include replacing cold calling with:",
+      "options": [
+        "Job fairs",
+        "Online advertisements",
+        "Warm connections through LinkedIn networks",
+        "Headhunters"
+      ],
+      "correctAnswer": "Warm connections through LinkedIn networks",
+      "explanation": "LinkedIn allows recruiters to leverage mutual 1st and 2nd degree connections to introduce warm outreach rather than blind cold calls."
+    },
+    {
+      "question": "27. What approach did LinkedIn use to identify the best candidates?",
+      "options": [
+        "Manual screening",
+        "Data-driven approach",
+        "Random selection",
+        "Traditional interviews"
+      ],
+      "correctAnswer": "Data-driven approach",
+      "explanation": "LinkedIn utilizes algorithmic matching, profile analytics, and data-driven talent insights to surface top talent."
+    },
+    {
+      "question": "28. For external hires, what type of candidates did LinkedIn focus on?",
+      "options": [
+        "Active job seekers",
+        "Passive candidates",
+        "Recent graduates",
+        "Unemployed individuals"
+      ],
+      "correctAnswer": "Passive candidates",
+      "explanation": "LinkedIn's competitive advantage lies in reaching passive candidates\u2014skilled professionals who are currently employed and not actively applying."
+    },
+    {
+      "question": "29. Which site is NOT listed as a famous job search site?",
+      "options": [
+        "naukri.com",
+        "monsterindia.com",
+        "careerindia.com",
+        "google.com"
+      ],
+      "correctAnswer": "google.com",
+      "explanation": "Google is a general web search engine, whereas Naukri, Monster India, and CareerIndia are dedicated job portal sites."
+    },
+    {
+      "question": "30. Which Act is NOT mentioned under the legal factors influencing recruitment?",
+      "options": [
+        "The Factories Act 1948",
+        "The Employment Exchanges Act 1959",
+        "The Companies Act 2013",
+        "The Child Labour Act 1986"
+      ],
+      "correctAnswer": "The Companies Act 2013",
+      "explanation": "Labor laws governing hiring include Factories Act, Employment Exchanges Act, and Child Labour Act; Companies Act 2013 governs corporate governance."
+    },
+    {
+      "question": "31. Selection is the process of:",
+      "options": [
+        "Picking individuals with relevant qualifications",
+        "Recruiting new employees",
+        "Training new employees",
+        "Conducting performance reviews"
+      ],
+      "correctAnswer": "Picking individuals with relevant qualifications",
+      "explanation": "Selection is the process of screening and evaluating candidates to choose those who possess the required qualifications for the job."
+    },
+    {
+      "question": "32. What is the purpose of the selection process?",
+      "options": [
+        "To choose the best candidate",
+        "To balance applicant capabilities with organizational needs",
+        "To conduct interviews",
+        "To offer job placements"
+      ],
+      "correctAnswer": "To balance applicant capabilities with organizational needs",
+      "explanation": "Selection aims to achieve alignment between the candidate's capabilities/competencies and the strategic requirements of the organization."
+    },
+    {
+      "question": "33. What is the first step in the selection process?",
+      "options": [
+        "Reference checks",
+        "Preliminary interview",
+        "Resume/CV review",
+        "Medical examination"
+      ],
+      "correctAnswer": "Resume/CV review",
+      "explanation": "Initial screening starts with reviewing resumes/CVs (or application forms) before proceeding to interviews and evaluations."
+    },
+    {
+      "question": "34. Which of the following is NOT a component of an application blank?",
+      "options": [
+        "Personal data",
+        "Employment data",
+        "Medical history",
+        "Educational data"
+      ],
+      "correctAnswer": "Medical history",
+      "explanation": "Standard application blanks collect personal details, educational qualifications, and work history. Medical history is handled in physical/health evaluations."
+    },
+    {
+      "question": "35. Internal sources of recruitment in India are generally used for temporary positions:",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "False",
+      "explanation": "Internal recruitment is primarily leveraged for regular/permanent promotions and role transfers rather than short-term temporary positions."
+    },
+    {
+      "question": "36. Which method of recruitment in India involves advertisements in newspapers and magazines?",
+      "options": [
+        "Direct method",
+        "Indirect method",
+        "Internal method",
+        "Third-party method"
+      ],
+      "correctAnswer": "Indirect method",
+      "explanation": "Public advertising via press, print media, and magazines is categorized as an indirect recruitment method."
+    },
+    {
+      "question": "37. Which recruitment site is NOT mentioned for use in India?",
+      "options": [
+        "Naukri.com",
+        "Monsterjobs.com",
+        "Google.com",
+        "Timesjob.com"
+      ],
+      "correctAnswer": "Google.com",
+      "explanation": "Naukri, Monsterjobs, and Timesjobs are recognized job portals; Google.com is a general web search engine."
+    },
+    {
+      "question": "38. What is a major problem in the Indian selection process?",
+      "options": [
+        "External influences",
+        "Clear selection procedure",
+        "Standard interviews",
+        "High transparency"
+      ],
+      "correctAnswer": "External influences",
+      "explanation": "Extraneous pressures, nepotism, and external subjective influences are documented challenges in selection systems."
+    },
+    {
+      "question": "39. In Japan, selection is based on:",
+      "options": [
+        "Job security",
+        "Performance of the team",
+        "Individual performance",
+        "Temporary contracts"
+      ],
+      "correctAnswer": "Performance of the team",
+      "explanation": "Japanese organizational culture values collectivism, teamwork, group harmony, and group/team performance."
+    },
+    {
+      "question": "40. Which recruitment practice is common in Japan?",
+      "options": [
+        "Short-term employment",
+        "Annual graduate recruitment",
+        "Hiring based on physical tests",
+        "Seasonal hiring"
+      ],
+      "correctAnswer": "Annual graduate recruitment",
+      "explanation": "Japan traditionally practices 'Shinsotsu Ikkatsu Saiyo' (simultaneous annual recruitment of fresh university graduates)."
+    },
+    {
+      "question": "41. What is the formula used to calculate the quality of hire?",
+      "options": [
+        "Quality of Hire = (PR + HP + HR) / 3",
+        "Quality of Hire = (PR * HP * HR) / 3",
+        "Quality of Hire = PR + HP + HR",
+        "Quality of Hire = PR - HP - HR"
+      ],
+      "correctAnswer": "Quality of Hire = (PR + HP + HR) / 3",
+      "explanation": "Quality of Hire (QoH) averages Job Performance (PR), Hiring Manager Satisfaction / Retention (HP), and New Hire Ramp-up / Retention (HR): (PR + HP + HR) / 3."
+    },
+    {
+      "question": "42. What is the purpose of using the quality of hire formula in the selection process outcome?",
+      "options": [
+        "To decrease employee retention rates",
+        "To increase the number of new hires",
+        "To assess the effectiveness of the hiring process in terms of performance, productivity, and retention",
+        "To evaluate the financial performance of the company"
+      ],
+      "correctAnswer": "To assess the effectiveness of the hiring process in terms of performance, productivity, and retention",
+      "explanation": "Quality of Hire metrics evaluate how successfully the recruitment and selection system brings in productive and lasting employees."
+    },
+    {
+      "question": "43. Which of the following metrics is commonly used in selection analytics to measure the effectiveness of the hiring process?",
+      "options": [
+        "Revenue growth",
+        "Employee satisfaction",
+        "Time to fill",
+        "Market share"
+      ],
+      "correctAnswer": "Time to fill",
+      "explanation": "Time to Fill measures the efficiency and duration of the hiring pipeline, making it a staple recruitment metric."
+    },
+    {
+      "question": "44. State True OR False: Visualization in recruitment and selection analytics helps in presenting complex data in a clear and intuitive manner.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "True",
+      "explanation": "Visualizations transform applicant pipeline and conversion data into actionable, easily interpretable visual insights."
+    },
+    {
+      "question": "45. Which of the following is a potential benefit of implementing selection analytics in an organization?",
+      "options": [
+        "Decreased employee engagement",
+        "Increased turnover rates",
+        "Improved hiring decisions and workforce productivity",
+        "Reduced training opportunities"
+      ],
+      "correctAnswer": "Improved hiring decisions and workforce productivity",
+      "explanation": "Selection analytics uses objective criteria to reduce bias, improve selection accuracy, and increase productivity."
+    },
+    {
+      "question": "46. What is the purpose of conducting predictive analytics in the context of selection?",
+      "options": [
+        "To analyze historical hiring trends",
+        "To identify potential future job openings",
+        "To evaluate the effectiveness of selection methods",
+        "To predict candidate job fit and performance"
+      ],
+      "correctAnswer": "To predict candidate job fit and performance",
+      "explanation": "Predictive selection models forecast candidate job success, cultural fit, and retention probabilities."
+    },
+    {
+      "question": "47. What type of insights can be gained from employee rejection analysis?",
+      "options": [
+        "Performance appraisal scores",
+        "Reasons for candidate disinterest",
+        "Sales revenue projections",
+        "Employee referral bonuses"
+      ],
+      "correctAnswer": "Reasons for candidate disinterest",
+      "explanation": "Analyzing offer rejections sheds light on offer competitiveness, compensation expectations, and candidate experience."
+    },
+    {
+      "question": "48. Why is testing important in the selection process?",
+      "options": [
+        "To increase employee turnover",
+        "To reduce recruitment costs",
+        "To assess candidates' skills and abilities objectively",
+        "To streamline the onboarding process"
+      ],
+      "correctAnswer": "To assess candidates' skills and abilities objectively",
+      "explanation": "Standardized tests provide objective, benchmarked measurement of candidates' technical competencies, cognitive abilities, or behavioral traits."
+    },
+    {
+      "question": "49. What does 'person-organization fit' refer to in recruitment?",
+      "options": [
+        "The candidate's ability to work remotely",
+        "The alignment between candidate values and organizational culture",
+        "The candidate's educational background",
+        "The candidate's previous work experience"
+      ],
+      "correctAnswer": "The alignment between candidate values and organizational culture",
+      "explanation": "Person-Organization (P-O) fit measures congruence between individual beliefs, values, and goals with the organizational culture and mission."
+    },
+    {
+      "question": "50. Assessing person-team fit during recruitment contributes to improved team _______ and cohesion.",
+      "options": [
+        "Productivity",
+        "Turnover",
+        "Absenteeism",
+        "Diversity"
+      ],
+      "correctAnswer": "Productivity",
+      "explanation": "High person-team fit fosters collaborative synergy, boosting overall team productivity and morale."
+    },
+    {
+      "question": "51. What is the primary goal of training?",
+      "options": [
+        "Improve employee satisfaction",
+        "Increase production efficiency",
+        "Reduce turnover",
+        "Improve performance and bring measurable changes"
+      ],
+      "correctAnswer": "Improve performance and bring measurable changes",
+      "explanation": "Training aims directly at closing skill gaps to enhance current job performance and produce quantifiable positive changes."
+    },
+    {
+      "question": "52. Which of the following is a feature of training?",
+      "options": [
+        "Long-term performance enhancement",
+        "Focus on the individual job",
+        "Future growth orientation",
+        "Theoretical knowledge improvement"
+      ],
+      "correctAnswer": "Focus on the individual job",
+      "explanation": "Training is job-specific and short-term focused, in contrast to education or broad employee development."
+    },
+    {
+      "question": "53. Training is essential for job success because it leads to:",
+      "options": [
+        "Higher production",
+        "Fewer mistakes",
+        "Greater job satisfaction",
+        "All of the above"
+      ],
+      "correctAnswer": "All of the above",
+      "explanation": "Effective training boosts output, reduces operational errors, and enhances employee competence and job satisfaction."
+    },
+    {
+      "question": "54. Training is concerned with:",
+      "options": [
+        "Teaching specific job-related skills",
+        "Personal growth",
+        "Long term career planning",
+        "Conceptual learning"
+      ],
+      "correctAnswer": "Teaching specific job-related skills",
+      "explanation": "Training imparts concrete, actionable skills required to execute specific operational job tasks."
+    },
+    {
+      "question": "55. Development is focussed on:",
+      "options": [
+        "Immediate job skills",
+        "Personal growth for future roles",
+        "Short-term performance",
+        "Job specific tasks"
+      ],
+      "correctAnswer": "Personal growth for future roles",
+      "explanation": "Unlike training which focuses on current job tasks, development is long-term and prepares individuals for future career roles."
+    },
+    {
+      "question": "56. Education differs from training in that it:",
+      "options": [
+        "Is more job-oriented",
+        "Focuses on skill learning",
+        "Is person-oriented and theory based",
+        "Concentrates on short term performance"
+      ],
+      "correctAnswer": "Is person-oriented and theory based",
+      "explanation": "Education emphasizes broad conceptual understanding, philosophical foundations, and personal growth rather than narrow task execution."
+    },
+    {
+      "question": "57. Which of the following is NOT a common training pitfall?",
+      "options": [
+        "Attempting to teach too quickly",
+        "Viewing all trainees as the same",
+        "Offering encouragement and praise",
+        "Giving very little time to practice"
+      ],
+      "correctAnswer": "Offering encouragement and praise",
+      "explanation": "Encouragement and positive reinforcement are instructional best practices, not pitfalls."
+    },
+    {
+      "question": "58. Which principle is NOT part of the learning principles in training?",
+      "options": [
+        "Modelling",
+        "Feedback",
+        "Theoretical learning",
+        "Spaced practice"
+      ],
+      "correctAnswer": "Theoretical learning",
+      "explanation": "Adult learning in corporate training centers on behavioral modelling, immediate feedback, and spaced repetition rather than abstract theoretical lectures."
+    },
+    {
+      "question": "59. The 'Bible' for McDonald's employees refers to ___________.",
+      "options": [
+        "Employee handbook",
+        "Recruitment manual",
+        "Operations and training manual",
+        "HR policy document"
+      ],
+      "correctAnswer": "Operations and training manual",
+      "explanation": "McDonald's comprehensive Operations and Training Manual standardizes all kitchen and service procedures globally."
+    },
+    {
+      "question": "60. Financial investment is generally not a focus of training.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "True",
+      "explanation": "Training focuses on human capital development and behavior modification rather than managing financial portfolios."
+    },
+    {
+      "question": "61. What is the primary purpose of executive development?",
+      "options": [
+        "To improve job-related skills",
+        "To prepare executives for diverse jobs and future challenges",
+        "To enhance physical fitness",
+        "To provide entertainment"
+      ],
+      "correctAnswer": "To prepare executives for diverse jobs and future challenges",
+      "explanation": "Executive development develops leadership competencies and strategic agility to navigate ambiguous future business challenges."
+    },
+    {
+      "question": "62. Which of the following is a key component of the Tata Group's Managerial Development Programme?",
+      "options": [
+        "International travel opportunities",
+        "Seven-week rural assignment",
+        "Corporate social responsibility projects",
+        "Digital skills training"
+      ],
+      "correctAnswer": "Seven-week rural assignment",
+      "explanation": "The prestigious Tata Administrative Service (TAS) and leadership programmes historically incorporate immersive rural development postings."
+    },
+    {
+      "question": "63. What method is described as a technique where a trainee is asked to investigate various papers that typically confront a manager and respond appropriately?",
+      "options": [
+        "Role play",
+        "In-basket",
+        "Sensitivity training",
+        "Case study"
+      ],
+      "correctAnswer": "In-basket",
+      "explanation": "The in-basket (or in-tray) exercise simulates a managerial inbox with emails, memos, and reports to assess prioritization and decision-making."
+    },
+    {
+      "question": "64. Which organization has customized its management development programs in collaboration with IIM Bangalore?",
+      "options": [
+        "Tata Group",
+        "Wipro",
+        "Cognizant Technologies",
+        "Infosys"
+      ],
+      "correctAnswer": "Cognizant Technologies",
+      "explanation": "Cognizant partnered with IIM Bangalore to design tailored executive leadership and managerial development curriculums."
+    },
+    {
+      "question": "65. What is the main objective of the Infosys Leadership Institute (ILI)?",
+      "options": [
+        "To develop coding skills",
+        "To prepare for overseas assignments",
+        "To develop managerial abilities and on-board leaders",
+        "To train in financial management"
+      ],
+      "correctAnswer": "To develop managerial abilities and on-board leaders",
+      "explanation": "The Infosys Leadership Institute (ILI) at Mysuru focuses on succession planning, executive leadership cultivation, and leadership onboarding."
+    },
+    {
+      "question": "66. Which of the following methods is aimed at promoting self-awareness and its impact on others?",
+      "options": [
+        "Job rotation",
+        "Sensitivity training",
+        "Multiple management",
+        "Business games"
+      ],
+      "correctAnswer": "Sensitivity training",
+      "explanation": "Sensitivity training (T-groups) provides unstructured group interaction to foster interpersonal sensitivity and deep self-awareness."
+    },
+    {
+      "question": "67. What is one of the benefits of using the 'case study' method in executive development?",
+      "options": [
+        "Cost-effective and quick to implement",
+        "Provides a real-life problem-solving experience",
+        "Offers unlimited chances to solve problems",
+        "Focuses on physical development"
+      ],
+      "correctAnswer": "Provides a real-life problem-solving experience",
+      "explanation": "Case studies present authentic, multidimensional organizational dilemmas for trainees to dissect and debate."
+    },
+    {
+      "question": "68. What is the focus of 'on-boarding' programs at Infosys Leadership Institute (ILI)?",
+      "options": [
+        "Financial management",
+        "Global marketing strategies",
+        "Advanced technical training",
+        "Orientation of new recruits on soft skills"
+      ],
+      "correctAnswer": "Orientation of new recruits on soft skills",
+      "explanation": "ILI onboarding integrates behavioral norms, professional communication, corporate values, and interpersonal soft skills."
+    },
+    {
+      "question": "69. Which of the following is NOT listed as a program under the Infosys Leadership Institute (ILI) for developing managerial abilities?",
+      "options": [
+        "Pravesh",
+        "Maestro",
+        "Diplomat",
+        "Visionary"
+      ],
+      "correctAnswer": "Visionary",
+      "explanation": "ILI structured its tiered leadership journey around specific branded tiers like Pravesh, Maestro, and Diplomat; 'Visionary' was not one of those tiers."
+    },
+    {
+      "question": "70. What is one of the demerits of the case study method as highlighted in the document?",
+      "options": [
+        "It is inexpensive to implement",
+        "It often fails to develop analytical abilities.",
+        "It is too realistic and closely mimics the trainee's workplace.",
+        "It requires little preparation or prior knowledge."
+      ],
+      "correctAnswer": "It often fails to develop analytical abilities.",
+      "explanation": "A recognized criticism is that passive or poorly facilitated discussions can devolve into opinions without rigorous data analysis."
+    },
+    {
+      "question": "71. What is the primary purpose of executive development?",
+      "options": [
+        "To improve job-related skills",
+        "To prepare executives for diverse jobs and future challenges",
+        "To enhance physical fitness",
+        "To provide entertainment"
+      ],
+      "correctAnswer": "To prepare executives for diverse jobs and future challenges",
+      "explanation": "Executive development builds comprehensive leadership capabilities for cross-functional agility and unpredictable future challenges."
+    },
+    {
+      "question": "72. State True OR False: Non-attainment of defined goals indicates that an organization has met all its planned objectives.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "False",
+      "explanation": "Non-attainment means failing to reach planned benchmarks and goals."
+    },
+    {
+      "question": "73. In the action-error cycle, what is a common consequence of not addressing errors promptly?",
+      "options": [
+        "Increased operational efficiency",
+        "Enhanced employee performance",
+        "Escalation of issues and larger negative impacts",
+        "Improved customer satisfaction"
+      ],
+      "correctAnswer": "Escalation of issues and larger negative impacts",
+      "explanation": "Ignoring initial operational errors leads to systemic compounding, escalation of costs, and wider organizational damage."
+    },
+    {
+      "question": "74. Metrics commonly used in _______ to evaluate employee performance include customer satisfaction scores.",
+      "options": [
+        "Employee ratings",
+        "Vendor ratings",
+        "Product ratings",
+        "Customer ratings"
+      ],
+      "correctAnswer": "Customer ratings",
+      "explanation": "Customer ratings and CSAT indices directly gauge frontline staff performance from the client's perspective."
+    },
+    {
+      "question": "75. What characterizes an ineffective performance in the workplace?",
+      "options": [
+        "Increased goal achievement percentage",
+        "Decreased turnover",
+        "Performance rating or goal achievement percent remains the same",
+        "Improved employee satisfaction"
+      ],
+      "correctAnswer": "Performance rating or goal achievement percent remains the same",
+      "explanation": "Stagnation or flatlining despite developmental interventions demonstrates lack of progression and ineffective performance."
+    },
+    {
+      "question": "76. What does the acronym MOOC stand for?",
+      "options": [
+        "Massive Operational Online Course",
+        "Multiple Online Operational Course",
+        "Massive Open Online Course",
+        "Managed Open Online Course"
+      ],
+      "correctAnswer": "Massive Open Online Course",
+      "explanation": "MOOC stands for Massive Open Online Course."
+    },
+    {
+      "question": "77. State True or False: Employee development analytics focuses solely on the financial performance of the company.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "False",
+      "explanation": "Development analytics evaluates skill acquisition, behavioral transformation, leadership readiness, and retention alongside financial ROI."
+    },
+    {
+      "question": "78. How can employee development analytics benefit the organization?",
+      "options": [
+        "By decreasing the number of employees",
+        "By reducing the number of training programs",
+        "By providing data-driven insights for better decision-making",
+        "By eliminating employee feedback"
+      ],
+      "correctAnswer": "By providing data-driven insights for better decision-making",
+      "explanation": "Analytics provides empirical evidence on training efficacy and capability distribution to optimize talent development investments."
+    },
+    {
+      "question": "79. Which tool can be used to measure the effectiveness of coaching and mentoring sessions?",
+      "options": [
+        "Financial statements, Balance Sheets",
+        "Employee performance evaluations and feedback surveys",
+        "Social media metrics",
+        "Marketing analysis"
+      ],
+      "correctAnswer": "Employee performance evaluations and feedback surveys",
+      "explanation": "Multi-rater feedback and 360-degree performance evaluations directly track behavioral shifts resulting from mentorship."
+    },
+    {
+      "question": "80. Which of the following scenarios would be classified as marginally effective?",
+      "options": [
+        "Employee's turnover rate increases significantly",
+        "Employee's performance rating remains the same",
+        "Employee engages in deviant behavior",
+        "Employee's performance rating improves slightly, and turnover decreases"
+      ],
+      "correctAnswer": "Employee's performance rating improves slightly, and turnover decreases",
+      "explanation": "Modest incremental progress accompanied by stabilizing retention is characteristic of marginally effective interventions."
+    },
+    {
+      "question": "81. What is the first step in the process of performance evaluation?",
+      "options": [
+        "Measure Actual Performance",
+        "Communicate the Standards",
+        "Establish Performance Standards",
+        "Review Performance Standards"
+      ],
+      "correctAnswer": "Establish Performance Standards",
+      "explanation": "Before performance can be measured or evaluated, objective performance standards and benchmarks must first be defined."
+    },
+    {
+      "question": "82. Aligning performance standards with company objectives is important because it ensures:",
+      "options": [
+        "Better employee morale",
+        "Increased competition among employees",
+        "Contributions are directed towards the company's mission and vision",
+        "Higher profit margins"
+      ],
+      "correctAnswer": "Contributions are directed towards the company's mission and vision",
+      "explanation": "Goal alignment guarantees that individual daily activities translate directly into the strategic mission of the enterprise."
+    },
+    {
+      "question": "83. In the case of 'AutoAdvance,' which component was added to employee performance standards?",
+      "options": [
+        "Customer service",
+        "Continuous improvement",
+        "Work-life balance",
+        "Sales targets"
+      ],
+      "correctAnswer": "Continuous improvement",
+      "explanation": "In the AutoAdvance case, continuous improvement (Kaizen principles) was formalized into employee KPIs."
+    },
+    {
+      "question": "84. What is a key element for continuous improvement in performance management?",
+      "options": [
+        "Annual feedback sessions",
+        "Static performance standards",
+        "Regular assessments and feedback cycles",
+        "Ignoring technology trends"
+      ],
+      "correctAnswer": "Regular assessments and feedback cycles",
+      "explanation": "Continuous improvement relies on frequent, agile check-ins rather than isolated annual reviews."
+    },
+    {
+      "question": "85. Effective communication of performance standards is essential to:",
+      "options": [
+        "Increase employee competition",
+        "Ensure employees understand job expectations",
+        "Reduce transparency in performance evaluations",
+        "Eliminate team collaboration"
+      ],
+      "correctAnswer": "Ensure employees understand job expectations",
+      "explanation": "Clear communication eliminates ambiguity and ensures employees know exactly what targets they need to hit."
+    },
+    {
+      "question": "86. What is the primary purpose of a Gantt chart in performance management?",
+      "options": [
+        "To assess employee behavior",
+        "To track the planned and actual days taken for each step in performance management",
+        "To monitor employee well-being",
+        "To calculate salary increments"
+      ],
+      "correctAnswer": "To track the planned and actual days taken for each step in performance management",
+      "explanation": "Gantt charts visually illustrate timelines, milestone progress, and planned vs. actual schedule variance."
+    },
+    {
+      "question": "87. What is analyzed to find skill rating and goal percentage mismatch?",
+      "options": [
+        "The number of trainings attended",
+        "Employee ratings across various skills and percentage of goal achievement",
+        "Employee attendance",
+        "The time taken for completing tasks"
+      ],
+      "correctAnswer": "Employee ratings across various skills and percentage of goal achievement",
+      "explanation": "Comparing competency assessment ratings against quantitative goal achievement exposes disconnects or evaluation inflation."
+    },
+    {
+      "question": "88. How is the performance review process typically represented in performance analytics?",
+      "options": [
+        "As a fixed annual review",
+        "Through Gantt charts showing the planned and actual days taken for the review process",
+        "Via personal interviews",
+        "By evaluating the time spent in meetings"
+      ],
+      "correctAnswer": "Through Gantt charts showing the planned and actual days taken for the review process",
+      "explanation": "Process analytics relies on Gantt timelines and process mapping to audit evaluation cycles."
+    },
+    {
+      "question": "89. Which of the following reasons is not associated with deflating performance ratings?",
+      "options": [
+        "Shock employees",
+        "Build a record of poor performance",
+        "Encourage employees",
+        "Teach a rebellious employee a lesson"
+      ],
+      "correctAnswer": "Encourage employees",
+      "explanation": "Artificial score deflation is often punitive (shocking, establishing termination grounds, disciplining); it does not encourage workers."
+    },
+    {
+      "question": "90. Employee satisfaction rate is not part of the important metrics listed for performance analysis.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "True",
+      "explanation": "Employee satisfaction is an engagement/climate metric rather than a direct job output metric."
+    },
+    {
+      "question": "91. What is the main purpose of performance measurement in driving business outcomes?",
+      "options": [
+        "To increase salaries",
+        "To assess the effectiveness of organizational performance measurement in achieving goals",
+        "To track the number of meetings",
+        "To decrease employee workload"
+      ],
+      "correctAnswer": "To assess the effectiveness of organizational performance measurement in achieving goals",
+      "explanation": "Performance measurement verifies whether strategic execution aligns with corporate objectives and delivers desired business results."
+    },
+    {
+      "question": "92. Which approach is used to align individual goals with organizational goals?",
+      "options": [
+        "Customer satisfaction approach",
+        "Balanced score approach",
+        "Leadership approach",
+        "Talent retention approach"
+      ],
+      "correctAnswer": "Balanced score approach",
+      "explanation": "The Balanced Scorecard (BSC) framework cascades overarching corporate goals down into divisional and individual KPIs."
+    },
+    {
+      "question": "93. Which of the following is a lead measure in internal learning and growth?",
+      "options": [
+        "Rate of new product development",
+        "Employee job satisfaction",
+        "Developing strategic competencies",
+        "Product defect rate"
+      ],
+      "correctAnswer": "Developing strategic competencies",
+      "explanation": "Developing strategic competencies is a leading driver that enables future innovation and business performance."
+    },
+    {
+      "question": "94. Which stakeholder is responsible for strategic indicators under the internal business processes in the balanced score approach?",
+      "options": [
+        "Accounting professionals",
+        "Internal customers",
+        "External customers",
+        "Employees"
+      ],
+      "correctAnswer": "Internal customers",
+      "explanation": "Internal process quality is directly consumed and driven by internal customers within the workflow value chain."
+    },
+    {
+      "question": "95. What is the Variable Performance Linked Pay (VPLP) used for in compensation?",
+      "options": [
+        "To reward employees for length of service",
+        "To link compensation directly to performance achievements",
+        "To provide non-financial benefits",
+        "To ensure equal pay across all departments"
+      ],
+      "correctAnswer": "To link compensation directly to performance achievements",
+      "explanation": "VPLP ties variable financial incentives to measurable objective achievement and key performance indicators."
+    },
+    {
+      "question": "96. Which of the following factors affects compensation plans within an organization?",
+      "options": [
+        "Gender and age",
+        "Work-life balance preferences",
+        "Family status",
+        "Job responsibilities and market competitiveness"
+      ],
+      "correctAnswer": "Job responsibilities and market competitiveness",
+      "explanation": "Legitimate compensation planning is grounded in job evaluations (scope/responsibilities) and external market benchmark rates."
+    },
+    {
+      "question": "97. In Skills Gap Analysis, what is the primary goal?",
+      "options": [
+        "To assess the availability of financial resources",
+        "To identify the differences between current workforce skills and the skills required to achieve strategic goals",
+        "To monitor employee engagement levels",
+        "To create salary structures based on job levels"
+      ],
+      "correctAnswer": "To identify the differences between current workforce skills and the skills required to achieve strategic goals",
+      "explanation": "Skills gap analysis quantifies current organizational proficiencies against target competencies needed to fulfill strategy."
+    },
+    {
+      "question": "98. Which metric helps in evaluating the effectiveness of a compensation strategy?",
+      "options": [
+        "Employee satisfaction scores and turnover rates",
+        "Number of promotions per year",
+        "Number of hours worked",
+        "Salary increments provided"
+      ],
+      "correctAnswer": "Employee satisfaction scores and turnover rates",
+      "explanation": "Compensation strategy health is reflected in low regrettable turnover and strong compensation satisfaction survey results."
+    },
+    {
+      "question": "99. Adaptation in HRM refers to:",
+      "options": [
+        "Monitoring employee engagement",
+        "Adjusting HR strategies in response to industry changes",
+        "Setting up flexible working hours",
+        "Improving employee wellness programs"
+      ],
+      "correctAnswer": "Adjusting HR strategies in response to industry changes",
+      "explanation": "Strategic HR adaptation entails aligning policies and talent capabilities with shifts in external competitive environments."
+    },
+    {
+      "question": "100. What was the focus of DataCorp's compensation strategy in the case study?",
+      "options": [
+        "Increasing employee benefits",
+        "Linking individual pay more closely with performance",
+        "Implementing job rotation programs",
+        "Creating a retirement savings plan"
+      ],
+      "correctAnswer": "Linking individual pay more closely with performance",
+      "explanation": "The DataCorp case study highlights redesigning compensation to strengthen the pay-for-performance connection."
+    },
+    {
+      "question": "101. What does 'compensation analytics' primarily focus on?",
+      "options": [
+        "Tracking employee attendance",
+        "Analyzing and optimizing employee compensation structures",
+        "Organizing company events",
+        "Designing office layouts"
+      ],
+      "correctAnswer": "Analyzing and optimizing employee compensation structures",
+      "explanation": "Compensation analytics evaluates wage structures, equity, incentive plans, and competitiveness to design cost-effective reward packages."
+    },
+    {
+      "question": "102. What is a 'pay mix policy'?",
+      "options": [
+        "The number of employees in each department",
+        "The combination of different types of compensation (salary, bonuses, benefits) offered to employees",
+        "The schedule of employee evaluations",
+        "The distribution of work hours among employees"
+      ],
+      "correctAnswer": "The combination of different types of compensation (salary, bonuses, benefits) offered to employees",
+      "explanation": "Pay mix specifies the ratio of fixed base salary, short-term bonuses, long-term equity, and employee benefits in total rewards."
+    },
+    {
+      "question": "103. State True or False: Pay increases can negatively affect employee morale if they are perceived as unfair.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "True",
+      "explanation": "According to equity theory, perceived inequities or favoritism in pay increases breed resentment and lower workplace morale."
+    },
+    {
+      "question": "104. What is the formula to calculate the percentage change in the Consumer Price Index (CPI)?",
+      "options": [
+        "(Current CPI - Previous CPI) / Current CPI * 100",
+        "(Previous CPI - Current CPI) / Previous CPI * 100",
+        "(Current CPI - Previous CPI) / Previous CPI * 100",
+        "(Previous CPI - Current CPI) / Current CPI * 100"
+      ],
+      "correctAnswer": "(Current CPI - Previous CPI) / Previous CPI * 100",
+      "explanation": "Percentage change measures inflation relative to the base period: ((Current CPI - Previous CPI) / Previous CPI) * 100."
+    },
+    {
+      "question": "105. What action might be taken if an employee has a very low Compa-Ratio?",
+      "options": [
+        "Decrease their pay",
+        "Maintain their current pay",
+        "Consider a pay increase to bring their salary closer to the midpoint",
+        "Reassign them to a different department"
+      ],
+      "correctAnswer": "Consider a pay increase to bring their salary closer to the midpoint",
+      "explanation": "A low compa-ratio (e.g. < 0.80) signals underpayment relative to the market/band midpoint, warranting an upward equity adjustment."
+    },
+    {
+      "question": "106. State True OR False: A Compa-Ratio of 1 indicates that the employee's pay is exactly at the midpoint of the pay range.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "True",
+      "explanation": "Compa-Ratio = Actual Salary / Range Midpoint. A value of 1.0 (or 100%) indicates pay matches the exact midpoint."
+    },
+    {
+      "question": "107. The midpoint in a pay range is determined by analyzing:",
+      "options": [
+        "Employee performance reviews",
+        "Annual company profits",
+        "Employee attendance records",
+        "Compensation survey data"
+      ],
+      "correctAnswer": "Compensation survey data",
+      "explanation": "Pay grade midpoints are benchmarked against competitive salary market data obtained from compensation surveys."
+    },
+    {
+      "question": "108. What does KRA stand for?",
+      "options": [
+        "Key Resource Allocation",
+        "Key Result Areas",
+        "Key Revenue Analysis",
+        "Key Recruitment Areas"
+      ],
+      "correctAnswer": "Key Result Areas",
+      "explanation": "KRA stands for Key Result Areas, defining the core outcomes an employee is accountable for delivering."
+    },
+    {
+      "question": "109. PMS, in HR terminology, refers to:",
+      "options": [
+        "Pay Management System",
+        "Project Monitoring System",
+        "Performance Management System",
+        "Personnel Management Strategy"
+      ],
+      "correctAnswer": "Performance Management System",
+      "explanation": "PMS stands for Performance Management System, encompassing goal-setting, performance tracking, appraisal, and development."
+    },
+    {
+      "question": "110. One of the key objectives of compensation analytics is to ensure _______ between employee pay and organizational goals.",
+      "options": [
+        "Alignment",
+        "Disparity",
+        "Inconsistency",
+        "Segregation"
+      ],
+      "correctAnswer": "Alignment",
+      "explanation": "Strategic compensation analytics ensures incentive structures align with organizational strategic goals."
+    },
+    {
+      "question": "111. What is Tableau primarily used for?",
+      "options": [
+        "Writing code",
+        "Data visualization and analytics",
+        "Web development",
+        "Email marketing"
+      ],
+      "correctAnswer": "Data visualization and analytics",
+      "explanation": "Tableau is a market-leading business intelligence software dedicated to interactive data visualization and analytics."
+    },
+    {
+      "question": "112. State True OR False: Tableau can connect to multiple data sources including Excel, SQL databases, and cloud services.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "True",
+      "explanation": "Tableau features native connectors for spreadsheets, relational databases, cloud data warehouses, and web services."
+    },
+    {
+      "question": "113. Which of the following is NOT a visualization type available in Tableau?",
+      "options": [
+        "Line Chart",
+        "Bar Chart",
+        "Scatter Plot",
+        "Text Document"
+      ],
+      "correctAnswer": "Text Document",
+      "explanation": "Tableau supports graphical chart types (line, bar, scatter, maps); 'Text Document' is a word processing document format."
+    },
+    {
+      "question": "114. What does 'aggregation' mean in Tableau?",
+      "options": [
+        "Filtering data",
+        "Summarizing data, such as calculating totals or averages",
+        "Connecting data sources",
+        "Exporting data"
+      ],
+      "correctAnswer": "Summarizing data, such as calculating totals or averages",
+      "explanation": "Aggregation performs mathematical summaries over data records, such as SUM, AVG, MIN, MAX, and COUNT."
+    },
+    {
+      "question": "115. State True or False: Tableau Public is a free version of Tableau that allows users to publish their visualizations to the web.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "True",
+      "explanation": "Tableau Public is free software where authors share interactive dashboards publicly online."
+    },
+    {
+      "question": "116. How does Tableau help users gain insights from large and complex datasets?",
+      "options": [
+        "By automatically generating reports and summaries",
+        "By providing predefined charts and graphs",
+        "By allowing users to create interactive visualizations and perform ad hoc analysis",
+        "By offering data transformation and blending capabilities"
+      ],
+      "correctAnswer": "By allowing users to create interactive visualizations and perform ad hoc analysis",
+      "explanation": "Tableau's drag-and-drop visual interface lets users interactively explore and query complex data on the fly."
+    },
+    {
+      "question": "117. In Tableau, which component is used to display a summary of data or trends in a visual format?",
+      "options": [
+        "Sheet",
+        "Dashboard",
+        "Data Pane",
+        "Parameter"
+      ],
+      "correctAnswer": "Dashboard",
+      "explanation": "A dashboard combines multiple worksheets and visual trends into a single consolidated view for executive monitoring."
+    },
+    {
+      "question": "118. Which of the following is NOT a file type that Tableau can connect to?",
+      "options": [
+        "Excel",
+        "SQL Database",
+        "PDF",
+        "Google Sheets"
+      ],
+      "correctAnswer": "PDF",
+      "explanation": "While Tableau has added basic tabular text extraction from PDFs, native server-based live structured connectivity applies to Excel, SQL databases, and Google Sheets."
+    },
+    {
+      "question": "119. Tableau allows for _______ analysis, enabling users to explore data from different perspectives.",
+      "options": [
+        "Multidimensional",
+        "Unidirectional",
+        "Linear",
+        "Static"
+      ],
+      "correctAnswer": "Multidimensional",
+      "explanation": "Tableau's OLAP-like visual architecture facilitates multidimensional slicing, dicing, and drill-down analysis across measures and dimensions."
+    },
+    {
+      "question": "120. In Tableau, what is a 'worksheet'?",
+      "options": [
+        "A collection of dashboards",
+        "A single view containing a single visualization",
+        "A database of HR data",
+        "A script for data analysis"
+      ],
+      "correctAnswer": "A single view containing a single visualization",
+      "explanation": "In Tableau, a worksheet contains a single visual representation/view, which can later be assembled into multi-sheet dashboards."
+    }
+  ]
+},
+{
+  "id": "hr-analytics-2024-week-1",
+  "title": "HR Analytics (2024) - Week 1 Assignment 1",
+  "subject": "HR Analytics (2024)",
+  "date": "07/08/2024",
+  "questions": [
+    {
+      "question": "1. HR Analytics can help in which of the following ways?",
+      "options": [
+        "Increasing product sales",
+        "Reducing the company's marketing budget",
+        "Enhancing customer service quality",
+        "Improving employee retention"
+      ],
+      "correctAnswer": "Improving employee retention",
+      "explanation": "HR Analytics focuses on workforce data and talent management, helping organizations improve employee retention, engagement, and productivity."
+    },
+    {
+      "question": "2. In HR Analytics, what does 'data cleaning' refer to?",
+      "options": [
+        "Archiving old employee records",
+        "Organizing employee files",
+        "Encrypting sensitive data",
+        "Correcting or removing inaccurate data from datasets"
+      ],
+      "correctAnswer": "Correcting or removing inaccurate data from datasets",
+      "explanation": "Data cleaning (or data cleansing) is the process of identifying and correcting or removing corrupt, inaccurate, incomplete, or duplicate data from a dataset."
+    },
+    {
+      "question": "3. What does KPI stand for?",
+      "options": [
+        "Key Product Indicator",
+        "Key Profit Indicator",
+        "Key Performance Indicator",
+        "Key Project Indicator"
+      ],
+      "correctAnswer": "Key Performance Indicator",
+      "explanation": "KPI stands for Key Performance Indicator, a quantifiable measure used to evaluate the success of an organization or employee in reaching targets."
+    },
+    {
+      "question": "4. State True OR False: HRIS is primarily used for customer relationship management.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "False",
+      "explanation": "HRIS (Human Resource Information System) is used for managing human resources and employee data, whereas CRM (Customer Relationship Management) is used for customer relationships."
+    },
+    {
+      "question": "5. What type of analytics answers the question 'What did happen'?",
+      "options": [
+        "Predictive analytics",
+        "Descriptive analytics",
+        "Diagnostic analytics",
+        "Prescriptive analytics"
+      ],
+      "correctAnswer": "Descriptive analytics",
+      "explanation": "Descriptive analytics summarizes historical data to understand 'what happened' in the past."
+    },
+    {
+      "question": "6. What is the average value of a data set called?",
+      "options": [
+        "Median",
+        "Mode",
+        "Mean",
+        "Standard deviation"
+      ],
+      "correctAnswer": "Mean",
+      "explanation": "The mean is calculated by summing all values and dividing by the total count, representing the mathematical average."
+    },
+    {
+      "question": "7. What does the LAMP model in HR analytics stand for?",
+      "options": [
+        "Logic, Analytics, Measures, Processes",
+        "Leadership, Analytics, Management, Performance",
+        "Learning, Assessment, Measurement, Planning",
+        "Logic, Assessment, Metrics, Procedures"
+      ],
+      "correctAnswer": "Logic, Analytics, Measures, Processes",
+      "explanation": "The LAMP model, introduced by Cascio and Boudreau, stands for Logic, Analytics, Measures, and Process."
+    },
+    {
+      "question": "8. State True OR False: The HR scorecard is only used for measuring employee satisfaction.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "False",
+      "explanation": "The HR Scorecard links HR activities and competencies to broader organizational strategy and business outcomes, not merely employee satisfaction."
+    },
+    {
+      "question": "9. What is the primary focus of prescriptive analytics?",
+      "options": [
+        "Describing past events",
+        "Explaining why past events happened",
+        "Predicting future events",
+        "Suggesting actions to achieve desired outcomes"
+      ],
+      "correctAnswer": "Suggesting actions to achieve desired outcomes",
+      "explanation": "Prescriptive analytics goes beyond predicting outcomes by recommending optimal actions and decision options to achieve desired business results."
+    },
+    {
+      "question": "10. Which of the following is NOT a common data source for HR Analytics?",
+      "options": [
+        "Employee performance records",
+        "Customer feedback",
+        "Attendance records",
+        "Compensation details"
+      ],
+      "correctAnswer": "Customer feedback",
+      "explanation": "HR Analytics primarily leverages internal workforce data like attendance, performance evaluations, and compensation. Customer feedback is a marketing/sales metric."
+    }
+  ]
+},
+{
+  "id": "hr-analytics-2024-week-2",
+  "title": "HR Analytics (2024) - Week 2 Assignment 2",
+  "subject": "HR Analytics (2024)",
+  "date": "07/08/2024",
+  "questions": [
+    {
+      "question": "1. What is the first step in the data analytics process?",
+      "options": [
+        "Data Preparation",
+        "Data Collection",
+        "Data Analysis",
+        "Data Visualization"
+      ],
+      "correctAnswer": "Data Collection",
+      "explanation": "The analytics workflow begins with data collection (gathering raw data from relevant sources) before cleaning, preparing, analyzing, or visualizing."
+    },
+    {
+      "question": "2. What does Power BI stand for?",
+      "options": [
+        "Business Intelligence",
+        "Business Insights",
+        "Business Integration",
+        "Business Innovation"
+      ],
+      "correctAnswer": "Business Intelligence",
+      "explanation": "In Microsoft Power BI, 'BI' stands for Business Intelligence."
+    },
+    {
+      "question": "3. What is a common tool for creating data visualizations in Excel?",
+      "options": [
+        "PivotTable",
+        "VLOOKUP",
+        "SUM function",
+        "Data Validation"
+      ],
+      "correctAnswer": "PivotTable",
+      "explanation": "PivotTables (and associated PivotCharts) are the foundational Excel tools for aggregating, summarizing, and visually exploring complex tabular data."
+    },
+    {
+      "question": "4. What is the purpose of data preparation in the data analytics process?",
+      "options": [
+        "To visualize data",
+        "To clean and organize data for analysis",
+        "To collect data",
+        "To present findings"
+      ],
+      "correctAnswer": "To clean and organize data for analysis",
+      "explanation": "Data preparation involves transforming, structuring, and cleaning raw datasets so they are suitable for robust analysis."
+    },
+    {
+      "question": "5. Which Excel feature is used to create visual representations of data?",
+      "options": [
+        "Data Validation",
+        "Charts and Graphs",
+        "Data Bars",
+        "Pivot Tables"
+      ],
+      "correctAnswer": "Charts and Graphs",
+      "explanation": "Excel's Charts and Graphs feature provides explicit graphical representations (bar, column, line, scatter) of numerical data."
+    },
+    {
+      "question": "6. State True OR False: Findings should not be presented in a clear and concise manner to facilitate decision-making.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "False",
+      "explanation": "Analytics findings must be communicated clearly and concisely so stakeholders can make well-informed business decisions."
+    },
+    {
+      "question": "7. Which of the following is NOT a visualization best practice in Power BI?",
+      "options": [
+        "Using appropriate color schemes",
+        "Adding too much detail to visualizations",
+        "Ensuring readability and clarity",
+        "Providing clear titles and labels"
+      ],
+      "correctAnswer": "Adding too much detail to visualizations",
+      "explanation": "Overcrowding or cluttering dashboards with excessive detail obscures insights and degrades usability."
+    },
+    {
+      "question": "8. State True OR False: Data collection can include importing data from online databases, Excel files, and CSV files.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "True",
+      "explanation": "Data collection commonly involves ingesting data from varied external and internal formats including SQL/online databases, CSVs, and Excel spreadsheets."
+    },
+    {
+      "question": "9. State True OR False: Data visualization does not help in identifying patterns and trends in the data.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "False",
+      "explanation": "Visualizations are specifically designed to reveal patterns, trends, outliers, and correlations that are difficult to see in raw tabular numbers."
+    },
+    {
+      "question": "10. One of the primary goals of data visualization is to make _______ easier to understand.",
+      "options": [
+        "Decisions",
+        "Calculations",
+        "Data",
+        "Programming"
+      ],
+      "correctAnswer": "Data",
+      "explanation": "The core objective of data visualization is translating complex data into graphical representations that make data easier to understand."
+    }
+  ]
+},
+{
+  "id": "hr-analytics-2024-week-3",
+  "title": "HR Analytics (2024) - Week 3 Assignment 3",
+  "subject": "HR Analytics (2024)",
+  "date": "14/08/2024",
+  "questions": [
+    {
+      "question": "1. According to the Prospecting Theory, recruitment is the process of:",
+      "options": [
+        "Hiring the best candidates",
+        "Locating and encouraging potential applicants to apply for job openings",
+        "Conducting interviews",
+        "Screening resumes"
+      ],
+      "correctAnswer": "Locating and encouraging potential applicants to apply for job openings",
+      "explanation": "Under prospecting theory, recruitment is viewed as an active outreach process to discover prospective employees and encourage them to apply."
+    },
+    {
+      "question": "2. What is the primary focus of the Mating Theory in recruitment?",
+      "options": [
+        "One-way traffic",
+        "Two-way traffic linking jobs and job seekers",
+        "Screening processes",
+        "Employee retention"
+      ],
+      "correctAnswer": "Two-way traffic linking jobs and job seekers",
+      "explanation": "The mating theory of recruitment conceptualizes hiring as a two-way matching process where both organization and applicant assess mutual suitability."
+    },
+    {
+      "question": "3. Which of the following is NOT a factor restraining a firm while choosing a recruiting source?",
+      "options": [
+        "Poor image",
+        "Attractive job",
+        "Conservative internal policies",
+        "Limited budgetary support"
+      ],
+      "correctAnswer": "Attractive job",
+      "explanation": "An attractive job is an enabling factor / advantage, not a restraining constraint like poor image, budget constraints, or restrictive policies."
+    },
+    {
+      "question": "4. What is the main goal of the recruitment process?",
+      "options": [
+        "Narrowing the applicant pool",
+        "Widening the general pool or attracting more applicants",
+        "Conducting interviews",
+        "Hiring external candidates only"
+      ],
+      "correctAnswer": "Widening the general pool or attracting more applicants",
+      "explanation": "Recruitment focuses on generating a broad and qualified pool of candidates, whereas selection is the phase that narrows the pool."
+    },
+    {
+      "question": "5. Which company was experiencing an explosive growth in 2013 and is the world's largest professional network and employed modern recruitment methods?",
+      "options": [
+        "Google",
+        "Facebook",
+        "LinkedIn",
+        "Microsoft"
+      ],
+      "correctAnswer": "LinkedIn",
+      "explanation": "LinkedIn grew dramatically as the premier global professional social network and pioneered data-driven digital sourcing and recruitment."
+    },
+    {
+      "question": "6. LinkedIn's recruiting techniques include replacing cold calling with:",
+      "options": [
+        "Job fairs",
+        "Online advertisements",
+        "Warm connections through LinkedIn networks",
+        "Headhunters"
+      ],
+      "correctAnswer": "Warm connections through LinkedIn networks",
+      "explanation": "LinkedIn allows recruiters to leverage mutual 1st and 2nd degree connections to introduce warm outreach rather than blind cold calls."
+    },
+    {
+      "question": "7. What approach did LinkedIn use to identify the best candidates?",
+      "options": [
+        "Manual screening",
+        "Data-driven approach",
+        "Random selection",
+        "Traditional interviews"
+      ],
+      "correctAnswer": "Data-driven approach",
+      "explanation": "LinkedIn utilizes algorithmic matching, profile analytics, and data-driven talent insights to surface top talent."
+    },
+    {
+      "question": "8. For external hires, what type of candidates did LinkedIn focus on?",
+      "options": [
+        "Active job seekers",
+        "Passive candidates",
+        "Recent graduates",
+        "Unemployed individuals"
+      ],
+      "correctAnswer": "Passive candidates",
+      "explanation": "LinkedIn's competitive advantage lies in reaching passive candidates\u2014skilled professionals who are currently employed and not actively applying."
+    },
+    {
+      "question": "9. Which site is NOT listed as a famous job search site?",
+      "options": [
+        "naukri.com",
+        "monsterindia.com",
+        "careerindia.com",
+        "google.com"
+      ],
+      "correctAnswer": "google.com",
+      "explanation": "Google is a general web search engine, whereas Naukri, Monster India, and CareerIndia are dedicated job portal sites."
+    },
+    {
+      "question": "10. Which Act is NOT mentioned under the legal factors influencing recruitment?",
+      "options": [
+        "The Factories Act 1948",
+        "The Employment Exchanges Act 1959",
+        "The Companies Act 2013",
+        "The Child Labour Act 1986"
+      ],
+      "correctAnswer": "The Companies Act 2013",
+      "explanation": "Labor laws governing hiring include Factories Act, Employment Exchanges Act, and Child Labour Act; Companies Act 2013 governs corporate governance."
+    }
+  ]
+},
+{
+  "id": "hr-analytics-2024-week-4",
+  "title": "HR Analytics (2024) - Week 4 Assignment 4",
+  "subject": "HR Analytics (2024)",
+  "date": "21/08/2024",
+  "questions": [
+    {
+      "question": "1. Selection is the process of:",
+      "options": [
+        "Picking individuals with relevant qualifications",
+        "Recruiting new employees",
+        "Training new employees",
+        "Conducting performance reviews"
+      ],
+      "correctAnswer": "Picking individuals with relevant qualifications",
+      "explanation": "Selection is the process of screening and evaluating candidates to choose those who possess the required qualifications for the job."
+    },
+    {
+      "question": "2. What is the purpose of the selection process?",
+      "options": [
+        "To choose the best candidate",
+        "To balance applicant capabilities with organizational needs",
+        "To conduct interviews",
+        "To offer job placements"
+      ],
+      "correctAnswer": "To balance applicant capabilities with organizational needs",
+      "explanation": "Selection aims to achieve alignment between the candidate's capabilities/competencies and the strategic requirements of the organization."
+    },
+    {
+      "question": "3. What is the first step in the selection process?",
+      "options": [
+        "Reference checks",
+        "Preliminary interview",
+        "Resume/CV review",
+        "Medical examination"
+      ],
+      "correctAnswer": "Resume/CV review",
+      "explanation": "Initial screening starts with reviewing resumes/CVs (or application forms) before proceeding to interviews and evaluations."
+    },
+    {
+      "question": "4. Which of the following is NOT a component of an application blank?",
+      "options": [
+        "Personal data",
+        "Employment data",
+        "Medical history",
+        "Educational data"
+      ],
+      "correctAnswer": "Medical history",
+      "explanation": "Standard application blanks collect personal details, educational qualifications, and work history. Medical history is handled in physical/health evaluations."
+    },
+    {
+      "question": "5. Internal sources of recruitment in India are generally used for temporary positions:",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "False",
+      "explanation": "Internal recruitment is primarily leveraged for regular/permanent promotions and role transfers rather than short-term temporary positions."
+    },
+    {
+      "question": "6. Which method of recruitment in India involves advertisements in newspapers and magazines?",
+      "options": [
+        "Direct method",
+        "Indirect method",
+        "Internal method",
+        "Third-party method"
+      ],
+      "correctAnswer": "Indirect method",
+      "explanation": "Public advertising via press, print media, and magazines is categorized as an indirect recruitment method."
+    },
+    {
+      "question": "7. Which recruitment site is NOT mentioned for use in India?",
+      "options": [
+        "Naukri.com",
+        "Monsterjobs.com",
+        "Google.com",
+        "Timesjob.com"
+      ],
+      "correctAnswer": "Google.com",
+      "explanation": "Naukri, Monsterjobs, and Timesjobs are recognized job portals; Google.com is a general web search engine."
+    },
+    {
+      "question": "8. What is a major problem in the Indian selection process?",
+      "options": [
+        "External influences",
+        "Clear selection procedure",
+        "Standard interviews",
+        "High transparency"
+      ],
+      "correctAnswer": "External influences",
+      "explanation": "Extraneous pressures, nepotism, and external subjective influences are documented challenges in selection systems."
+    },
+    {
+      "question": "9. In Japan, selection is based on:",
+      "options": [
+        "Job security",
+        "Performance of the team",
+        "Individual performance",
+        "Temporary contracts"
+      ],
+      "correctAnswer": "Performance of the team",
+      "explanation": "Japanese organizational culture values collectivism, teamwork, group harmony, and group/team performance."
+    },
+    {
+      "question": "10. Which recruitment practice is common in Japan?",
+      "options": [
+        "Short-term employment",
+        "Annual graduate recruitment",
+        "Hiring based on physical tests",
+        "Seasonal hiring"
+      ],
+      "correctAnswer": "Annual graduate recruitment",
+      "explanation": "Japan traditionally practices 'Shinsotsu Ikkatsu Saiyo' (simultaneous annual recruitment of fresh university graduates)."
+    }
+  ]
+},
+{
+  "id": "hr-analytics-2024-week-5",
+  "title": "HR Analytics (2024) - Week 5 Assignment 5",
+  "subject": "HR Analytics (2024)",
+  "date": "28/08/2024",
+  "questions": [
+    {
+      "question": "1. What is the formula used to calculate the quality of hire?",
+      "options": [
+        "Quality of Hire = (PR + HP + HR) / 3",
+        "Quality of Hire = (PR * HP * HR) / 3",
+        "Quality of Hire = PR + HP + HR",
+        "Quality of Hire = PR - HP - HR"
+      ],
+      "correctAnswer": "Quality of Hire = (PR + HP + HR) / 3",
+      "explanation": "Quality of Hire (QoH) averages Job Performance (PR), Hiring Manager Satisfaction / Retention (HP), and New Hire Ramp-up / Retention (HR): (PR + HP + HR) / 3."
+    },
+    {
+      "question": "2. What is the purpose of using the quality of hire formula in the selection process outcome?",
+      "options": [
+        "To decrease employee retention rates",
+        "To increase the number of new hires",
+        "To assess the effectiveness of the hiring process in terms of performance, productivity, and retention",
+        "To evaluate the financial performance of the company"
+      ],
+      "correctAnswer": "To assess the effectiveness of the hiring process in terms of performance, productivity, and retention",
+      "explanation": "Quality of Hire metrics evaluate how successfully the recruitment and selection system brings in productive and lasting employees."
+    },
+    {
+      "question": "3. Which of the following metrics is commonly used in selection analytics to measure the effectiveness of the hiring process?",
+      "options": [
+        "Revenue growth",
+        "Employee satisfaction",
+        "Time to fill",
+        "Market share"
+      ],
+      "correctAnswer": "Time to fill",
+      "explanation": "Time to Fill measures the efficiency and duration of the hiring pipeline, making it a staple recruitment metric."
+    },
+    {
+      "question": "4. State True OR False: Visualization in recruitment and selection analytics helps in presenting complex data in a clear and intuitive manner.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "True",
+      "explanation": "Visualizations transform applicant pipeline and conversion data into actionable, easily interpretable visual insights."
+    },
+    {
+      "question": "5. Which of the following is a potential benefit of implementing selection analytics in an organization?",
+      "options": [
+        "Decreased employee engagement",
+        "Increased turnover rates",
+        "Improved hiring decisions and workforce productivity",
+        "Reduced training opportunities"
+      ],
+      "correctAnswer": "Improved hiring decisions and workforce productivity",
+      "explanation": "Selection analytics uses objective criteria to reduce bias, improve selection accuracy, and increase productivity."
+    },
+    {
+      "question": "6. What is the purpose of conducting predictive analytics in the context of selection?",
+      "options": [
+        "To analyze historical hiring trends",
+        "To identify potential future job openings",
+        "To evaluate the effectiveness of selection methods",
+        "To predict candidate job fit and performance"
+      ],
+      "correctAnswer": "To predict candidate job fit and performance",
+      "explanation": "Predictive selection models forecast candidate job success, cultural fit, and retention probabilities."
+    },
+    {
+      "question": "7. What type of insights can be gained from employee rejection analysis?",
+      "options": [
+        "Performance appraisal scores",
+        "Reasons for candidate disinterest",
+        "Sales revenue projections",
+        "Employee referral bonuses"
+      ],
+      "correctAnswer": "Reasons for candidate disinterest",
+      "explanation": "Analyzing offer rejections sheds light on offer competitiveness, compensation expectations, and candidate experience."
+    },
+    {
+      "question": "8. Why is testing important in the selection process?",
+      "options": [
+        "To increase employee turnover",
+        "To reduce recruitment costs",
+        "To assess candidates' skills and abilities objectively",
+        "To streamline the onboarding process"
+      ],
+      "correctAnswer": "To assess candidates' skills and abilities objectively",
+      "explanation": "Standardized tests provide objective, benchmarked measurement of candidates' technical competencies, cognitive abilities, or behavioral traits."
+    },
+    {
+      "question": "9. What does 'person-organization fit' refer to in recruitment?",
+      "options": [
+        "The candidate's ability to work remotely",
+        "The alignment between candidate values and organizational culture",
+        "The candidate's educational background",
+        "The candidate's previous work experience"
+      ],
+      "correctAnswer": "The alignment between candidate values and organizational culture",
+      "explanation": "Person-Organization (P-O) fit measures congruence between individual beliefs, values, and goals with the organizational culture and mission."
+    },
+    {
+      "question": "10. Assessing person-team fit during recruitment contributes to improved team _______ and cohesion.",
+      "options": [
+        "Productivity",
+        "Turnover",
+        "Absenteeism",
+        "Diversity"
+      ],
+      "correctAnswer": "Productivity",
+      "explanation": "High person-team fit fosters collaborative synergy, boosting overall team productivity and morale."
+    }
+  ]
+},
+{
+  "id": "hr-analytics-2024-week-6",
+  "title": "HR Analytics (2024) - Week 6 Assignment 6",
+  "subject": "HR Analytics (2024)",
+  "date": "04/09/2024",
+  "questions": [
+    {
+      "question": "1. What is the primary goal of training?",
+      "options": [
+        "Improve employee satisfaction",
+        "Increase production efficiency",
+        "Reduce turnover",
+        "Improve performance and bring measurable changes"
+      ],
+      "correctAnswer": "Improve performance and bring measurable changes",
+      "explanation": "Training aims directly at closing skill gaps to enhance current job performance and produce quantifiable positive changes."
+    },
+    {
+      "question": "2. Which of the following is a feature of training?",
+      "options": [
+        "Long-term performance enhancement",
+        "Focus on the individual job",
+        "Future growth orientation",
+        "Theoretical knowledge improvement"
+      ],
+      "correctAnswer": "Focus on the individual job",
+      "explanation": "Training is job-specific and short-term focused, in contrast to education or broad employee development."
+    },
+    {
+      "question": "3. Training is essential for job success because it leads to:",
+      "options": [
+        "Higher production",
+        "Fewer mistakes",
+        "Greater job satisfaction",
+        "All of the above"
+      ],
+      "correctAnswer": "All of the above",
+      "explanation": "Effective training boosts output, reduces operational errors, and enhances employee competence and job satisfaction."
+    },
+    {
+      "question": "4. Training is concerned with:",
+      "options": [
+        "Teaching specific job-related skills",
+        "Personal growth",
+        "Long term career planning",
+        "Conceptual learning"
+      ],
+      "correctAnswer": "Teaching specific job-related skills",
+      "explanation": "Training imparts concrete, actionable skills required to execute specific operational job tasks."
+    },
+    {
+      "question": "5. Development is focussed on:",
+      "options": [
+        "Immediate job skills",
+        "Personal growth for future roles",
+        "Short-term performance",
+        "Job specific tasks"
+      ],
+      "correctAnswer": "Personal growth for future roles",
+      "explanation": "Unlike training which focuses on current job tasks, development is long-term and prepares individuals for future career roles."
+    },
+    {
+      "question": "6. Education differs from training in that it:",
+      "options": [
+        "Is more job-oriented",
+        "Focuses on skill learning",
+        "Is person-oriented and theory based",
+        "Concentrates on short term performance"
+      ],
+      "correctAnswer": "Is person-oriented and theory based",
+      "explanation": "Education emphasizes broad conceptual understanding, philosophical foundations, and personal growth rather than narrow task execution."
+    },
+    {
+      "question": "7. Which of the following is NOT a common training pitfall?",
+      "options": [
+        "Attempting to teach too quickly",
+        "Viewing all trainees as the same",
+        "Offering encouragement and praise",
+        "Giving very little time to practice"
+      ],
+      "correctAnswer": "Offering encouragement and praise",
+      "explanation": "Encouragement and positive reinforcement are instructional best practices, not pitfalls."
+    },
+    {
+      "question": "8. Which principle is NOT part of the learning principles in training?",
+      "options": [
+        "Modelling",
+        "Feedback",
+        "Theoretical learning",
+        "Spaced practice"
+      ],
+      "correctAnswer": "Theoretical learning",
+      "explanation": "Adult learning in corporate training centers on behavioral modelling, immediate feedback, and spaced repetition rather than abstract theoretical lectures."
+    },
+    {
+      "question": "9. The 'Bible' for McDonald's employees refers to ___________.",
+      "options": [
+        "Employee handbook",
+        "Recruitment manual",
+        "Operations and training manual",
+        "HR policy document"
+      ],
+      "correctAnswer": "Operations and training manual",
+      "explanation": "McDonald's comprehensive Operations and Training Manual standardizes all kitchen and service procedures globally."
+    },
+    {
+      "question": "10. Financial investment is generally not a focus of training.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "True",
+      "explanation": "Training focuses on human capital development and behavior modification rather than managing financial portfolios."
+    }
+  ]
+},
+{
+  "id": "hr-analytics-2024-week-7",
+  "title": "HR Analytics (2024) - Week 7 Assignment 7",
+  "subject": "HR Analytics (2024)",
+  "date": "11/09/2024",
+  "questions": [
+    {
+      "question": "1. What is the primary purpose of executive development?",
+      "options": [
+        "To improve job-related skills",
+        "To prepare executives for diverse jobs and future challenges",
+        "To enhance physical fitness",
+        "To provide entertainment"
+      ],
+      "correctAnswer": "To prepare executives for diverse jobs and future challenges",
+      "explanation": "Executive development develops leadership competencies and strategic agility to navigate ambiguous future business challenges."
+    },
+    {
+      "question": "2. Which of the following is a key component of the Tata Group's Managerial Development Programme?",
+      "options": [
+        "International travel opportunities",
+        "Seven-week rural assignment",
+        "Corporate social responsibility projects",
+        "Digital skills training"
+      ],
+      "correctAnswer": "Seven-week rural assignment",
+      "explanation": "The prestigious Tata Administrative Service (TAS) and leadership programmes historically incorporate immersive rural development postings."
+    },
+    {
+      "question": "3. What method is described as a technique where a trainee is asked to investigate various papers that typically confront a manager and respond appropriately?",
+      "options": [
+        "Role play",
+        "In-basket",
+        "Sensitivity training",
+        "Case study"
+      ],
+      "correctAnswer": "In-basket",
+      "explanation": "The in-basket (or in-tray) exercise simulates a managerial inbox with emails, memos, and reports to assess prioritization and decision-making."
+    },
+    {
+      "question": "4. Which organization has customized its management development programs in collaboration with IIM Bangalore?",
+      "options": [
+        "Tata Group",
+        "Wipro",
+        "Cognizant Technologies",
+        "Infosys"
+      ],
+      "correctAnswer": "Cognizant Technologies",
+      "explanation": "Cognizant partnered with IIM Bangalore to design tailored executive leadership and managerial development curriculums."
+    },
+    {
+      "question": "5. What is the main objective of the Infosys Leadership Institute (ILI)?",
+      "options": [
+        "To develop coding skills",
+        "To prepare for overseas assignments",
+        "To develop managerial abilities and on-board leaders",
+        "To train in financial management"
+      ],
+      "correctAnswer": "To develop managerial abilities and on-board leaders",
+      "explanation": "The Infosys Leadership Institute (ILI) at Mysuru focuses on succession planning, executive leadership cultivation, and leadership onboarding."
+    },
+    {
+      "question": "6. Which of the following methods is aimed at promoting self-awareness and its impact on others?",
+      "options": [
+        "Job rotation",
+        "Sensitivity training",
+        "Multiple management",
+        "Business games"
+      ],
+      "correctAnswer": "Sensitivity training",
+      "explanation": "Sensitivity training (T-groups) provides unstructured group interaction to foster interpersonal sensitivity and deep self-awareness."
+    },
+    {
+      "question": "7. What is one of the benefits of using the 'case study' method in executive development?",
+      "options": [
+        "Cost-effective and quick to implement",
+        "Provides a real-life problem-solving experience",
+        "Offers unlimited chances to solve problems",
+        "Focuses on physical development"
+      ],
+      "correctAnswer": "Provides a real-life problem-solving experience",
+      "explanation": "Case studies present authentic, multidimensional organizational dilemmas for trainees to dissect and debate."
+    },
+    {
+      "question": "8. What is the focus of 'on-boarding' programs at Infosys Leadership Institute (ILI)?",
+      "options": [
+        "Financial management",
+        "Global marketing strategies",
+        "Advanced technical training",
+        "Orientation of new recruits on soft skills"
+      ],
+      "correctAnswer": "Orientation of new recruits on soft skills",
+      "explanation": "ILI onboarding integrates behavioral norms, professional communication, corporate values, and interpersonal soft skills."
+    },
+    {
+      "question": "9. Which of the following is NOT listed as a program under the Infosys Leadership Institute (ILI) for developing managerial abilities?",
+      "options": [
+        "Pravesh",
+        "Maestro",
+        "Diplomat",
+        "Visionary"
+      ],
+      "correctAnswer": "Visionary",
+      "explanation": "ILI structured its tiered leadership journey around specific branded tiers like Pravesh, Maestro, and Diplomat; 'Visionary' was not one of those tiers."
+    },
+    {
+      "question": "10. What is one of the demerits of the case study method as highlighted in the document?",
+      "options": [
+        "It is inexpensive to implement",
+        "It often fails to develop analytical abilities.",
+        "It is too realistic and closely mimics the trainee's workplace.",
+        "It requires little preparation or prior knowledge."
+      ],
+      "correctAnswer": "It often fails to develop analytical abilities.",
+      "explanation": "A recognized criticism is that passive or poorly facilitated discussions can devolve into opinions without rigorous data analysis."
+    }
+  ]
+},
+{
+  "id": "hr-analytics-2024-week-8",
+  "title": "HR Analytics (2024) - Week 8 Assignment 8",
+  "subject": "HR Analytics (2024)",
+  "date": "18/09/2024",
+  "questions": [
+    {
+      "question": "1. What is the primary purpose of executive development?",
+      "options": [
+        "To improve job-related skills",
+        "To prepare executives for diverse jobs and future challenges",
+        "To enhance physical fitness",
+        "To provide entertainment"
+      ],
+      "correctAnswer": "To prepare executives for diverse jobs and future challenges",
+      "explanation": "Executive development builds comprehensive leadership capabilities for cross-functional agility and unpredictable future challenges."
+    },
+    {
+      "question": "2. State True OR False: Non-attainment of defined goals indicates that an organization has met all its planned objectives.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "False",
+      "explanation": "Non-attainment means failing to reach planned benchmarks and goals."
+    },
+    {
+      "question": "3. In the action-error cycle, what is a common consequence of not addressing errors promptly?",
+      "options": [
+        "Increased operational efficiency",
+        "Enhanced employee performance",
+        "Escalation of issues and larger negative impacts",
+        "Improved customer satisfaction"
+      ],
+      "correctAnswer": "Escalation of issues and larger negative impacts",
+      "explanation": "Ignoring initial operational errors leads to systemic compounding, escalation of costs, and wider organizational damage."
+    },
+    {
+      "question": "4. Metrics commonly used in _______ to evaluate employee performance include customer satisfaction scores.",
+      "options": [
+        "Employee ratings",
+        "Vendor ratings",
+        "Product ratings",
+        "Customer ratings"
+      ],
+      "correctAnswer": "Customer ratings",
+      "explanation": "Customer ratings and CSAT indices directly gauge frontline staff performance from the client's perspective."
+    },
+    {
+      "question": "5. What characterizes an ineffective performance in the workplace?",
+      "options": [
+        "Increased goal achievement percentage",
+        "Decreased turnover",
+        "Performance rating or goal achievement percent remains the same",
+        "Improved employee satisfaction"
+      ],
+      "correctAnswer": "Performance rating or goal achievement percent remains the same",
+      "explanation": "Stagnation or flatlining despite developmental interventions demonstrates lack of progression and ineffective performance."
+    },
+    {
+      "question": "6. What does the acronym MOOC stand for?",
+      "options": [
+        "Massive Operational Online Course",
+        "Multiple Online Operational Course",
+        "Massive Open Online Course",
+        "Managed Open Online Course"
+      ],
+      "correctAnswer": "Massive Open Online Course",
+      "explanation": "MOOC stands for Massive Open Online Course."
+    },
+    {
+      "question": "7. State True or False: Employee development analytics focuses solely on the financial performance of the company.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "False",
+      "explanation": "Development analytics evaluates skill acquisition, behavioral transformation, leadership readiness, and retention alongside financial ROI."
+    },
+    {
+      "question": "8. How can employee development analytics benefit the organization?",
+      "options": [
+        "By decreasing the number of employees",
+        "By reducing the number of training programs",
+        "By providing data-driven insights for better decision-making",
+        "By eliminating employee feedback"
+      ],
+      "correctAnswer": "By providing data-driven insights for better decision-making",
+      "explanation": "Analytics provides empirical evidence on training efficacy and capability distribution to optimize talent development investments."
+    },
+    {
+      "question": "9. Which tool can be used to measure the effectiveness of coaching and mentoring sessions?",
+      "options": [
+        "Financial statements, Balance Sheets",
+        "Employee performance evaluations and feedback surveys",
+        "Social media metrics",
+        "Marketing analysis"
+      ],
+      "correctAnswer": "Employee performance evaluations and feedback surveys",
+      "explanation": "Multi-rater feedback and 360-degree performance evaluations directly track behavioral shifts resulting from mentorship."
+    },
+    {
+      "question": "10. Which of the following scenarios would be classified as marginally effective?",
+      "options": [
+        "Employee's turnover rate increases significantly",
+        "Employee's performance rating remains the same",
+        "Employee engages in deviant behavior",
+        "Employee's performance rating improves slightly, and turnover decreases"
+      ],
+      "correctAnswer": "Employee's performance rating improves slightly, and turnover decreases",
+      "explanation": "Modest incremental progress accompanied by stabilizing retention is characteristic of marginally effective interventions."
+    }
+  ]
+},
+{
+  "id": "hr-analytics-2024-week-9",
+  "title": "HR Analytics (2024) - Week 9 Assignment 09",
+  "subject": "HR Analytics (2024)",
+  "date": "25/09/2024",
+  "questions": [
+    {
+      "question": "1. What is the first step in the process of performance evaluation?",
+      "options": [
+        "Measure Actual Performance",
+        "Communicate the Standards",
+        "Establish Performance Standards",
+        "Review Performance Standards"
+      ],
+      "correctAnswer": "Establish Performance Standards",
+      "explanation": "Before performance can be measured or evaluated, objective performance standards and benchmarks must first be defined."
+    },
+    {
+      "question": "2. Aligning performance standards with company objectives is important because it ensures:",
+      "options": [
+        "Better employee morale",
+        "Increased competition among employees",
+        "Contributions are directed towards the company's mission and vision",
+        "Higher profit margins"
+      ],
+      "correctAnswer": "Contributions are directed towards the company's mission and vision",
+      "explanation": "Goal alignment guarantees that individual daily activities translate directly into the strategic mission of the enterprise."
+    },
+    {
+      "question": "3. In the case of 'AutoAdvance,' which component was added to employee performance standards?",
+      "options": [
+        "Customer service",
+        "Continuous improvement",
+        "Work-life balance",
+        "Sales targets"
+      ],
+      "correctAnswer": "Continuous improvement",
+      "explanation": "In the AutoAdvance case, continuous improvement (Kaizen principles) was formalized into employee KPIs."
+    },
+    {
+      "question": "4. What is a key element for continuous improvement in performance management?",
+      "options": [
+        "Annual feedback sessions",
+        "Static performance standards",
+        "Regular assessments and feedback cycles",
+        "Ignoring technology trends"
+      ],
+      "correctAnswer": "Regular assessments and feedback cycles",
+      "explanation": "Continuous improvement relies on frequent, agile check-ins rather than isolated annual reviews."
+    },
+    {
+      "question": "5. Effective communication of performance standards is essential to:",
+      "options": [
+        "Increase employee competition",
+        "Ensure employees understand job expectations",
+        "Reduce transparency in performance evaluations",
+        "Eliminate team collaboration"
+      ],
+      "correctAnswer": "Ensure employees understand job expectations",
+      "explanation": "Clear communication eliminates ambiguity and ensures employees know exactly what targets they need to hit."
+    },
+    {
+      "question": "6. What is the primary purpose of a Gantt chart in performance management?",
+      "options": [
+        "To assess employee behavior",
+        "To track the planned and actual days taken for each step in performance management",
+        "To monitor employee well-being",
+        "To calculate salary increments"
+      ],
+      "correctAnswer": "To track the planned and actual days taken for each step in performance management",
+      "explanation": "Gantt charts visually illustrate timelines, milestone progress, and planned vs. actual schedule variance."
+    },
+    {
+      "question": "7. What is analyzed to find skill rating and goal percentage mismatch?",
+      "options": [
+        "The number of trainings attended",
+        "Employee ratings across various skills and percentage of goal achievement",
+        "Employee attendance",
+        "The time taken for completing tasks"
+      ],
+      "correctAnswer": "Employee ratings across various skills and percentage of goal achievement",
+      "explanation": "Comparing competency assessment ratings against quantitative goal achievement exposes disconnects or evaluation inflation."
+    },
+    {
+      "question": "8. How is the performance review process typically represented in performance analytics?",
+      "options": [
+        "As a fixed annual review",
+        "Through Gantt charts showing the planned and actual days taken for the review process",
+        "Via personal interviews",
+        "By evaluating the time spent in meetings"
+      ],
+      "correctAnswer": "Through Gantt charts showing the planned and actual days taken for the review process",
+      "explanation": "Process analytics relies on Gantt timelines and process mapping to audit evaluation cycles."
+    },
+    {
+      "question": "9. Which of the following reasons is not associated with deflating performance ratings?",
+      "options": [
+        "Shock employees",
+        "Build a record of poor performance",
+        "Encourage employees",
+        "Teach a rebellious employee a lesson"
+      ],
+      "correctAnswer": "Encourage employees",
+      "explanation": "Artificial score deflation is often punitive (shocking, establishing termination grounds, disciplining); it does not encourage workers."
+    },
+    {
+      "question": "10. Employee satisfaction rate is not part of the important metrics listed for performance analysis.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "True",
+      "explanation": "Employee satisfaction is an engagement/climate metric rather than a direct job output metric."
+    }
+  ]
+},
+{
+  "id": "hr-analytics-2024-week-10",
+  "title": "HR Analytics (2024) - Week 10 Assignment 10",
+  "subject": "HR Analytics (2024)",
+  "date": "02/10/2024",
+  "questions": [
+    {
+      "question": "1. What is the main purpose of performance measurement in driving business outcomes?",
+      "options": [
+        "To increase salaries",
+        "To assess the effectiveness of organizational performance measurement in achieving goals",
+        "To track the number of meetings",
+        "To decrease employee workload"
+      ],
+      "correctAnswer": "To assess the effectiveness of organizational performance measurement in achieving goals",
+      "explanation": "Performance measurement verifies whether strategic execution aligns with corporate objectives and delivers desired business results."
+    },
+    {
+      "question": "2. Which approach is used to align individual goals with organizational goals?",
+      "options": [
+        "Customer satisfaction approach",
+        "Balanced score approach",
+        "Leadership approach",
+        "Talent retention approach"
+      ],
+      "correctAnswer": "Balanced score approach",
+      "explanation": "The Balanced Scorecard (BSC) framework cascades overarching corporate goals down into divisional and individual KPIs."
+    },
+    {
+      "question": "3. Which of the following is a lead measure in internal learning and growth?",
+      "options": [
+        "Rate of new product development",
+        "Employee job satisfaction",
+        "Developing strategic competencies",
+        "Product defect rate"
+      ],
+      "correctAnswer": "Developing strategic competencies",
+      "explanation": "Developing strategic competencies is a leading driver that enables future innovation and business performance."
+    },
+    {
+      "question": "4. Which stakeholder is responsible for strategic indicators under the internal business processes in the balanced score approach?",
+      "options": [
+        "Accounting professionals",
+        "Internal customers",
+        "External customers",
+        "Employees"
+      ],
+      "correctAnswer": "Internal customers",
+      "explanation": "Internal process quality is directly consumed and driven by internal customers within the workflow value chain."
+    },
+    {
+      "question": "5. What is the Variable Performance Linked Pay (VPLP) used for in compensation?",
+      "options": [
+        "To reward employees for length of service",
+        "To link compensation directly to performance achievements",
+        "To provide non-financial benefits",
+        "To ensure equal pay across all departments"
+      ],
+      "correctAnswer": "To link compensation directly to performance achievements",
+      "explanation": "VPLP ties variable financial incentives to measurable objective achievement and key performance indicators."
+    },
+    {
+      "question": "6. Which of the following factors affects compensation plans within an organization?",
+      "options": [
+        "Gender and age",
+        "Work-life balance preferences",
+        "Family status",
+        "Job responsibilities and market competitiveness"
+      ],
+      "correctAnswer": "Job responsibilities and market competitiveness",
+      "explanation": "Legitimate compensation planning is grounded in job evaluations (scope/responsibilities) and external market benchmark rates."
+    },
+    {
+      "question": "7. In Skills Gap Analysis, what is the primary goal?",
+      "options": [
+        "To assess the availability of financial resources",
+        "To identify the differences between current workforce skills and the skills required to achieve strategic goals",
+        "To monitor employee engagement levels",
+        "To create salary structures based on job levels"
+      ],
+      "correctAnswer": "To identify the differences between current workforce skills and the skills required to achieve strategic goals",
+      "explanation": "Skills gap analysis quantifies current organizational proficiencies against target competencies needed to fulfill strategy."
+    },
+    {
+      "question": "8. Which metric helps in evaluating the effectiveness of a compensation strategy?",
+      "options": [
+        "Employee satisfaction scores and turnover rates",
+        "Number of promotions per year",
+        "Number of hours worked",
+        "Salary increments provided"
+      ],
+      "correctAnswer": "Employee satisfaction scores and turnover rates",
+      "explanation": "Compensation strategy health is reflected in low regrettable turnover and strong compensation satisfaction survey results."
+    },
+    {
+      "question": "9. Adaptation in HRM refers to:",
+      "options": [
+        "Monitoring employee engagement",
+        "Adjusting HR strategies in response to industry changes",
+        "Setting up flexible working hours",
+        "Improving employee wellness programs"
+      ],
+      "correctAnswer": "Adjusting HR strategies in response to industry changes",
+      "explanation": "Strategic HR adaptation entails aligning policies and talent capabilities with shifts in external competitive environments."
+    },
+    {
+      "question": "10. What was the focus of DataCorp's compensation strategy in the case study?",
+      "options": [
+        "Increasing employee benefits",
+        "Linking individual pay more closely with performance",
+        "Implementing job rotation programs",
+        "Creating a retirement savings plan"
+      ],
+      "correctAnswer": "Linking individual pay more closely with performance",
+      "explanation": "The DataCorp case study highlights redesigning compensation to strengthen the pay-for-performance connection."
+    }
+  ]
+},
+{
+  "id": "hr-analytics-2024-week-11",
+  "title": "HR Analytics (2024) - Week 11 Assignment 11",
+  "subject": "HR Analytics (2024)",
+  "date": "09/10/2024",
+  "questions": [
+    {
+      "question": "1. What does 'compensation analytics' primarily focus on?",
+      "options": [
+        "Tracking employee attendance",
+        "Analyzing and optimizing employee compensation structures",
+        "Organizing company events",
+        "Designing office layouts"
+      ],
+      "correctAnswer": "Analyzing and optimizing employee compensation structures",
+      "explanation": "Compensation analytics evaluates wage structures, equity, incentive plans, and competitiveness to design cost-effective reward packages."
+    },
+    {
+      "question": "2. What is a 'pay mix policy'?",
+      "options": [
+        "The number of employees in each department",
+        "The combination of different types of compensation (salary, bonuses, benefits) offered to employees",
+        "The schedule of employee evaluations",
+        "The distribution of work hours among employees"
+      ],
+      "correctAnswer": "The combination of different types of compensation (salary, bonuses, benefits) offered to employees",
+      "explanation": "Pay mix specifies the ratio of fixed base salary, short-term bonuses, long-term equity, and employee benefits in total rewards."
+    },
+    {
+      "question": "3. State True or False: Pay increases can negatively affect employee morale if they are perceived as unfair.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "True",
+      "explanation": "According to equity theory, perceived inequities or favoritism in pay increases breed resentment and lower workplace morale."
+    },
+    {
+      "question": "4. What is the formula to calculate the percentage change in the Consumer Price Index (CPI)?",
+      "options": [
+        "(Current CPI - Previous CPI) / Current CPI * 100",
+        "(Previous CPI - Current CPI) / Previous CPI * 100",
+        "(Current CPI - Previous CPI) / Previous CPI * 100",
+        "(Previous CPI - Current CPI) / Current CPI * 100"
+      ],
+      "correctAnswer": "(Current CPI - Previous CPI) / Previous CPI * 100",
+      "explanation": "Percentage change measures inflation relative to the base period: ((Current CPI - Previous CPI) / Previous CPI) * 100."
+    },
+    {
+      "question": "5. What action might be taken if an employee has a very low Compa-Ratio?",
+      "options": [
+        "Decrease their pay",
+        "Maintain their current pay",
+        "Consider a pay increase to bring their salary closer to the midpoint",
+        "Reassign them to a different department"
+      ],
+      "correctAnswer": "Consider a pay increase to bring their salary closer to the midpoint",
+      "explanation": "A low compa-ratio (e.g. < 0.80) signals underpayment relative to the market/band midpoint, warranting an upward equity adjustment."
+    },
+    {
+      "question": "6. State True OR False: A Compa-Ratio of 1 indicates that the employee's pay is exactly at the midpoint of the pay range.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "True",
+      "explanation": "Compa-Ratio = Actual Salary / Range Midpoint. A value of 1.0 (or 100%) indicates pay matches the exact midpoint."
+    },
+    {
+      "question": "7. The midpoint in a pay range is determined by analyzing:",
+      "options": [
+        "Employee performance reviews",
+        "Annual company profits",
+        "Employee attendance records",
+        "Compensation survey data"
+      ],
+      "correctAnswer": "Compensation survey data",
+      "explanation": "Pay grade midpoints are benchmarked against competitive salary market data obtained from compensation surveys."
+    },
+    {
+      "question": "8. What does KRA stand for?",
+      "options": [
+        "Key Resource Allocation",
+        "Key Result Areas",
+        "Key Revenue Analysis",
+        "Key Recruitment Areas"
+      ],
+      "correctAnswer": "Key Result Areas",
+      "explanation": "KRA stands for Key Result Areas, defining the core outcomes an employee is accountable for delivering."
+    },
+    {
+      "question": "9. PMS, in HR terminology, refers to:",
+      "options": [
+        "Pay Management System",
+        "Project Monitoring System",
+        "Performance Management System",
+        "Personnel Management Strategy"
+      ],
+      "correctAnswer": "Performance Management System",
+      "explanation": "PMS stands for Performance Management System, encompassing goal-setting, performance tracking, appraisal, and development."
+    },
+    {
+      "question": "10. One of the key objectives of compensation analytics is to ensure _______ between employee pay and organizational goals.",
+      "options": [
+        "Alignment",
+        "Disparity",
+        "Inconsistency",
+        "Segregation"
+      ],
+      "correctAnswer": "Alignment",
+      "explanation": "Strategic compensation analytics ensures incentive structures align with organizational strategic goals."
+    }
+  ]
+},
+{
+  "id": "hr-analytics-2024-week-12",
+  "title": "HR Analytics (2024) - Week 12 Assignment 12",
+  "subject": "HR Analytics (2024)",
+  "date": "16/10/2024",
+  "questions": [
+    {
+      "question": "1. What is Tableau primarily used for?",
+      "options": [
+        "Writing code",
+        "Data visualization and analytics",
+        "Web development",
+        "Email marketing"
+      ],
+      "correctAnswer": "Data visualization and analytics",
+      "explanation": "Tableau is a market-leading business intelligence software dedicated to interactive data visualization and analytics."
+    },
+    {
+      "question": "2. State True OR False: Tableau can connect to multiple data sources including Excel, SQL databases, and cloud services.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "True",
+      "explanation": "Tableau features native connectors for spreadsheets, relational databases, cloud data warehouses, and web services."
+    },
+    {
+      "question": "3. Which of the following is NOT a visualization type available in Tableau?",
+      "options": [
+        "Line Chart",
+        "Bar Chart",
+        "Scatter Plot",
+        "Text Document"
+      ],
+      "correctAnswer": "Text Document",
+      "explanation": "Tableau supports graphical chart types (line, bar, scatter, maps); 'Text Document' is a word processing document format."
+    },
+    {
+      "question": "4. What does 'aggregation' mean in Tableau?",
+      "options": [
+        "Filtering data",
+        "Summarizing data, such as calculating totals or averages",
+        "Connecting data sources",
+        "Exporting data"
+      ],
+      "correctAnswer": "Summarizing data, such as calculating totals or averages",
+      "explanation": "Aggregation performs mathematical summaries over data records, such as SUM, AVG, MIN, MAX, and COUNT."
+    },
+    {
+      "question": "5. State True or False: Tableau Public is a free version of Tableau that allows users to publish their visualizations to the web.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "True",
+      "explanation": "Tableau Public is free software where authors share interactive dashboards publicly online."
+    },
+    {
+      "question": "6. How does Tableau help users gain insights from large and complex datasets?",
+      "options": [
+        "By automatically generating reports and summaries",
+        "By providing predefined charts and graphs",
+        "By allowing users to create interactive visualizations and perform ad hoc analysis",
+        "By offering data transformation and blending capabilities"
+      ],
+      "correctAnswer": "By allowing users to create interactive visualizations and perform ad hoc analysis",
+      "explanation": "Tableau's drag-and-drop visual interface lets users interactively explore and query complex data on the fly."
+    },
+    {
+      "question": "7. In Tableau, which component is used to display a summary of data or trends in a visual format?",
+      "options": [
+        "Sheet",
+        "Dashboard",
+        "Data Pane",
+        "Parameter"
+      ],
+      "correctAnswer": "Dashboard",
+      "explanation": "A dashboard combines multiple worksheets and visual trends into a single consolidated view for executive monitoring."
+    },
+    {
+      "question": "8. Which of the following is NOT a file type that Tableau can connect to?",
+      "options": [
+        "Excel",
+        "SQL Database",
+        "PDF",
+        "Google Sheets"
+      ],
+      "correctAnswer": "PDF",
+      "explanation": "While Tableau has added basic tabular text extraction from PDFs, native server-based live structured connectivity applies to Excel, SQL databases, and Google Sheets."
+    },
+    {
+      "question": "9. Tableau allows for _______ analysis, enabling users to explore data from different perspectives.",
+      "options": [
+        "Multidimensional",
+        "Unidirectional",
+        "Linear",
+        "Static"
+      ],
+      "correctAnswer": "Multidimensional",
+      "explanation": "Tableau's OLAP-like visual architecture facilitates multidimensional slicing, dicing, and drill-down analysis across measures and dimensions."
+    },
+    {
+      "question": "10. In Tableau, what is a 'worksheet'?",
+      "options": [
+        "A collection of dashboards",
+        "A single view containing a single visualization",
+        "A database of HR data",
+        "A script for data analysis"
+      ],
+      "correctAnswer": "A single view containing a single visualization",
+      "explanation": "In Tableau, a worksheet contains a single visual representation/view, which can later be assembled into multi-sheet dashboards."
+    }
+  ]
+}
 ];
-
