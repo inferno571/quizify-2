@@ -6,9 +6,10 @@ import 'katex/dist/katex.min.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Quizify 2 — AI Quiz Generator | Made by Saksham Sooden',
-  description: 'Quizify 2 — AI-powered quiz generator created by Saksham Sooden. Upload study material to generate custom quizzes or upload existing question papers to practice instantly.',
+  title: 'Quizify 3 — AI Quiz Generator | Made by Saksham Sooden',
+  description: 'Quizify 3 — AI-powered quiz generator created by Saksham Sooden. Upload study material to generate custom quizzes or upload existing question papers to practice instantly.',
 };
+
 
 import { NgrokHeaderInterceptor } from '../components/NgrokHeaderInterceptor';
 

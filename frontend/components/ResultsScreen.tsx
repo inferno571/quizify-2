@@ -181,7 +181,7 @@ export function ResultsScreen({
     });
 
   const generateExportText = () => {
-    const reportHeader = `=== Quizify 2 — Exam Performance Report ===\nQuiz: ${quiz.title}\nScore: ${score}/${quiz.questions.length} (${percentage}%)\nPlatform: Quizify 2 | Made by Saksham Sooden\n============================================\n\n`;
+    const reportHeader = `=== Quizify 3 — Exam Performance Report ===\nQuiz: ${quiz.title}\nScore: ${score}/${quiz.questions.length} (${percentage}%)\nPlatform: Quizify 3 | Made by Saksham Sooden\n============================================\n\n`;
     return reportHeader + importantQuestions.map(({ idx, question, options, correctAnswer, explanation, isCorrect }) => {
       const formattedOptions = options.map((opt, i) => `${String.fromCharCode(65 + i)}) ${opt}`).join('\n');
       const correctStr = Array.isArray(correctAnswer) ? correctAnswer.join(', ') : correctAnswer;
@@ -191,7 +191,7 @@ export function ResultsScreen({
   };
 
   const generateTwoPlayerExportText = () => {
-    let report = `=== Quizify 2 — 2-Player Head-to-Head Exam Report ===\n`;
+    let report = `=== Quizify 3 — 2-Player Head-to-Head Exam Report ===\n`;
     report += `Quiz: ${quiz.title}\n`;
     report += `Player 1 (${p1DisplayName}): ${finalP1Score}/${quiz.questions.length} (${percentage}%)\n`;
     report += `Player 2 (${p2DisplayName}): ${finalP2Score}/${quiz.questions.length} (${p2Percentage}%)\n`;
@@ -202,7 +202,7 @@ export function ResultsScreen({
       : `Outcome: Tie Game / Draw`;
     report += `${outcome}\n`;
     report += `Total Questions: ${quiz.questions.length} | Agreed: ${agreedQuestions.length} | Disagreed: ${disagreedQuestions.length}\n`;
-    report += `Platform: Quizify 2 | Made by Saksham Sooden\n======================================================\n\n`;
+    report += `Platform: Quizify 3 | Made by Saksham Sooden\n======================================================\n\n`;
 
     if (disagreedQuestions.length > 0) {
       report += `--- CLASHES / DISAGREED QUESTIONS (${disagreedQuestions.length}) ---\n\n`;
@@ -220,7 +220,7 @@ export function ResultsScreen({
   };
 
   const generateMarkedExportText = () => {
-    const reportHeader = `=== Quizify 2 — Manually Marked for Review Questions ===\nQuiz: ${quiz.title}\nTotal Marked: ${manuallyMarkedQuestions.length} (${markedCorrectCount} Correct, ${markedIncorrectCount} Incorrect)\nPlatform: Quizify 2 | Made by Saksham Sooden\n========================================================\n\n`;
+    const reportHeader = `=== Quizify 3 — Manually Marked for Review Questions ===\nQuiz: ${quiz.title}\nTotal Marked: ${manuallyMarkedQuestions.length} (${markedCorrectCount} Correct, ${markedIncorrectCount} Incorrect)\nPlatform: Quizify 3 | Made by Saksham Sooden\n========================================================\n\n`;
     return reportHeader + manuallyMarkedQuestions.map(({ idx, question, options, correctAnswer, explanation, isCorrect, userAnswer }) => {
       const formattedOptions = options.map((opt, i) => `${String.fromCharCode(65 + i)}) ${opt}`).join('\n');
       const correctStr = Array.isArray(correctAnswer) ? correctAnswer.join(', ') : correctAnswer;
@@ -278,8 +278,9 @@ export function ResultsScreen({
                   2-Player Head-to-Head
                 </span>
                 <span className="text-xs text-gray-500 font-medium">
-                  Quizify 2 • <span className="text-gray-800 font-semibold">{quiz.title}</span>
+                  Quizify 3 • <span className="text-gray-800 font-semibold">{quiz.title}</span>
                 </span>
+
               </div>
               <h2 className="text-2xl font-black text-slate-900 mt-1">
                 {finalP1Score > finalP2Score ? (
@@ -374,8 +375,9 @@ export function ResultsScreen({
            <div>
               <div className="flex items-center gap-2 mb-1.5">
                 <span className="bg-orange-100 text-orange-700 text-xs font-bold px-2.5 py-0.5 rounded-full border border-orange-200 uppercase tracking-wide">
-                  Quizify 2
+                  Quizify 3
                 </span>
+
                 <span className="text-xs text-gray-500 font-medium">
                   Made by <span className="text-gray-800 font-semibold">Saksham Sooden</span>
                 </span>
@@ -888,10 +890,11 @@ export function ResultsScreen({
             Back to Course Dashboard
           </button>
           <div className="text-xs text-gray-400 font-medium flex items-center gap-1.5">
-            <span className="font-semibold text-gray-600">Quizify 2</span>
+            <span className="font-semibold text-gray-600">Quizify 3</span>
             <span>•</span>
             <span className="text-orange-600 font-semibold">Made with ❤️ by Saksham Sooden</span>
           </div>
+
       </div>
 
     </div>

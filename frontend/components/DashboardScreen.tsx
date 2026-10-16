@@ -258,9 +258,9 @@ export function DashboardScreen({
           <div className="font-extrabold flex items-center justify-between text-orange-800 mb-0.5">
             <span className="flex items-center gap-1">
               <Sparkles className="w-3.5 h-3.5 text-orange-500" />
-              Quizify 2
+              Quizify 3
             </span>
-            <span className="text-[9px] bg-orange-200/60 px-1.5 py-0.2 rounded font-bold">v2.0</span>
+            <span className="text-[9px] bg-orange-200/60 px-1.5 py-0.2 rounded font-bold">v3.0</span>
           </div>
           <p className="text-gray-600 text-[10px] leading-tight">
             Engineered by <span className="font-bold text-gray-800">Saksham Sooden</span>
@@ -285,16 +285,17 @@ export function DashboardScreen({
                   {isGenerate ? 'Generate Quiz from Study Material' : 'Upload Questions & Solutions'}
                 </h1>
                 <span className="bg-orange-100 text-orange-700 text-[10px] font-bold px-2 py-0.5 rounded-full border border-orange-200 uppercase tracking-wide">
-                  Quizify 2
+                  Quizify 3
                 </span>
               </div>
               <p className="text-xs text-gray-500">
                 {isGenerate 
-                  ? 'Quizify 2 AI Engine • Made by Saksham Sooden' 
-                  : 'Quizify 2 Direct Parser • Made by Saksham Sooden'}
+                  ? 'Quizify 3 AI Engine • Made by Saksham Sooden' 
+                  : 'Quizify 3 Direct Parser • Made by Saksham Sooden'}
               </p>
             </div>
           </div>
+
 
           <div className="flex items-center gap-2 flex-wrap">
             <LarpGuideButton />

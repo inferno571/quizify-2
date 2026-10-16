@@ -612,8 +612,9 @@ Continuous learning never stops! Looking forward to applying these principles to
         {/* Modal Footer */}
         <div className="px-5 py-3 bg-white border-t border-gray-200 flex items-center justify-between shrink-0">
           <div className="text-[11px] text-gray-500 font-medium">
-            Quizify 2 • <span className="text-orange-600 font-bold">Made by Saksham Sooden</span>
+            Quizify 3 • <span className="text-orange-600 font-bold">Made by Saksham Sooden</span>
           </div>
+
           <button
             onClick={handleAcknowledgeClick}
             className="px-4 py-2 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-slate-950 font-black text-xs rounded-lg transition cursor-pointer shadow-md flex items-center gap-1.5 transform active:scale-95"

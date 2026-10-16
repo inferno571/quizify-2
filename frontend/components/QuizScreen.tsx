@@ -588,16 +588,17 @@ export function QuizScreen({ quiz, onComplete, onExit }: QuizScreenProps) {
       <header className="bg-[#2c3e50] text-white py-2 px-4 shadow-md flex justify-between items-center z-10 shrink-0">
         <div className="flex items-center gap-3">
           <div className="w-8 h-8 bg-orange-500 rounded-lg flex items-center justify-center font-black text-xs text-white shadow-sm">
-            Q2
+            Q3
           </div>
           <div>
             <h1 className="text-base md:text-lg font-bold tracking-wide leading-tight">{quiz.title}</h1>
             <div className="text-[11px] text-gray-300 flex items-center gap-1.5">
-              <span className="font-semibold text-white">Quizify 2</span>
+              <span className="font-semibold text-white">Quizify 3</span>
               <span>•</span>
               <span className="text-orange-400 font-medium">Made by Saksham Sooden</span>
             </div>
           </div>
+
         </div>
 
         <div className="flex items-center gap-2 sm:gap-3">
@@ -794,8 +795,9 @@ export function QuizScreen({ quiz, onComplete, onExit }: QuizScreenProps) {
           </button>
 
           <span className="hidden xl:inline-block bg-white/10 text-gray-200 border border-white/20 px-2.5 py-1 rounded text-xs font-semibold">
-            Quizify 2
+            Quizify 3
           </span>
+
           <span className="hidden md:inline-block bg-orange-500 text-white px-2.5 py-1 rounded text-xs font-bold shadow-xs">
             Saksham Sooden
           </span>
@@ -1230,8 +1232,9 @@ export function QuizScreen({ quiz, onComplete, onExit }: QuizScreenProps) {
                   {playerName || 'Student Portal'}
                 </div>
                 <div className="text-[10px] text-gray-500">
-                  {isSpecialUser ? '👑 Ultra Admin • LVL 9000' : 'Quizify 2 Platform'}
+                  {isSpecialUser ? '👑 Ultra Admin • LVL 9000' : 'Quizify 3 Platform'}
                 </div>
+
               </div>
             </div>
             <div className="flex flex-col items-end gap-1">
@@ -1385,8 +1388,9 @@ export function QuizScreen({ quiz, onComplete, onExit }: QuizScreenProps) {
                Save Progress & Resume Later
              </button>
              <div className="text-[10px] text-gray-500 font-medium">
-               Quizify 2 • <span className="text-orange-600 font-semibold">Made by Saksham Sooden</span>
+               Quizify 3 • <span className="text-orange-600 font-semibold">Made by Saksham Sooden</span>
              </div>
+
           </div>
         </div>
       </div>

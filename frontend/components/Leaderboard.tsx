@@ -193,8 +193,9 @@ export function Leaderboard({
                         <BadgeCheck className="w-3 h-3" /> VERIFIED
                       </span>
                       <span className="inline-flex items-center gap-0.5 bg-gradient-to-r from-purple-500 to-purple-700 text-white text-[9px] font-black px-2 py-0.5 rounded-full shadow-sm">
-                        <Sparkles className="w-3 h-3" /> QUIZIFY 2 PRO
+                        <Sparkles className="w-3 h-3" /> QUIZIFY 3 PRO
                       </span>
+
                       <span className="inline-flex items-center gap-0.5 bg-gradient-to-r from-red-500 to-red-600 text-white text-[9px] font-black px-2 py-0.5 rounded-full shadow-sm">
                         <Flame className="w-3 h-3" /> LVL 9000
                       </span>
@@ -326,9 +327,10 @@ export function Leaderboard({
 
                   {isAdmin && (
                     <div className="text-[10px] text-amber-600 font-medium mt-0.5">
-                      Supreme Commander • Quizify 2 Creator • All-Time Legend
+                      Supreme Commander • Quizify 3 Creator • All-Time Legend
                       {" "}✨ 🏆 ✅ 🔥
                     </div>
+
                   )}
                 </div>
 

@@ -119,8 +119,9 @@ Explanation: AdaGrad accumulates squared gradients indefinitely in the denominat
           <div>
             <div className="flex items-center gap-2 mb-1">
               <span className="bg-orange-500/20 text-orange-400 text-[10px] font-bold px-2 py-0.5 rounded border border-orange-500/30">
-                Quizify 2
+                Quizify 3
               </span>
+
               <span className="text-[10px] text-gray-300">Made by Saksham Sooden</span>
             </div>
             <h3 className="text-lg font-bold">Add Quiz Locally (Offline / No API Key)</h3>

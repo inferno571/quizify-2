@@ -254,8 +254,9 @@ export function PlayerNameModal({
                       <CheckCircle className="w-3 h-3" /> Verified
                     </span>
                     <span className="inline-flex items-center gap-1 bg-gradient-to-r from-purple-500 to-purple-700 text-white text-[10px] font-black px-2.5 py-1 rounded-full shadow-sm uppercase tracking-wider">
-                      <Sparkles className="w-3 h-3" /> Quizify 2 Pro
+                      <Sparkles className="w-3 h-3" /> Quizify 3 Pro
                     </span>
+
                   </div>
                   <p className="text-xs text-amber-700 mt-2 font-semibold">
                     Welcome back, Supreme Commander Saksham ✨

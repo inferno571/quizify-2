@@ -27,11 +27,12 @@ export function LandingScreen({ onSelectMode }: LandingScreenProps) {
       >
         <div className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500/10 to-amber-500/10 backdrop-blur-sm border border-orange-200/50 rounded-full px-4 py-1.5 mb-4 shadow-sm">
           <Sparkles className="w-3.5 h-3.5 text-orange-500" />
-          <span className="text-xs font-bold text-orange-600 tracking-wide uppercase">Quizify 2 • Made by Saksham Sooden</span>
+          <span className="text-xs font-bold text-orange-600 tracking-wide uppercase">Quizify 3 • Made by Saksham Sooden</span>
         </div>
         <h1 className="text-4xl md:text-5xl font-black text-[#2c3e50] tracking-tight mb-3">
-          Welcome to <span className="bg-gradient-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent">Quizify 2</span>
+          Welcome to <span className="bg-gradient-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent">Quizify 3</span>
         </h1>
+
         <p className="text-gray-500 text-base md:text-lg max-w-lg mx-auto leading-relaxed">
           Crafted with care by <span className="font-semibold text-gray-700">Saksham Sooden</span>. Choose your path — generate questions from study material or practice instantly.
         </p>
@@ -131,10 +132,11 @@ export function LandingScreen({ onSelectMode }: LandingScreenProps) {
         transition={{ delay: 0.5, duration: 0.5 }}
       >
         <div className="inline-flex items-center gap-2 text-xs text-gray-500 bg-white/80 border border-gray-200/70 rounded-full px-4 py-1.5 shadow-sm">
-          <span className="font-bold text-[#2c3e50]">Quizify 2</span>
+          <span className="font-bold text-[#2c3e50]">Quizify 3</span>
           <span>•</span>
           <span className="text-orange-600 font-semibold">Made by Saksham Sooden</span>
         </div>
+
       </motion.div>
     </div>
   );
