@@ -19,35 +19,44 @@ function load() {
     fn => { const id = Symbol(); timers.set(id, fn); return id; }, id => timers.delete(id));
   return { ...module.exports, audios, timers };
 }
-test('each shuffled bag contains all six local sounds without consecutive repeats', () => {
+test('only the original effect and Vine Boom are selected without consecutive repeats', () => {
   const h = load();
   let previous;
   for (let bag = 0; bag < 20; bag++) {
     const ids = new Set();
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < 2; i++) {
       const clip = h.nextLarpMemeSound();
       assert.notEqual(clip.id, previous);
       ids.add(clip.id);
       previous = clip.id;
-      assert.ok(fs.statSync(new URL(`../public/audio/larp/${clip.id}.mp3`, import.meta.url)).size > 1000);
+      if (clip.id === 'vine-boom') assert.ok(fs.statSync(new URL('../public/audio/larp/vine-boom.mp3', import.meta.url)).size > 1000);
     }
-    assert.equal(ids.size, 6);
+    assert.deepEqual([...ids].sort(), ['original', 'vine-boom']);
   }
 });
 test('new playback replaces old audio and dismissal, ended and error release resources', () => {
   const h = load();
-  const first = h.playRandomLarpMemeSound();
+  let originals = 0;
+  let stoppedOriginals = 0;
+  const original = () => { originals++; return () => stoppedOriginals++; };
+  const first = h.playRandomLarpMemeSound(original);
+  const second = h.playRandomLarpMemeSound(original);
+  assert.equal(originals, 1);
+  assert.equal(h.audios.length, 1);
   assert.equal(h.audios[0].played, true);
-  const second = h.playRandomLarpMemeSound();
-  assert.equal(h.audios[0].released, true);
+  assert.equal(h.audios[0].src === '' || h.audios[0].src === '/audio/larp/vine-boom.mp3', true);
   first.stop();
-  assert.notEqual(h.audios[1].released, true);
   second.stop();
-  assert.equal(h.timers.size, 0);
-  h.playRandomLarpMemeSound();
-  h.audios[2].onended();
-  h.playRandomLarpMemeSound();
-  h.audios[3].onerror();
+  second.stop();
+  assert.equal(stoppedOriginals, 1);
+  for (let i = 0; i < 4; i++) {
+    const playback = h.playRandomLarpMemeSound(original);
+    if (playback.clip.id === 'vine-boom') {
+      const audio = h.audios.at(-1);
+      (i < 2 ? audio.onended : audio.onerror)();
+    } else playback.stop();
+  }
+  assert.equal(stoppedOriginals, originals);
   assert.equal(h.timers.size, 0);
   assert.ok(h.audios.every(audio => audio.released));
 });

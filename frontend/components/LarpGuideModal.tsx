@@ -32,10 +32,18 @@ import {
  */
 export function playLarpSound() {
   if (typeof window === 'undefined') return;
+  let context: AudioContext | undefined;
+  let timer: ReturnType<typeof setTimeout> | undefined;
+  const stop = () => {
+    clearTimeout(timer);
+    if (context && context.state !== 'closed') void context.close().catch(() => {});
+  };
   try {
-    const AudioContextClass = window.AudioContext || (window as any).webkitAudioContext;
+    const AudioContextClass = window.AudioContext;
     if (!AudioContextClass) return;
     const ctx = new AudioContextClass();
+    context = ctx;
+    void ctx.resume().catch(stop);
     const now = ctx.currentTime;
 
     // 1. Heavy cinematic bass drop (140Hz -> 32Hz)
@@ -78,9 +86,11 @@ export function playLarpSound() {
     bellGain.connect(ctx.destination);
     bellOsc.start(now + 0.05);
     bellOsc.stop(now + 0.8);
-  } catch (err) {
-    // Autoplay policy or unsupported audio
+    timer = setTimeout(stop, 1500);
+  } catch {
+    stop();
   }
+  return stop;
 }
 
 /**
@@ -107,7 +117,7 @@ export function LarpFlashOverlay({
     if (!isOpen) return;
 
     // Play native synthesized cinematic audio
-    if (synthesizedSound) playLarpSound();
+    const stopSound = synthesizedSound ? playLarpSound() : undefined;
 
     const timer = setTimeout(() => {
       onClose();
@@ -120,6 +130,7 @@ export function LarpFlashOverlay({
 
     return () => {
       clearTimeout(timer);
+      stopSound?.();
       window.removeEventListener('keydown', handleKeyDown);
     };
   }, [isOpen, onClose, synthesizedSound, durationMs]);
@@ -949,7 +960,7 @@ export function LarpSuccessfulButton({
           e.stopPropagation();
           stopSound.current?.();
           try {
-            const playback = playRandomLarpMemeSound();
+            const playback = playRandomLarpMemeSound(playLarpSound);
             stopSound.current = playback.stop;
             setSound(playback.clip);
           } catch { /* The celebration remains available without audio. */ }
@@ -960,7 +971,7 @@ export function LarpSuccessfulButton({
             ? 'bg-gradient-to-r from-amber-500 via-orange-500 to-amber-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 border-amber-300 dark:border-amber-400/80 shadow-orange-500/20 hover:shadow-orange-500/40'
             : 'bg-amber-500/10 hover:bg-amber-500/20 text-amber-900 dark:text-amber-300 border-amber-400/60 hover:border-amber-500'
         } ${className}`}
-        title="Celebrate with a random meme sound — a different clip each time!"
+        title="Celebrate with the original cinematic effect or Vine Boom!"
       >
         <span className="relative flex h-2 w-2">
           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-slate-950 opacity-75"></span>
