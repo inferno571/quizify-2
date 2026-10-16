@@ -5,6 +5,11 @@ import { useTheme } from "./ThemeProvider";
 import styles from "./QuizThemeSurface.module.css";
 
 const artwork = {
+  itbegan: {
+    eyebrow: "A NEW DAY // A FRESH START",
+    title: "IT BEGAN.",
+    caption: "one question at a time. you've got this.",
+  },
   itsover: {
     eyebrow: "SIGNAL LOST // ACADEMIC WINTER",
     title: "IT'S OVER.",
@@ -22,7 +27,7 @@ export function QuizThemeSurface({ children, className }: {
   className: string;
 }) {
   const { theme } = useTheme();
-  const memeTheme = theme === "larp" || theme === "itsover" ? theme : null;
+  const memeTheme = theme === "larp" || theme === "itsover" || theme === "itbegan" ? theme : null;
   const copy = memeTheme ? artwork[memeTheme] : null;
 
   return (

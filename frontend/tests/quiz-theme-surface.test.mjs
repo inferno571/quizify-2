@@ -41,7 +41,14 @@ test('LARP renders only its own decorative copy, never Wojak copy', () => {
   assert.doesNotMatch(html, /hope\.exe|ACADEMIC WINTER|scoped-itsover/);
 });
 
-for (const theme of ['itsover', 'larp']) {
+test('It Began renders its optimistic sunrise atmosphere', () => {
+  const html = render('itbegan');
+  assert.match(html, /data-text="IT BEGAN\."/);
+  assert.match(html, /scoped-itbegan/);
+  assert.doesNotMatch(html, /hope\.exe|ACADEMIC WINTER|CLUTCH MODE/);
+});
+
+for (const theme of ['itsover', 'larp', 'itbegan']) {
   test(`${theme} cannot leak plain captions or add a flex row without its CSS`, () => {
     const html = render(theme);
     assert.equal(html.replace(/<[^>]*>/g, ''), 'Readable question');

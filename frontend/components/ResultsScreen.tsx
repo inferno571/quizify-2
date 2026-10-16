@@ -36,7 +36,7 @@ interface ResultsScreenProps {
   onBack: () => void;
 }
 
-type Tab = 'OVERVIEW' | 'DISAGREED' | 'MARKED_FOR_REVIEW' | 'STARRED' | 'LEADERBOARD';
+type Tab = 'OVERVIEW' | 'INCORRECT' | 'DISAGREED' | 'MARKED_FOR_REVIEW' | 'STARRED' | 'LEADERBOARD';
 
 /** Normalize correctAnswer to always be an array for comparison */
 function normalizeToArray(val: string | string[] | undefined): string[] {
@@ -263,7 +263,9 @@ export function ResultsScreen({
   const incorrectCount = importantQuestions.filter(q => !q.isCorrect).length;
   const starredCorrectCount = importantQuestions.filter(q => q.isCorrect).length;
 
-  const displayedList = activeTab === 'DISAGREED' ? disagreedQuestions : allReviewedQuestions;
+  const incorrectQuestions = allReviewedQuestions.filter(q => !q.isP1Correct || (isTwoPlayer && !q.isP2Correct));
+  const displayedList = activeTab === 'INCORRECT' ? incorrectQuestions
+    : activeTab === 'DISAGREED' ? disagreedQuestions : allReviewedQuestions;
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-6">
@@ -433,6 +435,14 @@ export function ResultsScreen({
           </button>
         )}
 
+        <button type="button" onClick={() => setActiveTab('INCORRECT')} aria-pressed={activeTab === 'INCORRECT'}
+          className={`py-3 px-5 text-sm flex items-center gap-2 border-b-2 whitespace-nowrap transition-colors cursor-pointer ${
+            activeTab === 'INCORRECT' ? 'border-rose-500 text-rose-700 dark:text-rose-300 font-bold bg-surface' : 'border-transparent text-muted hover:bg-surface-hover'
+          }`}>
+          <XCircle className="w-4 h-4" /><span>Incorrect</span>
+          <span className="px-2 py-0.5 rounded-full text-xs font-bold bg-surface-muted">{incorrectQuestions.length}</span>
+        </button>
+
         {/* Separate Section for Manually Marked for Review Questions */}
         <button
           onClick={() => setActiveTab('MARKED_FOR_REVIEW')}
@@ -478,8 +488,18 @@ export function ResultsScreen({
       </div>
 
       {/* Tab Content: OVERVIEW & DISAGREED */}
-      {(activeTab === 'OVERVIEW' || activeTab === 'DISAGREED') && (
+      {(activeTab === 'OVERVIEW' || activeTab === 'DISAGREED' || activeTab === 'INCORRECT') && (
         <div className="space-y-6 lg:space-y-8">
+          {activeTab === 'INCORRECT' && (
+            <section className="rounded-xl border border-outline bg-surface p-5" aria-label="Incorrect answers summary">
+              <h3 className="text-lg font-bold text-foreground">{incorrectQuestions.length ? 'Incorrect answers to review' : 'No incorrect answers'}</h3>
+              <p className="mt-1 text-sm text-muted">
+                {incorrectQuestions.length
+                  ? isTwoPlayer ? 'Questions either player missed, including unanswered questions. Compare your choices with the correct answers below.' : 'Review your mistakes and unanswered questions. Each one is a chance to improve.'
+                  : isTwoPlayer ? 'Both players answered every question correctly. Great teamwork!' : 'You answered every question correctly. Nicely done!'}
+              </p>
+            </section>
+          )}
           {displayedList.map((q) => {
             const idx = q.idx;
             const qIsMSQ = isMSQ(q.correctAnswer);
@@ -639,6 +659,12 @@ export function ResultsScreen({
                 )}
 
                 <div className="pl-9 md:pl-10 space-y-4">
+                  {activeTab === 'INCORRECT' && !isTwoPlayer && (
+                    <div className="text-sm text-foreground space-y-1">
+                      <p><strong>Your answer: </strong><MathText text={normalizeToArray(q.userAnswer).some(value => value.trim()) ? formatAnswerText(q.userAnswer) : 'Unanswered'} /></p>
+                      <p><strong>Correct answer: </strong><MathText text={formatAnswerText(q.correctAnswer)} /></p>
+                    </div>
+                  )}
                   <div className="grid gap-2 text-sm">
                     {q.options.map((opt, i) => {
                       const isCorrectOption = correctArr.some(a => a.trim().toLowerCase() === opt.trim().toLowerCase());

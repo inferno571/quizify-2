@@ -13,6 +13,30 @@
   --card-accent: #9f1239;
 }
 
+.itbegan {
+  --artwork: url('/itbegan.png');
+  --backdrop-tint: rgb(255 248 231 / 12%);
+  --card-background: rgb(255 253 245 / 96%);
+  --card-accent: #75834e;
+}
+
+.itbegan .signature {
+  color: #443c20;
+  opacity: .8;
+  transform: none;
+  text-shadow: 0 2px 16px #fff8e7;
+}
+
+.itbegan .atmosphere::after {
+  background: radial-gradient(ellipse at 75% 50%, #fff3b82b, transparent 65%);
+  animation: sunrise-glow 12s ease-in-out infinite alternate;
+}
+
+@keyframes sunrise-glow {
+  from { opacity: .35; }
+  to { opacity: .85; }
+}
+
 .larp {
   --artwork: url('/larp-quiz.png');
   --backdrop-tint: rgb(0 0 0 / 28%);

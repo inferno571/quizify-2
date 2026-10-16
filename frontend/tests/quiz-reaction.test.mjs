@@ -19,14 +19,14 @@ function load(file, dependencies = require, globals = {}) {
   return result.exports;
 }
 
-test('only the Its Over theme replaces the reaction; rendering never starts sound', () => {
+test('meme themes use their own reactions; rendering never starts sound', () => {
   let plays = 0;
   const { ItsOverButton } = load('../components/ItsOverButton.tsx', name => {
     if (name === '../lib/itsOverSound') return { playItsOverSound: () => { plays++; } };
     if (name.endsWith('.module.css')) return { default: {} };
     return require(name);
   });
-  for (const theme of ['itsover', 'larp', 'light', 'dark', 'midnight', 'emerald', 'cyberpunk']) {
+  for (const theme of ['itsover', 'larp', 'light', 'dark', 'midnight', 'emerald', 'cyberpunk', 'itbegan']) {
     const { QuizReactionButton } = load('../components/QuizReactionButton.tsx', name => {
       if (name === './ThemeProvider') return { useTheme: () => ({ theme }) };
       if (name === './ItsOverButton') return { ItsOverButton };
@@ -38,6 +38,9 @@ test('only the Its Over theme replaces the reaction; rendering never starts soun
       assert.match(html, /IT&#x27;S OVER/);
       assert.match(html, /aria-haspopup="dialog"/);
       assert.doesNotMatch(html, /LARP Successful/);
+    } else if (theme === 'itbegan') {
+      assert.match(html, /IT BEGAN/);
+      assert.doesNotMatch(html, /LARP Successful|IT&#x27;S OVER/);
     } else {
       assert.match(html, /LARP Successful/);
       assert.doesNotMatch(html, /IT&#x27;S OVER/);
@@ -101,4 +104,77 @@ test('audio unavailable or failing does not prevent the animation', () => {
   const failed = soundHarness({ fails: true });
   assert.doesNotThrow(() => failed.playItsOverSound()());
   assert.equal(failed.closed, 1);
+});
+
+function musicHarness({ denied = false, pending = false } = {}) {
+  let context;
+  let tick;
+  let cleared = false;
+  let finishResume;
+  const starts = [];
+  const volumes = [];
+  const parameter = () => ({ setValueAtTime() {}, linearRampToValueAtTime() {}, exponentialRampToValueAtTime() {}, setTargetAtTime(value) { volumes.push(value); } });
+  class AudioContext {
+    state = 'suspended';
+    currentTime = 0;
+    destination = {};
+    closed = 0;
+    constructor() { context = this; }
+    resume() {
+      if (denied) return Promise.reject(new Error('Denied'));
+      if (pending) return new Promise(resolve => { finishResume = resolve; });
+      this.state = 'running';
+      return Promise.resolve();
+    }
+    close() { this.state = 'closed'; this.closed++; return Promise.resolve(); }
+    createGain() { return { gain: parameter(), connect() {}, disconnect() {} }; }
+    createOscillator() { return { frequency: {}, connect() {}, disconnect() {}, start(at) { starts.push(at); }, stop() {} }; }
+  }
+  const { createItBeganMusic } = load('../lib/itBeganMusic.ts', require, {
+    window: { AudioContext },
+    setInterval(callback) { tick = callback; return 1; },
+    clearInterval() { cleared = true; },
+  });
+  const player = createItBeganMusic();
+  return { player, starts, volumes, get context() { return context; }, get cleared() { return cleared; }, tick: () => tick(), finishResume: () => finishResume() };
+}
+
+test('peaceful music loops, skips throttled time, adjusts volume and releases audio', async () => {
+  const h = musicHarness();
+  assert.equal(h.starts.length, 0);
+  await h.player.play();
+  assert.equal(h.starts.length, 8);
+  h.context.currentTime = 4.5;
+  h.tick();
+  assert.equal(h.starts.length, 16);
+  h.context.currentTime = 100;
+  h.tick();
+  assert.equal(h.starts.length, 24);
+  assert.ok(h.starts.slice(-8).every(at => at > 100));
+  h.player.setVolume(0);
+  h.player.setVolume(2);
+  assert.deepEqual(h.volumes, [0, 0.2]);
+  h.player.stop();
+  h.player.stop();
+  h.tick();
+  assert.equal(h.context.closed, 1);
+  assert.equal(h.cleared, true);
+  assert.equal(h.starts.length, 24);
+});
+
+test('denied music playback closes the audio context', async () => {
+  const h = musicHarness({ denied: true });
+  await assert.rejects(h.player.play(), /Denied/);
+  assert.equal(h.context.closed, 1);
+  assert.equal(h.starts.length, 0);
+});
+
+test('leaving the theme while audio is starting cannot restart the loop', async () => {
+  const h = musicHarness({ pending: true });
+  const playing = h.player.play();
+  h.player.stop();
+  h.finishResume();
+  await playing;
+  assert.equal(h.starts.length, 0);
+  assert.equal(h.context.closed, 1);
 });

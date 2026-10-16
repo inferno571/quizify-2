@@ -60,7 +60,7 @@ function harness({ saved, dark = false, blocked = false } = {}) {
   return { definitions, boot, provider, root, meta, media, window, storage, get store() { return store; } };
 }
 
-for (const theme of ['light', 'dark', 'midnight', 'emerald', 'cyberpunk', 'larp', 'itsover']) {
+for (const theme of ['light', 'dark', 'midnight', 'emerald', 'cyberpunk', 'larp', 'itsover', 'itbegan']) {
   test('saved ' + theme + ' agrees at first paint and hydration', () => {
     const h = harness({ saved: theme, dark: true });
     h.boot();

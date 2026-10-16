@@ -1,6 +1,8 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
+import { createPortal } from 'react-dom';
+import { playRandomLarpMemeSound } from '../lib/larpMemeSounds';
 import { 
   Flame, 
   X, 
@@ -87,11 +89,17 @@ export function playLarpSound() {
 export function LarpFlashOverlay({ 
   isOpen, 
   onClose,
+  synthesizedSound = true,
+  durationMs = 4000,
+  soundName,
   badgeText = "THE LARP HAS BEEN OFFICIALLY ACKNOWLEDGED",
   subText = "Longest Option Theorem Engaged • Zero Lectures Watched • Elite + Gold Guaranteed"
 }: { 
   isOpen: boolean; 
   onClose: () => void;
+  synthesizedSound?: boolean;
+  durationMs?: number;
+  soundName?: string;
   badgeText?: string;
   subText?: string;
 }) {
@@ -99,11 +107,11 @@ export function LarpFlashOverlay({
     if (!isOpen) return;
 
     // Play native synthesized cinematic audio
-    playLarpSound();
+    if (synthesizedSound) playLarpSound();
 
     const timer = setTimeout(() => {
       onClose();
-    }, 4000);
+    }, durationMs);
 
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose();
@@ -114,11 +122,11 @@ export function LarpFlashOverlay({
       clearTimeout(timer);
       window.removeEventListener('keydown', handleKeyDown);
     };
-  }, [isOpen, onClose]);
+  }, [isOpen, onClose, synthesizedSound, durationMs]);
 
   if (!isOpen) return null;
 
-  return (
+  return createPortal(
     <div 
       onClick={onClose}
       className="fixed inset-0 z-[99999] flex items-center justify-center bg-black/95 cursor-pointer select-none overflow-hidden animate-larp-shake"
@@ -165,12 +173,13 @@ export function LarpFlashOverlay({
             {subText}
           </p>
           <div className="pt-2 text-[11px] text-gray-400 font-medium">
+            {soundName && <p className="mb-1 text-amber-300">Meme: {soundName} · Random pick</p>}
             (Click anywhere or press Esc to dismiss)
           </div>
         </div>
 
       </div>
-    </div>
+    </div>, document.body
   );
 }
 
@@ -906,7 +915,7 @@ export function LarpGuideButton() {
 
 /**
  * Mid-Quiz "LARP Successful" Button
- * Plays synthesized triumphant sound effect and triggers the full cinematic wide meme flash overlay
+ * Plays a randomly selected meme sound and the cinematic overlay.
  */
 export function LarpSuccessfulButton({ 
   className = "",
@@ -916,6 +925,21 @@ export function LarpSuccessfulButton({
   variant?: 'primary' | 'subtle';
 }) {
   const [isFlashing, setIsFlashing] = useState(false);
+  const [sound, setSound] = useState<{ name: string; duration: number } | null>(null);
+  const stopSound = useRef<(() => void) | null>(null);
+  const close = useCallback(() => {
+    stopSound.current?.();
+    stopSound.current = null;
+    setIsFlashing(false);
+  }, []);
+  useEffect(() => {
+    const hide = () => { if (document.hidden) close(); };
+    document.addEventListener('visibilitychange', hide);
+    return () => {
+      document.removeEventListener('visibilitychange', hide);
+      stopSound.current?.();
+    };
+  }, [close]);
 
   return (
     <>
@@ -923,6 +947,12 @@ export function LarpSuccessfulButton({
         type="button"
         onClick={(e) => {
           e.stopPropagation();
+          stopSound.current?.();
+          try {
+            const playback = playRandomLarpMemeSound();
+            stopSound.current = playback.stop;
+            setSound(playback.clip);
+          } catch { /* The celebration remains available without audio. */ }
           setIsFlashing(true);
         }}
         className={`group relative inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-black transition-all duration-200 cursor-pointer shadow-md active:scale-95 border select-none ${
@@ -930,7 +960,7 @@ export function LarpSuccessfulButton({
             ? 'bg-gradient-to-r from-amber-500 via-orange-500 to-amber-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 border-amber-300 dark:border-amber-400/80 shadow-orange-500/20 hover:shadow-orange-500/40'
             : 'bg-amber-500/10 hover:bg-amber-500/20 text-amber-900 dark:text-amber-300 border-amber-400/60 hover:border-amber-500'
         } ${className}`}
-        title="Tap once mid-quiz to celebrate the LARP method working!"
+        title="Celebrate with a random meme sound — a different clip each time!"
       >
         <span className="relative flex h-2 w-2">
           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-slate-950 opacity-75"></span>
@@ -946,8 +976,11 @@ export function LarpSuccessfulButton({
       {/* Screen flash with wide meme image and cinematic effects */}
       <LarpFlashOverlay 
         isOpen={isFlashing} 
-        onClose={() => setIsFlashing(false)} 
+        onClose={close}
         badgeText="🔥 LARP SUCCESSFUL — THEOREM ENGAGED!"
+        synthesizedSound={false}
+        durationMs={Math.max(4000, ((sound?.duration ?? 3) + 0.5) * 1000)}
+        soundName={sound?.name}
         subText="Distractor Eliminated • Longest Option Locked • Elite + Gold Certificate Guaranteed"
       />
     </>

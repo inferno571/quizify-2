@@ -93,6 +93,17 @@ html[data-theme="itsover"] {
   --theme-accent: #b91c1c;
 }
 
+html[data-theme="itbegan"] {
+  --theme-canvas: #fff8e7;
+  --theme-surface: #fffdf5;
+  --theme-surface-muted: #f3f4e4;
+  --theme-surface-hover: #f4e8c9;
+  --theme-foreground: #343d2d;
+  --theme-muted: #62674e;
+  --theme-outline: #d6bc83;
+  --theme-accent: #85500b;
+}
+
 body {
   font-family: var(--font-sans);
   background-color: var(--theme-canvas);
@@ -108,12 +119,15 @@ html[data-theme="larp"] body {
 html[data-theme="itsover"] body {
   background-image: linear-gradient(#ffffffa6, #ffffffbf), url('/itsover.jpg');
 }
-html:is([data-theme="larp"], [data-theme="itsover"]) body {
+html[data-theme="itbegan"] body {
+  background-image: linear-gradient(#fff8e766, #fff8e799), url('/itbegan.png');
+}
+html:is([data-theme="larp"], [data-theme="itsover"], [data-theme="itbegan"]) body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
 }
-html:is([data-theme="larp"], [data-theme="itsover"]) .app-background {
+html:is([data-theme="larp"], [data-theme="itsover"], [data-theme="itbegan"]) .app-background {
   background-color: transparent;
 }
 

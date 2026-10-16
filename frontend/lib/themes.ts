@@ -5,7 +5,8 @@ export type Theme =
   | "emerald"     // "Emerald Matrix"
   | "cyberpunk"   // "Cyberpunk Sunset"
   | "larp"        // "LARP Meme Theme"
-  | "itsover";    // "It's Over Meme Theme"
+  | "itsover"     // "It's Over Meme Theme"
+  | "itbegan";    // "It Began Sunrise Theme"
 
 export interface ThemeDefinition {
   id: Theme;
@@ -96,6 +97,17 @@ export const THEMES: ThemeDefinition[] = [
     accentColor: '#ef4444',
     previewBg: '#f8fafc',
     borderPreview: '#cbd5e1',
+  },
+  {
+    id: 'itbegan',
+    name: 'It Began',
+    category: 'meme',
+    isDark: false,
+    icon: '🌅',
+    description: 'A fresh start, sunrise skies & peaceful BGM',
+    accentColor: '#a16207',
+    previewBg: '#fff8e7',
+    borderPreview: '#d6bc83',
   },
 ];
 

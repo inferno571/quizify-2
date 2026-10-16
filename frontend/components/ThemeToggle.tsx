@@ -3,6 +3,7 @@ import React, { useEffect, useState, useRef, useId } from "react";
 import { createPortal } from "react-dom";
 import { Palette, Check, ChevronDown, Flame } from "lucide-react";
 import { useTheme, Theme, ThemeDefinition } from "./ThemeProvider";
+import { ItBeganMusic } from "./ItBeganMusic";
 
 interface ThemePickerProps {
   compact?: boolean;
@@ -59,6 +60,8 @@ export function ThemePicker({ compact = false, className = "" }: ThemePickerProp
   const memeThemes = themes.filter((t) => t.category === "meme");
 
   return (
+    <>
+    {theme === 'itbegan' && <ItBeganMusic />}
     <div className={`relative inline-block text-left ${className}`} ref={dropdownRef}>
       {/* Trigger Button */}
       <button
@@ -185,6 +188,7 @@ export function ThemePicker({ compact = false, className = "" }: ThemePickerProp
         </div>, document.body
       )}
     </div>
+    </>
   );
 }
 
