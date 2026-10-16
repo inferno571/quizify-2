@@ -16,7 +16,10 @@ import {
   Zap, 
   Award,
   ChevronRight,
-  BookOpen
+  Calculator,
+  FileText,
+  AlertTriangle,
+  Scale
 } from 'lucide-react';
 
 interface LarpGuideModalProps {
@@ -25,7 +28,7 @@ interface LarpGuideModalProps {
 }
 
 export function LarpGuideModal({ isOpen, onClose }: LarpGuideModalProps) {
-  const [activeTab, setActiveTab] = useState<'phases' | 'heuristics' | 'center' | 'linkedin'>('phases');
+  const [activeTab, setActiveTab] = useState<'longest' | 'methods' | 'center' | 'linkedin'>('longest');
   const [copiedLinkedIn, setCopiedLinkedIn] = useState(false);
 
   if (!isOpen) return null;
@@ -73,7 +76,7 @@ Continuous learning never stops! Looking forward to applying these principles to
                 </span>
               </div>
               <p className="text-[11px] text-amber-200/80 font-medium">
-                The Sacred Art of Zero Lectures &amp; Maximum IIT Aura
+                How to LARP in NPTEL &amp; Score 90%+ Without Studying
               </p>
             </div>
           </div>
@@ -112,8 +115,8 @@ Continuous learning never stops! Looking forward to applying these principles to
                   &ldquo;THERE&rsquo;S NO LIMIT TO THE LARP.&rdquo;
                 </blockquote>
                 <p className="text-xs text-slate-300 leading-relaxed">
-                  The ultimate blueprint for engineering students who watch <strong>0 hours of professor lectures</strong>, 
-                  grind assignment patterns the night before, and walk into the TCS iON center with the confidence of an IIT PhD chair.
+                  How to systematically extract correct answers without opening a single lecture slide. 
+                  Master the <strong>Longest Option Theorem</strong>, <strong>Lexical Word Overlap</strong>, and <strong>Ballpark Math Convergence</strong>.
                 </p>
 
                 {/* Stat Badges */}
@@ -123,8 +126,8 @@ Continuous learning never stops! Looking forward to applying these principles to
                     <div className="text-sm font-black text-white">0.00 hrs</div>
                   </div>
                   <div className="bg-white/10 rounded-lg p-2 border border-white/10 text-center">
-                    <div className="text-[10px] text-amber-300 font-semibold uppercase">Assignment Key</div>
-                    <div className="text-sm font-black text-emerald-400">100% Rote</div>
+                    <div className="text-[10px] text-amber-300 font-semibold uppercase">Longest Option</div>
+                    <div className="text-sm font-black text-emerald-400">Primary Rule</div>
                   </div>
                   <div className="bg-white/10 rounded-lg p-2 border border-white/10 text-center">
                     <div className="text-[10px] text-amber-300 font-semibold uppercase">Exam Speed</div>
@@ -142,26 +145,26 @@ Continuous learning never stops! Looking forward to applying these principles to
           {/* Navigation Tabs */}
           <div className="flex border-b border-gray-200 gap-1 overflow-x-auto pb-px">
             <button
-              onClick={() => setActiveTab('phases')}
+              onClick={() => setActiveTab('longest')}
               className={`flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold rounded-t-lg transition whitespace-nowrap cursor-pointer ${
-                activeTab === 'phases'
+                activeTab === 'longest'
                   ? 'bg-white text-orange-600 border-t-2 border-orange-500 border-x border-gray-200 shadow-xs'
                   : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
               }`}
             >
-              <Target className="w-3.5 h-3.5" />
-              5 Phases of the LARP
+              <Scale className="w-3.5 h-3.5" />
+              1. Longest Option Theorem
             </button>
             <button
-              onClick={() => setActiveTab('heuristics')}
+              onClick={() => setActiveTab('methods')}
               className={`flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold rounded-t-lg transition whitespace-nowrap cursor-pointer ${
-                activeTab === 'heuristics'
+                activeTab === 'methods'
                   ? 'bg-white text-orange-600 border-t-2 border-orange-500 border-x border-gray-200 shadow-xs'
                   : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
               }`}
             >
               <Zap className="w-3.5 h-3.5" />
-              Golden Heuristics
+              2. Matching Words &amp; Math Ballpark
             </button>
             <button
               onClick={() => setActiveTab('center')}
@@ -172,7 +175,7 @@ Continuous learning never stops! Looking forward to applying these principles to
               }`}
             >
               <ShieldCheck className="w-3.5 h-3.5" />
-              TCS iON Center Protocol
+              3. TCS iON Protocol
             </button>
             <button
               onClick={() => setActiveTab('linkedin')}
@@ -183,121 +186,226 @@ Continuous learning never stops! Looking forward to applying these principles to
               }`}
             >
               <Award className="w-3.5 h-3.5" />
-              LinkedIn Victory Post
+              4. LinkedIn Post
             </button>
           </div>
 
-          {/* TAB 1: 5 PHASES */}
-          {activeTab === 'phases' && (
-            <div className="space-y-3.5 animate-in fade-in duration-150">
-              <div className="bg-white p-4 rounded-xl border border-gray-200 shadow-xs space-y-1">
-                <div className="flex items-center gap-2">
-                  <span className="w-6 h-6 rounded-full bg-orange-100 text-orange-700 font-black text-xs flex items-center justify-center">1</span>
-                  <h3 className="text-sm font-bold text-gray-900">Phase 1: The Zero-Lecture Commitment</h3>
+          {/* TAB 1: THE LONGEST OPTION THEOREM IN DEPTH */}
+          {activeTab === 'longest' && (
+            <div className="space-y-4 animate-in fade-in duration-150">
+              <div className="bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-300 rounded-xl p-4 text-xs text-amber-950 space-y-1.5">
+                <div className="flex items-center gap-2 font-black text-amber-900 text-sm">
+                  <Scale className="w-4 h-4 text-orange-600" />
+                  Rule #1: Always Pick the Longest Answer
                 </div>
-                <p className="text-xs text-gray-600 pl-8 leading-relaxed">
-                  Never open the video tab on the Swayam portal. The 40-minute drone of slides is a psychological trap. 
-                  Tell your family and professors: <em>&ldquo;Yes, I am auditing an advanced postgraduate curriculum from IIT Madras.&rdquo;</em>
+                <p className="leading-relaxed">
+                  When you have not studied the subject, your greatest weapon is the professor&rsquo;s subconscious fear of answer-key grievances. 
+                  Professors must qualify the correct option with specific clauses, preconditions, and definitions to make it indisputably true. 
+                  Distractors (wrong options) are concocted quickly and kept brief.
                 </p>
               </div>
 
-              <div className="bg-white p-4 rounded-xl border border-gray-200 shadow-xs space-y-1">
-                <div className="flex items-center gap-2">
-                  <span className="w-6 h-6 rounded-full bg-blue-100 text-blue-700 font-black text-xs flex items-center justify-center">2</span>
-                  <h3 className="text-sm font-bold text-gray-900">Phase 2: Weekly Assignment Infiltration</h3>
+              {/* Sub-rule 1A: Word Count Primary Rule */}
+              <div className="bg-white p-4 sm:p-5 rounded-xl border border-gray-200 shadow-xs space-y-3">
+                <div className="flex items-start justify-between gap-3">
+                  <div className="flex items-center gap-2">
+                    <span className="w-7 h-7 rounded-lg bg-emerald-100 text-emerald-800 font-black text-xs flex items-center justify-center shrink-0">
+                      1A
+                    </span>
+                    <div>
+                      <h3 className="text-sm font-extrabold text-gray-900">
+                        Primary Metric: The Word Count Rule
+                      </h3>
+                      <span className="inline-flex items-center gap-1 text-[10px] text-emerald-700 font-bold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
+                        <Check className="w-3 h-3" /> ALWAYS WORKS (Gold Standard)
+                      </span>
+                    </div>
+                  </div>
                 </div>
-                <p className="text-xs text-gray-600 pl-8 leading-relaxed">
-                  Submit weekly assignments on Tuesday nights using the sacred collective intelligence of WhatsApp, Telegram, or Quizify 2. 
-                  Secure your 25% internal weightage with zero cognitive expenditure.
+
+                <p className="text-xs text-gray-700 leading-relaxed">
+                  First, <strong>count the total number of words</strong> in each of the four options:
                 </p>
+                
+                <div className="bg-slate-50 p-3 rounded-lg border border-slate-200 text-xs space-y-1.5 font-mono">
+                  <div className="text-gray-500 text-[11px] font-sans font-semibold mb-1">Example Option Analysis:</div>
+                  <div className="text-gray-700">A) It maximizes batch throughput. <span className="text-gray-400 font-bold">[4 words]</span></div>
+                  <div className="text-gray-700">B) It reduces gradient variance. <span className="text-gray-400 font-bold">[4 words]</span></div>
+                  <div className="text-emerald-700 font-bold bg-emerald-50/80 px-2 py-1 rounded border border-emerald-200">
+                    C) It maps high-dimensional sparse representations into dense continuous vector spaces capturing semantic similarity. <span className="text-emerald-900">[14 words]</span> &larr; SELECT THIS
+                  </div>
+                  <div className="text-gray-700">D) It guarantees zero training loss. <span className="text-gray-400 font-bold">[5 words]</span></div>
+                </div>
+
+                <div className="bg-emerald-50 border-l-4 border-emerald-500 p-2.5 rounded text-xs text-emerald-950 font-medium leading-relaxed">
+                  <strong>The Word Count Verdict:</strong> If one option has noticeably more words than the other three, 
+                  <strong> lock it in immediately</strong>. The longest words method has an almost 100% empirical success rate in NPTEL tests.
+                </div>
               </div>
 
-              <div className="bg-white p-4 rounded-xl border border-gray-200 shadow-xs space-y-1">
-                <div className="flex items-center gap-2">
-                  <span className="w-6 h-6 rounded-full bg-purple-100 text-purple-700 font-black text-xs flex items-center justify-center">3</span>
-                  <h3 className="text-sm font-bold text-gray-900">Phase 3: The Full Combined Exam Binge (Night Before)</h3>
+              {/* Sub-rule 1B: Character Count Tiebreaker */}
+              <div className="bg-white p-4 sm:p-5 rounded-xl border border-gray-200 shadow-xs space-y-3">
+                <div className="flex items-start justify-between gap-3">
+                  <div className="flex items-center gap-2">
+                    <span className="w-7 h-7 rounded-lg bg-amber-100 text-amber-800 font-black text-xs flex items-center justify-center shrink-0">
+                      1B
+                    </span>
+                    <div>
+                      <h3 className="text-sm font-extrabold text-gray-900">
+                        Tiebreaker: Character Count (Use with Caution)
+                      </h3>
+                      <span className="inline-flex items-center gap-1 text-[10px] text-amber-800 font-bold bg-amber-50 px-2 py-0.5 rounded border border-amber-300">
+                        <AlertTriangle className="w-3 h-3 text-amber-600" /> NOT 100% GUARANTEED
+                      </span>
+                    </div>
+                  </div>
                 </div>
-                <p className="text-xs text-gray-600 pl-8 leading-relaxed">
-                  The night before the exam, open <strong>Quizify 2</strong> and run the <em>Full Combined Grand Test (Weeks 1-12)</em> twice. 
-                  NPTEL question setters do not invent 50 original questions every semester; <strong>65% to 80%</strong> of questions are copied verbatim from assignment PDFs.
-                </p>
-              </div>
 
-              <div className="bg-white p-4 rounded-xl border border-gray-200 shadow-xs space-y-1">
-                <div className="flex items-center gap-2">
-                  <span className="w-6 h-6 rounded-full bg-amber-100 text-amber-700 font-black text-xs flex items-center justify-center">4</span>
-                  <h3 className="text-sm font-bold text-gray-900">Phase 4: The 18-Minute Speedrun</h3>
-                </div>
-                <p className="text-xs text-gray-600 pl-8 leading-relaxed">
-                  At the exam terminal, click the answers entirely by shape and muscle memory before even reading the question. 
-                  Finish in 18 minutes. For the remaining 42 minutes before minimum exit time, stare at the blank mouse pad with furrowed brows like you are mentally deriving backpropagation loss surfaces.
+                <p className="text-xs text-gray-700 leading-relaxed">
+                  If two or more options are tied with the <strong>exact same number of words</strong>, proceed to the character-level inspection:
                 </p>
-              </div>
 
-              <div className="bg-white p-4 rounded-xl border border-gray-200 shadow-xs space-y-1">
-                <div className="flex items-center gap-2">
-                  <span className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 font-black text-xs flex items-center justify-center">5</span>
-                  <h3 className="text-sm font-bold text-gray-900">Phase 5: The LinkedIn Renaissance</h3>
+                <ul className="text-xs text-gray-700 space-y-2 list-disc pl-5">
+                  <li>
+                    Count total characters (including alphabet letters, hyphens, and punctuation).
+                  </li>
+                  <li>
+                    Select the option with the <strong>longest total character length</strong> (indicating longer, more specialized terminology like <em>&ldquo;heteroscedasticity&rdquo;</em> vs <em>&ldquo;variability&rdquo;</em>).
+                  </li>
+                </ul>
+
+                <div className="bg-amber-50 border-l-4 border-amber-500 p-3 rounded text-xs text-amber-950 space-y-1">
+                  <div className="font-bold flex items-center gap-1 text-amber-900">
+                    <AlertTriangle className="w-3.5 h-3.5 text-amber-700" />
+                    Crucial Caveat &amp; Warning:
+                  </div>
+                  <p className="leading-relaxed">
+                    While the <strong>longest words method always works</strong>, the character count tiebreaker method is 
+                    <strong> not 100% guaranteed to work</strong>. Formatting artifacts, hyphenated terms, or font spacing can skew character counts. 
+                    Use character counting strictly as a secondary fallback with caution.
+                  </p>
                 </div>
-                <p className="text-xs text-gray-600 pl-8 leading-relaxed">
-                  Collect the Gold/Elite e-certificate, claim credit transfer at your college with a poker face, 
-                  and post a 5-paragraph LinkedIn reflection tagging the Ministry of Education. The LARP is now complete.
-                </p>
               </div>
             </div>
           )}
 
-          {/* TAB 2: GOLDEN HEURISTICS */}
-          {activeTab === 'heuristics' && (
-            <div className="space-y-3.5 animate-in fade-in duration-150">
-              <div className="bg-amber-50 border border-amber-200 rounded-xl p-3.5 text-xs text-amber-900 flex items-start gap-2.5">
-                <Sparkles className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
-                <div>
-                  <strong>The Empirical Law of NPTEL Distractors:</strong> When intuition fails and you have never seen the concept in your life, these heuristics boast a statistically verified ~78% success rate.
+          {/* TAB 2: MATCHING WORDS & MATH BALLPARK */}
+          {activeTab === 'methods' && (
+            <div className="space-y-4 animate-in fade-in duration-150">
+              
+              {/* Method 2: Matching Words Heuristic */}
+              <div className="bg-white p-4 sm:p-5 rounded-xl border border-gray-200 shadow-xs space-y-3">
+                <div className="flex items-center gap-2">
+                  <span className="w-7 h-7 rounded-lg bg-blue-100 text-blue-800 font-black text-xs flex items-center justify-center shrink-0">
+                    #2
+                  </span>
+                  <div>
+                    <h3 className="text-sm font-extrabold text-gray-900">
+                      The Matching Words Heuristic (Lexical Overlap Rule)
+                    </h3>
+                    <span className="text-[10px] text-blue-700 font-semibold">
+                      Count words in common between the Question &amp; Options
+                    </span>
+                  </div>
+                </div>
+
+                <p className="text-xs text-gray-700 leading-relaxed">
+                  When the longest option rule is inconclusive or options are equal length, inspect vocabulary overlap:
+                </p>
+
+                <div className="bg-blue-50/60 p-3 rounded-lg border border-blue-200 text-xs space-y-2">
+                  <div className="font-bold text-blue-950 flex items-center gap-1.5">
+                    <FileText className="w-3.5 h-3.5 text-blue-700" />
+                    The 2+ Overlapping Words Principle:
+                  </div>
+                  <p className="text-blue-900 leading-relaxed">
+                    If there are <strong>more than two specific words</strong> from the question that reappear inside an answer option, 
+                    <strong> pick that option</strong>. Choose the option that shares the <strong>highest number of words in common</strong> with the question stem.
+                  </p>
+                </div>
+
+                <div className="text-xs text-gray-600 bg-slate-50 p-2.5 rounded border border-gray-200 leading-relaxed">
+                  <strong>Why this works:</strong> IIT professors copy questions straight from their slide definitions. 
+                  The slide header contains keywords X and Y, and the correct bullet point contains X and Y again. 
+                  Distractors are generated off the top of their head and lack that direct lexical fingerprint.
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
-                <div className="bg-white p-3.5 rounded-xl border border-gray-200 shadow-xs space-y-1">
-                  <div className="font-bold text-gray-900 flex items-center gap-1.5 text-blue-600">
-                    <ChevronRight className="w-4 h-4 text-blue-500" />
-                    The Longest Option Theorem
+              {/* Method 3: Brute-Force Mathematical Ballpark Convergence */}
+              <div className="bg-white p-4 sm:p-5 rounded-xl border border-gray-200 shadow-xs space-y-3">
+                <div className="flex items-center gap-2">
+                  <span className="w-7 h-7 rounded-lg bg-purple-100 text-purple-800 font-black text-xs flex items-center justify-center shrink-0">
+                    #3
+                  </span>
+                  <div>
+                    <h3 className="text-sm font-extrabold text-gray-900">
+                      Brute-Force Mathematical Ballpark Convergence
+                    </h3>
+                    <span className="text-[10px] text-purple-700 font-semibold">
+                      For numerical questions when you don&rsquo;t know the formula
+                    </span>
                   </div>
-                  <p className="text-gray-600 leading-relaxed">
-                    Professors spend 3 extra clauses qualifying the correct answer so students cannot dispute it in answer-key grievance forums. The longest, most pedantic option is almost always correct.
-                  </p>
                 </div>
 
-                <div className="bg-white p-3.5 rounded-xl border border-gray-200 shadow-xs space-y-1">
-                  <div className="font-bold text-gray-900 flex items-center gap-1.5 text-emerald-600">
-                    <ChevronRight className="w-4 h-4 text-emerald-500" />
-                    &ldquo;All of the Above&rdquo; Supremacy
+                <p className="text-xs text-gray-700 leading-relaxed">
+                  Facing a complex physics, ML, or HR numerical problem with zero idea what equation to use? Execute the brute-force sweep:
+                </p>
+
+                <div className="bg-purple-50/60 p-3 rounded-lg border border-purple-200 text-xs space-y-2">
+                  <div className="font-bold text-purple-950 flex items-center gap-1.5">
+                    <Calculator className="w-3.5 h-3.5 text-purple-700" />
+                    The Arithmetic Convergence Algorithm:
                   </div>
-                  <p className="text-gray-600 leading-relaxed">
-                    If &ldquo;All of the above&rdquo; is present as an option, the probability of it being correct exceeds 85%. NPTEL educators love educational summaries where all bullet points are true.
-                  </p>
+                  <ol className="list-decimal pl-5 space-y-1.5 text-purple-900 leading-relaxed">
+                    <li>Extract <strong>every single number</strong> given in the question stem (e.g. $N=50$, $p=0.4$).</li>
+                    <li>
+                      Perform primitive mathematical operations with those numbers:
+                      <ul className="list-disc pl-4 mt-1 space-y-0.5 text-[11px] text-purple-800">
+                        <li><strong>Multiply them:</strong> $50 \times 0.4 = 20$</li>
+                        <li><strong>Divide them:</strong> $50 / 0.4 = 125$ or $0.4 / 50 = 0.008$</li>
+                        <li><strong>Add/Subtract them:</strong> $50 + 0.4 = 50.4$ or $50 - 0.4 = 49.6$</li>
+                        <li><strong>Divide product by 2 or 100:</strong> $(50 \times 0.4) / 2 = 10$</li>
+                      </ul>
+                    </li>
+                    <li>
+                      Compare your results against the 4 options: <strong>choose whichever option is closest or in the same approximate ballpark / order of magnitude</strong>.
+                    </li>
+                  </ol>
                 </div>
 
-                <div className="bg-white p-3.5 rounded-xl border border-gray-200 shadow-xs space-y-1">
-                  <div className="font-bold text-gray-900 flex items-center gap-1.5 text-purple-600">
-                    <ChevronRight className="w-4 h-4 text-purple-500" />
-                    The Numerical Clumping Rule
-                  </div>
-                  <p className="text-gray-600 leading-relaxed">
-                    If the options are 2, 24, 25, and 120, the correct answer is either 24 or 25. Distractors are almost always clustered right next to the true calculated value.
-                  </p>
-                </div>
-
-                <div className="bg-white p-3.5 rounded-xl border border-gray-200 shadow-xs space-y-1">
-                  <div className="font-bold text-gray-900 flex items-center gap-1.5 text-orange-600">
-                    <ChevronRight className="w-4 h-4 text-orange-500" />
-                    MSQ (Multiple Select) Traps
-                  </div>
-                  <p className="text-gray-600 leading-relaxed">
-                    In MSQs, if 3 options sound very positive and scholarly while 1 sounds bizarrely restrictive, select all 3 positive options. Check for question stem words like &ldquo;NOT&rdquo; or &ldquo;EXCEPT&rdquo;.
-                  </p>
+                <div className="text-xs text-gray-600 bg-slate-50 p-2.5 rounded border border-gray-200 leading-relaxed">
+                  <strong>Why this works:</strong> NPTEL questions rarely involve mystery transcendental constants. 
+                  Formulas are almost always products, ratios, or linear combinations of the given parameters. 
+                  Simple multiplication or division hits the exact answer or its decimal multiple &gt;70% of the time.
                 </div>
               </div>
+
+              {/* Bonus LARP Method: Decimal Outlier Elimination */}
+              <div className="bg-white p-4 sm:p-5 rounded-xl border border-gray-200 shadow-xs space-y-2">
+                <div className="flex items-center gap-2">
+                  <span className="w-7 h-7 rounded-lg bg-orange-100 text-orange-800 font-black text-xs flex items-center justify-center shrink-0">
+                    #4
+                  </span>
+                  <div>
+                    <h3 className="text-sm font-extrabold text-gray-900">
+                      Decimal Outlier Elimination (Distractor Twins)
+                    </h3>
+                    <span className="text-[10px] text-orange-700 font-semibold">
+                      Spotting professor copy-paste distractors
+                    </span>
+                  </div>
+                </div>
+
+                <p className="text-xs text-gray-700 leading-relaxed">
+                  If the 4 numerical options are: <strong>A) 0.15</strong>, <strong>B) 14.8</strong>, <strong>C) 15.2</strong>, and <strong>D) 1500</strong>:
+                </p>
+                <p className="text-xs text-gray-600 leading-relaxed">
+                  Immediately eliminate <strong>A</strong> (too small) and <strong>D</strong> (too large). 
+                  Professors create quick distractors by moving the decimal point (multiplying or dividing by 10 or 100). 
+                  The true correct answer is always flanked closely by its legitimate calculation twin (<strong>B</strong> or <strong>C</strong>).
+                </p>
+              </div>
+
             </div>
           )}
 
@@ -311,7 +419,7 @@ Continuous learning never stops! Looking forward to applying these principles to
                 </h4>
                 <p className="text-gray-600 leading-relaxed">
                   Print the admit card in high-gloss color. Carry two blue ballpoint pens even though you will never touch paper because the TCS iON virtual keypad does all the input. 
-                  Place your Aadhaar card with deliberate precision on the desk.
+                  Place your Aadhaar card with deliberate precision on the desk to radiate maximum academic authority.
                 </p>
               </div>
 
@@ -332,9 +440,9 @@ Continuous learning never stops! Looking forward to applying these principles to
                   3. The Mandatory Waiting Hour Performance
                 </h4>
                 <p className="text-gray-600 leading-relaxed">
-                  You will finish your 50 questions in 20 minutes because Quizify 2 drilled the exact assignments into your subconscious. 
-                  However, TCS iON does not let you leave before 60 minutes. Do NOT click submit early and nap on the keyboard. 
-                  Keep clicking the review palette solemnly to look like you are cross-validating the gradient descent hyper-parameters.
+                  Using the Longest Option Theorem and Lexical Overlap, you will finish your 50 questions in under 20 minutes. 
+                  However, TCS iON does not let anyone leave before 60 minutes. Do NOT click submit early and sleep on the desk. 
+                  Solemnly click through the review palette looking like you are deeply pondering mathematical edge-cases.
                 </p>
               </div>
             </div>
