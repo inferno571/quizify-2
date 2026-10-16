@@ -251,7 +251,7 @@ Continuous learning never stops! Looking forward to applying these principles to
                 <img 
                   src="/larp_square.jpg" 
                   alt="There's no limit to the LARP meme" 
-                  className="relative w-36 sm:w-44 aspect-square rounded-md object-cover shadow-2xl border-2 border-amber-400/80"
+                  className="relative w-32 sm:w-40 h-auto rounded-md object-contain shadow-2xl border-2 border-amber-400/80"
                 />
               </div>
 
