@@ -1,7 +1,7 @@
 # Quizify 2 — AI Quiz Generator 
 > **Made by Saksham Sooden**
 
-##at this point its more like quizify 4. there is no better way to prepare for NPTEL exams than this.
+## at this point its more like quizify 4. there is no better way to prepare for NPTEL exams than this.
 Quizify 2 transforms your study materials into interactive quizzes using Google Gemini AI and includes complete offline question banks.
 
 ## Architecture
