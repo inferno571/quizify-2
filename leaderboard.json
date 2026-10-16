@@ -6,7 +6,8 @@
     "Sanyam Jindal",
     "Meclerry",
     "isha",
-    "Player 2"
+    "Player 2",
+    "VANSH"
   ],
   "entries": [
     {
@@ -256,6 +257,22 @@
       "totalQuestions": 10,
       "percentage": 90,
       "submittedAt": "2026-10-16T09:44:30.633Z"
+    },
+    {
+      "name": "Saksham Sooden",
+      "quizId": "hr-analytics-2024-full-combined",
+      "score": 50,
+      "totalQuestions": 120,
+      "percentage": 42,
+      "submittedAt": "2026-10-16T14:30:23.397Z"
+    },
+    {
+      "name": "VANSH",
+      "quizId": "hr-analytics-2024-full-combined",
+      "score": 53,
+      "totalQuestions": 120,
+      "percentage": 44,
+      "submittedAt": "2026-10-16T14:30:23.423Z"
     }
   ]
 }
