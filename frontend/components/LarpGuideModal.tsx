@@ -137,12 +137,13 @@ export function LarpFlashOverlay({ isOpen, onClose }: { isOpen: boolean; onClose
         {/* Widescreen Meme Poster Frame */}
         <div className="relative rounded-xl sm:rounded-2xl overflow-hidden border-2 sm:border-4 border-amber-400 shadow-[0_0_80px_rgba(245,158,11,0.8)] animate-larp-glow group max-h-[60vh] flex items-center justify-center bg-black">
           <img 
-            src="/larp.jpg" 
+            src="/larp_wide.jpg" 
             alt="There's no limit to the LARP" 
             className="w-full h-auto object-contain max-h-[58vh]"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
         </div>
+
 
         {/* Bottom Impact Text */}
         <div className="mt-4 sm:mt-5 space-y-1.5">
@@ -248,9 +249,9 @@ Continuous learning never stops! Looking forward to applying these principles to
               <div className="relative shrink-0 group">
                 <div className="absolute -inset-1 bg-gradient-to-r from-amber-500 to-orange-600 rounded-lg blur-xs opacity-75 group-hover:opacity-100 transition duration-300"></div>
                 <img 
-                  src="/larp.jpg" 
+                  src="/larp_square.jpg" 
                   alt="There's no limit to the LARP meme" 
-                  className="relative w-44 sm:w-56 rounded-md object-cover shadow-2xl border-2 border-amber-400/80"
+                  className="relative w-36 sm:w-44 aspect-square rounded-md object-cover shadow-2xl border-2 border-amber-400/80"
                 />
               </div>
 
@@ -505,14 +506,14 @@ Continuous learning never stops! Looking forward to applying these principles to
                     The Arithmetic Convergence Algorithm:
                   </div>
                   <ol className="list-decimal pl-5 space-y-1.5 text-purple-900 leading-relaxed">
-                    <li>Extract <strong>every single number</strong> given in the question stem (e.g. $N=50$, $p=0.4$).</li>
+                    <li>Extract <strong>every single number</strong> given in the question stem (e.g. <em>N</em> = 50, <em>p</em> = 0.4).</li>
                     <li>
                       Perform primitive mathematical operations with those numbers:
-                      <ul className="list-disc pl-4 mt-1 space-y-0.5 text-[11px] text-purple-800">
-                        <li><strong>Multiply them:</strong> $50 \times 0.4 = 20$</li>
-                        <li><strong>Divide them:</strong> $50 / 0.4 = 125$ or $0.4 / 50 = 0.008$</li>
-                        <li><strong>Add/Subtract them:</strong> $50 + 0.4 = 50.4$ or $50 - 0.4 = 49.6$</li>
-                        <li><strong>Divide product by 2 or 100:</strong> $(50 \times 0.4) / 2 = 10$</li>
+                      <ul className="list-disc pl-4 mt-1.5 space-y-1 text-[11px] text-purple-800">
+                        <li><strong>Multiply them:</strong> <span className="font-semibold text-purple-950">50 × 0.4 = 20</span></li>
+                        <li><strong>Divide them:</strong> <span className="font-semibold text-purple-950">50 / 0.4 = 125</span> or <span className="font-semibold text-purple-950">0.4 / 50 = 0.008</span></li>
+                        <li><strong>Add/Subtract them:</strong> <span className="font-semibold text-purple-950">50 + 0.4 = 50.4</span> or <span className="font-semibold text-purple-950">50 - 0.4 = 49.6</span></li>
+                        <li><strong>Divide product by 2 or 100:</strong> <span className="font-semibold text-purple-950">(50 × 0.4) / 2 = 10</span></li>
                       </ul>
                     </li>
                     <li>
