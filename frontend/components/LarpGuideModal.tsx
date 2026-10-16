@@ -28,7 +28,7 @@ import {
  * Synthesize an epic cinematic bass-drop and shimmer chime
  * using the standard HTML5 Web Audio API (zero external audio files).
  */
-function playLarpSound() {
+export function playLarpSound() {
   if (typeof window === 'undefined') return;
   try {
     const AudioContextClass = window.AudioContext || (window as any).webkitAudioContext;
@@ -82,9 +82,19 @@ function playLarpSound() {
 }
 
 /**
- * Full-screen Flash & Shockwave Overlay triggered on Acknowledge
+ * Full-screen Flash & Shockwave Overlay triggered on Acknowledge or LARP Successful
  */
-export function LarpFlashOverlay({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
+export function LarpFlashOverlay({ 
+  isOpen, 
+  onClose,
+  badgeText = "THE LARP HAS BEEN OFFICIALLY ACKNOWLEDGED",
+  subText = "Longest Option Theorem Engaged • Zero Lectures Watched • Elite + Gold Guaranteed"
+}: { 
+  isOpen: boolean; 
+  onClose: () => void;
+  badgeText?: string;
+  subText?: string;
+}) {
   useEffect(() => {
     if (!isOpen) return;
 
@@ -129,7 +139,7 @@ export function LarpFlashOverlay({ isOpen, onClose }: { isOpen: boolean; onClose
         <div className="mb-3 sm:mb-4 flex flex-wrap items-center justify-center gap-2">
           <span className="inline-flex items-center gap-1.5 px-3.5 py-1 bg-gradient-to-r from-amber-500 to-orange-600 text-slate-950 font-black text-xs sm:text-sm rounded-full shadow-lg uppercase tracking-wider animate-bounce">
             <Flame className="w-4 h-4 fill-slate-950" />
-            THE LARP HAS BEEN OFFICIALLY ACKNOWLEDGED
+            {badgeText}
           </span>
           <span className="px-3 py-1 bg-black/60 border border-amber-400/80 text-amber-300 font-bold text-xs rounded-full backdrop-blur-xs">
             SCHOLAR AURA: 100,000+
@@ -146,14 +156,13 @@ export function LarpFlashOverlay({ isOpen, onClose }: { isOpen: boolean; onClose
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
         </div>
 
-
         {/* Bottom Impact Text */}
         <div className="mt-4 sm:mt-5 space-y-1.5">
           <h2 className="text-2xl sm:text-4xl md:text-5xl font-black italic tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-orange-400 drop-shadow-[0_4px_10px_rgba(0,0,0,0.9)]">
             &ldquo;THERE&rsquo;S NO LIMIT TO THE LARP.&rdquo;
           </h2>
           <p className="text-xs sm:text-sm font-semibold text-amber-200/90 tracking-wide drop-shadow-md">
-            Longest Option Theorem Engaged &bull; Zero Lectures Watched &bull; Elite + Gold Guaranteed
+            {subText}
           </p>
           <div className="pt-2 text-[11px] text-gray-400 font-medium">
             (Click anywhere or press Esc to dismiss)
@@ -894,3 +903,54 @@ export function LarpGuideButton() {
     </>
   );
 }
+
+/**
+ * Mid-Quiz "LARP Successful" Button
+ * Plays synthesized triumphant sound effect and triggers the full cinematic wide meme flash overlay
+ */
+export function LarpSuccessfulButton({ 
+  className = "",
+  variant = "primary"
+}: { 
+  className?: string;
+  variant?: 'primary' | 'subtle';
+}) {
+  const [isFlashing, setIsFlashing] = useState(false);
+
+  return (
+    <>
+      <button
+        type="button"
+        onClick={(e) => {
+          e.stopPropagation();
+          setIsFlashing(true);
+        }}
+        className={`group relative inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-black transition-all duration-200 cursor-pointer shadow-md active:scale-95 border select-none ${
+          variant === 'primary'
+            ? 'bg-gradient-to-r from-amber-500 via-orange-500 to-amber-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 border-amber-300 dark:border-amber-400/80 shadow-orange-500/20 hover:shadow-orange-500/40'
+            : 'bg-amber-500/10 hover:bg-amber-500/20 text-amber-900 dark:text-amber-300 border-amber-400/60 hover:border-amber-500'
+        } ${className}`}
+        title="Tap once mid-quiz to celebrate the LARP method working!"
+      >
+        <span className="relative flex h-2 w-2">
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-slate-950 opacity-75"></span>
+          <span className="relative inline-flex rounded-full h-2 w-2 bg-slate-950"></span>
+        </span>
+        <Flame className="w-3.5 h-3.5 fill-slate-950 text-slate-950 group-hover:scale-125 transition-transform" />
+        <span className="tracking-tight uppercase font-extrabold whitespace-nowrap">
+          LARP Successful
+        </span>
+        <Sparkles className="w-3 h-3 text-slate-950 opacity-90 group-hover:rotate-12 transition-transform" />
+      </button>
+
+      {/* Screen flash with wide meme image and cinematic effects */}
+      <LarpFlashOverlay 
+        isOpen={isFlashing} 
+        onClose={() => setIsFlashing(false)} 
+        badgeText="🔥 LARP SUCCESSFUL — THEOREM ENGAGED!"
+        subText="Distractor Eliminated • Longest Option Locked • Elite + Gold Certificate Guaranteed"
+      />
+    </>
+  );
+}
+

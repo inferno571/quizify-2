@@ -26,7 +26,7 @@ import {
 import { PlayerNameModal } from './PlayerNameModal';
 import { getSavedProgress, saveQuizProgress, clearQuizProgress } from '../lib/storage';
 import { MathText } from './MathText';
-import { LarpGuideButton } from './LarpGuideModal';
+import { LarpGuideButton, LarpSuccessfulButton } from './LarpGuideModal';
 import { ThemeToggle } from './ThemeToggle';
 
 
@@ -768,6 +768,11 @@ export function QuizScreen({ quiz, onComplete, onExit }: QuizScreenProps) {
             <LarpGuideButton />
           </div>
 
+          {/* LARP Successful Button */}
+          <div className="hidden lg:block">
+            <LarpSuccessfulButton />
+          </div>
+
           {/* Save & Exit Button in Header */}
           <button
             type="button"
@@ -926,8 +931,11 @@ export function QuizScreen({ quiz, onComplete, onExit }: QuizScreenProps) {
                  </span>
                )}
              </div>
-             <div className="text-gray-600 dark:text-neutral-400 flex items-center gap-2">
-                <span className="font-semibold">Marks: +1, -0</span>
+             <div className="flex items-center gap-3">
+               <LarpSuccessfulButton />
+               <div className="text-gray-600 dark:text-neutral-400 flex items-center gap-2">
+                 <span className="font-semibold text-xs sm:text-sm">Marks: +1, -0</span>
+               </div>
              </div>
           </div>
           
@@ -1202,6 +1210,7 @@ export function QuizScreen({ quiz, onComplete, onExit }: QuizScreenProps) {
                 <Bookmark className="w-4 h-4 text-amber-600 dark:text-amber-400" />
                 Save & Pause
               </button>
+              <LarpSuccessfulButton />
             </div>
             
             <div className="flex items-center gap-2">
