@@ -12,6 +12,7 @@ export const metadata: Metadata = {
 
 
 import { NgrokHeaderInterceptor } from '../components/NgrokHeaderInterceptor';
+import { ThemeProvider } from '../components/ThemeProvider';
 
 export default function RootLayout({
   children,
@@ -19,14 +20,33 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <meta name="theme-color" content="#2c3e50" />
         <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23f97316'/><circle cx='50' cy='50' r='20' fill='none' stroke='white' stroke-width='8'/></svg>" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  var saved = localStorage.getItem('quizify_theme');
+                  var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                  if (theme === 'dark') {
+                    document.documentElement.classList.add('dark');
+                  } else {
+                    document.documentElement.classList.remove('dark');
+                  }
+                } catch (e) {}
+              })();
+            `,
+          }}
+        />
       </head>
-      <body className={`${inter.className} min-h-screen flex flex-col font-sans bg-white text-[#2c3e50]`}>
-        <NgrokHeaderInterceptor />
-        {children}
+      <body className={`${inter.className} min-h-screen flex flex-col font-sans bg-white dark:bg-slate-950 text-[#2c3e50] dark:text-slate-100 transition-colors duration-200`}>
+        <ThemeProvider>
+          <NgrokHeaderInterceptor />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

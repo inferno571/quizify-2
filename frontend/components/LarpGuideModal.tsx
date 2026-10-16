@@ -206,7 +206,7 @@ Continuous learning never stops! Looking forward to applying these principles to
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-5 bg-black/75 backdrop-blur-sm animate-in fade-in duration-200">
       <div 
-        className="bg-white rounded-2xl shadow-2xl max-w-3xl w-full max-h-[92vh] flex flex-col overflow-hidden border border-amber-200/80 animate-in zoom-in-95 duration-200"
+        className="bg-white dark:bg-slate-900 rounded-2xl shadow-2xl max-w-3xl w-full max-h-[92vh] flex flex-col overflow-hidden border border-amber-200/80 dark:border-amber-500/30 animate-in zoom-in-95 duration-200"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Top Header Bar */}
@@ -240,7 +240,7 @@ Continuous learning never stops! Looking forward to applying these principles to
         </div>
 
         {/* Scrollable Content Body */}
-        <div className="flex-1 overflow-y-auto p-4 sm:p-6 space-y-6 bg-slate-50 text-slate-800">
+        <div className="flex-1 overflow-y-auto p-4 sm:p-6 space-y-6 bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100">
           
           {/* Hero Banner with Meme Image */}
           <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-slate-950 via-slate-900 to-amber-950 p-4 sm:p-5 text-white shadow-lg border border-amber-500/20">
@@ -292,13 +292,13 @@ Continuous learning never stops! Looking forward to applying these principles to
           </div>
 
           {/* Navigation Tabs */}
-          <div className="flex border-b border-gray-200 gap-1 overflow-x-auto pb-px">
+          <div className="flex border-b border-gray-200 dark:border-slate-800 gap-1 overflow-x-auto pb-px">
             <button
               onClick={() => setActiveTab('longest')}
               className={`flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold rounded-t-lg transition whitespace-nowrap cursor-pointer ${
                 activeTab === 'longest'
-                  ? 'bg-white text-orange-600 border-t-2 border-orange-500 border-x border-gray-200 shadow-xs'
-                  : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
+                  ? 'bg-white dark:bg-slate-900 text-orange-600 dark:text-orange-400 border-t-2 border-orange-500 border-x border-gray-200 dark:border-x-slate-800 shadow-xs'
+                  : 'text-gray-600 dark:text-slate-400 hover:text-gray-900 dark:hover:text-slate-100 hover:bg-gray-100 dark:hover:bg-slate-800'
               }`}
             >
               <Scale className="w-3.5 h-3.5" />
@@ -308,8 +308,8 @@ Continuous learning never stops! Looking forward to applying these principles to
               onClick={() => setActiveTab('methods')}
               className={`flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold rounded-t-lg transition whitespace-nowrap cursor-pointer ${
                 activeTab === 'methods'
-                  ? 'bg-white text-orange-600 border-t-2 border-orange-500 border-x border-gray-200 shadow-xs'
-                  : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
+                  ? 'bg-white dark:bg-slate-900 text-orange-600 dark:text-orange-400 border-t-2 border-orange-500 border-x border-gray-200 dark:border-x-slate-800 shadow-xs'
+                  : 'text-gray-600 dark:text-slate-400 hover:text-gray-900 dark:hover:text-slate-100 hover:bg-gray-100 dark:hover:bg-slate-800'
               }`}
             >
               <Zap className="w-3.5 h-3.5" />
@@ -319,8 +319,8 @@ Continuous learning never stops! Looking forward to applying these principles to
               onClick={() => setActiveTab('center')}
               className={`flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold rounded-t-lg transition whitespace-nowrap cursor-pointer ${
                 activeTab === 'center'
-                  ? 'bg-white text-orange-600 border-t-2 border-orange-500 border-x border-gray-200 shadow-xs'
-                  : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
+                  ? 'bg-white dark:bg-slate-900 text-orange-600 dark:text-orange-400 border-t-2 border-orange-500 border-x border-gray-200 dark:border-x-slate-800 shadow-xs'
+                  : 'text-gray-600 dark:text-slate-400 hover:text-gray-900 dark:hover:text-slate-100 hover:bg-gray-100 dark:hover:bg-slate-800'
               }`}
             >
               <ShieldCheck className="w-3.5 h-3.5" />
@@ -330,8 +330,8 @@ Continuous learning never stops! Looking forward to applying these principles to
               onClick={() => setActiveTab('linkedin')}
               className={`flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold rounded-t-lg transition whitespace-nowrap cursor-pointer ${
                 activeTab === 'linkedin'
-                  ? 'bg-white text-orange-600 border-t-2 border-orange-500 border-x border-gray-200 shadow-xs'
-                  : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
+                  ? 'bg-white dark:bg-slate-900 text-orange-600 dark:text-orange-400 border-t-2 border-orange-500 border-x border-gray-200 dark:border-x-slate-800 shadow-xs'
+                  : 'text-gray-600 dark:text-slate-400 hover:text-gray-900 dark:hover:text-slate-100 hover:bg-gray-100 dark:hover:bg-slate-800'
               }`}
             >
               <Award className="w-3.5 h-3.5" />
@@ -342,9 +342,9 @@ Continuous learning never stops! Looking forward to applying these principles to
           {/* TAB 1: THE LONGEST OPTION THEOREM IN DEPTH */}
           {activeTab === 'longest' && (
             <div className="space-y-4 animate-in fade-in duration-150">
-              <div className="bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-300 rounded-xl p-4 text-xs text-amber-950 space-y-1.5">
-                <div className="flex items-center gap-2 font-black text-amber-900 text-sm">
-                  <Scale className="w-4 h-4 text-orange-600" />
+              <div className="bg-gradient-to-r from-amber-50 to-orange-50 dark:from-amber-950/40 dark:to-orange-950/40 border border-amber-300 dark:border-amber-700/60 rounded-xl p-4 text-xs text-amber-950 dark:text-amber-200 space-y-1.5">
+                <div className="flex items-center gap-2 font-black text-amber-900 dark:text-amber-300 text-sm">
+                  <Scale className="w-4 h-4 text-orange-600 dark:text-orange-400" />
                   Rule #1: Always Pick the Longest Answer
                 </div>
                 <p className="leading-relaxed">
@@ -355,66 +355,66 @@ Continuous learning never stops! Looking forward to applying these principles to
               </div>
 
               {/* Sub-rule 1A: Word Count Primary Rule */}
-              <div className="bg-white p-4 sm:p-5 rounded-xl border border-gray-200 shadow-xs space-y-3">
+              <div className="bg-white dark:bg-slate-900 p-4 sm:p-5 rounded-xl border border-gray-200 dark:border-slate-800 shadow-xs space-y-3">
                 <div className="flex items-start justify-between gap-3">
                   <div className="flex items-center gap-2">
-                    <span className="w-7 h-7 rounded-lg bg-emerald-100 text-emerald-800 font-black text-xs flex items-center justify-center shrink-0">
+                    <span className="w-7 h-7 rounded-lg bg-emerald-100 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-300 font-black text-xs flex items-center justify-center shrink-0">
                       1A
                     </span>
                     <div>
-                      <h3 className="text-sm font-extrabold text-gray-900">
+                      <h3 className="text-sm font-extrabold text-gray-900 dark:text-white">
                         Primary Metric: The Word Count Rule
                       </h3>
-                      <span className="inline-flex items-center gap-1 text-[10px] text-emerald-700 font-bold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
+                      <span className="inline-flex items-center gap-1 text-[10px] text-emerald-700 dark:text-emerald-300 font-bold bg-emerald-50 dark:bg-emerald-950/40 px-2 py-0.5 rounded border border-emerald-200 dark:border-emerald-800">
                         <Check className="w-3 h-3" /> ALWAYS WORKS (Gold Standard)
                       </span>
                     </div>
                   </div>
                 </div>
 
-                <p className="text-xs text-gray-700 leading-relaxed">
+                <p className="text-xs text-gray-700 dark:text-slate-300 leading-relaxed">
                   First, <strong>count the total number of words</strong> in each of the four options:
                 </p>
                 
-                <div className="bg-slate-50 p-3 rounded-lg border border-slate-200 text-xs space-y-1.5 font-mono">
-                  <div className="text-gray-500 text-[11px] font-sans font-semibold mb-1">Example Option Analysis:</div>
-                  <div className="text-gray-700">A) It maximizes batch throughput. <span className="text-gray-400 font-bold">[4 words]</span></div>
-                  <div className="text-gray-700">B) It reduces gradient variance. <span className="text-gray-400 font-bold">[4 words]</span></div>
-                  <div className="text-emerald-700 font-bold bg-emerald-50/80 px-2 py-1 rounded border border-emerald-200">
-                    C) It maps high-dimensional sparse representations into dense continuous vector spaces capturing semantic similarity. <span className="text-emerald-900">[14 words]</span> &larr; SELECT THIS
+                <div className="bg-slate-50 dark:bg-slate-950 p-3 rounded-lg border border-slate-200 dark:border-slate-800 text-xs space-y-1.5 font-mono">
+                  <div className="text-gray-500 dark:text-slate-400 text-[11px] font-sans font-semibold mb-1">Example Option Analysis:</div>
+                  <div className="text-gray-700 dark:text-slate-300">A) It maximizes batch throughput. <span className="text-gray-400 dark:text-slate-500 font-bold">[4 words]</span></div>
+                  <div className="text-gray-700 dark:text-slate-300">B) It reduces gradient variance. <span className="text-gray-400 dark:text-slate-500 font-bold">[4 words]</span></div>
+                  <div className="text-emerald-700 dark:text-emerald-400 font-bold bg-emerald-50/80 dark:bg-emerald-950/50 px-2 py-1 rounded border border-emerald-200 dark:border-emerald-800">
+                    C) It maps high-dimensional sparse representations into dense continuous vector spaces capturing semantic similarity. <span className="text-emerald-900 dark:text-emerald-200">[14 words]</span> &larr; SELECT THIS
                   </div>
-                  <div className="text-gray-700">D) It guarantees zero training loss. <span className="text-gray-400 font-bold">[5 words]</span></div>
+                  <div className="text-gray-700 dark:text-slate-300">D) It guarantees zero training loss. <span className="text-gray-400 dark:text-slate-500 font-bold">[5 words]</span></div>
                 </div>
 
-                <div className="bg-emerald-50 border-l-4 border-emerald-500 p-2.5 rounded text-xs text-emerald-950 font-medium leading-relaxed">
+                <div className="bg-emerald-50 dark:bg-emerald-950/40 border-l-4 border-emerald-500 p-2.5 rounded text-xs text-emerald-950 dark:text-emerald-200 font-medium leading-relaxed">
                   <strong>The Word Count Verdict:</strong> If one option has noticeably more words than the other three, 
                   <strong> lock it in immediately</strong>. The longest words method has an almost 100% empirical success rate in NPTEL tests.
                 </div>
               </div>
 
               {/* Sub-rule 1B: Character Count Tiebreaker */}
-              <div className="bg-white p-4 sm:p-5 rounded-xl border border-gray-200 shadow-xs space-y-3">
+              <div className="bg-white dark:bg-slate-900 p-4 sm:p-5 rounded-xl border border-gray-200 dark:border-slate-800 shadow-xs space-y-3">
                 <div className="flex items-start justify-between gap-3">
                   <div className="flex items-center gap-2">
-                    <span className="w-7 h-7 rounded-lg bg-amber-100 text-amber-800 font-black text-xs flex items-center justify-center shrink-0">
+                    <span className="w-7 h-7 rounded-lg bg-amber-100 dark:bg-amber-950/80 text-amber-800 dark:text-amber-300 font-black text-xs flex items-center justify-center shrink-0">
                       1B
                     </span>
                     <div>
-                      <h3 className="text-sm font-extrabold text-gray-900">
+                      <h3 className="text-sm font-extrabold text-gray-900 dark:text-white">
                         Tiebreaker: Character Count (Use with Caution)
                       </h3>
-                      <span className="inline-flex items-center gap-1 text-[10px] text-amber-800 font-bold bg-amber-50 px-2 py-0.5 rounded border border-amber-300">
-                        <AlertTriangle className="w-3 h-3 text-amber-600" /> NOT 100% GUARANTEED
+                      <span className="inline-flex items-center gap-1 text-[10px] text-amber-800 dark:text-amber-300 font-bold bg-amber-50 dark:bg-amber-950/40 px-2 py-0.5 rounded border border-amber-300 dark:border-amber-700">
+                        <AlertTriangle className="w-3 h-3 text-amber-600 dark:text-amber-400" /> NOT 100% GUARANTEED
                       </span>
                     </div>
                   </div>
                 </div>
 
-                <p className="text-xs text-gray-700 leading-relaxed">
+                <p className="text-xs text-gray-700 dark:text-slate-300 leading-relaxed">
                   If two or more options are tied with the <strong>exact same number of words</strong>, proceed to the character-level inspection:
                 </p>
 
-                <ul className="text-xs text-gray-700 space-y-2 list-disc pl-5">
+                <ul className="text-xs text-gray-700 dark:text-slate-300 space-y-2 list-disc pl-5">
                   <li>
                     Count total characters (including alphabet letters, hyphens, and punctuation).
                   </li>
@@ -423,9 +423,9 @@ Continuous learning never stops! Looking forward to applying these principles to
                   </li>
                 </ul>
 
-                <div className="bg-amber-50 border-l-4 border-amber-500 p-3 rounded text-xs text-amber-950 space-y-1">
-                  <div className="font-bold flex items-center gap-1 text-amber-900">
-                    <AlertTriangle className="w-3.5 h-3.5 text-amber-700" />
+                <div className="bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 p-3 rounded text-xs text-amber-950 dark:text-amber-200 space-y-1">
+                  <div className="font-bold flex items-center gap-1 text-amber-900 dark:text-amber-300">
+                    <AlertTriangle className="w-3.5 h-3.5 text-amber-700 dark:text-amber-400" />
                     Crucial Caveat &amp; Warning:
                   </div>
                   <p className="leading-relaxed">
@@ -443,37 +443,37 @@ Continuous learning never stops! Looking forward to applying these principles to
             <div className="space-y-4 animate-in fade-in duration-150">
               
               {/* Method 2: Matching Words Heuristic */}
-              <div className="bg-white p-4 sm:p-5 rounded-xl border border-gray-200 shadow-xs space-y-3">
+              <div className="bg-white dark:bg-slate-900 p-4 sm:p-5 rounded-xl border border-gray-200 dark:border-slate-800 shadow-xs space-y-3">
                 <div className="flex items-center gap-2">
-                  <span className="w-7 h-7 rounded-lg bg-blue-100 text-blue-800 font-black text-xs flex items-center justify-center shrink-0">
+                  <span className="w-7 h-7 rounded-lg bg-blue-100 dark:bg-blue-950/80 text-blue-800 dark:text-blue-300 font-black text-xs flex items-center justify-center shrink-0">
                     #2
                   </span>
                   <div>
-                    <h3 className="text-sm font-extrabold text-gray-900">
+                    <h3 className="text-sm font-extrabold text-gray-900 dark:text-white">
                       The Matching Words Heuristic (Lexical Overlap Rule)
                     </h3>
-                    <span className="text-[10px] text-blue-700 font-semibold">
+                    <span className="text-[10px] text-blue-700 dark:text-blue-400 font-semibold">
                       Count words in common between the Question &amp; Options
                     </span>
                   </div>
                 </div>
 
-                <p className="text-xs text-gray-700 leading-relaxed">
+                <p className="text-xs text-gray-700 dark:text-slate-300 leading-relaxed">
                   When the longest option rule is inconclusive or options are equal length, inspect vocabulary overlap:
                 </p>
 
-                <div className="bg-blue-50/60 p-3 rounded-lg border border-blue-200 text-xs space-y-2">
-                  <div className="font-bold text-blue-950 flex items-center gap-1.5">
-                    <FileText className="w-3.5 h-3.5 text-blue-700" />
+                <div className="bg-blue-50/60 dark:bg-blue-950/40 p-3 rounded-lg border border-blue-200 dark:border-blue-800 text-xs space-y-2">
+                  <div className="font-bold text-blue-950 dark:text-blue-200 flex items-center gap-1.5">
+                    <FileText className="w-3.5 h-3.5 text-blue-700 dark:text-blue-400" />
                     The 2+ Overlapping Words Principle:
                   </div>
-                  <p className="text-blue-900 leading-relaxed">
+                  <p className="text-blue-900 dark:text-blue-200 leading-relaxed">
                     If there are <strong>more than two specific words</strong> from the question that reappear inside an answer option, 
                     <strong> pick that option</strong>. Choose the option that shares the <strong>highest number of words in common</strong> with the question stem.
                   </p>
                 </div>
 
-                <div className="text-xs text-gray-600 bg-slate-50 p-2.5 rounded border border-gray-200 leading-relaxed">
+                <div className="text-xs text-gray-600 dark:text-slate-400 bg-slate-50 dark:bg-slate-950 p-2.5 rounded border border-gray-200 dark:border-slate-800 leading-relaxed">
                   <strong>Why this works:</strong> IIT professors copy questions straight from their slide definitions. 
                   The slide header contains keywords X and Y, and the correct bullet point contains X and Y again. 
                   Distractors are generated off the top of their head and lack that direct lexical fingerprint.
@@ -481,39 +481,39 @@ Continuous learning never stops! Looking forward to applying these principles to
               </div>
 
               {/* Method 3: Brute-Force Mathematical Ballpark Convergence */}
-              <div className="bg-white p-4 sm:p-5 rounded-xl border border-gray-200 shadow-xs space-y-3">
+              <div className="bg-white dark:bg-slate-900 p-4 sm:p-5 rounded-xl border border-gray-200 dark:border-slate-800 shadow-xs space-y-3">
                 <div className="flex items-center gap-2">
-                  <span className="w-7 h-7 rounded-lg bg-purple-100 text-purple-800 font-black text-xs flex items-center justify-center shrink-0">
+                  <span className="w-7 h-7 rounded-lg bg-purple-100 dark:bg-purple-950/80 text-purple-800 dark:text-purple-300 font-black text-xs flex items-center justify-center shrink-0">
                     #3
                   </span>
                   <div>
-                    <h3 className="text-sm font-extrabold text-gray-900">
+                    <h3 className="text-sm font-extrabold text-gray-900 dark:text-white">
                       Brute-Force Mathematical Ballpark Convergence
                     </h3>
-                    <span className="text-[10px] text-purple-700 font-semibold">
+                    <span className="text-[10px] text-purple-700 dark:text-purple-400 font-semibold">
                       For numerical questions when you don&rsquo;t know the formula
                     </span>
                   </div>
                 </div>
 
-                <p className="text-xs text-gray-700 leading-relaxed">
+                <p className="text-xs text-gray-700 dark:text-slate-300 leading-relaxed">
                   Facing a complex physics, ML, or HR numerical problem with zero idea what equation to use? Execute the brute-force sweep:
                 </p>
 
-                <div className="bg-purple-50/60 p-3 rounded-lg border border-purple-200 text-xs space-y-2">
-                  <div className="font-bold text-purple-950 flex items-center gap-1.5">
-                    <Calculator className="w-3.5 h-3.5 text-purple-700" />
+                <div className="bg-purple-50/60 dark:bg-purple-950/40 p-3 rounded-lg border border-purple-200 dark:border-purple-800 text-xs space-y-2">
+                  <div className="font-bold text-purple-950 dark:text-purple-200 flex items-center gap-1.5">
+                    <Calculator className="w-3.5 h-3.5 text-purple-700 dark:text-purple-400" />
                     The Arithmetic Convergence Algorithm:
                   </div>
-                  <ol className="list-decimal pl-5 space-y-1.5 text-purple-900 leading-relaxed">
+                  <ol className="list-decimal pl-5 space-y-1.5 text-purple-900 dark:text-purple-200 leading-relaxed">
                     <li>Extract <strong>every single number</strong> given in the question stem (e.g. <em>N</em> = 50, <em>p</em> = 0.4).</li>
                     <li>
                       Perform primitive mathematical operations with those numbers:
-                      <ul className="list-disc pl-4 mt-1.5 space-y-1 text-[11px] text-purple-800">
-                        <li><strong>Multiply them:</strong> <span className="font-semibold text-purple-950">50 × 0.4 = 20</span></li>
-                        <li><strong>Divide them:</strong> <span className="font-semibold text-purple-950">50 / 0.4 = 125</span> or <span className="font-semibold text-purple-950">0.4 / 50 = 0.008</span></li>
-                        <li><strong>Add/Subtract them:</strong> <span className="font-semibold text-purple-950">50 + 0.4 = 50.4</span> or <span className="font-semibold text-purple-950">50 - 0.4 = 49.6</span></li>
-                        <li><strong>Divide product by 2 or 100:</strong> <span className="font-semibold text-purple-950">(50 × 0.4) / 2 = 10</span></li>
+                      <ul className="list-disc pl-4 mt-1.5 space-y-1 text-[11px] text-purple-800 dark:text-purple-300">
+                        <li><strong>Multiply them:</strong> <span className="font-semibold text-purple-950 dark:text-purple-100">50 × 0.4 = 20</span></li>
+                        <li><strong>Divide them:</strong> <span className="font-semibold text-purple-950 dark:text-purple-100">50 / 0.4 = 125</span> or <span className="font-semibold text-purple-950 dark:text-purple-100">0.4 / 50 = 0.008</span></li>
+                        <li><strong>Add/Subtract them:</strong> <span className="font-semibold text-purple-950 dark:text-purple-100">50 + 0.4 = 50.4</span> or <span className="font-semibold text-purple-950 dark:text-purple-100">50 - 0.4 = 49.6</span></li>
+                        <li><strong>Divide product by 2 or 100:</strong> <span className="font-semibold text-purple-950 dark:text-purple-100">(50 × 0.4) / 2 = 10</span></li>
                       </ul>
                     </li>
                     <li>
@@ -522,7 +522,7 @@ Continuous learning never stops! Looking forward to applying these principles to
                   </ol>
                 </div>
 
-                <div className="text-xs text-gray-600 bg-slate-50 p-2.5 rounded border border-gray-200 leading-relaxed">
+                <div className="text-xs text-gray-600 dark:text-slate-400 bg-slate-50 dark:bg-slate-950 p-2.5 rounded border border-gray-200 dark:border-slate-800 leading-relaxed">
                   <strong>Why this works:</strong> NPTEL questions rarely involve mystery transcendental constants. 
                   Formulas are almost always products, ratios, or linear combinations of the given parameters. 
                   Simple multiplication or division hits the exact answer or its decimal multiple &gt;70% of the time.
@@ -530,25 +530,25 @@ Continuous learning never stops! Looking forward to applying these principles to
               </div>
 
               {/* Bonus LARP Method: Decimal Outlier Elimination */}
-              <div className="bg-white p-4 sm:p-5 rounded-xl border border-gray-200 shadow-xs space-y-2">
+              <div className="bg-white dark:bg-slate-900 p-4 sm:p-5 rounded-xl border border-gray-200 dark:border-slate-800 shadow-xs space-y-2">
                 <div className="flex items-center gap-2">
-                  <span className="w-7 h-7 rounded-lg bg-orange-100 text-orange-800 font-black text-xs flex items-center justify-center shrink-0">
+                  <span className="w-7 h-7 rounded-lg bg-orange-100 dark:bg-orange-950/80 text-orange-800 dark:text-orange-300 font-black text-xs flex items-center justify-center shrink-0">
                     #4
                   </span>
                   <div>
-                    <h3 className="text-sm font-extrabold text-gray-900">
+                    <h3 className="text-sm font-extrabold text-gray-900 dark:text-white">
                       Decimal Outlier Elimination (Distractor Twins)
                     </h3>
-                    <span className="text-[10px] text-orange-700 font-semibold">
+                    <span className="text-[10px] text-orange-700 dark:text-orange-400 font-semibold">
                       Spotting professor copy-paste distractors
                     </span>
                   </div>
                 </div>
 
-                <p className="text-xs text-gray-700 leading-relaxed">
+                <p className="text-xs text-gray-700 dark:text-slate-300 leading-relaxed">
                   If the 4 numerical options are: <strong>A) 0.15</strong>, <strong>B) 14.8</strong>, <strong>C) 15.2</strong>, and <strong>D) 1500</strong>:
                 </p>
-                <p className="text-xs text-gray-600 leading-relaxed">
+                <p className="text-xs text-gray-600 dark:text-slate-400 leading-relaxed">
                   Immediately eliminate <strong>A</strong> (too small) and <strong>D</strong> (too large). 
                   Professors create quick distractors by moving the decimal point (multiplying or dividing by 10 or 100). 
                   The true correct answer is always flanked closely by its legitimate calculation twin (<strong>B</strong> or <strong>C</strong>).
@@ -560,23 +560,23 @@ Continuous learning never stops! Looking forward to applying these principles to
 
           {/* TAB 3: TCS iON CENTER PROTOCOL */}
           {activeTab === 'center' && (
-            <div className="space-y-3.5 text-xs text-gray-700 animate-in fade-in duration-150">
-              <div className="bg-white p-4 rounded-xl border border-gray-200 shadow-xs space-y-2">
-                <h4 className="font-bold text-gray-900 text-sm flex items-center gap-1.5 text-slate-800">
-                  <ShieldCheck className="w-4 h-4 text-emerald-600" />
+            <div className="space-y-3.5 text-xs text-gray-700 dark:text-slate-300 animate-in fade-in duration-150">
+              <div className="bg-white dark:bg-slate-900 p-4 rounded-xl border border-gray-200 dark:border-slate-800 shadow-xs space-y-2">
+                <h4 className="font-bold text-gray-900 dark:text-white text-sm flex items-center gap-1.5">
+                  <ShieldCheck className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
                   1. The Color Hall Ticket Preparation
                 </h4>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-600 dark:text-slate-400 leading-relaxed">
                   Print the admit card in high-gloss color. Carry two blue ballpoint pens even though you will never touch paper because the TCS iON virtual keypad does all the numerical input.
                 </p>
               </div>
 
-              <div className="bg-white p-4 rounded-xl border border-gray-200 shadow-xs space-y-2">
-                <h4 className="font-bold text-gray-900 text-sm flex items-center gap-1.5 text-slate-800">
-                  <Target className="w-4 h-4 text-purple-600" />
+              <div className="bg-white dark:bg-slate-900 p-4 rounded-xl border border-gray-200 dark:border-slate-800 shadow-xs space-y-2">
+                <h4 className="font-bold text-gray-900 dark:text-white text-sm flex items-center gap-1.5">
+                  <Target className="w-4 h-4 text-purple-600 dark:text-purple-400" />
                   2. The Mandatory Waiting Hour Performance
                 </h4>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-600 dark:text-slate-400 leading-relaxed">
                   Using the Longest Option Theorem and Lexical Overlap, you will finish your 50 questions in under 20 minutes. 
                   However, TCS iON does not let anyone leave before 60 minutes. Do NOT click submit early and sleep on the desk. 
                   Solemnly click through the review palette looking like you are deeply pondering mathematical edge-cases.
@@ -588,10 +588,10 @@ Continuous learning never stops! Looking forward to applying these principles to
           {/* TAB 4: LINKEDIN TEMPLATE */}
           {activeTab === 'linkedin' && (
             <div className="space-y-3 text-xs animate-in fade-in duration-150">
-              <div className="flex items-center justify-between bg-blue-50 border border-blue-200 p-3 rounded-xl">
+              <div className="flex items-center justify-between bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-900 p-3 rounded-xl">
                 <div>
-                  <div className="font-bold text-blue-900">Pre-Formatted LinkedIn Victory Post</div>
-                  <div className="text-[11px] text-blue-700">One-click copy to celebrate your glorious certificate with the world.</div>
+                  <div className="font-bold text-blue-900 dark:text-blue-200">Pre-Formatted LinkedIn Victory Post</div>
+                  <div className="text-[11px] text-blue-700 dark:text-blue-300">One-click copy to celebrate your glorious certificate with the world.</div>
                 </div>
                 <button
                   onClick={handleCopyLinkedIn}
@@ -611,9 +611,9 @@ Continuous learning never stops! Looking forward to applying these principles to
         </div>
 
         {/* Modal Footer */}
-        <div className="px-5 py-3 bg-white border-t border-gray-200 flex items-center justify-between shrink-0">
-          <div className="text-[11px] text-gray-500 font-medium">
-            Quizify 3 • <span className="text-orange-600 font-bold">Made by Saksham Sooden</span>
+        <div className="px-5 py-3 bg-white dark:bg-slate-900 border-t border-gray-200 dark:border-slate-800 flex items-center justify-between shrink-0">
+          <div className="text-[11px] text-gray-500 dark:text-slate-400 font-medium">
+            Quizify 3 • <span className="text-orange-600 dark:text-orange-400 font-bold">Made by Saksham Sooden</span>
           </div>
 
           <button
@@ -640,7 +640,7 @@ export function LarpGuideButton() {
     <>
       <button
         onClick={() => setIsOpen(true)}
-        className="group relative inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold transition-all duration-200 cursor-pointer shadow-xs border bg-gradient-to-r from-amber-500/10 via-orange-500/10 to-amber-500/15 border-amber-400/60 hover:border-amber-500 text-amber-900 hover:text-orange-950 hover:shadow-amber-500/10"
+        className="group relative inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold transition-all duration-200 cursor-pointer shadow-xs border bg-gradient-to-r from-amber-500/10 via-orange-500/10 to-amber-500/15 border-amber-400/60 hover:border-amber-500 text-amber-900 dark:text-amber-300 hover:text-orange-950 dark:hover:text-amber-100 hover:shadow-amber-500/10 dark:bg-amber-950/30"
         title="Open the In-Depth NPTEL LARP Guide"
       >
         <span className="relative flex h-2 w-2">

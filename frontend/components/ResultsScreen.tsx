@@ -270,17 +270,16 @@ export function ResultsScreen({
       
       {/* Top Header Section */}
       {isTwoPlayer ? (
-        <div className="bg-white rounded-2xl border border-purple-200/90 p-6 shadow-sm mb-6 overflow-hidden relative">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-6 border-b border-gray-100">
+        <div className="bg-white dark:bg-slate-900 rounded-2xl border border-purple-200/90 dark:border-purple-900/50 p-6 shadow-sm mb-6 overflow-hidden relative">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-6 border-b border-gray-100 dark:border-slate-800">
             <div>
               <div className="flex items-center gap-2 mb-1.5 flex-wrap">
                 <span className="bg-gradient-to-r from-blue-600 to-purple-600 text-white text-xs font-black px-3 py-0.5 rounded-full uppercase tracking-wider shadow-2xs">
                   2-Player Head-to-Head
                 </span>
-                <span className="text-xs text-gray-500 font-medium">
-                  Quizify 3 • <span className="text-gray-800 font-semibold">{quiz.title}</span>
+                <span className="text-xs text-gray-500 dark:text-slate-400 font-medium">
+                  Quizify 3 • <span className="text-gray-800 dark:text-slate-200 font-semibold">{quiz.title}</span>
                 </span>
-
               </div>
               <h2 className="text-2xl font-black text-slate-900 mt-1">
                 {finalP1Score > finalP2Score ? (
@@ -311,29 +310,29 @@ export function ResultsScreen({
               {/* Player 1 Card */}
               <div className={`p-4 rounded-xl border text-center min-w-32 transition-all ${
                 finalP1Score > finalP2Score 
-                  ? 'bg-blue-50/90 border-blue-400 ring-2 ring-blue-400/50 shadow-md' 
-                  : 'bg-white border-blue-200'
+                  ? 'bg-blue-50/90 dark:bg-blue-950/50 border-blue-400 dark:border-blue-500 ring-2 ring-blue-400/50 shadow-md' 
+                  : 'bg-white dark:bg-slate-900 border-blue-200 dark:border-blue-800'
               }`}>
-                <div className="flex items-center justify-center gap-1 text-xs font-black text-blue-900 uppercase tracking-wider mb-1">
+                <div className="flex items-center justify-center gap-1 text-xs font-black text-blue-900 dark:text-blue-300 uppercase tracking-wider mb-1">
                   🔵 {p1DisplayName}
                 </div>
-                <div className="text-3xl font-black text-blue-700">
-                  {finalP1Score}<span className="text-base text-gray-400 font-normal">/{quiz.questions.length}</span>
+                <div className="text-3xl font-black text-blue-700 dark:text-blue-400">
+                  {finalP1Score}<span className="text-base text-gray-400 dark:text-slate-500 font-normal">/{quiz.questions.length}</span>
                 </div>
-                <div className="text-xs font-bold text-blue-900/80 mt-0.5">
+                <div className="text-xs font-bold text-blue-900/80 dark:text-blue-300/80 mt-0.5">
                   {percentage}% Accuracy
                 </div>
               </div>
 
-              <div className="text-center font-black text-xs text-gray-400 uppercase tracking-widest px-1">
+              <div className="text-center font-black text-xs text-gray-400 dark:text-slate-500 uppercase tracking-widest px-1">
                 VS
               </div>
 
               {/* Player 2 Card */}
               <div className={`p-4 rounded-xl border text-center min-w-32 transition-all ${
                 finalP2Score > finalP1Score 
-                  ? 'bg-purple-50/90 border-purple-400 ring-2 ring-purple-400/50 shadow-md' 
-                  : 'bg-white border-purple-200'
+                  ? 'bg-purple-50/90 dark:bg-purple-950/50 border-purple-400 dark:border-purple-500 ring-2 ring-purple-400/50 shadow-md' 
+                  : 'bg-white dark:bg-slate-900 border-purple-200 dark:border-purple-800'
               }`}>
                 <div className="flex items-center justify-center gap-1 text-xs font-black text-purple-900 uppercase tracking-wider mb-1">
                   🟣 {p2DisplayName}
@@ -371,42 +370,42 @@ export function ResultsScreen({
           </div>
         </div>
       ) : (
-        <div className="bg-white rounded-xl border border-gray-300 p-6 shadow-sm mb-6 flex flex-col md:flex-row justify-between items-center gap-6">
+        <div className="bg-white dark:bg-slate-900 rounded-xl border border-gray-300 dark:border-slate-800 p-6 shadow-sm mb-6 flex flex-col md:flex-row justify-between items-center gap-6">
            <div>
               <div className="flex items-center gap-2 mb-1.5">
-                <span className="bg-orange-100 text-orange-700 text-xs font-bold px-2.5 py-0.5 rounded-full border border-orange-200 uppercase tracking-wide">
+                <span className="bg-orange-100 dark:bg-orange-950/50 text-orange-700 dark:text-orange-400 text-xs font-bold px-2.5 py-0.5 rounded-full border border-orange-200 dark:border-orange-800 uppercase tracking-wide">
                   Quizify 3
                 </span>
 
-                <span className="text-xs text-gray-500 font-medium">
-                  Made by <span className="text-gray-800 font-semibold">Saksham Sooden</span>
+                <span className="text-xs text-gray-500 dark:text-slate-400 font-medium">
+                  Made by <span className="text-gray-800 dark:text-slate-200 font-semibold">Saksham Sooden</span>
                 </span>
               </div>
-              <h2 className="text-2xl font-bold tracking-tight text-slate-800 mb-1">Result Summary</h2>
-              <p className="text-gray-600 text-sm font-medium">{quiz.title}</p>
+              <h2 className="text-2xl font-bold tracking-tight text-slate-800 dark:text-white mb-1">Result Summary</h2>
+              <p className="text-gray-600 dark:text-slate-400 text-sm font-medium">{quiz.title}</p>
            </div>
            <div className="flex items-center gap-6">
               <div className="text-center">
-                 <div className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-1">Score</div>
-                 <div className={`text-4xl font-extrabold ${percentage >= 80 ? 'text-emerald-600' : percentage >= 50 ? 'text-amber-500' : 'text-rose-600'}`}>
-                   {score}<span className="text-xl text-gray-400">/{quiz.questions.length}</span>
+                 <div className="text-xs font-bold text-gray-500 dark:text-slate-400 uppercase tracking-widest mb-1">Score</div>
+                 <div className={`text-4xl font-extrabold ${percentage >= 80 ? 'text-emerald-600 dark:text-emerald-400' : percentage >= 50 ? 'text-amber-500 dark:text-amber-400' : 'text-rose-600 dark:text-rose-400'}`}>
+                   {score}<span className="text-xl text-gray-400 dark:text-slate-500">/{quiz.questions.length}</span>
                  </div>
               </div>
-              <div className="w-px h-12 bg-gray-200"></div>
+              <div className="w-px h-12 bg-gray-200 dark:bg-slate-800"></div>
               <div className="text-center min-w-24">
-                 <div className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-1">Accuracy</div>
-                 <div className="text-3xl font-bold text-slate-700">{percentage}%</div>
+                 <div className="text-xs font-bold text-gray-500 dark:text-slate-400 uppercase tracking-widest mb-1">Accuracy</div>
+                 <div className="text-3xl font-bold text-slate-700 dark:text-slate-200">{percentage}%</div>
               </div>
            </div>
         </div>
       )}
 
       {/* Tabs */}
-      <div className="flex border-b border-gray-300 mb-6 font-medium overflow-x-auto gap-1">
+      <div className="flex border-b border-gray-300 dark:border-slate-800 mb-6 font-medium overflow-x-auto gap-1">
         <button
           onClick={() => setActiveTab('OVERVIEW')}
           className={`py-3 px-5 text-sm flex items-center gap-2 border-b-2 whitespace-nowrap transition-colors cursor-pointer ${
-            activeTab === 'OVERVIEW' ? 'border-[#2980b9] text-[#2980b9] font-bold bg-white' : 'border-transparent text-gray-500 hover:text-gray-700 hover:bg-gray-100'
+            activeTab === 'OVERVIEW' ? 'border-[#2980b9] text-[#2980b9] dark:text-blue-400 font-bold bg-white dark:bg-slate-900' : 'border-transparent text-gray-500 dark:text-slate-400 hover:text-gray-700 dark:hover:text-slate-200 hover:bg-gray-100 dark:hover:bg-slate-800'
           }`}
         >
           Detailed Review
@@ -418,8 +417,8 @@ export function ResultsScreen({
             onClick={() => setActiveTab('DISAGREED')}
             className={`py-3 px-5 text-sm flex items-center gap-2 border-b-2 whitespace-nowrap transition-colors cursor-pointer ${
               activeTab === 'DISAGREED' 
-                ? 'border-purple-600 text-purple-700 font-bold bg-purple-50/50' 
-                : 'border-transparent text-gray-500 hover:text-gray-700 hover:bg-gray-100'
+                ? 'border-purple-600 text-purple-700 dark:text-purple-300 font-bold bg-purple-50/50 dark:bg-purple-950/30' 
+                : 'border-transparent text-gray-500 dark:text-slate-400 hover:text-gray-700 dark:hover:text-slate-200 hover:bg-gray-100 dark:hover:bg-slate-800'
             }`}
           >
             <Swords className="w-4 h-4 text-purple-600" />
@@ -427,7 +426,7 @@ export function ResultsScreen({
             <span className={`px-2 py-0.5 rounded-full text-xs font-bold ${
               activeTab === 'DISAGREED' 
                 ? 'bg-purple-600 text-white' 
-                : 'bg-purple-100 text-purple-700'
+                : 'bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300'
             }`}>
               {disagreedQuestions.length}
             </span>
@@ -439,8 +438,8 @@ export function ResultsScreen({
           onClick={() => setActiveTab('MARKED_FOR_REVIEW')}
           className={`py-3 px-5 text-sm flex items-center gap-2 border-b-2 whitespace-nowrap transition-colors cursor-pointer ${
             activeTab === 'MARKED_FOR_REVIEW' 
-              ? 'border-purple-600 text-purple-700 font-bold bg-purple-50/50' 
-              : 'border-transparent text-gray-500 hover:text-gray-700 hover:bg-gray-100'
+              ? 'border-purple-600 text-purple-700 dark:text-purple-300 font-bold bg-purple-50/50 dark:bg-purple-950/30' 
+              : 'border-transparent text-gray-500 dark:text-slate-400 hover:text-gray-700 dark:hover:text-slate-200 hover:bg-gray-100 dark:hover:bg-slate-800'
           }`}
         >
           <Bookmark className="w-4 h-4 text-purple-600 fill-purple-600" />
@@ -448,7 +447,7 @@ export function ResultsScreen({
           <span className={`px-2 py-0.5 rounded-full text-xs font-bold ${
             activeTab === 'MARKED_FOR_REVIEW' 
               ? 'bg-purple-600 text-white' 
-              : 'bg-purple-100 text-purple-700'
+              : 'bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300'
           }`}>
             {manuallyMarkedQuestions.length}
           </span>
@@ -457,12 +456,12 @@ export function ResultsScreen({
         <button
           onClick={() => setActiveTab('STARRED')}
           className={`py-3 px-5 text-sm flex items-center gap-2 border-b-2 whitespace-nowrap transition-colors cursor-pointer ${
-            activeTab === 'STARRED' ? 'border-amber-500 text-amber-700 font-bold bg-white' : 'border-transparent text-gray-500 hover:text-gray-700 hover:bg-gray-100'
+            activeTab === 'STARRED' ? 'border-amber-500 text-amber-700 dark:text-amber-400 font-bold bg-white dark:bg-slate-900' : 'border-transparent text-gray-500 dark:text-slate-400 hover:text-gray-700 dark:hover:text-slate-200 hover:bg-gray-100 dark:hover:bg-slate-800'
           }`}
         >
           <Star className="w-4 h-4" />
           <span>Important Questions</span>
-          <span className="px-2 py-0.5 rounded-full text-xs font-bold bg-gray-100 text-gray-600">
+          <span className="px-2 py-0.5 rounded-full text-xs font-bold bg-gray-100 dark:bg-slate-800 text-gray-600 dark:text-slate-300">
             {importantQuestions.length}
           </span>
         </button>
@@ -470,7 +469,7 @@ export function ResultsScreen({
         <button
           onClick={() => setActiveTab('LEADERBOARD')}
           className={`py-3 px-5 text-sm flex items-center gap-2 border-b-2 whitespace-nowrap transition-colors cursor-pointer ${
-            activeTab === 'LEADERBOARD' ? 'border-yellow-500 text-yellow-700 font-bold bg-white' : 'border-transparent text-gray-500 hover:text-gray-700 hover:bg-gray-100'
+            activeTab === 'LEADERBOARD' ? 'border-yellow-500 text-yellow-700 dark:text-yellow-400 font-bold bg-white dark:bg-slate-900' : 'border-transparent text-gray-500 dark:text-slate-400 hover:text-gray-700 dark:hover:text-slate-200 hover:bg-gray-100 dark:hover:bg-slate-800'
           }`}
         >
           <Trophy className="w-4 h-4" />
@@ -499,8 +498,8 @@ export function ResultsScreen({
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: Math.min(idx * 0.05, 0.5) }}
-                className={`bg-white rounded-xl shadow-xs border p-5 md:p-6 relative ${
-                  isCardSuccess ? 'border-emerald-200' : 'border-rose-200'
+                className={`bg-white dark:bg-slate-900 rounded-xl shadow-xs border p-5 md:p-6 relative ${
+                  isCardSuccess ? 'border-emerald-200 dark:border-emerald-900/60' : 'border-rose-200 dark:border-rose-900/60'
                 }`}
               >
                 <div className="absolute top-0 right-0 flex items-center">
@@ -557,7 +556,7 @@ export function ResultsScreen({
                         </span>
                       )}
                     </div>
-                    <div className="text-base font-semibold text-slate-800 leading-relaxed">
+                    <div className="text-base font-semibold text-slate-800 dark:text-slate-100 leading-relaxed">
                       <MathText text={q.question} block />
                     </div>
                   </div>
@@ -646,24 +645,24 @@ export function ResultsScreen({
                       const isP1Selected = p1Arr.some(a => a.trim().toLowerCase() === opt.trim().toLowerCase());
                       const isP2Selected = p2Arr.some(a => a.trim().toLowerCase() === opt.trim().toLowerCase());
 
-                      let bgClasses = "bg-white border-slate-200 text-slate-600";
+                      let bgClasses = "bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300";
                       if (isCorrectOption) {
-                        bgClasses = "bg-emerald-50 border-emerald-300 text-emerald-900";
+                        bgClasses = "bg-emerald-50 dark:bg-emerald-950/40 border-emerald-300 dark:border-emerald-800 text-emerald-900 dark:text-emerald-200";
                       } else if (!isTwoPlayer) {
                         if (isP1Selected && !isCorrectOption) {
-                          bgClasses = "bg-rose-50 border-rose-300 text-rose-900";
+                          bgClasses = "bg-rose-50 dark:bg-rose-950/40 border-rose-300 dark:border-rose-800 text-rose-900 dark:text-rose-200";
                         }
                       } else {
                         if ((isP1Selected || isP2Selected) && !isCorrectOption) {
-                          bgClasses = "bg-rose-50/80 border-rose-300 text-rose-900";
+                          bgClasses = "bg-rose-50/80 dark:bg-rose-950/40 border-rose-300 dark:border-rose-800 text-rose-900 dark:text-rose-200";
                         }
                       }
 
                       return (
                         <div key={i} className={`flex p-3 rounded-lg border items-center transition-colors ${bgClasses}`}>
                           <div className={`w-6 h-6 rounded flex items-center justify-center font-bold mr-3 shrink-0 text-xs ${
-                            isCorrectOption ? 'bg-emerald-200 text-emerald-800' : 
-                            ((isP1Selected || isP2Selected) && !isCorrectOption) ? 'bg-rose-200 text-rose-800' : 'bg-slate-100 text-slate-500'}`}
+                            isCorrectOption ? 'bg-emerald-200 dark:bg-emerald-800 text-emerald-800 dark:text-emerald-100' : 
+                            ((isP1Selected || isP2Selected) && !isCorrectOption) ? 'bg-rose-200 dark:bg-rose-800 text-rose-800 dark:text-rose-100' : 'bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400'}`}
                           >
                             {String.fromCharCode(65 + i)}
                           </div>
@@ -709,9 +708,9 @@ export function ResultsScreen({
                   </div>
 
                   {q.explanation && (
-                    <div className="bg-slate-50 border border-slate-200 rounded-lg p-4 mt-4">
-                      <h4 className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">Explanation</h4>
-                      <div className="text-slate-800 text-sm leading-relaxed">
+                    <div className="bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-lg p-4 mt-4">
+                      <h4 className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest mb-2">Explanation</h4>
+                      <div className="text-slate-800 dark:text-slate-200 text-sm leading-relaxed">
                         <MathText text={q.explanation} block />
                       </div>
                     </div>

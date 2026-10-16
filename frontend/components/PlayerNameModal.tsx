@@ -208,8 +208,8 @@ export function PlayerNameModal({
         <motion.div
           className={`relative w-full max-w-md rounded-2xl shadow-2xl overflow-hidden ${
             isSpecial
-              ? "bg-gradient-to-br from-yellow-50 via-amber-50 to-orange-50 border-2 border-yellow-400"
-              : "bg-white border border-gray-200"
+              ? "bg-gradient-to-br from-yellow-50 via-amber-50 to-orange-50 border-2 border-yellow-400 dark:from-amber-950/80 dark:via-yellow-950/60 dark:to-orange-950/80 dark:border-yellow-500/80"
+              : "bg-white border border-gray-200 dark:bg-slate-900 dark:border-slate-800"
           }`}
           initial={{ scale: 0.9, opacity: 0, y: 30 }}
           animate={{ scale: 1, opacity: 1, y: 0 }}
@@ -236,14 +236,14 @@ export function PlayerNameModal({
                     <div className="w-20 h-20 rounded-full bg-gradient-to-br from-yellow-400 via-amber-400 to-orange-500 flex items-center justify-center shadow-lg shadow-amber-500/30 ring-4 ring-yellow-300/50">
                       <Crown className="w-10 h-10 text-white drop-shadow-lg" />
                     </div>
-                    <div className="absolute -top-1 -right-1 w-7 h-7 bg-gradient-to-br from-yellow-400 to-amber-500 rounded-full flex items-center justify-center shadow-md ring-2 ring-white">
+                    <div className="absolute -top-1 -right-1 w-7 h-7 bg-gradient-to-br from-yellow-400 to-amber-500 rounded-full flex items-center justify-center shadow-md ring-2 ring-white dark:ring-slate-900">
                       <CheckCircle className="w-4 h-4 text-white" />
                     </div>
-                    <div className="absolute -bottom-1 -left-1 w-6 h-6 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center shadow-md ring-2 ring-white">
+                    <div className="absolute -bottom-1 -left-1 w-6 h-6 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center shadow-md ring-2 ring-white dark:ring-slate-900">
                       <Shield className="w-3 h-3 text-white" />
                     </div>
                   </div>
-                  <h2 className="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 via-amber-500 to-orange-500 mb-1">
+                  <h2 className="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 via-amber-500 to-orange-500 dark:from-yellow-400 dark:via-amber-300 dark:to-orange-400 mb-1">
                     👑 Ultra Admin Detected 👑
                   </h2>
                   <div className="flex items-center justify-center gap-1.5 flex-wrap mt-2">
@@ -258,19 +258,19 @@ export function PlayerNameModal({
                     </span>
 
                   </div>
-                  <p className="text-xs text-amber-700 mt-2 font-semibold">
+                  <p className="text-xs text-amber-700 dark:text-amber-300 mt-2 font-semibold">
                     Welcome back, Supreme Commander Saksham ✨
                   </p>
                 </>
               ) : (
                 <>
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center mx-auto mb-3 shadow-inner">
-                    <UserCircle className="w-10 h-10 text-gray-400" />
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-gray-100 to-gray-200 dark:from-slate-800 dark:to-slate-700 flex items-center justify-center mx-auto mb-3 shadow-inner">
+                    <UserCircle className="w-10 h-10 text-gray-400 dark:text-slate-400" />
                   </div>
-                  <h2 className="text-xl font-bold text-gray-800 mb-1">
+                  <h2 className="text-xl font-bold text-gray-800 dark:text-white mb-1">
                     Enter Your Name
                   </h2>
-                  <p className="text-sm text-gray-500">
+                  <p className="text-sm text-gray-500 dark:text-slate-400">
                     Choose your player name to compete on the live leaderboard
                   </p>
                 </>
@@ -293,10 +293,10 @@ export function PlayerNameModal({
                   placeholder="Your display name..."
                   className={`w-full px-4 py-3 rounded-xl text-sm font-medium transition-all outline-none ${
                     isSpecial
-                      ? "bg-yellow-100/60 border-2 border-yellow-400 text-amber-900 placeholder-amber-400 focus:ring-2 focus:ring-yellow-400/50 shadow-inner"
+                      ? "bg-yellow-100/60 dark:bg-amber-950/60 border-2 border-yellow-400 dark:border-yellow-500/80 text-amber-900 dark:text-amber-200 placeholder-amber-400 dark:placeholder-amber-600 focus:ring-2 focus:ring-yellow-400/50 shadow-inner"
                       : error
-                      ? "bg-red-50 border-2 border-red-300 text-red-900 placeholder-red-300 focus:ring-2 focus:ring-red-400/50"
-                      : "bg-gray-50 border-2 border-gray-200 text-gray-800 placeholder-gray-400 focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20"
+                      ? "bg-red-50 dark:bg-red-950/40 border-2 border-red-300 dark:border-red-800 text-red-900 dark:text-red-200 placeholder-red-300 dark:placeholder-red-600 focus:ring-2 focus:ring-red-400/50"
+                      : "bg-gray-50 dark:bg-slate-950 border-2 border-gray-200 dark:border-slate-800 text-gray-800 dark:text-slate-100 placeholder-gray-400 dark:placeholder-slate-500 focus:border-blue-400 dark:focus:border-blue-500 focus:ring-2 focus:ring-blue-400/20"
                   }`}
                   autoFocus
                 />
@@ -344,7 +344,7 @@ export function PlayerNameModal({
               <button
                 type="button"
                 onClick={onCancel}
-                className="flex-1 px-4 py-2.5 rounded-xl text-sm font-semibold border border-gray-300 text-gray-600 hover:bg-gray-50 transition cursor-pointer"
+                className="flex-1 px-4 py-2.5 rounded-xl text-sm font-semibold border border-gray-300 dark:border-slate-700 text-gray-600 dark:text-slate-300 hover:bg-gray-50 dark:hover:bg-slate-800 transition cursor-pointer"
               >
                 Cancel
               </button>
