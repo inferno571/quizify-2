@@ -1,0 +1,118 @@
+{
+  "id": "hr-analytics-week-8",
+  "title": "HR Analytics - Week 8 Assignment 8",
+  "subject": "HR Analytics",
+  "date": "10/10/2026",
+  "questions": [
+    {
+      "question": "1. What is visualized in the training effectiveness chart?",
+      "options": [
+        "Weather patterns",
+        "Departmental shifts",
+        "Subject-wise performance",
+        "Meal preferences"
+      ],
+      "correctAnswer": "Subject-wise performance",
+      "explanation": "Training effectiveness visualizations compare participant competency outcomes and test scores broken down across subject areas."
+    },
+    {
+      "question": "2. What financial metric is tracked department-wise in training data?",
+      "options": [
+        "Training Cost",
+        "Bonus expenditure",
+        "Rent allocation",
+        "Reimbursement rate"
+      ],
+      "correctAnswer": "Training Cost",
+      "explanation": "Department-wise training cost tracks resource utilization and training budget expenditure per department."
+    },
+    {
+      "question": "3. What duration metric is presented in the training visualization?",
+      "options": [
+        "Employee retention",
+        "Department-wise Training Duration",
+        "Vacation time",
+        "Resignation period"
+      ],
+      "correctAnswer": "Department-wise Training Duration",
+      "explanation": "Visual dashboards track training hours and session duration delivered across individual departments."
+    },
+    {
+      "question": "4. What character trait is listed in the benchmark skills table?",
+      "options": [
+        "Punctuality",
+        "Compassion and sensitivity",
+        "Typing speed",
+        "Accent clarity"
+      ],
+      "correctAnswer": "Compassion and sensitivity",
+      "explanation": "Benchmark managerial competencies highlight emotional intelligence traits such as compassion and interpersonal sensitivity."
+    },
+    {
+      "question": "5. Which is a component of development summary based on self and others’ input?",
+      "options": [
+        "Leave balance",
+        "Listens to others",
+        "Health insurance",
+        "Seating layout"
+      ],
+      "correctAnswer": "Listens to others",
+      "explanation": "360-degree development feedback summaries evaluate active listening competencies based on multisource ratings."
+    },
+    {
+      "question": "6. What is included in interpersonal relationship development?",
+      "options": [
+        "Conflict creation",
+        "Facilitates team success",
+        "Attendance reporting",
+        "Wage compliance"
+      ],
+      "correctAnswer": "Facilitates team success",
+      "explanation": "Interpersonal skill development emphasizes collaboration, trust building, and facilitating collective team achievement."
+    },
+    {
+      "question": "7. Which activity is part of internal development programs?",
+      "options": [
+        "External consulting",
+        "Job rotation",
+        "Legal compliance",
+        "Budget proposal writing"
+      ],
+      "correctAnswer": "Job rotation",
+      "explanation": "Job rotation is a primary internal development method for expanding experiential breadth within the firm."
+    },
+    {
+      "question": "8. What method in job experiences matrix involves decision-making under stress?",
+      "options": [
+        "Group exercise",
+        "Adverse business conditions",
+        "Annual party planning",
+        "Time logging"
+      ],
+      "correctAnswer": "Adverse business conditions",
+      "explanation": "Experiencing adverse business conditions challenges leaders to make high-stakes decisions under genuine organizational stress."
+    },
+    {
+      "question": "9. What does 'Making Transitions' in the job experience matrix signify?",
+      "options": [
+        "Time zone shift",
+        "Unfamiliar responsibilities",
+        "Changing passwords",
+        "Location mapping"
+      ],
+      "correctAnswer": "Unfamiliar responsibilities",
+      "explanation": "Transition experiences involve stepping into unfamiliar roles, managing different functional scopes, or leading new initiatives."
+    },
+    {
+      "question": "10. What element supports the development of a culture?",
+      "options": [
+        "Leave policy",
+        "Feedback mechanism",
+        "Snack availability",
+        "Commute distance"
+      ],
+      "correctAnswer": "Feedback mechanism",
+      "explanation": "Robust feedback mechanisms foster psychological safety, transparency, continuous learning, and healthy organizational culture."
+    }
+  ]
+}

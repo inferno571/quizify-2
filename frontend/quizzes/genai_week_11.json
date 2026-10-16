@@ -1,0 +1,118 @@
+{
+  "id": "genai-week-11",
+  "title": "Fundamentals of Generative AI - Week 11 Assignment 11",
+  "subject": "Fundamentals of Generative AI",
+  "date": "10/10/2026",
+  "questions": [
+    {
+      "question": "1. What is the primary motivation for using Retrieval-Augmented Generation (RAG)?",
+      "options": [
+        "To increase the number of parameters in the language model",
+        "To ground generated responses using external information retrieved",
+        "To replace tokenization with document retrieval",
+        "To eliminate the need for a language model"
+      ],
+      "correctAnswer": "To ground generated responses using external information retrieved",
+      "explanation": "RAG reduces hallucinations and grounds responses by fetching factual, up-to-date context from an external corpus."
+    },
+    {
+      "question": "2. Which advantage does RAG provide when the underlying knowledge base changes frequently?",
+      "options": [
+        "The entire language model must be retrained after every change",
+        "The tokenizer automatically learns the new information",
+        "The external index can be updated without retraining the model",
+        "The model permanently memorizes every retrieved document"
+      ],
+      "correctAnswer": "The external index can be updated without retraining the model",
+      "explanation": "Knowledge bases can be dynamically updated, inserted, or removed from the vector database without retraining the foundational LLM."
+    },
+    {
+      "question": "3. Which sequence correctly describes a basic RAG pipeline?",
+      "options": [
+        "Generation → Retrieval → Indexing → Chunking",
+        "Retrieval → Model training → Tokenization → Generation",
+        "Prompt construction → Chunking → Indexing → Retrieval",
+        "Document indexing → Query retrieval → Prompt augmentation → Response generation"
+      ],
+      "correctAnswer": "Document indexing → Query retrieval → Prompt augmentation → Response generation",
+      "explanation": "The standard RAG lifecycle consists of Document indexing, Query retrieval, Prompt augmentation, and Response generation."
+    },
+    {
+      "question": "4. What is the primary role of the retriever in a RAG system?",
+      "options": [
+        "To identify documents relevant to the user query",
+        "To generate the final natural-language response",
+        "To update all parameters of the language model",
+        "To select the decoding temperature"
+      ],
+      "correctAnswer": "To identify documents relevant to the user query",
+      "explanation": "The retriever searches the index to identify and rank candidate documents relevant to the query."
+    },
+    {
+      "question": "5. What is the primary purpose of a vector database in a dense RAG pipeline?",
+      "options": [
+        "To train the embedding model",
+        "To generate answers without using an LLM and bypassing it",
+        "To convert retrieved passages into labels",
+        "To store vector representations for similarity search"
+      ],
+      "correctAnswer": "To store vector representations for similarity search",
+      "explanation": "Vector databases index dense embedding vectors to enable rapid approximate nearest neighbor (ANN) similarity search."
+    },
+    {
+      "question": "6. Why are long documents commonly divided into smaller chunks before indexing?",
+      "options": [
+        "Language models can only retrieve complete documents",
+        "To allow retrieving more focused and relevant passages",
+        "Chunking increases the number of model parameters",
+        "Chunking removes the need for an embedding model"
+      ],
+      "correctAnswer": "To allow retrieving more focused and relevant passages",
+      "explanation": "Chunking segments documents into semantically focused units that fit context windows and improve retrieval precision."
+    },
+    {
+      "question": "7. What is a major advantage of dense retrieval over purely lexical retrieval?",
+      "options": [
+        "It does not require an indexed corpus",
+        "It can retrieve semantically related passages with different words",
+        "It guarantees that every retrieved document is correlated and correct",
+        "It does not require a similarity function"
+      ],
+      "correctAnswer": "It can retrieve semantically related passages with different words",
+      "explanation": "Dense embeddings encode conceptual semantics, matching queries to documents that express similar ideas with different vocabulary."
+    },
+    {
+      "question": "8. What is the purpose of metadata filtering in document retrieval?",
+      "options": [
+        "To modify the parameters of the embedding model",
+        "To summarize every document before retrieval",
+        "To restrict retrieval using irrelevant attributes",
+        "To replace semantic similarity with random selection"
+      ],
+      "correctAnswer": "To restrict retrieval using irrelevant attributes",
+      "explanation": "Metadata filtering pre-filters or post-filters search space using structured attributes (such as dates, authors, categories, or tags)."
+    },
+    {
+      "question": "9. What does Precision@k measure in a retrieval system?",
+      "options": [
+        "The percentage of generated tokens copied from the documents",
+        "The average length of the top k documents",
+        "The Percentage of relevant documents in top k retrieved results",
+        "The time required to generate k responses"
+      ],
+      "correctAnswer": "The Percentage of relevant documents in top k retrieved results",
+      "explanation": "Precision@k computes the fraction of relevant passages among the top-k retrieved items."
+    },
+    {
+      "question": "10. In a basic retrieve-then-generate system, how is retrieved information usually provided to the language model?",
+      "options": [
+        "It is inserted into the prompt as additional context",
+        "It is used to replace the tokenizer vocabulary",
+        "It is converted into new trainable parameters",
+        "It is used only after the answer has been generated"
+      ],
+      "correctAnswer": "It is inserted into the prompt as additional context",
+      "explanation": "Retrieved passages are formatted into the input prompt as supporting context for the generator."
+    }
+  ]
+}

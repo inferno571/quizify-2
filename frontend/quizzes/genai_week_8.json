@@ -1,0 +1,118 @@
+{
+  "id": "genai-week-8",
+  "title": "Fundamentals of Generative AI - Week 8 Assignment 8",
+  "subject": "Fundamentals of Generative AI",
+  "date": "10/10/2026",
+  "questions": [
+    {
+      "question": "1. Which neural network architecture is most commonly used in modern diffusion models for image generation?",
+      "options": [
+        "VGG16",
+        "ResNet18",
+        "U-Net with attention mechanisms",
+        "AlexNet"
+      ],
+      "correctAnswer": "U-Net with attention mechanisms",
+      "explanation": "Modern diffusion models use an encoder-decoder U-Net backbone equipped with residual blocks, spatial down/up-sampling, and self/cross-attention."
+    },
+    {
+      "question": "2. Which of the following is the primary role of the U-Net in a diffusion model?",
+      "options": [
+        "To classify noisy images into categories.",
+        "To predict the Gaussian noise present in the noisy image at each timestep.",
+        "To generate random latent vectors.",
+        "To optimize the noise schedule."
+      ],
+      "correctAnswer": "To predict the Gaussian noise present in the noisy image at each timestep.",
+      "explanation": "The U-Net takes noisy image x_t and timestep t and predicts the added noise component ϵ."
+    },
+    {
+      "question": "3. Time-step embeddings are provided to the U-Net because they:",
+      "options": [
+        "Increase image resolution.",
+        "Inform the network about the current stage of the diffusion process.",
+        "Replace positional encoding in transformers.",
+        "Reduce the dataset size."
+      ],
+      "correctAnswer": "Inform the network about the current stage of the diffusion process.",
+      "explanation": "Timestep embeddings provide vital conditioning on current noise variance levels across the reverse diffusion process."
+    },
+    {
+      "question": "4. In classifier-free guidance, image generation is controlled by:",
+      "options": [
+        "A separate image classifier only.",
+        "Interpolating between conditional and unconditional model predictions.",
+        "Removing the noise schedule.",
+        "Training two discriminators."
+      ],
+      "correctAnswer": "Interpolating between conditional and unconditional model predictions.",
+      "explanation": "CFG linearly combines predictions: ϵ_guided = ϵ_uncond + s · (ϵ_cond - ϵ_uncond)."
+    },
+    {
+      "question": "5. What is the main purpose of the attention layers inside a diffusion model's U-Net?",
+      "options": [
+        "To reduce the number of diffusion steps.",
+        "To capture long-range dependencies between different regions of the image.",
+        "To replace convolutional layers completely.",
+        "To perform image classification."
+      ],
+      "correctAnswer": "To capture long-range dependencies between different regions of the image.",
+      "explanation": "Self-attention enables the model to integrate global context and correlate distant spatial features across the canvas."
+    },
+    {
+      "question": "6. Which statement best explains why diffusion models are considered more stable to train than GANs?",
+      "options": [
+        "They do not use neural networks.",
+        "They optimize a supervised denoising objective instead of an adversarial min-max game.",
+        "They require much smaller datasets.",
+        "They eliminate the need for loss functions."
+      ],
+      "correctAnswer": "They optimize a supervised denoising objective instead of an adversarial min-max game.",
+      "explanation": "Diffusion models optimize standard L2 mean squared error loss on regression targets, avoiding minimax instability and mode collapse."
+    },
+    {
+      "question": "7. In text-to-image diffusion models such as Stable Diffusion, how is the generated image guided toward the user's prompt?",
+      "options": [
+        "By conditioning the denoising process on text embeddings.",
+        "By changing the learning rate during inference.",
+        "By increasing the image resolution after generation.",
+        "By training a separate GAN for every prompt."
+      ],
+      "correctAnswer": "By conditioning the denoising process on text embeddings.",
+      "explanation": "Pretrained text encoders (like CLIP or T5) generate text embeddings that feed into the U-Net's cross-attention layers."
+    },
+    {
+      "question": "8. Which of the following is a major advantage of Latent Diffusion Models (LDMs) over pixel-space diffusion models?",
+      "options": [
+        "They eliminate the need for a neural network.",
+        "They generate images without any denoising steps.",
+        "They require fewer training images because they use GANs.",
+        "They perform diffusion in a compressed latent space, reducing computation and memory requirements."
+      ],
+      "correctAnswer": "They perform diffusion in a compressed latent space, reducing computation and memory requirements.",
+      "explanation": "Operating in a perceptually equivalent low-dimensional latent space reduces training and sampling computational overhead by orders of magnitude."
+    },
+    {
+      "question": "9. Which statement best explains the key advantage of Classifier-Free Guidance (CFG) over Classifier-Guided Diffusion?",
+      "options": [
+        "It eliminates the need for a separately trained classifier by combining conditional and unconditional predictions from the same diffusion model.",
+        "It generates images without using a diffusion model.",
+        "It removes the reverse diffusion process entirely.",
+        "It requires fewer denoising steps than any other diffusion model."
+      ],
+      "correctAnswer": "It eliminates the need for a separately trained classifier by combining conditional and unconditional predictions from the same diffusion model.",
+      "explanation": "CFG avoids training and evaluating an auxiliary noise-aware classifier by training a single diffusion model with condition dropout."
+    },
+    {
+      "question": "10. During inference, increasing the guidance scale in Classifier-Free Guidance (CFG) primarily results in:",
+      "options": [
+        "Faster image generation because fewer denoising steps are required.",
+        "Images that follow the conditioning prompt more closely, although excessively high guidance may reduce diversity and introduce artifacts.",
+        "Complete removal of Gaussian noise in a single step.",
+        "Better image quality regardless of the prompt."
+      ],
+      "correctAnswer": "Images that follow the conditioning prompt more closely, although excessively high guidance may reduce diversity and introduce artifacts.",
+      "explanation": "Higher guidance scales strongly enforce prompt adherence, though very high values cause over-saturation and unnatural artifacts."
+    }
+  ]
+}

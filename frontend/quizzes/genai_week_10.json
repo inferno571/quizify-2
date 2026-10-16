@@ -1,0 +1,118 @@
+{
+  "id": "genai-week-10",
+  "title": "Fundamentals of Generative AI - Week 10 Assignment 10",
+  "subject": "Fundamentals of Generative AI",
+  "date": "10/10/2026",
+  "questions": [
+    {
+      "question": "1. What is the primary advantage of the Transformer architecture over RNNs and LSTMs?",
+      "options": [
+        "It processes tokens sequentially, reducing memory usage.",
+        "It requires fewer parameters than RNNs.",
+        "It eliminates the need for positional information.",
+        "It uses self-attention to process all tokens in parallel, enabling efficient learning of long-range dependencies."
+      ],
+      "correctAnswer": "It uses self-attention to process all tokens in parallel, enabling efficient learning of long-range dependencies.",
+      "explanation": "Self-attention enables parallel sequence processing and connects any two tokens in O(1) path length regardless of distance."
+    },
+    {
+      "question": "2. Why are positional encodings added to the input embeddings in a Transformer?",
+      "options": [
+        "To provide information about the order of tokens since self-attention itself is order-independent.",
+        "To increase the vocabulary size.",
+        "To reduce the number of model parameters.",
+        "To replace token embeddings."
+      ],
+      "correctAnswer": "To provide information about the order of tokens since self-attention itself is order-independent.",
+      "explanation": "Self-attention is permutation-equivariant; positional encodings provide essential word order and structural positioning."
+    },
+    {
+      "question": "3. Which statement correctly distinguishes encoder self-attention from decoder masked self-attention?",
+      "options": [
+        "Encoder self-attention attends only to previoustokens.",
+        "Decoder masked self-attention prevents each token from attending to future tokens during training.",
+        "Both mechanisms use identical attention masks.",
+        "Encoder self-attention ignores positional encodings."
+      ],
+      "correctAnswer": "Decoder masked self-attention prevents each token from attending to future tokens during training.",
+      "explanation": "Causal masking prevents the decoder from attending to future tokens, preserving the autoregressive property during training."
+    },
+    {
+      "question": "4. BERT is primarily trained using which learning objective?",
+      "options": [
+        "Next-word prediction only.",
+        "Masked Language Modeling (MLM) and Next Sentence Prediction (NSP).",
+        "Image classification.",
+        "Reinforcement learning."
+      ],
+      "correctAnswer": "Masked Language Modeling (MLM) and Next Sentence Prediction (NSP).",
+      "explanation": "BERT is pretrained on Masked Language Modeling (MLM) and Next Sentence Prediction (NSP)."
+    },
+    {
+      "question": "5. Why is BERT considered a bidirectional language model?",
+      "options": [
+        "It predicts text from right to left only.",
+        "It processes the input sequence using context from both the left and right of each token.",
+        "It uses two separate encoders.",
+        "It translates text in both directions."
+      ],
+      "correctAnswer": "It processes the input sequence using context from both the left and right of each token.",
+      "explanation": "BERT uses unmasked self-attention across the entire sequence to condition representations on both left and right contexts."
+    },
+    {
+      "question": "6. GPT differs from BERT because GPT:",
+      "options": [
+        "Uses only the encoder stack of the Transformer.",
+        "Uses only the decoder stack with masked self-attention for autoregressive text generation.",
+        "Is trained only on labeled datasets.",
+        "Does not use self-attention."
+      ],
+      "correctAnswer": "Uses only the decoder stack with masked self-attention for autoregressive text generation.",
+      "explanation": "GPT is an autoregressive decoder-only Transformer model designed for left-to-right generation."
+    },
+    {
+      "question": "7. Which application is more suitable for GPT than BERT?",
+      "options": [
+        "Sentiment classification",
+        "Named Entity Recognition (NER)",
+        "Automatic text generation and conversational AI",
+        "Masked word prediction"
+      ],
+      "correctAnswer": "Automatic text generation and conversational AI",
+      "explanation": "Autoregressive generation models like GPT excel at open-ended text completion and dialogue generation."
+    },
+    {
+      "question": "8. In prompt engineering, what is the primary purpose of providing few-shot examples?",
+      "options": [
+        "To guide the model toward the desired response format or reasoning pattern without updating its parameters.",
+        "To retrain the language model.",
+        "To reduce the vocabulary size.",
+        "To increase the model's training accuracy."
+      ],
+      "correctAnswer": "To guide the model toward the desired response format or reasoning pattern without updating its parameters.",
+      "explanation": "Few-shot prompting provides in-context demonstrations that guide formatting and reasoning behavior without weight optimization."
+    },
+    {
+      "question": "9. Which of the following prompts is an example of Chain-of-Thought (CoT) prompting?",
+      "options": [
+        "Translate the following sentence into French.",
+        "Classify this review as positive or negative.",
+        "Solve the problem step by step before giving the final answer.",
+        "Summarize the following paragraph in one sentence."
+      ],
+      "correctAnswer": "Solve the problem step by step before giving the final answer.",
+      "explanation": "'Let's think step by step' is canonical Chain-of-Thought prompting, directing the model to output intermediate reasoning steps."
+    },
+    {
+      "question": "10. Which statement correctly compares BERT and GPT?",
+      "options": [
+        "BERT uses an encoder-only architecture for bidirectional language understanding, whereas GPT uses a decoder-only architecture for autoregressive text generation.",
+        "BERT and GPT both use encoder-only architectures but differ only in the size of their training datasets.",
+        "GPT is bidirectional and predicts masked tokens, whereas BERT predicts the next word using causal attention.",
+        "Both BERT and GPT require paired input-output datasets during pretraining."
+      ],
+      "correctAnswer": "BERT uses an encoder-only architecture for bidirectional language understanding, whereas GPT uses a decoder-only architecture for autoregressive text generation.",
+      "explanation": "BERT is an encoder-only bidirectional understanding architecture, while GPT is a decoder-only autoregressive causal generation architecture."
+    }
+  ]
+}

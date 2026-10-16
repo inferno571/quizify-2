@@ -1,0 +1,118 @@
+{
+  "id": "dlnlp-assignment-2",
+  "title": "DLNLP Assignment 2 Solutions",
+  "subject": "DLNLP",
+  "date": "10/10/2026",
+  "questions": [
+    {
+      "question": "1. A shallow ReLU network has hidden pre-activations z = Wx + b with W = [[1, −1], [2, 1], [−1, 1]] and b = [0, −3, 1]. The hidden activations h = ReLU(z) feed an output y = vᵀh with v = [1, 2, 1] and no output bias. For the input x = [1, 2], what is y?",
+      "options": [
+        "0",
+        "2",
+        "4",
+        "6"
+      ],
+      "correctAnswer": "4",
+      "explanation": "Pre-activations: z₁ = 1(1) + (−1)(2) + 0 = −1; z₂ = 2(1) + 1(2) − 3 = 1; z₃ = −1(1) + 1(2) + 1 = 2. After ReLU: h = [0, 1, 2] (the first unit is switched off). Output: y = 1(0) + 2(1) + 1(2) = 4."
+    },
+    {
+      "question": "2. A single hidden unit computes h = ReLU(wx + b) with w = −2, b = 1, evaluated at x = 3. What is ∂h/∂w at this input?",
+      "options": [
+        "3",
+        "0",
+        "-2",
+        "-6"
+      ],
+      "correctAnswer": "0",
+      "explanation": "Pre-activation = wx + b = (−2)(3) + 1 = −5 < 0, so the ReLU is in its flat region and h = 0. The derivative of ReLU is 0 for negative pre-activations, hence ∂h/∂w = 0 × x = 0 (dead ReLU)."
+    },
+    {
+      "question": "3. A softmax output layer receives the logits [2, 1, 0]. If the correct class is the first one, what is the cross-entropy loss (using natural logarithm)?",
+      "options": [
+        "0.335",
+        "0.408",
+        "0.665",
+        "1.407"
+      ],
+      "correctAnswer": "0.408",
+      "explanation": "exp(2) = 7.389, exp(1) = 2.718, exp(0) = 1.000; sum = 11.107. Softmax probabilities = [0.665, 0.245, 0.090]. Loss = −ln(0.665) = 0.408."
+    },
+    {
+      "question": "4. A network with a single weight w produces the output y = w³, and the loss is L = ½(y − t)² with target t = 5. If the current value is w = 2, what is ∂L/∂w?",
+      "options": [
+        "12",
+        "24",
+        "36",
+        "108"
+      ],
+      "correctAnswer": "36",
+      "explanation": "y = w³ = 8. ∂L/∂y = y − t = 8 − 5 = 3. ∂y/∂w = 3w² = 3(4) = 12. By the chain rule, ∂L/∂w = (y − t) · 3w² = 3 × 12 = 36."
+    },
+    {
+      "question": "5. Gradient descent is run on L(w) = w² − 4w + 3 starting from w₀ = 4 with learning rate η = 0.1. What is the value of w after TWO updates?",
+      "options": [
+        "3.28",
+        "3.60",
+        "3.40",
+        "2.21"
+      ],
+      "correctAnswer": "3.28",
+      "explanation": "∂L/∂w = 2w − 4. Step 1: gradient = 2(4) − 4 = 4, so w₁ = 4 − 0.1(4) = 3.6. Step 2: gradient = 2(3.6) − 4 = 3.2, so w₂ = 3.6 − 0.1(3.2) = 3.28."
+    },
+    {
+      "question": "6. A model is trained on 50,000 examples using mini-batch stochastic gradient descent with a batch size of 250, for 12 epochs. How many parameter updates are performed in total?",
+      "options": [
+        "200",
+        "600",
+        "2400",
+        "600000"
+      ],
+      "correctAnswer": "2400",
+      "explanation": "Updates per epoch = 50,000 / 250 = 200. Total updates = 200 × 12 = 2,400."
+    },
+    {
+      "question": "7. For the function f(w₁, w₂) = w₁² − w₂², the gradient vanishes at the origin. What kind of stationary point is the origin?",
+      "options": [
+        "A global minimum",
+        "A local maximum",
+        "A local minimum that is not global",
+        "A saddle point"
+      ],
+      "correctAnswer": "A saddle point",
+      "explanation": "Along w₁, f = w₁² has a minimum at 0; along w₂, f = −w₂² has a maximum at 0. The Hessian is diag(2, −2) with eigenvalues of opposite sign, meaning the origin is a saddle point."
+    },
+    {
+      "question": "8. Using the least squares loss L = (1/N) Σᵢ (yᵢ − ŷᵢ)² with ŷ = wx + b, evaluate the loss for x = [1, 2, 3, 4], y = [3, 5, 7, 10], w = 2 and b = 1.",
+      "options": [
+        "0.00",
+        "0.25",
+        "0.50",
+        "1.00"
+      ],
+      "correctAnswer": "0.25",
+      "explanation": "Predictions = [3, 5, 7, 9]; residuals = [0, 0, 0, 1]. Sum of squared residuals = 1; dividing by N = 4 gives L = 0.25."
+    },
+    {
+      "question": "9. A linear regression model predicts 3 real-valued outputs from 100 input features, with a separate bias for each output. How many parameters must be learned?",
+      "options": [
+        "303",
+        "103",
+        "300",
+        "309"
+      ],
+      "correctAnswer": "303",
+      "explanation": "The weight matrix has 100 × 3 = 300 entries and there are 3 bias terms. Total = 300 + 3 = 303 parameters."
+    },
+    {
+      "question": "10. Which of the following statements is FALSE?",
+      "options": [
+        "A shallow network with sufficiently many hidden units can approximate any continuous function on a compact subset of Rᴰ to arbitrary precision.",
+        "The universal approximation theorem guarantees that gradient descent will find the parameters achieving that approximation.",
+        "Increasing the number of hidden units increases the number of linear regions a ReLU network can represent.",
+        "The universal approximation theorem gives no practical bound on how many hidden units are required for a given function."
+      ],
+      "correctAnswer": "The universal approximation theorem guarantees that gradient descent will find the parameters achieving that approximation.",
+      "explanation": "The universal approximation theorem is an existence/representational result; it does not guarantee that gradient descent or any optimization algorithm can actually find those parameters."
+    }
+  ]
+}

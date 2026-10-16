@@ -1,0 +1,118 @@
+{
+  "id": "genai-week-4",
+  "title": "Fundamentals of Generative AI - Week 4 Assignment 4",
+  "subject": "Fundamentals of Generative AI",
+  "date": "10/10/2026",
+  "questions": [
+    {
+      "question": "1. A VAE is trained on face images. During testing, increasing only z2 changes the person’s smile, head orientation, and lighting simultaneously. What does this observation most strongly indicate?",
+      "options": [
+        "The latent representation is perfectly regularized",
+        "The latent representation is entangled",
+        "The decoder has ignored Z2",
+        "The reconstruction loss has become zero"
+      ],
+      "correctAnswer": "The latent representation is entangled",
+      "explanation": "When changing a single latent variable alters multiple independent semantic properties simultaneously, the generative factors are entangled."
+    },
+    {
+      "question": "2. Which observation provides the strongest evidence that a latent representation is disentangled?",
+      "options": [
+        "Every latent variable has a mean exactly equal to zero",
+        "The decoder reconstructs every training image perfectly",
+        "Changing one latent variable mainly changes one meaningful property while other properties remain nearly unchanged",
+        "All latent variables contain equal amounts of information"
+      ],
+      "correctAnswer": "Changing one latent variable mainly changes one meaningful property while other properties remain nearly unchanged",
+      "explanation": "Disentangled representations have an axis-aligned correspondence between individual latent dimensions and real-world ground truth factors of variation."
+    },
+    {
+      "question": "3. The objective function of a β-VAE is: Suppose β is increased to a very large value. Which outcome is most likely?",
+      "options": [
+        "The encoder can freely store more input-specific information",
+        "The approximate posterior is pushed closer to the prior, but reconstruction quality may decrease",
+        "The KL-divergence term becomes irrelevant",
+        "The model becomes equivalent to a deterministic autoencoder"
+      ],
+      "correctAnswer": "The approximate posterior is pushed closer to the prior, but reconstruction quality may decrease",
+      "explanation": "A very large β heavily prioritizes matching the isotropic Gaussian prior over faithful reconstruction, resulting in a severe information bottleneck that degrades reconstruction sharpness."
+    },
+    {
+      "question": "4. An image dataset contains six important independent factors of variation, but a β-VAE has only three latent dimensions. Strong disentanglement is enforced. Which result is most reasonable?",
+      "options": [
+        "Each of the six factors will necessarily receive an independent latent dimension",
+        "Some latent dimensions will automatically split into additional dimensions",
+        "Only some dominant factors may be represented well, while others may be ignored or weakly represented",
+        "The reconstruction loss must become exactly zero"
+      ],
+      "correctAnswer": "Only some dominant factors may be represented well, while others may be ignored or weakly represented",
+      "explanation": "Because capacity (3 latent dimensions) is strictly less than generative factors (6), a strongly regularized bottleneck model captures only the top 3 dominant factors of variance."
+    },
+    {
+      "question": "5. Why can β-annealing be preferable to using a large value of β from the beginning of training?",
+      "options": [
+        "It permanently removes the KL-divergence term",
+        "It allows the model to first learn useful reconstruction information and then gradually impose stronger latent regularization",
+        "It prevents the decoder from receiving latent variables",
+        "It makes the latent variables deterministic throughout training"
+      ],
+      "correctAnswer": "It allows the model to first learn useful reconstruction information and then gradually impose stronger latent regularization",
+      "explanation": "Starting with small β allows the autoencoder to bootstrap meaningful reconstruction representations without collapsing latent codes, before gradually increasing β to enforce disentanglement."
+    },
+    {
+      "question": "6. For a one-dimensional latent variable:\n$q_\\phi(z|x) = \\mathcal{N}(\\mu, \\sigma^2)$\nand the prior is:\n$p(z) = \\mathcal{N}(0, 1)$\nThe KL divergence is calculated as:\n$D_{KL} = \\frac{1}{2} [\\mu^2 + \\sigma^2 - \\log(\\sigma^2) - 1]$\nFor: $\\mu = 1$ and $\\sigma^2 = 1$, what is the KL-divergence value?",
+      "options": [
+        "0",
+        "0.25",
+        "0.5",
+        "1"
+      ],
+      "correctAnswer": "0.5",
+      "explanation": "Substituting $\\mu = 1$ and $\\sigma^2 = 1$ into $D_{KL} = \\frac{1}{2} [\\mu^2 + \\sigma^2 - \\log(\\sigma^2) - 1]$ yields $\\frac{1}{2} [1^2 + 1 - \\log(1) - 1] = \\frac{1}{2} [1 + 1 - 0 - 1] = \\frac{1}{2} [1] = 0.5."
+    },
+    {
+      "question": "7. Which architecture correctly represents a Conditional Variational Autoencoder?",
+      "options": [
+        "Encoder learns $q_\\phi(z|x)$, and decoder learns $p_\\theta(x|z)$",
+        "Encoder learns $q_\\phi(z|x, y)$, and decoder learns $p_\\theta(x|z, y)$",
+        "Encoder learns $q_\\phi(y|x)$, and decoder learns $p_\\theta(x|z)$",
+        "Encoder learns $q_\\phi(z|y)$, and decoder learns $p_\\theta(y|x)$"
+      ],
+      "correctAnswer": "Encoder learns $q_\\phi(z|x, y)$, and decoder learns $p_\\theta(x|z, y)",
+      "explanation": "In a Conditional VAE (CVAE), both the inference network (encoder) and the generative network (decoder) are conditioned on the label or attribute vector $y$."
+    },
+    {
+      "question": "8. During inference, the same latent vector (z) is supplied twice to a trained CVAE decoder. In the first case, the condition is y=[1, 0], and in the second case, it is y=[0, 1]. What is the most appropriate expectation?",
+      "options": [
+        "The outputs must be identical because (z) is unchanged",
+        "The outputs may differ because the decoder uses both (z) and (y)",
+        "The second condition is ignored during generation",
+        "The latent vector must be sampled again before the condition can affect the output"
+      ],
+      "correctAnswer": "The outputs may differ because the decoder uses both (z) and (y)",
+      "explanation": "Because the decoder generates reconstructions conditioned jointly on latent code z and condition vector y, different conditions y yield different generated outputs even when z is identical."
+    },
+    {
+      "question": "9. Two input samples have the following latent representations: zA = (2, -1), zB = (-2, 3).\nLinear interpolation is performed using: zα = (1 - α)zA + αzB.\nWhat is the interpolated latent vector when α = 0.25?",
+      "options": [
+        "(0, 1)",
+        "(1, 0)",
+        "(-1, 2)",
+        "(1, 1)"
+      ],
+      "correctAnswer": "(1, 0)",
+      "explanation": "z_α = (1 - 0.25)(2, -1) + 0.25(-2, 3) = 0.75(2, -1) + 0.25(-2, 3) = (1.5, -0.75) + (-0.5, 0.75) = (1.0, 0)."
+    },
+    {
+      "question": "10. Consider the latent-space interpolation formula: zα = (1 - α)zA + αzB. Which statement is correct?",
+      "options": [
+        "When α = 0, zα = zB, and when α = 1, zα = zA",
+        "When α = 0.5, zα is always the zero vector",
+        "When α = 0, zα = zA, and when α = 1, zα = zB",
+        "Values between 0 and 1 always generate latent points outside the line segment joining zA and zB"
+      ],
+      "correctAnswer": "When α = 0, zα = zA, and when α = 1, zα = zB",
+      "explanation": "At α = 0, (1 - 0)zA + 0·zB = zA. At α = 1, (1 - 1)zA + 1·zB = zB. For α ∈ [0, 1], zα traverses the convex line segment connecting zA to zB."
+    }
+  ]
+}

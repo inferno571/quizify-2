@@ -1,0 +1,85 @@
+{
+  "id": "dlnlp-assignment-3",
+  "title": "DLNLP Assignment 3 Solutions",
+  "subject": "DLNLP",
+  "date": "10/10/2026",
+  "questions": [
+    {
+      "question": "1. Match each situation to the most appropriate family of cross-lingual embedding model (each family used at most once):\n(a) Large monolingual corpora for both languages plus a dictionary of about 5,000 translated frequent words, but no parallel sentences.\n(b) Only topic-aligned encyclopaedia articles: no dictionary, no sentence alignments, no word alignments.\n(c) A moderate sentence-aligned parallel corpus without word alignments, plus a very large monolingual corpus for the high-resource language only.",
+      "options": [
+        "(a) monolingual mapping, (b) pseudo-cross-lingual training, (c) joint optimization.",
+        "(a) joint optimization, (b) cross-lingual training, (c) monolingual mapping.",
+        "(a) pseudo-cross-lingual training, (b) monolingual mapping, (c) cross-lingual training.",
+        "(a) cross-lingual training, (b) joint optimization, (c) pseudo-cross-lingual training."
+      ],
+      "correctAnswer": "(a) monolingual mapping, (b) pseudo-cross-lingual training, (c) joint optimization.",
+      "explanation": "(a) Monolingual mapping learns word embeddings on monolingual corpora then learns a linear map via a bilingual dictionary. (b) Pseudo-cross-lingual creates mixed contexts via merge-and-shuffle on document-aligned data. (c) Joint optimization (such as BilBOWA) jointly optimizes monolingual and cross-lingual sentence-mean objectives."
+    },
+    {
+      "question": "2. A Skip-gram model with full softmax has two-dimensional embeddings and vocabulary V = {river, delta, silt, ledger, audit}. The target (centre) vector of river is vriver = (2, 1) and the context vectors are uriver = (0.5, −1), udelta = (1, 0), usilt = (0, 1), uledger = (−1, 1), uaudit = (−0.5, 0), with P(o | c) = exp(u_o^T v_c) / Σ exp(u_w^T v_c). Using e^0 = 1, e^1 = 2.718, e^2 = 7.389, e^{-1} = 0.368, with river as the centre word, what are P(delta | river) and P(silt | river)?",
+      "options": [
+        "0.240 and 0.510",
+        "0.500 and 0.250",
+        "0.230 and 0.624",
+        "0.624 and 0.230"
+      ],
+      "correctAnswer": "0.624 and 0.230",
+      "explanation": "Scores: river: 0, delta: 2, silt: 1, ledger: -1, audit: -1. Denominator = 1 + 7.389 + 2.718 + 0.368 + 0.368 = 11.843. P(delta|river) = 7.389 / 11.843 = 0.624, P(silt|river) = 2.718 / 11.843 = 0.230."
+    },
+    {
+      "question": "3. A corpus consists of exactly two sentences: “solar panels charge the battery” and “wind turbines spin”. Skip-gram pairs use a window of 2 words on each side of the target, truncated at sentence boundaries. How many (target, context) pairs are produced in total, and how many have charge as the target?",
+      "options": [
+        "32 pairs; 4 with charge as target.",
+        "20 pairs; 4 with charge as target.",
+        "20 pairs; 2 with charge as target.",
+        "14 pairs; 4 with charge as target."
+      ],
+      "correctAnswer": "20 pairs; 4 with charge as target.",
+      "explanation": "Sentence 1 positions: 2, 3, 4, 3, 2 = 14 pairs. Sentence 2 positions: 2, 2, 2 = 6 pairs. Grand total = 20 pairs. 'charge' has position 3 with full ±2 context, yielding 4 pairs: (solar, panels, the, battery)."
+    },
+    {
+      "question": "4. A linear mapping W projects source-language embeddings into target-language space, minimising Σ ∥Wxi − zi∥². With W = [[0.5, 1], [1, -0.5]], xlibro = (2, 1)^T, and candidates zbook = (1.8, 1.6)^T, zbridge = (2.5, 0.5)^T, zhouse = (1.5, 1.0)^T: Which option correctly gives the mapped vector, squared Euclidean distances, and nearest target vector?",
+      "options": [
+        "Wx = (2, 1.5); d²_book = 1.25, d²_bridge = 0.05, d²_house = 0.50 ⇒ bridge.",
+        "Wx = (2, 1.5); d²_book = 0.05, d²_bridge = 1.25, d²_house = 0.50 ⇒ book.",
+        "Wx = (1, −0.5); d²_book = 5.05, d²_bridge = 3.25, d²_house = 2.50 ⇒ house.",
+        "Wx = (2, 1.5); d²_book = 0.50, d²_bridge = 1.25, d²_house = 0.05 ⇒ house."
+      ],
+      "correctAnswer": "Wx = (2, 1.5); d²_book = 0.05, d²_bridge = 1.25, d²_house = 0.50 ⇒ book.",
+      "explanation": "Wx = [0.5(2)+1(1), 1(2)-0.5(1)]^T = [2, 1.5]^T. d²_book = (0.2)² + (-0.1)² = 0.05; d²_bridge = (-0.5)² + (1.0)² = 1.25; d²_house = (0.5)² + (0.5)² = 0.50. Closest is book."
+    },
+    {
+      "question": "5. A bilingual model trains on aligned sentence pairs by minimising the squared Euclidean distance between the means of their word vectors. A source sentence has three words with vectors (1, 2), (3, 0), (2, 1); the aligned target sentence has two words with vectors (1, 2) and (3, 1). What are the two means and the loss?",
+      "options": [
+        "Means (2, 1) and (2, 1.5); loss = 0.5.",
+        "Means (2, 1) and (4, 3); loss = 8.0.",
+        "Means (2, 1) and (2, 1.5); loss = 0.25.",
+        "Means (6, 3) and (4, 3); loss = 4.0."
+      ],
+      "correctAnswer": "Means (2, 1) and (2, 1.5); loss = 0.25.",
+      "explanation": "Source mean = ((1+3+2)/3, (2+0+1)/3) = (2, 1). Target mean = ((1+3)/2, (2+1)/2) = (2, 1.5). Difference = (0, -0.5), so squared Euclidean distance = 0² + (-0.5)² = 0.25."
+    },
+    {
+      "question": "6. In Skip-gram with negative sampling, vharbour = (1, 2), uwharf = (1, 0.5) (positive), urecipe = (−1, 0) and usprint = (0, 0.5) (negatives). With σ(2) = 0.881, σ(1) = 0.731, σ(−1) = 0.269, log 0.881 = −0.127, log 0.731 = −0.313, log 0.269 = −1.313: What are the three loss terms, the total, and the required update?",
+      "options": [
+        "0.127, 1.313, 0.313; L = 1.753; recipe contributes more, and the update must decrease u_recipe^T v_harbour.",
+        "0.127, 0.313, 1.313; L = 1.753; sprint contributes more, and the update must decrease u_sprint^T v_harbour and increase u_wharf^T v_harbour.",
+        "0.881, 0.731, 0.269; L = 1.881; wharf contributes most, since it is the positive example.",
+        "0.127, 0.313, 1.313; L = 1.753; sprint contributes more, and the update must increase u_sprint^T v_harbour so that the model can tell the two negatives apart."
+      ],
+      "correctAnswer": "0.127, 0.313, 1.313; L = 1.753; sprint contributes more, and the update must decrease u_sprint^T v_harbour and increase u_wharf^T v_harbour.",
+      "explanation": "Dot products: wharf = 2, recipe = -1, sprint = 1. Losses: positive = -log σ(2) = 0.127; recipe = -log σ(1) = 0.313; sprint = -log σ(-1) = 1.313. Total L = 1.753. Sprint dominates and needs to be pushed further away while wharf is pulled closer."
+    },
+    {
+      "question": "7. A team builds sparse word vectors from a 40,000-token corpus of gardening articles. Each word is an 8,000-dimensional PPMI vector. The near-synonyms spade and shovel each occur ~60 times, yet their vectors share only 2 non-zero dimensions and have cosine similarity 0.04. What is the cause, and which remedy addresses it?",
+      "options": [
+        "The distributional hypothesis fails for synonyms; widen the context window",
+        "PPMI over-weights frequent contexts; switch to raw co-occurrence counts",
+        "The vectors are too sparse to share dimensions; learn short dense vectors",
+        "Cosine is unreliable on sparse vectors; use the unnormalised dot product"
+      ],
+      "correctAnswer": "The vectors are too sparse to share dimensions; learn short dense vectors",
+      "explanation": "Because each word occurs only ~60 times in a small window, their contexts are severely undersampled across 8,000 sparse dimensions. Learning short dense vectors (e.g. Word2Vec/GloVe or SVD) collapses related context dimensions into shared latent factors."
+    }
+  ]
+}

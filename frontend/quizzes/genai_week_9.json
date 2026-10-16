@@ -1,0 +1,118 @@
+{
+  "id": "genai-week-9",
+  "title": "Fundamentals of Generative AI - Week 9 Assignment 9",
+  "subject": "Fundamentals of Generative AI",
+  "date": "10/10/2026",
+  "questions": [
+    {
+      "question": "1. Which of the following is the primary reason for using word embeddings instead of one-hot encoding in NLP?",
+      "options": [
+        "One-hot encoding preserves semantic similarity between words",
+        "Word embeddings represent words as dense vectors that capture semantic relationships",
+        "Word embeddings require a larger vocabulary than one-hot encoding.",
+        "One-hot encoding reduces computational complexity more than word embeddings."
+      ],
+      "correctAnswer": "Word embeddings represent words as dense vectors that capture semantic relationships",
+      "explanation": "Word embeddings project words into continuous low-dimensional spaces where geometric distances reflect semantic similarities."
+    },
+    {
+      "question": "2. Which NLP preprocessing technique helps reduce different forms of the same word (e.g., 'playing,' 'played,' 'plays') to a common root while considering the word's meaning?",
+      "options": [
+        "Tokenization",
+        "Stop-word removal",
+        "Lemmatization",
+        "Padding"
+      ],
+      "correctAnswer": "Lemmatization",
+      "explanation": "Lemmatization applies vocabulary and morphological analysis to return the base dictionary headword (lemma) of a word."
+    },
+    {
+      "question": "3. Why are Recurrent Neural Networks (RNNs) more suitable for sequence data than traditional feedforward neural networks?",
+      "options": [
+        "RNNs use convolution operations.",
+        "RNNs process all input tokens simultaneously.",
+        "RNNs require fewer parameters than feedforward networks.",
+        "RNNs maintain a hidden state that carries information from previous time steps."
+      ],
+      "correctAnswer": "RNNs maintain a hidden state that carries information from previous time steps.",
+      "explanation": "RNNs pass an internal hidden state forward across timesteps, enabling persistent memory of preceding context."
+    },
+    {
+      "question": "4. Consider an LSTM processing a sentence one word at a time. At a particular time step, the forget gate outputs values close to 1, while the input gate outputs values close to 0. What is the most likely effect on the cell state?",
+      "options": [
+        "The previous cell state is largely retained, and very little new information is added.",
+        "The previous cell state is discarded and replaced entirely with new information.",
+        "Both the previous and new information are ignored, making the cell state zero.",
+        "The hidden state becomes identical to the candidate cell state."
+      ],
+      "correctAnswer": "The previous cell state is largely retained, and very little new information is added.",
+      "explanation": "The cell update is C_t = f_t * C_{t-1} + i_t * C~_t. With f_t ≈ 1 and i_t ≈ 0, the previous cell state is retained and new information is suppressed."
+    },
+    {
+      "question": "5. Which problem commonly limits the ability of standard RNNs to learn long-term dependencies?",
+      "options": [
+        "Overfitting",
+        "Vanishing and exploding gradients.",
+        "Class imbalance",
+        "Data augmentation"
+      ],
+      "correctAnswer": "Vanishing and exploding gradients.",
+      "explanation": "Repeated Jacobian matrix multiplications across time cause backpropagated error gradients to exponentially shrink or explode."
+    },
+    {
+      "question": "6. Which gate in an LSTM decides which information from the previous cell state should be discarded?",
+      "options": [
+        "Input Gate",
+        "Output Gate",
+        "Forget Gate",
+        "Candidate Gate"
+      ],
+      "correctAnswer": "Forget Gate",
+      "explanation": "The forget gate f_t = σ(W_f · [h_{t-1}, x_t] + b_f) computes values in [0, 1] determining what proportion of historical cell memory to discard."
+    },
+    {
+      "question": "7. The candidate cell state C~ in an LSTM is primarily responsible for:",
+      "options": [
+        "Predicting the output label.",
+        "Proposing new information that may be added to the cell state.",
+        "Removing unnecessary neurons.",
+        "Updating the learning rate."
+      ],
+      "correctAnswer": "Proposing new information that may be added to the cell state.",
+      "explanation": "The candidate cell state C~_t generates candidate values via tanh activation that can be selectively gated into the cell state."
+    },
+    {
+      "question": "8. Which statement correctly distinguishes the cell state from the hidden state in an LSTM?",
+      "options": [
+        "Both contain identical information.",
+        "The cell state stores long-term information, while the hidden state represents the current output passed to the next layer or timestep.",
+        "The hidden state stores long-term memory, while the cell state stores short-term memory.",
+        "The cell state is only used during training."
+      ],
+      "correctAnswer": "The cell state stores long-term information, while the hidden state represents the current output passed to the next layer or timestep.",
+      "explanation": "The cell state serves as the long-term internal memory carrier, while the hidden state is the filtered external representation."
+    },
+    {
+      "question": "9. Which activation functions are commonly used in the gates of an LSTM?",
+      "options": [
+        "ReLU for all gates",
+        "Sigmoid for gates and tanh for candidate cell state",
+        "Softmax for gates and sigmoid for outputs",
+        "Only tanh for all computations"
+      ],
+      "correctAnswer": "Sigmoid for gates and tanh for candidate cell state",
+      "explanation": "Gates utilize sigmoid activations to output scale factors in [0, 1], while the candidate cell state and cell squashing use tanh in [-1, 1]."
+    },
+    {
+      "question": "10. Why do LSTMs perform better than standard RNNs on long text sequences?",
+      "options": [
+        "They process all words simultaneously.",
+        "Their gating mechanism helps preserve important information and mitigates the vanishing gradient problem",
+        "They eliminate the need for backpropagation.",
+        "They use convolutional filters to analyze text."
+      ],
+      "correctAnswer": "Their gating mechanism helps preserve important information and mitigates the vanishing gradient problem",
+      "explanation": "Additive linear updates along the constant error carousel protect gradients from vanishing over long sequences."
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "id": "dlnlp-assignment-4",
+  "title": "DLNLP Assignment 4 Solutions",
+  "subject": "DLNLP",
+  "date": "10/10/2026",
+  "questions": [
+    {
+      "question": "1. Which statement comparing greedy decoding and beam search is TRUE?",
+      "options": [
+        "Greedy decoding is the special case of beam search with beam width k = 1, and both are deterministic.",
+        "Beam search is a stochastic decoding strategy, whereas greedy decoding is deterministic.",
+        "Beam search with any k > 1 is guaranteed to return the globally optimal sequence.",
+        "Greedy decoding maximises the total sequence log-probability by construction."
+      ],
+      "correctAnswer": "Greedy decoding is the special case of beam search with beam width k = 1, and both are deterministic.",
+      "explanation": "Greedy decoding maintains exactly one best hypothesis at each step (beam width k = 1) and both methods are deterministic (unlike temperature sampling)."
+    },
+    {
+      "question": "2. A named-entity recognition system must recognise 7 distinct entity types and uses the BIO tagging scheme. How many distinct tags does the per-token classifier have to choose from?",
+      "options": [
+        "7",
+        "14",
+        "15",
+        "16"
+      ],
+      "correctAnswer": "15",
+      "explanation": "BIO tagging requires a B-tag and an I-tag for each entity type, plus one shared O (Outside) tag: 2n + 1 = 2(7) + 1 = 15 tags."
+    },
+    {
+      "question": "3. An RNN language model is trained on a 4-token sequence. At the four timesteps it assigns the following probabilities to the correct next token: 0.5, 0.25, 0.125, 0.0625. Using logarithms to base 2, what is the average cross-entropy loss per token?",
+      "options": [
+        "0.625",
+        "1.25",
+        "2.5",
+        "10"
+      ],
+      "correctAnswer": "2.5",
+      "explanation": "-log2(0.5) = 1; -log2(0.25) = 2; -log2(0.125) = 3; -log2(0.0625) = 4. Sum = 10 bits. Average = 10 / 4 = 2.5 bits per token."
+    },
+    {
+      "question": "4. A sequence-to-sequence model with dot-product attention translates a source sentence of 12 tokens into a target sentence of 9 tokens. How many attention weights α_ij are computed in total over the whole decoding process?",
+      "options": [
+        "12",
+        "21",
+        "9",
+        "108"
+      ],
+      "correctAnswer": "108",
+      "explanation": "At each of the 9 decoder steps, 12 attention weights (one per source token) are computed: 9 × 12 = 108 attention weights."
+    },
+    {
+      "question": "5. A Bi-LSTM is used for NER. Word embeddings are 100-dimensional; the forward and backward LSTMs each have a hidden state of 64 dimensions. There are 4 entity types and the BIO scheme is used. The output layer is applied to the concatenated hidden state. How many parameters must be trained, excluding biases and excluding the embedding table?",
+      "options": [
+        "85120",
+        "43136",
+        "84544",
+        "83968"
+      ],
+      "correctAnswer": "85120",
+      "explanation": "Tags = 2(4) + 1 = 9. Per LSTM direction: 4 gates × (64×100 + 64×64) = 4 × 10,496 = 41,984. Both directions: 2 × 41,984 = 83,968. Output projection on concatenated 128 hidden state: 9 × 128 = 1,152. Total = 83,968 + 1,152 = 85,120."
+    },
+    {
+      "question": "6. A sequence-to-sequence RNN with dot-product attention has 3 encoder hidden states (2-dimensional): h_1 = [2, 0], h_2 = [0, 2], h_3 = [1, 1] and the relevant decoder hidden state is h^d_{i-1} = [1, −1]. Which is the resulting context vector c_i (to 2 decimal places)?",
+      "options": [
+        "[1.85, 0.15]",
+        "[1.00, 0.33]",
+        "[0.15, 1.85]",
+        "[1.50, 0.50]"
+      ],
+      "correctAnswer": "[1.85, 0.15]",
+      "explanation": "Scores: h^d · h_1 = 2, h^d · h_2 = -2, h^d · h_3 = 0. Softmax over [2, -2, 0] gives α ≈ [0.867, 0.016, 0.117]. Context vector c_i = 0.867[2, 0] + 0.016[0, 2] + 0.117[1, 1] ≈ [1.85, 0.15]."
+    },
+    {
+      "question": "7. A machine-translation system uses an RNN encoder–decoder with dot-product attention. Source vocab = 30,000, target vocab = 20,000, embeddings = 200d, encoder & decoder hidden states = 150d. Counting both embedding tables, both recurrent units, and the output projection (ignoring biases), how many parameters are there in total?",
+      "options": [
+        "9,105,000",
+        "13,105,000",
+        "13,405,000",
+        "10,105,000"
+      ],
+      "correctAnswer": "13,105,000",
+      "explanation": "Source embeddings: 30,000 × 200 = 6M. Encoder W & U: 150×200 + 150×150 = 52,500. Target embeddings: 20,000 × 200 = 4M. Decoder W & U: 150×200 + 150×150 = 52,500. Output projection: 20,000 × 150 = 3M. Total = 6M + 52,500 + 4M + 52,500 + 3M = 13,105,000."
+    }
+  ]
+}

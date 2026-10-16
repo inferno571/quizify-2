@@ -1,0 +1,116 @@
+{
+  "id": "hr-analytics-week-2",
+  "title": "HR Analytics - Week 2 Assignment 2",
+  "subject": "HR Analytics",
+  "date": "09/10/2026",
+  "questions": [
+    {
+      "question": "1. Which of the following is NOT one of the steps of Data Analytics?",
+      "options": [
+        "Data Collection",
+        "Data Visualization",
+        "Data Encryption",
+        "Findings"
+      ],
+      "correctAnswer": "Data Encryption",
+      "explanation": "Data Analytics steps include Data Collection, Data Cleaning/Processing, Data Visualization, and Findings/Insights. Data Encryption is an information security practice, not an analytics pipeline step."
+    },
+    {
+      "question": "2. Which of the following is a tool for Data Visualization?",
+      "options": [
+        "Power BI",
+        "Photoshop",
+        "AutoCAD",
+        "MATLAB"
+      ],
+      "correctAnswer": "Power BI",
+      "explanation": "Power BI is a leading dedicated business intelligence and data visualization software tool."
+    },
+    {
+      "question": "3. An HR manager wants to know the average work experience of all applicants from a raw Excel dataset. Which Excel feature would be most appropriate to summarize this quickly?",
+      "options": [
+        "Data Studio",
+        "Recommended Pivot tables",
+        "Conditional Formatting",
+        "Pivot Table"
+      ],
+      "correctAnswer": "Pivot Table",
+      "explanation": "Pivot Tables in Excel allow fast aggregation, grouping, and calculation of averages across datasets."
+    },
+    {
+      "question": "4. A manager wants a visual breakdown of \"how many applicants are UG, PG, and PhD\" for a quick presentation. Based on the Excel tools, which would best serve this purpose?",
+      "options": [
+        "Pivot Table",
+        "Pivot Chart",
+        "SN field",
+        "Status of interview field"
+      ],
+      "correctAnswer": "Pivot Chart",
+      "explanation": "A Pivot Chart provides an immediate visual graphical representation coupled with the summary data."
+    },
+    {
+      "question": "5. After inserting a Pivot Table from your applicant dataset, where would you drag the \"City\" field to see the count of applicants per city as rows?",
+      "options": [
+        "Rows area",
+        "Values area",
+        "Filters area",
+        "Columns area"
+      ],
+      "correctAnswer": "Rows area",
+      "explanation": "Dragging 'City' to the Rows area groups the dataset by distinct cities down the rows."
+    },
+    {
+      "question": "6. Recommended Pivot Tables in Excel require the user to manually drag every field into Rows, Columns, and Values.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "False",
+      "explanation": "Recommended Pivot Tables automatically pre-configure layouts and field placements based on data patterns without requiring manual setup."
+    },
+    {
+      "question": "7. Among the Data Visualization tools, which one is a coding/statistical language rather than a dashboard or spreadsheet tool?",
+      "options": [
+        "Tableau",
+        "Data Studio",
+        "R",
+        "Power-BI"
+      ],
+      "correctAnswer": "R",
+      "explanation": "R is a programming and statistical computing language, whereas Tableau, Data Studio, and Power BI are GUI dashboard/BI applications."
+    },
+    {
+      "question": "8. When an HR manager asks, \"How many are UG, PG, and PhD?\" the relevant field from Applicant Analysis used to answer this is ______.",
+      "options": [
+        "Work Experience",
+        "Education",
+        "Department",
+        "Status of interview"
+      ],
+      "correctAnswer": "Education",
+      "explanation": "UG, PG, and PhD are qualification levels stored in the Education field."
+    },
+    {
+      "question": "9. You've built a Pivot Table showing applicant counts by City. To convert this into a visual chart, which route would you use?",
+      "options": [
+        "Formulas → Insert Chart",
+        "PivotTable Analyze/Design → PivotChart",
+        "Review → Chart Tools",
+        "Page Layout → Visualize"
+      ],
+      "correctAnswer": "PivotTable Analyze/Design → PivotChart",
+      "explanation": "PivotCharts are inserted via the PivotTable Analyze/Design contextual ribbon tab in Excel."
+    },
+    {
+      "question": "10. When you drag a text/ID-type field like \"SN\" or \"Gender\" into the Values area of a Pivot Table, which summary function does it default to?",
+      "options": [
+        "Sum",
+        "Product",
+        "Average",
+        "Count"
+      ],
+      "correctAnswer": "Count",
+      "explanation": "Non-numeric or text fields automatically default to the Count summary function in Excel Pivot Tables."
+    }
+  ]
+}

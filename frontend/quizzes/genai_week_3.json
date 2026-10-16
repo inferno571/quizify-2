@@ -1,0 +1,118 @@
+{
+  "id": "genai-week-3",
+  "title": "Fundamentals of Generative AI - Week 3 Assignment 3",
+  "subject": "Fundamentals of Generative AI",
+  "date": "10/10/2026",
+  "questions": [
+    {
+      "question": "1. The true data distribution contains two well-separated modes. A limited-capacity model is trained by minimizing forward KL divergence. Which behaviour is most likely?",
+      "options": [
+        "The learned distribution concentrates on only one mode.",
+        "The learned distribution becomes broad enough to cover both modes, including the low-density region between them.",
+        "The learned distribution assigns zero probability between the modes.",
+        "The learned distribution must exactly reproduce both modes"
+      ],
+      "correctAnswer": "The learned distribution becomes broad enough to cover both modes, including the low-density region between them.",
+      "explanation": "Forward KL D_KL(P || Q) is zero-avoiding (mean-seeking/mode-covering): it heavily penalizes Q(x) being small wherever P(x) is non-zero, forcing Q to stretch across all modes."
+    },
+    {
+      "question": "2. Suppose the true distribution contains both cat and dog images, but a limited-capacity model trained using reverse KL divergence generates only sharp cat images. Which statement is most accurate?",
+      "options": [
+        "The model demonstrates mode-covering behaviour",
+        "The model has necessarily learned the complete data distribution",
+        "The model demonstrates mode-seeking behaviour and has missed a valid mode",
+        "The KL divergence between the two distributions must be zero"
+      ],
+      "correctAnswer": "The model demonstrates mode-seeking behaviour and has missed a valid mode",
+      "explanation": "Reverse KL D_KL(Q || P) is zero-forcing (mode-seeking): Q incurs zero penalty for placing zero mass on regions where P > 0, leading it to lock onto a single mode."
+    },
+    {
+      "question": "3. An event occurs with probability: p(x) = 1/8, Using logarithm base 2, what is its self-information?",
+      "options": [
+        "1 bit",
+        "2 bits",
+        "3 bits",
+        "8 bits"
+      ],
+      "correctAnswer": "3 bits",
+      "explanation": "Self-information I(x) = -log2(p(x)) = -log2(1/8) = log2(8) = 3 bits."
+    },
+    {
+      "question": "4. Which probability distribution has the highest entropy?",
+      "options": [
+        "[1.0, 0.0]",
+        "[0.9, 0.1]",
+        "[0.7, 0.3]",
+        "[0.5, 0.5]"
+      ],
+      "correctAnswer": "[0.5, 0.5]",
+      "explanation": "Entropy is maximized when the distribution is uniform. For two discrete outcomes, [0.5, 0.5] achieves maximum entropy of 1.0 bit."
+    },
+    {
+      "question": "5. The true class is represented by the target distribution :P = [1, 0]. Two models predict: Model A: Q₁ = [0.8, 0.2]; Model B: Q₂ = [0.6, 0.4]. Which statement is correct?",
+      "options": [
+        "Model B has lower cross-entropy because it assigns more probability to the incorrect class",
+        "Model A has lower cross-entropy because it assigns higher probability to the correct class",
+        "Both models have equal cross-entropy because their probabilities add to 1",
+        "Cross-entropy cannot be calculated for one-hot target distributions"
+      ],
+      "correctAnswer": "Model A has lower cross-entropy because it assigns higher probability to the correct class",
+      "explanation": "Cross-entropy H(P, Q) = -1·ln(q1) - 0·ln(q2) = -ln(q1). Since 0.8 > 0.6, -ln(0.8) < -ln(0.6), so Model A achieves lower cross-entropy."
+    },
+    {
+      "question": "6. Why does a VAE encoder learn an approximate posterior distribution qϕ(z|x) instead of directly computing the true posterior pθ(z|x)?",
+      "options": [
+        "The true posterior cannot depend on the observed input",
+        "The true posterior requires an intractable evidence term involving integration over all possible latent values",
+        "The approximate posterior does not contain any trainable parameters",
+        "The true posterior is always a standard normal distribution"
+      ],
+      "correctAnswer": "The true posterior requires an intractable evidence term involving integration over all possible latent values",
+      "explanation": "By Bayes' theorem, p(z|x) = p(x|z)p(z) / p(x). The marginal likelihood p(x) = ∫ p(x|z)p(z)dz is intractable in high-dimensional continuous latent spaces."
+    },
+    {
+      "question": "7. A VAE encoder has a latent dimension of 5. It outputs one mean and one log-variance for every latent dimension. How many scalar values must the encoder output for the latent distribution?",
+      "options": [
+        "5",
+        "7",
+        "10",
+        "15"
+      ],
+      "correctAnswer": "10",
+      "explanation": "For 5 latent dimensions, the encoder predicts 5 mean values μ and 5 log-variance values log(σ²), totaling 10 scalar values."
+    },
+    {
+      "question": "8. A decoder is designed for binary-valued images. Which output and likelihood combination is most appropriate?",
+      "options": [
+        "Unbounded linear outputs with a Gaussian likelihood only",
+        "Probabilities between 0 and 1 with a Bernoulli likelihood",
+        "Negative variance values with a Poisson likelihood",
+        "A single class label with no probability distribution"
+      ],
+      "correctAnswer": "Probabilities between 0 and 1 with a Bernoulli likelihood",
+      "explanation": "For binary pixel intensities in {0, 1}, the natural probabilistic model is independent Bernoulli trials parameterized by probabilities in [0, 1] output via sigmoid."
+    },
+    {
+      "question": "9. The Evidence Lower Bound (ELBO) for a VAE contains two main components: 1. Expected reconstruction log-likelihood, 2. KL-divergence regularization. Suppose the encoder distribution becomes very close to the prior, but the decoder assigns very low probability to the observed input.",
+      "options": [
+        "The ELBO must be high because the KL-divergence term is small",
+        "The ELBO may still be low because the reconstruction term is poor",
+        "The reconstruction term does not affect the ELBO",
+        "The VAE has necessarily learned a perfect latent representation"
+      ],
+      "correctAnswer": "The ELBO may still be low because the reconstruction term is poor",
+      "explanation": "ELBO = E_q[log p(x|z)] - D_KL. Even with D_KL ≈ 0, a heavily negative reconstruction log-likelihood results in a low overall ELBO."
+    },
+    {
+      "question": "10. The reparameterization trick expresses the latent variable as: z = μ + σ ⊙ ε where ε ∼ N(0, I). Which statement is correct during backpropagation?",
+      "options": [
+        "ε is learned by the encoder and updated using gradient descent",
+        "ε is treated as constant with respect to μ and σ, allowing gradients to flow through μ and σ",
+        "The derivative of z with respect to μ is zero",
+        "The derivative of z with respect to σ is always one"
+      ],
+      "correctAnswer": "ε is treated as constant with respect to μ and σ, allowing gradients to flow through μ and σ",
+      "explanation": "The reparameterization trick isolates the stochasticity into independent standard Gaussian noise ε, allowing gradients to backpropagate cleanly through deterministic operations on μ and σ."
+    }
+  ]
+}

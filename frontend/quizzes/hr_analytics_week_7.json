@@ -1,0 +1,118 @@
+{
+  "id": "hr-analytics-week-7",
+  "title": "HR Analytics - Week 7 Assignment 7",
+  "subject": "HR Analytics",
+  "date": "10/10/2026",
+  "questions": [
+    {
+      "question": "1. Coaching is most effective when:",
+      "options": [
+        "Supervisors are uninvolved",
+        "There is an open relationship",
+        "Trainees are left alone",
+        "Feedback is avoided"
+      ],
+      "correctAnswer": "There is an open relationship",
+      "explanation": "Coaching relies on trust, transparent communication, and an open, supportive relationship between coach and coachee."
+    },
+    {
+      "question": "2. Understudy training involves:",
+      "options": [
+        "Lecturing to senior executives",
+        "Replacing peers without guidance",
+        "Acting as a temporary substitute for a manager",
+        "Random job hopping"
+      ],
+      "correctAnswer": "Acting as a temporary substitute for a manager",
+      "explanation": "An understudy is designated to learn a manager's job by assisting and temporarily taking over their responsibilities during their absence."
+    },
+    {
+      "question": "3. Which method provides exposure to diverse functions via advisory groups?",
+      "options": [
+        "Understudy",
+        "Job rotation",
+        "Multiple management",
+        "Case study"
+      ],
+      "correctAnswer": "Multiple management",
+      "explanation": "Multiple management (such as junior boards of directors) gives emerging managers exposure to high-level strategic problems and diverse organizational functions."
+    },
+    {
+      "question": "4. A suitable method for developing reasoning skills is:",
+      "options": [
+        "Role playing",
+        "Business games",
+        "Case study",
+        "Sensitivity training"
+      ],
+      "correctAnswer": "Case study",
+      "explanation": "Case study analysis requires trainees to diagnose complex real-world organizational problems, developing critical analytical and reasoning skills."
+    },
+    {
+      "question": "5. An executive gains cross-functional experience through:",
+      "options": [
+        "Job rotation",
+        "Role play",
+        "Coaching",
+        "Special readings"
+      ],
+      "correctAnswer": "Job rotation",
+      "explanation": "Job rotation systematically moves managers between different functional areas to develop broad cross-functional competence."
+    },
+    {
+      "question": "6. According to the research findings, traditional practices are shifting toward:",
+      "options": [
+        "Eliminating training",
+        "Fixed-role models",
+        "Participation-based development",
+        "Manager-exclusive development"
+      ],
+      "correctAnswer": "Participation-based development",
+      "explanation": "Modern corporate development models emphasize active participation, experiential learning, and collaborative leadership."
+    },
+    {
+      "question": "7. A suggested HR role in the future is to:",
+      "options": [
+        "Control salaries only",
+        "Isolate departments",
+        "Preserve and increase organizational knowledge",
+        "Promote top-down learning only"
+      ],
+      "correctAnswer": "Preserve and increase organizational knowledge",
+      "explanation": "Future HR roles focus on knowledge management—acting as strategic custodians to capture, preserve, and amplify organizational knowledge."
+    },
+    {
+      "question": "8. What is an important learning metric from training?",
+      "options": [
+        "Number of holidays taken",
+        "Attitude change",
+        "New dress code adoption",
+        "Marketing strategy redesign"
+      ],
+      "correctAnswer": "Attitude change",
+      "explanation": "Under Kirkpatrick's Level 2 (Learning), changes in attitude, knowledge, and mental models serve as essential learning metrics."
+    },
+    {
+      "question": "9. An employee’s reaction to training may include:",
+      "options": [
+        "Ignoring training content",
+        "Dismissing instructors",
+        "Satisfaction with course delivery",
+        "Refusing to participate in appraisals"
+      ],
+      "correctAnswer": "Satisfaction with course delivery",
+      "explanation": "Reaction evaluations (Kirkpatrick Level 1) measure participant satisfaction with the training design, facilitator, and delivery."
+    },
+    {
+      "question": "10. Training evaluation criteria do NOT include:",
+      "options": [
+        "Sales promotions",
+        "Learning",
+        "Employee reactions",
+        "Business results"
+      ],
+      "correctAnswer": "Sales promotions",
+      "explanation": "Kirkpatrick's four levels of training evaluation are Reaction, Learning, Behavior, and Results. Sales promotions are marketing activities, not training evaluation criteria."
+    }
+  ]
+}

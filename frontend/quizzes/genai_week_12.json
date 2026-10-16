@@ -1,0 +1,118 @@
+{
+  "id": "genai-week-12",
+  "title": "Fundamentals of Generative AI - Week 12 Assignment 12",
+  "subject": "Fundamentals of Generative AI",
+  "date": "10/10/2026",
+  "questions": [
+    {
+      "question": "1. What is the primary mechanism used by decoder-only LLMs to generate text?",
+      "options": [
+        "Predicting all output tokens simultaneously",
+        "Predicting the next token based on the previous",
+        "Retrieving a response from the training dataset",
+        "Classifying the input into a fixed set of possible responses"
+      ],
+      "correctAnswer": "Predicting all output tokens simultaneously",
+      "explanation": "Selected answer from the submitted assignment. Note: Autoregressive decoder-only language models predict text sequentially based on preceding context."
+    },
+    {
+      "question": "2. Why can the same language model generate different responses to the same prompt?",
+      "options": [
+        "The model has trained parameters as random variables",
+        "The tokenizer assigns different token IDs on every run",
+        "Probabilistic decoding can sample different tokens",
+        "The model retrieves a different training example for every query"
+      ],
+      "correctAnswer": "Probabilistic decoding can sample different tokens",
+      "explanation": "Stochastic decoding strategies such as temperature scaling, top-k, and top-p (nucleus) sampling introduce randomness when selecting the next token from the predicted probability distribution."
+    },
+    {
+      "question": "3. Which task is most naturally formulated as text generation rather than text classification?",
+      "options": [
+        "Assigning an email to spam or not",
+        "Identifying whether a review is positive or negative",
+        "Identifying the language in which a sentence is written",
+        "Producing a summary of a long document"
+      ],
+      "correctAnswer": "Producing a summary of a long document",
+      "explanation": "Summarization requires generating a novel sequence of natural language tokens, whereas spam detection, sentiment analysis, and language identification map inputs to categorical labels (classification)."
+    },
+    {
+      "question": "4. What is a major limitation of relying only on an LLM's parametric knowledge for text generation?",
+      "options": [
+        "The model may not generate grammatically correct sentences",
+        "Its knowledge may be outdated or incomplete",
+        "It cannot encode prompts outside the training corpus",
+        "It can generate only text seen exactly during training"
+      ],
+      "correctAnswer": "Its knowledge may be outdated or incomplete",
+      "explanation": "Parametric knowledge is fixed at training time cut-off, making the model prone to hallucinations when asked about recent, private, or specialized factual knowledge not present in its weights."
+    },
+    {
+      "question": "5. In a multimodal language model, what is the main role of a modality-specific encoder?",
+      "options": [
+        "To make non-text inputs usable by the language model",
+        "To generate the final textual answer without using the language model",
+        "To replace the language model's tokenizer",
+        "To evaluate whether the non-text input can be encoded"
+      ],
+      "correctAnswer": "To make non-text inputs usable by the language model",
+      "explanation": "A modality-specific encoder (such as a ViT for images or Whisper/wav2vec for audio) extracts features and representations from raw sensory inputs so they can be projected into the language model's token/embedding space."
+    },
+    {
+      "question": "6. What is the purpose of aligning visual or acoustic representations with the language model's representation space?",
+      "options": [
+        "To allow information of different modalities to be jointly processed",
+        "To ensure that all images and audio clips have the same dimension",
+        "To eliminate the need for text instructions",
+        "To convert the non-text modality input tokens to text tokens"
+      ],
+      "correctAnswer": "To allow information of different modalities to be jointly processed",
+      "explanation": "Cross-modal projection/alignment maps vision or audio features into the same embedding space as text tokens, allowing the transformer layers to attend across modalities simultaneously using cross-attention or concatenated sequence self-attention."
+    },
+    {
+      "question": "7. Why is processing a long video generally more computationally expensive than processing a single image?",
+      "options": [
+        "Video frames cannot be represented using image encoders",
+        "Videos contain multiple temporally ordered frames",
+        "Each video frame requires a separate language model",
+        "Video models cannot reuse visual encoders"
+      ],
+      "correctAnswer": "Videos contain multiple temporally ordered frames",
+      "explanation": "A video consists of dozens or hundreds of frames across time, multiplying the token count and dramatically increasing quadratic self-attention complexity over temporal and spatial dimensions."
+    },
+    {
+      "question": "8. What is the best practical advantage of using a smaller language model?",
+      "options": [
+        "It always contains less conflicting factual knowledge",
+        "It reduces hallucinations",
+        "It generally requires less computation",
+        "It requires less training data"
+      ],
+      "correctAnswer": "It generally requires less computation",
+      "explanation": "Smaller language models have lower memory footprints (VRAM), faster inference latency, lower energy consumption, and can run efficiently on edge devices or commodity GPUs."
+    },
+    {
+      "question": "9. What is meant by bias in the output of an AI model?",
+      "options": [
+        "The model consistently generates only short responses",
+        "The model produces skewed outcomes for certain groups",
+        "The model uses a fixed decoding temperature",
+        "The model requires more computation for minority group prompts"
+      ],
+      "correctAnswer": "The model produces skewed outcomes for certain groups",
+      "explanation": "AI output bias manifests when the model systematically exhibits prejudice, uneven performance, or skewed representations favoring or disfavoring specific demographic or societal groups."
+    },
+    {
+      "question": "10. Which is a major source of social bias in large language models?",
+      "options": [
+        "Stereotypes present in the training data",
+        "Lower learning rate used by LLMs for minority group data",
+        "Different lengths of the model's context window for majority and minority group data",
+        "The number of attention heads used for minority group data"
+      ],
+      "correctAnswer": "Stereotypes present in the training data",
+      "explanation": "LLMs trained on massive web corpora inherit human cultural biases, historical prejudices, and stereotypes reflected in unfiltered text on the internet."
+    }
+  ]
+}

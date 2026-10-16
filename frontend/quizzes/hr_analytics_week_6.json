@@ -1,0 +1,118 @@
+{
+  "id": "hr-analytics-week-6",
+  "title": "HR Analytics - Week 6 Assignment 6",
+  "subject": "HR Analytics",
+  "date": "10/10/2026",
+  "questions": [
+    {
+      "question": "1. Which factor helps determine who should receive training first?",
+      "options": [
+        "Education level",
+        "Motivation to learn",
+        "Salary level",
+        "Age"
+      ],
+      "correctAnswer": "Motivation to learn",
+      "explanation": "Readiness for training depends heavily on employee motivation to learn, which predicts engagement, retention, and successful skill transfer."
+    },
+    {
+      "question": "2. What does skill inventory analysis compare?",
+      "options": [
+        "Budget vs. outcomes",
+        "Age vs. performance",
+        "Available vs. required skills",
+        "Training vs. education"
+      ],
+      "correctAnswer": "Available vs. required skills",
+      "explanation": "A skill inventory analysis compares existing (available) workforce competencies against required organizational skills to identify capability gaps."
+    },
+    {
+      "question": "3. Which phase focuses on measuring training outcomes?",
+      "options": [
+        "Assessment",
+        "Implementation",
+        "Alignment",
+        "Evaluation"
+      ],
+      "correctAnswer": "Evaluation",
+      "explanation": "The evaluation phase assesses the effectiveness, learning outcomes, and business impact of training programs."
+    },
+    {
+      "question": "4. What indicates training coverage within the organization?",
+      "options": [
+        "Training budget",
+        "Department size",
+        "Employee trained / Total number of employees",
+        "HR ratio"
+      ],
+      "correctAnswer": "Employee trained / Total number of employees",
+      "explanation": "Training coverage (or penetration rate) is calculated as the ratio of employees who underwent training to the total employee headcount."
+    },
+    {
+      "question": "5. What is the goal of training in contrast to development?",
+      "options": [
+        "Career enhancement",
+        "Current job preparation",
+        "Employee motivation",
+        "Strategic planning"
+      ],
+      "correctAnswer": "Current job preparation",
+      "explanation": "Training focuses on immediate competencies needed for current job performance, whereas development focuses on broader, future career growth."
+    },
+    {
+      "question": "6. What is the correct formula for absenteeism in training?",
+      "options": [
+        "Total training time / Absent employees",
+        "Employees present / Total employees",
+        "Number of employee absent / Total training participants",
+        "Employees trained / Absent employees"
+      ],
+      "correctAnswer": "Number of employee absent / Total training participants",
+      "explanation": "Absenteeism in training is computed as the number of absent participants divided by the total enrolled/nominated training participants."
+    },
+    {
+      "question": "7. What is considered in the importance dimension during task analysis?",
+      "options": [
+        "Age",
+        "Training length",
+        "Criticality of the task",
+        "Training method"
+      ],
+      "correctAnswer": "Criticality of the task",
+      "explanation": "In task analysis, the importance dimension evaluates how critical and essential the specific task is to overall organizational success."
+    },
+    {
+      "question": "8. Who typically initiates training programs?",
+      "options": [
+        "Management",
+        "Employees",
+        "External trainers",
+        "Government"
+      ],
+      "correctAnswer": "Management",
+      "explanation": "Training programs are typically commissioned and initiated by management to bridge strategic skill gaps and enhance productivity."
+    },
+    {
+      "question": "9. What does 'Cost per learning hour received' assess?",
+      "options": [
+        "Learning outcomes",
+        "Staff engagement",
+        "Cost efficiency",
+        "Department needs"
+      ],
+      "correctAnswer": "Cost efficiency",
+      "explanation": "'Cost per learning hour received' is a standard training metric assessing the cost efficiency of learning delivery across participant hours."
+    },
+    {
+      "question": "10. How is teamwork skill level assessed in inventory analysis?",
+      "options": [
+        "Hours of training received",
+        "Performance rating",
+        "Seniority",
+        "Department revenue"
+      ],
+      "correctAnswer": "Performance rating",
+      "explanation": "Soft skills and competencies like teamwork are evaluated in inventory analysis through supervisory and peer performance ratings."
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "id": "hr-analytics-week-10",
+  "title": "HR Analytics - Week 10 Assignment 10",
+  "subject": "HR Analytics",
+  "date": "10/10/2026",
+  "questions": [
+    {
+      "question": "1. In the balanced score approach, return on equity is classified as a:",
+      "options": [
+        "behavioral indicator",
+        "lag indicator",
+        "recruitment indicator",
+        "training indicator"
+      ],
+      "correctAnswer": "lag indicator",
+      "explanation": "Return on equity (ROE) is a financial output metric reflecting past activities and historical performance, making it a classic lag indicator in the Balanced Scorecard framework."
+    },
+    {
+      "question": "2. The 9 Box Matrix evaluates potential rating and:",
+      "options": [
+        "compensation ratio",
+        "training frequency",
+        "attendance score",
+        "performance rating"
+      ],
+      "correctAnswer": "performance rating",
+      "explanation": "The 9-Box Grid is a classic talent management tool that plots employee current performance rating on one axis against future potential rating on the other."
+    },
+    {
+      "question": "3. State True and False On-time delivery was identified as a lead indicator for customers.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "True",
+      "explanation": "On-time delivery drives subsequent customer satisfaction and repeat business, serving as a leading indicator of customer loyalty and retention."
+    },
+    {
+      "question": "4. Product defect rate and unit product cost were categorized under:",
+      "options": [
+        "internal business processes",
+        "external customer relations",
+        "workforce engagement",
+        "strategic compensation planning"
+      ],
+      "correctAnswer": "internal business processes",
+      "explanation": "In the Balanced Scorecard, manufacturing quality (defect rate) and cost efficiency belong to the Internal Business Process perspective."
+    },
+    {
+      "question": "5. Motivation, ability, and opportunity are analyzed in order to identify:",
+      "options": [
+        "compensation structures",
+        "causes of underperformance",
+        "recruitment procedures",
+        "leadership succession plans"
+      ],
+      "correctAnswer": "causes of underperformance",
+      "explanation": "The AMO (Ability, Motivation, Opportunity) model is used to diagnose root causes of individual employee performance issues or underperformance."
+    },
+    {
+      "question": "6. Variable pay includes bonuses, incentives, and stock ________.",
+      "options": [
+        "exchange",
+        "allocation",
+        "option",
+        "planning"
+      ],
+      "correctAnswer": "option",
+      "explanation": "Variable compensation comprises performance bonuses, commissions, profit sharing, and equity-based long-term incentives like stock options."
+    },
+    {
+      "question": "7. Which of the following is classified as a non-financial reward?",
+      "options": [
+        "retirement pension",
+        "family picnic",
+        "performance bonus",
+        "stock option"
+      ],
+      "correctAnswer": "family picnic",
+      "explanation": "Social events, recognition certificates, and company picnics provide relational and symbolic value, classifying them as non-financial rewards."
+    },
+    {
+      "question": "8. Skills Gap Analysis identifies differences between current workforce skills and:",
+      "options": [
+        "transportation requirements",
+        "inventory classifications",
+        "future organizational needs",
+        "taxation regulations"
+      ],
+      "correctAnswer": "future organizational needs",
+      "explanation": "Skills gap analysis benchmarks existing workforce capabilities against projected future skills demanded by the organization's strategic goals."
+    },
+    {
+      "question": "9. DEI stands for Diversity, Equity, and:",
+      "options": [
+        "Integrity",
+        "Investment",
+        "Innovation",
+        "Inclusion"
+      ],
+      "correctAnswer": "Inclusion",
+      "explanation": "DEI stands for Diversity, Equity, and Inclusion in modern human resources and organizational development."
+    },
+    {
+      "question": "10. Compensation philosophy mainly defines the organization’s:",
+      "options": [
+        "transportation infrastructure",
+        "employee value proposition",
+        "taxation reporting mechanism",
+        "warehouse planning strategy"
+      ],
+      "correctAnswer": "employee value proposition",
+      "explanation": "An organization's compensation philosophy articulates its strategy for attracting, motivating, and retaining talent through its core Employee Value Proposition (EVP)."
+    }
+  ]
+}

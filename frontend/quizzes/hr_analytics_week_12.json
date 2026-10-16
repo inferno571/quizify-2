@@ -1,0 +1,116 @@
+{
+  "id": "hr-analytics-week-12",
+  "title": "HR Analytics - Week 12 Assignment 12",
+  "subject": "HR Analytics",
+  "date": "10/10/2026",
+  "questions": [
+    {
+      "question": "1. Which statement best explains the role of Tableau in HR Analytics?",
+      "options": [
+        "It primarily stores employee records",
+        "It converts data into visual analytical insights",
+        "It primarily manages employee communication",
+        "It primarily develops organizational websites"
+      ],
+      "correctAnswer": "It converts data into visual analytical insights",
+      "explanation": "Tableau is a leading data visualization tool that transforms raw HR datasets into intuitive dashboards and visual insights."
+    },
+    {
+      "question": "2. True OR False Tableau can work with information obtained from different types of data sources.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "True",
+      "explanation": "Tableau natively connects to a wide variety of data sources including spreadsheets, relational SQL databases, cloud warehouses, and flat files."
+    },
+    {
+      "question": "3. Which visualization would be most suitable for comparing values across different departments?",
+      "options": [
+        "Scatter Plot",
+        "Text Document",
+        "Bar Chart",
+        "Data Table"
+      ],
+      "correctAnswer": "Bar Chart",
+      "explanation": "Bar charts are optimal for comparing discrete numerical metrics across categorical groups such as departments."
+    },
+    {
+      "question": "4. The calculation of an average joining delay across employees is an example of:",
+      "options": [
+        "Data connection",
+        "Data aggregation",
+        "Data extraction",
+        "Data formatting"
+      ],
+      "correctAnswer": "Data aggregation",
+      "explanation": "Calculating summary statistics like averages, totals, and counts across individual records is called data aggregation."
+    },
+    {
+      "question": "5. Which feature makes Tableau particularly useful for exploring complex datasets?",
+      "options": [
+        "Fixed reporting structure",
+        "Manual data entry process",
+        "Static document preparation",
+        "Interactive visual exploration"
+      ],
+      "correctAnswer": "Interactive visual exploration",
+      "explanation": "Tableau provides interactive visual exploration, enabling users to filter, slice, drill down, and discover insights in complex datasets."
+    },
+    {
+      "question": "6. Which situation represents multidimensional analysis?",
+      "options": [
+        "Examining one variable in isolation",
+        "Viewing one employee record at a time",
+        "Comparing data across several dimensions",
+        "Studying information in a single fixed view"
+      ],
+      "correctAnswer": "Comparing data across several dimensions",
+      "explanation": "Multidimensional analysis involves evaluating metrics across multiple attributes simultaneously, such as department, job band, gender, and performance level."
+    },
+    {
+      "question": "7. A worksheet in Tableau is best understood as:",
+      "options": [
+        "A collection of connected data sources",
+        "An individual analytical view of data",
+        "A collection of multiple dashboards",
+        "A storage system for employee records"
+      ],
+      "correctAnswer": "An individual analytical view of data",
+      "explanation": "In Tableau, a worksheet contains a single chart or data view, which can subsequently be assembled with other views into dashboards."
+    },
+    {
+      "question": "8. What is the primary benefit of presenting aggregated HR data visually?",
+      "options": [
+        "It increases the number of employee records",
+        "It eliminates the need for source data",
+        "It makes patterns and comparisons easier to interpret",
+        "It prevents users from exploring the underlying data"
+      ],
+      "correctAnswer": "It makes patterns and comparisons easier to interpret",
+      "explanation": "Visual charts facilitate rapid pattern recognition, comparative analysis, and trend identification compared to raw numbers."
+    },
+    {
+      "question": "9. What is the main purpose of creating a calculated field in Tableau?",
+      "options": [
+        "To create a new variable using existing information",
+        "To delete existing variables from the dataset",
+        "To replace the original data source completely",
+        "To convert every variable into a graphical format"
+      ],
+      "correctAnswer": "To create a new variable using existing information",
+      "explanation": "A calculated field allows users to generate new variables and customized metrics by applying mathematical or logical formulas to existing data."
+    },
+    {
+      "question": "10. Which Tableau function is appropriate for finding the difference between two dates?",
+      "options": [
+        "DATEADD",
+        "DATENAME",
+        "DATEPART",
+        "DATEDIFF"
+      ],
+      "correctAnswer": "DATEDIFF",
+      "explanation": "The DATEDIFF function calculates the difference between two date fields in terms of specified units such as days, months, or years."
+    }
+  ]
+}
