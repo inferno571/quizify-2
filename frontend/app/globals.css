@@ -22,10 +22,160 @@ body {
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
+/* AMOLED Pitch Black Theme (default dark) */
 html.dark body,
-body.dark {
+body.dark,
+html[data-theme="dark"] body {
   background-color: #000000 !important;
   color: #ffffff !important;
+}
+
+/* ==========================================================================
+   THEME PALETTE OVERRIDES & MEME BACKGROUNDS
+   ========================================================================== */
+
+/* 1. Default Light Theme */
+html[data-theme="light"] body {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+}
+
+/* 2. Midnight Navy Theme */
+html[data-theme="midnight"] body,
+body[data-theme="midnight"] {
+  background-color: #070c1e !important;
+  color: #e2e8f0 !important;
+}
+html[data-theme="midnight"] main,
+html[data-theme="midnight"] .dark\:bg-\[\#000000\],
+html[data-theme="midnight"] .dark\:bg-black,
+html[data-theme="midnight"] .dark\:bg-\[\#0a0a0a\],
+html[data-theme="midnight"] .dark\:bg-\[\#0c0c0c\] {
+  background-color: #0d1633 !important;
+  border-color: #1e293b !important;
+}
+html[data-theme="midnight"] header {
+  background-color: #0a1128 !important;
+  border-color: #1e2d54 !important;
+}
+
+/* 3. Emerald Matrix Theme */
+html[data-theme="emerald"] body,
+body[data-theme="emerald"] {
+  background-color: #02160b !important;
+  color: #ecfdf5 !important;
+}
+html[data-theme="emerald"] main,
+html[data-theme="emerald"] .dark\:bg-\[\#000000\],
+html[data-theme="emerald"] .dark\:bg-black,
+html[data-theme="emerald"] .dark\:bg-\[\#0a0a0a\],
+html[data-theme="emerald"] .dark\:bg-\[\#0c0c0c\] {
+  background-color: #062b16 !important;
+  border-color: #064e3b !important;
+}
+html[data-theme="emerald"] header {
+  background-color: #041f10 !important;
+  border-color: #085a2f !important;
+}
+
+/* 4. Cyberpunk Sunset Theme */
+html[data-theme="cyberpunk"] body,
+body[data-theme="cyberpunk"] {
+  background-color: #13072b !important;
+  color: #fae8ff !important;
+}
+html[data-theme="cyberpunk"] main,
+html[data-theme="cyberpunk"] .dark\:bg-\[\#000000\],
+html[data-theme="cyberpunk"] .dark\:bg-black,
+html[data-theme="cyberpunk"] .dark\:bg-\[\#0a0a0a\],
+html[data-theme="cyberpunk"] .dark\:bg-\[\#0c0c0c\] {
+  background-color: #220e47 !important;
+  border-color: #581c87 !important;
+}
+html[data-theme="cyberpunk"] header {
+  background-color: #180936 !important;
+  border-color: #6b21a8 !important;
+}
+
+/* 5. MEME THEME: LARP ("THERE'S NO LIMIT TO THE LARP") */
+html[data-theme="larp"] body,
+body[data-theme="larp"] {
+  background-color: #050402 !important;
+  background-image: 
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.62), rgba(0, 0, 0, 0.78)), 
+    url('/larp_wide.jpg') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-attachment: fixed !important;
+  background-repeat: no-repeat !important;
+  color: #fef3c7 !important;
+}
+
+html[data-theme="larp"] .min-h-screen,
+html[data-theme="larp"] .h-screen {
+  background-color: transparent !important;
+}
+
+html[data-theme="larp"] main,
+html[data-theme="larp"] .dark\:bg-black,
+html[data-theme="larp"] .dark\:bg-\[\#000000\],
+html[data-theme="larp"] .dark\:bg-\[\#0a0a0a\],
+html[data-theme="larp"] .dark\:bg-\[\#0c0c0c\],
+html[data-theme="larp"] .dark\:bg-\[\#050505\] {
+  background-color: rgba(12, 10, 8, 0.82) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  border-color: rgba(245, 158, 11, 0.3) !important;
+}
+
+html[data-theme="larp"] header {
+  background-color: rgba(12, 10, 8, 0.88) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border-color: rgba(245, 158, 11, 0.38) !important;
+}
+
+/* 6. MEME THEME: IT'S OVER (WOJAK NPTEL) */
+html[data-theme="itsover"] body,
+body[data-theme="itsover"] {
+  background-color: #ffffff !important;
+  background-image: 
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.52), rgba(255, 255, 255, 0.70)), 
+    url('/itsover.jpg') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-attachment: fixed !important;
+  background-repeat: no-repeat !important;
+  color: #0f172a !important;
+}
+
+html[data-theme="itsover"] .min-h-screen,
+html[data-theme="itsover"] .h-screen {
+  background-color: transparent !important;
+}
+
+html[data-theme="itsover"] main,
+html[data-theme="itsover"] .bg-white,
+html[data-theme="itsover"] .bg-gray-100,
+html[data-theme="itsover"] .bg-gray-50,
+html[data-theme="itsover"] .bg-slate-50,
+html[data-theme="itsover"] .dark\:bg-black,
+html[data-theme="itsover"] .dark\:bg-\[\#000000\],
+html[data-theme="itsover"] .dark\:bg-\[\#0a0a0a\],
+html[data-theme="itsover"] .dark\:bg-\[\#0c0c0c\],
+html[data-theme="itsover"] .dark\:bg-\[\#050505\] {
+  background-color: rgba(255, 255, 255, 0.86) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border-color: rgba(203, 213, 225, 0.85) !important;
+  color: #0f172a !important;
+}
+
+html[data-theme="itsover"] header {
+  background-color: rgba(255, 255, 255, 0.92) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border-color: rgba(203, 213, 225, 0.9) !important;
 }
 
 /* Ensure math & KaTeX text is brilliant crisp white in dark mode */

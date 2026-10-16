@@ -31,15 +31,17 @@ export default function RootLayout({
                 try {
                   var saved = localStorage.getItem('quizify_theme');
                   var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-                  if (theme === 'dark') {
+                  var valid = ['light', 'dark', 'midnight', 'emerald', 'cyberpunk', 'larp', 'itsover'];
+                  if (valid.indexOf(theme) === -1) theme = 'light';
+                  var isDark = ['dark', 'midnight', 'emerald', 'cyberpunk', 'larp'].indexOf(theme) !== -1;
+                  if (isDark) {
                     document.documentElement.classList.add('dark');
-                    document.documentElement.setAttribute('data-theme', 'dark');
                     document.documentElement.style.colorScheme = 'dark';
                   } else {
                     document.documentElement.classList.remove('dark');
-                    document.documentElement.setAttribute('data-theme', 'light');
                     document.documentElement.style.colorScheme = 'light';
                   }
+                  document.documentElement.setAttribute('data-theme', theme);
                 } catch (e) {}
               })();
             `,
