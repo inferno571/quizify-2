@@ -112,14 +112,14 @@ Explanation: AdaGrad accumulates squared gradients indefinitely in the denominat
 
   return (
     <div className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4">
-      <div className="bg-white dark:bg-[#0c0c0c] border border-transparent dark:border-neutral-800 rounded-lg shadow-2xl max-w-2xl w-full flex flex-col max-h-[90vh] overflow-hidden animate-in fade-in zoom-in-95 duration-200">
+      <div className="bg-surface border border-transparent dark:border-outline rounded-lg shadow-2xl max-w-2xl w-full flex flex-col max-h-[90vh] overflow-hidden animate-in fade-in zoom-in-95 duration-200">
         
         {/* Header */}
-        <div className="px-6 py-4 bg-[#2c3e50] dark:bg-[#050505] border-b border-transparent dark:border-neutral-800 text-white flex justify-between items-center shrink-0">
+        <div className="px-6 py-4 bg-[#2c3e50] dark:bg-surface border-b border-transparent dark:border-outline text-white flex justify-between items-center shrink-0">
           <div>
             <div className="flex items-center gap-2 mb-1">
               <span className="bg-orange-500/20 text-orange-400 text-[10px] font-bold px-2 py-0.5 rounded border border-orange-500/30">
-                Quizify 3
+                Quizify 5 Pro Ultra
               </span>
 
               <span className="text-[10px] text-gray-300">Made by Saksham Sooden</span>
@@ -136,12 +136,12 @@ Explanation: AdaGrad accumulates squared gradients indefinitely in the denominat
         </div>
 
         {/* Tab switch */}
-        <div className="flex border-b border-gray-200 dark:border-neutral-800 bg-gray-50 dark:bg-[#050505] px-6 pt-3 gap-2 shrink-0">
+        <div className="flex border-b border-gray-200 dark:border-outline bg-gray-50 dark:bg-surface px-6 pt-3 gap-2 shrink-0">
           <button
             onClick={() => { setTab("json"); setError(null); setParsedPreview(null); }}
             className={`flex items-center gap-2 px-4 py-2 text-xs font-bold rounded-t border-t border-x cursor-pointer transition ${
               tab === "json" 
-                ? "bg-white dark:bg-[#0c0c0c] border-gray-200 dark:border-neutral-800 text-[#2980b9] dark:text-blue-400 -mb-[1px]" 
+                ? "bg-surface border-gray-200 dark:border-outline text-[#2980b9] dark:text-blue-400 -mb-[1px]"
                 : "border-transparent text-gray-500 hover:text-gray-800 dark:text-neutral-400 dark:hover:text-neutral-200"
             }`}
           >
@@ -151,7 +151,7 @@ Explanation: AdaGrad accumulates squared gradients indefinitely in the denominat
             onClick={() => { setTab("text"); setError(null); setParsedPreview(null); }}
             className={`flex items-center gap-2 px-4 py-2 text-xs font-bold rounded-t border-t border-x cursor-pointer transition ${
               tab === "text" 
-                ? "bg-white dark:bg-[#0c0c0c] border-gray-200 dark:border-neutral-800 text-[#2980b9] dark:text-blue-400 -mb-[1px]" 
+                ? "bg-surface border-gray-200 dark:border-outline text-[#2980b9] dark:text-blue-400 -mb-[1px]"
                 : "border-transparent text-gray-500 hover:text-gray-800 dark:text-neutral-400 dark:hover:text-neutral-200"
             }`}
           >
@@ -181,7 +181,7 @@ Explanation: AdaGrad accumulates squared gradients indefinitely in the denominat
                   value={subject}
                   onChange={(e) => setSubject(e.target.value)}
                   placeholder="e.g. HR Analytics"
-                  className="w-full text-sm p-2 border border-gray-300 dark:border-neutral-800 rounded bg-white dark:bg-[#050505] text-gray-900 dark:text-white focus:outline-none focus:border-blue-500"
+                  className="w-full text-sm p-2 border border-gray-300 dark:border-outline rounded bg-surface text-gray-900 dark:text-white focus:outline-none focus:border-blue-500"
                 />
               </div>
             </div>
@@ -195,7 +195,7 @@ Explanation: AdaGrad accumulates squared gradients indefinitely in the denominat
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
                 placeholder="e.g. Week 1 Assignment 1"
-                className="w-full text-sm p-2 border border-gray-300 dark:border-neutral-800 rounded bg-white dark:bg-[#050505] text-gray-900 dark:text-white focus:outline-none focus:border-blue-500"
+                className="w-full text-sm p-2 border border-gray-300 dark:border-outline rounded bg-surface text-gray-900 dark:text-white focus:outline-none focus:border-blue-500"
               />
             </div>
           </div>
@@ -213,7 +213,7 @@ Explanation: AdaGrad accumulates squared gradients indefinitely in the denominat
                   ? '{\n  "title": "My Quiz",\n  "questions": [\n    {\n      "question": "1. What is 2+2?",\n      "options": ["3", "4", "5"],\n      "correctAnswer": "4",\n      "explanation": "2+2 equals 4"\n    }\n  ]\n}'
                   : "1. What is the output of print(2**3)?\nA. 6\nB. 8\nC. 9\nAnswer: B\nExplanation: 2 cubed is 8"
               }
-              className="w-full text-xs font-mono p-3 border border-gray-300 dark:border-neutral-800 rounded focus:outline-none focus:border-blue-500 bg-gray-50 dark:bg-[#050505] text-gray-900 dark:text-white"
+              className="w-full text-xs font-mono p-3 border border-gray-300 dark:border-outline rounded focus:outline-none focus:border-blue-500 bg-gray-50 dark:bg-surface text-gray-900 dark:text-white"
             />
           </div>
 
@@ -238,11 +238,11 @@ Explanation: AdaGrad accumulates squared gradients indefinitely in the denominat
         </div>
 
         {/* Footer */}
-        <div className="p-4 bg-gray-100 dark:bg-[#070707] border-t border-gray-200 dark:border-neutral-800 flex justify-between items-center shrink-0">
+        <div className="p-4 bg-gray-100 dark:bg-surface border-t border-gray-200 dark:border-outline flex justify-between items-center shrink-0">
           <button
             type="button"
             onClick={handleTestParse}
-            className="px-4 py-2 border border-gray-300 dark:border-neutral-700 text-gray-700 dark:text-neutral-300 rounded text-xs font-semibold hover:bg-gray-200 dark:hover:bg-[#161616] transition"
+            className="px-4 py-2 border border-gray-300 dark:border-outline text-gray-700 dark:text-neutral-300 rounded text-xs font-semibold hover:bg-gray-200 dark:hover:bg-surface-hover transition"
           >
             Verify Format
           </button>
@@ -251,7 +251,7 @@ Explanation: AdaGrad accumulates squared gradients indefinitely in the denominat
             <button
               type="button"
               onClick={onClose}
-              className="px-4 py-2 border border-gray-300 dark:border-neutral-700 text-gray-600 dark:text-neutral-300 rounded text-xs font-semibold hover:bg-gray-200 dark:hover:bg-[#161616] transition"
+              className="px-4 py-2 border border-gray-300 dark:border-outline text-gray-600 dark:text-neutral-300 rounded text-xs font-semibold hover:bg-gray-200 dark:hover:bg-surface-hover transition"
             >
               Cancel
             </button>

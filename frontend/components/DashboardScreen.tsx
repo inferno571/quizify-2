@@ -176,26 +176,26 @@ export function DashboardScreen({
   };
 
   return (
-    <div className="flex bg-white dark:bg-black min-h-[85vh] font-sans border-t border-[#dee2e6] dark:border-neutral-800 transition-colors">
+    <div className="flex bg-white dark:bg-canvas min-h-[85vh] font-sans border-t border-[#dee2e6] dark:border-outline transition-colors">
       {/* Sidebar */}
-      <div className="w-64 bg-[#f8f9fa] dark:bg-[#070707] border-r border-[#dee2e6] dark:border-neutral-800 pt-4 hidden md:flex md:flex-col shrink-0">
+      <div className="w-64 bg-[#f8f9fa] dark:bg-surface border-r border-[#dee2e6] dark:border-outline pt-4 hidden md:flex md:flex-col shrink-0">
         <button
           onClick={onBack}
-          className="flex items-center gap-2 px-6 py-3 text-sm font-semibold text-[#2980b9] dark:text-blue-400 hover:bg-gray-200 dark:hover:bg-[#161616] transition cursor-pointer mb-2"
+          className="flex items-center gap-2 px-6 py-3 text-sm font-semibold text-[#2980b9] dark:text-blue-400 hover:bg-gray-200 dark:hover:bg-surface-hover transition cursor-pointer mb-2"
         >
           <ArrowLeft className="w-4 h-4" />
           Back to Home
         </button>
-        <div className="h-px bg-[#dee2e6] dark:border-neutral-800 mx-4 mb-2" />
+        <div className="h-px bg-[#dee2e6] dark:border-outline mx-4 mb-2" />
         
         <ul className="text-sm font-semibold text-[#495057] dark:text-neutral-300">
-          <li className="px-6 py-3 bg-[#e9ecef] dark:bg-neutral-900 border-l-4 text-[#2c3e50] dark:text-white flex items-center gap-2" style={{ borderColor: accentColor }}>
+          <li className="px-6 py-3 bg-[#e9ecef] dark:bg-surface-muted border-l-4 text-[#2c3e50] dark:text-white flex items-center gap-2" style={{ borderColor: accentColor }}>
             {isGenerate ? <Brain className="w-4 h-4" /> : <FileUp className="w-4 h-4" />}
             {isGenerate ? 'AI Generation' : 'Upload Questions'}
           </li>
           <li 
             onClick={() => setIsImportModalOpen(true)}
-            className="px-6 py-3 hover:bg-gray-200 dark:hover:bg-[#161616] cursor-pointer text-[#2980b9] dark:text-blue-400 flex items-center gap-2"
+            className="px-6 py-3 hover:bg-gray-200 dark:hover:bg-surface-hover cursor-pointer text-[#2980b9] dark:text-blue-400 flex items-center gap-2"
           >
             <PlusCircle className="w-4 h-4" />
             Add Quiz (Offline)
@@ -211,7 +211,7 @@ export function DashboardScreen({
           <li 
             onClick={() => setSelectedSubject("all")}
             className={`px-6 py-2.5 flex items-center justify-between cursor-pointer transition ${
-              selectedSubject === "all" ? "bg-blue-50 dark:bg-blue-950/40 text-[#2980b9] dark:text-blue-400 border-l-4 border-[#2980b9]" : "hover:bg-gray-200 dark:hover:bg-[#161616]"
+              selectedSubject === "all" ? "bg-blue-50 dark:bg-blue-950/40 text-[#2980b9] dark:text-blue-400 border-l-4 border-[#2980b9]" : "hover:bg-gray-200 dark:hover:bg-surface-hover"
             }`}
           >
             <div className="flex items-center gap-2">
@@ -229,7 +229,7 @@ export function DashboardScreen({
                 key={subj}
                 onClick={() => setSelectedSubject(subj)}
                 className={`px-6 py-2.5 flex items-center justify-between cursor-pointer transition ${
-                  isSubjActive ? `${colors.lightBg} dark:bg-neutral-800 ${colors.text} dark:text-white border-l-4 ${colors.border}` : "hover:bg-gray-200 dark:hover:bg-[#161616]"
+                  isSubjActive ? `${colors.lightBg} dark:bg-neutral-800 ${colors.text} dark:text-white border-l-4 ${colors.border}` : "hover:bg-gray-200 dark:hover:bg-surface-hover"
                 }`}
               >
                 <div className="flex items-center gap-2 truncate">
@@ -254,13 +254,13 @@ export function DashboardScreen({
         </div>
 
         {/* Creator Branding Badge */}
-        <div className="mx-4 mb-4 p-3 bg-gradient-to-br from-orange-50 to-amber-50 dark:from-[#111111] dark:to-[#0a0a0a] border border-orange-200/80 dark:border-neutral-800 rounded text-[11px] text-orange-950 dark:text-orange-300 shadow-xs">
+        <div className="mx-4 mb-4 p-3 bg-gradient-to-br from-orange-50 to-amber-50 dark:from-surface-muted dark:to-surface-muted border border-orange-200/80 dark:border-outline rounded text-[11px] text-orange-950 dark:text-orange-300 shadow-xs">
           <div className="font-extrabold flex items-center justify-between text-orange-800 dark:text-orange-400 mb-0.5">
             <span className="flex items-center gap-1">
               <Sparkles className="w-3.5 h-3.5 text-orange-500" />
-              Quizify 3
+              Quizify 5 Pro Ultra
             </span>
-            <span className="text-[9px] bg-orange-200/60 px-1.5 py-0.2 rounded font-bold">v3.0</span>
+            <span className="text-[9px] bg-orange-200/60 px-1.5 py-0.2 rounded font-bold">v5.0</span>
           </div>
           <p className="text-gray-600 text-[10px] leading-tight">
             Engineered by <span className="font-bold text-gray-800">Saksham Sooden</span>
@@ -269,7 +269,7 @@ export function DashboardScreen({
       </div>
 
       {/* Main Content Area */}
-      <div className="flex-1 p-6 md:p-10 bg-white dark:bg-black min-w-0 transition-colors" onPaste={handlePaste}>
+      <div className="app-background flex-1 p-4 sm:p-6 md:p-10 bg-canvas min-w-0 transition-colors" onPaste={handlePaste}>
         
         {/* Mode Header */}
         <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
@@ -285,13 +285,13 @@ export function DashboardScreen({
                   {isGenerate ? 'Generate Quiz from Study Material' : 'Upload Questions & Solutions'}
                 </h1>
                 <span className="bg-orange-100 text-orange-700 text-[10px] font-bold px-2 py-0.5 rounded-full border border-orange-200 uppercase tracking-wide">
-                  Quizify 3
+                  Quizify 5 Pro Ultra
                 </span>
               </div>
               <p className="text-xs text-gray-500 dark:text-neutral-400">
                 {isGenerate 
-                  ? 'Quizify 3 AI Engine • Made by Saksham Sooden' 
-                  : 'Quizify 3 Direct Parser • Made by Saksham Sooden'}
+                  ? 'Quizify 5 Pro Ultra AI Engine • Made by Saksham Sooden'
+                  : 'Quizify 5 Pro Ultra Direct Parser • Made by Saksham Sooden'}
               </p>
             </div>
           </div>
@@ -301,7 +301,7 @@ export function DashboardScreen({
             <LarpGuideButton />
             <button
               onClick={() => setIsImportModalOpen(true)}
-              className="inline-flex items-center gap-2 bg-white dark:bg-[#0c0c0c] border border-[#2980b9] dark:border-blue-500 text-[#2980b9] dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-[#161616] px-4 py-2 rounded text-xs font-bold transition shadow-sm cursor-pointer"
+              className="inline-flex items-center gap-2 bg-surface border border-[#2980b9] dark:border-blue-500 text-[#2980b9] dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-surface-hover px-4 py-2 rounded text-xs font-bold transition shadow-sm cursor-pointer"
             >
               <PlusCircle className="w-4 h-4" />
               Add / Paste Quiz (Offline)
@@ -316,7 +316,7 @@ export function DashboardScreen({
          
         {/* Staged Files Preview */}
         {stagedFiles.length > 0 && (
-          <div className="flex flex-wrap gap-3 mb-4 p-3 bg-white border border-dashed border-[#dee2e6] rounded">
+          <div className="flex flex-wrap gap-3 mb-4 p-3 bg-surface border border-dashed border-outline rounded">
              {stagedFiles.map((file, idx) => (
                <div key={idx} className="relative group w-24 h-24 border rounded overflow-hidden bg-gray-50 flex flex-col justify-center items-center">
                  {previews[idx] === "PDF_PLACEHOLDER" && (
@@ -342,7 +342,7 @@ export function DashboardScreen({
                  )}
                  <button 
                    onClick={() => removeFile(idx)}
-                   className="absolute top-0 right-0 bg-red-500 text-white w-5 h-5 flex items-center justify-center text-[10px] rounded-bl opacity-0 group-hover:opacity-100 transition cursor-pointer"
+                   className="absolute top-0 right-0 bg-red-500 text-white w-5 h-5 flex items-center justify-center text-[10px] rounded-bl opacity-100 sm:opacity-0 sm:group-hover:opacity-100 focus-visible:opacity-100 transition cursor-pointer"
                  >
                    &times;
                  </button>
@@ -372,7 +372,7 @@ export function DashboardScreen({
                 max={50} 
                 value={numQuestions}
                 onChange={(e) => setNumQuestions(Math.max(1, Math.min(50, parseInt(e.target.value) || 1)))}
-                className="w-full text-sm p-2.5 border border-[#dee2e6] dark:border-neutral-800 rounded bg-white dark:bg-[#0a0a0a] text-[#2c3e50] dark:text-white focus:outline-none focus:border-orange-400 transition"
+                className="w-full text-sm p-2.5 border border-[#dee2e6] dark:border-outline rounded bg-surface text-[#2c3e50] dark:text-white focus:outline-none focus:border-orange-400 transition"
               />
             </div>
             <div>
@@ -380,7 +380,7 @@ export function DashboardScreen({
               <select 
                 value={difficulty}
                 onChange={(e) => setDifficulty(e.target.value)}
-                className="w-full text-sm p-2.5 border border-[#dee2e6] dark:border-neutral-800 rounded bg-white dark:bg-[#0a0a0a] text-[#2c3e50] dark:text-white focus:outline-none focus:border-orange-400 transition cursor-pointer"
+                className="w-full text-sm p-2.5 border border-[#dee2e6] dark:border-outline rounded bg-surface text-[#2c3e50] dark:text-white focus:outline-none focus:border-orange-400 transition cursor-pointer"
               >
                 <option value="easy">Easy</option>
                 <option value="medium">Medium</option>
@@ -392,7 +392,7 @@ export function DashboardScreen({
         )}
 
         <textarea
-          className="w-full text-sm p-3 mb-4 border border-[#dee2e6] dark:border-neutral-800 rounded bg-white dark:bg-[#0a0a0a] text-[#2c3e50] dark:text-white placeholder-gray-400 dark:placeholder-neutral-500 focus:outline-none focus:border-[#2980b9] transition"
+          className="w-full text-sm p-3 mb-4 border border-[#dee2e6] dark:border-outline rounded bg-surface text-[#2c3e50] dark:text-white placeholder-gray-400 dark:placeholder-neutral-500 focus:outline-none focus:border-[#2980b9] transition"
           placeholder={isGenerate 
             ? "Additional instructions (Optional) e.g., 'Focus on chapter 3 and include conceptual questions'" 
             : "Additional Prompt Instructions (Optional) e.g., 'Make sure to extract 10 questions only'"}
@@ -465,7 +465,7 @@ export function DashboardScreen({
         <div className="mb-8">
           <div className="flex items-center justify-between border-b border-[#dee2e6] pb-3 mb-4">
             <div className="flex items-center gap-3">
-              <h2 className="text-2xl font-light text-[#2c3e50]">
+              <h2 className="text-2xl font-light text-foreground">
                 My Quizzes
               </h2>
               <span className="bg-blue-100 text-blue-700 font-bold px-2.5 py-0.5 rounded-full text-xs">
@@ -485,7 +485,7 @@ export function DashboardScreen({
               className={`px-3.5 py-1.5 rounded-full text-xs font-bold transition whitespace-nowrap cursor-pointer ${
                 selectedSubject === "all"
                   ? "bg-[#2c3e50] text-white shadow-sm"
-                  : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                  : "bg-surface-muted text-muted hover:bg-surface-hover"
               }`}
             >
               All Subjects ({quizzes.length})
@@ -553,10 +553,10 @@ export function DashboardScreen({
               const colors = getSubjectColor(subjectName);
 
               return (
-                <div key={subjectName} className="bg-white dark:bg-[#0c0c0c] border border-[#dee2e6] dark:border-neutral-800 rounded-lg shadow-xs overflow-hidden">
+                <div key={subjectName} className="bg-surface border border-[#dee2e6] dark:border-outline rounded-lg shadow-xs overflow-hidden">
                   
                   {/* Subject Section Header */}
-                  <div className="p-4 bg-gray-50 dark:bg-[#070707] border-b border-[#dee2e6] dark:border-neutral-800 flex flex-wrap items-center justify-between gap-3">
+                  <div className="p-4 bg-gray-50 dark:bg-surface border-b border-[#dee2e6] dark:border-outline flex flex-wrap items-center justify-between gap-3">
                     <div className="flex items-center gap-3">
                       <div className={`w-8 h-8 rounded-md flex items-center justify-center text-white ${colors.bg} shadow-xs`}>
                         <GraduationCap className="w-4 h-4" />
@@ -572,7 +572,7 @@ export function DashboardScreen({
                     </div>
 
                     <div className="flex items-center gap-2">
-                      <span className="text-xs font-semibold px-2.5 py-1 bg-white dark:bg-[#141414] border border-gray-200 dark:border-neutral-800 rounded-full text-gray-700 dark:text-neutral-300">
+                      <span className="text-xs font-semibold px-2.5 py-1 bg-surface-muted border border-gray-200 dark:border-outline rounded-full text-gray-700 dark:text-neutral-300">
                         Progress: {completedCount}/{subjectQuizzes.length} Completed
                       </span>
                     </div>
@@ -703,7 +703,7 @@ export function DashboardScreen({
                   <div className="overflow-x-auto">
                     <table className="w-full text-left border-collapse">
                       <thead>
-                        <tr className="bg-white dark:bg-[#070707] border-b border-[#dee2e6] dark:border-neutral-800 text-[#6c757d] dark:text-neutral-400 text-xs uppercase tracking-wider font-semibold">
+                        <tr className="bg-surface border-b border-[#dee2e6] dark:border-outline text-[#6c757d] dark:text-neutral-400 text-xs uppercase tracking-wider font-semibold">
                           <th className="p-3 w-12 text-center">S.No.</th>
                           <th className="p-3">Assignment Title</th>
                           <th className="p-3 text-center">Date</th>
@@ -728,7 +728,7 @@ export function DashboardScreen({
                                 ? "bg-orange-50/50 dark:bg-orange-950/20 hover:bg-orange-100/60 dark:hover:bg-orange-950/40 border-l-4 border-l-orange-500 font-medium"
                                 : inProgress
                                 ? "bg-emerald-50/30 dark:bg-emerald-950/20 hover:bg-emerald-50/50 dark:hover:bg-emerald-950/30"
-                                : "hover:bg-blue-50/40 dark:hover:bg-[#141414]"
+                                : "hover:bg-blue-50/40 dark:hover:bg-surface-hover"
                             }`}>
                               <td className="p-3 text-center text-gray-500 dark:text-neutral-400 text-xs font-medium">{index + 1}</td>
                               <td className="p-3 font-medium text-[#2980b9] dark:text-blue-400">
@@ -839,7 +839,7 @@ export function DashboardScreen({
                                       </button>
                                       <button 
                                         onClick={() => onTakeQuiz(quiz.id)}
-                                        className="text-xs bg-gray-100 dark:bg-[#141414] hover:bg-gray-200 dark:hover:bg-[#1f1f1f] text-[#2c3e50] dark:text-neutral-200 border border-gray-300 dark:border-neutral-700 px-2.5 py-1 rounded font-semibold transition cursor-pointer"
+                                        className="text-xs bg-gray-100 dark:bg-surface-muted hover:bg-gray-200 dark:hover:bg-surface-hover text-[#2c3e50] dark:text-neutral-200 border border-gray-300 dark:border-outline px-2.5 py-1 rounded font-semibold transition cursor-pointer"
                                       >
                                         Retake
                                       </button>

@@ -1,11 +1,11 @@
 @echo off
-echo Starting Quizify 3 (Made by Saksham Sooden)...
+echo Starting Quizify 5 Pro Ultra (Made by Saksham Sooden)...
 
 :: Start Go Backend
-start "Quizify 3 Go API Server" cmd /c "cd backend && go run main.go"
+start "Quizify 5 Pro Ultra Go API Server" cmd /c "cd backend && go run main.go"
 
 :: Start Next.js Frontend
-start "Quizify 3 Next.js App" cmd /c "cd frontend && npm run dev"
+start "Quizify 5 Pro Ultra Next.js App" cmd /c "cd frontend && npm run dev"
 
-echo Both servers are starting! Quizify 3 will be available at http://localhost:3000
+echo Both servers are starting! Quizify 5 Pro Ultra will be available at http://localhost:3000
 

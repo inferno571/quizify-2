@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
+import { IshaEasterEgg } from "./IshaEasterEgg";
 import {
   UserCircle,
   Shield,
@@ -206,10 +207,10 @@ export function PlayerNameModal({
         exit={{ opacity: 0 }}
       >
         <motion.div
-          className={`relative w-full max-w-md rounded-2xl shadow-2xl overflow-hidden ${
+          className={`relative w-full max-w-md max-h-[calc(100dvh-2rem)] overflow-y-auto rounded-2xl shadow-2xl ${
             isSpecial
               ? "bg-gradient-to-br from-yellow-50 via-amber-50 to-orange-50 border-2 border-yellow-400 dark:from-amber-950/80 dark:via-yellow-950/60 dark:to-orange-950/80 dark:border-yellow-500/80"
-              : "bg-white border border-gray-200 dark:bg-[#0c0c0c] dark:border-neutral-800"
+              : "bg-white border border-gray-200 dark:bg-surface dark:border-outline"
           }`}
           initial={{ scale: 0.9, opacity: 0, y: 30 }}
           animate={{ scale: 1, opacity: 1, y: 0 }}
@@ -254,7 +255,7 @@ export function PlayerNameModal({
                       <CheckCircle className="w-3 h-3" /> Verified
                     </span>
                     <span className="inline-flex items-center gap-1 bg-gradient-to-r from-purple-500 to-purple-700 text-white text-[10px] font-black px-2.5 py-1 rounded-full shadow-sm uppercase tracking-wider">
-                      <Sparkles className="w-3 h-3" /> Quizify 3 Pro
+                      <Sparkles className="w-3 h-3" /> Quizify 5 Pro Ultra
                     </span>
 
                   </div>
@@ -278,10 +279,12 @@ export function PlayerNameModal({
             </div>
 
             {/* Name Input */}
+            <IshaEasterEgg name={name} />
             <div className="mb-5">
               <div className="relative">
                 <input
                   type="text"
+                  aria-label="Your display name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   onKeyDown={(e) => {
@@ -296,7 +299,7 @@ export function PlayerNameModal({
                       ? "bg-yellow-100/60 dark:bg-amber-950/60 border-2 border-yellow-400 dark:border-yellow-500/80 text-amber-900 dark:text-amber-200 placeholder-amber-400 dark:placeholder-amber-600 focus:ring-2 focus:ring-yellow-400/50 shadow-inner"
                       : error
                       ? "bg-red-50 dark:bg-red-950/40 border-2 border-red-300 dark:border-red-800 text-red-900 dark:text-red-200 placeholder-red-300 dark:placeholder-red-600 focus:ring-2 focus:ring-red-400/50"
-                      : "bg-gray-50 dark:bg-[#050505] border-2 border-gray-200 dark:border-neutral-800 text-gray-800 dark:text-white placeholder-gray-400 dark:placeholder-neutral-500 focus:border-blue-400 dark:focus:border-blue-500 focus:ring-2 focus:ring-blue-400/20"
+                      : "bg-gray-50 dark:bg-surface border-2 border-gray-200 dark:border-outline text-gray-800 dark:text-white placeholder-gray-400 dark:placeholder-neutral-500 focus:border-blue-400 dark:focus:border-blue-500 focus:ring-2 focus:ring-blue-400/20"
                   }`}
                   autoFocus
                 />

@@ -1,0 +1,143 @@
+.pane {
+  isolation: isolate;
+  background-image: linear-gradient(var(--backdrop-tint), var(--backdrop-tint)), var(--artwork);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.itsover {
+  --artwork: url('/itsover-quiz.jpeg');
+  --backdrop-tint: rgb(255 255 255 / 20%);
+  --card-background: rgb(255 250 250 / 95%);
+  --card-accent: #9f1239;
+}
+
+.larp {
+  --artwork: url('/larp-quiz.png');
+  --backdrop-tint: rgb(0 0 0 / 28%);
+  --card-background: rgb(24 19 11 / 94%);
+  --card-accent: #fbbf24;
+}
+
+/* The effect layer is beneath every question/control and outside flex flow. */
+.pane > :not(.atmosphere) {
+  position: relative;
+  z-index: 1;
+}
+
+.pane :global(.quiz-content) {
+  background-color: transparent;
+}
+
+.pane :global(.quiz-question-card) {
+  padding: clamp(1rem, 2vw, 1.5rem);
+  border: 1px solid var(--theme-outline);
+  border-left: 3px solid var(--card-accent);
+  border-radius: 1rem;
+  background-color: var(--card-background);
+  box-shadow: 0 8px 28px rgb(0 0 0 / 16%);
+}
+
+.atmosphere {
+  z-index: 0;
+  user-select: none;
+}
+
+.atmosphere::before, .atmosphere::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.signature {
+  position: absolute;
+  right: clamp(1rem, 4vw, 4rem);
+  bottom: clamp(7rem, 15dvh, 10rem);
+  max-width: calc(100% - 2rem);
+  text-align: right;
+  transform: rotate(-3deg);
+}
+
+.eyebrow, .title, .caption {
+  display: block;
+}
+
+.eyebrow::before, .title::before, .caption::before {
+  content: attr(data-text);
+}
+
+.title {
+  font-size: clamp(2.5rem, 7vw, 7rem);
+  line-height: 1.05;
+  font-weight: 950;
+  letter-spacing: -.065em;
+}
+
+.eyebrow, .caption {
+  font-family: ui-monospace, monospace;
+  font-size: clamp(.55rem, .8vw, .75rem);
+  letter-spacing: .12em;
+  line-height: 1.8;
+}
+
+.itsover .signature {
+  color: #471c27;
+  opacity: .65;
+  text-shadow: 2px 0 rgb(190 18 60 / 24%), -2px 0 rgb(71 85 105 / 20%);
+}
+
+.itsover .atmosphere::before {
+  opacity: .2;
+  background-image: repeating-linear-gradient(112deg, transparent 0 30px, #47556955 31px, transparent 32px 65px);
+  background-size: 180px 280px;
+  animation: doomer-rain 14s linear infinite;
+}
+
+.itsover .atmosphere::after {
+  background: repeating-linear-gradient(0deg, transparent 0 3px, #0f172a08 3px 4px);
+  box-shadow: inset 0 0 120px rgb(30 41 59 / 32%);
+}
+
+.larp .signature {
+  color: #fef3c7;
+  opacity: .72;
+  text-shadow: 0 0 24px #f59e0b88, 3px 3px #7c2d12;
+}
+
+.larp .atmosphere::before {
+  background-image: radial-gradient(circle, #fbbf24b3 1px, transparent 2px), radial-gradient(circle, #fb923c99 1px, transparent 3px), radial-gradient(circle, #fef3c766 1px, transparent 2px);
+  background-size: 137px 199px, 223px 277px, 311px 347px;
+  animation: larp-embers 24s linear infinite;
+  opacity: .65;
+}
+
+.larp .atmosphere::after {
+  background: radial-gradient(ellipse at 15% 90%, #f59e0b26, transparent 60%);
+  box-shadow: inset 0 0 90px #0008, inset 0 0 2px 2px #f59e0b66;
+  animation: larp-aura 8s ease-in-out infinite alternate;
+}
+
+.larp :global(.quiz-question-card) {
+  box-shadow: 0 0 24px #f59e0b26, 0 8px 32px #0004;
+}
+
+@keyframes doomer-rain {
+  to { background-position: -180px 280px; }
+}
+
+@keyframes larp-embers {
+  to { background-position: 0 -199px, 0 -277px, 0 -347px; }
+}
+
+@keyframes larp-aura {
+  from { opacity: .45; }
+  to { opacity: .9; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .atmosphere::before, .atmosphere::after {
+    animation: none;
+  }
+}

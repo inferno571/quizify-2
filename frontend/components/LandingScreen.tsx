@@ -27,10 +27,10 @@ export function LandingScreen({ onSelectMode }: LandingScreenProps) {
       >
         <div className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500/10 to-amber-500/10 dark:from-orange-500/20 dark:to-amber-500/20 backdrop-blur-sm border border-orange-200/50 dark:border-orange-500/30 rounded-full px-4 py-1.5 mb-4 shadow-sm">
           <Sparkles className="w-3.5 h-3.5 text-orange-500" />
-          <span className="text-xs font-bold text-orange-600 dark:text-orange-400 tracking-wide uppercase">Quizify 3 • Made by Saksham Sooden</span>
+          <span className="text-xs font-bold text-orange-600 dark:text-orange-400 tracking-wide uppercase">Quizify 5 Pro Ultra • Made by Saksham Sooden</span>
         </div>
         <h1 className="text-4xl md:text-5xl font-black text-[#2c3e50] dark:text-white tracking-tight mb-3">
-          Welcome to <span className="bg-gradient-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent">Quizify 3</span>
+          Welcome to <span className="bg-gradient-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent">Quizify 5 Pro Ultra</span>
         </h1>
 
         <p className="text-gray-500 dark:text-neutral-400 text-base md:text-lg max-w-lg mx-auto leading-relaxed">
@@ -43,7 +43,7 @@ export function LandingScreen({ onSelectMode }: LandingScreenProps) {
         
         {/* Option 1: Generate from Study Material */}
         <motion.button
-          className="group relative bg-white/70 dark:bg-[#0c0c0c]/90 backdrop-blur-xl border border-gray-200/80 dark:border-neutral-800 rounded-2xl p-8 text-left cursor-pointer overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-orange-500/10 hover:border-orange-300/60 dark:hover:border-orange-500/50 hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-orange-400/50"
+          className="group relative bg-surface/70 backdrop-blur-xl border border-gray-200/80 dark:border-outline rounded-2xl p-8 text-left cursor-pointer overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-orange-500/10 hover:border-orange-300/60 dark:hover:border-orange-500/50 hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-orange-400/50"
           onClick={() => onSelectMode('generate')}
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -84,7 +84,7 @@ export function LandingScreen({ onSelectMode }: LandingScreenProps) {
 
         {/* Option 2: Upload Questions File */}
         <motion.button
-          className="group relative bg-white/70 dark:bg-[#0c0c0c]/90 backdrop-blur-xl border border-gray-200/80 dark:border-neutral-800 rounded-2xl p-8 text-left cursor-pointer overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/10 hover:border-blue-300/60 dark:hover:border-blue-500/50 hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-blue-400/50"
+          className="group relative bg-surface/70 backdrop-blur-xl border border-gray-200/80 dark:border-outline rounded-2xl p-8 text-left cursor-pointer overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/10 hover:border-blue-300/60 dark:hover:border-blue-500/50 hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-blue-400/50"
           onClick={() => onSelectMode('upload')}
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -131,8 +131,8 @@ export function LandingScreen({ onSelectMode }: LandingScreenProps) {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 0.5 }}
       >
-        <div className="inline-flex items-center gap-2 text-xs text-gray-500 dark:text-neutral-400 bg-white/80 dark:bg-[#0c0c0c]/80 border border-gray-200/70 dark:border-neutral-800 rounded-full px-4 py-1.5 shadow-sm">
-          <span className="font-bold text-[#2c3e50] dark:text-neutral-200">Quizify 3</span>
+        <div className="inline-flex items-center gap-2 text-xs text-gray-500 dark:text-neutral-400 bg-surface/80 border border-gray-200/70 dark:border-outline rounded-full px-4 py-1.5 shadow-sm">
+          <span className="font-bold text-[#2c3e50] dark:text-neutral-200">Quizify 5 Pro Ultra</span>
           <span>•</span>
           <span className="text-orange-600 dark:text-orange-400 font-semibold">Made by Saksham Sooden</span>
         </div>

@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test:themes": "node --test tests/themes.test.mjs tests/quiz-theme-surface.test.mjs"
   },
   "dependencies": {
     "@types/katex": "^0.16.8",

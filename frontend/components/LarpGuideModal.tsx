@@ -217,7 +217,7 @@ Continuous learning never stops! Looking forward to applying these principles to
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-5 bg-black/75 backdrop-blur-sm animate-in fade-in duration-200">
       <div 
-        className="bg-white dark:bg-[#0c0c0c] rounded-2xl shadow-2xl max-w-3xl w-full max-h-[92vh] flex flex-col overflow-hidden border border-amber-200/80 dark:border-amber-500/30 animate-in zoom-in-95 duration-200"
+        className="bg-surface rounded-2xl shadow-2xl max-w-3xl w-full max-h-[92vh] flex flex-col overflow-hidden border border-amber-200/80 dark:border-amber-500/30 animate-in zoom-in-95 duration-200"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Top Header Bar */}
@@ -251,7 +251,7 @@ Continuous learning never stops! Looking forward to applying these principles to
         </div>
 
         {/* Scrollable Content Body */}
-        <div className="flex-1 overflow-y-auto p-4 sm:p-6 space-y-6 bg-slate-50 dark:bg-black text-gray-800 dark:text-neutral-100">
+        <div className="flex-1 overflow-y-auto p-4 sm:p-6 space-y-6 bg-slate-50 dark:bg-canvas text-gray-800 dark:text-neutral-100">
           
           {/* Hero Banner with Meme Image */}
           <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-slate-950 via-slate-900 to-amber-950 p-4 sm:p-5 text-white shadow-lg border border-amber-500/20">
@@ -303,13 +303,13 @@ Continuous learning never stops! Looking forward to applying these principles to
           </div>
 
           {/* Navigation Tabs */}
-          <div className="flex border-b border-gray-200 dark:border-neutral-800 gap-1 overflow-x-auto pb-px">
+          <div className="flex border-b border-gray-200 dark:border-outline gap-1 overflow-x-auto pb-px">
             <button
               onClick={() => setActiveTab('longest')}
               className={`flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold rounded-t-lg transition whitespace-nowrap cursor-pointer ${
                 activeTab === 'longest'
-                  ? 'bg-white dark:bg-[#0c0c0c] text-orange-600 dark:text-orange-400 border-t-2 border-orange-500 border-x border-gray-200 dark:border-x-neutral-800 shadow-xs'
-                  : 'text-gray-600 dark:text-neutral-400 hover:text-gray-900 dark:hover:text-neutral-100 hover:bg-gray-100 dark:hover:bg-[#161616]'
+                  ? 'bg-surface text-orange-600 dark:text-orange-400 border-t-2 border-orange-500 border-x border-gray-200 dark:border-x-neutral-800 shadow-xs'
+                  : 'text-gray-600 dark:text-neutral-400 hover:text-gray-900 dark:hover:text-neutral-100 hover:bg-gray-100 dark:hover:bg-surface-hover'
               }`}
             >
               <Scale className="w-3.5 h-3.5" />
@@ -319,8 +319,8 @@ Continuous learning never stops! Looking forward to applying these principles to
               onClick={() => setActiveTab('reverse')}
               className={`flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold rounded-t-lg transition whitespace-nowrap cursor-pointer ${
                 activeTab === 'reverse'
-                  ? 'bg-white dark:bg-[#0c0c0c] text-orange-600 dark:text-orange-400 border-t-2 border-orange-500 border-x border-gray-200 dark:border-x-neutral-800 shadow-xs'
-                  : 'text-gray-600 dark:text-neutral-400 hover:text-gray-900 dark:hover:text-neutral-100 hover:bg-gray-100 dark:hover:bg-[#161616]'
+                  ? 'bg-surface text-orange-600 dark:text-orange-400 border-t-2 border-orange-500 border-x border-gray-200 dark:border-x-neutral-800 shadow-xs'
+                  : 'text-gray-600 dark:text-neutral-400 hover:text-gray-900 dark:hover:text-neutral-100 hover:bg-gray-100 dark:hover:bg-surface-hover'
               }`}
             >
               <GitFork className="w-3.5 h-3.5" />
@@ -330,8 +330,8 @@ Continuous learning never stops! Looking forward to applying these principles to
               onClick={() => setActiveTab('methods')}
               className={`flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold rounded-t-lg transition whitespace-nowrap cursor-pointer ${
                 activeTab === 'methods'
-                  ? 'bg-white dark:bg-[#0c0c0c] text-orange-600 dark:text-orange-400 border-t-2 border-orange-500 border-x border-gray-200 dark:border-x-neutral-800 shadow-xs'
-                  : 'text-gray-600 dark:text-neutral-400 hover:text-gray-900 dark:hover:text-neutral-100 hover:bg-gray-100 dark:hover:bg-[#161616]'
+                  ? 'bg-surface text-orange-600 dark:text-orange-400 border-t-2 border-orange-500 border-x border-gray-200 dark:border-x-neutral-800 shadow-xs'
+                  : 'text-gray-600 dark:text-neutral-400 hover:text-gray-900 dark:hover:text-neutral-100 hover:bg-gray-100 dark:hover:bg-surface-hover'
               }`}
             >
               <Zap className="w-3.5 h-3.5" />
@@ -341,8 +341,8 @@ Continuous learning never stops! Looking forward to applying these principles to
               onClick={() => setActiveTab('center')}
               className={`flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold rounded-t-lg transition whitespace-nowrap cursor-pointer ${
                 activeTab === 'center'
-                  ? 'bg-white dark:bg-[#0c0c0c] text-orange-600 dark:text-orange-400 border-t-2 border-orange-500 border-x border-gray-200 dark:border-x-neutral-800 shadow-xs'
-                  : 'text-gray-600 dark:text-neutral-400 hover:text-gray-900 dark:hover:text-neutral-100 hover:bg-gray-100 dark:hover:bg-[#161616]'
+                  ? 'bg-surface text-orange-600 dark:text-orange-400 border-t-2 border-orange-500 border-x border-gray-200 dark:border-x-neutral-800 shadow-xs'
+                  : 'text-gray-600 dark:text-neutral-400 hover:text-gray-900 dark:hover:text-neutral-100 hover:bg-gray-100 dark:hover:bg-surface-hover'
               }`}
             >
               <ShieldCheck className="w-3.5 h-3.5" />
@@ -352,8 +352,8 @@ Continuous learning never stops! Looking forward to applying these principles to
               onClick={() => setActiveTab('linkedin')}
               className={`flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold rounded-t-lg transition whitespace-nowrap cursor-pointer ${
                 activeTab === 'linkedin'
-                  ? 'bg-white dark:bg-[#0c0c0c] text-orange-600 dark:text-orange-400 border-t-2 border-orange-500 border-x border-gray-200 dark:border-x-neutral-800 shadow-xs'
-                  : 'text-gray-600 dark:text-neutral-400 hover:text-gray-900 dark:hover:text-neutral-100 hover:bg-gray-100 dark:hover:bg-[#161616]'
+                  ? 'bg-surface text-orange-600 dark:text-orange-400 border-t-2 border-orange-500 border-x border-gray-200 dark:border-x-neutral-800 shadow-xs'
+                  : 'text-gray-600 dark:text-neutral-400 hover:text-gray-900 dark:hover:text-neutral-100 hover:bg-gray-100 dark:hover:bg-surface-hover'
               }`}
             >
               <Award className="w-3.5 h-3.5" />
@@ -377,7 +377,7 @@ Continuous learning never stops! Looking forward to applying these principles to
               </div>
 
               {/* Sub-rule 1A: Word Count Primary Rule */}
-              <div className="bg-white dark:bg-[#0c0c0c] p-4 sm:p-5 rounded-xl border border-gray-200 dark:border-neutral-800 shadow-xs space-y-3">
+              <div className="bg-surface p-4 sm:p-5 rounded-xl border border-gray-200 dark:border-outline shadow-xs space-y-3">
                 <div className="flex items-start justify-between gap-3">
                   <div className="flex items-center gap-2">
                     <span className="w-7 h-7 rounded-lg bg-emerald-100 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-300 font-black text-xs flex items-center justify-center shrink-0">
@@ -398,7 +398,7 @@ Continuous learning never stops! Looking forward to applying these principles to
                   First, <strong>count the total number of words</strong> in each of the four options:
                 </p>
                 
-                <div className="bg-slate-50 dark:bg-[#050505] p-3 rounded-lg border border-slate-200 dark:border-neutral-800 text-xs space-y-1.5 font-mono">
+                <div className="bg-slate-50 dark:bg-surface p-3 rounded-lg border border-slate-200 dark:border-outline text-xs space-y-1.5 font-mono">
                   <div className="text-gray-500 dark:text-neutral-400 text-[11px] font-sans font-semibold mb-1">Example Option Analysis:</div>
                   <div className="text-gray-700 dark:text-neutral-300">A) It maximizes batch throughput. <span className="text-gray-400 dark:text-neutral-500 font-bold">[4 words]</span></div>
                   <div className="text-gray-700 dark:text-neutral-300">B) It reduces gradient variance. <span className="text-gray-400 dark:text-neutral-500 font-bold">[4 words]</span></div>
@@ -415,7 +415,7 @@ Continuous learning never stops! Looking forward to applying these principles to
               </div>
 
               {/* Sub-rule 1B: Character Count Tiebreaker */}
-              <div className="bg-white dark:bg-[#0c0c0c] p-4 sm:p-5 rounded-xl border border-gray-200 dark:border-neutral-800 shadow-xs space-y-3">
+              <div className="bg-surface p-4 sm:p-5 rounded-xl border border-gray-200 dark:border-outline shadow-xs space-y-3">
                 <div className="flex items-start justify-between gap-3">
                   <div className="flex items-center gap-2">
                     <span className="w-7 h-7 rounded-lg bg-amber-100 dark:bg-amber-950/80 text-amber-800 dark:text-amber-300 font-black text-xs flex items-center justify-center shrink-0">
@@ -497,7 +497,7 @@ Continuous learning never stops! Looking forward to applying these principles to
               </div>
 
               {/* Core Mechanism & User's Exact Audio Example */}
-              <div className="bg-white dark:bg-[#0c0c0c] p-4 sm:p-5 rounded-xl border border-gray-200 dark:border-neutral-800 shadow-xs space-y-3">
+              <div className="bg-surface p-4 sm:p-5 rounded-xl border border-gray-200 dark:border-outline shadow-xs space-y-3">
                 <div className="flex items-center gap-2">
                   <span className="w-7 h-7 rounded-lg bg-indigo-100 dark:bg-indigo-950/80 text-indigo-800 dark:text-indigo-300 font-black text-xs flex items-center justify-center shrink-0">
                     2A
@@ -517,7 +517,7 @@ Continuous learning never stops! Looking forward to applying these principles to
                 </p>
 
                 {/* Visual Audio Walkthrough */}
-                <div className="bg-slate-50 dark:bg-[#050505] p-3.5 rounded-xl border border-slate-200 dark:border-neutral-800 text-xs space-y-2.5 font-mono">
+                <div className="bg-slate-50 dark:bg-surface p-3.5 rounded-xl border border-slate-200 dark:border-outline text-xs space-y-2.5 font-mono">
                   <div className="text-gray-500 dark:text-neutral-400 text-[11px] font-sans font-bold flex items-center justify-between">
                     <span>Empirical Inspection (Audio Case Study):</span>
                     <span className="text-purple-600 dark:text-purple-400 font-mono text-[10px]">Prefix Mode: 13,000 (2x) | Suffix Mode: 105 (2x)</span>
@@ -534,7 +534,7 @@ Continuous learning never stops! Looking forward to applying these principles to
                       </span>
                     </div>
 
-                    <div className="text-gray-700 dark:text-neutral-300 p-2 rounded-lg bg-gray-50 dark:bg-[#0a0a0a] border border-gray-200 dark:border-neutral-900 flex items-center justify-between">
+                    <div className="text-gray-700 dark:text-neutral-300 p-2 rounded-lg bg-gray-50 dark:bg-surface border border-gray-200 dark:border-neutral-900 flex items-center justify-between">
                       <div>
                         B) <span className="underline decoration-indigo-400 decoration-2 font-semibold">13</span>,405 
                         <span className="ml-2 text-[10px] font-sans text-gray-500 dark:text-neutral-500">(Shares 13k prefix, but 405 suffix is a distractor)</span>
@@ -542,7 +542,7 @@ Continuous learning never stops! Looking forward to applying these principles to
                       <span className="text-[10px] text-gray-400 dark:text-neutral-600 font-sans">Distractor 1</span>
                     </div>
 
-                    <div className="text-gray-700 dark:text-neutral-300 p-2 rounded-lg bg-gray-50 dark:bg-[#0a0a0a] border border-gray-200 dark:border-neutral-900 flex items-center justify-between">
+                    <div className="text-gray-700 dark:text-neutral-300 p-2 rounded-lg bg-gray-50 dark:bg-surface border border-gray-200 dark:border-neutral-900 flex items-center justify-between">
                       <div>
                         C) 14,405 
                         <span className="ml-2 text-[10px] font-sans text-gray-500 dark:text-neutral-500">(14k prefix is an outlier distractor)</span>
@@ -550,7 +550,7 @@ Continuous learning never stops! Looking forward to applying these principles to
                       <span className="text-[10px] text-gray-400 dark:text-neutral-600 font-sans">Distractor 2</span>
                     </div>
 
-                    <div className="text-gray-700 dark:text-neutral-300 p-2 rounded-lg bg-gray-50 dark:bg-[#0a0a0a] border border-gray-200 dark:border-neutral-900 flex items-center justify-between">
+                    <div className="text-gray-700 dark:text-neutral-300 p-2 rounded-lg bg-gray-50 dark:bg-surface border border-gray-200 dark:border-neutral-900 flex items-center justify-between">
                       <div>
                         D) 17,<span className="underline decoration-purple-400 decoration-2 font-semibold">105</span> 
                         <span className="ml-2 text-[10px] font-sans text-gray-500 dark:text-neutral-500">(Shares 105 suffix, but 17k is an outlier distractor)</span>
@@ -567,7 +567,7 @@ Continuous learning never stops! Looking forward to applying these principles to
               </div>
 
               {/* Sub-Rule 2B: Two-Part Coordinate / Tuple Convergence */}
-              <div className="bg-white dark:bg-[#0c0c0c] p-4 sm:p-5 rounded-xl border border-gray-200 dark:border-neutral-800 shadow-xs space-y-3">
+              <div className="bg-surface p-4 sm:p-5 rounded-xl border border-gray-200 dark:border-outline shadow-xs space-y-3">
                 <div className="flex items-center gap-2">
                   <span className="w-7 h-7 rounded-lg bg-purple-100 dark:bg-purple-950/80 text-purple-800 dark:text-purple-300 font-black text-xs flex items-center justify-center shrink-0">
                     2B
@@ -589,7 +589,7 @@ Continuous learning never stops! Looking forward to applying these principles to
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
                   {/* Case 1 */}
-                  <div className="bg-slate-50 dark:bg-[#080808] p-3 rounded-lg border border-slate-200 dark:border-neutral-800 space-y-1.5">
+                  <div className="bg-slate-50 dark:bg-surface p-3 rounded-lg border border-slate-200 dark:border-outline space-y-1.5">
                     <div className="font-bold text-gray-900 dark:text-neutral-200 flex items-center justify-between text-[11px]">
                       <span>DLNLP Week 10, Q6</span>
                       <span className="text-emerald-700 dark:text-emerald-400 font-bold">100% Reverse Match</span>
@@ -608,7 +608,7 @@ Continuous learning never stops! Looking forward to applying these principles to
                   </div>
 
                   {/* Case 2 */}
-                  <div className="bg-slate-50 dark:bg-[#080808] p-3 rounded-lg border border-slate-200 dark:border-neutral-800 space-y-1.5">
+                  <div className="bg-slate-50 dark:bg-surface p-3 rounded-lg border border-slate-200 dark:border-outline space-y-1.5">
                     <div className="font-bold text-gray-900 dark:text-neutral-200 flex items-center justify-between text-[11px]">
                       <span>DLNLP Week 3, Q3 (Skip-Gram Pairs)</span>
                       <span className="text-emerald-700 dark:text-emerald-400 font-bold">Rescued by Axiom 2</span>
@@ -678,7 +678,7 @@ Continuous learning never stops! Looking forward to applying these principles to
             <div className="space-y-4 animate-in fade-in duration-150">
               
               {/* Method 2: Matching Words Heuristic */}
-              <div className="bg-white dark:bg-[#0c0c0c] p-4 sm:p-5 rounded-xl border border-gray-200 dark:border-neutral-800 shadow-xs space-y-3">
+              <div className="bg-surface p-4 sm:p-5 rounded-xl border border-gray-200 dark:border-outline shadow-xs space-y-3">
                 <div className="flex items-center gap-2">
                   <span className="w-7 h-7 rounded-lg bg-blue-100 dark:bg-blue-950/80 text-blue-800 dark:text-blue-300 font-black text-xs flex items-center justify-center shrink-0">
                     #2
@@ -708,7 +708,7 @@ Continuous learning never stops! Looking forward to applying these principles to
                   </p>
                 </div>
 
-                <div className="text-xs text-gray-600 dark:text-neutral-400 bg-slate-50 dark:bg-[#050505] p-2.5 rounded border border-gray-200 dark:border-neutral-800 leading-relaxed">
+                <div className="text-xs text-gray-600 dark:text-neutral-400 bg-slate-50 dark:bg-surface p-2.5 rounded border border-gray-200 dark:border-outline leading-relaxed">
                   <strong>Why this works:</strong> IIT professors copy questions straight from their slide definitions. 
                   The slide header contains keywords X and Y, and the correct bullet point contains X and Y again. 
                   Distractors are generated off the top of their head and lack that direct lexical fingerprint.
@@ -716,7 +716,7 @@ Continuous learning never stops! Looking forward to applying these principles to
               </div>
 
               {/* Method 3: Brute-Force Mathematical Ballpark Convergence */}
-              <div className="bg-white dark:bg-[#0c0c0c] p-4 sm:p-5 rounded-xl border border-gray-200 dark:border-neutral-800 shadow-xs space-y-3">
+              <div className="bg-surface p-4 sm:p-5 rounded-xl border border-gray-200 dark:border-outline shadow-xs space-y-3">
                 <div className="flex items-center gap-2">
                   <span className="w-7 h-7 rounded-lg bg-purple-100 dark:bg-purple-950/80 text-purple-800 dark:text-purple-300 font-black text-xs flex items-center justify-center shrink-0">
                     #3
@@ -757,7 +757,7 @@ Continuous learning never stops! Looking forward to applying these principles to
                   </ol>
                 </div>
 
-                <div className="text-xs text-gray-600 dark:text-neutral-400 bg-slate-50 dark:bg-[#050505] p-2.5 rounded border border-gray-200 dark:border-neutral-800 leading-relaxed">
+                <div className="text-xs text-gray-600 dark:text-neutral-400 bg-slate-50 dark:bg-surface p-2.5 rounded border border-gray-200 dark:border-outline leading-relaxed">
                   <strong>Why this works:</strong> NPTEL questions rarely involve mystery transcendental constants. 
                   Formulas are almost always products, ratios, or linear combinations of the given parameters. 
                   Simple multiplication or division hits the exact answer or its decimal multiple &gt;70% of the time.
@@ -765,7 +765,7 @@ Continuous learning never stops! Looking forward to applying these principles to
               </div>
 
               {/* Bonus LARP Method: Decimal Outlier Elimination */}
-              <div className="bg-white dark:bg-[#0c0c0c] p-4 sm:p-5 rounded-xl border border-gray-200 dark:border-neutral-800 shadow-xs space-y-2">
+              <div className="bg-surface p-4 sm:p-5 rounded-xl border border-gray-200 dark:border-outline shadow-xs space-y-2">
                 <div className="flex items-center gap-2">
                   <span className="w-7 h-7 rounded-lg bg-orange-100 dark:bg-orange-950/80 text-orange-800 dark:text-orange-300 font-black text-xs flex items-center justify-center shrink-0">
                     #4
@@ -796,7 +796,7 @@ Continuous learning never stops! Looking forward to applying these principles to
           {/* TAB 3: TCS iON CENTER PROTOCOL */}
           {activeTab === 'center' && (
             <div className="space-y-3.5 text-xs text-gray-700 dark:text-neutral-300 animate-in fade-in duration-150">
-              <div className="bg-white dark:bg-[#0c0c0c] p-4 rounded-xl border border-gray-200 dark:border-neutral-800 shadow-xs space-y-2">
+              <div className="bg-surface p-4 rounded-xl border border-gray-200 dark:border-outline shadow-xs space-y-2">
                 <h4 className="font-bold text-gray-900 dark:text-white text-sm flex items-center gap-1.5">
                   <ShieldCheck className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
                   1. The Color Hall Ticket Preparation
@@ -806,7 +806,7 @@ Continuous learning never stops! Looking forward to applying these principles to
                 </p>
               </div>
 
-              <div className="bg-white dark:bg-[#0c0c0c] p-4 rounded-xl border border-gray-200 dark:border-neutral-800 shadow-xs space-y-2">
+              <div className="bg-surface p-4 rounded-xl border border-gray-200 dark:border-outline shadow-xs space-y-2">
                 <h4 className="font-bold text-gray-900 dark:text-white text-sm flex items-center gap-1.5">
                   <Target className="w-4 h-4 text-purple-600 dark:text-purple-400" />
                   2. The Mandatory Waiting Hour Performance
@@ -846,9 +846,9 @@ Continuous learning never stops! Looking forward to applying these principles to
         </div>
 
         {/* Modal Footer */}
-        <div className="px-5 py-3 bg-white dark:bg-[#0c0c0c] border-t border-gray-200 dark:border-neutral-800 flex items-center justify-between shrink-0">
+        <div className="px-5 py-3 bg-surface border-t border-gray-200 dark:border-outline flex items-center justify-between shrink-0">
           <div className="text-[11px] text-gray-500 dark:text-neutral-400 font-medium">
-            Quizify 3 • <span className="text-orange-600 dark:text-orange-400 font-bold">Made by Saksham Sooden</span>
+            Quizify 5 Pro Ultra • <span className="text-orange-600 dark:text-orange-400 font-bold">Made by Saksham Sooden</span>
           </div>
 
           <button

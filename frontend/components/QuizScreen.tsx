@@ -26,8 +26,10 @@ import {
 import { PlayerNameModal } from './PlayerNameModal';
 import { getSavedProgress, saveQuizProgress, clearQuizProgress } from '../lib/storage';
 import { MathText } from './MathText';
-import { LarpGuideButton, LarpSuccessfulButton } from './LarpGuideModal';
+import { LarpGuideButton } from './LarpGuideModal';
+import { QuizReactionButton } from './QuizReactionButton';
 import { ThemeToggle } from './ThemeToggle';
+import { QuizThemeSurface } from './QuizThemeSurface';
 
 
 const SAKSHAM_NAME = 'Saksham Sooden';
@@ -63,6 +65,7 @@ export function QuizScreen({ quiz, onComplete, onExit }: QuizScreenProps) {
   const initialSaved = typeof window !== 'undefined' ? getSavedProgress(quiz.id) : null;
 
   // Question order randomization state (e.g. 1-10 question order)
+  const [showQuestionPalette, setShowQuestionPalette] = useState(false);
   const [shuffleQuestions, setShuffleQuestions] = useState<boolean>(() => {
     if (initialSaved?.shuffleQuestions !== undefined) {
       return initialSaved.shuffleQuestions;
@@ -584,17 +587,17 @@ export function QuizScreen({ quiz, onComplete, onExit }: QuizScreenProps) {
   const answeredCount = Object.keys(answers).length;
 
   return (
-    <div className="flex flex-col h-screen bg-gray-100 dark:bg-black font-sans select-none overflow-hidden text-sm text-gray-900 dark:text-white transition-colors duration-200">
+    <div className="quiz-screen app-background flex flex-col h-dvh bg-canvas font-sans select-none overflow-hidden text-sm text-gray-900 dark:text-white transition-colors duration-200">
       {/* Top Header */}
-      <header className="bg-[#1e293b] dark:bg-[#000000] border-b border-gray-700/50 dark:border-neutral-800 text-white py-2 px-4 shadow-md flex justify-between items-center z-10 shrink-0 transition-colors">
+      <header className="bg-[#1e293b] dark:bg-canvas border-b border-gray-700/50 dark:border-outline text-white py-2 px-4 shadow-md flex flex-wrap gap-2 justify-between items-center z-10 shrink-0 transition-colors">
         <div className="flex items-center gap-3">
           <div className="w-8 h-8 bg-orange-500 rounded-lg flex items-center justify-center font-black text-xs text-white shadow-sm">
-            Q3
+            Q5
           </div>
           <div>
             <h1 className="text-base md:text-lg font-bold tracking-wide leading-tight">{quiz.title}</h1>
             <div className="text-[11px] text-gray-300 dark:text-neutral-400 flex items-center gap-1.5">
-              <span className="font-semibold text-white">Quizify 3</span>
+              <span className="font-semibold text-white">Quizify 5 Pro Ultra</span>
               <span>•</span>
               <span className="text-orange-400 font-medium">Made by Saksham Sooden</span>
             </div>
@@ -602,7 +605,7 @@ export function QuizScreen({ quiz, onComplete, onExit }: QuizScreenProps) {
 
         </div>
 
-        <div className="flex items-center gap-2 sm:gap-3">
+        <div className="flex flex-wrap items-center gap-2 sm:gap-3">
           {/* Shuffle Questions Order Slider / Button */}
           <div 
             className={`flex items-center gap-2 px-2.5 py-1 rounded-full border transition-all ${
@@ -762,6 +765,11 @@ export function QuizScreen({ quiz, onComplete, onExit }: QuizScreenProps) {
 
           {/* Theme Toggle */}
           <ThemeToggle compact />
+          <button type="button" className="lg:hidden px-3 py-1.5 rounded-lg bg-white/10 text-white border border-white/20 text-xs"
+            aria-expanded={showQuestionPalette} aria-controls="question-palette"
+            onClick={() => setShowQuestionPalette(value => !value)}>
+            {showQuestionPalette ? 'Hide questions' : 'Questions'}
+          </button>
 
           {/* NPTEL LARP Guide */}
           <div className="hidden md:block">
@@ -770,7 +778,7 @@ export function QuizScreen({ quiz, onComplete, onExit }: QuizScreenProps) {
 
           {/* LARP Successful Button */}
           <div className="hidden lg:block">
-            <LarpSuccessfulButton />
+            <QuizReactionButton />
           </div>
 
           {/* Save & Exit Button in Header */}
@@ -804,7 +812,7 @@ export function QuizScreen({ quiz, onComplete, onExit }: QuizScreenProps) {
           </button>
 
           <span className="hidden xl:inline-block bg-white/10 text-gray-200 border border-white/20 px-2.5 py-1 rounded text-xs font-semibold">
-            Quizify 3
+            Quizify 5 Pro Ultra
           </span>
 
           <span className="hidden md:inline-block bg-orange-500 text-white px-2.5 py-1 rounded text-xs font-bold shadow-xs">
@@ -841,12 +849,12 @@ export function QuizScreen({ quiz, onComplete, onExit }: QuizScreenProps) {
       )}
 
       {/* Main Content Area */}
-      <div className="flex flex-1 overflow-hidden">
+      <div className="relative flex flex-1 min-h-0 overflow-hidden">
         {/* Left Pane (Question Area) */}
-        <div className="flex-1 flex flex-col bg-white dark:bg-[#000000] border-r border-gray-300 dark:border-neutral-800 relative min-w-0 transition-colors">
+        <QuizThemeSurface className="quiz-question-pane flex-1 flex flex-col bg-white dark:bg-canvas border-r border-gray-300 dark:border-outline relative min-w-0 transition-colors">
           
           {/* Section Header */}
-          <div className="bg-[#34495e] dark:bg-[#0a0a0a] text-white px-4 py-2 border-b border-gray-300 dark:border-neutral-800 flex justify-between items-center shrink-0">
+          <div className="bg-[#34495e] dark:bg-surface text-white px-4 py-2 border-b border-gray-300 dark:border-outline flex justify-between items-center shrink-0">
             <span className="font-semibold uppercase text-xs tracking-wider">Default Section</span>
             <div className="flex items-center gap-3 text-xs text-gray-300">
               <span className="flex items-center gap-1 text-emerald-400 font-semibold">
@@ -860,7 +868,7 @@ export function QuizScreen({ quiz, onComplete, onExit }: QuizScreenProps) {
 
           {/* 2-Player Matchup Banner */}
           {isTwoPlayer && (
-            <div className="bg-gradient-to-r from-blue-900/10 via-purple-900/10 to-indigo-900/10 dark:from-neutral-900 dark:to-neutral-900 border-b border-purple-200/80 dark:border-neutral-800 px-6 py-2.5 flex items-center justify-between text-xs shrink-0 flex-wrap gap-2">
+            <div className="bg-gradient-to-r from-blue-900/10 via-purple-900/10 to-indigo-900/10 dark:from-surface-muted dark:to-surface-muted border-b border-purple-200/80 dark:border-outline px-6 py-2.5 flex items-center justify-between text-xs shrink-0 flex-wrap gap-2">
               <div className="flex items-center gap-3">
                 <div className="flex items-center gap-1.5 font-bold text-blue-900 dark:text-blue-300 bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-800 px-3 py-1 rounded-full shadow-2xs">
                   <span className="w-2 h-2 rounded-full bg-blue-600 animate-ping" />
@@ -879,7 +887,7 @@ export function QuizScreen({ quiz, onComplete, onExit }: QuizScreenProps) {
                       onBlur={() => setIsEditingP2Name(false)}
                       onKeyDown={(e) => e.key === 'Enter' && setIsEditingP2Name(false)}
                       autoFocus
-                      className="w-24 px-1 py-0.5 text-xs border border-purple-400 rounded bg-white dark:bg-neutral-900 text-purple-900 dark:text-purple-200 focus:outline-none"
+                      className="w-24 px-1 py-0.5 text-xs border border-purple-400 rounded bg-surface-muted text-purple-900 dark:text-purple-200 focus:outline-none"
                     />
                   ) : (
                     <span 
@@ -912,7 +920,7 @@ export function QuizScreen({ quiz, onComplete, onExit }: QuizScreenProps) {
             </div>
           )}
 
-          <div className="flex items-center justify-between bg-gray-50 dark:bg-[#050505] border-b border-gray-200 dark:border-neutral-800 px-6 py-3 shrink-0">
+          <div className="flex items-center justify-between bg-gray-50 dark:bg-surface border-b border-gray-200 dark:border-outline px-6 py-3 shrink-0">
              <div className="flex items-center gap-3 flex-wrap">
                <span className="text-lg font-bold text-gray-800 dark:text-white">Question No. {currentPos + 1}</span>
                {isCurrentMSQ && (
@@ -932,7 +940,7 @@ export function QuizScreen({ quiz, onComplete, onExit }: QuizScreenProps) {
                )}
              </div>
              <div className="flex items-center gap-3">
-               <LarpSuccessfulButton />
+               <QuizReactionButton />
                <div className="text-gray-600 dark:text-neutral-400 flex items-center gap-2">
                  <span className="font-semibold text-xs sm:text-sm">Marks: +1, -0</span>
                </div>
@@ -940,8 +948,8 @@ export function QuizScreen({ quiz, onComplete, onExit }: QuizScreenProps) {
           </div>
           
           {/* Question Content */}
-          <div className="flex-1 overflow-y-auto px-6 py-6 pb-20 bg-white dark:bg-[#000000]">
-            <div className="text-base text-gray-900 dark:text-white font-medium mb-6 leading-relaxed">
+          <div className="quiz-content flex-1 overflow-y-auto px-4 sm:px-6 py-6 pb-20 bg-white dark:bg-canvas">
+            <div className="quiz-question-card text-base text-gray-900 dark:text-white font-medium mb-6 leading-relaxed">
               <MathText text={displayedQuestionText} block />
             </div>
 
@@ -1043,7 +1051,7 @@ export function QuizScreen({ quiz, onComplete, onExit }: QuizScreenProps) {
                   : isOptionSelected(option);
 
                 // Dynamic card styling
-                let borderClass = 'bg-white dark:bg-[#0c0c0c] border-gray-200 dark:border-neutral-800 hover:bg-gray-50 dark:hover:bg-[#161616] hover:border-gray-300 dark:hover:border-neutral-700 text-gray-900 dark:text-white shadow-xs';
+                let borderClass = 'bg-surface border-gray-200 dark:border-outline hover:bg-gray-50 dark:hover:bg-surface-hover hover:border-gray-300 dark:hover:border-neutral-700 text-gray-900 dark:text-white shadow-xs';
                 if (!isTwoPlayer) {
                   if (isSelected) {
                     borderClass = 'bg-blue-50/90 dark:bg-[#0c192e] border-blue-500 dark:border-blue-500/80 font-semibold text-blue-950 dark:text-blue-100 ring-2 ring-blue-500/60 shadow-sm';
@@ -1080,7 +1088,7 @@ export function QuizScreen({ quiz, onComplete, onExit }: QuizScreenProps) {
                         <input 
                           type="checkbox" 
                           name={`question-${origIdx}`} 
-                          className="mt-1 w-4 h-4 text-blue-600 dark:border-neutral-700 dark:bg-neutral-900 rounded focus:ring-blue-500 cursor-pointer" 
+                          className="mt-1 w-4 h-4 text-blue-600 dark:border-outline dark:bg-surface-muted rounded focus:ring-blue-500 cursor-pointer"
                           checked={isSelected}
                           onChange={() => handleToggleMulti(option)}
                           onClick={(e) => e.stopPropagation()}
@@ -1089,7 +1097,7 @@ export function QuizScreen({ quiz, onComplete, onExit }: QuizScreenProps) {
                         <input 
                           type="radio" 
                           name={`question-${origIdx}`} 
-                          className="mt-1 w-4 h-4 text-blue-600 dark:border-neutral-700 dark:bg-neutral-900 focus:ring-blue-500 cursor-pointer" 
+                          className="mt-1 w-4 h-4 text-blue-600 dark:border-outline dark:bg-surface-muted focus:ring-blue-500 cursor-pointer"
                           checked={isSelected}
                           onChange={() => handleSelectSingle(option)}
                           onClick={(e) => e.stopPropagation()}
@@ -1108,7 +1116,7 @@ export function QuizScreen({ quiz, onComplete, onExit }: QuizScreenProps) {
                           </span>
                         )}
                         {!p1Selected && !p2Selected && (
-                          <div className="w-4 h-4 rounded border border-gray-300 dark:border-neutral-700 bg-white dark:bg-neutral-900" />
+                          <div className="w-4 h-4 rounded border border-gray-300 dark:border-outline bg-surface-muted" />
                         )}
                       </div>
                     )}
@@ -1187,18 +1195,18 @@ export function QuizScreen({ quiz, onComplete, onExit }: QuizScreenProps) {
           </div>
 
           {/* Bottom Action Footer */}
-          <div className="bg-gray-50 dark:bg-[#080808] border-t border-gray-300 dark:border-neutral-800 p-3 flex justify-between items-center shrink-0">
+          <div className="bg-gray-50 dark:bg-surface border-t border-gray-300 dark:border-outline p-3 flex flex-wrap gap-3 justify-between items-center shrink-0">
             <div className="flex gap-2 flex-wrap">
               <button
                 onClick={handleMarkReviewNext}
-                className="flex items-center gap-1 bg-white dark:bg-[#141414] text-gray-800 dark:text-neutral-200 px-4 py-2 text-sm border border-gray-300 dark:border-neutral-700 rounded shadow-sm hover:bg-gray-100 dark:hover:bg-[#1f1f1f] font-medium whitespace-nowrap transition cursor-pointer"
+                className="flex items-center gap-1 bg-surface-muted text-gray-800 dark:text-neutral-200 px-4 py-2 text-sm border border-gray-300 dark:border-outline rounded shadow-sm hover:bg-gray-100 dark:hover:bg-surface-hover font-medium whitespace-nowrap transition cursor-pointer"
               >
                 <Star className="w-4 h-4 text-purple-600 dark:text-purple-400" />
                 Mark for Review & Next
               </button>
               <button
                 onClick={handleClear}
-                className="flex items-center gap-1 bg-white dark:bg-[#141414] text-gray-800 dark:text-neutral-200 px-4 py-2 text-sm border border-gray-300 dark:border-neutral-700 rounded shadow-sm hover:bg-gray-100 dark:hover:bg-[#1f1f1f] font-medium whitespace-nowrap transition cursor-pointer"
+                className="flex items-center gap-1 bg-surface-muted text-gray-800 dark:text-neutral-200 px-4 py-2 text-sm border border-gray-300 dark:border-outline rounded shadow-sm hover:bg-gray-100 dark:hover:bg-surface-hover font-medium whitespace-nowrap transition cursor-pointer"
               >
                 Clear Response
               </button>
@@ -1210,7 +1218,7 @@ export function QuizScreen({ quiz, onComplete, onExit }: QuizScreenProps) {
                 <Bookmark className="w-4 h-4 text-amber-600 dark:text-amber-400" />
                 Save & Pause
               </button>
-              <LarpSuccessfulButton />
+              <QuizReactionButton />
             </div>
             
             <div className="flex items-center gap-2">
@@ -1222,13 +1230,14 @@ export function QuizScreen({ quiz, onComplete, onExit }: QuizScreenProps) {
               </button>
             </div>
           </div>
-        </div>
+        </QuizThemeSurface>
 
         {/* Right Pane (Palette Navigation) */}
-        <div className="w-72 bg-[#ecf0f1] dark:bg-[#000000] border-l border-gray-200 dark:border-neutral-800 flex flex-col shrink-0 relative overflow-hidden transition-colors">
+        <div id="question-palette" className={`${showQuestionPalette ? 'flex' : 'hidden'} lg:flex absolute inset-y-0 right-0 z-20 lg:static w-[min(18rem,100%)] bg-surface border-l border-outline flex-col shrink-0 overflow-hidden transition-colors`}>
           
+          <button type="button" className="lg:hidden p-2 text-foreground bg-surface-muted border-b border-outline font-semibold" onClick={() => setShowQuestionPalette(false)}>Close question palette</button>
           {/* User Profile Area */}
-          <div className={`p-3 border-b border-gray-300 dark:border-neutral-800 flex items-center justify-between gap-3 shrink-0 ${isSpecialUser ? 'bg-gradient-to-r from-yellow-50 to-amber-50 dark:from-yellow-950/30 dark:to-amber-950/30' : 'bg-white dark:bg-[#0a0a0a]'}`}>
+          <div className={`p-3 border-b border-gray-300 dark:border-outline flex items-center justify-between gap-3 shrink-0 ${isSpecialUser ? 'bg-gradient-to-r from-yellow-50 to-amber-50 dark:from-yellow-950/30 dark:to-amber-950/30' : 'bg-surface'}`}>
             <div className="flex items-center gap-3">
               {isSpecialUser ? (
                 <div className="relative w-10 h-10 rounded-full bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center shadow-md ring-2 ring-yellow-300/50">
@@ -1245,7 +1254,7 @@ export function QuizScreen({ quiz, onComplete, onExit }: QuizScreenProps) {
                   {playerName || 'Student Portal'}
                 </div>
                 <div className="text-[10px] text-gray-500 dark:text-neutral-400">
-                  {isSpecialUser ? '👑 Ultra Admin • LVL 9000' : 'Quizify 3 Platform'}
+                  {isSpecialUser ? '👑 Ultra Admin • LVL 9000' : 'Quizify 5 Pro Ultra Platform'}
                 </div>
 
               </div>
@@ -1278,7 +1287,7 @@ export function QuizScreen({ quiz, onComplete, onExit }: QuizScreenProps) {
           </div>
 
           {/* Palette Legend */}
-          <div className="p-3 bg-white dark:bg-[#0a0a0a] border-b border-gray-300 dark:border-neutral-800 grid grid-cols-2 gap-2 text-[11px] shrink-0 font-medium text-slate-800 dark:text-neutral-200">
+          <div className="p-3 bg-surface border-b border-gray-300 dark:border-outline grid grid-cols-2 gap-2 text-[11px] shrink-0 font-medium text-slate-800 dark:text-neutral-200">
             <div className="flex items-center gap-2">
               <div className="w-6 h-5 rounded-t-md bg-[#2ecc71] flex items-center justify-center text-white font-bold text-[10px]">
                 {Array.from({length: quiz.questions.length}, (_, i) => i).filter(i => getStatus(i) === 'ANSWERED').length}
@@ -1292,7 +1301,7 @@ export function QuizScreen({ quiz, onComplete, onExit }: QuizScreenProps) {
               <span>Not Answered</span>
             </div>
             <div className="flex items-center gap-2">
-              <div className="w-6 h-5 rounded-sm bg-[#ecf0f1] dark:bg-[#1a1a1a] border border-gray-300 dark:border-neutral-700 flex items-center justify-center text-gray-700 dark:text-neutral-300 font-bold text-[10px]">
+              <div className="w-6 h-5 rounded-sm bg-[#ecf0f1] dark:bg-surface-muted border border-gray-300 dark:border-outline flex items-center justify-center text-gray-700 dark:text-neutral-300 font-bold text-[10px]">
                 {Array.from({length: quiz.questions.length}, (_, i) => i).filter(i => getStatus(i) === 'NOT_VISITED').length}
               </div>
               <span>Not Visited</span>
@@ -1311,7 +1320,7 @@ export function QuizScreen({ quiz, onComplete, onExit }: QuizScreenProps) {
               <span className="leading-tight text-[10px]">Ans. & Marked for Review</span>
             </div>
             {isTwoPlayer && (
-              <div className="flex items-center gap-2 col-span-2 pt-1 border-t border-gray-200 dark:border-neutral-800">
+              <div className="flex items-center gap-2 col-span-2 pt-1 border-t border-gray-200 dark:border-outline">
                 <div className="w-6 h-5 rounded bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center text-white text-[10px] font-bold shadow-2xs">
                   ⚔️
                 </div>
@@ -1323,7 +1332,7 @@ export function QuizScreen({ quiz, onComplete, onExit }: QuizScreenProps) {
           </div>
 
           {/* Palette Grid Header */}
-          <div className="p-3 bg-[#e8ecef] dark:bg-[#0f0f0f] text-[#34495e] dark:text-neutral-200 font-bold text-xs shrink-0 flex justify-between items-center border-b border-gray-300 dark:border-neutral-800">
+          <div className="p-3 bg-[#e8ecef] dark:bg-surface-muted text-[#34495e] dark:text-neutral-200 font-bold text-xs shrink-0 flex justify-between items-center border-b border-gray-300 dark:border-outline">
             <div className="flex items-center gap-1.5">
               <span>Question Palette:</span>
               {shuffleQuestions && (
@@ -1336,7 +1345,7 @@ export function QuizScreen({ quiz, onComplete, onExit }: QuizScreenProps) {
               type="button"
               onClick={reshuffleQuestionOrder}
               title={`Shuffle 1-${quiz.questions.length} questions order`}
-              className="flex items-center gap-1 text-[11px] bg-white dark:bg-[#1a1a1a] hover:bg-gray-100 dark:hover:bg-[#252525] text-[#2c3e50] dark:text-white border border-gray-300 dark:border-neutral-700 px-2.5 py-1 rounded shadow-xs font-semibold cursor-pointer transition active:scale-95"
+              className="flex items-center gap-1 text-[11px] bg-white dark:bg-surface-muted hover:bg-gray-100 dark:hover:bg-surface-hover text-[#2c3e50] dark:text-white border border-gray-300 dark:border-outline px-2.5 py-1 rounded shadow-xs font-semibold cursor-pointer transition active:scale-95"
             >
               <Shuffle className="w-3 h-3 text-purple-600 dark:text-purple-400" />
               <span>Shuffle</span>
@@ -1344,7 +1353,7 @@ export function QuizScreen({ quiz, onComplete, onExit }: QuizScreenProps) {
           </div>
 
           {/* Question Palette Grid */}
-          <div className="flex-1 overflow-y-auto p-4 bg-white dark:bg-[#000000] grid grid-cols-4 gap-3 content-start">
+          <div className="flex-1 overflow-y-auto p-4 bg-white dark:bg-canvas grid grid-cols-4 gap-3 content-start">
             {questionOrder.map((qIdx, pos) => {
               const status = getStatus(qIdx);
               const colors = getPaletteColorInfo(status);
@@ -1361,7 +1370,7 @@ export function QuizScreen({ quiz, onComplete, onExit }: QuizScreenProps) {
               return (
                 <button
                   key={pos}
-                  onClick={() => setCurrentPos(pos)}
+                  onClick={() => { setCurrentPos(pos); setShowQuestionPalette(false); }}
                   title={qIsMSQ ? `Question ${pos + 1} (MSQ)` : `Question ${pos + 1}`}
                   className={`relative w-10 h-10 flex items-center justify-center text-sm font-bold border transition-transform hover:scale-105 shadow-inner cursor-pointer ${colors.bg} ${colors.text} ${colors.border} ${shapeClass} ${isActive ? 'ring-2 ring-offset-2 ring-blue-500 shadow-lg' : ''}`}
                 >
@@ -1386,7 +1395,7 @@ export function QuizScreen({ quiz, onComplete, onExit }: QuizScreenProps) {
           </div>
 
           {/* Submit Action & Save Progress */}
-          <div className="p-4 border-t border-gray-300 dark:border-neutral-800 bg-gray-100 dark:bg-[#050505] shrink-0 flex flex-col items-center gap-2">
+          <div className="p-4 border-t border-gray-300 dark:border-outline bg-gray-100 dark:bg-surface shrink-0 flex flex-col items-center gap-2">
              <button 
                onClick={handleSubmit} 
                className="w-full bg-[#16a085] hover:bg-[#12876f] text-white py-2 px-4 rounded shadow font-bold text-sm transition-colors border border-[#117a65] cursor-pointer"
@@ -1395,13 +1404,13 @@ export function QuizScreen({ quiz, onComplete, onExit }: QuizScreenProps) {
              </button>
              <button
                onClick={() => setShowSaveModal(true)}
-               className="w-full bg-white dark:bg-[#0c0c0c] hover:bg-gray-50 dark:hover:bg-[#161616] text-amber-800 dark:text-amber-300 border border-amber-300 dark:border-amber-700/80 py-1.5 px-3 rounded text-xs font-bold transition flex items-center justify-center gap-1.5 cursor-pointer shadow-2xs"
+               className="w-full bg-surface hover:bg-gray-50 dark:hover:bg-surface-hover text-amber-800 dark:text-amber-300 border border-amber-300 dark:border-amber-700/80 py-1.5 px-3 rounded text-xs font-bold transition flex items-center justify-center gap-1.5 cursor-pointer shadow-2xs"
              >
                <Bookmark className="w-3.5 h-3.5 text-amber-600" />
                Save Progress & Resume Later
              </button>
              <div className="text-[10px] text-gray-500 dark:text-neutral-400 font-medium">
-               Quizify 3 • <span className="text-orange-600 dark:text-orange-400 font-semibold">Made by Saksham Sooden</span>
+               Quizify 5 Pro Ultra • <span className="text-orange-600 dark:text-orange-400 font-semibold">Made by Saksham Sooden</span>
              </div>
 
           </div>
@@ -1411,7 +1420,7 @@ export function QuizScreen({ quiz, onComplete, onExit }: QuizScreenProps) {
       {/* Save & Pause Modal */}
       {showSaveModal && (
         <div className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4 backdrop-blur-xs animate-in fade-in duration-150">
-          <div className="bg-white dark:bg-[#0c0c0c] rounded-xl shadow-2xl p-6 max-w-md w-full border border-gray-100 dark:border-neutral-800 text-slate-800 dark:text-neutral-100">
+          <div className="bg-surface rounded-xl shadow-2xl p-6 max-w-md w-full border border-gray-100 dark:border-outline text-slate-800 dark:text-neutral-100">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-10 h-10 rounded-full bg-amber-100 dark:bg-amber-950/40 text-amber-700 dark:text-amber-300 flex items-center justify-center shrink-0">
                 <BookmarkCheck className="w-5 h-5 text-amber-600 dark:text-amber-400" />
@@ -1422,7 +1431,7 @@ export function QuizScreen({ quiz, onComplete, onExit }: QuizScreenProps) {
               </div>
             </div>
 
-            <div className="bg-gray-50 dark:bg-[#050505] rounded-lg p-3.5 border border-gray-200 dark:border-neutral-800 mb-5 space-y-2">
+            <div className="bg-gray-50 dark:bg-surface rounded-lg p-3.5 border border-gray-200 dark:border-outline mb-5 space-y-2">
               <div className="flex justify-between text-xs text-gray-700 dark:text-neutral-300">
                 <span className="font-medium text-gray-500 dark:text-neutral-400">Quiz:</span>
                 <span className="font-bold truncate max-w-[200px]">{quiz.title}</span>
@@ -1452,7 +1461,7 @@ export function QuizScreen({ quiz, onComplete, onExit }: QuizScreenProps) {
                   setSaveToast("Progress saved! You can resume anytime.");
                   setTimeout(() => setSaveToast(null), 3000);
                 }}
-                className="px-4 py-2 border border-gray-300 dark:border-neutral-700 rounded-lg text-xs text-gray-700 dark:text-neutral-300 font-semibold hover:bg-gray-50 dark:hover:bg-[#1a1a1a] cursor-pointer transition"
+                className="px-4 py-2 border border-gray-300 dark:border-outline rounded-lg text-xs text-gray-700 dark:text-neutral-300 font-semibold hover:bg-gray-50 dark:hover:bg-surface-hover cursor-pointer transition"
               >
                 Continue Answering
               </button>
@@ -1486,7 +1495,7 @@ export function QuizScreen({ quiz, onComplete, onExit }: QuizScreenProps) {
       {/* Confirm Submit Modal */}
       {showConfirmSubmit && (
         <div className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4">
-          <div className="bg-white dark:bg-[#0c0c0c] border border-transparent dark:border-neutral-800 rounded shadow-2xl p-6 max-w-sm w-full">
+          <div className="bg-surface border border-transparent dark:border-outline rounded shadow-2xl p-6 max-w-sm w-full">
             <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Submit Exam</h3>
             <p className="text-gray-600 dark:text-neutral-400 mb-6 text-sm">
               Are you sure you want to submit? You cannot change your answers after submission.
@@ -1494,7 +1503,7 @@ export function QuizScreen({ quiz, onComplete, onExit }: QuizScreenProps) {
             <div className="flex justify-end gap-3">
               <button 
                 onClick={() => setShowConfirmSubmit(false)}
-                className="px-4 py-2 border border-gray-300 dark:border-neutral-700 rounded text-sm text-gray-700 dark:text-neutral-300 font-semibold hover:bg-gray-50 dark:hover:bg-[#1a1a1a] cursor-pointer"
+                className="px-4 py-2 border border-gray-300 dark:border-outline rounded text-sm text-gray-700 dark:text-neutral-300 font-semibold hover:bg-gray-50 dark:hover:bg-surface-hover cursor-pointer"
               >
                 Cancel
               </button>

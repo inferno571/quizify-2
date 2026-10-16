@@ -64,10 +64,10 @@ export function PlayerBadge() {
         <button
           type="button"
           onClick={() => setShowModal(true)}
-          className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold bg-gray-100 hover:bg-gray-200 text-gray-700 transition cursor-pointer border border-gray-300 shadow-xs"
+          className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold bg-surface-muted hover:bg-surface-hover text-foreground transition cursor-pointer border border-gray-300 shadow-xs"
         >
           <UserPlus className="w-3.5 h-3.5 text-blue-600" />
-          <span>Set Name / Login</span>
+          <span>Set Name</span>
         </button>
 
         <PlayerNameModal

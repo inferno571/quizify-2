@@ -1,0 +1,68 @@
+.celebration {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  margin: 0 0 1.25rem;
+  padding: 1rem;
+  border: 1px solid #f9a8d4;
+  border-radius: 1rem;
+  background: linear-gradient(135deg, #fff1f2, #fdf2f8 60%, #fce7f3);
+  color: #9d174d;
+  box-shadow: 0 4px 24px #ec48991a;
+}
+
+:global(.dark) .celebration {
+  background: linear-gradient(135deg, #3b1024, #281126 60%, #41162f);
+  border-color: #9d3b69;
+  color: #fbcfe8;
+}
+
+.message {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: .25rem;
+  text-align: center;
+}
+
+.message strong { font-size: 1rem; }
+.message > span:last-child { font-size: .75rem; }
+.heart {
+  font-size: 2rem;
+  line-height: 1;
+  color: #e11d48;
+  filter: drop-shadow(0 2px 8px #fb718566);
+  animation: heartbeat 2.4s ease-in-out infinite;
+}
+
+:global(.dark) .heart { color: #fb7185; }
+.floatingHeart {
+  position: absolute;
+  bottom: -2rem;
+  left: var(--left);
+  font-size: var(--size);
+  line-height: 1;
+  color: #ec4899;
+  opacity: 0;
+  animation: float-heart var(--duration) var(--delay) ease-in infinite;
+}
+
+@keyframes float-heart {
+  0% { transform: translate(0, 0) rotate(-12deg); opacity: 0; }
+  18% { opacity: .28; }
+  75% { opacity: .2; }
+  100% { transform: translate(var(--drift), -190px) rotate(18deg); opacity: 0; }
+}
+
+@keyframes heartbeat {
+  0%, 35%, 100% { transform: scale(1); }
+  12% { transform: scale(1.13); }
+  23% { transform: scale(1.04); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .heart, .floatingHeart { animation: none; }
+  .floatingHeart { display: none; }
+}
