@@ -1,0 +1,94 @@
+{
+  "id": "dlnlp-2025-assignment-8",
+  "title": "DLNLP (2025 PYQ) - Assignment 8",
+  "subject": "DLNLP (2025 PYQ)",
+  "date": "17/10/2026",
+  "questions": [
+    {
+      "question": "1. What is the main advantage of fine -tuning a pretrained model instead of training a model from scratch?",
+      "options": [
+        "Fine -tuning requires a large amount of labeled data to work effectively.",
+        "Fine -tuning helps adapt a general model to a specific task while leveraging prior knowledge, reducing data and compute requirements.",
+        "Fine -tuning always leads to overfitting and should be avoided.",
+        "Fine -tuning removes the need for any labeled data."
+      ],
+      "correctAnswer": "Fine -tuning helps adapt a general model to a specific task while leveraging prior knowledge, reducing data and compute requirements.",
+      "explanation": "Option (B) is correct based on NPTEL DLNLP Assignment 8."
+    },
+    {
+      "question": "2. According to the Scaling Laws observed in Super -NaturalInstructions, how does increasing the number of training tasks affect model performance?",
+      "options": [
+        "Increasing tasks improves generalization to unseen tasks, demonstrating positive transfer.",
+        "More tasks always lead to overfitting and degrade generalization performance. C) The number of tasks does not impact model performance significantly.",
+        "Reducing the number of tasks helps models specialize and generalize better."
+      ],
+      "correctAnswer": "Increasing tasks improves generalization to unseen tasks, demonstrating positive transfer.",
+      "explanation": "Option (A) is correct based on NPTEL DLNLP Assignment 8."
+    },
+    {
+      "question": "3. What distinguishes FLAN (Fine -tuned LAnguage Net) models from standard pre -trained language models?",
+      "options": [
+        "FLAN models are instruction -tuned, meaning they are explicitly fine -tuned on a diverse range of tasks formatted as instructions, improving zero- shot and few -shot learning.",
+        "FLAN models do not require pretraining and are trained directly on downstream tasks.",
+        "FLAN models only work in a zero- shot setting and cannot be fine -tuned further.",
+        "FLAN models are based on a completely different architecture than transformer -based models."
+      ],
+      "correctAnswer": "FLAN models are instruction -tuned, meaning they are explicitly fine -tuned on a diverse range of tasks formatted as instructions, improving zero- shot and few -shot learning.",
+      "explanation": "Option (A) is correct based on NPTEL DLNLP Assignment 8."
+    },
+    {
+      "question": "4. Which of the following is True about RLHF?",
+      "options": [
+        "RLHF involves state transitions where the agent’s actions influence future states",
+        "RLHF does not have state transitions; actions (completions) are scored by a reward model",
+        "RLHF attribution of re ward is not done for an entire sequence of actions",
+        "RLHF does not use a policy function to determine actions, unlike standard RL."
+      ],
+      "correctAnswer": "RLHF does not have state transitions; actions (completions) are scored by a reward model",
+      "explanation": "Option (B) is correct based on NPTEL DLNLP Assignment 8."
+    },
+    {
+      "question": "5. Which of the following is False?",
+      "options": [
+        "Online reinforcement learning allows the agent to continuously adapt to changes in the environment by learning from real -time feedback.",
+        "DPO directly optimizes for preference- based feedback, rather than relying on separately developed reward models.",
+        "DPO us es computationally expensive sampling process than PPO",
+        "DPO simplifies the training framework by eliminating the need to explicitly model rewards."
+      ],
+      "correctAnswer": "DPO us es computationally expensive sampling process than PPO",
+      "explanation": "Option (C) is correct based on NPTEL DLNLP Assignment 8."
+    },
+    {
+      "question": "6. In which scenario would DPO be most beneficial?",
+      "options": [
+        "When a clear objective function is readily available for model optimization. B. When aligning a language model with human preferences in a way that avoids explicit reward modeling and complex reinforceme nt learning setups.",
+        "For tasks where rapid experimentation and fine -tuning are not necessary.",
+        "When dealing with large datasets of labeled human feedback."
+      ],
+      "correctAnswer": "For tasks where rapid experimentation and fine -tuning are not necessary.",
+      "explanation": "Option (B) is correct based on NPTEL DLNLP Assignment 8."
+    },
+    {
+      "question": "7. In RLHF the reward function R(s) is often regularized using the KL divergence between the learned policy π_ϕ and the reference policy π_0 to prevent excessive deviation. The modified reward is given by:\n\n$$R'(s) = R(s) - \\beta D_{\\text{KL}}(\\pi_\\phi(\\cdot \\mid s) \\parallel \\pi_0(\\cdot \\mid s))$$\n\nThe KL divergence is defined as:\n\n$$D_{\\text{KL}}(\\pi_\\phi \\parallel \\pi_0) = \\sum_a \\pi_\\phi(a \\mid s) \\log \\frac{\\pi_\\phi(a \\mid s)}{\\pi_0(a \\mid s)}$$\n\nConsider a state s where the action probabilities under $\\pi_\\phi$ and reference policy $\\pi_0$ are:\n• $\\pi_\\phi(a_1 \\mid s) = 0.6, \\quad \\pi_\\phi(a_2 \\mid s) = 0.4$\n• $\\pi_0(a_1 \\mid s) = 0.5, \\quad \\pi_0(a_2 \\mid s) = 0.5$\n\nCompute the KL divergence and select the correct answer:",
+      "options": [
+        "0.0704",
+        "0.0781",
+        "0.0689",
+        "0.0652"
+      ],
+      "correctAnswer": "0.0704",
+      "explanation": "$D_{\\text{KL}} = (0.6 \\times \\log(0.6/0.5)) + (0.4 \\times \\log(0.4/0.5)) = (0.6 \\times 0.182) + (0.4 \\times (-0.097)) = 0.1092 - 0.0388 = 0.0704$."
+    },
+    {
+      "question": "8. In RLHF setup, to train a reward function R(x), the optimization objective is to maximize the difference in rewards between preferred and dispreferred responses. Suppose we have a dataset of preference pairs $(x, y^+)$ and $(x, y^-)$, where $y^+$ is the preferred response and $y^-$ is the dispreferred response.\n\nThe loss function for the reward model is given as:\n\n$$\\mathcal{L} = -\\mathbb{E}_{(x, y^+, y^-)} [\\log \\sigma(R(y^+) - R(y^-))]$$\n\nIf the rewards for a given preference pair are $R(y^+) = 2.5$, and $R(y^-) = 1.0$, what is the value of the loss term for this pair for the reward model?",
+      "options": [
+        "log (1 + e^-1.5)",
+        "log (1 + e^1.5)",
+        "-log (1 + e^-1.5)",
+        "-log (1 + e^1.5)"
+      ],
+      "correctAnswer": "log (1 + e^-1.5)",
+      "explanation": "Step 1: Reward difference $R(y^+) - R(y^-) = 2.5 - 1.0 = 1.5$.\nStep 2: $\\sigma(1.5) = \\frac{1}{1 + e^{-1.5}}$, so $\\log \\sigma(1.5) = -\\log(1 + e^{-1.5})$.\nStep 3: Loss $\\mathcal{L} = -(-\\log(1 + e^{-1.5})) = \\log(1 + e^{-1.5})$."
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "id": "genai-cv-week-8",
+  "title": "Generative AI for Computer Vision - Week 8 Assignment 8",
+  "subject": "Generative AI for Computer Vision",
+  "date": "22/10/2026",
+  "questions": [
+    {
+      "question": "1. What is the main idea of a Vision Transformer (ViT)?",
+      "options": [
+        "To process images using image patches as tokens",
+        "To process only audio signals",
+        "To remove all image features",
+        "To replace images with text"
+      ],
+      "correctAnswer": "To process images using image patches as tokens",
+      "explanation": "Vision Transformer divides an image into smaller patches and treats these patches as tokens that can be processed using Transformer mechanisms."
+    },
+    {
+      "question": "2. DETR stands for:",
+      "options": [
+        "Deep Efficient Transformer Recognition",
+        "Detection Transformer",
+        "Deep Encoder Transformer Representation",
+        "Detection Training Recognition"
+      ],
+      "correctAnswer": "Detection Transformer",
+      "explanation": "DETR stands for DEtection TRansformer and uses a Transformer-based architecture for object detection."
+    },
+    {
+      "question": "3. What is a key feature of the Swin Transformer?",
+      "options": [
+        "It uses shifted windows for self-attention",
+        "It uses only fully connected layers",
+        "It does not use attention",
+        "It processes only text"
+      ],
+      "correctAnswer": "It uses shifted windows for self-attention",
+      "explanation": "Swin Transformer uses local windows for self-attention and shifts these windows between layers to allow information exchange between neighboring windows."
+    },
+    {
+      "question": "4. What is the main purpose of an Auto-Encoder?",
+      "options": [
+        "To increase the number of input features",
+        "To classify only images",
+        "To learn a compact representation of the input data",
+        "To remove the decoder"
+      ],
+      "correctAnswer": "To learn a compact representation of the input data",
+      "explanation": "An Auto-Encoder learns to encode input data into a compact representation and then reconstruct the original input."
+    },
+    {
+      "question": "5. An Auto-Encoder mainly consists of:",
+      "options": [
+        "Only an Encoder",
+        "Encoder and Decoder",
+        "Only a Decoder",
+        "Classifier and Pooling layer"
+      ],
+      "correctAnswer": "Encoder and Decoder",
+      "explanation": "An Auto-Encoder has two main parts: the encoder, which creates a compact representation, and the decoder, which reconstructs the input."
+    },
+    {
+      "question": "6. Which of the following is a difference between a Variational Auto-Encoder (VAE) and a traditional Auto-Encoder?",
+      "options": [
+        "VAE cannot generate data",
+        "VAE does not have an encoder",
+        "VAE does not have a decoder",
+        "VAE learns a probability distribution for the latent representation"
+      ],
+      "correctAnswer": "VAE learns a probability distribution for the latent representation",
+      "explanation": "A VAE learns a probability distribution over the latent space, allowing it to sample new latent representations and generate new data."
+    },
+    {
+      "question": "7. In a VAE, the typical sequence of operations is:",
+      "options": [
+        "Decoding → Encoding → Sampling",
+        "Sampling → Decoding → Encoding",
+        "Encoding → Sampling → Decoding",
+        "Decoding → Sampling → Encoding"
+      ],
+      "correctAnswer": "Encoding → Sampling → Decoding",
+      "explanation": "In a VAE, the input is first encoded into parameters of a latent distribution, a latent vector is sampled, and the decoder uses that sample to reconstruct or generate data."
+    },
+    {
+      "question": "8. In a VAE, the latent variable is generally:",
+      "options": [
+        "A sampled representation of the input",
+        "The original input image",
+        "The final output label",
+        "The training dataset"
+      ],
+      "correctAnswer": "A sampled representation of the input",
+      "explanation": "The latent variable is sampled from the distribution learned by the encoder and is used by the decoder to reconstruct or generate data."
+    },
+    {
+      "question": "9. In a VAE, why is sampling performed in the latent space?",
+      "options": [
+        "To enable generation of different possible outputs",
+        "To remove the encoder",
+        "To reduce the image resolution",
+        "To calculate classification accuracy"
+      ],
+      "correctAnswer": "To enable generation of different possible outputs",
+      "explanation": "Sampling allows a VAE to generate different data samples from its learned latent distribution."
+    },
+    {
+      "question": "10. What is the main purpose of the problem formulation in a VAE?",
+      "options": [
+        "To remove the latent space",
+        "To increase the number of images",
+        "To define how the input data and its underlying probability distribution are modelled",
+        "To replace the decoder with a CNN"
+      ],
+      "correctAnswer": "To define how the input data and its underlying probability distribution are modelled",
+      "explanation": "The problem formulation specifies how the observed data is related to latent variables and how the model can learn a useful probability distribution for generating data."
+    }
+  ]
+}

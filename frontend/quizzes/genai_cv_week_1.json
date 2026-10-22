@@ -1,0 +1,114 @@
+{
+  "id": "genai-cv-week-1",
+  "title": "Generative AI for Computer Vision - Week 1 Assignment 1",
+  "subject": "Generative AI for Computer Vision",
+  "date": "22/10/2026",
+  "questions": [
+    {
+      "question": "1. Which of the following is a generative model?",
+      "options": [
+        "ResNet",
+        "U-Net",
+        "GAN",
+        "AlexNet"
+      ],
+      "correctAnswer": "GAN",
+      "explanation": "GAN (Generative Adversarial Network) is a generative model designed to synthesize new data samples that resemble the training distribution, unlike discriminative architectures such as ResNet, U-Net, and AlexNet."
+    },
+    {
+      "question": "2. The main purpose of a generative vision model is to:",
+      "options": [
+        "Classify images",
+        "Detect objects",
+        "Generate new images",
+        "Compress images"
+      ],
+      "correctAnswer": "Generate new images",
+      "explanation": "The primary purpose of a generative vision model is to learn the underlying probability distribution of images and generate new, unseen visual samples."
+    },
+    {
+      "question": "3. Which of the following is an application of generative models in computer vision?",
+      "options": [
+        "Image synthesis",
+        "Image restoration",
+        "Data augmentation",
+        "All of the above"
+      ],
+      "correctAnswer": "All of the above",
+      "explanation": "Generative models in computer vision are used for image synthesis, image restoration (super-resolution, inpainting, denoising), and synthetic data augmentation."
+    },
+    {
+      "question": "4. A joint probability distribution describes:",
+      "options": [
+        "The probability of a single random variable",
+        "The probability of two or more random variables occurring together",
+        "Only independent events",
+        "Only continuous variables"
+      ],
+      "correctAnswer": "The probability of two or more random variables occurring together",
+      "explanation": "A joint probability distribution represents the probability that two or more random variables simultaneously take on specific values."
+    },
+    {
+      "question": "5. Correlation measures:",
+      "options": [
+        "The size of a dataset",
+        "The strength and direction of the relationship between two variables",
+        "The average value of a variable",
+        "The maximum value in a dataset"
+      ],
+      "correctAnswer": "The strength and direction of the relationship between two variables",
+      "explanation": "Correlation measures both the strength and the direction of the linear relationship between two variables."
+    },
+    {
+      "question": "6. Covariance tells us:",
+      "options": [
+        "Whether two variables change together",
+        "The average of a dataset",
+        "The maximum likelihood",
+        "The number of observations"
+      ],
+      "correctAnswer": "Whether two variables change together",
+      "explanation": "Covariance indicates the directional relationship between two variables—showing whether higher values of one variable correspond to higher (or lower) values of another."
+    },
+    {
+      "question": "7. The objective of Maximum Likelihood Estimation (MLE) is to:",
+      "options": [
+        "Minimize training time",
+        "Find parameter values that make the observed data most likely",
+        "Reduce the number of features",
+        "Increase the dataset size"
+      ],
+      "correctAnswer": "Find parameter values that make the observed data most likely",
+      "explanation": "The objective of Maximum Likelihood Estimation (MLE) is to find the model parameters that maximize the likelihood of the observed training dataset."
+    },
+    {
+      "question": "8. Bayesian learning combines:",
+      "options": [
+        "Prior knowledge and observed data",
+        "Only training data",
+        "Only test data",
+        "Random initialization"
+      ],
+      "correctAnswer": "Prior knowledge and observed data",
+      "explanation": "Bayesian learning uses Bayes' theorem to combine prior knowledge (prior distribution) and observed evidence/data to compute the posterior distribution."
+    },
+    {
+      "question": "9. Bayesian learning updates model parameters as new evidence becomes available.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "True",
+      "explanation": "In Bayesian inference, prior distributions are iteratively updated to posterior distributions as new empirical data or evidence becomes available."
+    },
+    {
+      "question": "10. Generative AI models can create new images that resemble the training data.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "True",
+      "explanation": "Generative AI models learn the statistical distribution of training images to synthesize novel images that closely resemble the training dataset."
+    }
+  ]
+}

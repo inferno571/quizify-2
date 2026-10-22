@@ -1,0 +1,118 @@
+{
+  "id": "dlnlp-2025-assignment-5",
+  "title": "DLNLP (2025 PYQ) - Assignment 5",
+  "subject": "DLNLP (2025 PYQ)",
+  "date": "17/10/2026",
+  "questions": [
+    {
+      "question": "1. Self-attention generates contextual embeddings by focusing on relevant tokens in the sequence. Given a sentence: 'The bank raised the interest rates.' How would a multi-head attention mechanism behave if one head specializes in syntactic relations and another in semantics?",
+      "options": [
+        "Both heads would attend to the same tokens in the same way",
+        "The syntactic head would focus on 'the' for 'bank,' while the semantic head focuses on 'interest'",
+        "The syntactic head would focus on 'raised' for 'bank,' while the semantic head focuses on 'interest rates'",
+        "Both heads would ignore the context beyond their respective tokens"
+      ],
+      "correctAnswer": "The syntactic head would focus on 'raised' for 'bank,' while the semantic head focuses on 'interest rates'",
+      "explanation": "The syntactic head would focus on 'raised' for 'bank,' while the semantic head focuses on 'interest rates'"
+    },
+    {
+      "question": "2. In an encoder-decoder Transformer architecture, what will happen if the positional encoding is removed from both the encoder and decoder? How would this affect tasks like machine translation?",
+      "options": [
+        "The model would completely fail to generate coherent sentences",
+        "The model would still generate sentences but ignore word order and context",
+        "The model would work normally but slower due to lack of efficiency",
+        "The model would generate longer sequences without performance degradation"
+      ],
+      "correctAnswer": "The model would still generate sentences but ignore word order and context",
+      "explanation": "The model would still generate sentences but ignore word order and context"
+    },
+    {
+      "question": "3. Imagine you are training a Transformer model on a dataset of long sequences (e.g., full books). Which attention mechanism would you use to minimize memory usage while maintaining context across long ranges? Why?",
+      "options": [
+        "Multi-head attention – to attend to multiple aspects of context",
+        "Local attention – to focus on relevant windows within the sequence",
+        "Global attention – to maintain a global view of the input",
+        "Dilated sliding window attention – to balance local and long-range dependencies efficiently"
+      ],
+      "correctAnswer": "Dilated sliding window attention – to balance local and long-range dependencies efficiently",
+      "explanation": "Dilated sliding window attention – to balance local and long-range dependencies efficiently"
+    },
+    {
+      "question": "4. Consider a Transformer model for real-time speech recognition. Which optimization strategy would you prioritize to reduce latency during inference, and why?",
+      "options": [
+        "Use multi-query attention to reduce redundant computation for each token",
+        "Increase the number of attention heads to improve parallelism",
+        "Remove positional encoding to make the model faster",
+        "Use standard self-attention without modifications"
+      ],
+      "correctAnswer": "Use multi-query attention to reduce redundant computation for each token",
+      "explanation": "Use multi-query attention to reduce redundant computation for each token"
+    },
+    {
+      "question": "5. You are designing a Transformer for image classification using Vision Transformers (ViTs). Which positional encoding technique would be most appropriate for learning fine-grained spatial relationships, and why?",
+      "options": [
+        "Sinusoidal positional encodings for their simplicity and robustness",
+        "Learned positional embeddings to adapt to specific image structures",
+        "Relative positional bias for improved accuracy in larger images",
+        "Rotary positional embeddings to reduce computational complexity"
+      ],
+      "correctAnswer": "Learned positional embeddings to adapt to specific image structures",
+      "explanation": "Learned positional embeddings to adapt to specific image structures"
+    },
+    {
+      "question": "6. Suppose you have the following query vector q = [1, 2], key vector k = [2, 1], and value vector v = [3, 4]. The scale factor for attention is √d_k where d_k = 2. Calculate the attention score and the final output of the self-attention mechanism.",
+      "options": [
+        "Attention Score: 1.5, Output: [3, 4]",
+        "Attention Score: 2.12, Output: [3.5, 4.5]",
+        "Attention Score: 0.82, Output: [2.46, 3.28]",
+        "Attention Score: 0.91, Output: [3, 4]"
+      ],
+      "correctAnswer": "Attention Score: 0.82, Output: [2.46, 3.28]",
+      "explanation": "Attention Score: 0.82, Output: [2.46, 3.28]"
+    },
+    {
+      "question": "7. You are designing a multi-head attention layer with a model dimension d = 512, 8 attention heads, and key, query, and value dimensions of d_k = d_q = d_v = 64 for each head. What will be the combined output dimension after the multi-head attention is projected back?",
+      "options": [
+        "64",
+        "512",
+        "256",
+        "1024"
+      ],
+      "correctAnswer": "512",
+      "explanation": "512"
+    },
+    {
+      "question": "8. Given a sinusoidal positional encoding function for token position p = 5 and dimension i = 2, the encoding is computed as PE(p, i) = sin(p / 10000^(2i/d)). Assume d = 512. What is the value of PE(5, 2)?",
+      "options": [
+        "0.0005",
+        "0.0314",
+        "0.0981",
+        "0.0157"
+      ],
+      "correctAnswer": "0.0314",
+      "explanation": "0.0314"
+    },
+    {
+      "question": "9. Suppose you train a Transformer decoder with the input sentence: 'I love natural language processing.' You are at the third token ('natural') with the following embedding vectors: Query (q): [0.5, 1.0] Key (k1, k2, k3): [0.2, 0.8], [0.7, 0.1], [0.5, 0.5] Value (v1, v2, v3): [1, 0], [0, 1], [1, 1] Calculate the weighted sum of values using the scaled dot-product attention mechanism.",
+      "options": [
+        "[0.75, 0.25]",
+        "[0.6, 0.8]",
+        "[0.9, 0.9]",
+        "[1.2, 1.0]"
+      ],
+      "correctAnswer": "[0.6, 0.8]",
+      "explanation": "[0.6, 0.8]"
+    },
+    {
+      "question": "10. You are tasked with improving a Transformer’s efficiency for processing sequences of length N = 10,000. You apply Linformer, which approximates the attention matrix with a low-rank representation of size k = 256. What is the new complexity for attention computation compared to the original O(N^2) complexity?",
+      "options": [
+        "O(N · k)",
+        "O(k^2)",
+        "O(N^3)",
+        "O(N · log N)"
+      ],
+      "correctAnswer": "O(N · k)",
+      "explanation": "O(N · k)"
+    }
+  ]
+}

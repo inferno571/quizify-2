@@ -1,0 +1,118 @@
+{
+  "id": "genai-cv-week-5",
+  "title": "Generative AI for Computer Vision - Week 5 Assignment 5",
+  "subject": "Generative AI for Computer Vision",
+  "date": "22/10/2026",
+  "questions": [
+    {
+      "question": "1. What is the main purpose of Backpropagation Through Time (BPTT) in an RNN?",
+      "options": [
+        "To generate images",
+        "To train the RNN by computing gradients over time",
+        "To increase image resolution",
+        "To remove the hidden state"
+      ],
+      "correctAnswer": "To train the RNN by computing gradients over time",
+      "explanation": "BPTT unrolls the RNN across the sequence time steps and propagates gradients backward through time to update network parameters."
+    },
+    {
+      "question": "2. In a character-level RNN, the model processes:",
+      "options": [
+        "Only numerical tables",
+        "Only complete images",
+        "Individual characters in a sequence",
+        "Only audio signals"
+      ],
+      "correctAnswer": "Individual characters in a sequence",
+      "explanation": "In character-level modeling, the RNN processes one character at each time step, learning vocabulary structure, spelling, and character transitions."
+    },
+    {
+      "question": "3. Which problem is commonly associated with traditional RNNs?",
+      "options": [
+        "Vanishing gradient problem",
+        "Image resizing problem",
+        "Object detection problem",
+        "Image compression problem"
+      ],
+      "correctAnswer": "Vanishing gradient problem",
+      "explanation": "In standard RNNs, gradients propagated over many time steps undergo repeated matrix multiplications, often shrinking exponentially (vanishing gradients) and hindering long-term dependency learning."
+    },
+    {
+      "question": "4. Which neural network architecture is specifically designed to handle long-term dependencies in sequential data?",
+      "options": [
+        "CNN",
+        "LSTM",
+        "SVM",
+        "K-Means"
+      ],
+      "correctAnswer": "LSTM",
+      "explanation": "Long Short-Term Memory (LSTM) networks incorporate gating mechanisms (forget, input, and output gates) and a cell state to regulate information flow and preserve long-term dependencies."
+    },
+    {
+      "question": "5. What is the main purpose of the attention mechanism in sequence-to-sequence models?",
+      "options": [
+        "To resize images",
+        "To remove all input information",
+        "To reduce the number of classes",
+        "To focus on the most relevant parts of the input sequence"
+      ],
+      "correctAnswer": "To focus on the most relevant parts of the input sequence",
+      "explanation": "The attention mechanism enables the decoder to dynamically attend to and weigh the most relevant parts of the input sequence for each output token."
+    },
+    {
+      "question": "6. Computer vision mainly deals with:",
+      "options": [
+        "Understanding and analyzing images and videos",
+        "Managing computer networks",
+        "Designing databases",
+        "Writing operating systems"
+      ],
+      "correctAnswer": "Understanding and analyzing images and videos",
+      "explanation": "Computer vision is an interdisciplinary field of AI enabling computational systems to process, analyze, and interpret visual data from the real world."
+    },
+    {
+      "question": "7. Which of the following is a common computer vision task?",
+      "options": [
+        "Image classification",
+        "Object detection",
+        "Semantic segmentation",
+        "All of the above"
+      ],
+      "correctAnswer": "All of the above",
+      "explanation": "Image classification (labeling an image), object detection (localizing and categorizing objects with bounding boxes), and semantic segmentation (pixel-level labeling) are core tasks in computer vision."
+    },
+    {
+      "question": "8. What is image super-resolution used for?",
+      "options": [
+        "Increasing the resolution or quality of an image",
+        "Detecting passwords",
+        "Removing the image completely",
+        "Classifying text documents"
+      ],
+      "correctAnswer": "Increasing the resolution or quality of an image",
+      "explanation": "Image super-resolution reconstructs a high-resolution, sharp image from one or more degraded low-resolution input images."
+    },
+    {
+      "question": "9. Which of the following is an application of Generative AI in computer vision?",
+      "options": [
+        "Image-to-image translation",
+        "Medical image synthesis",
+        "Face synthesis",
+        "All of the above"
+      ],
+      "correctAnswer": "All of the above",
+      "explanation": "Generative AI powers numerous computer vision applications including style transfer/image translation (e.g., Pix2Pix, CycleGAN), synthetic medical imaging, and photorealistic face generation."
+    },
+    {
+      "question": "10. What is image in-painting?",
+      "options": [
+        "Converting an image into a table",
+        "Reducing the number of image classes",
+        "Filling or reconstructing missing regions of an image",
+        "Removing all colors from an image"
+      ],
+      "correctAnswer": "Filling or reconstructing missing regions of an image",
+      "explanation": "Image inpainting is the process of restoring or reconstructing missing, deteriorated, or intentionally masked parts of an image using context from surrounding regions."
+    }
+  ]
+}

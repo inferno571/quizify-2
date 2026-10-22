@@ -1,0 +1,1322 @@
+{
+  "id": "genai-cv-full-combined-test",
+  "title": "Generative AI for Computer Vision - Full Combined Grand Test (Weeks 1-12)",
+  "subject": "Generative AI for Computer Vision",
+  "date": "22/10/2026",
+  "questions": [
+    {
+      "question": "1. Which of the following is a generative model?",
+      "options": [
+        "ResNet",
+        "U-Net",
+        "GAN",
+        "AlexNet"
+      ],
+      "correctAnswer": "GAN",
+      "explanation": "GAN (Generative Adversarial Network) is a generative model designed to synthesize new data samples that resemble the training distribution, unlike discriminative architectures such as ResNet, U-Net, and AlexNet."
+    },
+    {
+      "question": "2. The main purpose of a generative vision model is to:",
+      "options": [
+        "Classify images",
+        "Detect objects",
+        "Generate new images",
+        "Compress images"
+      ],
+      "correctAnswer": "Generate new images",
+      "explanation": "The primary purpose of a generative vision model is to learn the underlying probability distribution of images and generate new, unseen visual samples."
+    },
+    {
+      "question": "3. Which of the following is an application of generative models in computer vision?",
+      "options": [
+        "Image synthesis",
+        "Image restoration",
+        "Data augmentation",
+        "All of the above"
+      ],
+      "correctAnswer": "All of the above",
+      "explanation": "Generative models in computer vision are used for image synthesis, image restoration (super-resolution, inpainting, denoising), and synthetic data augmentation."
+    },
+    {
+      "question": "4. A joint probability distribution describes:",
+      "options": [
+        "The probability of a single random variable",
+        "The probability of two or more random variables occurring together",
+        "Only independent events",
+        "Only continuous variables"
+      ],
+      "correctAnswer": "The probability of two or more random variables occurring together",
+      "explanation": "A joint probability distribution represents the probability that two or more random variables simultaneously take on specific values."
+    },
+    {
+      "question": "5. Correlation measures:",
+      "options": [
+        "The size of a dataset",
+        "The strength and direction of the relationship between two variables",
+        "The average value of a variable",
+        "The maximum value in a dataset"
+      ],
+      "correctAnswer": "The strength and direction of the relationship between two variables",
+      "explanation": "Correlation measures both the strength and the direction of the linear relationship between two variables."
+    },
+    {
+      "question": "6. Covariance tells us:",
+      "options": [
+        "Whether two variables change together",
+        "The average of a dataset",
+        "The maximum likelihood",
+        "The number of observations"
+      ],
+      "correctAnswer": "Whether two variables change together",
+      "explanation": "Covariance indicates the directional relationship between two variables—showing whether higher values of one variable correspond to higher (or lower) values of another."
+    },
+    {
+      "question": "7. The objective of Maximum Likelihood Estimation (MLE) is to:",
+      "options": [
+        "Minimize training time",
+        "Find parameter values that make the observed data most likely",
+        "Reduce the number of features",
+        "Increase the dataset size"
+      ],
+      "correctAnswer": "Find parameter values that make the observed data most likely",
+      "explanation": "The objective of Maximum Likelihood Estimation (MLE) is to find the model parameters that maximize the likelihood of the observed training dataset."
+    },
+    {
+      "question": "8. Bayesian learning combines:",
+      "options": [
+        "Prior knowledge and observed data",
+        "Only training data",
+        "Only test data",
+        "Random initialization"
+      ],
+      "correctAnswer": "Prior knowledge and observed data",
+      "explanation": "Bayesian learning uses Bayes' theorem to combine prior knowledge (prior distribution) and observed evidence/data to compute the posterior distribution."
+    },
+    {
+      "question": "9. Bayesian learning updates model parameters as new evidence becomes available.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "True",
+      "explanation": "In Bayesian inference, prior distributions are iteratively updated to posterior distributions as new empirical data or evidence becomes available."
+    },
+    {
+      "question": "10. Generative AI models can create new images that resemble the training data.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "True",
+      "explanation": "Generative AI models learn the statistical distribution of training images to synthesize novel images that closely resemble the training dataset."
+    },
+    {
+      "question": "11. The basic computational unit of an artificial neural network is called:",
+      "options": [
+        "Kernel",
+        "Neuron",
+        "Compiler",
+        "Database"
+      ],
+      "correctAnswer": "Neuron",
+      "explanation": "An artificial neuron (or node/perceptron) is the fundamental computational unit of an artificial neural network."
+    },
+    {
+      "question": "12. Which of the following is an application of neural networks?",
+      "options": [
+        "Image recognition",
+        "Speech recognition",
+        "Natural language processing",
+        "All of the above"
+      ],
+      "correctAnswer": "All of the above",
+      "explanation": "Neural networks are widely applied in computer vision (image recognition), audio processing (speech recognition), and natural language processing (NLP)."
+    },
+    {
+      "question": "13. A Single Layer Perceptron (SLP) can correctly solve:",
+      "options": [
+        "Linearly separable problems",
+        "Only non-linearly separable problems",
+        "All complex problems",
+        "No classification problems"
+      ],
+      "correctAnswer": "Linearly separable problems",
+      "explanation": "A Single Layer Perceptron creates a single linear decision boundary and can only separate classes that are linearly separable."
+    },
+    {
+      "question": "14. Which of the following is a major limitation of a Single Layer Perceptron?",
+      "options": [
+        "It cannot solve linearly separable problems",
+        "It cannot solve non-linearly separable problems such as XOR",
+        "It cannot accept numerical inputs",
+        "It always requires multiple hidden layers"
+      ],
+      "correctAnswer": "It cannot solve non-linearly separable problems such as XOR",
+      "explanation": "A major limitation of a Single Layer Perceptron is that it cannot solve non-linearly separable problems like the XOR function without hidden layers."
+    },
+    {
+      "question": "15. What is the main purpose of an activation function in a neural network?",
+      "options": [
+        "To introduce non-linearity into the network",
+        "To store the training data",
+        "To increase the number of input features",
+        "To remove all network weights"
+      ],
+      "correctAnswer": "To introduce non-linearity into the network",
+      "explanation": "Activation functions introduce non-linearities into neural networks, enabling them to learn complex, non-linear relationships rather than just linear combinations."
+    },
+    {
+      "question": "16. The Softmax activation function is commonly used in the output layer for:",
+      "options": [
+        "Multi-class classification",
+        "Image resizing",
+        "Data storage",
+        "Feature normalization only"
+      ],
+      "correctAnswer": "Multi-class classification",
+      "explanation": "The Softmax activation function converts raw output logits into a probability distribution summing to 1, making it ideal for multi-class classification."
+    },
+    {
+      "question": "17. During the forward pass of a neural network:",
+      "options": [
+        "Data moves from the input layer toward the output layer",
+        "Data moves only from the output layer to the input layer",
+        "Weights are always set to zero",
+        "The training data is deleted"
+      ],
+      "correctAnswer": "Data moves from the input layer toward the output layer",
+      "explanation": "During the forward pass, input data propagates forward through successive layers (calculating weighted sums and activations) to generate predictions at the output layer."
+    },
+    {
+      "question": "18. What is the main purpose of backpropagation during neural network training?",
+      "options": [
+        "To calculate gradients and help update the network weights",
+        "To add more training samples",
+        "To remove the output layer",
+        "To increase the number of classes"
+      ],
+      "correctAnswer": "To calculate gradients and help update the network weights",
+      "explanation": "Backpropagation computes the gradients of the loss function with respect to the network weights via the chain rule, enabling optimization algorithms (like SGD) to update the weights."
+    },
+    {
+      "question": "19. Overfitting occurs when:",
+      "options": [
+        "A model performs well on training data but poorly on unseen data",
+        "A model performs equally well on all datasets",
+        "A model has no trainable parameters",
+        "Training data is never used"
+      ],
+      "correctAnswer": "A model performs well on training data but poorly on unseen data",
+      "explanation": "Overfitting happens when a model memorizes patterns and noise specific to the training set, causing it to generalize poorly to unseen validation or test data."
+    },
+    {
+      "question": "20. Which of the following techniques can help reduce overfitting?",
+      "options": [
+        "Regularization",
+        "Early stopping",
+        "Cross-validation",
+        "All of the above"
+      ],
+      "correctAnswer": "All of the above",
+      "explanation": "Techniques such as weight regularization (L1/L2), dropout, early stopping, and cross-validation are standard methods to mitigate overfitting."
+    },
+    {
+      "question": "21. CNN stands for:",
+      "options": [
+        "Computer Neural Network",
+        "Convolutional Neural Network",
+        "Connected Neural Network",
+        "Complex Neural Network"
+      ],
+      "correctAnswer": "Convolutional Neural Network",
+      "explanation": "CNN stands for Convolutional Neural Network, a deep learning architecture specialized for grid-structured data such as images."
+    },
+    {
+      "question": "22. Each neuron in a convolutional layer is connected only to:",
+      "options": [
+        "a whole input image",
+        "a group of input images",
+        "a small local region (patch) of the input image",
+        "None of the above"
+      ],
+      "correctAnswer": "a small local region (patch) of the input image",
+      "explanation": "Each neuron in a convolutional layer is connected only to a small local region (patch) of the input instead of the entire input image, defined by its receptive field."
+    },
+    {
+      "question": "23. What is the primary purpose of the convolution layer in a CNN?",
+      "options": [
+        "Reduce image size",
+        "Extract features from the input image",
+        "Store training data",
+        "Calculate loss"
+      ],
+      "correctAnswer": "Extract features from the input image",
+      "explanation": "Convolution layers apply learnable filters to extract visual features such as edges, textures, and higher-level patterns from the input image."
+    },
+    {
+      "question": "24. Pooling is mainly used to:",
+      "options": [
+        "Increase the image size",
+        "Reduce the spatial dimensions of feature maps",
+        "Add more neurons",
+        "Increase the number of filters"
+      ],
+      "correctAnswer": "Reduce the spatial dimensions of feature maps",
+      "explanation": "Pooling reduces the spatial dimensions (height and width) of feature maps, which reduces computation and parameters while providing translation invariance."
+    },
+    {
+      "question": "25. Which of the following is a famous CNN architecture?",
+      "options": [
+        "AlexNet",
+        "Decision Tree",
+        "K-Means",
+        "Naïve Bayes"
+      ],
+      "correctAnswer": "AlexNet",
+      "explanation": "AlexNet is a landmark CNN architecture designed by Alex Krizhevsky, Ilya Sutskever, and Geoffrey Hinton that won the ImageNet Large Scale Visual Recognition Challenge in 2012."
+    },
+    {
+      "question": "26. Which CNN architecture introduced the Inception module?",
+      "options": [
+        "LeNet",
+        "AlexNet",
+        "GoogLeNet",
+        "VGGNet"
+      ],
+      "correctAnswer": "GoogLeNet",
+      "explanation": "GoogLeNet (Inception v1) introduced the Inception module to perform convolutions at multiple scales (1x1, 3x3, 5x5) and pooling in parallel within the same layer."
+    },
+    {
+      "question": "27. GoogLeNet is known for using:",
+      "options": [
+        "Inception Module",
+        "Only 1 × 1 filters",
+        "No convolution layers",
+        "Only pooling layers"
+      ],
+      "correctAnswer": "Inception Module",
+      "explanation": "GoogLeNet is famous for its Inception module, which combines multiple parallel convolution operations (including 1×1, 3×3, and 5×5 filters) to capture multi-scale features efficiently."
+    },
+    {
+      "question": "28. Which problem commonly occurs when very deep neural networks are trained?",
+      "options": [
+        "Vanishing gradient problem",
+        "Database corruption",
+        "Data duplication",
+        "Image compression"
+      ],
+      "correctAnswer": "Vanishing gradient problem",
+      "explanation": "In very deep networks, backpropagated gradients can shrink exponentially through many layers, causing earlier layers to learn very slowly or stall completely (vanishing gradient problem)."
+    },
+    {
+      "question": "29. Which activation function helps reduce the vanishing gradient problem?",
+      "options": [
+        "ReLU",
+        "Linear",
+        "Step Function",
+        "Identity Function"
+      ],
+      "correctAnswer": "ReLU",
+      "explanation": "ReLU (Rectified Linear Unit) has a constant gradient of 1 for all positive inputs, avoiding gradient saturation and mitigating the vanishing gradient problem in deep networks."
+    },
+    {
+      "question": "30. True/False? Increasing the number of layers always improves the performance of a neural network.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "False",
+      "explanation": "Simply making a network deeper does not always improve performance because deep networks can suffer from vanishing/exploding gradients, optimization degradation, and overfitting."
+    },
+    {
+      "question": "31. What is the main idea behind ResNet?",
+      "options": [
+        "To reduce image size",
+        "To use residual (skip) connections",
+        "To remove convolution layers",
+        "To replace activation functions"
+      ],
+      "correctAnswer": "To use residual (skip) connections",
+      "explanation": "ResNet introduces residual (skip) connections that allow information to bypass intermediate layers, enabling the training of networks with hundreds of layers."
+    },
+    {
+      "question": "32. A skip (residual) connection allows information to:",
+      "options": [
+        "Skip one or more layers",
+        "Skip the input image",
+        "Skip the output layer",
+        "Skip the loss function"
+      ],
+      "correctAnswer": "Skip one or more layers",
+      "explanation": "A skip connection directly forwards the input of a layer/block to its output by identity mapping, skipping one or more intermediate transformation layers."
+    },
+    {
+      "question": "33. What is the main advantage of skip connections?",
+      "options": [
+        "They increase image resolution.",
+        "They reduce the number of classes.",
+        "They remove pooling layers.",
+        "They help reduce the vanishing gradient problem."
+      ],
+      "correctAnswer": "They help reduce the vanishing gradient problem.",
+      "explanation": "Skip connections provide a direct highway for gradients to flow backwards during backpropagation, effectively preventing the vanishing gradient problem."
+    },
+    {
+      "question": "34. DenseNet differs from ResNet because:",
+      "options": [
+        "Each layer is connected to every previous layer.",
+        "It has no convolution layers.",
+        "It uses only fully connected layers.",
+        "It cannot perform image classification."
+      ],
+      "correctAnswer": "Each layer is connected to every previous layer.",
+      "explanation": "In DenseNet (Densely Connected Convolutional Networks), each layer receives feature maps concatenated from all preceding layers, maximizing feature reuse and gradient flow."
+    },
+    {
+      "question": "35. Which CNN architecture is specifically designed for handheld and embedded devices?",
+      "options": [
+        "AlexNet",
+        "VGGNet",
+        "MobileNet",
+        "LeNet"
+      ],
+      "correctAnswer": "MobileNet",
+      "explanation": "MobileNet uses depthwise separable convolutions to dramatically reduce parameter count and computational complexity, making it ideal for mobile and embedded devices."
+    },
+    {
+      "question": "36. EfficientNet mainly improves performance by:",
+      "options": [
+        "Removing convolution layers",
+        "Scaling network depth, width, and resolution synchronously",
+        "Using only larger filters",
+        "Eliminating activation functions"
+      ],
+      "correctAnswer": "Scaling network depth, width, and resolution synchronously",
+      "explanation": "EfficientNet introduces compound scaling, uniformly scaling network depth, width, and image resolution with a fixed compound coefficient for optimal accuracy and efficiency."
+    },
+    {
+      "question": "37. Sequence modeling is mainly used for:",
+      "options": [
+        "Processing sequential data",
+        "Image compression",
+        "Database management",
+        "Network security"
+      ],
+      "correctAnswer": "Processing sequential data",
+      "explanation": "Sequence modeling deals with sequential, time-dependent data where the order of elements carries semantic meaning, such as text, speech, and time-series."
+    },
+    {
+      "question": "38. RNN stands for:",
+      "options": [
+        "Repeated Neural Network",
+        "Residual Neural Network",
+        "Recurrent Neural Network",
+        "Random Neural Network"
+      ],
+      "correctAnswer": "Recurrent Neural Network",
+      "explanation": "RNN stands for Recurrent Neural Network, an architecture designed to process sequential data by maintaining an internal recurrent state."
+    },
+    {
+      "question": "39. Which of the following is a common application of RNN?",
+      "options": [
+        "Sorting numbers",
+        "Image resizing",
+        "Data compression",
+        "Language translation"
+      ],
+      "correctAnswer": "Language translation",
+      "explanation": "RNNs and recurrent sequence-to-sequence models are widely used for sequential applications such as machine translation, speech recognition, and language modeling."
+    },
+    {
+      "question": "40. The main feature of an RNN is that it:",
+      "options": [
+        "Has no hidden layers",
+        "Uses only convolution operations",
+        "Uses temporal context while processing sequences",
+        "Can process only images"
+      ],
+      "correctAnswer": "Uses temporal context while processing sequences",
+      "explanation": "RNNs maintain a recurring hidden state that preserves historical context across time steps, allowing the model to use temporal context while processing sequences."
+    },
+    {
+      "question": "41. What is the main purpose of Backpropagation Through Time (BPTT) in an RNN?",
+      "options": [
+        "To generate images",
+        "To train the RNN by computing gradients over time",
+        "To increase image resolution",
+        "To remove the hidden state"
+      ],
+      "correctAnswer": "To train the RNN by computing gradients over time",
+      "explanation": "BPTT unrolls the RNN across the sequence time steps and propagates gradients backward through time to update network parameters."
+    },
+    {
+      "question": "42. In a character-level RNN, the model processes:",
+      "options": [
+        "Only numerical tables",
+        "Only complete images",
+        "Individual characters in a sequence",
+        "Only audio signals"
+      ],
+      "correctAnswer": "Individual characters in a sequence",
+      "explanation": "In character-level modeling, the RNN processes one character at each time step, learning vocabulary structure, spelling, and character transitions."
+    },
+    {
+      "question": "43. Which problem is commonly associated with traditional RNNs?",
+      "options": [
+        "Vanishing gradient problem",
+        "Image resizing problem",
+        "Object detection problem",
+        "Image compression problem"
+      ],
+      "correctAnswer": "Vanishing gradient problem",
+      "explanation": "In standard RNNs, gradients propagated over many time steps undergo repeated matrix multiplications, often shrinking exponentially (vanishing gradients) and hindering long-term dependency learning."
+    },
+    {
+      "question": "44. Which neural network architecture is specifically designed to handle long-term dependencies in sequential data?",
+      "options": [
+        "CNN",
+        "LSTM",
+        "SVM",
+        "K-Means"
+      ],
+      "correctAnswer": "LSTM",
+      "explanation": "Long Short-Term Memory (LSTM) networks incorporate gating mechanisms (forget, input, and output gates) and a cell state to regulate information flow and preserve long-term dependencies."
+    },
+    {
+      "question": "45. What is the main purpose of the attention mechanism in sequence-to-sequence models?",
+      "options": [
+        "To resize images",
+        "To remove all input information",
+        "To reduce the number of classes",
+        "To focus on the most relevant parts of the input sequence"
+      ],
+      "correctAnswer": "To focus on the most relevant parts of the input sequence",
+      "explanation": "The attention mechanism enables the decoder to dynamically attend to and weigh the most relevant parts of the input sequence for each output token."
+    },
+    {
+      "question": "46. Computer vision mainly deals with:",
+      "options": [
+        "Understanding and analyzing images and videos",
+        "Managing computer networks",
+        "Designing databases",
+        "Writing operating systems"
+      ],
+      "correctAnswer": "Understanding and analyzing images and videos",
+      "explanation": "Computer vision is an interdisciplinary field of AI enabling computational systems to process, analyze, and interpret visual data from the real world."
+    },
+    {
+      "question": "47. Which of the following is a common computer vision task?",
+      "options": [
+        "Image classification",
+        "Object detection",
+        "Semantic segmentation",
+        "All of the above"
+      ],
+      "correctAnswer": "All of the above",
+      "explanation": "Image classification (labeling an image), object detection (localizing and categorizing objects with bounding boxes), and semantic segmentation (pixel-level labeling) are core tasks in computer vision."
+    },
+    {
+      "question": "48. What is image super-resolution used for?",
+      "options": [
+        "Increasing the resolution or quality of an image",
+        "Detecting passwords",
+        "Removing the image completely",
+        "Classifying text documents"
+      ],
+      "correctAnswer": "Increasing the resolution or quality of an image",
+      "explanation": "Image super-resolution reconstructs a high-resolution, sharp image from one or more degraded low-resolution input images."
+    },
+    {
+      "question": "49. Which of the following is an application of Generative AI in computer vision?",
+      "options": [
+        "Image-to-image translation",
+        "Medical image synthesis",
+        "Face synthesis",
+        "All of the above"
+      ],
+      "correctAnswer": "All of the above",
+      "explanation": "Generative AI powers numerous computer vision applications including style transfer/image translation (e.g., Pix2Pix, CycleGAN), synthetic medical imaging, and photorealistic face generation."
+    },
+    {
+      "question": "50. What is image in-painting?",
+      "options": [
+        "Converting an image into a table",
+        "Reducing the number of image classes",
+        "Filling or reconstructing missing regions of an image",
+        "Removing all colors from an image"
+      ],
+      "correctAnswer": "Filling or reconstructing missing regions of an image",
+      "explanation": "Image inpainting is the process of restoring or reconstructing missing, deteriorated, or intentionally masked parts of an image using context from surrounding regions."
+    },
+    {
+      "question": "51. What is the main goal of a generative model?",
+      "options": [
+        "To generate new data similar to the training data",
+        "To delete the training data",
+        "To sort the input data",
+        "To reduce the number of classes"
+      ],
+      "correctAnswer": "To generate new data similar to the training data",
+      "explanation": "Generative models learn the underlying true data distribution p(x) in order to sample and generate new data instances that closely resemble the training distribution."
+    },
+    {
+      "question": "52. What does Maximum Likelihood Estimation (MLE) try to find?",
+      "options": [
+        "The largest image",
+        "The smallest dataset",
+        "Parameters that make the observed data most likely",
+        "The number of classes"
+      ],
+      "correctAnswer": "Parameters that make the observed data most likely",
+      "explanation": "Maximum Likelihood Estimation estimates model parameters by selecting values that maximize the probability (likelihood) of observing the given dataset."
+    },
+    {
+      "question": "53. What is density estimation used for?",
+      "options": [
+        "Increasing image resolution",
+        "Estimating the probability distribution of data",
+        "Removing image noise only",
+        "Detecting computer viruses"
+      ],
+      "correctAnswer": "Estimating the probability distribution of data",
+      "explanation": "Density estimation involves constructing an estimate of an unobservable underlying probability density function based on observed data."
+    },
+    {
+      "question": "54. What is an autoregressive model?",
+      "options": [
+        "A model that predicts the current value using previous values",
+        "A model that only processes images",
+        "A model that does not use previous information",
+        "A model used only for data compression"
+      ],
+      "correctAnswer": "A model that predicts the current value using previous values",
+      "explanation": "An autoregressive model uses the chain rule of probability to predict each subsequent variable conditioned on all previously generated/observed values."
+    },
+    {
+      "question": "55. PixelCNN is mainly used for:",
+      "options": [
+        "Compressing text documents",
+        "Detecting computer hardware problems",
+        "Sorting image files",
+        "Generating images pixel by pixel"
+      ],
+      "correctAnswer": "Generating images pixel by pixel",
+      "explanation": "PixelCNN is a generative autoregressive neural network that generates images sequentially pixel by pixel using masked convolutions to model dependencies."
+    },
+    {
+      "question": "56. In PixelRNN, the name \"RNN\" refers to:",
+      "options": [
+        "Recurrent Neural Network",
+        "Residual Neural Network",
+        "Random Neural Network",
+        "Recursive Normal Network"
+      ],
+      "correctAnswer": "Recurrent Neural Network",
+      "explanation": "PixelRNN uses recurrent neural networks (such as Diagonal BiLSTM or Row LSTM) to model sequential pixel dependencies during image generation."
+    },
+    {
+      "question": "57. What does spatial context in an image refer to?",
+      "options": [
+        "Only the image file size",
+        "Information about the relationships between nearby or different regions in an image",
+        "The number of image classes",
+        "The image file name"
+      ],
+      "correctAnswer": "Information about the relationships between nearby or different regions in an image",
+      "explanation": "Spatial context captures geometric and positional relationships between adjacent pixels, visual patches, or semantic entities across an image."
+    },
+    {
+      "question": "58. Image captioning aims to:",
+      "options": [
+        "Change the image file format",
+        "Increase image resolution",
+        "Remove objects from an image",
+        "Generate a textual description of an image"
+      ],
+      "correctAnswer": "Generate a textual description of an image",
+      "explanation": "Image captioning bridges computer vision and natural language processing to produce natural language descriptions describing the contents of an image."
+    },
+    {
+      "question": "59. What is the main purpose of attention in image captioning?",
+      "options": [
+        "To remove all image features",
+        "To reduce the image file size",
+        "To focus on relevant parts of an image while generating a caption",
+        "To change the image color"
+      ],
+      "correctAnswer": "To focus on relevant parts of an image while generating a caption",
+      "explanation": "Attention mechanisms allow an image captioning model to dynamically focus on relevant spatial regions of the image corresponding to each generated word."
+    },
+    {
+      "question": "60. A Fully Visible Belief Network (FVBN) is a type of:",
+      "options": [
+        "Operating system",
+        "Image editing software",
+        "Database system",
+        "Generative model"
+      ],
+      "correctAnswer": "Generative model",
+      "explanation": "A Fully Visible Belief Network (FVBN) is an autoregressive generative model where all variables are observed and their joint distribution is factorized via conditional probabilities."
+    },
+    {
+      "question": "61. What is the main purpose of the attention mechanism?",
+      "options": [
+        "To focus on the most relevant parts of the input",
+        "To remove all input information",
+        "To reduce the number of classes",
+        "To increase image size"
+      ],
+      "correctAnswer": "To focus on the most relevant parts of the input",
+      "explanation": "The attention mechanism enables neural networks to compute dynamic importance weights and focus selectively on the most relevant components of the input."
+    },
+    {
+      "question": "62. In self-attention, the model mainly relates:",
+      "options": [
+        "Only the first and last elements",
+        "Only the input and output images",
+        "Different training datasets",
+        "Different parts of the same input sequence"
+      ],
+      "correctAnswer": "Different parts of the same input sequence",
+      "explanation": "Self-attention (intra-attention) relates different positions within the same input sequence to compute a contextualized representation of that sequence."
+    },
+    {
+      "question": "63. What is the purpose of masked self-attention?",
+      "options": [
+        "To prevent a position from attending to future positions",
+        "To remove all attention scores",
+        "To increase the image resolution",
+        "To remove the input sequence"
+      ],
+      "correctAnswer": "To prevent a position from attending to future positions",
+      "explanation": "Masked self-attention applies an upper-triangular mask (setting future positions to negative infinity) to prevent autoregressive models from attending to subsequent tokens during generation."
+    },
+    {
+      "question": "64. Multi-head self-attention uses:",
+      "options": [
+        "Multiple input images only",
+        "Only one attention score",
+        "Multiple attention heads to capture different relationships",
+        "No attention mechanism"
+      ],
+      "correctAnswer": "Multiple attention heads to capture different relationships",
+      "explanation": "Multi-head attention projects queries, keys, and values into multiple representation subspaces, allowing the model to jointly attend to different types of contextual relationships."
+    },
+    {
+      "question": "65. A Transformer is mainly based on:",
+      "options": [
+        "Pooling only",
+        "Attention mechanisms",
+        "Decision trees",
+        "K-means clustering"
+      ],
+      "correctAnswer": "Attention mechanisms",
+      "explanation": "Transformers rely entirely on self-attention and cross-attention mechanisms to model relationships between input elements, eliminating recurrence and convolutions."
+    },
+    {
+      "question": "66. How does a Vision Transformer (ViT) process an image?",
+      "options": [
+        "It uses only pooling layers",
+        "It converts the image directly into audio",
+        "It removes all image information",
+        "It divides the image into patches and processes them as tokens"
+      ],
+      "correctAnswer": "It divides the image into patches and processes them as tokens",
+      "explanation": "Vision Transformers divide an image into fixed-size non-overlapping patches (e.g., 16×16), linearly project them into patch embeddings, prepend a class token, add positional embeddings, and feed them into a standard Transformer encoder."
+    },
+    {
+      "question": "67. One major difference between a Transformer and a CNN is that:",
+      "options": [
+        "Transformers use attention to model relationships between input elements",
+        "Transformers cannot process images",
+        "CNNs do not have trainable parameters",
+        "CNNs can only process text"
+      ],
+      "correctAnswer": "Transformers use attention to model relationships between input elements",
+      "explanation": "Unlike CNNs that rely on localized convolution kernels with fixed receptive fields, Transformers use self-attention to model global dependencies directly across all input elements."
+    },
+    {
+      "question": "68. What is the main role of the Transformer encoder?",
+      "options": [
+        "To increase image resolution",
+        "To delete the input sequence",
+        "To transform the input into useful contextual representations",
+        "To store training data"
+      ],
+      "correctAnswer": "To transform the input into useful contextual representations",
+      "explanation": "The Transformer encoder processes the input embeddings through multi-head self-attention and feed-forward sublayers to generate rich, contextualized representations."
+    },
+    {
+      "question": "69. What is the purpose of input embedding?",
+      "options": [
+        "To convert input tokens into numerical vector representations",
+        "To remove the input tokens",
+        "To increase the number of images",
+        "To calculate the final accuracy"
+      ],
+      "correctAnswer": "To convert input tokens into numerical vector representations",
+      "explanation": "Input embedding maps discrete input tokens (such as word tokens or flattened image patches) into continuous dense vector representations suitable for neural network processing."
+    },
+    {
+      "question": "70. Why is positional encoding used in a Transformer?",
+      "options": [
+        "To remove the input sequence",
+        "To provide information about the position or order of input elements",
+        "To reduce the number of attention heads",
+        "To increase the image resolution"
+      ],
+      "correctAnswer": "To provide information about the position or order of input elements",
+      "explanation": "Because self-attention is permutation-invariant and lacks inherent recurrence or convolution, positional encodings are injected into the input embeddings to provide information about the sequential ordering of elements."
+    },
+    {
+      "question": "71. What is the main idea of a Vision Transformer (ViT)?",
+      "options": [
+        "To process images using image patches as tokens",
+        "To process only audio signals",
+        "To remove all image features",
+        "To replace images with text"
+      ],
+      "correctAnswer": "To process images using image patches as tokens",
+      "explanation": "Vision Transformer divides an image into smaller patches and treats these patches as tokens that can be processed using Transformer mechanisms."
+    },
+    {
+      "question": "72. DETR stands for:",
+      "options": [
+        "Deep Efficient Transformer Recognition",
+        "Detection Transformer",
+        "Deep Encoder Transformer Representation",
+        "Detection Training Recognition"
+      ],
+      "correctAnswer": "Detection Transformer",
+      "explanation": "DETR stands for DEtection TRansformer and uses a Transformer-based architecture for object detection."
+    },
+    {
+      "question": "73. What is a key feature of the Swin Transformer?",
+      "options": [
+        "It uses shifted windows for self-attention",
+        "It uses only fully connected layers",
+        "It does not use attention",
+        "It processes only text"
+      ],
+      "correctAnswer": "It uses shifted windows for self-attention",
+      "explanation": "Swin Transformer uses local windows for self-attention and shifts these windows between layers to allow information exchange between neighboring windows."
+    },
+    {
+      "question": "74. What is the main purpose of an Auto-Encoder?",
+      "options": [
+        "To increase the number of input features",
+        "To classify only images",
+        "To learn a compact representation of the input data",
+        "To remove the decoder"
+      ],
+      "correctAnswer": "To learn a compact representation of the input data",
+      "explanation": "An Auto-Encoder learns to encode input data into a compact representation and then reconstruct the original input."
+    },
+    {
+      "question": "75. An Auto-Encoder mainly consists of:",
+      "options": [
+        "Only an Encoder",
+        "Encoder and Decoder",
+        "Only a Decoder",
+        "Classifier and Pooling layer"
+      ],
+      "correctAnswer": "Encoder and Decoder",
+      "explanation": "An Auto-Encoder has two main parts: the encoder, which creates a compact representation, and the decoder, which reconstructs the input."
+    },
+    {
+      "question": "76. Which of the following is a difference between a Variational Auto-Encoder (VAE) and a traditional Auto-Encoder?",
+      "options": [
+        "VAE cannot generate data",
+        "VAE does not have an encoder",
+        "VAE does not have a decoder",
+        "VAE learns a probability distribution for the latent representation"
+      ],
+      "correctAnswer": "VAE learns a probability distribution for the latent representation",
+      "explanation": "A VAE learns a probability distribution over the latent space, allowing it to sample new latent representations and generate new data."
+    },
+    {
+      "question": "77. In a VAE, the typical sequence of operations is:",
+      "options": [
+        "Decoding → Encoding → Sampling",
+        "Sampling → Decoding → Encoding",
+        "Encoding → Sampling → Decoding",
+        "Decoding → Sampling → Encoding"
+      ],
+      "correctAnswer": "Encoding → Sampling → Decoding",
+      "explanation": "In a VAE, the input is first encoded into parameters of a latent distribution, a latent vector is sampled, and the decoder uses that sample to reconstruct or generate data."
+    },
+    {
+      "question": "78. In a VAE, the latent variable is generally:",
+      "options": [
+        "A sampled representation of the input",
+        "The original input image",
+        "The final output label",
+        "The training dataset"
+      ],
+      "correctAnswer": "A sampled representation of the input",
+      "explanation": "The latent variable is sampled from the distribution learned by the encoder and is used by the decoder to reconstruct or generate data."
+    },
+    {
+      "question": "79. In a VAE, why is sampling performed in the latent space?",
+      "options": [
+        "To enable generation of different possible outputs",
+        "To remove the encoder",
+        "To reduce the image resolution",
+        "To calculate classification accuracy"
+      ],
+      "correctAnswer": "To enable generation of different possible outputs",
+      "explanation": "Sampling allows a VAE to generate different data samples from its learned latent distribution."
+    },
+    {
+      "question": "80. What is the main purpose of the problem formulation in a VAE?",
+      "options": [
+        "To remove the latent space",
+        "To increase the number of images",
+        "To define how the input data and its underlying probability distribution are modelled",
+        "To replace the decoder with a CNN"
+      ],
+      "correctAnswer": "To define how the input data and its underlying probability distribution are modelled",
+      "explanation": "The problem formulation specifies how the observed data is related to latent variables and how the model can learn a useful probability distribution for generating data."
+    },
+    {
+      "question": "81. What is the main purpose of a Generative Adversarial Network (GAN)?",
+      "options": [
+        "To generate new data similar to the training data",
+        "To only classify images",
+        "To remove all training data",
+        "To perform only object detection"
+      ],
+      "correctAnswer": "To generate new data similar to the training data",
+      "explanation": "The main purpose of a Generative Adversarial Network (GAN) is to generate new, synthetic data samples that closely mimic the distribution of the training data."
+    },
+    {
+      "question": "82. A GAN mainly consists of which two networks?",
+      "options": [
+        "Encoder and Decoder",
+        "Generator and Discriminator",
+        "Classifier and Regressor",
+        "Transformer and CNN"
+      ],
+      "correctAnswer": "Generator and Discriminator",
+      "explanation": "A GAN consists of two competing neural networks: a Generator that creates synthetic data samples and a Discriminator that distinguishes between real and generated samples."
+    },
+    {
+      "question": "83. What is the main role of the Generator in a GAN?",
+      "options": [
+        "To distinguish real and fake data",
+        "To generate fake data samples",
+        "To calculate image labels",
+        "To remove noise from the dataset"
+      ],
+      "correctAnswer": "To generate fake data samples",
+      "explanation": "The Generator takes random noise as input and maps it to realistic synthetic data samples aimed at deceiving the Discriminator."
+    },
+    {
+      "question": "84. What is a common problem when training GANs?",
+      "options": [
+        "Always producing different classes",
+        "Too many input labels",
+        "No training data required",
+        "Mode collapse"
+      ],
+      "correctAnswer": "Mode collapse",
+      "explanation": "Mode collapse is a classic failure mode during GAN training where the Generator produces only a limited variety of outputs, repeatedly generating the same or similar samples."
+    },
+    {
+      "question": "85. What is the main idea of a Conditional GAN (cGAN)?",
+      "options": [
+        "It generates data based on additional information such as class labels",
+        "It removes the Generator",
+        "It does not use a Discriminator",
+        "It can only generate random noise"
+      ],
+      "correctAnswer": "It generates data based on additional information such as class labels",
+      "explanation": "Conditional GANs (cGANs) condition both the Generator and Discriminator on additional auxiliary information (such as class labels or text) to control the generation process."
+    },
+    {
+      "question": "86. What is the main purpose of Wasserstein GAN (WGAN)?",
+      "options": [
+        "To classify only text data",
+        "To remove the Generator",
+        "To improve the stability of GAN training",
+        "To increase image size only"
+      ],
+      "correctAnswer": "To improve the stability of GAN training",
+      "explanation": "Wasserstein GAN utilizes the Earth Mover's (Wasserstein-1) Distance to provide smooth, meaningful gradients everywhere, significantly improving training stability and alleviating mode collapse."
+    },
+    {
+      "question": "87. What happens during the forward diffusion process in a diffusion model?",
+      "options": [
+        "The model directly generates the final image",
+        "Noise is completely removed from the data",
+        "Images are converted into labels",
+        "Noise is gradually added to the data"
+      ],
+      "correctAnswer": "Noise is gradually added to the data",
+      "explanation": "In the forward diffusion process, Gaussian noise is gradually added to an image across discrete time steps until it becomes pure random noise."
+    },
+    {
+      "question": "88. What happens during reverse diffusion?",
+      "options": [
+        "Noise is gradually removed to generate data",
+        "More noise is continuously added",
+        "The training dataset is deleted",
+        "The model only performs classification"
+      ],
+      "correctAnswer": "Noise is gradually removed to generate data",
+      "explanation": "In reverse diffusion, a trained neural network iteratively predicts and removes noise from a random Gaussian sample to synthesize a clean, high-quality image."
+    },
+    {
+      "question": "89. What is the full form of DDPM?",
+      "options": [
+        "Designated Diffusion Prior Model",
+        "Digital Driven Diffusion Model",
+        "Denoising Diffusion Probabilistic Model",
+        "Deterministic Diffusion for Priority Management"
+      ],
+      "correctAnswer": "Denoising Diffusion Probabilistic Model",
+      "explanation": "DDPM stands for Denoising Diffusion Probabilistic Model, a foundational class of generative models introduced by Ho et al. (2020)."
+    },
+    {
+      "question": "90. What is the main purpose of the ELBO in a VAE or diffusion-model formulation?",
+      "options": [
+        "To replace the training dataset",
+        "To remove the latent variables",
+        "To increase image resolution only",
+        "To provide an objective for learning the generative model"
+      ],
+      "correctAnswer": "To provide an objective for learning the generative model",
+      "explanation": "The Evidence Lower Bound (ELBO) provides a mathematically tractable surrogate objective function to maximize the log-likelihood of observed data in latent variable models."
+    },
+    {
+      "question": "91. What is the main purpose of a Large Language Model (LLM)?",
+      "options": [
+        "To understand and generate human-like text",
+        "To only process images",
+        "To remove all text from a dataset",
+        "To perform only image classification"
+      ],
+      "correctAnswer": "To understand and generate human-like text",
+      "explanation": "An LLM is trained to process and generate text by learning patterns and relationships in large amounts of language data."
+    },
+    {
+      "question": "92. Which architecture is commonly used to build modern Large Language Models?",
+      "options": [
+        "K-Means",
+        "Decision Tree",
+        "Transformer",
+        "Support Vector Machine"
+      ],
+      "correctAnswer": "Transformer",
+      "explanation": "Modern LLMs commonly use the Transformer architecture because it can efficiently model relationships between tokens in a sequence."
+    },
+    {
+      "question": "93. What is the purpose of tokenization in an LLM?",
+      "options": [
+        "To convert text into smaller units that the model can process",
+        "To convert text directly into images",
+        "To remove the language model",
+        "To increase image resolution"
+      ],
+      "correctAnswer": "To convert text into smaller units that the model can process",
+      "explanation": "Tokenization converts text into tokens, such as words, subwords, or characters, which can then be converted into numerical representations for the model."
+    },
+    {
+      "question": "94. What is the main purpose of pre-training an LLM?",
+      "options": [
+        "To perform only object detection",
+        "To train only on one image",
+        "To remove all model parameters",
+        "To learn general patterns from a large amount of text data"
+      ],
+      "correctAnswer": "To learn general patterns from a large amount of text data",
+      "explanation": "During pre-training, an LLM learns general language patterns, relationships, and knowledge from a large collection of text data."
+    },
+    {
+      "question": "95. What is fine-tuning in an LLM?",
+      "options": [
+        "Deleting the pre-trained model",
+        "Further training a pre-trained model for a specific task or domain",
+        "Training without any data",
+        "Converting text into images"
+      ],
+      "correctAnswer": "Further training a pre-trained model for a specific task or domain",
+      "explanation": "Fine-tuning adapts a pre-trained model to perform better on a particular task, dataset, or domain."
+    },
+    {
+      "question": "96. What is the main purpose of a Vision-Language Model (VLM)?",
+      "options": [
+        "To process only numerical data",
+        "To understand information from both images and language",
+        "To process only audio signals",
+        "To remove visual information"
+      ],
+      "correctAnswer": "To understand information from both images and language",
+      "explanation": "VLMs combine visual and language information so that the model can understand relationships between images and text."
+    },
+    {
+      "question": "97. What is the role of the Vision Encoder in a VLM?",
+      "options": [
+        "To remove the language encoder",
+        "To generate only text labels",
+        "To extract useful features from images",
+        "To calculate training accuracy only"
+      ],
+      "correctAnswer": "To extract useful features from images",
+      "explanation": "The Vision Encoder converts an input image into visual feature representations that can be used by the multimodal model."
+    },
+    {
+      "question": "98. What is the purpose of Vision-Language Alignment?",
+      "options": [
+        "To align visual and textual representations in a common representation space",
+        "To remove image information",
+        "To train only the language encoder",
+        "To convert all images into audio"
+      ],
+      "correctAnswer": "To align visual and textual representations in a common representation space",
+      "explanation": "Vision-language alignment helps the model learn meaningful relationships between visual features and their corresponding textual representations."
+    },
+    {
+      "question": "99. What is the main purpose of Cross-Modal Attention in a VLM?",
+      "options": [
+        "To allow information from one modality to interact with another modality",
+        "To remove both modalities",
+        "To process only images",
+        "To process only text"
+      ],
+      "correctAnswer": "To allow information from one modality to interact with another modality",
+      "explanation": "Cross-modal attention allows information from one modality, such as vision, to influence the processing of another modality, such as language."
+    },
+    {
+      "question": "100. What is Contrastive Learning used for in Vision-Language Models?",
+      "options": [
+        "To remove all image-text pairs",
+        "To learn similar representations for matching image-text pairs",
+        "To train only an image classifier",
+        "To increase image resolution"
+      ],
+      "correctAnswer": "To learn similar representations for matching image-text pairs",
+      "explanation": "Contrastive learning encourages matching image-text pairs to have similar representations while separating unrelated image-text pairs."
+    },
+    {
+      "question": "101. What is the main purpose of the CLIP model?",
+      "options": [
+        "To remove noise from images",
+        "To compress images",
+        "To learn the relationship between images and text",
+        "To detect edges in images"
+      ],
+      "correctAnswer": "To learn the relationship between images and text",
+      "explanation": "CLIP (Contrastive Language-Image Pre-training) is designed to learn joint representations bridging images and natural language text from vast web-scale datasets."
+    },
+    {
+      "question": "102. What are the two main encoders used in CLIP?",
+      "options": [
+        "Image Encoder and Text Encoder",
+        "Encoder and Decoder",
+        "Generator and Discriminator",
+        "CNN and RNN"
+      ],
+      "correctAnswer": "Image Encoder and Text Encoder",
+      "explanation": "CLIP consists of two separate encoders: an Image Encoder (such as a ViT or ResNet) and a Text Encoder (a Transformer) that project both modalities into a shared embedding space."
+    },
+    {
+      "question": "103. What type of learning is used in CLIP to match images with their corresponding text?",
+      "options": [
+        "Reinforcement learning",
+        "Contrastive learning",
+        "Supervised regression",
+        "Clustering"
+      ],
+      "correctAnswer": "Contrastive learning",
+      "explanation": "CLIP employs contrastive learning using InfoNCE loss to maximize the cosine similarity of true image-text pairs while minimizing similarity for mismatched pairs in a batch."
+    },
+    {
+      "question": "104. One of CLIP's important capabilities is:",
+      "options": [
+        "Image compression",
+        "Zero-shot classification",
+        "Image restoration",
+        "Image segmentation only"
+      ],
+      "correctAnswer": "Zero-shot classification",
+      "explanation": "Because CLIP embeds images and text descriptions into the same space, it can classify images among unseen classes zero-shot simply by matching image embeddings to prompt embeddings (e.g., 'a photo of a [label]')."
+    },
+    {
+      "question": "105. What is the purpose of prompt engineering in CLIP?",
+      "options": [
+        "Designing suitable text prompts",
+        "Increasing image resolution",
+        "Removing the image encoder",
+        "Adding convolutional layers"
+      ],
+      "correctAnswer": "Designing suitable text prompts",
+      "explanation": "Prompt engineering in CLIP involves formulating effective text query templates (e.g., 'a photo of a {category}') to guide the text encoder and maximize classification accuracy."
+    },
+    {
+      "question": "106. What type of data is mainly used to train CLIP?",
+      "options": [
+        "Only numerical data",
+        "Only images",
+        "Only audio files",
+        "Image-text pairs"
+      ],
+      "correctAnswer": "Image-text pairs",
+      "explanation": "CLIP is trained on 400 million (image, text) pairs collected from the internet, enabling broad semantic grounding across diverse concepts."
+    },
+    {
+      "question": "107. What is multimodal fusion?",
+      "options": [
+        "Combining information from different modalities",
+        "Removing one modality",
+        "Using only image information",
+        "Converting images into labels"
+      ],
+      "correctAnswer": "Combining information from different modalities",
+      "explanation": "Multimodal fusion refers to integrating information from multiple distinct sensory or data modalities (e.g., vision, language, audio) into unified representations."
+    },
+    {
+      "question": "108. What is a Multimodal Large Language Model (MLLM) designed to process?",
+      "options": [
+        "Only numerical data",
+        "Multiple types of information such as text and images",
+        "Only images",
+        "Only audio"
+      ],
+      "correctAnswer": "Multiple types of information such as text and images",
+      "explanation": "Multimodal Large Language Models (such as LLaVA, GPT-4V, and Gemini) process, reason over, and synthesize multiple input modalities including text, vision, and diagrams."
+    },
+    {
+      "question": "109. What is the goal of Text-to-Image Generation?",
+      "options": [
+        "Generate an image from a text description",
+        "Convert an image into a text file",
+        "Compress a text document",
+        "Classify text into categories"
+      ],
+      "correctAnswer": "Generate an image from a text description",
+      "explanation": "Text-to-image generation aims to synthesize visually coherent, high-fidelity images that accurately reflect the semantics described in a natural language text prompt."
+    },
+    {
+      "question": "110. What is a major challenge in multimodal generative models?",
+      "options": [
+        "Removing all text information",
+        "Increasing keyboard speed",
+        "Reducing the number of image pixels only",
+        "Understanding and aligning information from different modalities"
+      ],
+      "correctAnswer": "Understanding and aligning information from different modalities",
+      "explanation": "A foundational challenge in multimodal generative modeling is accurately learning cross-modal alignment—binding fine-grained text concepts to spatial visual elements faithfully without hallucinations."
+    },
+    {
+      "question": "111. What is the main idea of Agentic AI?",
+      "options": [
+        "AI systems that only classify images",
+        "AI systems that only store data",
+        "AI systems that can autonomously perform tasks and take actions",
+        "AI systems that only generate text"
+      ],
+      "correctAnswer": "AI systems that can autonomously perform tasks and take actions",
+      "explanation": "Agentic AI refers to autonomous AI systems capable of perceiving an environment, formulating plans, making decisions, using tools, and executing actions to achieve specific goals."
+    },
+    {
+      "question": "112. In Agentic AI, what does the agent interact with to perform actions?",
+      "options": [
+        "The environment",
+        "Only the training dataset",
+        "The model weights",
+        "Only the system prompt"
+      ],
+      "correctAnswer": "The environment",
+      "explanation": "An AI agent operates by sensing its environment (digital tools, APIs, web interfaces, physical sensors) and executing actions that alter the state of that environment."
+    },
+    {
+      "question": "113. What is the main purpose of planning in Agentic AI?",
+      "options": [
+        "To increase the size of the model",
+        "To remove the agent's memory",
+        "To generate random actions",
+        "To decide the steps needed to achieve a goal"
+      ],
+      "correctAnswer": "To decide the steps needed to achieve a goal",
+      "explanation": "Planning allows an agent to formulate a coherent trajectory of sub-goals and actions required to accomplish a complex objective systematically."
+    },
+    {
+      "question": "114. What is task decomposition?",
+      "options": [
+        "Combining unrelated tasks into one task",
+        "Breaking a complex task into smaller subtasks",
+        "Removing all tasks from an agent",
+        "Converting text into images"
+      ],
+      "correctAnswer": "Breaking a complex task into smaller subtasks",
+      "explanation": "Task decomposition is the process of breaking down a large, multifaceted problem into smaller, manageable, and logically ordered subtasks."
+    },
+    {
+      "question": "115. What is the role of an LLM in many Agentic AI systems?",
+      "options": [
+        "It only stores images",
+        "It replaces all external tools",
+        "It acts as the agent's reasoning or decision-making brain",
+        "It only performs database backups"
+      ],
+      "correctAnswer": "It acts as the agent's reasoning or decision-making brain",
+      "explanation": "In modern agent frameworks, an LLM serves as the central cognitive controller—interpreting observations, reasoning about state, selecting tools, and formulating next steps."
+    },
+    {
+      "question": "116. What is tool use in Agentic AI?",
+      "options": [
+        "Using external tools to perform specific actions",
+        "Removing the agent's planning ability",
+        "Increasing the number of model parameters",
+        "Training only on images"
+      ],
+      "correctAnswer": "Using external tools to perform specific actions",
+      "explanation": "Tool use (function calling) allows AI agents to interact with external tools such as web search, code interpreters, calculators, and APIs to overcome the static limitations of model weights."
+    },
+    {
+      "question": "117. What is the purpose of memory in Agentic AI?",
+      "options": [
+        "To remove the system prompt",
+        "To generate random responses",
+        "To increase image resolution",
+        "To store and use relevant information from previous interactions"
+      ],
+      "correctAnswer": "To store and use relevant information from previous interactions",
+      "explanation": "Memory mechanisms (short-term context, working memory, and long-term vector storage) enable agents to recall prior steps, retain user preferences, and maintain continuity across multi-step tasks."
+    },
+    {
+      "question": "118. What is Retrieval-Augmented Generation (RAG) used for?",
+      "options": [
+        "Generating random information",
+        "Compressing the language model",
+        "Retrieving relevant information to help generate an answer",
+        "Removing all external knowledge"
+      ],
+      "correctAnswer": "Retrieving relevant information to help generate an answer",
+      "explanation": "RAG enhances generative models by fetching relevant context from external knowledge bases or documents to ground the generated response in accurate, up-to-date facts."
+    },
+    {
+      "question": "119. What is a multi-agent system?",
+      "options": [
+        "A system with multiple GPUs only",
+        "A system where multiple agents work together to solve tasks",
+        "A system without any planning",
+        "A system that uses only one agent"
+      ],
+      "correctAnswer": "A system where multiple agents work together to solve tasks",
+      "explanation": "A multi-agent system comprises multiple specialized AI agents that collaborate, divide labor, communicate, and solve complex collective problems together."
+    },
+    {
+      "question": "120. What is a major challenge of Agentic AI?",
+      "options": [
+        "Safety and reliability of autonomous actions",
+        "Reducing the number of text characters",
+        "Increasing keyboard speed",
+        "Removing all user interaction"
+      ],
+      "correctAnswer": "Safety and reliability of autonomous actions",
+      "explanation": "Ensuring safety, alignment, robustness against unexpected loops/errors, and reliability of autonomous actions with real-world impact is a primary research and operational challenge in Agentic AI."
+    }
+  ]
+}

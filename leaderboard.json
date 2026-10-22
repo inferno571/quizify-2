@@ -120,7 +120,7 @@
       "score": 6,
       "totalQuestions": 7,
       "percentage": 86,
-      "submittedAt": "2026-10-16T09:11:06.571Z"
+      "submittedAt": "2026-10-17T18:35:06.277Z"
     },
     {
       "name": "Saksham Sooden",
@@ -128,7 +128,7 @@
       "score": 7,
       "totalQuestions": 7,
       "percentage": 100,
-      "submittedAt": "2026-10-16T09:19:27.427Z"
+      "submittedAt": "2026-10-17T18:49:24.275Z"
     },
     {
       "name": "Saksham Sooden",
@@ -144,15 +144,15 @@
       "score": 8,
       "totalQuestions": 8,
       "percentage": 100,
-      "submittedAt": "2026-10-16T09:25:11.788Z"
+      "submittedAt": "2026-10-17T18:55:28.882Z"
     },
     {
       "name": "Saksham Sooden",
       "quizId": "dlnlp-assignment-6",
-      "score": 3,
+      "score": 7,
       "totalQuestions": 7,
-      "percentage": 43,
-      "submittedAt": "2026-10-16T09:36:22.467Z"
+      "percentage": 100,
+      "submittedAt": "2026-10-17T18:59:55.481Z"
     },
     {
       "name": "Saksham Sooden",
@@ -181,10 +181,10 @@
     {
       "name": "Saksham Sooden",
       "quizId": "dlnlp-assignment-7",
-      "score": 8,
+      "score": 10,
       "totalQuestions": 10,
-      "percentage": 80,
-      "submittedAt": "2026-10-16T09:44:30.614Z"
+      "percentage": 100,
+      "submittedAt": "2026-10-17T19:13:12.731Z"
     },
     {
       "name": "Saksham Sooden",
@@ -229,18 +229,18 @@
     {
       "name": "Saksham Sooden",
       "quizId": "dlnlp-assignment-1",
-      "score": 9,
+      "score": 8,
       "totalQuestions": 10,
-      "percentage": 90,
-      "submittedAt": "2026-10-16T03:28:11.824Z"
+      "percentage": 80,
+      "submittedAt": "2026-10-17T17:53:58.899Z"
     },
     {
       "name": "Saksham Sooden",
       "quizId": "dlnlp-assignment-2",
-      "score": 6,
+      "score": 9,
       "totalQuestions": 10,
-      "percentage": 60,
-      "submittedAt": "2026-10-16T04:20:21.999Z"
+      "percentage": 90,
+      "submittedAt": "2026-10-17T18:20:14.888Z"
     },
     {
       "name": "Meclerry",
@@ -273,6 +273,30 @@
       "totalQuestions": 120,
       "percentage": 44,
       "submittedAt": "2026-10-16T14:30:23.423Z"
+    },
+    {
+      "name": "Saksham Sooden",
+      "quizId": "dlnlp-2025-assignment-1",
+      "score": 3,
+      "totalQuestions": 10,
+      "percentage": 30,
+      "submittedAt": "2026-10-17T18:01:02.919Z"
+    },
+    {
+      "name": "Saksham Sooden",
+      "quizId": "genai-cv-week-1",
+      "score": 10,
+      "totalQuestions": 10,
+      "percentage": 100,
+      "submittedAt": "2026-10-22T17:29:42.901Z"
+    },
+    {
+      "name": "Saksham Sooden",
+      "quizId": "genai-cv-week-2",
+      "score": 9,
+      "totalQuestions": 10,
+      "percentage": 90,
+      "submittedAt": "2026-10-22T18:14:31.997Z"
     }
   ]
 }

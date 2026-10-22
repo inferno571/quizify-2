@@ -1,0 +1,118 @@
+{
+  "id": "dlnlp-2025-assignment-7",
+  "title": "DLNLP (2025 PYQ) - Assignment 7",
+  "subject": "DLNLP (2025 PYQ)",
+  "date": "17/10/2026",
+  "questions": [
+    {
+      "question": "1. Many open- domain QA models follow a retriever -reader framework. However, one major drawback of this approach is:",
+      "options": [
+        "The retriever often fails to retrieve factually correct documents",
+        "The reader module lacks the ability to generate novel answers beyond retrieved passages",
+        "The retriever is computationally expensive and requires labeled supervision for every question",
+        "The reader struggles to perform named entity recognition (NER) on retrieved passages"
+      ],
+      "correctAnswer": "The reader module lacks the ability to generate novel answers beyond retrieved passages",
+      "explanation": "Option (B) is the correct answer according to NPTEL DLNLP Assignment 7."
+    },
+    {
+      "question": "2. Dense retrievers like ColBERT differ from traditional TF- IDF/BM25 retrieval models because they:",
+      "options": [
+        "Compute sparse representations instead of dense vector embeddings",
+        "Rely on explicit term frequency and document length normalization",
+        "Use contextualized token embeddings to compare query and document representations at a finer granularity",
+        "Discard negative sampling strategies in the retrieval phase"
+      ],
+      "correctAnswer": "Use contextualized token embeddings to compare query and document representations at a finer granularity",
+      "explanation": "Option (C) is the correct answer according to NPTEL DLNLP Assignment 7."
+    },
+    {
+      "question": "3. If a multilingual QA system is fine- tuned on an English corpus but evaluated on Hindi queries, which fundamental challenge arises?",
+      "options": [
+        "The inability to align embedding spaces across languages",
+        "The loss of syntactic information due to translation errors",
+        "The increased computational complexity in the retriever module",
+        "The failure of word segmentation methods in low -resource languages"
+      ],
+      "correctAnswer": "The inability to align embedding spaces across languages",
+      "explanation": "Option (A) is the correct answer according to NPTEL DLNLP Assignment 7."
+    },
+    {
+      "question": "4. In dialogue state tracking (DST), a primary reason for switching from rule- based slot filling to machine learning- based approaches is:",
+      "options": [
+        "ML -based methods can generate entirely novel intents beyond predefined slots",
+        "Rule -based methods fail to handle multimodal conversations",
+        "ML -based methods allow tracking of implicit user preferences and dynamically adjust to ambiguous user inputs",
+        "Rule -based approaches are computationally expensive compared to transformer -based DST model s"
+      ],
+      "correctAnswer": "ML -based methods allow tracking of implicit user preferences and dynamically adjust to ambiguous user inputs",
+      "explanation": "Option (C) is the correct answer according to NPTEL DLNLP Assignment 7."
+    },
+    {
+      "question": "5. Consider an open- domain chatbot trained on large- scale internet data. Which of the following factors poses the most significant challenge to its deployment in high- stakes applications (e.g., healthcare, finance)?",
+      "options": [
+        "The model’s inability to generate grammatically correct responses",
+        "The limited size of the training corpus relative to proprietary datasets",
+        "The lack of grounding mechanisms to verify factual accuracy and prevent hallucination",
+        "The failure to handle multiple- turn dialogues effectively"
+      ],
+      "correctAnswer": "The lack of grounding mechanisms to verify factual accuracy and prevent hallucination",
+      "explanation": "Option (C) is the correct answer according to NPTEL DLNLP Assignment 7."
+    },
+    {
+      "question": "6. A major limitation of retrieval -based chatbots compared to generative models is that:",
+      "options": [
+        "They require massive amounts of labeled training data to function",
+        "They struggle to provide coherent multi -turn interactions",
+        "They cannot generate responses beyond the scope of their training corpus",
+        "They fail to incorporate user -specific personalization"
+      ],
+      "correctAnswer": "They cannot generate responses beyond the scope of their training corpus",
+      "explanation": "Option (C) is the correct answer according to NPTEL DLNLP Assignment 7."
+    },
+    {
+      "question": "7. Why do extractive summarization models often fail to perform well in abstractive summarization tasks?",
+      "options": [
+        "Extractive models do not learn semantic relationships between words and phrases",
+        "Extractive models depend on lexical similari ty rather than understanding deeper discourse structures",
+        "Extractive models cannot handle cross -document coreference resolution",
+        "Extractive models lack the computational efficiency required for abstractive summarization"
+      ],
+      "correctAnswer": "Extractive models depend on lexical similari ty rather than understanding deeper discourse structures",
+      "explanation": "Option (B) is the correct answer according to NPTEL DLNLP Assignment 7."
+    },
+    {
+      "question": "8. In long- document summarization, why might an extract -then- paraphrase approach outperform direct abstractive methods?",
+      "options": [
+        "It preserves factual consistency by constraining s ummaries to extracted content",
+        "It eliminates the need for transformer -based architectures",
+        "It does not require labeled training data for summarization",
+        "It allows for end- to-end training with a lower computational cost"
+      ],
+      "correctAnswer": "It preserves factual consistency by constraining s ummaries to extracted content",
+      "explanation": "Option (A) is the correct answer according to NPTEL DLNLP Assignment 7."
+    },
+    {
+      "question": "9. While evaluating a summarization model, why is ROUGE -2 sometimes preferred over BLEU?",
+      "options": [
+        "ROUGE -2 correlates better with human judgment for extractive summarization tasks",
+        "BLEU cannot handle long documents, whereas ROUGE -2 is designed for multi -document summarization",
+        "BLEU only considers single- token matches, while ROUGE -2 evaluates sentence structure",
+        "ROUGE -2 incorporates contextual embeddings, making it more robust for summarization"
+      ],
+      "correctAnswer": "ROUGE -2 correlates better with human judgment for extractive summarization tasks",
+      "explanation": "Option (A) is the correct answer according to NPTEL DLNLP Assignment 7."
+    },
+    {
+      "question": "10. Both dialogue systems and summarization models require sequence generation. Which of the following represents a key distinction between their architectures?",
+      "options": [
+        "Summarization models primarily use extractive methods, whereas dialogue systems rely on seq2seq architectures",
+        "Dialogue models generate text interactively based on conversational history, while summarization models optimize for information condensation in a single pass",
+        "Summarization models rely on intent classification, while dialogue systems do not",
+        "Dialogue models encode sentence embeddings, whereas summarization models use word embeddings"
+      ],
+      "correctAnswer": "Dialogue models generate text interactively based on conversational history, while summarization models optimize for information condensation in a single pass",
+      "explanation": "Option (B) is the correct answer according to NPTEL DLNLP Assignment 7."
+    }
+  ]
+}

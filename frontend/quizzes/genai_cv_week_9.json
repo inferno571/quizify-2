@@ -1,0 +1,118 @@
+{
+  "id": "genai-cv-week-9",
+  "title": "Generative AI for Computer Vision - Week 9 Assignment 9",
+  "subject": "Generative AI for Computer Vision",
+  "date": "22/10/2026",
+  "questions": [
+    {
+      "question": "1. What is the main purpose of a Generative Adversarial Network (GAN)?",
+      "options": [
+        "To generate new data similar to the training data",
+        "To only classify images",
+        "To remove all training data",
+        "To perform only object detection"
+      ],
+      "correctAnswer": "To generate new data similar to the training data",
+      "explanation": "The main purpose of a Generative Adversarial Network (GAN) is to generate new, synthetic data samples that closely mimic the distribution of the training data."
+    },
+    {
+      "question": "2. A GAN mainly consists of which two networks?",
+      "options": [
+        "Encoder and Decoder",
+        "Generator and Discriminator",
+        "Classifier and Regressor",
+        "Transformer and CNN"
+      ],
+      "correctAnswer": "Generator and Discriminator",
+      "explanation": "A GAN consists of two competing neural networks: a Generator that creates synthetic data samples and a Discriminator that distinguishes between real and generated samples."
+    },
+    {
+      "question": "3. What is the main role of the Generator in a GAN?",
+      "options": [
+        "To distinguish real and fake data",
+        "To generate fake data samples",
+        "To calculate image labels",
+        "To remove noise from the dataset"
+      ],
+      "correctAnswer": "To generate fake data samples",
+      "explanation": "The Generator takes random noise as input and maps it to realistic synthetic data samples aimed at deceiving the Discriminator."
+    },
+    {
+      "question": "4. What is a common problem when training GANs?",
+      "options": [
+        "Always producing different classes",
+        "Too many input labels",
+        "No training data required",
+        "Mode collapse"
+      ],
+      "correctAnswer": "Mode collapse",
+      "explanation": "Mode collapse is a classic failure mode during GAN training where the Generator produces only a limited variety of outputs, repeatedly generating the same or similar samples."
+    },
+    {
+      "question": "5. What is the main idea of a Conditional GAN (cGAN)?",
+      "options": [
+        "It generates data based on additional information such as class labels",
+        "It removes the Generator",
+        "It does not use a Discriminator",
+        "It can only generate random noise"
+      ],
+      "correctAnswer": "It generates data based on additional information such as class labels",
+      "explanation": "Conditional GANs (cGANs) condition both the Generator and Discriminator on additional auxiliary information (such as class labels or text) to control the generation process."
+    },
+    {
+      "question": "6. What is the main purpose of Wasserstein GAN (WGAN)?",
+      "options": [
+        "To classify only text data",
+        "To remove the Generator",
+        "To improve the stability of GAN training",
+        "To increase image size only"
+      ],
+      "correctAnswer": "To improve the stability of GAN training",
+      "explanation": "Wasserstein GAN utilizes the Earth Mover's (Wasserstein-1) Distance to provide smooth, meaningful gradients everywhere, significantly improving training stability and alleviating mode collapse."
+    },
+    {
+      "question": "7. What happens during the forward diffusion process in a diffusion model?",
+      "options": [
+        "The model directly generates the final image",
+        "Noise is completely removed from the data",
+        "Images are converted into labels",
+        "Noise is gradually added to the data"
+      ],
+      "correctAnswer": "Noise is gradually added to the data",
+      "explanation": "In the forward diffusion process, Gaussian noise is gradually added to an image across discrete time steps until it becomes pure random noise."
+    },
+    {
+      "question": "8. What happens during reverse diffusion?",
+      "options": [
+        "Noise is gradually removed to generate data",
+        "More noise is continuously added",
+        "The training dataset is deleted",
+        "The model only performs classification"
+      ],
+      "correctAnswer": "Noise is gradually removed to generate data",
+      "explanation": "In reverse diffusion, a trained neural network iteratively predicts and removes noise from a random Gaussian sample to synthesize a clean, high-quality image."
+    },
+    {
+      "question": "9. What is the full form of DDPM?",
+      "options": [
+        "Designated Diffusion Prior Model",
+        "Digital Driven Diffusion Model",
+        "Denoising Diffusion Probabilistic Model",
+        "Deterministic Diffusion for Priority Management"
+      ],
+      "correctAnswer": "Denoising Diffusion Probabilistic Model",
+      "explanation": "DDPM stands for Denoising Diffusion Probabilistic Model, a foundational class of generative models introduced by Ho et al. (2020)."
+    },
+    {
+      "question": "10. What is the main purpose of the ELBO in a VAE or diffusion-model formulation?",
+      "options": [
+        "To replace the training dataset",
+        "To remove the latent variables",
+        "To increase image resolution only",
+        "To provide an objective for learning the generative model"
+      ],
+      "correctAnswer": "To provide an objective for learning the generative model",
+      "explanation": "The Evidence Lower Bound (ELBO) provides a mathematically tractable surrogate objective function to maximize the log-likelihood of observed data in latent variable models."
+    }
+  ]
+}

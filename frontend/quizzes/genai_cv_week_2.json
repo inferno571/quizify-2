@@ -1,0 +1,118 @@
+{
+  "id": "genai-cv-week-2",
+  "title": "Generative AI for Computer Vision - Week 2 Assignment 2",
+  "subject": "Generative AI for Computer Vision",
+  "date": "22/10/2026",
+  "questions": [
+    {
+      "question": "1. The basic computational unit of an artificial neural network is called:",
+      "options": [
+        "Kernel",
+        "Neuron",
+        "Compiler",
+        "Database"
+      ],
+      "correctAnswer": "Neuron",
+      "explanation": "An artificial neuron (or node/perceptron) is the fundamental computational unit of an artificial neural network."
+    },
+    {
+      "question": "2. Which of the following is an application of neural networks?",
+      "options": [
+        "Image recognition",
+        "Speech recognition",
+        "Natural language processing",
+        "All of the above"
+      ],
+      "correctAnswer": "All of the above",
+      "explanation": "Neural networks are widely applied in computer vision (image recognition), audio processing (speech recognition), and natural language processing (NLP)."
+    },
+    {
+      "question": "3. A Single Layer Perceptron (SLP) can correctly solve:",
+      "options": [
+        "Linearly separable problems",
+        "Only non-linearly separable problems",
+        "All complex problems",
+        "No classification problems"
+      ],
+      "correctAnswer": "Linearly separable problems",
+      "explanation": "A Single Layer Perceptron creates a single linear decision boundary and can only separate classes that are linearly separable."
+    },
+    {
+      "question": "4. Which of the following is a major limitation of a Single Layer Perceptron?",
+      "options": [
+        "It cannot solve linearly separable problems",
+        "It cannot solve non-linearly separable problems such as XOR",
+        "It cannot accept numerical inputs",
+        "It always requires multiple hidden layers"
+      ],
+      "correctAnswer": "It cannot solve non-linearly separable problems such as XOR",
+      "explanation": "A major limitation of a Single Layer Perceptron is that it cannot solve non-linearly separable problems like the XOR function without hidden layers."
+    },
+    {
+      "question": "5. What is the main purpose of an activation function in a neural network?",
+      "options": [
+        "To introduce non-linearity into the network",
+        "To store the training data",
+        "To increase the number of input features",
+        "To remove all network weights"
+      ],
+      "correctAnswer": "To introduce non-linearity into the network",
+      "explanation": "Activation functions introduce non-linearities into neural networks, enabling them to learn complex, non-linear relationships rather than just linear combinations."
+    },
+    {
+      "question": "6. The Softmax activation function is commonly used in the output layer for:",
+      "options": [
+        "Multi-class classification",
+        "Image resizing",
+        "Data storage",
+        "Feature normalization only"
+      ],
+      "correctAnswer": "Multi-class classification",
+      "explanation": "The Softmax activation function converts raw output logits into a probability distribution summing to 1, making it ideal for multi-class classification."
+    },
+    {
+      "question": "7. During the forward pass of a neural network:",
+      "options": [
+        "Data moves from the input layer toward the output layer",
+        "Data moves only from the output layer to the input layer",
+        "Weights are always set to zero",
+        "The training data is deleted"
+      ],
+      "correctAnswer": "Data moves from the input layer toward the output layer",
+      "explanation": "During the forward pass, input data propagates forward through successive layers (calculating weighted sums and activations) to generate predictions at the output layer."
+    },
+    {
+      "question": "8. What is the main purpose of backpropagation during neural network training?",
+      "options": [
+        "To calculate gradients and help update the network weights",
+        "To add more training samples",
+        "To remove the output layer",
+        "To increase the number of classes"
+      ],
+      "correctAnswer": "To calculate gradients and help update the network weights",
+      "explanation": "Backpropagation computes the gradients of the loss function with respect to the network weights via the chain rule, enabling optimization algorithms (like SGD) to update the weights."
+    },
+    {
+      "question": "9. Overfitting occurs when:",
+      "options": [
+        "A model performs well on training data but poorly on unseen data",
+        "A model performs equally well on all datasets",
+        "A model has no trainable parameters",
+        "Training data is never used"
+      ],
+      "correctAnswer": "A model performs well on training data but poorly on unseen data",
+      "explanation": "Overfitting happens when a model memorizes patterns and noise specific to the training set, causing it to generalize poorly to unseen validation or test data."
+    },
+    {
+      "question": "10. Which of the following techniques can help reduce overfitting?",
+      "options": [
+        "Regularization",
+        "Early stopping",
+        "Cross-validation",
+        "All of the above"
+      ],
+      "correctAnswer": "All of the above",
+      "explanation": "Techniques such as weight regularization (L1/L2), dropout, early stopping, and cross-validation are standard methods to mitigate overfitting."
+    }
+  ]
+}

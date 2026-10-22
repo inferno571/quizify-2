@@ -1,0 +1,118 @@
+{
+  "id": "dlnlp-2025-assignment-12",
+  "title": "DLNLP (2025 PYQ) - Assignment 12",
+  "subject": "DLNLP (2025 PYQ)",
+  "date": "17/10/2026",
+  "questions": [
+    {
+      "question": "1. Which architectural component appears to store multilingual knowledge according to the research?",
+      "options": [
+        "Self-attention mechanisms exclusively",
+        "Feed-forward networks exclusively",
+        "Self-attention for reasoning and feed-forward structures for multilingual knowledge",
+        "Equal distribution across all components"
+      ],
+      "correctAnswer": "Self-attention for reasoning and feed-forward structures for multilingual knowledge",
+      "explanation": "- The research indicates that LLMs employ \"English for reasoning (through self-attention) and leveraging multilingual knowledge (through feed-forward structures).\""
+    },
+    {
+      "question": "2. What fundamental insight about multilingual LLMs is revealed by deactivating language-specific neur ons?",
+      "options": [
+        "Models are inherently monolingual and translation occurs post-processing",
+        "Models have redundant neurons that serve no purpose",
+        "Deactivating Chinese-specific neurons can cause the model to produce outputs in English",
+        "Neurons are universally language-agnostic throughout the model"
+      ],
+      "correctAnswer": "Deactivating Chinese-specific neurons can cause the model to produce outputs in English",
+      "explanation": "Option (C) is correct based on NPTEL DLNLP Assignment 12."
+    },
+    {
+      "question": "3. Based on the LAPE (language activation probability entropy) score, how are \"language-specific neur ons\" identified?",
+      "options": [
+        "Neurons with high entropy across all languages",
+        "Neurons that show consistent response patterns regardless of language",
+        "Neurons with consistently low activation for all languages",
+        "Neurons with low entropy , indicating preferential activation for specific languages"
+      ],
+      "correctAnswer": "Neurons with low entropy , indicating preferential activation for specific languages",
+      "explanation": "Option (D) is correct based on NPTEL DLNLP Assignment 12."
+    },
+    {
+      "question": "4. What happens when language-specific neur ons for a particular language are deactivated compar ed to when random neur ons are deactivated?",
+      "options": [
+        "Performance remains mostly unchanged in both cases",
+        "Random neuron deactivation severely impacts performance while language-specific deactivation has minimal impact",
+        "Language-specific neuron deactivation dramatically reduces performance in that language, while random deactivation has minimal impact",
+        "Both types of deactivation improve performance by reducing noise"
+      ],
+      "correctAnswer": "Language-specific neuron deactivation dramatically reduces performance in that language, while random deactivation has minimal impact",
+      "explanation": "- The results table shows that deactivating language-specific neurons reduces performance to near zero for many languages, while random neuron deactivation has minimal impact on performance."
+    },
+    {
+      "question": "5. What is the primary differ ence between Gradient Ascent (GA) unlearning and traditional fine-tuning appr oaches for LLMs?",
+      "options": [
+        "GA requires no training data at all",
+        "GA reverses the direction of gradient updates to increase loss on undesired data",
+        "GA is only applicable to transformer -based architectures",
+        "GA is exclusively used for removing copyrighted content"
+      ],
+      "correctAnswer": "GA reverses the direction of gradient updates to increase loss on undesired data",
+      "explanation": "GA reverses the direction of gradient updates to increase loss on undesired data"
+    },
+    {
+      "question": "6. Why is using KL divergence preferr ed over cross-entr opy for maintaining model performance on normal tasks during unlearning?",
+      "options": [
+        "KL diver gence preserves the original model's distribution better",
+        "Cross-entropy causes too much emphasis on incorrect outputs",
+        "KL diver gence requires fewer computational resources",
+        "Cross-entropy creates more bias in the output distribution"
+      ],
+      "correctAnswer": "KL diver gence preserves the original model's distribution better",
+      "explanation": ") KL divergence preserves the original model's distribution better"
+    },
+    {
+      "question": "7. In the practical application of unlearning to remove copyrighted content (Harry Potter), what metric should be used to evaluate the effectiveness of unlearning?",
+      "options": [
+        "Character -level edit distance between outputs",
+        "BLEU similarity score between generated completions and ground truth",
+        "Human evaluation of literary style similarity",
+        "Token-level perplexity on prompt completions"
+      ],
+      "correctAnswer": "BLEU similarity score between generated completions and ground truth",
+      "explanation": ") BLEU similarity score between generated completions and ground truth"
+    },
+    {
+      "question": "8. In the context of unlearning harmful responses, why does the Random Mismatch appr oach help preserve normal utility compar ed to simple Gradient Ascent?",
+      "options": [
+        "It introduces noise into the model parameters",
+        "It forces the model to generate uncorrelated outputs for problematic inputs",
+        "It makes the model completely ignore certain types of inputs",
+        "It replaces harmful knowledge with beneficial knowledge"
+      ],
+      "correctAnswer": "It forces the model to generate uncorrelated outputs for problematic inputs",
+      "explanation": ") It forces the model to generate uncorrelated outputs for problematic inputs"
+    },
+    {
+      "question": "9. What theor etical implication about multilingual models is most strongly supported by the finding that intermediate representations in non-English to non-English translation tasks show English tokens?",
+      "options": [
+        "Multilingual models are actually ensembles of separate monolingual models",
+        "English serves as an interlingua or conceptual bridge in multilingual models",
+        "The finding is merely an artifact of visualization techniques",
+        "Language-specific tokens are randomly distributed throughout processing"
+      ],
+      "correctAnswer": "English serves as an interlingua or conceptual bridge in multilingual models",
+      "explanation": "- The emer gence of English token probabilities during intermediate processing when translating between two non-English languages strongly suggests that English serves as an interlingua or conceptual bridge within these models, likely due to the predominance of English in training data."
+    },
+    {
+      "question": "10. What crucial insight about multilingual model architectur e is revealed by comparing the distribution of language-specific neur ons between FFN structur es and Attention structur es?",
+      "options": [
+        "Both structures contain equal numbers of language-specific neurons",
+        "FFN structures consistently contain more language-specific neurons across all layers",
+        "Attention structures are responsible for maintaining linguistic features",
+        "Language-specific neurons only appear in the encoder section of transformers"
+      ],
+      "correctAnswer": "FFN structures consistently contain more language-specific neurons across all layers",
+      "explanation": "- \"Number of language-specific neurons when processing multilingual queries\" demonstrates that FFN (Feed-Forward Network) structures consistently contain more language-specific neurons than attention structures across most layers, suggesting specialized roles in multilingual processing."
+    }
+  ]
+}

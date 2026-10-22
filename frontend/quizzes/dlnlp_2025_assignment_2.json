@@ -1,0 +1,96 @@
+{
+  "id": "dlnlp-2025-assignment-2",
+  "title": "DLNLP (2025 PYQ) - Assignment 2",
+  "subject": "DLNLP (2025 PYQ)",
+  "date": "17/10/2026",
+  "questions": [
+    {
+      "question": "1. Which of the following is False?",
+      "options": [
+        "Training a model means finding parameters that predict outputs well from input/output pairs of training dataset",
+        "Model is a family of equations",
+        "Supervised learning can be applied for mapping from one or more inputs to a single output only",
+        "Parameters affect outcome of a equation"
+      ],
+      "correctAnswer": "Supervised learning can be applied for mapping from one or more inputs to a single output only",
+      "explanation": "Supervised learning can be applied for mapping from one or more inputs to one or more outputs"
+    },
+    {
+      "question": "2. Which of the following is an example of supervised learning?",
+      "options": [
+        "Clustering customer data based on p urchase history",
+        "Predicting price of mobile based on historical data",
+        "Identifying topics in a set of text documents without labels",
+        "Discovering associations between products in a shopping cart"
+      ],
+      "correctAnswer": "Predicting price of mobile based on historical data",
+      "explanation": "Mobile price prediction can be solv ed by regression having supervised data available"
+    },
+    {
+      "question": "3. What is the mathematical definition of the ReLU activation function?",
+      "options": [
+        "f(x) = 1/ 1 + e^ -x",
+        "f(x) = tanh(x)",
+        "f(x)=max(0,x)",
+        "f(x) = x^2"
+      ],
+      "correctAnswer": "f(x)=max(0,x)",
+      "explanation": "Relu(x) = 0 if x< 0; otherwise x if x>=0"
+    },
+    {
+      "question": "4. In Gradient Descent, what happens if the learning rate is too high?",
+      "options": [
+        "The algorithm converges faster to the global minimum.",
+        "The algorithm may overshoot the minimum and fail to converge.",
+        "The algorithm will get stuck in a local minimum.",
+        "The algorithm will converge to the correct minimum, but it will take longer."
+      ],
+      "correctAnswer": "The algorithm may overshoot the minimum and fail to converge.",
+      "explanation": "If the learning rate is too high, the updates may overshoot the minimum, causing the algorithm to fail to converge or oscillate around the optimal solution."
+    },
+    {
+      "question": "5. In backpropagation, why is the chain rule used?",
+      "options": [
+        "To compute the output of the network during forward propagation.",
+        "To calculate the gradients of the loss function with respect to weights in each layer.",
+        "To determine the optimal number of neurons in a hidden layer.",
+        "To update weights by directly minimizing the loss function."
+      ],
+      "correctAnswer": "To calculate the gradients of the loss function with respect to weights in each layer.",
+      "explanation": "The chain rule i s used in backpropagation to calculate how the loss function changes with respect to each weight by considering the contribution of every layer in the network. This is essential for propagating gradients backward and updating the weights effectively."
+    },
+    {
+      "question": "6. Consider a simple neural network with: An input layer containing 3 neurons, A hidden layer containing 4 neurons and an output layer containing 2 neurons. The activation functions for the hidden and output layers are ReLU and softmax, respectively. Wha t is the total number of weights (parameters) in this network, excluding biases?",
+      "options": [
+        "12",
+        "14",
+        "20",
+        "26"
+      ],
+      "correctAnswer": "20",
+      "explanation": "Weights between input and hidden layer: 3 * 4 = 12 Weights between hidden and output layer: 4 * 2 = 8 Total no of parameters: 12 + 8 = 20."
+    },
+    {
+      "question": "7. Consider a neural network with a single weight w. The output of the network is given by y = w^2 and the loss function is L = 1/2(y - t)^2 where t=4 is the target value. If the current value of w is 3, what is the gradient of L with respect to w?",
+      "options": [
+        "12",
+        "24",
+        "30",
+        "18"
+      ],
+      "correctAnswer": "30",
+      "explanation": "Compute y = w^2 = 3^2 = 9 Gradient of L with respect to y= ∂L/∂y = y - t = 9 - 4 = 5 Gradient of y with respect to w: ∂y/∂w=2w= 2*3 = 6 Using the chain rule: ∂L/∂w=∂L/∂y * ∂y/ ∂w = 5 ⋅6=30"
+    },
+    {
+      "question": "8. In 1D Linear Regression, the least squares loss function is given by:\n\n$$L = \\frac{1}{N} \\sum_{i=1}^N (y_i - (\\hat{w}x_i + b))^2$$\n\nwhere y i are the true values, x i are the inputs, w^ is the weight, b is the bias, and N is the number of data points. If x=[1,2,3], y = [2, 4, 6] , w^=2, and b=0, what is the value of the least squares loss?",
+      "options": [
+        "0",
+        "2",
+        "4",
+        "6"
+      ],
+      "correctAnswer": "0",
+      "explanation": "Solution: 1. Compute the predicted values : y^i=w^xi+b=2xi+0; For x=[1,2,3], y^=[2,4,6] 2. Calculate the residuals (yi−y^i): Residuals=[2−2,4−4,6−6]=[0,0,0] 3. Compute the least squares loss: L=1/N(yi−y^i)2 = ⅓(0)^2 = 0"
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "id": "genai-cv-week-11",
+  "title": "Generative AI for Computer Vision - Week 11 Assignment 11",
+  "subject": "Generative AI for Computer Vision",
+  "date": "22/10/2026",
+  "questions": [
+    {
+      "question": "1. What is the main purpose of the CLIP model?",
+      "options": [
+        "To remove noise from images",
+        "To compress images",
+        "To learn the relationship between images and text",
+        "To detect edges in images"
+      ],
+      "correctAnswer": "To learn the relationship between images and text",
+      "explanation": "CLIP (Contrastive Language-Image Pre-training) is designed to learn joint representations bridging images and natural language text from vast web-scale datasets."
+    },
+    {
+      "question": "2. What are the two main encoders used in CLIP?",
+      "options": [
+        "Image Encoder and Text Encoder",
+        "Encoder and Decoder",
+        "Generator and Discriminator",
+        "CNN and RNN"
+      ],
+      "correctAnswer": "Image Encoder and Text Encoder",
+      "explanation": "CLIP consists of two separate encoders: an Image Encoder (such as a ViT or ResNet) and a Text Encoder (a Transformer) that project both modalities into a shared embedding space."
+    },
+    {
+      "question": "3. What type of learning is used in CLIP to match images with their corresponding text?",
+      "options": [
+        "Reinforcement learning",
+        "Contrastive learning",
+        "Supervised regression",
+        "Clustering"
+      ],
+      "correctAnswer": "Contrastive learning",
+      "explanation": "CLIP employs contrastive learning using InfoNCE loss to maximize the cosine similarity of true image-text pairs while minimizing similarity for mismatched pairs in a batch."
+    },
+    {
+      "question": "4. One of CLIP's important capabilities is:",
+      "options": [
+        "Image compression",
+        "Zero-shot classification",
+        "Image restoration",
+        "Image segmentation only"
+      ],
+      "correctAnswer": "Zero-shot classification",
+      "explanation": "Because CLIP embeds images and text descriptions into the same space, it can classify images among unseen classes zero-shot simply by matching image embeddings to prompt embeddings (e.g., 'a photo of a [label]')."
+    },
+    {
+      "question": "5. What is the purpose of prompt engineering in CLIP?",
+      "options": [
+        "Designing suitable text prompts",
+        "Increasing image resolution",
+        "Removing the image encoder",
+        "Adding convolutional layers"
+      ],
+      "correctAnswer": "Designing suitable text prompts",
+      "explanation": "Prompt engineering in CLIP involves formulating effective text query templates (e.g., 'a photo of a {category}') to guide the text encoder and maximize classification accuracy."
+    },
+    {
+      "question": "6. What type of data is mainly used to train CLIP?",
+      "options": [
+        "Only numerical data",
+        "Only images",
+        "Only audio files",
+        "Image-text pairs"
+      ],
+      "correctAnswer": "Image-text pairs",
+      "explanation": "CLIP is trained on 400 million (image, text) pairs collected from the internet, enabling broad semantic grounding across diverse concepts."
+    },
+    {
+      "question": "7. What is multimodal fusion?",
+      "options": [
+        "Combining information from different modalities",
+        "Removing one modality",
+        "Using only image information",
+        "Converting images into labels"
+      ],
+      "correctAnswer": "Combining information from different modalities",
+      "explanation": "Multimodal fusion refers to integrating information from multiple distinct sensory or data modalities (e.g., vision, language, audio) into unified representations."
+    },
+    {
+      "question": "8. What is a Multimodal Large Language Model (MLLM) designed to process?",
+      "options": [
+        "Only numerical data",
+        "Multiple types of information such as text and images",
+        "Only images",
+        "Only audio"
+      ],
+      "correctAnswer": "Multiple types of information such as text and images",
+      "explanation": "Multimodal Large Language Models (such as LLaVA, GPT-4V, and Gemini) process, reason over, and synthesize multiple input modalities including text, vision, and diagrams."
+    },
+    {
+      "question": "9. What is the goal of Text-to-Image Generation?",
+      "options": [
+        "Generate an image from a text description",
+        "Convert an image into a text file",
+        "Compress a text document",
+        "Classify text into categories"
+      ],
+      "correctAnswer": "Generate an image from a text description",
+      "explanation": "Text-to-image generation aims to synthesize visually coherent, high-fidelity images that accurately reflect the semantics described in a natural language text prompt."
+    },
+    {
+      "question": "10. What is a major challenge in multimodal generative models?",
+      "options": [
+        "Removing all text information",
+        "Increasing keyboard speed",
+        "Reducing the number of image pixels only",
+        "Understanding and aligning information from different modalities"
+      ],
+      "correctAnswer": "Understanding and aligning information from different modalities",
+      "explanation": "A foundational challenge in multimodal generative modeling is accurately learning cross-modal alignment—binding fine-grained text concepts to spatial visual elements faithfully without hallucinations."
+    }
+  ]
+}

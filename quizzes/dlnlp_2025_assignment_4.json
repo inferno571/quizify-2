@@ -1,0 +1,84 @@
+{
+  "id": "dlnlp-2025-assignment-4",
+  "title": "DLNLP (2025 PYQ) - Assignment 4",
+  "subject": "DLNLP (2025 PYQ)",
+  "date": "17/10/2026",
+  "questions": [
+    {
+      "question": "1. Which of the following best describes the role of word embeddings in language modeling?",
+      "options": [
+        "Word embeddings convert words into one -hot encoded vectors for neural network processing.",
+        "Word embeddings represent words as dense, continuous vectors to capture semantic relationships.",
+        "Word embeddings are used to perform stemming and lemmatization in preprocessing.",
+        "Word embeddings are designed to reduce the size of the vocabulary by merging similar words."
+      ],
+      "correctAnswer": "Word embeddings represent words as dense, continuous vectors to capture semantic relationships.",
+      "explanation": "Word embeddings represent words as dense, continuous vectors to capture semantic relationships."
+    },
+    {
+      "question": "2. Which of the following tasks is most suitable for Recurrent Neural Networks (RNNs)?",
+      "options": [
+        "Image classification in static images.",
+        "Predicting the next word in a sentence.",
+        "Clustering data points in an unsupervised man ner.",
+        "Sorting a list of integers."
+      ],
+      "correctAnswer": "Predicting the next word in a sentence.",
+      "explanation": "Predicting the next word in a sentence is most suitable for RNN"
+    },
+    {
+      "question": "3. Which of the following is the primary cause of the vanishing gradient problem in deep neural networks, particularly in Recurrent Neural Networks (RNNs)?",
+      "options": [
+        "The network's weight matrices become too large, causing instability. 2. Gradients become too small during backpropagation, effectively preventing weight updates in the earlier layers.",
+        "The activation functions used in the network are too complex and cannot be computed efficiently.",
+        "The network suffers from an excessive number of layers, leading to too much redundancy in the model."
+      ],
+      "correctAnswer": "The activation functions used in the network are too complex and cannot be computed efficiently.",
+      "explanation": "The vanishing gradient problem occurs when gradients become very small during backpropagation, especially in deep or recurrent networks, making it difficult for the model to update the weights in earlier layers. This can slow down or even stop the learning process."
+    },
+    {
+      "question": "4. In a Named Entity Recognition (NER) task using the BIO tagging scheme, an input sentence has 10 tokens, and the model outputs probabilities for 5 entity classes: B- PER, I-PER, B- LOC , I-LOC , and O . If the softmax function is applied over the outputs for each token, how many probability values will the model compute for the entire sentence?",
+      "options": [
+        "5",
+        "10",
+        "50",
+        "100"
+      ],
+      "correctAnswer": "50",
+      "explanation": "For each of the 10 tokens, the model computes a probability distribution across the 5 classes. Hence, 10×5=50 probability values are computed."
+    },
+    {
+      "question": "5. In an encoder -decoder architecture for machine translation, the encoder processes an input sequence of length T with a hidden state size of H, and the decoder generates an output sequence of length T′ with a hidden state size of H′. If the encoder’s weight matrix has dimensions H×H for the hidden state transition and V in×H for the input -to-hidden transformation (where V in is the vocabulary size), and the decoder's weight matrix has dimensions H′×H′ for the hidden state transition and V out×H′ for the output -to-hidden transformation (where V out is the target vocabulary size), how many parameters are there in the encoder and decoder combined, excluding biases?",
+      "options": [
+        "V in×H+H×H+V out×H′+H′×H′",
+        "V in×H+H×H′+V out×H+H′×H",
+        "V in×H+H×H+V out×H′+H′×H′",
+        "V in×H+H×H′+V out×H+H′×H"
+      ],
+      "correctAnswer": "V in×H+H×H+V out×H′+H′×H′",
+      "explanation": "● The encoder's weight matrix for input -to-hidden has V in×H parameters, and for hidden state transitions, there are H×H parameters. ● The decoder's weight matrix for output -to-hidden has V out×H′ parameters, and for hidden state transitions, there are H′×H′ parameters. Thus, the total number of parameters is: Vin×H+H×H+V out×H′+H′×H′"
+    },
+    {
+      "question": "6. In an LSTM network, the number of parameters for the input gate is determined by the size of the input vector V and the size of the hidden state H. Assuming the LSTM has 1 input gate, 1 forget gate, 1 output gate, and 1 cell state, how many parameters are there for the input gate, excluding biases?",
+      "options": [
+        "V×H+H×H",
+        "(V+H)×H",
+        "V×H+H×1",
+        "(V+H)×1"
+      ],
+      "correctAnswer": "(V+H)×H",
+      "explanation": "For the input gate in an LSTM, the parameters consist of: Weights from the input vector V to the hidden state H, which are represented by a matrix of size V×H Weights from the previous hidden state H to the current hidden state H, represented by a matrix of size H×H Thus, the total number of parameters for the input gate is V×H + H×H = (V + H) ×H"
+    },
+    {
+      "question": "7. Suppose a language model has a vocabulary of size 5, and during decoding, the model produces the following logits for the five tokens: z = [4, 0, -2, 3, 1] Compute the probability distribution when using random sampling with temperature T=0.5. Which of the following is the final probability distribution.",
+      "options": [
+        "[0.8787,0.0002,0.000005,0.1189,0.0021]",
+        "[0.0003, 0.8787, 0.000005, 0.1188,0.0022]",
+        "[0.0002, 0.8787, 0.000006, 0.1089, 0.0125]",
+        "[0.7789,0.1001,0.000005,0.1189,0.0023]"
+      ],
+      "correctAnswer": "[0.8787,0.0002,0.000005,0.1189,0.0021]",
+      "explanation": "Scale the logits by 1/T = 1/0.5 = 2 zi′=zi/T=[8,0,−4,6,2] Compute exponential: [e^8, e^0, e^−4, e^6, e^2] e^8≈2980.96, e^0= 1, e^- 4≈0.0183, e^6≈403.43, e^2≈7.389 Compute sum of exponentials: S= 2980.96+1+0.0183+403.43+7.389=3392.80 Softmax probabilities : P0= 2980.96 / 3392.80 = 0.8787, P1 = 1/ 3392.80 =0.0002 P2=0.0183/3392.80 ≈0.000005, P3 = 403.43/3392.80=0.1189, P4 = 7.389/3392.80 = 0.0022"
+    }
+  ]
+}

@@ -160,6 +160,12 @@ export function DashboardScreen({
 
   const getSubjectColor = (subj: string) => {
     const lower = subj.toLowerCase();
+    if (lower.includes('vision') || (lower.includes('cv') && lower.includes('ai'))) {
+      return { bg: 'bg-teal-600', lightBg: 'bg-teal-50', text: 'text-teal-700', border: 'border-teal-300' };
+    }
+    if (lower.includes('2025')) {
+      return { bg: 'bg-violet-600', lightBg: 'bg-violet-50', text: 'text-violet-700', border: 'border-violet-300' };
+    }
     if (lower.includes('hr') || lower.includes('analytics')) {
       return { bg: 'bg-emerald-500', lightBg: 'bg-emerald-50', text: 'text-emerald-700', border: 'border-emerald-300' };
     }

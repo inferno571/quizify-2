@@ -1,0 +1,1171 @@
+{
+  "id": "dlnlp-2025-full-combined-test",
+  "title": "DLNLP (2025 PYQ) - Full Combined Grand Test (Assignments 1-12)",
+  "subject": "DLNLP (2025 PYQ)",
+  "date": "17/10/2026",
+  "questions": [
+    {
+      "question": "1. Which of the following best describes why large language models (LLMs) outperform n-gram models?",
+      "options": [
+        "LLMs use probabilistic distributions to handle unseen words",
+        "LLMs account for contextual relationships over long distances",
+        "LLMs reduce vocabulary size for faster processing",
+        "LLMs simplify complex tasks by discarding infrequent data"
+      ],
+      "correctAnswer": "LLMs account for contextual relationships over long distances",
+      "explanation": "LLMs use embeddings and transformer architectures to capture long-range dependencies effectively."
+    },
+    {
+      "question": "2. When evaluating an n-gram model, which of the following issues is not addressed by perplexity?",
+      "options": [
+        "Performance on unseen word sequences",
+        "The ability to handle syntactic correctness",
+        "Comparison of models on the same dataset",
+        "Measurement of model entropy"
+      ],
+      "correctAnswer": "The ability to handle syntactic correctness",
+      "explanation": "Perplexity measures how well a model predicts a test set but does not explicitly assess syntactic correctness."
+    },
+    {
+      "question": "3. In Add-1 smoothing, what happens to the relative probabilities of frequent versus infrequent word pairs?",
+      "options": [
+        "The gap between their probabilities increases",
+        "The gap between their probabilities decreases",
+        "All probabilities remain proportional",
+        "Add-1 smoothing has no effect on relative probabilities"
+      ],
+      "correctAnswer": "The gap between their probabilities decreases",
+      "explanation": "Add-1 smoothing reduces the gap between high-frequency and low-frequency word pairs by uniformly adding"
+    },
+    {
+      "question": "4. 4. Which of the following methods is used to interpolate probabilities in n-gram models?",
+      "options": [
+        "Multiplying unigram, bigram, and trigram probabilities",
+        "Weighted averaging of higher- and lower-order probabilities",
+        "Selecting the highest-order n-gram with sufficient data",
+        "Normalizing probabilities to sum to 1"
+      ],
+      "correctAnswer": "Weighted averaging of higher- and lower-order probabilities",
+      "explanation": "Interpolation combines probabilities from different n-gram levels using weights to improve robustness."
+    },
+    {
+      "question": "5. In a Shannon game simulation, why might an LLM outperform a bigram model?",
+      "options": [
+        "It can assign probabilities to unseen word pairs",
+        "It generates words based on deep neural embeddings",
+        "It uses prior context beyond two words",
+        "It reduces entropy in word selection"
+      ],
+      "correctAnswer": "It uses prior context beyond two words",
+      "explanation": "LLMs leverage context from the entire sequence, whereas bigram models only consider the last word."
+    },
+    {
+      "question": "6. How does the chain rule of probability contribute to language modeling?",
+      "options": [
+        "By approximating probabilities using higher-order n-grams",
+        "By computing joint probabilities of sentences",
+        "By reducing the complexity of model training",
+        "By ensuring independence between word predictions"
+      ],
+      "correctAnswer": "By computing joint probabilities of sentences",
+      "explanation": "The chain rule allows the computation of joint probabilities by breaking them into conditional probabilities."
+    },
+    {
+      "question": "7. A sentiment analysis model is tested on a dataset of 100 reviews. The model is tasked with classifying each review as Positive or Negative . The confusion matrix for the model's predictions is as follows: \n\n| | Predicted Positive | Predicted Negative |\n|---|---|---|\n| Actual Positive | 40 | 10 |\n| Actual Negative | 20 | 30 |\n\n Based on the above confusion matrix: What is the precision of the model for the Positive class?",
+      "options": [
+        "0.50",
+        "0.67",
+        "0.80",
+        "0.89"
+      ],
+      "correctAnswer": "0.67",
+      "explanation": "Option (B) is the correct answer based on NPTEL DLNLP Assignment 1."
+    },
+    {
+      "question": "8. Why might backoff methods outperform higher-order n-gram models in certain contexts?",
+      "options": [
+        "They avoid overfitting by relying on simpler models",
+        "They reduce the computational cost of model evaluation",
+        "They inherently perform better on sparse datasets",
+        "They rely only on unigram probabilities for simplicity"
+      ],
+      "correctAnswer": "They avoid overfitting by relying on simpler models",
+      "explanation": "Backoff methods generalize better when data for higher-order n-grams is sparse."
+    },
+    {
+      "question": "9. A sentiment analysis model is tested on a dataset of 100 reviews. The model is tasked with classifying each review as Positive or Negative . The confusion matrix for the model's predictions is as follows: \n\n| | Predicted Positive | Predicted Negative |\n|---|---|---|\n| Actual Positive | 40 | 10 |\n| Actual Negative | 20 | 30 |\n\n Based on the above confusion matrix: What is the recall of the model for the Positive class?",
+      "options": [
+        "0.50",
+        "0.67",
+        "0.80",
+        "0.89"
+      ],
+      "correctAnswer": "0.80",
+      "explanation": "Option (C) is the correct answer based on NPTEL DLNLP Assignment 1."
+    },
+    {
+      "question": "10. If the vocabulary size is V=5000 and the frequency of a bigram is 1000, what is the probability of the bigram after applying Add-1 smoothing?",
+      "options": [
+        "(1001)/(5000+1000)",
+        "(1000+1)/(5000+1)",
+        "(1001)/(5000+5000)",
+        "(1000+1)/(5000+5001)"
+      ],
+      "correctAnswer": "(1000+1)/(5000+5001)",
+      "explanation": "Add-1 smoothing adds 1 to the numerator and increases the denominator by the vocabulary size."
+    },
+    {
+      "question": "11. Which of the following is False?",
+      "options": [
+        "Training a model means finding parameters that predict outputs well from input/output pairs of training dataset",
+        "Model is a family of equations",
+        "Supervised learning can be applied for mapping from one or more inputs to a single output only",
+        "Parameters affect outcome of a equation"
+      ],
+      "correctAnswer": "Supervised learning can be applied for mapping from one or more inputs to a single output only",
+      "explanation": "Supervised learning can be applied for mapping from one or more inputs to one or more outputs"
+    },
+    {
+      "question": "12. Which of the following is an example of supervised learning?",
+      "options": [
+        "Clustering customer data based on p urchase history",
+        "Predicting price of mobile based on historical data",
+        "Identifying topics in a set of text documents without labels",
+        "Discovering associations between products in a shopping cart"
+      ],
+      "correctAnswer": "Predicting price of mobile based on historical data",
+      "explanation": "Mobile price prediction can be solv ed by regression having supervised data available"
+    },
+    {
+      "question": "13. What is the mathematical definition of the ReLU activation function?",
+      "options": [
+        "f(x) = 1/ 1 + e^ -x",
+        "f(x) = tanh(x)",
+        "f(x)=max(0,x)",
+        "f(x) = x^2"
+      ],
+      "correctAnswer": "f(x)=max(0,x)",
+      "explanation": "Relu(x) = 0 if x< 0; otherwise x if x>=0"
+    },
+    {
+      "question": "14. In Gradient Descent, what happens if the learning rate is too high?",
+      "options": [
+        "The algorithm converges faster to the global minimum.",
+        "The algorithm may overshoot the minimum and fail to converge.",
+        "The algorithm will get stuck in a local minimum.",
+        "The algorithm will converge to the correct minimum, but it will take longer."
+      ],
+      "correctAnswer": "The algorithm may overshoot the minimum and fail to converge.",
+      "explanation": "If the learning rate is too high, the updates may overshoot the minimum, causing the algorithm to fail to converge or oscillate around the optimal solution."
+    },
+    {
+      "question": "15. In backpropagation, why is the chain rule used?",
+      "options": [
+        "To compute the output of the network during forward propagation.",
+        "To calculate the gradients of the loss function with respect to weights in each layer.",
+        "To determine the optimal number of neurons in a hidden layer.",
+        "To update weights by directly minimizing the loss function."
+      ],
+      "correctAnswer": "To calculate the gradients of the loss function with respect to weights in each layer.",
+      "explanation": "The chain rule i s used in backpropagation to calculate how the loss function changes with respect to each weight by considering the contribution of every layer in the network. This is essential for propagating gradients backward and updating the weights effectively."
+    },
+    {
+      "question": "16. Consider a simple neural network with: An input layer containing 3 neurons, A hidden layer containing 4 neurons and an output layer containing 2 neurons. The activation functions for the hidden and output layers are ReLU and softmax, respectively. Wha t is the total number of weights (parameters) in this network, excluding biases?",
+      "options": [
+        "12",
+        "14",
+        "20",
+        "26"
+      ],
+      "correctAnswer": "20",
+      "explanation": "Weights between input and hidden layer: 3 * 4 = 12 Weights between hidden and output layer: 4 * 2 = 8 Total no of parameters: 12 + 8 = 20."
+    },
+    {
+      "question": "17. Consider a neural network with a single weight w. The output of the network is given by y = w^2 and the loss function is L = 1/2(y - t)^2 where t=4 is the target value. If the current value of w is 3, what is the gradient of L with respect to w?",
+      "options": [
+        "12",
+        "24",
+        "30",
+        "18"
+      ],
+      "correctAnswer": "30",
+      "explanation": "Compute y = w^2 = 3^2 = 9 Gradient of L with respect to y= ∂L/∂y = y - t = 9 - 4 = 5 Gradient of y with respect to w: ∂y/∂w=2w= 2*3 = 6 Using the chain rule: ∂L/∂w=∂L/∂y * ∂y/ ∂w = 5 ⋅6=30"
+    },
+    {
+      "question": "18. In 1D Linear Regression, the least squares loss function is given by:\n\n$$L = \\frac{1}{N} \\sum_{i=1}^N (y_i - (\\hat{w}x_i + b))^2$$\n\nwhere y i are the true values, x i are the inputs, w^ is the weight, b is the bias, and N is the number of data points. If x=[1,2,3], y = [2, 4, 6] , w^=2, and b=0, what is the value of the least squares loss?",
+      "options": [
+        "0",
+        "2",
+        "4",
+        "6"
+      ],
+      "correctAnswer": "0",
+      "explanation": "Solution: 1. Compute the predicted values : y^i=w^xi+b=2xi+0; For x=[1,2,3], y^=[2,4,6] 2. Calculate the residuals (yi−y^i): Residuals=[2−2,4−4,6−6]=[0,0,0] 3. Compute the least squares loss: L=1/N(yi−y^i)2 = ⅓(0)^2 = 0"
+    },
+    {
+      "question": "19. Which of the following is a key difference between static embeddings (e.g., Word2Vec, GloVe) and contextual embeddings (e.g., BERT, ELMo)?",
+      "options": [
+        "Static embeddings generate different vectors for the same word based on its context, while contextual embeddings generate a single vector per word.",
+        "Static embeddings rely on matrix factorization, while contextual embeddings are based on co-occurrence matrices.",
+        "Static embeddings assign one vector per word type, while contextual embeddings produce distinct vectors for each token based on context.",
+        "Static embeddings cannot capture semantic relationships, while contextual embeddings can."
+      ],
+      "correctAnswer": "Static embeddings assign one vector per word type, while contextual embeddings produce distinct vectors for each token based on context.",
+      "explanation": "Option (C) is the correct answer according to NPTEL DLNLP Assignment 3."
+    },
+    {
+      "question": "20. In the context of distributional semantics, why is Pointwise Mutual Information (PMI) often used for weighting co-occurrence matrices?",
+      "options": [
+        "It is computationally efficient for high-dimensional data.",
+        "It emphasizes frequent words, which are more important in natural language.",
+        "It highlights statistically significant word co-occurrences relative to their independent probabilities.",
+        "It directly computes dense vector embeddings from sparse matrices."
+      ],
+      "correctAnswer": "It highlights statistically significant word co-occurrences relative to their independent probabilities.",
+      "explanation": "Option (C) is the correct answer according to NPTEL DLNLP Assignment 3."
+    },
+    {
+      "question": "21. What is the primary challenge in using Skip-gram with Negative Sampling (SGNS) to create word embeddings?",
+      "options": [
+        "Optimizing the number of negative samples for each positive sample.",
+        "Ensuring that the embeddings are sparse and interpretable.",
+        "Balancing the dimensionality of embeddings with training efficiency.",
+        "Constraining embeddings to align with matrix factorization methods like SVD."
+      ],
+      "correctAnswer": "Optimizing the number of negative samples for each positive sample.",
+      "explanation": "Option (A) is the correct answer according to NPTEL DLNLP Assignment 3."
+    },
+    {
+      "question": "22. If the cosine similarity between the embeddings of \"car\" and \"automobile\" is 0.9, while the cosine similarity between \"car\" and \"bike\" is 0.5, what can be inferred about the embeddings?",
+      "options": [
+        "\"Car\" and \"automobile\" co-occur more frequently than \"car\" and \"bike.\"",
+        "The embedding model has effectively captured semantic similarity between words.",
+        "\"Car\" and \"automobile\" have identical embeddings.",
+        "\"Car\" is syntactically closer to \"bike\" than to \"automobile.\""
+      ],
+      "correctAnswer": "The embedding model has effectively captured semantic similarity between words.",
+      "explanation": "Option (B) is the correct answer according to NPTEL DLNLP Assignment 3."
+    },
+    {
+      "question": "23. The GloVe objective function minimizes:",
+      "options": [
+        "The binary cross-entropy between predicted and actual co-occurrence probabilities.",
+        "The weighted least square difference between the dot product of embeddings and the logarithm of co-occurrence counts.",
+        "The negative log-likelihood of the context word given the center word.",
+        "The squared error between the word embedding norms and their PMI values."
+      ],
+      "correctAnswer": "The weighted least square difference between the dot product of embeddings and the logarithm of co-occurrence counts.",
+      "explanation": "Option (B) is the correct answer according to NPTEL DLNLP Assignment 3."
+    },
+    {
+      "question": "24. Suppose you train a Skip-gram model with Negative Sampling on a vocabulary of 10,000 words. If you choose k=5 negative samples per positive pair, how many updates will be made to the embeddings for each target-context pair?",
+      "options": [
+        "5 updates (for negative samples only).",
+        "1 update (for the positive pair only).",
+        "6 updates (1 positive + 5 negative).",
+        "2 ⋅ 5=102 \\cdot 5 = 102 ⋅ 5=10 updates (one for each embedding matrix)."
+      ],
+      "correctAnswer": "6 updates (1 positive + 5 negative).",
+      "explanation": "Option (C) is the correct answer according to NPTEL DLNLP Assignment 3."
+    },
+    {
+      "question": "25. In hierarchical softmax, the computational efficiency is improved by:",
+      "options": [
+        "Reducing the number of parameters using shared embeddings.",
+        "Structuring the vocabulary into a binary tree, where calculating P(c ∣ w) depends on the path from the root to c.",
+        "Applying negative sampling to approximate the softmax.",
+        "Using a fixed-size context window for every target word."
+      ],
+      "correctAnswer": "Structuring the vocabulary into a binary tree, where calculating P(c ∣ w) depends on the path from the root to c.",
+      "explanation": "Option (B) is the correct answer according to NPTEL DLNLP Assignment 3."
+    },
+    {
+      "question": "26. FastText improves on Word2Vec by representing words as bags of n-grams. If FastText encounters an out-of-vocabulary (OOV) word, how is the representation of this word constructed, and what are the key limitations of this approach?",
+      "options": [
+        "The vector is constructed by averaging the embeddings of its character n-grams, and the limitation is reduced representation quality for highly uncommon n-grams.",
+        "The vector is constructed by summing embeddings of similar words, and the limitation is computational inefficiency.",
+        "The vector is learned using hierarchical softmax, and the limitation is the lack of support for hashing-based memory constraints.",
+        "The vector is directly inferred using bilingual dictionaries, and the limitation is dependence on cross-lingual data."
+      ],
+      "correctAnswer": "The vector is constructed by averaging the embeddings of its character n-grams, and the limitation is reduced representation quality for highly uncommon n-grams.",
+      "explanation": "Option (A) is the correct answer according to NPTEL DLNLP Assignment 3."
+    },
+    {
+      "question": "27. Canonical Correlation Analysis (CCA) is often used to project embeddings into a shared space. Given two languages with highly divergent syntactic structures, which limitation of CCA might reduce its effectiveness, and what alternative approach could address this?",
+      "options": [
+        "CCA assumes linear transformations, making it less effective; using adversarial training for non-linear transformations is a viable alternative.",
+        "CCA requires large bilingual dictionaries, making it impractical; autoencoders can bypass this requirement.",
+        "CCA is computationally expensive for high-dimensional embeddings; dimensionality reduction via PCA can help.",
+        "CCA minimizes mean squared errors, which ignores semantic similarity; graph-based representations offer an alternative."
+      ],
+      "correctAnswer": "CCA assumes linear transformations, making it less effective; using adversarial training for non-linear transformations is a viable alternative.",
+      "explanation": "Option (A) is the correct answer according to NPTEL DLNLP Assignment 3."
+    },
+    {
+      "question": "28. Joint optimization methods for cross-lingual embeddings balance monolingual and cross-lingual objectives. For a low-resource language paired with a high-resource language, which factors critically affect the balance, and why?",
+      "options": [
+        "The size of the monolingual corpus for the low-resource language as it determines the effectiveness of pretraining.",
+        "The quality of the bilingual lexicon as it directly influences monolingual loss optimization.",
+        "The degree of morphological similarity between languages as it impacts word segmentation strategies.",
+        "The alignment quality of sentence pairs, as it controls cross-lingual loss contributions."
+      ],
+      "correctAnswer": "The size of the monolingual corpus for the low-resource language as it determines the effectiveness of pretraining.",
+      "explanation": "Option (A) is the correct answer according to NPTEL DLNLP Assignment 3."
+    },
+    {
+      "question": "29. Which of the following best describes the role of word embeddings in language modeling?",
+      "options": [
+        "Word embeddings convert words into one -hot encoded vectors for neural network processing.",
+        "Word embeddings represent words as dense, continuous vectors to capture semantic relationships.",
+        "Word embeddings are used to perform stemming and lemmatization in preprocessing.",
+        "Word embeddings are designed to reduce the size of the vocabulary by merging similar words."
+      ],
+      "correctAnswer": "Word embeddings represent words as dense, continuous vectors to capture semantic relationships.",
+      "explanation": "Word embeddings represent words as dense, continuous vectors to capture semantic relationships."
+    },
+    {
+      "question": "30. Which of the following tasks is most suitable for Recurrent Neural Networks (RNNs)?",
+      "options": [
+        "Image classification in static images.",
+        "Predicting the next word in a sentence.",
+        "Clustering data points in an unsupervised man ner.",
+        "Sorting a list of integers."
+      ],
+      "correctAnswer": "Predicting the next word in a sentence.",
+      "explanation": "Predicting the next word in a sentence is most suitable for RNN"
+    },
+    {
+      "question": "31. Which of the following is the primary cause of the vanishing gradient problem in deep neural networks, particularly in Recurrent Neural Networks (RNNs)?",
+      "options": [
+        "The network's weight matrices become too large, causing instability. 2. Gradients become too small during backpropagation, effectively preventing weight updates in the earlier layers.",
+        "The activation functions used in the network are too complex and cannot be computed efficiently.",
+        "The network suffers from an excessive number of layers, leading to too much redundancy in the model."
+      ],
+      "correctAnswer": "The activation functions used in the network are too complex and cannot be computed efficiently.",
+      "explanation": "The vanishing gradient problem occurs when gradients become very small during backpropagation, especially in deep or recurrent networks, making it difficult for the model to update the weights in earlier layers. This can slow down or even stop the learning process."
+    },
+    {
+      "question": "32. In a Named Entity Recognition (NER) task using the BIO tagging scheme, an input sentence has 10 tokens, and the model outputs probabilities for 5 entity classes: B- PER, I-PER, B- LOC , I-LOC , and O . If the softmax function is applied over the outputs for each token, how many probability values will the model compute for the entire sentence?",
+      "options": [
+        "5",
+        "10",
+        "50",
+        "100"
+      ],
+      "correctAnswer": "50",
+      "explanation": "For each of the 10 tokens, the model computes a probability distribution across the 5 classes. Hence, 10×5=50 probability values are computed."
+    },
+    {
+      "question": "33. In an encoder -decoder architecture for machine translation, the encoder processes an input sequence of length T with a hidden state size of H, and the decoder generates an output sequence of length T′ with a hidden state size of H′. If the encoder’s weight matrix has dimensions H×H for the hidden state transition and V in×H for the input -to-hidden transformation (where V in is the vocabulary size), and the decoder's weight matrix has dimensions H′×H′ for the hidden state transition and V out×H′ for the output -to-hidden transformation (where V out is the target vocabulary size), how many parameters are there in the encoder and decoder combined, excluding biases?",
+      "options": [
+        "V in×H+H×H+V out×H′+H′×H′",
+        "V in×H+H×H′+V out×H+H′×H",
+        "V in×H+H×H+V out×H′+H′×H′",
+        "V in×H+H×H′+V out×H+H′×H"
+      ],
+      "correctAnswer": "V in×H+H×H+V out×H′+H′×H′",
+      "explanation": "● The encoder's weight matrix for input -to-hidden has V in×H parameters, and for hidden state transitions, there are H×H parameters. ● The decoder's weight matrix for output -to-hidden has V out×H′ parameters, and for hidden state transitions, there are H′×H′ parameters. Thus, the total number of parameters is: Vin×H+H×H+V out×H′+H′×H′"
+    },
+    {
+      "question": "34. In an LSTM network, the number of parameters for the input gate is determined by the size of the input vector V and the size of the hidden state H. Assuming the LSTM has 1 input gate, 1 forget gate, 1 output gate, and 1 cell state, how many parameters are there for the input gate, excluding biases?",
+      "options": [
+        "V×H+H×H",
+        "(V+H)×H",
+        "V×H+H×1",
+        "(V+H)×1"
+      ],
+      "correctAnswer": "(V+H)×H",
+      "explanation": "For the input gate in an LSTM, the parameters consist of: Weights from the input vector V to the hidden state H, which are represented by a matrix of size V×H Weights from the previous hidden state H to the current hidden state H, represented by a matrix of size H×H Thus, the total number of parameters for the input gate is V×H + H×H = (V + H) ×H"
+    },
+    {
+      "question": "35. Suppose a language model has a vocabulary of size 5, and during decoding, the model produces the following logits for the five tokens: z = [4, 0, -2, 3, 1] Compute the probability distribution when using random sampling with temperature T=0.5. Which of the following is the final probability distribution.",
+      "options": [
+        "[0.8787,0.0002,0.000005,0.1189,0.0021]",
+        "[0.0003, 0.8787, 0.000005, 0.1188,0.0022]",
+        "[0.0002, 0.8787, 0.000006, 0.1089, 0.0125]",
+        "[0.7789,0.1001,0.000005,0.1189,0.0023]"
+      ],
+      "correctAnswer": "[0.8787,0.0002,0.000005,0.1189,0.0021]",
+      "explanation": "Scale the logits by 1/T = 1/0.5 = 2 zi′=zi/T=[8,0,−4,6,2] Compute exponential: [e^8, e^0, e^−4, e^6, e^2] e^8≈2980.96, e^0= 1, e^- 4≈0.0183, e^6≈403.43, e^2≈7.389 Compute sum of exponentials: S= 2980.96+1+0.0183+403.43+7.389=3392.80 Softmax probabilities : P0= 2980.96 / 3392.80 = 0.8787, P1 = 1/ 3392.80 =0.0002 P2=0.0183/3392.80 ≈0.000005, P3 = 403.43/3392.80=0.1189, P4 = 7.389/3392.80 = 0.0022"
+    },
+    {
+      "question": "36. Self-attention generates contextual embeddings by focusing on relevant tokens in the sequence. Given a sentence: 'The bank raised the interest rates.' How would a multi-head attention mechanism behave if one head specializes in syntactic relations and another in semantics?",
+      "options": [
+        "Both heads would attend to the same tokens in the same way",
+        "The syntactic head would focus on 'the' for 'bank,' while the semantic head focuses on 'interest'",
+        "The syntactic head would focus on 'raised' for 'bank,' while the semantic head focuses on 'interest rates'",
+        "Both heads would ignore the context beyond their respective tokens"
+      ],
+      "correctAnswer": "The syntactic head would focus on 'raised' for 'bank,' while the semantic head focuses on 'interest rates'",
+      "explanation": "The syntactic head would focus on 'raised' for 'bank,' while the semantic head focuses on 'interest rates'"
+    },
+    {
+      "question": "37. In an encoder-decoder Transformer architecture, what will happen if the positional encoding is removed from both the encoder and decoder? How would this affect tasks like machine translation?",
+      "options": [
+        "The model would completely fail to generate coherent sentences",
+        "The model would still generate sentences but ignore word order and context",
+        "The model would work normally but slower due to lack of efficiency",
+        "The model would generate longer sequences without performance degradation"
+      ],
+      "correctAnswer": "The model would still generate sentences but ignore word order and context",
+      "explanation": "The model would still generate sentences but ignore word order and context"
+    },
+    {
+      "question": "38. Imagine you are training a Transformer model on a dataset of long sequences (e.g., full books). Which attention mechanism would you use to minimize memory usage while maintaining context across long ranges? Why?",
+      "options": [
+        "Multi-head attention – to attend to multiple aspects of context",
+        "Local attention – to focus on relevant windows within the sequence",
+        "Global attention – to maintain a global view of the input",
+        "Dilated sliding window attention – to balance local and long-range dependencies efficiently"
+      ],
+      "correctAnswer": "Dilated sliding window attention – to balance local and long-range dependencies efficiently",
+      "explanation": "Dilated sliding window attention – to balance local and long-range dependencies efficiently"
+    },
+    {
+      "question": "39. Consider a Transformer model for real-time speech recognition. Which optimization strategy would you prioritize to reduce latency during inference, and why?",
+      "options": [
+        "Use multi-query attention to reduce redundant computation for each token",
+        "Increase the number of attention heads to improve parallelism",
+        "Remove positional encoding to make the model faster",
+        "Use standard self-attention without modifications"
+      ],
+      "correctAnswer": "Use multi-query attention to reduce redundant computation for each token",
+      "explanation": "Use multi-query attention to reduce redundant computation for each token"
+    },
+    {
+      "question": "40. You are designing a Transformer for image classification using Vision Transformers (ViTs). Which positional encoding technique would be most appropriate for learning fine-grained spatial relationships, and why?",
+      "options": [
+        "Sinusoidal positional encodings for their simplicity and robustness",
+        "Learned positional embeddings to adapt to specific image structures",
+        "Relative positional bias for improved accuracy in larger images",
+        "Rotary positional embeddings to reduce computational complexity"
+      ],
+      "correctAnswer": "Learned positional embeddings to adapt to specific image structures",
+      "explanation": "Learned positional embeddings to adapt to specific image structures"
+    },
+    {
+      "question": "41. Suppose you have the following query vector q = [1, 2], key vector k = [2, 1], and value vector v = [3, 4]. The scale factor for attention is √d_k where d_k = 2. Calculate the attention score and the final output of the self-attention mechanism.",
+      "options": [
+        "Attention Score: 1.5, Output: [3, 4]",
+        "Attention Score: 2.12, Output: [3.5, 4.5]",
+        "Attention Score: 0.82, Output: [2.46, 3.28]",
+        "Attention Score: 0.91, Output: [3, 4]"
+      ],
+      "correctAnswer": "Attention Score: 0.82, Output: [2.46, 3.28]",
+      "explanation": "Attention Score: 0.82, Output: [2.46, 3.28]"
+    },
+    {
+      "question": "42. You are designing a multi-head attention layer with a model dimension d = 512, 8 attention heads, and key, query, and value dimensions of d_k = d_q = d_v = 64 for each head. What will be the combined output dimension after the multi-head attention is projected back?",
+      "options": [
+        "64",
+        "512",
+        "256",
+        "1024"
+      ],
+      "correctAnswer": "512",
+      "explanation": "512"
+    },
+    {
+      "question": "43. Given a sinusoidal positional encoding function for token position p = 5 and dimension i = 2, the encoding is computed as PE(p, i) = sin(p / 10000^(2i/d)). Assume d = 512. What is the value of PE(5, 2)?",
+      "options": [
+        "0.0005",
+        "0.0314",
+        "0.0981",
+        "0.0157"
+      ],
+      "correctAnswer": "0.0314",
+      "explanation": "0.0314"
+    },
+    {
+      "question": "44. Suppose you train a Transformer decoder with the input sentence: 'I love natural language processing.' You are at the third token ('natural') with the following embedding vectors: Query (q): [0.5, 1.0] Key (k1, k2, k3): [0.2, 0.8], [0.7, 0.1], [0.5, 0.5] Value (v1, v2, v3): [1, 0], [0, 1], [1, 1] Calculate the weighted sum of values using the scaled dot-product attention mechanism.",
+      "options": [
+        "[0.75, 0.25]",
+        "[0.6, 0.8]",
+        "[0.9, 0.9]",
+        "[1.2, 1.0]"
+      ],
+      "correctAnswer": "[0.6, 0.8]",
+      "explanation": "[0.6, 0.8]"
+    },
+    {
+      "question": "45. You are tasked with improving a Transformer’s efficiency for processing sequences of length N = 10,000. You apply Linformer, which approximates the attention matrix with a low-rank representation of size k = 256. What is the new complexity for attention computation compared to the original O(N^2) complexity?",
+      "options": [
+        "O(N · k)",
+        "O(k^2)",
+        "O(N^3)",
+        "O(N · log N)"
+      ],
+      "correctAnswer": "O(N · k)",
+      "explanation": "O(N · k)"
+    },
+    {
+      "question": "46. In a span-based fine-tuning appr oach, given an input sequence x consisting of T tokens, what is the total number of possible spans that can be consider ed?",
+      "options": [
+        "T",
+        "T^2",
+        "T(T+1)2",
+        "2^T-1"
+      ],
+      "correctAnswer": "T(T+1)2",
+      "explanation": "All possible contiguous spans in the sequence, considering spans of length 1 up to T is = 1+2+3+……..T = T(T+1)/2"
+    },
+    {
+      "question": "47. Which of the following best describes transfer learning in deep learning models?",
+      "options": [
+        "Training a model from scratch on a large dataset.",
+        "Using a pre-trained model and fine-tuning it for a specific task.",
+        "Using an ensemble of multiple models for improved performance.",
+        "Training a model only on a small dataset without any pre-training."
+      ],
+      "correctAnswer": "Using a pre-trained model and fine-tuning it for a specific task.",
+      "explanation": ". Using a pre-trained model and fine-tuning it for a specific task."
+    },
+    {
+      "question": "48. Which of the following is true for ELMo?",
+      "options": [
+        "ELMo generates word representations that are independent of context, similar to traditional word embeddings like GloV e.",
+        "The representations from all layers in ELMo contribute equally to both syntactic and semantic understanding, making layer -wise differentiation unnecessary .",
+        "Lower -layer representations in ELMo primarily capture syntactic and lower -level semantic information, while higher -layer representations encode more abstract meaning and contextual nuances.",
+        "ELMo strictly requires fine-tuning all its layers during downstream tasks, and frozen biLM weights cannot be used effectively ."
+      ],
+      "correctAnswer": "Lower -layer representations in ELMo primarily capture syntactic and lower -level semantic information, while higher -layer representations encode more abstract meaning and contextual nuances.",
+      "explanation": ") Lower -layer representations capture syntax and lower -level semantics, while higher -layer representations capture higher -level semantics like meaning and context."
+    },
+    {
+      "question": "49. Why does scaling up a transformer model often lead to better performance across various NLP tasks?",
+      "options": [
+        "Larger models inherently generalize better to unseen data",
+        "Scaling up increases memorization, reducing overfitting",
+        "Transformers achieve better loss conver gence with increased size",
+        "Larger models can encode more complex data representations"
+      ],
+      "correctAnswer": "Larger models can encode more complex data representations",
+      "explanation": ") Larger models can encode more complex data representations"
+    },
+    {
+      "question": "50. How does parameter -efficient fine-tuning (PEFT) appr oaches like adapters differ from full fine-tuning?",
+      "options": [
+        "PEFT methods modify only a small subset of the model parameters",
+        "They increase the training time significantly",
+        "They require retraining the entire model from scratch",
+        "PEFT methods cannot be applied to transformer models"
+      ],
+      "correctAnswer": "PEFT methods modify only a small subset of the model parameters",
+      "explanation": ") PEFT methods modify only a small subset of the model parameters"
+    },
+    {
+      "question": "51. What is the fundamental advantage of sparse expert models like the Switch Transformer?",
+      "options": [
+        "They allow selective activation of model components, reducing computational cost",
+        "They achieve superior results without requiring additional pretraining",
+        "They eliminate the need for data augmentation techniques",
+        "They improve tokenization efficiency for low-resource languages"
+      ],
+      "correctAnswer": "They allow selective activation of model components, reducing computational cost",
+      "explanation": ") They allow selective activation of model components, reducing computational cost"
+    },
+    {
+      "question": "52. How can pretraining objectives like ELECTRA's replaced token detection impr ove efficiency over masked language modeling?",
+      "options": [
+        "By reducing the computational complexity of training",
+        "By training the model to distinguish between real and replaced tokens rather than predicting masked ones",
+        "By eliminating the need for extensive labeled datasets",
+        "By increasing the number of parameters in the model"
+      ],
+      "correctAnswer": "By training the model to distinguish between real and replaced tokens rather than predicting masked ones",
+      "explanation": ") By training the model to distinguish between real and replaced tokens rather than predicting masked ones"
+    },
+    {
+      "question": "53. In a multi-head attention mechanism with 8 heads and hidden dimension of 512, if we use a batch size of 16 with a sequence length of 64, what is the total number of operations requir ed for the attention computation across all heads (excluding feed-forward layers) ?",
+      "options": [
+        "2,097,152",
+        "16,777,216",
+        "33,554,432",
+        "67,108,864"
+      ],
+      "correctAnswer": "33,554,432",
+      "explanation": "### Explanation: For a single head in self-attention with: - Batch size (B) = 16 - Sequence length (L) = 64 - Head dimension (d) = 512/8 = 64 (since total dimension 512 is split among 8 heads) The attention computation involves: 1. Query-Key matrix multiplication: (B×L×d) × (B×L×d)ᵀ = B×L×L operations per head 2. Softmax over the attention scores: B×L×L operations per head 3. Attention-V alue multiplication: (B×L×L) × (B×L×d) = B×L×L×d operations per head For exactly 8 heads: - Query-Key multiplication: 8 × 16 × 64 × 64 = 524,288 operations - Softmax: 8 × 16 × 64 × 64 = 524,288 operations - Attention-V alue multiplication: 8 × 16 × 64 × 64 × 64 = 33,554,432 operations Total operations: 524,288 + 524,288 + 33,554,432 = 34,603,008 operations However , if we're focusing purely on the core attention dot product operations (which is common when discussing attention complexity), the answer would be: - 8 heads × 16 batch × 64 sequence × 64 sequence × 64 dimensions = 33,554,432 operations Answer: C) 33,554,432 The dominant cost in attention mechanisms is the attention-value multiplication which scales with O(B×H×L²×d), where H is the number of heads. This is why the attention mechanism becomes computationally expensive for long sequences."
+    },
+    {
+      "question": "54. Many open- domain QA models follow a retriever -reader framework. However, one major drawback of this approach is:",
+      "options": [
+        "The retriever often fails to retrieve factually correct documents",
+        "The reader module lacks the ability to generate novel answers beyond retrieved passages",
+        "The retriever is computationally expensive and requires labeled supervision for every question",
+        "The reader struggles to perform named entity recognition (NER) on retrieved passages"
+      ],
+      "correctAnswer": "The reader module lacks the ability to generate novel answers beyond retrieved passages",
+      "explanation": "Option (B) is the correct answer according to NPTEL DLNLP Assignment 7."
+    },
+    {
+      "question": "55. Dense retrievers like ColBERT differ from traditional TF- IDF/BM25 retrieval models because they:",
+      "options": [
+        "Compute sparse representations instead of dense vector embeddings",
+        "Rely on explicit term frequency and document length normalization",
+        "Use contextualized token embeddings to compare query and document representations at a finer granularity",
+        "Discard negative sampling strategies in the retrieval phase"
+      ],
+      "correctAnswer": "Use contextualized token embeddings to compare query and document representations at a finer granularity",
+      "explanation": "Option (C) is the correct answer according to NPTEL DLNLP Assignment 7."
+    },
+    {
+      "question": "56. If a multilingual QA system is fine- tuned on an English corpus but evaluated on Hindi queries, which fundamental challenge arises?",
+      "options": [
+        "The inability to align embedding spaces across languages",
+        "The loss of syntactic information due to translation errors",
+        "The increased computational complexity in the retriever module",
+        "The failure of word segmentation methods in low -resource languages"
+      ],
+      "correctAnswer": "The inability to align embedding spaces across languages",
+      "explanation": "Option (A) is the correct answer according to NPTEL DLNLP Assignment 7."
+    },
+    {
+      "question": "57. In dialogue state tracking (DST), a primary reason for switching from rule- based slot filling to machine learning- based approaches is:",
+      "options": [
+        "ML -based methods can generate entirely novel intents beyond predefined slots",
+        "Rule -based methods fail to handle multimodal conversations",
+        "ML -based methods allow tracking of implicit user preferences and dynamically adjust to ambiguous user inputs",
+        "Rule -based approaches are computationally expensive compared to transformer -based DST model s"
+      ],
+      "correctAnswer": "ML -based methods allow tracking of implicit user preferences and dynamically adjust to ambiguous user inputs",
+      "explanation": "Option (C) is the correct answer according to NPTEL DLNLP Assignment 7."
+    },
+    {
+      "question": "58. Consider an open- domain chatbot trained on large- scale internet data. Which of the following factors poses the most significant challenge to its deployment in high- stakes applications (e.g., healthcare, finance)?",
+      "options": [
+        "The model’s inability to generate grammatically correct responses",
+        "The limited size of the training corpus relative to proprietary datasets",
+        "The lack of grounding mechanisms to verify factual accuracy and prevent hallucination",
+        "The failure to handle multiple- turn dialogues effectively"
+      ],
+      "correctAnswer": "The lack of grounding mechanisms to verify factual accuracy and prevent hallucination",
+      "explanation": "Option (C) is the correct answer according to NPTEL DLNLP Assignment 7."
+    },
+    {
+      "question": "59. A major limitation of retrieval -based chatbots compared to generative models is that:",
+      "options": [
+        "They require massive amounts of labeled training data to function",
+        "They struggle to provide coherent multi -turn interactions",
+        "They cannot generate responses beyond the scope of their training corpus",
+        "They fail to incorporate user -specific personalization"
+      ],
+      "correctAnswer": "They cannot generate responses beyond the scope of their training corpus",
+      "explanation": "Option (C) is the correct answer according to NPTEL DLNLP Assignment 7."
+    },
+    {
+      "question": "60. Why do extractive summarization models often fail to perform well in abstractive summarization tasks?",
+      "options": [
+        "Extractive models do not learn semantic relationships between words and phrases",
+        "Extractive models depend on lexical similari ty rather than understanding deeper discourse structures",
+        "Extractive models cannot handle cross -document coreference resolution",
+        "Extractive models lack the computational efficiency required for abstractive summarization"
+      ],
+      "correctAnswer": "Extractive models depend on lexical similari ty rather than understanding deeper discourse structures",
+      "explanation": "Option (B) is the correct answer according to NPTEL DLNLP Assignment 7."
+    },
+    {
+      "question": "61. In long- document summarization, why might an extract -then- paraphrase approach outperform direct abstractive methods?",
+      "options": [
+        "It preserves factual consistency by constraining s ummaries to extracted content",
+        "It eliminates the need for transformer -based architectures",
+        "It does not require labeled training data for summarization",
+        "It allows for end- to-end training with a lower computational cost"
+      ],
+      "correctAnswer": "It preserves factual consistency by constraining s ummaries to extracted content",
+      "explanation": "Option (A) is the correct answer according to NPTEL DLNLP Assignment 7."
+    },
+    {
+      "question": "62. While evaluating a summarization model, why is ROUGE -2 sometimes preferred over BLEU?",
+      "options": [
+        "ROUGE -2 correlates better with human judgment for extractive summarization tasks",
+        "BLEU cannot handle long documents, whereas ROUGE -2 is designed for multi -document summarization",
+        "BLEU only considers single- token matches, while ROUGE -2 evaluates sentence structure",
+        "ROUGE -2 incorporates contextual embeddings, making it more robust for summarization"
+      ],
+      "correctAnswer": "ROUGE -2 correlates better with human judgment for extractive summarization tasks",
+      "explanation": "Option (A) is the correct answer according to NPTEL DLNLP Assignment 7."
+    },
+    {
+      "question": "63. Both dialogue systems and summarization models require sequence generation. Which of the following represents a key distinction between their architectures?",
+      "options": [
+        "Summarization models primarily use extractive methods, whereas dialogue systems rely on seq2seq architectures",
+        "Dialogue models generate text interactively based on conversational history, while summarization models optimize for information condensation in a single pass",
+        "Summarization models rely on intent classification, while dialogue systems do not",
+        "Dialogue models encode sentence embeddings, whereas summarization models use word embeddings"
+      ],
+      "correctAnswer": "Dialogue models generate text interactively based on conversational history, while summarization models optimize for information condensation in a single pass",
+      "explanation": "Option (B) is the correct answer according to NPTEL DLNLP Assignment 7."
+    },
+    {
+      "question": "64. What is the main advantage of fine -tuning a pretrained model instead of training a model from scratch?",
+      "options": [
+        "Fine -tuning requires a large amount of labeled data to work effectively.",
+        "Fine -tuning helps adapt a general model to a specific task while leveraging prior knowledge, reducing data and compute requirements.",
+        "Fine -tuning always leads to overfitting and should be avoided.",
+        "Fine -tuning removes the need for any labeled data."
+      ],
+      "correctAnswer": "Fine -tuning helps adapt a general model to a specific task while leveraging prior knowledge, reducing data and compute requirements.",
+      "explanation": "Option (B) is correct based on NPTEL DLNLP Assignment 8."
+    },
+    {
+      "question": "65. According to the Scaling Laws observed in Super -NaturalInstructions, how does increasing the number of training tasks affect model performance?",
+      "options": [
+        "Increasing tasks improves generalization to unseen tasks, demonstrating positive transfer.",
+        "More tasks always lead to overfitting and degrade generalization performance. C) The number of tasks does not impact model performance significantly.",
+        "Reducing the number of tasks helps models specialize and generalize better."
+      ],
+      "correctAnswer": "Increasing tasks improves generalization to unseen tasks, demonstrating positive transfer.",
+      "explanation": "Option (A) is correct based on NPTEL DLNLP Assignment 8."
+    },
+    {
+      "question": "66. What distinguishes FLAN (Fine -tuned LAnguage Net) models from standard pre -trained language models?",
+      "options": [
+        "FLAN models are instruction -tuned, meaning they are explicitly fine -tuned on a diverse range of tasks formatted as instructions, improving zero- shot and few -shot learning.",
+        "FLAN models do not require pretraining and are trained directly on downstream tasks.",
+        "FLAN models only work in a zero- shot setting and cannot be fine -tuned further.",
+        "FLAN models are based on a completely different architecture than transformer -based models."
+      ],
+      "correctAnswer": "FLAN models are instruction -tuned, meaning they are explicitly fine -tuned on a diverse range of tasks formatted as instructions, improving zero- shot and few -shot learning.",
+      "explanation": "Option (A) is correct based on NPTEL DLNLP Assignment 8."
+    },
+    {
+      "question": "67. Which of the following is True about RLHF?",
+      "options": [
+        "RLHF involves state transitions where the agent’s actions influence future states",
+        "RLHF does not have state transitions; actions (completions) are scored by a reward model",
+        "RLHF attribution of re ward is not done for an entire sequence of actions",
+        "RLHF does not use a policy function to determine actions, unlike standard RL."
+      ],
+      "correctAnswer": "RLHF does not have state transitions; actions (completions) are scored by a reward model",
+      "explanation": "Option (B) is correct based on NPTEL DLNLP Assignment 8."
+    },
+    {
+      "question": "68. Which of the following is False?",
+      "options": [
+        "Online reinforcement learning allows the agent to continuously adapt to changes in the environment by learning from real -time feedback.",
+        "DPO directly optimizes for preference- based feedback, rather than relying on separately developed reward models.",
+        "DPO us es computationally expensive sampling process than PPO",
+        "DPO simplifies the training framework by eliminating the need to explicitly model rewards."
+      ],
+      "correctAnswer": "DPO us es computationally expensive sampling process than PPO",
+      "explanation": "Option (C) is correct based on NPTEL DLNLP Assignment 8."
+    },
+    {
+      "question": "69. In which scenario would DPO be most beneficial?",
+      "options": [
+        "When a clear objective function is readily available for model optimization. B. When aligning a language model with human preferences in a way that avoids explicit reward modeling and complex reinforceme nt learning setups.",
+        "For tasks where rapid experimentation and fine -tuning are not necessary.",
+        "When dealing with large datasets of labeled human feedback."
+      ],
+      "correctAnswer": "For tasks where rapid experimentation and fine -tuning are not necessary.",
+      "explanation": "Option (B) is correct based on NPTEL DLNLP Assignment 8."
+    },
+    {
+      "question": "70. In RLHF the reward function R(s) is often regularized using the KL divergence between the learned policy π_ϕ and the reference policy π_0 to prevent excessive deviation. The modified reward is given by:\n\n$$R'(s) = R(s) - \\beta D_{\\text{KL}}(\\pi_\\phi(\\cdot \\mid s) \\parallel \\pi_0(\\cdot \\mid s))$$\n\nThe KL divergence is defined as:\n\n$$D_{\\text{KL}}(\\pi_\\phi \\parallel \\pi_0) = \\sum_a \\pi_\\phi(a \\mid s) \\log \\frac{\\pi_\\phi(a \\mid s)}{\\pi_0(a \\mid s)}$$\n\nConsider a state s where the action probabilities under $\\pi_\\phi$ and reference policy $\\pi_0$ are:\n• $\\pi_\\phi(a_1 \\mid s) = 0.6, \\quad \\pi_\\phi(a_2 \\mid s) = 0.4$\n• $\\pi_0(a_1 \\mid s) = 0.5, \\quad \\pi_0(a_2 \\mid s) = 0.5$\n\nCompute the KL divergence and select the correct answer:",
+      "options": [
+        "0.0704",
+        "0.0781",
+        "0.0689",
+        "0.0652"
+      ],
+      "correctAnswer": "0.0704",
+      "explanation": "$D_{\\text{KL}} = (0.6 \\times \\log(0.6/0.5)) + (0.4 \\times \\log(0.4/0.5)) = (0.6 \\times 0.182) + (0.4 \\times (-0.097)) = 0.1092 - 0.0388 = 0.0704$."
+    },
+    {
+      "question": "71. In RLHF setup, to train a reward function R(x), the optimization objective is to maximize the difference in rewards between preferred and dispreferred responses. Suppose we have a dataset of preference pairs $(x, y^+)$ and $(x, y^-)$, where $y^+$ is the preferred response and $y^-$ is the dispreferred response.\n\nThe loss function for the reward model is given as:\n\n$$\\mathcal{L} = -\\mathbb{E}_{(x, y^+, y^-)} [\\log \\sigma(R(y^+) - R(y^-))]$$\n\nIf the rewards for a given preference pair are $R(y^+) = 2.5$, and $R(y^-) = 1.0$, what is the value of the loss term for this pair for the reward model?",
+      "options": [
+        "log (1 + e^-1.5)",
+        "log (1 + e^1.5)",
+        "-log (1 + e^-1.5)",
+        "-log (1 + e^1.5)"
+      ],
+      "correctAnswer": "log (1 + e^-1.5)",
+      "explanation": "Step 1: Reward difference $R(y^+) - R(y^-) = 2.5 - 1.0 = 1.5$.\nStep 2: $\\sigma(1.5) = \\frac{1}{1 + e^{-1.5}}$, so $\\log \\sigma(1.5) = -\\log(1 + e^{-1.5})$.\nStep 3: Loss $\\mathcal{L} = -(-\\log(1 + e^{-1.5})) = \\log(1 + e^{-1.5})$."
+    },
+    {
+      "question": "72. Which of the following is False?",
+      "options": [
+        "In Few -shot prompt paradigm, for the same prompt the order in which samples are provided can not make the difference in result",
+        "In transformer circuit, different QK Circuit matrix tells us which tokens information is moved to and from in the residual stream",
+        "Induction head attends back to previous tokens that were followed by the current and/or recent tokens.",
+        "Transformer language models undergo a “phase change” early in training, during which induction heads form and simultaneously in-context learning improves dramatically."
+      ],
+      "correctAnswer": "In Few -shot prompt paradigm, for the same prompt the order in which samples are provided can not make the difference in result",
+      "explanation": "Option (A) is the correct answer according to NPTEL DLNLP Assignment 9."
+    },
+    {
+      "question": "73. Which of the following best describes the difference between zero -shot and few -shot prompting in large language models?",
+      "options": [
+        "Zero -shot prompting provides multiple examples in the prompt, whereas few -shot prompting provides no examples.",
+        "Zero -shot prompting requires a fine -tuned model, whereas few -shot prompting does not.",
+        "Zero -shot prompting relies on the model’s pre -trained knowledge without examples, while few-shot prompting includes a few examples to guide the model.",
+        "Few -shot prompting is only applicable to classification tasks, whereas zero -shot prompting works for all NLP tasks."
+      ],
+      "correctAnswer": "Zero -shot prompting relies on the model’s pre -trained knowledge without examples, while few-shot prompting includes a few examples to guide the model.",
+      "explanation": "Option (C) is the correct answer according to NPTEL DLNLP Assignment 9."
+    },
+    {
+      "question": "74. A student is solving the following mathematical problem using Chain of Thought (CoT) prompting: Problem: If a bookstore sells 3 books for $15, how much would 7 books cost at the same rate? Using CoT prompting, the model breaks down the problem step by step: The cost of one book is calculated as: 15÷3=5 The cost of 7 books is then determined as: 5×7=35 The final answer is $35. What is the main advantage of using Chain of Thought (CoT) prompting in solving mathematical problems like the one above?",
+      "options": [
+        "It allows the model to generate more creative answers instead of strictly numerical ones.",
+        "It enables the model to follow a step -by-step reasoning process, reducing errors in multi -step calculations.",
+        "It makes the model answer faster by skipping intermediate steps.",
+        "It ensures that the model always provides the correct answer, regardless of input complexity."
+      ],
+      "correctAnswer": "It enables the model to follow a step -by-step reasoning process, reducing errors in multi -step calculations.",
+      "explanation": "Option (B) is the correct answer according to NPTEL DLNLP Assignment 9."
+    },
+    {
+      "question": "75. What is the primary advantage of Tree of Thought (ToT) prompting compared to Chain of Thought (CoT) prompting in problem -solving with Large Language Models?",
+      "options": [
+        "ToT allows the model to explore multiple reasoning paths and backtrack if needed, improvi ng complex decision-making.",
+        "ToT speeds up response time by reducing the number of tokens generated.",
+        "ToT eliminates the need for intermediate reasoning steps, leading to more concise answers.",
+        "ToT relies solely on fine-tuning rather than prompting techniques."
+      ],
+      "correctAnswer": "ToT allows the model to explore multiple reasoning paths and backtrack if needed, improvi ng complex decision-making.",
+      "explanation": "Option (A) is the correct answer according to NPTEL DLNLP Assignment 9."
+    },
+    {
+      "question": "76. Toolformer is a variant of large language models that enhances reasoning by:",
+      "options": [
+        "Training on a much larger dataset without any external tools.",
+        "Dynamically calling external tools like calculators, search engines, or APIs to improve accuracy.",
+        "Using only Chain of Thought (CoT) prompting without external assistance.",
+        "Eliminating the need for tool usage by relying solely on internal knowledge."
+      ],
+      "correctAnswer": "Dynamically calling external tools like calculators, search engines, or APIs to improve accuracy.",
+      "explanation": "Option (B) is the correct answer according to NPTEL DLNLP Assignment 9."
+    },
+    {
+      "question": "77. A student is using a Program of Thought (PoT) prompting to solve the following mathematical problem: Find the sum of all even numbers from 1 to 20. Instead of solving it directly, the model generates and executes a Python program to compute the result: total = 0 for num in range(1, 21): if num % 2 == 0: total += num print(total) What is the key advantage of using Program of Thought (PoT) prompting in mathematical problem -solving?",
+      "options": [
+        "It enables models to follow a strict, predefined step-by- step reasoning structure without requiring execution.",
+        "It allows models to generate and execute code, improving accuracy for complex numerical problems.",
+        "It eliminates the need for logical rea soning by relying purely on memorized answers.",
+        "It reduces computation time by avoiding loops and conditionals in the generated solution."
+      ],
+      "correctAnswer": "It allows models to generate and execute code, improving accuracy for complex numerical problems.",
+      "explanation": "Option (B) is the correct answer according to NPTEL DLNLP Assignment 9."
+    },
+    {
+      "question": "78. Which if the following is False?",
+      "options": [
+        "Prompt-Tuning optimize the embeddings of a prompt, instead of words.",
+        "In AUTOPROMPT, for automatic token label selection, a logistic classifier is trained to predict the class label using the contextualized embedding of the [MASK] token as input.",
+        "Tool-augmented Language Model (TALM) first generates a tool input conditioned on the task input text and invokes a tool’s API by generating a delimiter",
+        "In-context learning do well for new tasks by updating gradient of the model parameters"
+      ],
+      "correctAnswer": "In-context learning do well for new tasks by updating gradient of the model parameters",
+      "explanation": "Option (D) is the correct answer according to NPTEL DLNLP Assignment 9."
+    },
+    {
+      "question": "79. A large language model is given the following in -context examples in the format of (input, output) pair as follows: (1,3) , (2,9), (3,19), (4,33) It is then asked to predict the output for Input = 5. Assuming the model correctly identifies the underlying pattern, what should be the predicted output?",
+      "options": [
+        "45",
+        "55",
+        "65",
+        "63"
+      ],
+      "correctAnswer": "55",
+      "explanation": "Option (B) is the correct answer according to NPTEL DLNLP Assignment 9."
+    },
+    {
+      "question": "80. Suppose you are using AutoPrompt with BERT for text classification with 6 classes. What is the number of learnable parameters to decide the label set for all the classes if BERT uses 1024 as the model dimension and the number of label words per class is 3?",
+      "options": [
+        "15360",
+        "18432",
+        "16406",
+        "19832"
+      ],
+      "correctAnswer": "18432",
+      "explanation": "Given: BERT's hidden size = 1024, Number of classes = 6; Number of label words per class = 3 Step 1: Compute Total Label Words Each class has 3 label words, so the total number of label words across all classes is: 6×3=18 Step 2: Compute Learnable Parameters Each label word has a 1024 -dimensional embedding, so the total number of learnable parameters is: 18×1024=18,432 The number of learnable parameters to decide the label set is 18,432."
+    },
+    {
+      "question": "81. Which of the following is False?",
+      "options": [
+        "Parameter -efficient fine tuning update a small subset of model parameters",
+        "Parameter -efficient fine tuning matches performance of full -tuning in many cases",
+        "Prefix -tuning adds a prefix of parameters, and freezes all pretrained parameters.",
+        "In parameter -effici ent fine tuning, for L layers in the decoder, there will be L adapters"
+      ],
+      "correctAnswer": "In parameter -effici ent fine tuning, for L layers in the decoder, there will be L adapters",
+      "explanation": "Option (D) is the correct answer according to NPTEL DLNLP Assignment 10."
+    },
+    {
+      "question": "82. Suppose you want to use LoRA to train the GPT -3 model, which has a model dimensionality of 12288, 48 layers and 48 attention heads, for the tasks of text simplification. You are using LoRA only for the query and key matrices, each with a rank of 16. How many parameters will need to be trained?",
+      "options": [
+        "393216",
+        "37748736",
+        "6291456",
+        "18874368"
+      ],
+      "correctAnswer": "37748736",
+      "explanation": "For each layer's query projection: ● Matrix A: 12288 × 16 = 196,608 parameters ● Matrix B: 16 × 12288 = 196,608 parameters ● Total per query projection: 393,216 parameters For each layer's key projection: ● Matrix A: 12288 × 16 = 196,608 parameters ● Matrix B: 16 × 12288 = 196,608 parameters ● Total per key projection: 393,216 parameters Total parameters per layer: 393,216 + 393,216 = 786,432 Total trainable parameters across all 48 layers: 48 × 786,432 = 37,748,736"
+    },
+    {
+      "question": "83. Suppose you want to use Adapters to t rain the GPT -3 model, which has a model dimensionality of 12288, 48 layers and 48 attention heads, for the tasks of text simplification. You are using 4 adapters per layer, each with a down -projection of 4. How many parameters will need to be trained appro ximately?",
+      "options": [
+        "221184",
+        "18874368",
+        "196608",
+        "21234432"
+      ],
+      "correctAnswer": "21234432",
+      "explanation": "For each adapter: ● Down -projection parameters: d × r = 12288 × 4 = 49,152 ● Down -projection bias: r = 4 ● Up-projection parameters: r × d = 4 × 12288 = 49,152 ● Up-projection bias: d = 12288 Total parameters per adapter: 49,152 + 4 + 49,152 + 12288 = 110,596 Since we have 4 adapters per layer and 48 layers: Total trainable parameters = 110,596 × 4 × 48 = 21,234,432"
+    },
+    {
+      "question": "84. In LoRA (Low- Rank Adaptation), what is the key mathematical insight that enables parameter efficiency?",
+      "options": [
+        "Using activation functions with higher gradients",
+        "Approximating weight updates through low-rank decomposition",
+        "Replacing attention mechanisms with simpler alternatives",
+        "Pruning redundant neurons during training"
+      ],
+      "correctAnswer": "Approximating weight updates through low-rank decomposition",
+      "explanation": "Option (B) is the correct answer according to NPTEL DLNLP Assignment 10."
+    },
+    {
+      "question": "85. The NormalFloat (NF4) format in QLoRA is specifically designed to:",
+      "options": [
+        "Handle normally distributed weights more efficiently",
+        "Implement normal vector arithmetic operations",
+        "Maintain numerical stability during backpropagation",
+        "Reduce power consumption during training"
+      ],
+      "correctAnswer": "Handle normally distributed weights more efficiently",
+      "explanation": "Option (A) is the correct answer according to NPTEL DLNLP Assignment 10."
+    },
+    {
+      "question": "86. Which of the following correctly describes the memory savings achieved with QLoRA’s Double Quantization technique?",
+      "options": [
+        "Reduces memory usage by storing both model parameters and quantization constants in FP16",
+        "Compresses both the forward and backward pass during training",
+        "Achieves compression by quantizing both model weights and quantization constants",
+        "Uses block -wise quantization for improved convergence"
+      ],
+      "correctAnswer": "Achieves compression by quantizing both model weights and quantization constants",
+      "explanation": "Option (C) is the correct answer according to NPTEL DLNLP Assignment 10."
+    },
+    {
+      "question": "87. Which of the following is False?",
+      "options": [
+        "In case of pruning, a number of parameters are set to zero, the rest are unchanged",
+        "In Quantization, no parameters are changed, upto k bits of precision",
+        "Magnitude pruning is a type of unstructured pruning",
+        "Magnitude pruning selects weights that are very close to zero"
+      ],
+      "correctAnswer": "Magnitude pruning selects weights that are very close to zero",
+      "explanation": "Option (D) is the correct answer according to NPTEL DLNLP Assignment 10."
+    },
+    {
+      "question": "88. Which of the following is False?",
+      "options": [
+        "GPU memory required for a model can vary with precision and optimizer",
+        "Sequence- level distillation maximize the probability of the output generated by the teacher",
+        "DistilBERT use only distillation based loss",
+        "In general, infixing slightly underperforms prefix"
+      ],
+      "correctAnswer": "DistilBERT use only distillation based loss",
+      "explanation": "DistilBERT use both supervised and distillation based loss"
+    },
+    {
+      "question": "89. Which of the following is False?",
+      "options": [
+        "According to scaling laws of LLMs, the performance of LLMs mainly determined by model size, dataset size and amount of compute",
+        "Larger models are more sample efficient than smaller models",
+        "Kaplan laws use dynamic learning rate schedule for the training runs",
+        "Performance of LLMs improve most if model size and dataset size are scaled up together"
+      ],
+      "correctAnswer": "Kaplan laws use dynamic learning rate schedule for the training runs",
+      "explanation": "Option (C) is correct based on NPTEL DLNLP Assignment 11."
+    },
+    {
+      "question": "90. Which of the following is /are True?",
+      "options": [
+        "Mixtral has 8x experts in feed -forward layer",
+        "LLaMa2 uses RoPE and SwiGLU",
+        "QWen model is trained on multilingual data",
+        "GEMINI does not support image inputs"
+      ],
+      "correctAnswer": "Mixtral has 8x experts in feed -forward layer / LLaMa2 uses RoPE and SwiGLU / QWen model is trained on multilingual data",
+      "explanation": "Multiple statements are correct: (A, B, C). Specifically: Mixtral has 8x experts in feed -forward layer / LLaMa2 uses RoPE and SwiGLU / QWen model is trained on multilingual data."
+    },
+    {
+      "question": "91. Choose the incorrect statement from the below options?",
+      "options": [
+        "sparse attention reduces the computation through the use of sparse operations,",
+        "Linear and Reformer models scale linearly with the sequence length",
+        "kNN lookup do averaging of tokens at long distances",
+        "In the kNN -augmented attention layer, the same queries ar e used for both the local context, and for the external memory."
+      ],
+      "correctAnswer": "kNN lookup do averaging of tokens at long distances",
+      "explanation": "Option (C) is correct based on NPTEL DLNLP Assignment 11."
+    },
+    {
+      "question": "92. What is the primary goal of Retrieval Augmented Generation (RAG)?",
+      "options": [
+        "To eliminate the need for prompt engineering in generative AI applications.",
+        "To reduce the cost of training and deploying foundation models.",
+        "To replace foundation models with smaller, more efficient models.",
+        "To improve the accuracy and relevance of responses from foundation models."
+      ],
+      "correctAnswer": "To improve the accuracy and relevance of responses from foundation models.",
+      "explanation": "Option (D) is correct based on NPTEL DLNLP Assignment 11."
+    },
+    {
+      "question": "93. Which of the following statements about the Swish activation function is correct where Swish function is defined as f(x)=x ⋅σ(βx)",
+      "options": [
+        "Here β can not be a trainable parameter, it should be always constant",
+        "When β=1.702, Swish closely approximates the GELU activation function.",
+        "As β→∞, Swish behaves like the Sigmoid function.",
+        "As β→∞, Swish behaves like the ReLU function."
+      ],
+      "correctAnswer": "When β=1.702, Swish closely approximates the GELU activation function. / As β→∞, Swish behaves like the ReLU function.",
+      "explanation": "Multiple statements are correct: (B, D). Specifically: When β=1.702, Swish closely approximates the GELU activation function. / As β→∞, Swish behaves like the ReLU function.."
+    },
+    {
+      "question": "94. Suppose you are using a Transformer model with 100 million parameters for training. For an input sequence of length 20, approximately how many FLOPs will be required in forward propagation? [2 marks]",
+      "options": [
+        "100 million",
+        "200 million",
+        "4000 million",
+        "2000 m illion"
+      ],
+      "correctAnswer": "4000 million",
+      "explanation": "For forward propagation, compute FLOPs ≈ 2 × P × N = 2 × (100 × 10^6) × 20 = 4,000 million (4 billion) FLOPs."
+    },
+    {
+      "question": "95. As per chinchilla’s scaling laws, to train a compute -optimal model of 8B parameters, how many tokens should you ideally pretrain it on?",
+      "options": [
+        "As large as possible",
+        "8 B tokens",
+        "1.6 trillion tokens",
+        "160 B tokens"
+      ],
+      "correctAnswer": "160 B tokens",
+      "explanation": "Under Chinchilla scaling laws, tokens = 20 × parameters = 20 × 8B = 160B tokens."
+    },
+    {
+      "question": "96. Suppose you are using T5 bias with n_b = 128. What will be the last index of the bucket which uses a single offset? After this index, each bucket will be used for multiple offset values.",
+      "options": [
+        "63",
+        "64",
+        "31",
+        "32"
+      ],
+      "correctAnswer": "63",
+      "explanation": "Option (A) is correct based on NPTEL DLNLP Assignment 11."
+    },
+    {
+      "question": "97. Which architectural component appears to store multilingual knowledge according to the research?",
+      "options": [
+        "Self-attention mechanisms exclusively",
+        "Feed-forward networks exclusively",
+        "Self-attention for reasoning and feed-forward structures for multilingual knowledge",
+        "Equal distribution across all components"
+      ],
+      "correctAnswer": "Self-attention for reasoning and feed-forward structures for multilingual knowledge",
+      "explanation": "- The research indicates that LLMs employ \"English for reasoning (through self-attention) and leveraging multilingual knowledge (through feed-forward structures).\""
+    },
+    {
+      "question": "98. What fundamental insight about multilingual LLMs is revealed by deactivating language-specific neur ons?",
+      "options": [
+        "Models are inherently monolingual and translation occurs post-processing",
+        "Models have redundant neurons that serve no purpose",
+        "Deactivating Chinese-specific neurons can cause the model to produce outputs in English",
+        "Neurons are universally language-agnostic throughout the model"
+      ],
+      "correctAnswer": "Deactivating Chinese-specific neurons can cause the model to produce outputs in English",
+      "explanation": "Option (C) is correct based on NPTEL DLNLP Assignment 12."
+    },
+    {
+      "question": "99. Based on the LAPE (language activation probability entropy) score, how are \"language-specific neur ons\" identified?",
+      "options": [
+        "Neurons with high entropy across all languages",
+        "Neurons that show consistent response patterns regardless of language",
+        "Neurons with consistently low activation for all languages",
+        "Neurons with low entropy , indicating preferential activation for specific languages"
+      ],
+      "correctAnswer": "Neurons with low entropy , indicating preferential activation for specific languages",
+      "explanation": "Option (D) is correct based on NPTEL DLNLP Assignment 12."
+    },
+    {
+      "question": "100. What happens when language-specific neur ons for a particular language are deactivated compar ed to when random neur ons are deactivated?",
+      "options": [
+        "Performance remains mostly unchanged in both cases",
+        "Random neuron deactivation severely impacts performance while language-specific deactivation has minimal impact",
+        "Language-specific neuron deactivation dramatically reduces performance in that language, while random deactivation has minimal impact",
+        "Both types of deactivation improve performance by reducing noise"
+      ],
+      "correctAnswer": "Language-specific neuron deactivation dramatically reduces performance in that language, while random deactivation has minimal impact",
+      "explanation": "- The results table shows that deactivating language-specific neurons reduces performance to near zero for many languages, while random neuron deactivation has minimal impact on performance."
+    },
+    {
+      "question": "101. What is the primary differ ence between Gradient Ascent (GA) unlearning and traditional fine-tuning appr oaches for LLMs?",
+      "options": [
+        "GA requires no training data at all",
+        "GA reverses the direction of gradient updates to increase loss on undesired data",
+        "GA is only applicable to transformer -based architectures",
+        "GA is exclusively used for removing copyrighted content"
+      ],
+      "correctAnswer": "GA reverses the direction of gradient updates to increase loss on undesired data",
+      "explanation": "GA reverses the direction of gradient updates to increase loss on undesired data"
+    },
+    {
+      "question": "102. Why is using KL divergence preferr ed over cross-entr opy for maintaining model performance on normal tasks during unlearning?",
+      "options": [
+        "KL diver gence preserves the original model's distribution better",
+        "Cross-entropy causes too much emphasis on incorrect outputs",
+        "KL diver gence requires fewer computational resources",
+        "Cross-entropy creates more bias in the output distribution"
+      ],
+      "correctAnswer": "KL diver gence preserves the original model's distribution better",
+      "explanation": ") KL divergence preserves the original model's distribution better"
+    },
+    {
+      "question": "103. In the practical application of unlearning to remove copyrighted content (Harry Potter), what metric should be used to evaluate the effectiveness of unlearning?",
+      "options": [
+        "Character -level edit distance between outputs",
+        "BLEU similarity score between generated completions and ground truth",
+        "Human evaluation of literary style similarity",
+        "Token-level perplexity on prompt completions"
+      ],
+      "correctAnswer": "BLEU similarity score between generated completions and ground truth",
+      "explanation": ") BLEU similarity score between generated completions and ground truth"
+    },
+    {
+      "question": "104. In the context of unlearning harmful responses, why does the Random Mismatch appr oach help preserve normal utility compar ed to simple Gradient Ascent?",
+      "options": [
+        "It introduces noise into the model parameters",
+        "It forces the model to generate uncorrelated outputs for problematic inputs",
+        "It makes the model completely ignore certain types of inputs",
+        "It replaces harmful knowledge with beneficial knowledge"
+      ],
+      "correctAnswer": "It forces the model to generate uncorrelated outputs for problematic inputs",
+      "explanation": ") It forces the model to generate uncorrelated outputs for problematic inputs"
+    },
+    {
+      "question": "105. What theor etical implication about multilingual models is most strongly supported by the finding that intermediate representations in non-English to non-English translation tasks show English tokens?",
+      "options": [
+        "Multilingual models are actually ensembles of separate monolingual models",
+        "English serves as an interlingua or conceptual bridge in multilingual models",
+        "The finding is merely an artifact of visualization techniques",
+        "Language-specific tokens are randomly distributed throughout processing"
+      ],
+      "correctAnswer": "English serves as an interlingua or conceptual bridge in multilingual models",
+      "explanation": "- The emer gence of English token probabilities during intermediate processing when translating between two non-English languages strongly suggests that English serves as an interlingua or conceptual bridge within these models, likely due to the predominance of English in training data."
+    },
+    {
+      "question": "106. What crucial insight about multilingual model architectur e is revealed by comparing the distribution of language-specific neur ons between FFN structur es and Attention structur es?",
+      "options": [
+        "Both structures contain equal numbers of language-specific neurons",
+        "FFN structures consistently contain more language-specific neurons across all layers",
+        "Attention structures are responsible for maintaining linguistic features",
+        "Language-specific neurons only appear in the encoder section of transformers"
+      ],
+      "correctAnswer": "FFN structures consistently contain more language-specific neurons across all layers",
+      "explanation": "- \"Number of language-specific neurons when processing multilingual queries\" demonstrates that FFN (Feed-Forward Network) structures consistently contain more language-specific neurons than attention structures across most layers, suggesting specialized roles in multilingual processing."
+    }
+  ]
+}

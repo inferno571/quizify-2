@@ -1,0 +1,96 @@
+{
+  "id": "dlnlp-2025-assignment-6",
+  "title": "DLNLP (2025 PYQ) - Assignment 6",
+  "subject": "DLNLP (2025 PYQ)",
+  "date": "17/10/2026",
+  "questions": [
+    {
+      "question": "1. In a span-based fine-tuning appr oach, given an input sequence x consisting of T tokens, what is the total number of possible spans that can be consider ed?",
+      "options": [
+        "T",
+        "T^2",
+        "T(T+1)2",
+        "2^T-1"
+      ],
+      "correctAnswer": "T(T+1)2",
+      "explanation": "All possible contiguous spans in the sequence, considering spans of length 1 up to T is = 1+2+3+……..T = T(T+1)/2"
+    },
+    {
+      "question": "2. Which of the following best describes transfer learning in deep learning models?",
+      "options": [
+        "Training a model from scratch on a large dataset.",
+        "Using a pre-trained model and fine-tuning it for a specific task.",
+        "Using an ensemble of multiple models for improved performance.",
+        "Training a model only on a small dataset without any pre-training."
+      ],
+      "correctAnswer": "Using a pre-trained model and fine-tuning it for a specific task.",
+      "explanation": ". Using a pre-trained model and fine-tuning it for a specific task."
+    },
+    {
+      "question": "3. Which of the following is true for ELMo?",
+      "options": [
+        "ELMo generates word representations that are independent of context, similar to traditional word embeddings like GloV e.",
+        "The representations from all layers in ELMo contribute equally to both syntactic and semantic understanding, making layer -wise differentiation unnecessary .",
+        "Lower -layer representations in ELMo primarily capture syntactic and lower -level semantic information, while higher -layer representations encode more abstract meaning and contextual nuances.",
+        "ELMo strictly requires fine-tuning all its layers during downstream tasks, and frozen biLM weights cannot be used effectively ."
+      ],
+      "correctAnswer": "Lower -layer representations in ELMo primarily capture syntactic and lower -level semantic information, while higher -layer representations encode more abstract meaning and contextual nuances.",
+      "explanation": ") Lower -layer representations capture syntax and lower -level semantics, while higher -layer representations capture higher -level semantics like meaning and context."
+    },
+    {
+      "question": "4. Why does scaling up a transformer model often lead to better performance across various NLP tasks?",
+      "options": [
+        "Larger models inherently generalize better to unseen data",
+        "Scaling up increases memorization, reducing overfitting",
+        "Transformers achieve better loss conver gence with increased size",
+        "Larger models can encode more complex data representations"
+      ],
+      "correctAnswer": "Larger models can encode more complex data representations",
+      "explanation": ") Larger models can encode more complex data representations"
+    },
+    {
+      "question": "5. How does parameter -efficient fine-tuning (PEFT) appr oaches like adapters differ from full fine-tuning?",
+      "options": [
+        "PEFT methods modify only a small subset of the model parameters",
+        "They increase the training time significantly",
+        "They require retraining the entire model from scratch",
+        "PEFT methods cannot be applied to transformer models"
+      ],
+      "correctAnswer": "PEFT methods modify only a small subset of the model parameters",
+      "explanation": ") PEFT methods modify only a small subset of the model parameters"
+    },
+    {
+      "question": "6. What is the fundamental advantage of sparse expert models like the Switch Transformer?",
+      "options": [
+        "They allow selective activation of model components, reducing computational cost",
+        "They achieve superior results without requiring additional pretraining",
+        "They eliminate the need for data augmentation techniques",
+        "They improve tokenization efficiency for low-resource languages"
+      ],
+      "correctAnswer": "They allow selective activation of model components, reducing computational cost",
+      "explanation": ") They allow selective activation of model components, reducing computational cost"
+    },
+    {
+      "question": "7. How can pretraining objectives like ELECTRA's replaced token detection impr ove efficiency over masked language modeling?",
+      "options": [
+        "By reducing the computational complexity of training",
+        "By training the model to distinguish between real and replaced tokens rather than predicting masked ones",
+        "By eliminating the need for extensive labeled datasets",
+        "By increasing the number of parameters in the model"
+      ],
+      "correctAnswer": "By training the model to distinguish between real and replaced tokens rather than predicting masked ones",
+      "explanation": ") By training the model to distinguish between real and replaced tokens rather than predicting masked ones"
+    },
+    {
+      "question": "8. In a multi-head attention mechanism with 8 heads and hidden dimension of 512, if we use a batch size of 16 with a sequence length of 64, what is the total number of operations requir ed for the attention computation across all heads (excluding feed-forward layers) ?",
+      "options": [
+        "2,097,152",
+        "16,777,216",
+        "33,554,432",
+        "67,108,864"
+      ],
+      "correctAnswer": "33,554,432",
+      "explanation": "### Explanation: For a single head in self-attention with: - Batch size (B) = 16 - Sequence length (L) = 64 - Head dimension (d) = 512/8 = 64 (since total dimension 512 is split among 8 heads) The attention computation involves: 1. Query-Key matrix multiplication: (B×L×d) × (B×L×d)ᵀ = B×L×L operations per head 2. Softmax over the attention scores: B×L×L operations per head 3. Attention-V alue multiplication: (B×L×L) × (B×L×d) = B×L×L×d operations per head For exactly 8 heads: - Query-Key multiplication: 8 × 16 × 64 × 64 = 524,288 operations - Softmax: 8 × 16 × 64 × 64 = 524,288 operations - Attention-V alue multiplication: 8 × 16 × 64 × 64 × 64 = 33,554,432 operations Total operations: 524,288 + 524,288 + 33,554,432 = 34,603,008 operations However , if we're focusing purely on the core attention dot product operations (which is common when discussing attention complexity), the answer would be: - 8 heads × 16 batch × 64 sequence × 64 sequence × 64 dimensions = 33,554,432 operations Answer: C) 33,554,432 The dominant cost in attention mechanisms is the attention-value multiplication which scales with O(B×H×L²×d), where H is the number of heads. This is why the attention mechanism becomes computationally expensive for long sequences."
+    }
+  ]
+}

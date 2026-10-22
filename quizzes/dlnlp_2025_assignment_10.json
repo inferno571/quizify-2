@@ -1,0 +1,96 @@
+{
+  "id": "dlnlp-2025-assignment-10",
+  "title": "DLNLP (2025 PYQ) - Assignment 10",
+  "subject": "DLNLP (2025 PYQ)",
+  "date": "17/10/2026",
+  "questions": [
+    {
+      "question": "1. Which of the following is False?",
+      "options": [
+        "Parameter -efficient fine tuning update a small subset of model parameters",
+        "Parameter -efficient fine tuning matches performance of full -tuning in many cases",
+        "Prefix -tuning adds a prefix of parameters, and freezes all pretrained parameters.",
+        "In parameter -effici ent fine tuning, for L layers in the decoder, there will be L adapters"
+      ],
+      "correctAnswer": "In parameter -effici ent fine tuning, for L layers in the decoder, there will be L adapters",
+      "explanation": "Option (D) is the correct answer according to NPTEL DLNLP Assignment 10."
+    },
+    {
+      "question": "2. Suppose you want to use LoRA to train the GPT -3 model, which has a model dimensionality of 12288, 48 layers and 48 attention heads, for the tasks of text simplification. You are using LoRA only for the query and key matrices, each with a rank of 16. How many parameters will need to be trained?",
+      "options": [
+        "393216",
+        "37748736",
+        "6291456",
+        "18874368"
+      ],
+      "correctAnswer": "37748736",
+      "explanation": "For each layer's query projection: ● Matrix A: 12288 × 16 = 196,608 parameters ● Matrix B: 16 × 12288 = 196,608 parameters ● Total per query projection: 393,216 parameters For each layer's key projection: ● Matrix A: 12288 × 16 = 196,608 parameters ● Matrix B: 16 × 12288 = 196,608 parameters ● Total per key projection: 393,216 parameters Total parameters per layer: 393,216 + 393,216 = 786,432 Total trainable parameters across all 48 layers: 48 × 786,432 = 37,748,736"
+    },
+    {
+      "question": "3. Suppose you want to use Adapters to t rain the GPT -3 model, which has a model dimensionality of 12288, 48 layers and 48 attention heads, for the tasks of text simplification. You are using 4 adapters per layer, each with a down -projection of 4. How many parameters will need to be trained appro ximately?",
+      "options": [
+        "221184",
+        "18874368",
+        "196608",
+        "21234432"
+      ],
+      "correctAnswer": "21234432",
+      "explanation": "For each adapter: ● Down -projection parameters: d × r = 12288 × 4 = 49,152 ● Down -projection bias: r = 4 ● Up-projection parameters: r × d = 4 × 12288 = 49,152 ● Up-projection bias: d = 12288 Total parameters per adapter: 49,152 + 4 + 49,152 + 12288 = 110,596 Since we have 4 adapters per layer and 48 layers: Total trainable parameters = 110,596 × 4 × 48 = 21,234,432"
+    },
+    {
+      "question": "4. In LoRA (Low- Rank Adaptation), what is the key mathematical insight that enables parameter efficiency?",
+      "options": [
+        "Using activation functions with higher gradients",
+        "Approximating weight updates through low-rank decomposition",
+        "Replacing attention mechanisms with simpler alternatives",
+        "Pruning redundant neurons during training"
+      ],
+      "correctAnswer": "Approximating weight updates through low-rank decomposition",
+      "explanation": "Option (B) is the correct answer according to NPTEL DLNLP Assignment 10."
+    },
+    {
+      "question": "5. The NormalFloat (NF4) format in QLoRA is specifically designed to:",
+      "options": [
+        "Handle normally distributed weights more efficiently",
+        "Implement normal vector arithmetic operations",
+        "Maintain numerical stability during backpropagation",
+        "Reduce power consumption during training"
+      ],
+      "correctAnswer": "Handle normally distributed weights more efficiently",
+      "explanation": "Option (A) is the correct answer according to NPTEL DLNLP Assignment 10."
+    },
+    {
+      "question": "6. Which of the following correctly describes the memory savings achieved with QLoRA’s Double Quantization technique?",
+      "options": [
+        "Reduces memory usage by storing both model parameters and quantization constants in FP16",
+        "Compresses both the forward and backward pass during training",
+        "Achieves compression by quantizing both model weights and quantization constants",
+        "Uses block -wise quantization for improved convergence"
+      ],
+      "correctAnswer": "Achieves compression by quantizing both model weights and quantization constants",
+      "explanation": "Option (C) is the correct answer according to NPTEL DLNLP Assignment 10."
+    },
+    {
+      "question": "7. Which of the following is False?",
+      "options": [
+        "In case of pruning, a number of parameters are set to zero, the rest are unchanged",
+        "In Quantization, no parameters are changed, upto k bits of precision",
+        "Magnitude pruning is a type of unstructured pruning",
+        "Magnitude pruning selects weights that are very close to zero"
+      ],
+      "correctAnswer": "Magnitude pruning selects weights that are very close to zero",
+      "explanation": "Option (D) is the correct answer according to NPTEL DLNLP Assignment 10."
+    },
+    {
+      "question": "8. Which of the following is False?",
+      "options": [
+        "GPU memory required for a model can vary with precision and optimizer",
+        "Sequence- level distillation maximize the probability of the output generated by the teacher",
+        "DistilBERT use only distillation based loss",
+        "In general, infixing slightly underperforms prefix"
+      ],
+      "correctAnswer": "DistilBERT use only distillation based loss",
+      "explanation": "DistilBERT use both supervised and distillation based loss"
+    }
+  ]
+}

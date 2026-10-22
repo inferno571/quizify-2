@@ -1,0 +1,118 @@
+{
+  "id": "genai-cv-week-10",
+  "title": "Generative AI for Computer Vision - Week 10 Assignment 10",
+  "subject": "Generative AI for Computer Vision",
+  "date": "22/10/2026",
+  "questions": [
+    {
+      "question": "1. What is the main purpose of a Large Language Model (LLM)?",
+      "options": [
+        "To understand and generate human-like text",
+        "To only process images",
+        "To remove all text from a dataset",
+        "To perform only image classification"
+      ],
+      "correctAnswer": "To understand and generate human-like text",
+      "explanation": "An LLM is trained to process and generate text by learning patterns and relationships in large amounts of language data."
+    },
+    {
+      "question": "2. Which architecture is commonly used to build modern Large Language Models?",
+      "options": [
+        "K-Means",
+        "Decision Tree",
+        "Transformer",
+        "Support Vector Machine"
+      ],
+      "correctAnswer": "Transformer",
+      "explanation": "Modern LLMs commonly use the Transformer architecture because it can efficiently model relationships between tokens in a sequence."
+    },
+    {
+      "question": "3. What is the purpose of tokenization in an LLM?",
+      "options": [
+        "To convert text into smaller units that the model can process",
+        "To convert text directly into images",
+        "To remove the language model",
+        "To increase image resolution"
+      ],
+      "correctAnswer": "To convert text into smaller units that the model can process",
+      "explanation": "Tokenization converts text into tokens, such as words, subwords, or characters, which can then be converted into numerical representations for the model."
+    },
+    {
+      "question": "4. What is the main purpose of pre-training an LLM?",
+      "options": [
+        "To perform only object detection",
+        "To train only on one image",
+        "To remove all model parameters",
+        "To learn general patterns from a large amount of text data"
+      ],
+      "correctAnswer": "To learn general patterns from a large amount of text data",
+      "explanation": "During pre-training, an LLM learns general language patterns, relationships, and knowledge from a large collection of text data."
+    },
+    {
+      "question": "5. What is fine-tuning in an LLM?",
+      "options": [
+        "Deleting the pre-trained model",
+        "Further training a pre-trained model for a specific task or domain",
+        "Training without any data",
+        "Converting text into images"
+      ],
+      "correctAnswer": "Further training a pre-trained model for a specific task or domain",
+      "explanation": "Fine-tuning adapts a pre-trained model to perform better on a particular task, dataset, or domain."
+    },
+    {
+      "question": "6. What is the main purpose of a Vision-Language Model (VLM)?",
+      "options": [
+        "To process only numerical data",
+        "To understand information from both images and language",
+        "To process only audio signals",
+        "To remove visual information"
+      ],
+      "correctAnswer": "To understand information from both images and language",
+      "explanation": "VLMs combine visual and language information so that the model can understand relationships between images and text."
+    },
+    {
+      "question": "7. What is the role of the Vision Encoder in a VLM?",
+      "options": [
+        "To remove the language encoder",
+        "To generate only text labels",
+        "To extract useful features from images",
+        "To calculate training accuracy only"
+      ],
+      "correctAnswer": "To extract useful features from images",
+      "explanation": "The Vision Encoder converts an input image into visual feature representations that can be used by the multimodal model."
+    },
+    {
+      "question": "8. What is the purpose of Vision-Language Alignment?",
+      "options": [
+        "To align visual and textual representations in a common representation space",
+        "To remove image information",
+        "To train only the language encoder",
+        "To convert all images into audio"
+      ],
+      "correctAnswer": "To align visual and textual representations in a common representation space",
+      "explanation": "Vision-language alignment helps the model learn meaningful relationships between visual features and their corresponding textual representations."
+    },
+    {
+      "question": "9. What is the main purpose of Cross-Modal Attention in a VLM?",
+      "options": [
+        "To allow information from one modality to interact with another modality",
+        "To remove both modalities",
+        "To process only images",
+        "To process only text"
+      ],
+      "correctAnswer": "To allow information from one modality to interact with another modality",
+      "explanation": "Cross-modal attention allows information from one modality, such as vision, to influence the processing of another modality, such as language."
+    },
+    {
+      "question": "10. What is Contrastive Learning used for in Vision-Language Models?",
+      "options": [
+        "To remove all image-text pairs",
+        "To learn similar representations for matching image-text pairs",
+        "To train only an image classifier",
+        "To increase image resolution"
+      ],
+      "correctAnswer": "To learn similar representations for matching image-text pairs",
+      "explanation": "Contrastive learning encourages matching image-text pairs to have similar representations while separating unrelated image-text pairs."
+    }
+  ]
+}

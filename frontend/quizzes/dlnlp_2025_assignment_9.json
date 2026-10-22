@@ -1,0 +1,107 @@
+{
+  "id": "dlnlp-2025-assignment-9",
+  "title": "DLNLP (2025 PYQ) - Assignment 9",
+  "subject": "DLNLP (2025 PYQ)",
+  "date": "17/10/2026",
+  "questions": [
+    {
+      "question": "1. Which of the following is False?",
+      "options": [
+        "In Few -shot prompt paradigm, for the same prompt the order in which samples are provided can not make the difference in result",
+        "In transformer circuit, different QK Circuit matrix tells us which tokens information is moved to and from in the residual stream",
+        "Induction head attends back to previous tokens that were followed by the current and/or recent tokens.",
+        "Transformer language models undergo a “phase change” early in training, during which induction heads form and simultaneously in-context learning improves dramatically."
+      ],
+      "correctAnswer": "In Few -shot prompt paradigm, for the same prompt the order in which samples are provided can not make the difference in result",
+      "explanation": "Option (A) is the correct answer according to NPTEL DLNLP Assignment 9."
+    },
+    {
+      "question": "2. Which of the following best describes the difference between zero -shot and few -shot prompting in large language models?",
+      "options": [
+        "Zero -shot prompting provides multiple examples in the prompt, whereas few -shot prompting provides no examples.",
+        "Zero -shot prompting requires a fine -tuned model, whereas few -shot prompting does not.",
+        "Zero -shot prompting relies on the model’s pre -trained knowledge without examples, while few-shot prompting includes a few examples to guide the model.",
+        "Few -shot prompting is only applicable to classification tasks, whereas zero -shot prompting works for all NLP tasks."
+      ],
+      "correctAnswer": "Zero -shot prompting relies on the model’s pre -trained knowledge without examples, while few-shot prompting includes a few examples to guide the model.",
+      "explanation": "Option (C) is the correct answer according to NPTEL DLNLP Assignment 9."
+    },
+    {
+      "question": "3. A student is solving the following mathematical problem using Chain of Thought (CoT) prompting: Problem: If a bookstore sells 3 books for $15, how much would 7 books cost at the same rate? Using CoT prompting, the model breaks down the problem step by step: The cost of one book is calculated as: 15÷3=5 The cost of 7 books is then determined as: 5×7=35 The final answer is $35. What is the main advantage of using Chain of Thought (CoT) prompting in solving mathematical problems like the one above?",
+      "options": [
+        "It allows the model to generate more creative answers instead of strictly numerical ones.",
+        "It enables the model to follow a step -by-step reasoning process, reducing errors in multi -step calculations.",
+        "It makes the model answer faster by skipping intermediate steps.",
+        "It ensures that the model always provides the correct answer, regardless of input complexity."
+      ],
+      "correctAnswer": "It enables the model to follow a step -by-step reasoning process, reducing errors in multi -step calculations.",
+      "explanation": "Option (B) is the correct answer according to NPTEL DLNLP Assignment 9."
+    },
+    {
+      "question": "4. What is the primary advantage of Tree of Thought (ToT) prompting compared to Chain of Thought (CoT) prompting in problem -solving with Large Language Models?",
+      "options": [
+        "ToT allows the model to explore multiple reasoning paths and backtrack if needed, improvi ng complex decision-making.",
+        "ToT speeds up response time by reducing the number of tokens generated.",
+        "ToT eliminates the need for intermediate reasoning steps, leading to more concise answers.",
+        "ToT relies solely on fine-tuning rather than prompting techniques."
+      ],
+      "correctAnswer": "ToT allows the model to explore multiple reasoning paths and backtrack if needed, improvi ng complex decision-making.",
+      "explanation": "Option (A) is the correct answer according to NPTEL DLNLP Assignment 9."
+    },
+    {
+      "question": "5. Toolformer is a variant of large language models that enhances reasoning by:",
+      "options": [
+        "Training on a much larger dataset without any external tools.",
+        "Dynamically calling external tools like calculators, search engines, or APIs to improve accuracy.",
+        "Using only Chain of Thought (CoT) prompting without external assistance.",
+        "Eliminating the need for tool usage by relying solely on internal knowledge."
+      ],
+      "correctAnswer": "Dynamically calling external tools like calculators, search engines, or APIs to improve accuracy.",
+      "explanation": "Option (B) is the correct answer according to NPTEL DLNLP Assignment 9."
+    },
+    {
+      "question": "6. A student is using a Program of Thought (PoT) prompting to solve the following mathematical problem: Find the sum of all even numbers from 1 to 20. Instead of solving it directly, the model generates and executes a Python program to compute the result: total = 0 for num in range(1, 21): if num % 2 == 0: total += num print(total) What is the key advantage of using Program of Thought (PoT) prompting in mathematical problem -solving?",
+      "options": [
+        "It enables models to follow a strict, predefined step-by- step reasoning structure without requiring execution.",
+        "It allows models to generate and execute code, improving accuracy for complex numerical problems.",
+        "It eliminates the need for logical rea soning by relying purely on memorized answers.",
+        "It reduces computation time by avoiding loops and conditionals in the generated solution."
+      ],
+      "correctAnswer": "It allows models to generate and execute code, improving accuracy for complex numerical problems.",
+      "explanation": "Option (B) is the correct answer according to NPTEL DLNLP Assignment 9."
+    },
+    {
+      "question": "7. Which if the following is False?",
+      "options": [
+        "Prompt-Tuning optimize the embeddings of a prompt, instead of words.",
+        "In AUTOPROMPT, for automatic token label selection, a logistic classifier is trained to predict the class label using the contextualized embedding of the [MASK] token as input.",
+        "Tool-augmented Language Model (TALM) first generates a tool input conditioned on the task input text and invokes a tool’s API by generating a delimiter",
+        "In-context learning do well for new tasks by updating gradient of the model parameters"
+      ],
+      "correctAnswer": "In-context learning do well for new tasks by updating gradient of the model parameters",
+      "explanation": "Option (D) is the correct answer according to NPTEL DLNLP Assignment 9."
+    },
+    {
+      "question": "8. A large language model is given the following in -context examples in the format of (input, output) pair as follows: (1,3) , (2,9), (3,19), (4,33) It is then asked to predict the output for Input = 5. Assuming the model correctly identifies the underlying pattern, what should be the predicted output?",
+      "options": [
+        "45",
+        "55",
+        "65",
+        "63"
+      ],
+      "correctAnswer": "55",
+      "explanation": "Option (B) is the correct answer according to NPTEL DLNLP Assignment 9."
+    },
+    {
+      "question": "9. Suppose you are using AutoPrompt with BERT for text classification with 6 classes. What is the number of learnable parameters to decide the label set for all the classes if BERT uses 1024 as the model dimension and the number of label words per class is 3?",
+      "options": [
+        "15360",
+        "18432",
+        "16406",
+        "19832"
+      ],
+      "correctAnswer": "18432",
+      "explanation": "Given: BERT's hidden size = 1024, Number of classes = 6; Number of label words per class = 3 Step 1: Compute Total Label Words Each class has 3 label words, so the total number of label words across all classes is: 6×3=18 Step 2: Compute Learnable Parameters Each label word has a 1024 -dimensional embedding, so the total number of learnable parameters is: 18×1024=18,432 The number of learnable parameters to decide the label set is 18,432."
+    }
+  ]
+}

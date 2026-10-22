@@ -1,0 +1,118 @@
+{
+  "id": "genai-cv-week-6",
+  "title": "Generative AI for Computer Vision - Week 6 Assignment 6",
+  "subject": "Generative AI for Computer Vision",
+  "date": "22/10/2026",
+  "questions": [
+    {
+      "question": "1. What is the main goal of a generative model?",
+      "options": [
+        "To generate new data similar to the training data",
+        "To delete the training data",
+        "To sort the input data",
+        "To reduce the number of classes"
+      ],
+      "correctAnswer": "To generate new data similar to the training data",
+      "explanation": "Generative models learn the underlying true data distribution p(x) in order to sample and generate new data instances that closely resemble the training distribution."
+    },
+    {
+      "question": "2. What does Maximum Likelihood Estimation (MLE) try to find?",
+      "options": [
+        "The largest image",
+        "The smallest dataset",
+        "Parameters that make the observed data most likely",
+        "The number of classes"
+      ],
+      "correctAnswer": "Parameters that make the observed data most likely",
+      "explanation": "Maximum Likelihood Estimation estimates model parameters by selecting values that maximize the probability (likelihood) of observing the given dataset."
+    },
+    {
+      "question": "3. What is density estimation used for?",
+      "options": [
+        "Increasing image resolution",
+        "Estimating the probability distribution of data",
+        "Removing image noise only",
+        "Detecting computer viruses"
+      ],
+      "correctAnswer": "Estimating the probability distribution of data",
+      "explanation": "Density estimation involves constructing an estimate of an unobservable underlying probability density function based on observed data."
+    },
+    {
+      "question": "4. What is an autoregressive model?",
+      "options": [
+        "A model that predicts the current value using previous values",
+        "A model that only processes images",
+        "A model that does not use previous information",
+        "A model used only for data compression"
+      ],
+      "correctAnswer": "A model that predicts the current value using previous values",
+      "explanation": "An autoregressive model uses the chain rule of probability to predict each subsequent variable conditioned on all previously generated/observed values."
+    },
+    {
+      "question": "5. PixelCNN is mainly used for:",
+      "options": [
+        "Compressing text documents",
+        "Detecting computer hardware problems",
+        "Sorting image files",
+        "Generating images pixel by pixel"
+      ],
+      "correctAnswer": "Generating images pixel by pixel",
+      "explanation": "PixelCNN is a generative autoregressive neural network that generates images sequentially pixel by pixel using masked convolutions to model dependencies."
+    },
+    {
+      "question": "6. In PixelRNN, the name \"RNN\" refers to:",
+      "options": [
+        "Recurrent Neural Network",
+        "Residual Neural Network",
+        "Random Neural Network",
+        "Recursive Normal Network"
+      ],
+      "correctAnswer": "Recurrent Neural Network",
+      "explanation": "PixelRNN uses recurrent neural networks (such as Diagonal BiLSTM or Row LSTM) to model sequential pixel dependencies during image generation."
+    },
+    {
+      "question": "7. What does spatial context in an image refer to?",
+      "options": [
+        "Only the image file size",
+        "Information about the relationships between nearby or different regions in an image",
+        "The number of image classes",
+        "The image file name"
+      ],
+      "correctAnswer": "Information about the relationships between nearby or different regions in an image",
+      "explanation": "Spatial context captures geometric and positional relationships between adjacent pixels, visual patches, or semantic entities across an image."
+    },
+    {
+      "question": "8. Image captioning aims to:",
+      "options": [
+        "Change the image file format",
+        "Increase image resolution",
+        "Remove objects from an image",
+        "Generate a textual description of an image"
+      ],
+      "correctAnswer": "Generate a textual description of an image",
+      "explanation": "Image captioning bridges computer vision and natural language processing to produce natural language descriptions describing the contents of an image."
+    },
+    {
+      "question": "9. What is the main purpose of attention in image captioning?",
+      "options": [
+        "To remove all image features",
+        "To reduce the image file size",
+        "To focus on relevant parts of an image while generating a caption",
+        "To change the image color"
+      ],
+      "correctAnswer": "To focus on relevant parts of an image while generating a caption",
+      "explanation": "Attention mechanisms allow an image captioning model to dynamically focus on relevant spatial regions of the image corresponding to each generated word."
+    },
+    {
+      "question": "10. A Fully Visible Belief Network (FVBN) is a type of:",
+      "options": [
+        "Operating system",
+        "Image editing software",
+        "Database system",
+        "Generative model"
+      ],
+      "correctAnswer": "Generative model",
+      "explanation": "A Fully Visible Belief Network (FVBN) is an autoregressive generative model where all variables are observed and their joint distribution is factorized via conditional probabilities."
+    }
+  ]
+}

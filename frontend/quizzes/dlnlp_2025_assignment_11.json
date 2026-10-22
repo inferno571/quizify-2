@@ -1,0 +1,96 @@
+{
+  "id": "dlnlp-2025-assignment-11",
+  "title": "DLNLP (2025 PYQ) - Assignment 11",
+  "subject": "DLNLP (2025 PYQ)",
+  "date": "17/10/2026",
+  "questions": [
+    {
+      "question": "1. Which of the following is False?",
+      "options": [
+        "According to scaling laws of LLMs, the performance of LLMs mainly determined by model size, dataset size and amount of compute",
+        "Larger models are more sample efficient than smaller models",
+        "Kaplan laws use dynamic learning rate schedule for the training runs",
+        "Performance of LLMs improve most if model size and dataset size are scaled up together"
+      ],
+      "correctAnswer": "Kaplan laws use dynamic learning rate schedule for the training runs",
+      "explanation": "Option (C) is correct based on NPTEL DLNLP Assignment 11."
+    },
+    {
+      "question": "2. Which of the following is /are True?",
+      "options": [
+        "Mixtral has 8x experts in feed -forward layer",
+        "LLaMa2 uses RoPE and SwiGLU",
+        "QWen model is trained on multilingual data",
+        "GEMINI does not support image inputs"
+      ],
+      "correctAnswer": "Mixtral has 8x experts in feed -forward layer / LLaMa2 uses RoPE and SwiGLU / QWen model is trained on multilingual data",
+      "explanation": "Multiple statements are correct: (A, B, C). Specifically: Mixtral has 8x experts in feed -forward layer / LLaMa2 uses RoPE and SwiGLU / QWen model is trained on multilingual data."
+    },
+    {
+      "question": "3. Choose the incorrect statement from the below options?",
+      "options": [
+        "sparse attention reduces the computation through the use of sparse operations,",
+        "Linear and Reformer models scale linearly with the sequence length",
+        "kNN lookup do averaging of tokens at long distances",
+        "In the kNN -augmented attention layer, the same queries ar e used for both the local context, and for the external memory."
+      ],
+      "correctAnswer": "kNN lookup do averaging of tokens at long distances",
+      "explanation": "Option (C) is correct based on NPTEL DLNLP Assignment 11."
+    },
+    {
+      "question": "4. What is the primary goal of Retrieval Augmented Generation (RAG)?",
+      "options": [
+        "To eliminate the need for prompt engineering in generative AI applications.",
+        "To reduce the cost of training and deploying foundation models.",
+        "To replace foundation models with smaller, more efficient models.",
+        "To improve the accuracy and relevance of responses from foundation models."
+      ],
+      "correctAnswer": "To improve the accuracy and relevance of responses from foundation models.",
+      "explanation": "Option (D) is correct based on NPTEL DLNLP Assignment 11."
+    },
+    {
+      "question": "5. Which of the following statements about the Swish activation function is correct where Swish function is defined as f(x)=x ⋅σ(βx)",
+      "options": [
+        "Here β can not be a trainable parameter, it should be always constant",
+        "When β=1.702, Swish closely approximates the GELU activation function.",
+        "As β→∞, Swish behaves like the Sigmoid function.",
+        "As β→∞, Swish behaves like the ReLU function."
+      ],
+      "correctAnswer": "When β=1.702, Swish closely approximates the GELU activation function. / As β→∞, Swish behaves like the ReLU function.",
+      "explanation": "Multiple statements are correct: (B, D). Specifically: When β=1.702, Swish closely approximates the GELU activation function. / As β→∞, Swish behaves like the ReLU function.."
+    },
+    {
+      "question": "6. Suppose you are using a Transformer model with 100 million parameters for training. For an input sequence of length 20, approximately how many FLOPs will be required in forward propagation? [2 marks]",
+      "options": [
+        "100 million",
+        "200 million",
+        "4000 million",
+        "2000 m illion"
+      ],
+      "correctAnswer": "4000 million",
+      "explanation": "For forward propagation, compute FLOPs ≈ 2 × P × N = 2 × (100 × 10^6) × 20 = 4,000 million (4 billion) FLOPs."
+    },
+    {
+      "question": "7. As per chinchilla’s scaling laws, to train a compute -optimal model of 8B parameters, how many tokens should you ideally pretrain it on?",
+      "options": [
+        "As large as possible",
+        "8 B tokens",
+        "1.6 trillion tokens",
+        "160 B tokens"
+      ],
+      "correctAnswer": "160 B tokens",
+      "explanation": "Under Chinchilla scaling laws, tokens = 20 × parameters = 20 × 8B = 160B tokens."
+    },
+    {
+      "question": "8. Suppose you are using T5 bias with n_b = 128. What will be the last index of the bucket which uses a single offset? After this index, each bucket will be used for multiple offset values.",
+      "options": [
+        "63",
+        "64",
+        "31",
+        "32"
+      ],
+      "correctAnswer": "63",
+      "explanation": "Option (A) is correct based on NPTEL DLNLP Assignment 11."
+    }
+  ]
+}

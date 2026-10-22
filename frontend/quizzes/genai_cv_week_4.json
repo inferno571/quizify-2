@@ -1,0 +1,118 @@
+{
+  "id": "genai-cv-week-4",
+  "title": "Generative AI for Computer Vision - Week 4 Assignment 4",
+  "subject": "Generative AI for Computer Vision",
+  "date": "22/10/2026",
+  "questions": [
+    {
+      "question": "1. What is the main idea behind ResNet?",
+      "options": [
+        "To reduce image size",
+        "To use residual (skip) connections",
+        "To remove convolution layers",
+        "To replace activation functions"
+      ],
+      "correctAnswer": "To use residual (skip) connections",
+      "explanation": "ResNet introduces residual (skip) connections that allow information to bypass intermediate layers, enabling the training of networks with hundreds of layers."
+    },
+    {
+      "question": "2. A skip (residual) connection allows information to:",
+      "options": [
+        "Skip one or more layers",
+        "Skip the input image",
+        "Skip the output layer",
+        "Skip the loss function"
+      ],
+      "correctAnswer": "Skip one or more layers",
+      "explanation": "A skip connection directly forwards the input of a layer/block to its output by identity mapping, skipping one or more intermediate transformation layers."
+    },
+    {
+      "question": "3. What is the main advantage of skip connections?",
+      "options": [
+        "They increase image resolution.",
+        "They reduce the number of classes.",
+        "They remove pooling layers.",
+        "They help reduce the vanishing gradient problem."
+      ],
+      "correctAnswer": "They help reduce the vanishing gradient problem.",
+      "explanation": "Skip connections provide a direct highway for gradients to flow backwards during backpropagation, effectively preventing the vanishing gradient problem."
+    },
+    {
+      "question": "4. DenseNet differs from ResNet because:",
+      "options": [
+        "Each layer is connected to every previous layer.",
+        "It has no convolution layers.",
+        "It uses only fully connected layers.",
+        "It cannot perform image classification."
+      ],
+      "correctAnswer": "Each layer is connected to every previous layer.",
+      "explanation": "In DenseNet (Densely Connected Convolutional Networks), each layer receives feature maps concatenated from all preceding layers, maximizing feature reuse and gradient flow."
+    },
+    {
+      "question": "5. Which CNN architecture is specifically designed for handheld and embedded devices?",
+      "options": [
+        "AlexNet",
+        "VGGNet",
+        "MobileNet",
+        "LeNet"
+      ],
+      "correctAnswer": "MobileNet",
+      "explanation": "MobileNet uses depthwise separable convolutions to dramatically reduce parameter count and computational complexity, making it ideal for mobile and embedded devices."
+    },
+    {
+      "question": "6. EfficientNet mainly improves performance by:",
+      "options": [
+        "Removing convolution layers",
+        "Scaling network depth, width, and resolution synchronously",
+        "Using only larger filters",
+        "Eliminating activation functions"
+      ],
+      "correctAnswer": "Scaling network depth, width, and resolution synchronously",
+      "explanation": "EfficientNet introduces compound scaling, uniformly scaling network depth, width, and image resolution with a fixed compound coefficient for optimal accuracy and efficiency."
+    },
+    {
+      "question": "7. Sequence modeling is mainly used for:",
+      "options": [
+        "Processing sequential data",
+        "Image compression",
+        "Database management",
+        "Network security"
+      ],
+      "correctAnswer": "Processing sequential data",
+      "explanation": "Sequence modeling deals with sequential, time-dependent data where the order of elements carries semantic meaning, such as text, speech, and time-series."
+    },
+    {
+      "question": "8. RNN stands for:",
+      "options": [
+        "Repeated Neural Network",
+        "Residual Neural Network",
+        "Recurrent Neural Network",
+        "Random Neural Network"
+      ],
+      "correctAnswer": "Recurrent Neural Network",
+      "explanation": "RNN stands for Recurrent Neural Network, an architecture designed to process sequential data by maintaining an internal recurrent state."
+    },
+    {
+      "question": "9. Which of the following is a common application of RNN?",
+      "options": [
+        "Sorting numbers",
+        "Image resizing",
+        "Data compression",
+        "Language translation"
+      ],
+      "correctAnswer": "Language translation",
+      "explanation": "RNNs and recurrent sequence-to-sequence models are widely used for sequential applications such as machine translation, speech recognition, and language modeling."
+    },
+    {
+      "question": "10. The main feature of an RNN is that it:",
+      "options": [
+        "Has no hidden layers",
+        "Uses only convolution operations",
+        "Uses temporal context while processing sequences",
+        "Can process only images"
+      ],
+      "correctAnswer": "Uses temporal context while processing sequences",
+      "explanation": "RNNs maintain a recurring hidden state that preserves historical context across time steps, allowing the model to use temporal context while processing sequences."
+    }
+  ]
+}

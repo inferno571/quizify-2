@@ -1,0 +1,118 @@
+{
+  "id": "genai-cv-week-7",
+  "title": "Generative AI for Computer Vision - Week 7 Assignment 7",
+  "subject": "Generative AI for Computer Vision",
+  "date": "22/10/2026",
+  "questions": [
+    {
+      "question": "1. What is the main purpose of the attention mechanism?",
+      "options": [
+        "To focus on the most relevant parts of the input",
+        "To remove all input information",
+        "To reduce the number of classes",
+        "To increase image size"
+      ],
+      "correctAnswer": "To focus on the most relevant parts of the input",
+      "explanation": "The attention mechanism enables neural networks to compute dynamic importance weights and focus selectively on the most relevant components of the input."
+    },
+    {
+      "question": "2. In self-attention, the model mainly relates:",
+      "options": [
+        "Only the first and last elements",
+        "Only the input and output images",
+        "Different training datasets",
+        "Different parts of the same input sequence"
+      ],
+      "correctAnswer": "Different parts of the same input sequence",
+      "explanation": "Self-attention (intra-attention) relates different positions within the same input sequence to compute a contextualized representation of that sequence."
+    },
+    {
+      "question": "3. What is the purpose of masked self-attention?",
+      "options": [
+        "To prevent a position from attending to future positions",
+        "To remove all attention scores",
+        "To increase the image resolution",
+        "To remove the input sequence"
+      ],
+      "correctAnswer": "To prevent a position from attending to future positions",
+      "explanation": "Masked self-attention applies an upper-triangular mask (setting future positions to negative infinity) to prevent autoregressive models from attending to subsequent tokens during generation."
+    },
+    {
+      "question": "4. Multi-head self-attention uses:",
+      "options": [
+        "Multiple input images only",
+        "Only one attention score",
+        "Multiple attention heads to capture different relationships",
+        "No attention mechanism"
+      ],
+      "correctAnswer": "Multiple attention heads to capture different relationships",
+      "explanation": "Multi-head attention projects queries, keys, and values into multiple representation subspaces, allowing the model to jointly attend to different types of contextual relationships."
+    },
+    {
+      "question": "5. A Transformer is mainly based on:",
+      "options": [
+        "Pooling only",
+        "Attention mechanisms",
+        "Decision trees",
+        "K-means clustering"
+      ],
+      "correctAnswer": "Attention mechanisms",
+      "explanation": "Transformers rely entirely on self-attention and cross-attention mechanisms to model relationships between input elements, eliminating recurrence and convolutions."
+    },
+    {
+      "question": "6. How does a Vision Transformer (ViT) process an image?",
+      "options": [
+        "It uses only pooling layers",
+        "It converts the image directly into audio",
+        "It removes all image information",
+        "It divides the image into patches and processes them as tokens"
+      ],
+      "correctAnswer": "It divides the image into patches and processes them as tokens",
+      "explanation": "Vision Transformers divide an image into fixed-size non-overlapping patches (e.g., 16×16), linearly project them into patch embeddings, prepend a class token, add positional embeddings, and feed them into a standard Transformer encoder."
+    },
+    {
+      "question": "7. One major difference between a Transformer and a CNN is that:",
+      "options": [
+        "Transformers use attention to model relationships between input elements",
+        "Transformers cannot process images",
+        "CNNs do not have trainable parameters",
+        "CNNs can only process text"
+      ],
+      "correctAnswer": "Transformers use attention to model relationships between input elements",
+      "explanation": "Unlike CNNs that rely on localized convolution kernels with fixed receptive fields, Transformers use self-attention to model global dependencies directly across all input elements."
+    },
+    {
+      "question": "8. What is the main role of the Transformer encoder?",
+      "options": [
+        "To increase image resolution",
+        "To delete the input sequence",
+        "To transform the input into useful contextual representations",
+        "To store training data"
+      ],
+      "correctAnswer": "To transform the input into useful contextual representations",
+      "explanation": "The Transformer encoder processes the input embeddings through multi-head self-attention and feed-forward sublayers to generate rich, contextualized representations."
+    },
+    {
+      "question": "9. What is the purpose of input embedding?",
+      "options": [
+        "To convert input tokens into numerical vector representations",
+        "To remove the input tokens",
+        "To increase the number of images",
+        "To calculate the final accuracy"
+      ],
+      "correctAnswer": "To convert input tokens into numerical vector representations",
+      "explanation": "Input embedding maps discrete input tokens (such as word tokens or flattened image patches) into continuous dense vector representations suitable for neural network processing."
+    },
+    {
+      "question": "10. Why is positional encoding used in a Transformer?",
+      "options": [
+        "To remove the input sequence",
+        "To provide information about the position or order of input elements",
+        "To reduce the number of attention heads",
+        "To increase the image resolution"
+      ],
+      "correctAnswer": "To provide information about the position or order of input elements",
+      "explanation": "Because self-attention is permutation-invariant and lacks inherent recurrence or convolution, positional encodings are injected into the input embeddings to provide information about the sequential ordering of elements."
+    }
+  ]
+}

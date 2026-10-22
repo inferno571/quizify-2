@@ -1,0 +1,118 @@
+{
+  "id": "dlnlp-2025-assignment-1",
+  "title": "DLNLP (2025 PYQ) - Assignment 1",
+  "subject": "DLNLP (2025 PYQ)",
+  "date": "17/10/2026",
+  "questions": [
+    {
+      "question": "1. Which of the following best describes why large language models (LLMs) outperform n-gram models?",
+      "options": [
+        "LLMs use probabilistic distributions to handle unseen words",
+        "LLMs account for contextual relationships over long distances",
+        "LLMs reduce vocabulary size for faster processing",
+        "LLMs simplify complex tasks by discarding infrequent data"
+      ],
+      "correctAnswer": "LLMs account for contextual relationships over long distances",
+      "explanation": "LLMs use embeddings and transformer architectures to capture long-range dependencies effectively."
+    },
+    {
+      "question": "2. When evaluating an n-gram model, which of the following issues is not addressed by perplexity?",
+      "options": [
+        "Performance on unseen word sequences",
+        "The ability to handle syntactic correctness",
+        "Comparison of models on the same dataset",
+        "Measurement of model entropy"
+      ],
+      "correctAnswer": "The ability to handle syntactic correctness",
+      "explanation": "Perplexity measures how well a model predicts a test set but does not explicitly assess syntactic correctness."
+    },
+    {
+      "question": "3. In Add-1 smoothing, what happens to the relative probabilities of frequent versus infrequent word pairs?",
+      "options": [
+        "The gap between their probabilities increases",
+        "The gap between their probabilities decreases",
+        "All probabilities remain proportional",
+        "Add-1 smoothing has no effect on relative probabilities"
+      ],
+      "correctAnswer": "The gap between their probabilities decreases",
+      "explanation": "Add-1 smoothing reduces the gap between high-frequency and low-frequency word pairs by uniformly adding"
+    },
+    {
+      "question": "4. 4. Which of the following methods is used to interpolate probabilities in n-gram models?",
+      "options": [
+        "Multiplying unigram, bigram, and trigram probabilities",
+        "Weighted averaging of higher- and lower-order probabilities",
+        "Selecting the highest-order n-gram with sufficient data",
+        "Normalizing probabilities to sum to 1"
+      ],
+      "correctAnswer": "Weighted averaging of higher- and lower-order probabilities",
+      "explanation": "Interpolation combines probabilities from different n-gram levels using weights to improve robustness."
+    },
+    {
+      "question": "5. In a Shannon game simulation, why might an LLM outperform a bigram model?",
+      "options": [
+        "It can assign probabilities to unseen word pairs",
+        "It generates words based on deep neural embeddings",
+        "It uses prior context beyond two words",
+        "It reduces entropy in word selection"
+      ],
+      "correctAnswer": "It uses prior context beyond two words",
+      "explanation": "LLMs leverage context from the entire sequence, whereas bigram models only consider the last word."
+    },
+    {
+      "question": "6. How does the chain rule of probability contribute to language modeling?",
+      "options": [
+        "By approximating probabilities using higher-order n-grams",
+        "By computing joint probabilities of sentences",
+        "By reducing the complexity of model training",
+        "By ensuring independence between word predictions"
+      ],
+      "correctAnswer": "By computing joint probabilities of sentences",
+      "explanation": "The chain rule allows the computation of joint probabilities by breaking them into conditional probabilities."
+    },
+    {
+      "question": "7. A sentiment analysis model is tested on a dataset of 100 reviews. The model is tasked with classifying each review as Positive or Negative . The confusion matrix for the model's predictions is as follows: \n\n| | Predicted Positive | Predicted Negative |\n|---|---|---|\n| Actual Positive | 40 | 10 |\n| Actual Negative | 20 | 30 |\n\n Based on the above confusion matrix: What is the precision of the model for the Positive class?",
+      "options": [
+        "0.50",
+        "0.67",
+        "0.80",
+        "0.89"
+      ],
+      "correctAnswer": "0.67",
+      "explanation": "Option (B) is the correct answer based on NPTEL DLNLP Assignment 1."
+    },
+    {
+      "question": "8. Why might backoff methods outperform higher-order n-gram models in certain contexts?",
+      "options": [
+        "They avoid overfitting by relying on simpler models",
+        "They reduce the computational cost of model evaluation",
+        "They inherently perform better on sparse datasets",
+        "They rely only on unigram probabilities for simplicity"
+      ],
+      "correctAnswer": "They avoid overfitting by relying on simpler models",
+      "explanation": "Backoff methods generalize better when data for higher-order n-grams is sparse."
+    },
+    {
+      "question": "9. A sentiment analysis model is tested on a dataset of 100 reviews. The model is tasked with classifying each review as Positive or Negative . The confusion matrix for the model's predictions is as follows: \n\n| | Predicted Positive | Predicted Negative |\n|---|---|---|\n| Actual Positive | 40 | 10 |\n| Actual Negative | 20 | 30 |\n\n Based on the above confusion matrix: What is the recall of the model for the Positive class?",
+      "options": [
+        "0.50",
+        "0.67",
+        "0.80",
+        "0.89"
+      ],
+      "correctAnswer": "0.80",
+      "explanation": "Option (C) is the correct answer based on NPTEL DLNLP Assignment 1."
+    },
+    {
+      "question": "10. If the vocabulary size is V=5000 and the frequency of a bigram is 1000, what is the probability of the bigram after applying Add-1 smoothing?",
+      "options": [
+        "(1001)/(5000+1000)",
+        "(1000+1)/(5000+1)",
+        "(1001)/(5000+5000)",
+        "(1000+1)/(5000+5001)"
+      ],
+      "correctAnswer": "(1000+1)/(5000+5001)",
+      "explanation": "Add-1 smoothing adds 1 to the numerator and increases the denominator by the vocabulary size."
+    }
+  ]
+}

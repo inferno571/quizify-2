@@ -1,0 +1,118 @@
+{
+  "id": "genai-cv-week-12",
+  "title": "Generative AI for Computer Vision - Week 12 Assignment 12",
+  "subject": "Generative AI for Computer Vision",
+  "date": "22/10/2026",
+  "questions": [
+    {
+      "question": "1. What is the main idea of Agentic AI?",
+      "options": [
+        "AI systems that only classify images",
+        "AI systems that only store data",
+        "AI systems that can autonomously perform tasks and take actions",
+        "AI systems that only generate text"
+      ],
+      "correctAnswer": "AI systems that can autonomously perform tasks and take actions",
+      "explanation": "Agentic AI refers to autonomous AI systems capable of perceiving an environment, formulating plans, making decisions, using tools, and executing actions to achieve specific goals."
+    },
+    {
+      "question": "2. In Agentic AI, what does the agent interact with to perform actions?",
+      "options": [
+        "The environment",
+        "Only the training dataset",
+        "The model weights",
+        "Only the system prompt"
+      ],
+      "correctAnswer": "The environment",
+      "explanation": "An AI agent operates by sensing its environment (digital tools, APIs, web interfaces, physical sensors) and executing actions that alter the state of that environment."
+    },
+    {
+      "question": "3. What is the main purpose of planning in Agentic AI?",
+      "options": [
+        "To increase the size of the model",
+        "To remove the agent's memory",
+        "To generate random actions",
+        "To decide the steps needed to achieve a goal"
+      ],
+      "correctAnswer": "To decide the steps needed to achieve a goal",
+      "explanation": "Planning allows an agent to formulate a coherent trajectory of sub-goals and actions required to accomplish a complex objective systematically."
+    },
+    {
+      "question": "4. What is task decomposition?",
+      "options": [
+        "Combining unrelated tasks into one task",
+        "Breaking a complex task into smaller subtasks",
+        "Removing all tasks from an agent",
+        "Converting text into images"
+      ],
+      "correctAnswer": "Breaking a complex task into smaller subtasks",
+      "explanation": "Task decomposition is the process of breaking down a large, multifaceted problem into smaller, manageable, and logically ordered subtasks."
+    },
+    {
+      "question": "5. What is the role of an LLM in many Agentic AI systems?",
+      "options": [
+        "It only stores images",
+        "It replaces all external tools",
+        "It acts as the agent's reasoning or decision-making brain",
+        "It only performs database backups"
+      ],
+      "correctAnswer": "It acts as the agent's reasoning or decision-making brain",
+      "explanation": "In modern agent frameworks, an LLM serves as the central cognitive controller—interpreting observations, reasoning about state, selecting tools, and formulating next steps."
+    },
+    {
+      "question": "6. What is tool use in Agentic AI?",
+      "options": [
+        "Using external tools to perform specific actions",
+        "Removing the agent's planning ability",
+        "Increasing the number of model parameters",
+        "Training only on images"
+      ],
+      "correctAnswer": "Using external tools to perform specific actions",
+      "explanation": "Tool use (function calling) allows AI agents to interact with external tools such as web search, code interpreters, calculators, and APIs to overcome the static limitations of model weights."
+    },
+    {
+      "question": "7. What is the purpose of memory in Agentic AI?",
+      "options": [
+        "To remove the system prompt",
+        "To generate random responses",
+        "To increase image resolution",
+        "To store and use relevant information from previous interactions"
+      ],
+      "correctAnswer": "To store and use relevant information from previous interactions",
+      "explanation": "Memory mechanisms (short-term context, working memory, and long-term vector storage) enable agents to recall prior steps, retain user preferences, and maintain continuity across multi-step tasks."
+    },
+    {
+      "question": "8. What is Retrieval-Augmented Generation (RAG) used for?",
+      "options": [
+        "Generating random information",
+        "Compressing the language model",
+        "Retrieving relevant information to help generate an answer",
+        "Removing all external knowledge"
+      ],
+      "correctAnswer": "Retrieving relevant information to help generate an answer",
+      "explanation": "RAG enhances generative models by fetching relevant context from external knowledge bases or documents to ground the generated response in accurate, up-to-date facts."
+    },
+    {
+      "question": "9. What is a multi-agent system?",
+      "options": [
+        "A system with multiple GPUs only",
+        "A system where multiple agents work together to solve tasks",
+        "A system without any planning",
+        "A system that uses only one agent"
+      ],
+      "correctAnswer": "A system where multiple agents work together to solve tasks",
+      "explanation": "A multi-agent system comprises multiple specialized AI agents that collaborate, divide labor, communicate, and solve complex collective problems together."
+    },
+    {
+      "question": "10. What is a major challenge of Agentic AI?",
+      "options": [
+        "Safety and reliability of autonomous actions",
+        "Reducing the number of text characters",
+        "Increasing keyboard speed",
+        "Removing all user interaction"
+      ],
+      "correctAnswer": "Safety and reliability of autonomous actions",
+      "explanation": "Ensuring safety, alignment, robustness against unexpected loops/errors, and reliability of autonomous actions with real-world impact is a primary research and operational challenge in Agentic AI."
+    }
+  ]
+}

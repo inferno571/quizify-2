@@ -1,0 +1,118 @@
+{
+  "id": "dlnlp-2025-assignment-3",
+  "title": "DLNLP (2025 PYQ) - Assignment 3",
+  "subject": "DLNLP (2025 PYQ)",
+  "date": "17/10/2026",
+  "questions": [
+    {
+      "question": "1. Which of the following is a key difference between static embeddings (e.g., Word2Vec, GloVe) and contextual embeddings (e.g., BERT, ELMo)?",
+      "options": [
+        "Static embeddings generate different vectors for the same word based on its context, while contextual embeddings generate a single vector per word.",
+        "Static embeddings rely on matrix factorization, while contextual embeddings are based on co-occurrence matrices.",
+        "Static embeddings assign one vector per word type, while contextual embeddings produce distinct vectors for each token based on context.",
+        "Static embeddings cannot capture semantic relationships, while contextual embeddings can."
+      ],
+      "correctAnswer": "Static embeddings assign one vector per word type, while contextual embeddings produce distinct vectors for each token based on context.",
+      "explanation": "Option (C) is the correct answer according to NPTEL DLNLP Assignment 3."
+    },
+    {
+      "question": "2. In the context of distributional semantics, why is Pointwise Mutual Information (PMI) often used for weighting co-occurrence matrices?",
+      "options": [
+        "It is computationally efficient for high-dimensional data.",
+        "It emphasizes frequent words, which are more important in natural language.",
+        "It highlights statistically significant word co-occurrences relative to their independent probabilities.",
+        "It directly computes dense vector embeddings from sparse matrices."
+      ],
+      "correctAnswer": "It highlights statistically significant word co-occurrences relative to their independent probabilities.",
+      "explanation": "Option (C) is the correct answer according to NPTEL DLNLP Assignment 3."
+    },
+    {
+      "question": "3. What is the primary challenge in using Skip-gram with Negative Sampling (SGNS) to create word embeddings?",
+      "options": [
+        "Optimizing the number of negative samples for each positive sample.",
+        "Ensuring that the embeddings are sparse and interpretable.",
+        "Balancing the dimensionality of embeddings with training efficiency.",
+        "Constraining embeddings to align with matrix factorization methods like SVD."
+      ],
+      "correctAnswer": "Optimizing the number of negative samples for each positive sample.",
+      "explanation": "Option (A) is the correct answer according to NPTEL DLNLP Assignment 3."
+    },
+    {
+      "question": "4. If the cosine similarity between the embeddings of \"car\" and \"automobile\" is 0.9, while the cosine similarity between \"car\" and \"bike\" is 0.5, what can be inferred about the embeddings?",
+      "options": [
+        "\"Car\" and \"automobile\" co-occur more frequently than \"car\" and \"bike.\"",
+        "The embedding model has effectively captured semantic similarity between words.",
+        "\"Car\" and \"automobile\" have identical embeddings.",
+        "\"Car\" is syntactically closer to \"bike\" than to \"automobile.\""
+      ],
+      "correctAnswer": "The embedding model has effectively captured semantic similarity between words.",
+      "explanation": "Option (B) is the correct answer according to NPTEL DLNLP Assignment 3."
+    },
+    {
+      "question": "5. The GloVe objective function minimizes:",
+      "options": [
+        "The binary cross-entropy between predicted and actual co-occurrence probabilities.",
+        "The weighted least square difference between the dot product of embeddings and the logarithm of co-occurrence counts.",
+        "The negative log-likelihood of the context word given the center word.",
+        "The squared error between the word embedding norms and their PMI values."
+      ],
+      "correctAnswer": "The weighted least square difference between the dot product of embeddings and the logarithm of co-occurrence counts.",
+      "explanation": "Option (B) is the correct answer according to NPTEL DLNLP Assignment 3."
+    },
+    {
+      "question": "6. Suppose you train a Skip-gram model with Negative Sampling on a vocabulary of 10,000 words. If you choose k=5 negative samples per positive pair, how many updates will be made to the embeddings for each target-context pair?",
+      "options": [
+        "5 updates (for negative samples only).",
+        "1 update (for the positive pair only).",
+        "6 updates (1 positive + 5 negative).",
+        "2 ⋅ 5=102 \\cdot 5 = 102 ⋅ 5=10 updates (one for each embedding matrix)."
+      ],
+      "correctAnswer": "6 updates (1 positive + 5 negative).",
+      "explanation": "Option (C) is the correct answer according to NPTEL DLNLP Assignment 3."
+    },
+    {
+      "question": "7. In hierarchical softmax, the computational efficiency is improved by:",
+      "options": [
+        "Reducing the number of parameters using shared embeddings.",
+        "Structuring the vocabulary into a binary tree, where calculating P(c ∣ w) depends on the path from the root to c.",
+        "Applying negative sampling to approximate the softmax.",
+        "Using a fixed-size context window for every target word."
+      ],
+      "correctAnswer": "Structuring the vocabulary into a binary tree, where calculating P(c ∣ w) depends on the path from the root to c.",
+      "explanation": "Option (B) is the correct answer according to NPTEL DLNLP Assignment 3."
+    },
+    {
+      "question": "8. FastText improves on Word2Vec by representing words as bags of n-grams. If FastText encounters an out-of-vocabulary (OOV) word, how is the representation of this word constructed, and what are the key limitations of this approach?",
+      "options": [
+        "The vector is constructed by averaging the embeddings of its character n-grams, and the limitation is reduced representation quality for highly uncommon n-grams.",
+        "The vector is constructed by summing embeddings of similar words, and the limitation is computational inefficiency.",
+        "The vector is learned using hierarchical softmax, and the limitation is the lack of support for hashing-based memory constraints.",
+        "The vector is directly inferred using bilingual dictionaries, and the limitation is dependence on cross-lingual data."
+      ],
+      "correctAnswer": "The vector is constructed by averaging the embeddings of its character n-grams, and the limitation is reduced representation quality for highly uncommon n-grams.",
+      "explanation": "Option (A) is the correct answer according to NPTEL DLNLP Assignment 3."
+    },
+    {
+      "question": "9. Canonical Correlation Analysis (CCA) is often used to project embeddings into a shared space. Given two languages with highly divergent syntactic structures, which limitation of CCA might reduce its effectiveness, and what alternative approach could address this?",
+      "options": [
+        "CCA assumes linear transformations, making it less effective; using adversarial training for non-linear transformations is a viable alternative.",
+        "CCA requires large bilingual dictionaries, making it impractical; autoencoders can bypass this requirement.",
+        "CCA is computationally expensive for high-dimensional embeddings; dimensionality reduction via PCA can help.",
+        "CCA minimizes mean squared errors, which ignores semantic similarity; graph-based representations offer an alternative."
+      ],
+      "correctAnswer": "CCA assumes linear transformations, making it less effective; using adversarial training for non-linear transformations is a viable alternative.",
+      "explanation": "Option (A) is the correct answer according to NPTEL DLNLP Assignment 3."
+    },
+    {
+      "question": "10. Joint optimization methods for cross-lingual embeddings balance monolingual and cross-lingual objectives. For a low-resource language paired with a high-resource language, which factors critically affect the balance, and why?",
+      "options": [
+        "The size of the monolingual corpus for the low-resource language as it determines the effectiveness of pretraining.",
+        "The quality of the bilingual lexicon as it directly influences monolingual loss optimization.",
+        "The degree of morphological similarity between languages as it impacts word segmentation strategies.",
+        "The alignment quality of sentence pairs, as it controls cross-lingual loss contributions."
+      ],
+      "correctAnswer": "The size of the monolingual corpus for the low-resource language as it determines the effectiveness of pretraining.",
+      "explanation": "Option (A) is the correct answer according to NPTEL DLNLP Assignment 3."
+    }
+  ]
+}

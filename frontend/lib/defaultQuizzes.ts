@@ -12217,5 +12217,5167 @@ export const DEFAULT_QUIZZES: Quiz[] = [
       "explanation": "Tableau's OLAP-like visual architecture facilitates multidimensional slicing, dicing, and drill-down analysis across measures and dimensions."
     }
   ]
-}
+},
+{
+  "id": "dlnlp-2025-assignment-1",
+  "title": "DLNLP (2025 PYQ) - Assignment 1",
+  "subject": "DLNLP (2025 PYQ)",
+  "date": "17/10/2026",
+  "questions": [
+    {
+      "question": "1. Which of the following best describes why large language models (LLMs) outperform n-gram models?",
+      "options": [
+        "LLMs use probabilistic distributions to handle unseen words",
+        "LLMs account for contextual relationships over long distances",
+        "LLMs reduce vocabulary size for faster processing",
+        "LLMs simplify complex tasks by discarding infrequent data"
+      ],
+      "correctAnswer": "LLMs account for contextual relationships over long distances",
+      "explanation": "LLMs use embeddings and transformer architectures to capture long-range dependencies effectively."
+    },
+    {
+      "question": "2. When evaluating an n-gram model, which of the following issues is not addressed by perplexity?",
+      "options": [
+        "Performance on unseen word sequences",
+        "The ability to handle syntactic correctness",
+        "Comparison of models on the same dataset",
+        "Measurement of model entropy"
+      ],
+      "correctAnswer": "The ability to handle syntactic correctness",
+      "explanation": "Perplexity measures how well a model predicts a test set but does not explicitly assess syntactic correctness."
+    },
+    {
+      "question": "3. In Add-1 smoothing, what happens to the relative probabilities of frequent versus infrequent word pairs?",
+      "options": [
+        "The gap between their probabilities increases",
+        "The gap between their probabilities decreases",
+        "All probabilities remain proportional",
+        "Add-1 smoothing has no effect on relative probabilities"
+      ],
+      "correctAnswer": "The gap between their probabilities decreases",
+      "explanation": "Add-1 smoothing reduces the gap between high-frequency and low-frequency word pairs by uniformly adding"
+    },
+    {
+      "question": "4. 4. Which of the following methods is used to interpolate probabilities in n-gram models?",
+      "options": [
+        "Multiplying unigram, bigram, and trigram probabilities",
+        "Weighted averaging of higher- and lower-order probabilities",
+        "Selecting the highest-order n-gram with sufficient data",
+        "Normalizing probabilities to sum to 1"
+      ],
+      "correctAnswer": "Weighted averaging of higher- and lower-order probabilities",
+      "explanation": "Interpolation combines probabilities from different n-gram levels using weights to improve robustness."
+    },
+    {
+      "question": "5. In a Shannon game simulation, why might an LLM outperform a bigram model?",
+      "options": [
+        "It can assign probabilities to unseen word pairs",
+        "It generates words based on deep neural embeddings",
+        "It uses prior context beyond two words",
+        "It reduces entropy in word selection"
+      ],
+      "correctAnswer": "It uses prior context beyond two words",
+      "explanation": "LLMs leverage context from the entire sequence, whereas bigram models only consider the last word."
+    },
+    {
+      "question": "6. How does the chain rule of probability contribute to language modeling?",
+      "options": [
+        "By approximating probabilities using higher-order n-grams",
+        "By computing joint probabilities of sentences",
+        "By reducing the complexity of model training",
+        "By ensuring independence between word predictions"
+      ],
+      "correctAnswer": "By computing joint probabilities of sentences",
+      "explanation": "The chain rule allows the computation of joint probabilities by breaking them into conditional probabilities."
+    },
+    {
+      "question": "7. A sentiment analysis model is tested on a dataset of 100 reviews. The model is tasked with classifying each review as Positive or Negative . The confusion matrix for the model's predictions is as follows: \n\n| | Predicted Positive | Predicted Negative |\n|---|---|---|\n| Actual Positive | 40 | 10 |\n| Actual Negative | 20 | 30 |\n\n Based on the above confusion matrix: What is the precision of the model for the Positive class?",
+      "options": [
+        "0.50",
+        "0.67",
+        "0.80",
+        "0.89"
+      ],
+      "correctAnswer": "0.67",
+      "explanation": "Option (B) is the correct answer based on NPTEL DLNLP Assignment 1."
+    },
+    {
+      "question": "8. Why might backoff methods outperform higher-order n-gram models in certain contexts?",
+      "options": [
+        "They avoid overfitting by relying on simpler models",
+        "They reduce the computational cost of model evaluation",
+        "They inherently perform better on sparse datasets",
+        "They rely only on unigram probabilities for simplicity"
+      ],
+      "correctAnswer": "They avoid overfitting by relying on simpler models",
+      "explanation": "Backoff methods generalize better when data for higher-order n-grams is sparse."
+    },
+    {
+      "question": "9. A sentiment analysis model is tested on a dataset of 100 reviews. The model is tasked with classifying each review as Positive or Negative . The confusion matrix for the model's predictions is as follows: \n\n| | Predicted Positive | Predicted Negative |\n|---|---|---|\n| Actual Positive | 40 | 10 |\n| Actual Negative | 20 | 30 |\n\n Based on the above confusion matrix: What is the recall of the model for the Positive class?",
+      "options": [
+        "0.50",
+        "0.67",
+        "0.80",
+        "0.89"
+      ],
+      "correctAnswer": "0.80",
+      "explanation": "Option (C) is the correct answer based on NPTEL DLNLP Assignment 1."
+    },
+    {
+      "question": "10. If the vocabulary size is V=5000 and the frequency of a bigram is 1000, what is the probability of the bigram after applying Add-1 smoothing?",
+      "options": [
+        "(1001)/(5000+1000)",
+        "(1000+1)/(5000+1)",
+        "(1001)/(5000+5000)",
+        "(1000+1)/(5000+5001)"
+      ],
+      "correctAnswer": "(1000+1)/(5000+5001)",
+      "explanation": "Add-1 smoothing adds 1 to the numerator and increases the denominator by the vocabulary size."
+    }
+  ]
+},
+{
+  "id": "dlnlp-2025-assignment-2",
+  "title": "DLNLP (2025 PYQ) - Assignment 2",
+  "subject": "DLNLP (2025 PYQ)",
+  "date": "17/10/2026",
+  "questions": [
+    {
+      "question": "1. Which of the following is False?",
+      "options": [
+        "Training a model means finding parameters that predict outputs well from input/output pairs of training dataset",
+        "Model is a family of equations",
+        "Supervised learning can be applied for mapping from one or more inputs to a single output only",
+        "Parameters affect outcome of a equation"
+      ],
+      "correctAnswer": "Supervised learning can be applied for mapping from one or more inputs to a single output only",
+      "explanation": "Supervised learning can be applied for mapping from one or more inputs to one or more outputs"
+    },
+    {
+      "question": "2. Which of the following is an example of supervised learning?",
+      "options": [
+        "Clustering customer data based on p urchase history",
+        "Predicting price of mobile based on historical data",
+        "Identifying topics in a set of text documents without labels",
+        "Discovering associations between products in a shopping cart"
+      ],
+      "correctAnswer": "Predicting price of mobile based on historical data",
+      "explanation": "Mobile price prediction can be solv ed by regression having supervised data available"
+    },
+    {
+      "question": "3. What is the mathematical definition of the ReLU activation function?",
+      "options": [
+        "f(x) = 1/ 1 + e^ -x",
+        "f(x) = tanh(x)",
+        "f(x)=max(0,x)",
+        "f(x) = x^2"
+      ],
+      "correctAnswer": "f(x)=max(0,x)",
+      "explanation": "Relu(x) = 0 if x< 0; otherwise x if x>=0"
+    },
+    {
+      "question": "4. In Gradient Descent, what happens if the learning rate is too high?",
+      "options": [
+        "The algorithm converges faster to the global minimum.",
+        "The algorithm may overshoot the minimum and fail to converge.",
+        "The algorithm will get stuck in a local minimum.",
+        "The algorithm will converge to the correct minimum, but it will take longer."
+      ],
+      "correctAnswer": "The algorithm may overshoot the minimum and fail to converge.",
+      "explanation": "If the learning rate is too high, the updates may overshoot the minimum, causing the algorithm to fail to converge or oscillate around the optimal solution."
+    },
+    {
+      "question": "5. In backpropagation, why is the chain rule used?",
+      "options": [
+        "To compute the output of the network during forward propagation.",
+        "To calculate the gradients of the loss function with respect to weights in each layer.",
+        "To determine the optimal number of neurons in a hidden layer.",
+        "To update weights by directly minimizing the loss function."
+      ],
+      "correctAnswer": "To calculate the gradients of the loss function with respect to weights in each layer.",
+      "explanation": "The chain rule i s used in backpropagation to calculate how the loss function changes with respect to each weight by considering the contribution of every layer in the network. This is essential for propagating gradients backward and updating the weights effectively."
+    },
+    {
+      "question": "6. Consider a simple neural network with: An input layer containing 3 neurons, A hidden layer containing 4 neurons and an output layer containing 2 neurons. The activation functions for the hidden and output layers are ReLU and softmax, respectively. Wha t is the total number of weights (parameters) in this network, excluding biases?",
+      "options": [
+        "12",
+        "14",
+        "20",
+        "26"
+      ],
+      "correctAnswer": "20",
+      "explanation": "Weights between input and hidden layer: 3 * 4 = 12 Weights between hidden and output layer: 4 * 2 = 8 Total no of parameters: 12 + 8 = 20."
+    },
+    {
+      "question": "7. Consider a neural network with a single weight w. The output of the network is given by y = w^2 and the loss function is L = 1/2(y - t)^2 where t=4 is the target value. If the current value of w is 3, what is the gradient of L with respect to w?",
+      "options": [
+        "12",
+        "24",
+        "30",
+        "18"
+      ],
+      "correctAnswer": "30",
+      "explanation": "Compute y = w^2 = 3^2 = 9 Gradient of L with respect to y= ∂L/∂y = y - t = 9 - 4 = 5 Gradient of y with respect to w: ∂y/∂w=2w= 2*3 = 6 Using the chain rule: ∂L/∂w=∂L/∂y * ∂y/ ∂w = 5 ⋅6=30"
+    },
+    {
+      "question": "8. In 1D Linear Regression, the least squares loss function is given by:\n\n$$L = \\frac{1}{N} \\sum_{i=1}^N (y_i - (\\hat{w}x_i + b))^2$$\n\nwhere y i are the true values, x i are the inputs, w^ is the weight, b is the bias, and N is the number of data points. If x=[1,2,3], y = [2, 4, 6] , w^=2, and b=0, what is the value of the least squares loss?",
+      "options": [
+        "0",
+        "2",
+        "4",
+        "6"
+      ],
+      "correctAnswer": "0",
+      "explanation": "Solution: 1. Compute the predicted values : y^i=w^xi+b=2xi+0; For x=[1,2,3], y^=[2,4,6] 2. Calculate the residuals (yi−y^i): Residuals=[2−2,4−4,6−6]=[0,0,0] 3. Compute the least squares loss: L=1/N(yi−y^i)2 = ⅓(0)^2 = 0"
+    }
+  ]
+},
+{
+  "id": "dlnlp-2025-assignment-3",
+  "title": "DLNLP (2025 PYQ) - Assignment 3",
+  "subject": "DLNLP (2025 PYQ)",
+  "date": "17/10/2026",
+  "questions": [
+    {
+      "question": "1. Which of the following is a key difference between static embeddings (e.g., Word2Vec, GloVe) and contextual embeddings (e.g., BERT, ELMo)?",
+      "options": [
+        "Static embeddings generate different vectors for the same word based on its context, while contextual embeddings generate a single vector per word.",
+        "Static embeddings rely on matrix factorization, while contextual embeddings are based on co-occurrence matrices.",
+        "Static embeddings assign one vector per word type, while contextual embeddings produce distinct vectors for each token based on context.",
+        "Static embeddings cannot capture semantic relationships, while contextual embeddings can."
+      ],
+      "correctAnswer": "Static embeddings assign one vector per word type, while contextual embeddings produce distinct vectors for each token based on context.",
+      "explanation": "Option (C) is the correct answer according to NPTEL DLNLP Assignment 3."
+    },
+    {
+      "question": "2. In the context of distributional semantics, why is Pointwise Mutual Information (PMI) often used for weighting co-occurrence matrices?",
+      "options": [
+        "It is computationally efficient for high-dimensional data.",
+        "It emphasizes frequent words, which are more important in natural language.",
+        "It highlights statistically significant word co-occurrences relative to their independent probabilities.",
+        "It directly computes dense vector embeddings from sparse matrices."
+      ],
+      "correctAnswer": "It highlights statistically significant word co-occurrences relative to their independent probabilities.",
+      "explanation": "Option (C) is the correct answer according to NPTEL DLNLP Assignment 3."
+    },
+    {
+      "question": "3. What is the primary challenge in using Skip-gram with Negative Sampling (SGNS) to create word embeddings?",
+      "options": [
+        "Optimizing the number of negative samples for each positive sample.",
+        "Ensuring that the embeddings are sparse and interpretable.",
+        "Balancing the dimensionality of embeddings with training efficiency.",
+        "Constraining embeddings to align with matrix factorization methods like SVD."
+      ],
+      "correctAnswer": "Optimizing the number of negative samples for each positive sample.",
+      "explanation": "Option (A) is the correct answer according to NPTEL DLNLP Assignment 3."
+    },
+    {
+      "question": "4. If the cosine similarity between the embeddings of \"car\" and \"automobile\" is 0.9, while the cosine similarity between \"car\" and \"bike\" is 0.5, what can be inferred about the embeddings?",
+      "options": [
+        "\"Car\" and \"automobile\" co-occur more frequently than \"car\" and \"bike.\"",
+        "The embedding model has effectively captured semantic similarity between words.",
+        "\"Car\" and \"automobile\" have identical embeddings.",
+        "\"Car\" is syntactically closer to \"bike\" than to \"automobile.\""
+      ],
+      "correctAnswer": "The embedding model has effectively captured semantic similarity between words.",
+      "explanation": "Option (B) is the correct answer according to NPTEL DLNLP Assignment 3."
+    },
+    {
+      "question": "5. The GloVe objective function minimizes:",
+      "options": [
+        "The binary cross-entropy between predicted and actual co-occurrence probabilities.",
+        "The weighted least square difference between the dot product of embeddings and the logarithm of co-occurrence counts.",
+        "The negative log-likelihood of the context word given the center word.",
+        "The squared error between the word embedding norms and their PMI values."
+      ],
+      "correctAnswer": "The weighted least square difference between the dot product of embeddings and the logarithm of co-occurrence counts.",
+      "explanation": "Option (B) is the correct answer according to NPTEL DLNLP Assignment 3."
+    },
+    {
+      "question": "6. Suppose you train a Skip-gram model with Negative Sampling on a vocabulary of 10,000 words. If you choose k=5 negative samples per positive pair, how many updates will be made to the embeddings for each target-context pair?",
+      "options": [
+        "5 updates (for negative samples only).",
+        "1 update (for the positive pair only).",
+        "6 updates (1 positive + 5 negative).",
+        "2 ⋅ 5=102 \\cdot 5 = 102 ⋅ 5=10 updates (one for each embedding matrix)."
+      ],
+      "correctAnswer": "6 updates (1 positive + 5 negative).",
+      "explanation": "Option (C) is the correct answer according to NPTEL DLNLP Assignment 3."
+    },
+    {
+      "question": "7. In hierarchical softmax, the computational efficiency is improved by:",
+      "options": [
+        "Reducing the number of parameters using shared embeddings.",
+        "Structuring the vocabulary into a binary tree, where calculating P(c ∣ w) depends on the path from the root to c.",
+        "Applying negative sampling to approximate the softmax.",
+        "Using a fixed-size context window for every target word."
+      ],
+      "correctAnswer": "Structuring the vocabulary into a binary tree, where calculating P(c ∣ w) depends on the path from the root to c.",
+      "explanation": "Option (B) is the correct answer according to NPTEL DLNLP Assignment 3."
+    },
+    {
+      "question": "8. FastText improves on Word2Vec by representing words as bags of n-grams. If FastText encounters an out-of-vocabulary (OOV) word, how is the representation of this word constructed, and what are the key limitations of this approach?",
+      "options": [
+        "The vector is constructed by averaging the embeddings of its character n-grams, and the limitation is reduced representation quality for highly uncommon n-grams.",
+        "The vector is constructed by summing embeddings of similar words, and the limitation is computational inefficiency.",
+        "The vector is learned using hierarchical softmax, and the limitation is the lack of support for hashing-based memory constraints.",
+        "The vector is directly inferred using bilingual dictionaries, and the limitation is dependence on cross-lingual data."
+      ],
+      "correctAnswer": "The vector is constructed by averaging the embeddings of its character n-grams, and the limitation is reduced representation quality for highly uncommon n-grams.",
+      "explanation": "Option (A) is the correct answer according to NPTEL DLNLP Assignment 3."
+    },
+    {
+      "question": "9. Canonical Correlation Analysis (CCA) is often used to project embeddings into a shared space. Given two languages with highly divergent syntactic structures, which limitation of CCA might reduce its effectiveness, and what alternative approach could address this?",
+      "options": [
+        "CCA assumes linear transformations, making it less effective; using adversarial training for non-linear transformations is a viable alternative.",
+        "CCA requires large bilingual dictionaries, making it impractical; autoencoders can bypass this requirement.",
+        "CCA is computationally expensive for high-dimensional embeddings; dimensionality reduction via PCA can help.",
+        "CCA minimizes mean squared errors, which ignores semantic similarity; graph-based representations offer an alternative."
+      ],
+      "correctAnswer": "CCA assumes linear transformations, making it less effective; using adversarial training for non-linear transformations is a viable alternative.",
+      "explanation": "Option (A) is the correct answer according to NPTEL DLNLP Assignment 3."
+    },
+    {
+      "question": "10. Joint optimization methods for cross-lingual embeddings balance monolingual and cross-lingual objectives. For a low-resource language paired with a high-resource language, which factors critically affect the balance, and why?",
+      "options": [
+        "The size of the monolingual corpus for the low-resource language as it determines the effectiveness of pretraining.",
+        "The quality of the bilingual lexicon as it directly influences monolingual loss optimization.",
+        "The degree of morphological similarity between languages as it impacts word segmentation strategies.",
+        "The alignment quality of sentence pairs, as it controls cross-lingual loss contributions."
+      ],
+      "correctAnswer": "The size of the monolingual corpus for the low-resource language as it determines the effectiveness of pretraining.",
+      "explanation": "Option (A) is the correct answer according to NPTEL DLNLP Assignment 3."
+    }
+  ]
+},
+{
+  "id": "dlnlp-2025-assignment-4",
+  "title": "DLNLP (2025 PYQ) - Assignment 4",
+  "subject": "DLNLP (2025 PYQ)",
+  "date": "17/10/2026",
+  "questions": [
+    {
+      "question": "1. Which of the following best describes the role of word embeddings in language modeling?",
+      "options": [
+        "Word embeddings convert words into one -hot encoded vectors for neural network processing.",
+        "Word embeddings represent words as dense, continuous vectors to capture semantic relationships.",
+        "Word embeddings are used to perform stemming and lemmatization in preprocessing.",
+        "Word embeddings are designed to reduce the size of the vocabulary by merging similar words."
+      ],
+      "correctAnswer": "Word embeddings represent words as dense, continuous vectors to capture semantic relationships.",
+      "explanation": "Word embeddings represent words as dense, continuous vectors to capture semantic relationships."
+    },
+    {
+      "question": "2. Which of the following tasks is most suitable for Recurrent Neural Networks (RNNs)?",
+      "options": [
+        "Image classification in static images.",
+        "Predicting the next word in a sentence.",
+        "Clustering data points in an unsupervised man ner.",
+        "Sorting a list of integers."
+      ],
+      "correctAnswer": "Predicting the next word in a sentence.",
+      "explanation": "Predicting the next word in a sentence is most suitable for RNN"
+    },
+    {
+      "question": "3. Which of the following is the primary cause of the vanishing gradient problem in deep neural networks, particularly in Recurrent Neural Networks (RNNs)?",
+      "options": [
+        "The network's weight matrices become too large, causing instability. 2. Gradients become too small during backpropagation, effectively preventing weight updates in the earlier layers.",
+        "The activation functions used in the network are too complex and cannot be computed efficiently.",
+        "The network suffers from an excessive number of layers, leading to too much redundancy in the model."
+      ],
+      "correctAnswer": "The activation functions used in the network are too complex and cannot be computed efficiently.",
+      "explanation": "The vanishing gradient problem occurs when gradients become very small during backpropagation, especially in deep or recurrent networks, making it difficult for the model to update the weights in earlier layers. This can slow down or even stop the learning process."
+    },
+    {
+      "question": "4. In a Named Entity Recognition (NER) task using the BIO tagging scheme, an input sentence has 10 tokens, and the model outputs probabilities for 5 entity classes: B- PER, I-PER, B- LOC , I-LOC , and O . If the softmax function is applied over the outputs for each token, how many probability values will the model compute for the entire sentence?",
+      "options": [
+        "5",
+        "10",
+        "50",
+        "100"
+      ],
+      "correctAnswer": "50",
+      "explanation": "For each of the 10 tokens, the model computes a probability distribution across the 5 classes. Hence, 10×5=50 probability values are computed."
+    },
+    {
+      "question": "5. In an encoder -decoder architecture for machine translation, the encoder processes an input sequence of length T with a hidden state size of H, and the decoder generates an output sequence of length T′ with a hidden state size of H′. If the encoder’s weight matrix has dimensions H×H for the hidden state transition and V in×H for the input -to-hidden transformation (where V in is the vocabulary size), and the decoder's weight matrix has dimensions H′×H′ for the hidden state transition and V out×H′ for the output -to-hidden transformation (where V out is the target vocabulary size), how many parameters are there in the encoder and decoder combined, excluding biases?",
+      "options": [
+        "V in×H+H×H+V out×H′+H′×H′",
+        "V in×H+H×H′+V out×H+H′×H",
+        "V in×H+H×H+V out×H′+H′×H′",
+        "V in×H+H×H′+V out×H+H′×H"
+      ],
+      "correctAnswer": "V in×H+H×H+V out×H′+H′×H′",
+      "explanation": "● The encoder's weight matrix for input -to-hidden has V in×H parameters, and for hidden state transitions, there are H×H parameters. ● The decoder's weight matrix for output -to-hidden has V out×H′ parameters, and for hidden state transitions, there are H′×H′ parameters. Thus, the total number of parameters is: Vin×H+H×H+V out×H′+H′×H′"
+    },
+    {
+      "question": "6. In an LSTM network, the number of parameters for the input gate is determined by the size of the input vector V and the size of the hidden state H. Assuming the LSTM has 1 input gate, 1 forget gate, 1 output gate, and 1 cell state, how many parameters are there for the input gate, excluding biases?",
+      "options": [
+        "V×H+H×H",
+        "(V+H)×H",
+        "V×H+H×1",
+        "(V+H)×1"
+      ],
+      "correctAnswer": "(V+H)×H",
+      "explanation": "For the input gate in an LSTM, the parameters consist of: Weights from the input vector V to the hidden state H, which are represented by a matrix of size V×H Weights from the previous hidden state H to the current hidden state H, represented by a matrix of size H×H Thus, the total number of parameters for the input gate is V×H + H×H = (V + H) ×H"
+    },
+    {
+      "question": "7. Suppose a language model has a vocabulary of size 5, and during decoding, the model produces the following logits for the five tokens: z = [4, 0, -2, 3, 1] Compute the probability distribution when using random sampling with temperature T=0.5. Which of the following is the final probability distribution.",
+      "options": [
+        "[0.8787,0.0002,0.000005,0.1189,0.0021]",
+        "[0.0003, 0.8787, 0.000005, 0.1188,0.0022]",
+        "[0.0002, 0.8787, 0.000006, 0.1089, 0.0125]",
+        "[0.7789,0.1001,0.000005,0.1189,0.0023]"
+      ],
+      "correctAnswer": "[0.8787,0.0002,0.000005,0.1189,0.0021]",
+      "explanation": "Scale the logits by 1/T = 1/0.5 = 2 zi′=zi/T=[8,0,−4,6,2] Compute exponential: [e^8, e^0, e^−4, e^6, e^2] e^8≈2980.96, e^0= 1, e^- 4≈0.0183, e^6≈403.43, e^2≈7.389 Compute sum of exponentials: S= 2980.96+1+0.0183+403.43+7.389=3392.80 Softmax probabilities : P0= 2980.96 / 3392.80 = 0.8787, P1 = 1/ 3392.80 =0.0002 P2=0.0183/3392.80 ≈0.000005, P3 = 403.43/3392.80=0.1189, P4 = 7.389/3392.80 = 0.0022"
+    }
+  ]
+},
+{
+  "id": "dlnlp-2025-assignment-5",
+  "title": "DLNLP (2025 PYQ) - Assignment 5",
+  "subject": "DLNLP (2025 PYQ)",
+  "date": "17/10/2026",
+  "questions": [
+    {
+      "question": "1. Self-attention generates contextual embeddings by focusing on relevant tokens in the sequence. Given a sentence: 'The bank raised the interest rates.' How would a multi-head attention mechanism behave if one head specializes in syntactic relations and another in semantics?",
+      "options": [
+        "Both heads would attend to the same tokens in the same way",
+        "The syntactic head would focus on 'the' for 'bank,' while the semantic head focuses on 'interest'",
+        "The syntactic head would focus on 'raised' for 'bank,' while the semantic head focuses on 'interest rates'",
+        "Both heads would ignore the context beyond their respective tokens"
+      ],
+      "correctAnswer": "The syntactic head would focus on 'raised' for 'bank,' while the semantic head focuses on 'interest rates'",
+      "explanation": "The syntactic head would focus on 'raised' for 'bank,' while the semantic head focuses on 'interest rates'"
+    },
+    {
+      "question": "2. In an encoder-decoder Transformer architecture, what will happen if the positional encoding is removed from both the encoder and decoder? How would this affect tasks like machine translation?",
+      "options": [
+        "The model would completely fail to generate coherent sentences",
+        "The model would still generate sentences but ignore word order and context",
+        "The model would work normally but slower due to lack of efficiency",
+        "The model would generate longer sequences without performance degradation"
+      ],
+      "correctAnswer": "The model would still generate sentences but ignore word order and context",
+      "explanation": "The model would still generate sentences but ignore word order and context"
+    },
+    {
+      "question": "3. Imagine you are training a Transformer model on a dataset of long sequences (e.g., full books). Which attention mechanism would you use to minimize memory usage while maintaining context across long ranges? Why?",
+      "options": [
+        "Multi-head attention – to attend to multiple aspects of context",
+        "Local attention – to focus on relevant windows within the sequence",
+        "Global attention – to maintain a global view of the input",
+        "Dilated sliding window attention – to balance local and long-range dependencies efficiently"
+      ],
+      "correctAnswer": "Dilated sliding window attention – to balance local and long-range dependencies efficiently",
+      "explanation": "Dilated sliding window attention – to balance local and long-range dependencies efficiently"
+    },
+    {
+      "question": "4. Consider a Transformer model for real-time speech recognition. Which optimization strategy would you prioritize to reduce latency during inference, and why?",
+      "options": [
+        "Use multi-query attention to reduce redundant computation for each token",
+        "Increase the number of attention heads to improve parallelism",
+        "Remove positional encoding to make the model faster",
+        "Use standard self-attention without modifications"
+      ],
+      "correctAnswer": "Use multi-query attention to reduce redundant computation for each token",
+      "explanation": "Use multi-query attention to reduce redundant computation for each token"
+    },
+    {
+      "question": "5. You are designing a Transformer for image classification using Vision Transformers (ViTs). Which positional encoding technique would be most appropriate for learning fine-grained spatial relationships, and why?",
+      "options": [
+        "Sinusoidal positional encodings for their simplicity and robustness",
+        "Learned positional embeddings to adapt to specific image structures",
+        "Relative positional bias for improved accuracy in larger images",
+        "Rotary positional embeddings to reduce computational complexity"
+      ],
+      "correctAnswer": "Learned positional embeddings to adapt to specific image structures",
+      "explanation": "Learned positional embeddings to adapt to specific image structures"
+    },
+    {
+      "question": "6. Suppose you have the following query vector q = [1, 2], key vector k = [2, 1], and value vector v = [3, 4]. The scale factor for attention is √d_k where d_k = 2. Calculate the attention score and the final output of the self-attention mechanism.",
+      "options": [
+        "Attention Score: 1.5, Output: [3, 4]",
+        "Attention Score: 2.12, Output: [3.5, 4.5]",
+        "Attention Score: 0.82, Output: [2.46, 3.28]",
+        "Attention Score: 0.91, Output: [3, 4]"
+      ],
+      "correctAnswer": "Attention Score: 0.82, Output: [2.46, 3.28]",
+      "explanation": "Attention Score: 0.82, Output: [2.46, 3.28]"
+    },
+    {
+      "question": "7. You are designing a multi-head attention layer with a model dimension d = 512, 8 attention heads, and key, query, and value dimensions of d_k = d_q = d_v = 64 for each head. What will be the combined output dimension after the multi-head attention is projected back?",
+      "options": [
+        "64",
+        "512",
+        "256",
+        "1024"
+      ],
+      "correctAnswer": "512",
+      "explanation": "512"
+    },
+    {
+      "question": "8. Given a sinusoidal positional encoding function for token position p = 5 and dimension i = 2, the encoding is computed as PE(p, i) = sin(p / 10000^(2i/d)). Assume d = 512. What is the value of PE(5, 2)?",
+      "options": [
+        "0.0005",
+        "0.0314",
+        "0.0981",
+        "0.0157"
+      ],
+      "correctAnswer": "0.0314",
+      "explanation": "0.0314"
+    },
+    {
+      "question": "9. Suppose you train a Transformer decoder with the input sentence: 'I love natural language processing.' You are at the third token ('natural') with the following embedding vectors: Query (q): [0.5, 1.0] Key (k1, k2, k3): [0.2, 0.8], [0.7, 0.1], [0.5, 0.5] Value (v1, v2, v3): [1, 0], [0, 1], [1, 1] Calculate the weighted sum of values using the scaled dot-product attention mechanism.",
+      "options": [
+        "[0.75, 0.25]",
+        "[0.6, 0.8]",
+        "[0.9, 0.9]",
+        "[1.2, 1.0]"
+      ],
+      "correctAnswer": "[0.6, 0.8]",
+      "explanation": "[0.6, 0.8]"
+    },
+    {
+      "question": "10. You are tasked with improving a Transformer’s efficiency for processing sequences of length N = 10,000. You apply Linformer, which approximates the attention matrix with a low-rank representation of size k = 256. What is the new complexity for attention computation compared to the original O(N^2) complexity?",
+      "options": [
+        "O(N · k)",
+        "O(k^2)",
+        "O(N^3)",
+        "O(N · log N)"
+      ],
+      "correctAnswer": "O(N · k)",
+      "explanation": "O(N · k)"
+    }
+  ]
+},
+{
+  "id": "dlnlp-2025-assignment-6",
+  "title": "DLNLP (2025 PYQ) - Assignment 6",
+  "subject": "DLNLP (2025 PYQ)",
+  "date": "17/10/2026",
+  "questions": [
+    {
+      "question": "1. In a span-based fine-tuning appr oach, given an input sequence x consisting of T tokens, what is the total number of possible spans that can be consider ed?",
+      "options": [
+        "T",
+        "T^2",
+        "T(T+1)2",
+        "2^T-1"
+      ],
+      "correctAnswer": "T(T+1)2",
+      "explanation": "All possible contiguous spans in the sequence, considering spans of length 1 up to T is = 1+2+3+……..T = T(T+1)/2"
+    },
+    {
+      "question": "2. Which of the following best describes transfer learning in deep learning models?",
+      "options": [
+        "Training a model from scratch on a large dataset.",
+        "Using a pre-trained model and fine-tuning it for a specific task.",
+        "Using an ensemble of multiple models for improved performance.",
+        "Training a model only on a small dataset without any pre-training."
+      ],
+      "correctAnswer": "Using a pre-trained model and fine-tuning it for a specific task.",
+      "explanation": ". Using a pre-trained model and fine-tuning it for a specific task."
+    },
+    {
+      "question": "3. Which of the following is true for ELMo?",
+      "options": [
+        "ELMo generates word representations that are independent of context, similar to traditional word embeddings like GloV e.",
+        "The representations from all layers in ELMo contribute equally to both syntactic and semantic understanding, making layer -wise differentiation unnecessary .",
+        "Lower -layer representations in ELMo primarily capture syntactic and lower -level semantic information, while higher -layer representations encode more abstract meaning and contextual nuances.",
+        "ELMo strictly requires fine-tuning all its layers during downstream tasks, and frozen biLM weights cannot be used effectively ."
+      ],
+      "correctAnswer": "Lower -layer representations in ELMo primarily capture syntactic and lower -level semantic information, while higher -layer representations encode more abstract meaning and contextual nuances.",
+      "explanation": ") Lower -layer representations capture syntax and lower -level semantics, while higher -layer representations capture higher -level semantics like meaning and context."
+    },
+    {
+      "question": "4. Why does scaling up a transformer model often lead to better performance across various NLP tasks?",
+      "options": [
+        "Larger models inherently generalize better to unseen data",
+        "Scaling up increases memorization, reducing overfitting",
+        "Transformers achieve better loss conver gence with increased size",
+        "Larger models can encode more complex data representations"
+      ],
+      "correctAnswer": "Larger models can encode more complex data representations",
+      "explanation": ") Larger models can encode more complex data representations"
+    },
+    {
+      "question": "5. How does parameter -efficient fine-tuning (PEFT) appr oaches like adapters differ from full fine-tuning?",
+      "options": [
+        "PEFT methods modify only a small subset of the model parameters",
+        "They increase the training time significantly",
+        "They require retraining the entire model from scratch",
+        "PEFT methods cannot be applied to transformer models"
+      ],
+      "correctAnswer": "PEFT methods modify only a small subset of the model parameters",
+      "explanation": ") PEFT methods modify only a small subset of the model parameters"
+    },
+    {
+      "question": "6. What is the fundamental advantage of sparse expert models like the Switch Transformer?",
+      "options": [
+        "They allow selective activation of model components, reducing computational cost",
+        "They achieve superior results without requiring additional pretraining",
+        "They eliminate the need for data augmentation techniques",
+        "They improve tokenization efficiency for low-resource languages"
+      ],
+      "correctAnswer": "They allow selective activation of model components, reducing computational cost",
+      "explanation": ") They allow selective activation of model components, reducing computational cost"
+    },
+    {
+      "question": "7. How can pretraining objectives like ELECTRA's replaced token detection impr ove efficiency over masked language modeling?",
+      "options": [
+        "By reducing the computational complexity of training",
+        "By training the model to distinguish between real and replaced tokens rather than predicting masked ones",
+        "By eliminating the need for extensive labeled datasets",
+        "By increasing the number of parameters in the model"
+      ],
+      "correctAnswer": "By training the model to distinguish between real and replaced tokens rather than predicting masked ones",
+      "explanation": ") By training the model to distinguish between real and replaced tokens rather than predicting masked ones"
+    },
+    {
+      "question": "8. In a multi-head attention mechanism with 8 heads and hidden dimension of 512, if we use a batch size of 16 with a sequence length of 64, what is the total number of operations requir ed for the attention computation across all heads (excluding feed-forward layers) ?",
+      "options": [
+        "2,097,152",
+        "16,777,216",
+        "33,554,432",
+        "67,108,864"
+      ],
+      "correctAnswer": "33,554,432",
+      "explanation": "### Explanation: For a single head in self-attention with: - Batch size (B) = 16 - Sequence length (L) = 64 - Head dimension (d) = 512/8 = 64 (since total dimension 512 is split among 8 heads) The attention computation involves: 1. Query-Key matrix multiplication: (B×L×d) × (B×L×d)ᵀ = B×L×L operations per head 2. Softmax over the attention scores: B×L×L operations per head 3. Attention-V alue multiplication: (B×L×L) × (B×L×d) = B×L×L×d operations per head For exactly 8 heads: - Query-Key multiplication: 8 × 16 × 64 × 64 = 524,288 operations - Softmax: 8 × 16 × 64 × 64 = 524,288 operations - Attention-V alue multiplication: 8 × 16 × 64 × 64 × 64 = 33,554,432 operations Total operations: 524,288 + 524,288 + 33,554,432 = 34,603,008 operations However , if we're focusing purely on the core attention dot product operations (which is common when discussing attention complexity), the answer would be: - 8 heads × 16 batch × 64 sequence × 64 sequence × 64 dimensions = 33,554,432 operations Answer: C) 33,554,432 The dominant cost in attention mechanisms is the attention-value multiplication which scales with O(B×H×L²×d), where H is the number of heads. This is why the attention mechanism becomes computationally expensive for long sequences."
+    }
+  ]
+},
+{
+  "id": "dlnlp-2025-assignment-7",
+  "title": "DLNLP (2025 PYQ) - Assignment 7",
+  "subject": "DLNLP (2025 PYQ)",
+  "date": "17/10/2026",
+  "questions": [
+    {
+      "question": "1. Many open- domain QA models follow a retriever -reader framework. However, one major drawback of this approach is:",
+      "options": [
+        "The retriever often fails to retrieve factually correct documents",
+        "The reader module lacks the ability to generate novel answers beyond retrieved passages",
+        "The retriever is computationally expensive and requires labeled supervision for every question",
+        "The reader struggles to perform named entity recognition (NER) on retrieved passages"
+      ],
+      "correctAnswer": "The reader module lacks the ability to generate novel answers beyond retrieved passages",
+      "explanation": "Option (B) is the correct answer according to NPTEL DLNLP Assignment 7."
+    },
+    {
+      "question": "2. Dense retrievers like ColBERT differ from traditional TF- IDF/BM25 retrieval models because they:",
+      "options": [
+        "Compute sparse representations instead of dense vector embeddings",
+        "Rely on explicit term frequency and document length normalization",
+        "Use contextualized token embeddings to compare query and document representations at a finer granularity",
+        "Discard negative sampling strategies in the retrieval phase"
+      ],
+      "correctAnswer": "Use contextualized token embeddings to compare query and document representations at a finer granularity",
+      "explanation": "Option (C) is the correct answer according to NPTEL DLNLP Assignment 7."
+    },
+    {
+      "question": "3. If a multilingual QA system is fine- tuned on an English corpus but evaluated on Hindi queries, which fundamental challenge arises?",
+      "options": [
+        "The inability to align embedding spaces across languages",
+        "The loss of syntactic information due to translation errors",
+        "The increased computational complexity in the retriever module",
+        "The failure of word segmentation methods in low -resource languages"
+      ],
+      "correctAnswer": "The inability to align embedding spaces across languages",
+      "explanation": "Option (A) is the correct answer according to NPTEL DLNLP Assignment 7."
+    },
+    {
+      "question": "4. In dialogue state tracking (DST), a primary reason for switching from rule- based slot filling to machine learning- based approaches is:",
+      "options": [
+        "ML -based methods can generate entirely novel intents beyond predefined slots",
+        "Rule -based methods fail to handle multimodal conversations",
+        "ML -based methods allow tracking of implicit user preferences and dynamically adjust to ambiguous user inputs",
+        "Rule -based approaches are computationally expensive compared to transformer -based DST model s"
+      ],
+      "correctAnswer": "ML -based methods allow tracking of implicit user preferences and dynamically adjust to ambiguous user inputs",
+      "explanation": "Option (C) is the correct answer according to NPTEL DLNLP Assignment 7."
+    },
+    {
+      "question": "5. Consider an open- domain chatbot trained on large- scale internet data. Which of the following factors poses the most significant challenge to its deployment in high- stakes applications (e.g., healthcare, finance)?",
+      "options": [
+        "The model’s inability to generate grammatically correct responses",
+        "The limited size of the training corpus relative to proprietary datasets",
+        "The lack of grounding mechanisms to verify factual accuracy and prevent hallucination",
+        "The failure to handle multiple- turn dialogues effectively"
+      ],
+      "correctAnswer": "The lack of grounding mechanisms to verify factual accuracy and prevent hallucination",
+      "explanation": "Option (C) is the correct answer according to NPTEL DLNLP Assignment 7."
+    },
+    {
+      "question": "6. A major limitation of retrieval -based chatbots compared to generative models is that:",
+      "options": [
+        "They require massive amounts of labeled training data to function",
+        "They struggle to provide coherent multi -turn interactions",
+        "They cannot generate responses beyond the scope of their training corpus",
+        "They fail to incorporate user -specific personalization"
+      ],
+      "correctAnswer": "They cannot generate responses beyond the scope of their training corpus",
+      "explanation": "Option (C) is the correct answer according to NPTEL DLNLP Assignment 7."
+    },
+    {
+      "question": "7. Why do extractive summarization models often fail to perform well in abstractive summarization tasks?",
+      "options": [
+        "Extractive models do not learn semantic relationships between words and phrases",
+        "Extractive models depend on lexical similari ty rather than understanding deeper discourse structures",
+        "Extractive models cannot handle cross -document coreference resolution",
+        "Extractive models lack the computational efficiency required for abstractive summarization"
+      ],
+      "correctAnswer": "Extractive models depend on lexical similari ty rather than understanding deeper discourse structures",
+      "explanation": "Option (B) is the correct answer according to NPTEL DLNLP Assignment 7."
+    },
+    {
+      "question": "8. In long- document summarization, why might an extract -then- paraphrase approach outperform direct abstractive methods?",
+      "options": [
+        "It preserves factual consistency by constraining s ummaries to extracted content",
+        "It eliminates the need for transformer -based architectures",
+        "It does not require labeled training data for summarization",
+        "It allows for end- to-end training with a lower computational cost"
+      ],
+      "correctAnswer": "It preserves factual consistency by constraining s ummaries to extracted content",
+      "explanation": "Option (A) is the correct answer according to NPTEL DLNLP Assignment 7."
+    },
+    {
+      "question": "9. While evaluating a summarization model, why is ROUGE -2 sometimes preferred over BLEU?",
+      "options": [
+        "ROUGE -2 correlates better with human judgment for extractive summarization tasks",
+        "BLEU cannot handle long documents, whereas ROUGE -2 is designed for multi -document summarization",
+        "BLEU only considers single- token matches, while ROUGE -2 evaluates sentence structure",
+        "ROUGE -2 incorporates contextual embeddings, making it more robust for summarization"
+      ],
+      "correctAnswer": "ROUGE -2 correlates better with human judgment for extractive summarization tasks",
+      "explanation": "Option (A) is the correct answer according to NPTEL DLNLP Assignment 7."
+    },
+    {
+      "question": "10. Both dialogue systems and summarization models require sequence generation. Which of the following represents a key distinction between their architectures?",
+      "options": [
+        "Summarization models primarily use extractive methods, whereas dialogue systems rely on seq2seq architectures",
+        "Dialogue models generate text interactively based on conversational history, while summarization models optimize for information condensation in a single pass",
+        "Summarization models rely on intent classification, while dialogue systems do not",
+        "Dialogue models encode sentence embeddings, whereas summarization models use word embeddings"
+      ],
+      "correctAnswer": "Dialogue models generate text interactively based on conversational history, while summarization models optimize for information condensation in a single pass",
+      "explanation": "Option (B) is the correct answer according to NPTEL DLNLP Assignment 7."
+    }
+  ]
+},
+{
+  "id": "dlnlp-2025-assignment-8",
+  "title": "DLNLP (2025 PYQ) - Assignment 8",
+  "subject": "DLNLP (2025 PYQ)",
+  "date": "17/10/2026",
+  "questions": [
+    {
+      "question": "1. What is the main advantage of fine -tuning a pretrained model instead of training a model from scratch?",
+      "options": [
+        "Fine -tuning requires a large amount of labeled data to work effectively.",
+        "Fine -tuning helps adapt a general model to a specific task while leveraging prior knowledge, reducing data and compute requirements.",
+        "Fine -tuning always leads to overfitting and should be avoided.",
+        "Fine -tuning removes the need for any labeled data."
+      ],
+      "correctAnswer": "Fine -tuning helps adapt a general model to a specific task while leveraging prior knowledge, reducing data and compute requirements.",
+      "explanation": "Option (B) is correct based on NPTEL DLNLP Assignment 8."
+    },
+    {
+      "question": "2. According to the Scaling Laws observed in Super -NaturalInstructions, how does increasing the number of training tasks affect model performance?",
+      "options": [
+        "Increasing tasks improves generalization to unseen tasks, demonstrating positive transfer.",
+        "More tasks always lead to overfitting and degrade generalization performance. C) The number of tasks does not impact model performance significantly.",
+        "Reducing the number of tasks helps models specialize and generalize better."
+      ],
+      "correctAnswer": "Increasing tasks improves generalization to unseen tasks, demonstrating positive transfer.",
+      "explanation": "Option (A) is correct based on NPTEL DLNLP Assignment 8."
+    },
+    {
+      "question": "3. What distinguishes FLAN (Fine -tuned LAnguage Net) models from standard pre -trained language models?",
+      "options": [
+        "FLAN models are instruction -tuned, meaning they are explicitly fine -tuned on a diverse range of tasks formatted as instructions, improving zero- shot and few -shot learning.",
+        "FLAN models do not require pretraining and are trained directly on downstream tasks.",
+        "FLAN models only work in a zero- shot setting and cannot be fine -tuned further.",
+        "FLAN models are based on a completely different architecture than transformer -based models."
+      ],
+      "correctAnswer": "FLAN models are instruction -tuned, meaning they are explicitly fine -tuned on a diverse range of tasks formatted as instructions, improving zero- shot and few -shot learning.",
+      "explanation": "Option (A) is correct based on NPTEL DLNLP Assignment 8."
+    },
+    {
+      "question": "4. Which of the following is True about RLHF?",
+      "options": [
+        "RLHF involves state transitions where the agent’s actions influence future states",
+        "RLHF does not have state transitions; actions (completions) are scored by a reward model",
+        "RLHF attribution of re ward is not done for an entire sequence of actions",
+        "RLHF does not use a policy function to determine actions, unlike standard RL."
+      ],
+      "correctAnswer": "RLHF does not have state transitions; actions (completions) are scored by a reward model",
+      "explanation": "Option (B) is correct based on NPTEL DLNLP Assignment 8."
+    },
+    {
+      "question": "5. Which of the following is False?",
+      "options": [
+        "Online reinforcement learning allows the agent to continuously adapt to changes in the environment by learning from real -time feedback.",
+        "DPO directly optimizes for preference- based feedback, rather than relying on separately developed reward models.",
+        "DPO us es computationally expensive sampling process than PPO",
+        "DPO simplifies the training framework by eliminating the need to explicitly model rewards."
+      ],
+      "correctAnswer": "DPO us es computationally expensive sampling process than PPO",
+      "explanation": "Option (C) is correct based on NPTEL DLNLP Assignment 8."
+    },
+    {
+      "question": "6. In which scenario would DPO be most beneficial?",
+      "options": [
+        "When a clear objective function is readily available for model optimization. B. When aligning a language model with human preferences in a way that avoids explicit reward modeling and complex reinforceme nt learning setups.",
+        "For tasks where rapid experimentation and fine -tuning are not necessary.",
+        "When dealing with large datasets of labeled human feedback."
+      ],
+      "correctAnswer": "For tasks where rapid experimentation and fine -tuning are not necessary.",
+      "explanation": "Option (B) is correct based on NPTEL DLNLP Assignment 8."
+    },
+    {
+      "question": "7. In RLHF the reward function R(s) is often regularized using the KL divergence between the learned policy π_ϕ and the reference policy π_0 to prevent excessive deviation. The modified reward is given by:\n\n$$R'(s) = R(s) - \\beta D_{\\text{KL}}(\\pi_\\phi(\\cdot \\mid s) \\parallel \\pi_0(\\cdot \\mid s))$$\n\nThe KL divergence is defined as:\n\n$$D_{\\text{KL}}(\\pi_\\phi \\parallel \\pi_0) = \\sum_a \\pi_\\phi(a \\mid s) \\log \\frac{\\pi_\\phi(a \\mid s)}{\\pi_0(a \\mid s)}$$\n\nConsider a state s where the action probabilities under $\\pi_\\phi$ and reference policy $\\pi_0$ are:\n• $\\pi_\\phi(a_1 \\mid s) = 0.6, \\quad \\pi_\\phi(a_2 \\mid s) = 0.4$\n• $\\pi_0(a_1 \\mid s) = 0.5, \\quad \\pi_0(a_2 \\mid s) = 0.5$\n\nCompute the KL divergence and select the correct answer:",
+      "options": [
+        "0.0704",
+        "0.0781",
+        "0.0689",
+        "0.0652"
+      ],
+      "correctAnswer": "0.0704",
+      "explanation": "$D_{\\text{KL}} = (0.6 \\times \\log(0.6/0.5)) + (0.4 \\times \\log(0.4/0.5)) = (0.6 \\times 0.182) + (0.4 \\times (-0.097)) = 0.1092 - 0.0388 = 0.0704$."
+    },
+    {
+      "question": "8. In RLHF setup, to train a reward function R(x), the optimization objective is to maximize the difference in rewards between preferred and dispreferred responses. Suppose we have a dataset of preference pairs $(x, y^+)$ and $(x, y^-)$, where $y^+$ is the preferred response and $y^-$ is the dispreferred response.\n\nThe loss function for the reward model is given as:\n\n$$\\mathcal{L} = -\\mathbb{E}_{(x, y^+, y^-)} [\\log \\sigma(R(y^+) - R(y^-))]$$\n\nIf the rewards for a given preference pair are $R(y^+) = 2.5$, and $R(y^-) = 1.0$, what is the value of the loss term for this pair for the reward model?",
+      "options": [
+        "log (1 + e^-1.5)",
+        "log (1 + e^1.5)",
+        "-log (1 + e^-1.5)",
+        "-log (1 + e^1.5)"
+      ],
+      "correctAnswer": "log (1 + e^-1.5)",
+      "explanation": "Step 1: Reward difference $R(y^+) - R(y^-) = 2.5 - 1.0 = 1.5$.\nStep 2: $\\sigma(1.5) = \\frac{1}{1 + e^{-1.5}}$, so $\\log \\sigma(1.5) = -\\log(1 + e^{-1.5})$.\nStep 3: Loss $\\mathcal{L} = -(-\\log(1 + e^{-1.5})) = \\log(1 + e^{-1.5})$."
+    }
+  ]
+},
+{
+  "id": "dlnlp-2025-assignment-9",
+  "title": "DLNLP (2025 PYQ) - Assignment 9",
+  "subject": "DLNLP (2025 PYQ)",
+  "date": "17/10/2026",
+  "questions": [
+    {
+      "question": "1. Which of the following is False?",
+      "options": [
+        "In Few -shot prompt paradigm, for the same prompt the order in which samples are provided can not make the difference in result",
+        "In transformer circuit, different QK Circuit matrix tells us which tokens information is moved to and from in the residual stream",
+        "Induction head attends back to previous tokens that were followed by the current and/or recent tokens.",
+        "Transformer language models undergo a “phase change” early in training, during which induction heads form and simultaneously in-context learning improves dramatically."
+      ],
+      "correctAnswer": "In Few -shot prompt paradigm, for the same prompt the order in which samples are provided can not make the difference in result",
+      "explanation": "Option (A) is the correct answer according to NPTEL DLNLP Assignment 9."
+    },
+    {
+      "question": "2. Which of the following best describes the difference between zero -shot and few -shot prompting in large language models?",
+      "options": [
+        "Zero -shot prompting provides multiple examples in the prompt, whereas few -shot prompting provides no examples.",
+        "Zero -shot prompting requires a fine -tuned model, whereas few -shot prompting does not.",
+        "Zero -shot prompting relies on the model’s pre -trained knowledge without examples, while few-shot prompting includes a few examples to guide the model.",
+        "Few -shot prompting is only applicable to classification tasks, whereas zero -shot prompting works for all NLP tasks."
+      ],
+      "correctAnswer": "Zero -shot prompting relies on the model’s pre -trained knowledge without examples, while few-shot prompting includes a few examples to guide the model.",
+      "explanation": "Option (C) is the correct answer according to NPTEL DLNLP Assignment 9."
+    },
+    {
+      "question": "3. A student is solving the following mathematical problem using Chain of Thought (CoT) prompting: Problem: If a bookstore sells 3 books for $15, how much would 7 books cost at the same rate? Using CoT prompting, the model breaks down the problem step by step: The cost of one book is calculated as: 15÷3=5 The cost of 7 books is then determined as: 5×7=35 The final answer is $35. What is the main advantage of using Chain of Thought (CoT) prompting in solving mathematical problems like the one above?",
+      "options": [
+        "It allows the model to generate more creative answers instead of strictly numerical ones.",
+        "It enables the model to follow a step -by-step reasoning process, reducing errors in multi -step calculations.",
+        "It makes the model answer faster by skipping intermediate steps.",
+        "It ensures that the model always provides the correct answer, regardless of input complexity."
+      ],
+      "correctAnswer": "It enables the model to follow a step -by-step reasoning process, reducing errors in multi -step calculations.",
+      "explanation": "Option (B) is the correct answer according to NPTEL DLNLP Assignment 9."
+    },
+    {
+      "question": "4. What is the primary advantage of Tree of Thought (ToT) prompting compared to Chain of Thought (CoT) prompting in problem -solving with Large Language Models?",
+      "options": [
+        "ToT allows the model to explore multiple reasoning paths and backtrack if needed, improvi ng complex decision-making.",
+        "ToT speeds up response time by reducing the number of tokens generated.",
+        "ToT eliminates the need for intermediate reasoning steps, leading to more concise answers.",
+        "ToT relies solely on fine-tuning rather than prompting techniques."
+      ],
+      "correctAnswer": "ToT allows the model to explore multiple reasoning paths and backtrack if needed, improvi ng complex decision-making.",
+      "explanation": "Option (A) is the correct answer according to NPTEL DLNLP Assignment 9."
+    },
+    {
+      "question": "5. Toolformer is a variant of large language models that enhances reasoning by:",
+      "options": [
+        "Training on a much larger dataset without any external tools.",
+        "Dynamically calling external tools like calculators, search engines, or APIs to improve accuracy.",
+        "Using only Chain of Thought (CoT) prompting without external assistance.",
+        "Eliminating the need for tool usage by relying solely on internal knowledge."
+      ],
+      "correctAnswer": "Dynamically calling external tools like calculators, search engines, or APIs to improve accuracy.",
+      "explanation": "Option (B) is the correct answer according to NPTEL DLNLP Assignment 9."
+    },
+    {
+      "question": "6. A student is using a Program of Thought (PoT) prompting to solve the following mathematical problem: Find the sum of all even numbers from 1 to 20. Instead of solving it directly, the model generates and executes a Python program to compute the result: total = 0 for num in range(1, 21): if num % 2 == 0: total += num print(total) What is the key advantage of using Program of Thought (PoT) prompting in mathematical problem -solving?",
+      "options": [
+        "It enables models to follow a strict, predefined step-by- step reasoning structure without requiring execution.",
+        "It allows models to generate and execute code, improving accuracy for complex numerical problems.",
+        "It eliminates the need for logical rea soning by relying purely on memorized answers.",
+        "It reduces computation time by avoiding loops and conditionals in the generated solution."
+      ],
+      "correctAnswer": "It allows models to generate and execute code, improving accuracy for complex numerical problems.",
+      "explanation": "Option (B) is the correct answer according to NPTEL DLNLP Assignment 9."
+    },
+    {
+      "question": "7. Which if the following is False?",
+      "options": [
+        "Prompt-Tuning optimize the embeddings of a prompt, instead of words.",
+        "In AUTOPROMPT, for automatic token label selection, a logistic classifier is trained to predict the class label using the contextualized embedding of the [MASK] token as input.",
+        "Tool-augmented Language Model (TALM) first generates a tool input conditioned on the task input text and invokes a tool’s API by generating a delimiter",
+        "In-context learning do well for new tasks by updating gradient of the model parameters"
+      ],
+      "correctAnswer": "In-context learning do well for new tasks by updating gradient of the model parameters",
+      "explanation": "Option (D) is the correct answer according to NPTEL DLNLP Assignment 9."
+    },
+    {
+      "question": "8. A large language model is given the following in -context examples in the format of (input, output) pair as follows: (1,3) , (2,9), (3,19), (4,33) It is then asked to predict the output for Input = 5. Assuming the model correctly identifies the underlying pattern, what should be the predicted output?",
+      "options": [
+        "45",
+        "55",
+        "65",
+        "63"
+      ],
+      "correctAnswer": "55",
+      "explanation": "Option (B) is the correct answer according to NPTEL DLNLP Assignment 9."
+    },
+    {
+      "question": "9. Suppose you are using AutoPrompt with BERT for text classification with 6 classes. What is the number of learnable parameters to decide the label set for all the classes if BERT uses 1024 as the model dimension and the number of label words per class is 3?",
+      "options": [
+        "15360",
+        "18432",
+        "16406",
+        "19832"
+      ],
+      "correctAnswer": "18432",
+      "explanation": "Given: BERT's hidden size = 1024, Number of classes = 6; Number of label words per class = 3 Step 1: Compute Total Label Words Each class has 3 label words, so the total number of label words across all classes is: 6×3=18 Step 2: Compute Learnable Parameters Each label word has a 1024 -dimensional embedding, so the total number of learnable parameters is: 18×1024=18,432 The number of learnable parameters to decide the label set is 18,432."
+    }
+  ]
+},
+{
+  "id": "dlnlp-2025-assignment-10",
+  "title": "DLNLP (2025 PYQ) - Assignment 10",
+  "subject": "DLNLP (2025 PYQ)",
+  "date": "17/10/2026",
+  "questions": [
+    {
+      "question": "1. Which of the following is False?",
+      "options": [
+        "Parameter -efficient fine tuning update a small subset of model parameters",
+        "Parameter -efficient fine tuning matches performance of full -tuning in many cases",
+        "Prefix -tuning adds a prefix of parameters, and freezes all pretrained parameters.",
+        "In parameter -effici ent fine tuning, for L layers in the decoder, there will be L adapters"
+      ],
+      "correctAnswer": "In parameter -effici ent fine tuning, for L layers in the decoder, there will be L adapters",
+      "explanation": "Option (D) is the correct answer according to NPTEL DLNLP Assignment 10."
+    },
+    {
+      "question": "2. Suppose you want to use LoRA to train the GPT -3 model, which has a model dimensionality of 12288, 48 layers and 48 attention heads, for the tasks of text simplification. You are using LoRA only for the query and key matrices, each with a rank of 16. How many parameters will need to be trained?",
+      "options": [
+        "393216",
+        "37748736",
+        "6291456",
+        "18874368"
+      ],
+      "correctAnswer": "37748736",
+      "explanation": "For each layer's query projection: ● Matrix A: 12288 × 16 = 196,608 parameters ● Matrix B: 16 × 12288 = 196,608 parameters ● Total per query projection: 393,216 parameters For each layer's key projection: ● Matrix A: 12288 × 16 = 196,608 parameters ● Matrix B: 16 × 12288 = 196,608 parameters ● Total per key projection: 393,216 parameters Total parameters per layer: 393,216 + 393,216 = 786,432 Total trainable parameters across all 48 layers: 48 × 786,432 = 37,748,736"
+    },
+    {
+      "question": "3. Suppose you want to use Adapters to t rain the GPT -3 model, which has a model dimensionality of 12288, 48 layers and 48 attention heads, for the tasks of text simplification. You are using 4 adapters per layer, each with a down -projection of 4. How many parameters will need to be trained appro ximately?",
+      "options": [
+        "221184",
+        "18874368",
+        "196608",
+        "21234432"
+      ],
+      "correctAnswer": "21234432",
+      "explanation": "For each adapter: ● Down -projection parameters: d × r = 12288 × 4 = 49,152 ● Down -projection bias: r = 4 ● Up-projection parameters: r × d = 4 × 12288 = 49,152 ● Up-projection bias: d = 12288 Total parameters per adapter: 49,152 + 4 + 49,152 + 12288 = 110,596 Since we have 4 adapters per layer and 48 layers: Total trainable parameters = 110,596 × 4 × 48 = 21,234,432"
+    },
+    {
+      "question": "4. In LoRA (Low- Rank Adaptation), what is the key mathematical insight that enables parameter efficiency?",
+      "options": [
+        "Using activation functions with higher gradients",
+        "Approximating weight updates through low-rank decomposition",
+        "Replacing attention mechanisms with simpler alternatives",
+        "Pruning redundant neurons during training"
+      ],
+      "correctAnswer": "Approximating weight updates through low-rank decomposition",
+      "explanation": "Option (B) is the correct answer according to NPTEL DLNLP Assignment 10."
+    },
+    {
+      "question": "5. The NormalFloat (NF4) format in QLoRA is specifically designed to:",
+      "options": [
+        "Handle normally distributed weights more efficiently",
+        "Implement normal vector arithmetic operations",
+        "Maintain numerical stability during backpropagation",
+        "Reduce power consumption during training"
+      ],
+      "correctAnswer": "Handle normally distributed weights more efficiently",
+      "explanation": "Option (A) is the correct answer according to NPTEL DLNLP Assignment 10."
+    },
+    {
+      "question": "6. Which of the following correctly describes the memory savings achieved with QLoRA’s Double Quantization technique?",
+      "options": [
+        "Reduces memory usage by storing both model parameters and quantization constants in FP16",
+        "Compresses both the forward and backward pass during training",
+        "Achieves compression by quantizing both model weights and quantization constants",
+        "Uses block -wise quantization for improved convergence"
+      ],
+      "correctAnswer": "Achieves compression by quantizing both model weights and quantization constants",
+      "explanation": "Option (C) is the correct answer according to NPTEL DLNLP Assignment 10."
+    },
+    {
+      "question": "7. Which of the following is False?",
+      "options": [
+        "In case of pruning, a number of parameters are set to zero, the rest are unchanged",
+        "In Quantization, no parameters are changed, upto k bits of precision",
+        "Magnitude pruning is a type of unstructured pruning",
+        "Magnitude pruning selects weights that are very close to zero"
+      ],
+      "correctAnswer": "Magnitude pruning selects weights that are very close to zero",
+      "explanation": "Option (D) is the correct answer according to NPTEL DLNLP Assignment 10."
+    },
+    {
+      "question": "8. Which of the following is False?",
+      "options": [
+        "GPU memory required for a model can vary with precision and optimizer",
+        "Sequence- level distillation maximize the probability of the output generated by the teacher",
+        "DistilBERT use only distillation based loss",
+        "In general, infixing slightly underperforms prefix"
+      ],
+      "correctAnswer": "DistilBERT use only distillation based loss",
+      "explanation": "DistilBERT use both supervised and distillation based loss"
+    }
+  ]
+},
+{
+  "id": "dlnlp-2025-assignment-11",
+  "title": "DLNLP (2025 PYQ) - Assignment 11",
+  "subject": "DLNLP (2025 PYQ)",
+  "date": "17/10/2026",
+  "questions": [
+    {
+      "question": "1. Which of the following is False?",
+      "options": [
+        "According to scaling laws of LLMs, the performance of LLMs mainly determined by model size, dataset size and amount of compute",
+        "Larger models are more sample efficient than smaller models",
+        "Kaplan laws use dynamic learning rate schedule for the training runs",
+        "Performance of LLMs improve most if model size and dataset size are scaled up together"
+      ],
+      "correctAnswer": "Kaplan laws use dynamic learning rate schedule for the training runs",
+      "explanation": "Option (C) is correct based on NPTEL DLNLP Assignment 11."
+    },
+    {
+      "question": "2. Which of the following is /are True?",
+      "options": [
+        "Mixtral has 8x experts in feed -forward layer",
+        "LLaMa2 uses RoPE and SwiGLU",
+        "QWen model is trained on multilingual data",
+        "GEMINI does not support image inputs"
+      ],
+      "correctAnswer": "Mixtral has 8x experts in feed -forward layer / LLaMa2 uses RoPE and SwiGLU / QWen model is trained on multilingual data",
+      "explanation": "Multiple statements are correct: (A, B, C). Specifically: Mixtral has 8x experts in feed -forward layer / LLaMa2 uses RoPE and SwiGLU / QWen model is trained on multilingual data."
+    },
+    {
+      "question": "3. Choose the incorrect statement from the below options?",
+      "options": [
+        "sparse attention reduces the computation through the use of sparse operations,",
+        "Linear and Reformer models scale linearly with the sequence length",
+        "kNN lookup do averaging of tokens at long distances",
+        "In the kNN -augmented attention layer, the same queries ar e used for both the local context, and for the external memory."
+      ],
+      "correctAnswer": "kNN lookup do averaging of tokens at long distances",
+      "explanation": "Option (C) is correct based on NPTEL DLNLP Assignment 11."
+    },
+    {
+      "question": "4. What is the primary goal of Retrieval Augmented Generation (RAG)?",
+      "options": [
+        "To eliminate the need for prompt engineering in generative AI applications.",
+        "To reduce the cost of training and deploying foundation models.",
+        "To replace foundation models with smaller, more efficient models.",
+        "To improve the accuracy and relevance of responses from foundation models."
+      ],
+      "correctAnswer": "To improve the accuracy and relevance of responses from foundation models.",
+      "explanation": "Option (D) is correct based on NPTEL DLNLP Assignment 11."
+    },
+    {
+      "question": "5. Which of the following statements about the Swish activation function is correct where Swish function is defined as f(x)=x ⋅σ(βx)",
+      "options": [
+        "Here β can not be a trainable parameter, it should be always constant",
+        "When β=1.702, Swish closely approximates the GELU activation function.",
+        "As β→∞, Swish behaves like the Sigmoid function.",
+        "As β→∞, Swish behaves like the ReLU function."
+      ],
+      "correctAnswer": "When β=1.702, Swish closely approximates the GELU activation function. / As β→∞, Swish behaves like the ReLU function.",
+      "explanation": "Multiple statements are correct: (B, D). Specifically: When β=1.702, Swish closely approximates the GELU activation function. / As β→∞, Swish behaves like the ReLU function.."
+    },
+    {
+      "question": "6. Suppose you are using a Transformer model with 100 million parameters for training. For an input sequence of length 20, approximately how many FLOPs will be required in forward propagation? [2 marks]",
+      "options": [
+        "100 million",
+        "200 million",
+        "4000 million",
+        "2000 m illion"
+      ],
+      "correctAnswer": "4000 million",
+      "explanation": "For forward propagation, compute FLOPs ≈ 2 × P × N = 2 × (100 × 10^6) × 20 = 4,000 million (4 billion) FLOPs."
+    },
+    {
+      "question": "7. As per chinchilla’s scaling laws, to train a compute -optimal model of 8B parameters, how many tokens should you ideally pretrain it on?",
+      "options": [
+        "As large as possible",
+        "8 B tokens",
+        "1.6 trillion tokens",
+        "160 B tokens"
+      ],
+      "correctAnswer": "160 B tokens",
+      "explanation": "Under Chinchilla scaling laws, tokens = 20 × parameters = 20 × 8B = 160B tokens."
+    },
+    {
+      "question": "8. Suppose you are using T5 bias with n_b = 128. What will be the last index of the bucket which uses a single offset? After this index, each bucket will be used for multiple offset values.",
+      "options": [
+        "63",
+        "64",
+        "31",
+        "32"
+      ],
+      "correctAnswer": "63",
+      "explanation": "Option (A) is correct based on NPTEL DLNLP Assignment 11."
+    }
+  ]
+},
+{
+  "id": "dlnlp-2025-assignment-12",
+  "title": "DLNLP (2025 PYQ) - Assignment 12",
+  "subject": "DLNLP (2025 PYQ)",
+  "date": "17/10/2026",
+  "questions": [
+    {
+      "question": "1. Which architectural component appears to store multilingual knowledge according to the research?",
+      "options": [
+        "Self-attention mechanisms exclusively",
+        "Feed-forward networks exclusively",
+        "Self-attention for reasoning and feed-forward structures for multilingual knowledge",
+        "Equal distribution across all components"
+      ],
+      "correctAnswer": "Self-attention for reasoning and feed-forward structures for multilingual knowledge",
+      "explanation": "- The research indicates that LLMs employ \"English for reasoning (through self-attention) and leveraging multilingual knowledge (through feed-forward structures).\""
+    },
+    {
+      "question": "2. What fundamental insight about multilingual LLMs is revealed by deactivating language-specific neur ons?",
+      "options": [
+        "Models are inherently monolingual and translation occurs post-processing",
+        "Models have redundant neurons that serve no purpose",
+        "Deactivating Chinese-specific neurons can cause the model to produce outputs in English",
+        "Neurons are universally language-agnostic throughout the model"
+      ],
+      "correctAnswer": "Deactivating Chinese-specific neurons can cause the model to produce outputs in English",
+      "explanation": "Option (C) is correct based on NPTEL DLNLP Assignment 12."
+    },
+    {
+      "question": "3. Based on the LAPE (language activation probability entropy) score, how are \"language-specific neur ons\" identified?",
+      "options": [
+        "Neurons with high entropy across all languages",
+        "Neurons that show consistent response patterns regardless of language",
+        "Neurons with consistently low activation for all languages",
+        "Neurons with low entropy , indicating preferential activation for specific languages"
+      ],
+      "correctAnswer": "Neurons with low entropy , indicating preferential activation for specific languages",
+      "explanation": "Option (D) is correct based on NPTEL DLNLP Assignment 12."
+    },
+    {
+      "question": "4. What happens when language-specific neur ons for a particular language are deactivated compar ed to when random neur ons are deactivated?",
+      "options": [
+        "Performance remains mostly unchanged in both cases",
+        "Random neuron deactivation severely impacts performance while language-specific deactivation has minimal impact",
+        "Language-specific neuron deactivation dramatically reduces performance in that language, while random deactivation has minimal impact",
+        "Both types of deactivation improve performance by reducing noise"
+      ],
+      "correctAnswer": "Language-specific neuron deactivation dramatically reduces performance in that language, while random deactivation has minimal impact",
+      "explanation": "- The results table shows that deactivating language-specific neurons reduces performance to near zero for many languages, while random neuron deactivation has minimal impact on performance."
+    },
+    {
+      "question": "5. What is the primary differ ence between Gradient Ascent (GA) unlearning and traditional fine-tuning appr oaches for LLMs?",
+      "options": [
+        "GA requires no training data at all",
+        "GA reverses the direction of gradient updates to increase loss on undesired data",
+        "GA is only applicable to transformer -based architectures",
+        "GA is exclusively used for removing copyrighted content"
+      ],
+      "correctAnswer": "GA reverses the direction of gradient updates to increase loss on undesired data",
+      "explanation": "GA reverses the direction of gradient updates to increase loss on undesired data"
+    },
+    {
+      "question": "6. Why is using KL divergence preferr ed over cross-entr opy for maintaining model performance on normal tasks during unlearning?",
+      "options": [
+        "KL diver gence preserves the original model's distribution better",
+        "Cross-entropy causes too much emphasis on incorrect outputs",
+        "KL diver gence requires fewer computational resources",
+        "Cross-entropy creates more bias in the output distribution"
+      ],
+      "correctAnswer": "KL diver gence preserves the original model's distribution better",
+      "explanation": ") KL divergence preserves the original model's distribution better"
+    },
+    {
+      "question": "7. In the practical application of unlearning to remove copyrighted content (Harry Potter), what metric should be used to evaluate the effectiveness of unlearning?",
+      "options": [
+        "Character -level edit distance between outputs",
+        "BLEU similarity score between generated completions and ground truth",
+        "Human evaluation of literary style similarity",
+        "Token-level perplexity on prompt completions"
+      ],
+      "correctAnswer": "BLEU similarity score between generated completions and ground truth",
+      "explanation": ") BLEU similarity score between generated completions and ground truth"
+    },
+    {
+      "question": "8. In the context of unlearning harmful responses, why does the Random Mismatch appr oach help preserve normal utility compar ed to simple Gradient Ascent?",
+      "options": [
+        "It introduces noise into the model parameters",
+        "It forces the model to generate uncorrelated outputs for problematic inputs",
+        "It makes the model completely ignore certain types of inputs",
+        "It replaces harmful knowledge with beneficial knowledge"
+      ],
+      "correctAnswer": "It forces the model to generate uncorrelated outputs for problematic inputs",
+      "explanation": ") It forces the model to generate uncorrelated outputs for problematic inputs"
+    },
+    {
+      "question": "9. What theor etical implication about multilingual models is most strongly supported by the finding that intermediate representations in non-English to non-English translation tasks show English tokens?",
+      "options": [
+        "Multilingual models are actually ensembles of separate monolingual models",
+        "English serves as an interlingua or conceptual bridge in multilingual models",
+        "The finding is merely an artifact of visualization techniques",
+        "Language-specific tokens are randomly distributed throughout processing"
+      ],
+      "correctAnswer": "English serves as an interlingua or conceptual bridge in multilingual models",
+      "explanation": "- The emer gence of English token probabilities during intermediate processing when translating between two non-English languages strongly suggests that English serves as an interlingua or conceptual bridge within these models, likely due to the predominance of English in training data."
+    },
+    {
+      "question": "10. What crucial insight about multilingual model architectur e is revealed by comparing the distribution of language-specific neur ons between FFN structur es and Attention structur es?",
+      "options": [
+        "Both structures contain equal numbers of language-specific neurons",
+        "FFN structures consistently contain more language-specific neurons across all layers",
+        "Attention structures are responsible for maintaining linguistic features",
+        "Language-specific neurons only appear in the encoder section of transformers"
+      ],
+      "correctAnswer": "FFN structures consistently contain more language-specific neurons across all layers",
+      "explanation": "- \"Number of language-specific neurons when processing multilingual queries\" demonstrates that FFN (Feed-Forward Network) structures consistently contain more language-specific neurons than attention structures across most layers, suggesting specialized roles in multilingual processing."
+    }
+  ]
+},
+{
+  "id": "dlnlp-2025-full-combined-test",
+  "title": "DLNLP (2025 PYQ) - Full Combined Grand Test (Assignments 1-12)",
+  "subject": "DLNLP (2025 PYQ)",
+  "date": "17/10/2026",
+  "questions": [
+    {
+      "question": "1. Which of the following best describes why large language models (LLMs) outperform n-gram models?",
+      "options": [
+        "LLMs use probabilistic distributions to handle unseen words",
+        "LLMs account for contextual relationships over long distances",
+        "LLMs reduce vocabulary size for faster processing",
+        "LLMs simplify complex tasks by discarding infrequent data"
+      ],
+      "correctAnswer": "LLMs account for contextual relationships over long distances",
+      "explanation": "LLMs use embeddings and transformer architectures to capture long-range dependencies effectively."
+    },
+    {
+      "question": "2. When evaluating an n-gram model, which of the following issues is not addressed by perplexity?",
+      "options": [
+        "Performance on unseen word sequences",
+        "The ability to handle syntactic correctness",
+        "Comparison of models on the same dataset",
+        "Measurement of model entropy"
+      ],
+      "correctAnswer": "The ability to handle syntactic correctness",
+      "explanation": "Perplexity measures how well a model predicts a test set but does not explicitly assess syntactic correctness."
+    },
+    {
+      "question": "3. In Add-1 smoothing, what happens to the relative probabilities of frequent versus infrequent word pairs?",
+      "options": [
+        "The gap between their probabilities increases",
+        "The gap between their probabilities decreases",
+        "All probabilities remain proportional",
+        "Add-1 smoothing has no effect on relative probabilities"
+      ],
+      "correctAnswer": "The gap between their probabilities decreases",
+      "explanation": "Add-1 smoothing reduces the gap between high-frequency and low-frequency word pairs by uniformly adding"
+    },
+    {
+      "question": "4. 4. Which of the following methods is used to interpolate probabilities in n-gram models?",
+      "options": [
+        "Multiplying unigram, bigram, and trigram probabilities",
+        "Weighted averaging of higher- and lower-order probabilities",
+        "Selecting the highest-order n-gram with sufficient data",
+        "Normalizing probabilities to sum to 1"
+      ],
+      "correctAnswer": "Weighted averaging of higher- and lower-order probabilities",
+      "explanation": "Interpolation combines probabilities from different n-gram levels using weights to improve robustness."
+    },
+    {
+      "question": "5. In a Shannon game simulation, why might an LLM outperform a bigram model?",
+      "options": [
+        "It can assign probabilities to unseen word pairs",
+        "It generates words based on deep neural embeddings",
+        "It uses prior context beyond two words",
+        "It reduces entropy in word selection"
+      ],
+      "correctAnswer": "It uses prior context beyond two words",
+      "explanation": "LLMs leverage context from the entire sequence, whereas bigram models only consider the last word."
+    },
+    {
+      "question": "6. How does the chain rule of probability contribute to language modeling?",
+      "options": [
+        "By approximating probabilities using higher-order n-grams",
+        "By computing joint probabilities of sentences",
+        "By reducing the complexity of model training",
+        "By ensuring independence between word predictions"
+      ],
+      "correctAnswer": "By computing joint probabilities of sentences",
+      "explanation": "The chain rule allows the computation of joint probabilities by breaking them into conditional probabilities."
+    },
+    {
+      "question": "7. A sentiment analysis model is tested on a dataset of 100 reviews. The model is tasked with classifying each review as Positive or Negative . The confusion matrix for the model's predictions is as follows: \n\n| | Predicted Positive | Predicted Negative |\n|---|---|---|\n| Actual Positive | 40 | 10 |\n| Actual Negative | 20 | 30 |\n\n Based on the above confusion matrix: What is the precision of the model for the Positive class?",
+      "options": [
+        "0.50",
+        "0.67",
+        "0.80",
+        "0.89"
+      ],
+      "correctAnswer": "0.67",
+      "explanation": "Option (B) is the correct answer based on NPTEL DLNLP Assignment 1."
+    },
+    {
+      "question": "8. Why might backoff methods outperform higher-order n-gram models in certain contexts?",
+      "options": [
+        "They avoid overfitting by relying on simpler models",
+        "They reduce the computational cost of model evaluation",
+        "They inherently perform better on sparse datasets",
+        "They rely only on unigram probabilities for simplicity"
+      ],
+      "correctAnswer": "They avoid overfitting by relying on simpler models",
+      "explanation": "Backoff methods generalize better when data for higher-order n-grams is sparse."
+    },
+    {
+      "question": "9. A sentiment analysis model is tested on a dataset of 100 reviews. The model is tasked with classifying each review as Positive or Negative . The confusion matrix for the model's predictions is as follows: \n\n| | Predicted Positive | Predicted Negative |\n|---|---|---|\n| Actual Positive | 40 | 10 |\n| Actual Negative | 20 | 30 |\n\n Based on the above confusion matrix: What is the recall of the model for the Positive class?",
+      "options": [
+        "0.50",
+        "0.67",
+        "0.80",
+        "0.89"
+      ],
+      "correctAnswer": "0.80",
+      "explanation": "Option (C) is the correct answer based on NPTEL DLNLP Assignment 1."
+    },
+    {
+      "question": "10. If the vocabulary size is V=5000 and the frequency of a bigram is 1000, what is the probability of the bigram after applying Add-1 smoothing?",
+      "options": [
+        "(1001)/(5000+1000)",
+        "(1000+1)/(5000+1)",
+        "(1001)/(5000+5000)",
+        "(1000+1)/(5000+5001)"
+      ],
+      "correctAnswer": "(1000+1)/(5000+5001)",
+      "explanation": "Add-1 smoothing adds 1 to the numerator and increases the denominator by the vocabulary size."
+    },
+    {
+      "question": "11. Which of the following is False?",
+      "options": [
+        "Training a model means finding parameters that predict outputs well from input/output pairs of training dataset",
+        "Model is a family of equations",
+        "Supervised learning can be applied for mapping from one or more inputs to a single output only",
+        "Parameters affect outcome of a equation"
+      ],
+      "correctAnswer": "Supervised learning can be applied for mapping from one or more inputs to a single output only",
+      "explanation": "Supervised learning can be applied for mapping from one or more inputs to one or more outputs"
+    },
+    {
+      "question": "12. Which of the following is an example of supervised learning?",
+      "options": [
+        "Clustering customer data based on p urchase history",
+        "Predicting price of mobile based on historical data",
+        "Identifying topics in a set of text documents without labels",
+        "Discovering associations between products in a shopping cart"
+      ],
+      "correctAnswer": "Predicting price of mobile based on historical data",
+      "explanation": "Mobile price prediction can be solv ed by regression having supervised data available"
+    },
+    {
+      "question": "13. What is the mathematical definition of the ReLU activation function?",
+      "options": [
+        "f(x) = 1/ 1 + e^ -x",
+        "f(x) = tanh(x)",
+        "f(x)=max(0,x)",
+        "f(x) = x^2"
+      ],
+      "correctAnswer": "f(x)=max(0,x)",
+      "explanation": "Relu(x) = 0 if x< 0; otherwise x if x>=0"
+    },
+    {
+      "question": "14. In Gradient Descent, what happens if the learning rate is too high?",
+      "options": [
+        "The algorithm converges faster to the global minimum.",
+        "The algorithm may overshoot the minimum and fail to converge.",
+        "The algorithm will get stuck in a local minimum.",
+        "The algorithm will converge to the correct minimum, but it will take longer."
+      ],
+      "correctAnswer": "The algorithm may overshoot the minimum and fail to converge.",
+      "explanation": "If the learning rate is too high, the updates may overshoot the minimum, causing the algorithm to fail to converge or oscillate around the optimal solution."
+    },
+    {
+      "question": "15. In backpropagation, why is the chain rule used?",
+      "options": [
+        "To compute the output of the network during forward propagation.",
+        "To calculate the gradients of the loss function with respect to weights in each layer.",
+        "To determine the optimal number of neurons in a hidden layer.",
+        "To update weights by directly minimizing the loss function."
+      ],
+      "correctAnswer": "To calculate the gradients of the loss function with respect to weights in each layer.",
+      "explanation": "The chain rule i s used in backpropagation to calculate how the loss function changes with respect to each weight by considering the contribution of every layer in the network. This is essential for propagating gradients backward and updating the weights effectively."
+    },
+    {
+      "question": "16. Consider a simple neural network with: An input layer containing 3 neurons, A hidden layer containing 4 neurons and an output layer containing 2 neurons. The activation functions for the hidden and output layers are ReLU and softmax, respectively. Wha t is the total number of weights (parameters) in this network, excluding biases?",
+      "options": [
+        "12",
+        "14",
+        "20",
+        "26"
+      ],
+      "correctAnswer": "20",
+      "explanation": "Weights between input and hidden layer: 3 * 4 = 12 Weights between hidden and output layer: 4 * 2 = 8 Total no of parameters: 12 + 8 = 20."
+    },
+    {
+      "question": "17. Consider a neural network with a single weight w. The output of the network is given by y = w^2 and the loss function is L = 1/2(y - t)^2 where t=4 is the target value. If the current value of w is 3, what is the gradient of L with respect to w?",
+      "options": [
+        "12",
+        "24",
+        "30",
+        "18"
+      ],
+      "correctAnswer": "30",
+      "explanation": "Compute y = w^2 = 3^2 = 9 Gradient of L with respect to y= ∂L/∂y = y - t = 9 - 4 = 5 Gradient of y with respect to w: ∂y/∂w=2w= 2*3 = 6 Using the chain rule: ∂L/∂w=∂L/∂y * ∂y/ ∂w = 5 ⋅6=30"
+    },
+    {
+      "question": "18. In 1D Linear Regression, the least squares loss function is given by:\n\n$$L = \\frac{1}{N} \\sum_{i=1}^N (y_i - (\\hat{w}x_i + b))^2$$\n\nwhere y i are the true values, x i are the inputs, w^ is the weight, b is the bias, and N is the number of data points. If x=[1,2,3], y = [2, 4, 6] , w^=2, and b=0, what is the value of the least squares loss?",
+      "options": [
+        "0",
+        "2",
+        "4",
+        "6"
+      ],
+      "correctAnswer": "0",
+      "explanation": "Solution: 1. Compute the predicted values : y^i=w^xi+b=2xi+0; For x=[1,2,3], y^=[2,4,6] 2. Calculate the residuals (yi−y^i): Residuals=[2−2,4−4,6−6]=[0,0,0] 3. Compute the least squares loss: L=1/N(yi−y^i)2 = ⅓(0)^2 = 0"
+    },
+    {
+      "question": "19. Which of the following is a key difference between static embeddings (e.g., Word2Vec, GloVe) and contextual embeddings (e.g., BERT, ELMo)?",
+      "options": [
+        "Static embeddings generate different vectors for the same word based on its context, while contextual embeddings generate a single vector per word.",
+        "Static embeddings rely on matrix factorization, while contextual embeddings are based on co-occurrence matrices.",
+        "Static embeddings assign one vector per word type, while contextual embeddings produce distinct vectors for each token based on context.",
+        "Static embeddings cannot capture semantic relationships, while contextual embeddings can."
+      ],
+      "correctAnswer": "Static embeddings assign one vector per word type, while contextual embeddings produce distinct vectors for each token based on context.",
+      "explanation": "Option (C) is the correct answer according to NPTEL DLNLP Assignment 3."
+    },
+    {
+      "question": "20. In the context of distributional semantics, why is Pointwise Mutual Information (PMI) often used for weighting co-occurrence matrices?",
+      "options": [
+        "It is computationally efficient for high-dimensional data.",
+        "It emphasizes frequent words, which are more important in natural language.",
+        "It highlights statistically significant word co-occurrences relative to their independent probabilities.",
+        "It directly computes dense vector embeddings from sparse matrices."
+      ],
+      "correctAnswer": "It highlights statistically significant word co-occurrences relative to their independent probabilities.",
+      "explanation": "Option (C) is the correct answer according to NPTEL DLNLP Assignment 3."
+    },
+    {
+      "question": "21. What is the primary challenge in using Skip-gram with Negative Sampling (SGNS) to create word embeddings?",
+      "options": [
+        "Optimizing the number of negative samples for each positive sample.",
+        "Ensuring that the embeddings are sparse and interpretable.",
+        "Balancing the dimensionality of embeddings with training efficiency.",
+        "Constraining embeddings to align with matrix factorization methods like SVD."
+      ],
+      "correctAnswer": "Optimizing the number of negative samples for each positive sample.",
+      "explanation": "Option (A) is the correct answer according to NPTEL DLNLP Assignment 3."
+    },
+    {
+      "question": "22. If the cosine similarity between the embeddings of \"car\" and \"automobile\" is 0.9, while the cosine similarity between \"car\" and \"bike\" is 0.5, what can be inferred about the embeddings?",
+      "options": [
+        "\"Car\" and \"automobile\" co-occur more frequently than \"car\" and \"bike.\"",
+        "The embedding model has effectively captured semantic similarity between words.",
+        "\"Car\" and \"automobile\" have identical embeddings.",
+        "\"Car\" is syntactically closer to \"bike\" than to \"automobile.\""
+      ],
+      "correctAnswer": "The embedding model has effectively captured semantic similarity between words.",
+      "explanation": "Option (B) is the correct answer according to NPTEL DLNLP Assignment 3."
+    },
+    {
+      "question": "23. The GloVe objective function minimizes:",
+      "options": [
+        "The binary cross-entropy between predicted and actual co-occurrence probabilities.",
+        "The weighted least square difference between the dot product of embeddings and the logarithm of co-occurrence counts.",
+        "The negative log-likelihood of the context word given the center word.",
+        "The squared error between the word embedding norms and their PMI values."
+      ],
+      "correctAnswer": "The weighted least square difference between the dot product of embeddings and the logarithm of co-occurrence counts.",
+      "explanation": "Option (B) is the correct answer according to NPTEL DLNLP Assignment 3."
+    },
+    {
+      "question": "24. Suppose you train a Skip-gram model with Negative Sampling on a vocabulary of 10,000 words. If you choose k=5 negative samples per positive pair, how many updates will be made to the embeddings for each target-context pair?",
+      "options": [
+        "5 updates (for negative samples only).",
+        "1 update (for the positive pair only).",
+        "6 updates (1 positive + 5 negative).",
+        "2 ⋅ 5=102 \\cdot 5 = 102 ⋅ 5=10 updates (one for each embedding matrix)."
+      ],
+      "correctAnswer": "6 updates (1 positive + 5 negative).",
+      "explanation": "Option (C) is the correct answer according to NPTEL DLNLP Assignment 3."
+    },
+    {
+      "question": "25. In hierarchical softmax, the computational efficiency is improved by:",
+      "options": [
+        "Reducing the number of parameters using shared embeddings.",
+        "Structuring the vocabulary into a binary tree, where calculating P(c ∣ w) depends on the path from the root to c.",
+        "Applying negative sampling to approximate the softmax.",
+        "Using a fixed-size context window for every target word."
+      ],
+      "correctAnswer": "Structuring the vocabulary into a binary tree, where calculating P(c ∣ w) depends on the path from the root to c.",
+      "explanation": "Option (B) is the correct answer according to NPTEL DLNLP Assignment 3."
+    },
+    {
+      "question": "26. FastText improves on Word2Vec by representing words as bags of n-grams. If FastText encounters an out-of-vocabulary (OOV) word, how is the representation of this word constructed, and what are the key limitations of this approach?",
+      "options": [
+        "The vector is constructed by averaging the embeddings of its character n-grams, and the limitation is reduced representation quality for highly uncommon n-grams.",
+        "The vector is constructed by summing embeddings of similar words, and the limitation is computational inefficiency.",
+        "The vector is learned using hierarchical softmax, and the limitation is the lack of support for hashing-based memory constraints.",
+        "The vector is directly inferred using bilingual dictionaries, and the limitation is dependence on cross-lingual data."
+      ],
+      "correctAnswer": "The vector is constructed by averaging the embeddings of its character n-grams, and the limitation is reduced representation quality for highly uncommon n-grams.",
+      "explanation": "Option (A) is the correct answer according to NPTEL DLNLP Assignment 3."
+    },
+    {
+      "question": "27. Canonical Correlation Analysis (CCA) is often used to project embeddings into a shared space. Given two languages with highly divergent syntactic structures, which limitation of CCA might reduce its effectiveness, and what alternative approach could address this?",
+      "options": [
+        "CCA assumes linear transformations, making it less effective; using adversarial training for non-linear transformations is a viable alternative.",
+        "CCA requires large bilingual dictionaries, making it impractical; autoencoders can bypass this requirement.",
+        "CCA is computationally expensive for high-dimensional embeddings; dimensionality reduction via PCA can help.",
+        "CCA minimizes mean squared errors, which ignores semantic similarity; graph-based representations offer an alternative."
+      ],
+      "correctAnswer": "CCA assumes linear transformations, making it less effective; using adversarial training for non-linear transformations is a viable alternative.",
+      "explanation": "Option (A) is the correct answer according to NPTEL DLNLP Assignment 3."
+    },
+    {
+      "question": "28. Joint optimization methods for cross-lingual embeddings balance monolingual and cross-lingual objectives. For a low-resource language paired with a high-resource language, which factors critically affect the balance, and why?",
+      "options": [
+        "The size of the monolingual corpus for the low-resource language as it determines the effectiveness of pretraining.",
+        "The quality of the bilingual lexicon as it directly influences monolingual loss optimization.",
+        "The degree of morphological similarity between languages as it impacts word segmentation strategies.",
+        "The alignment quality of sentence pairs, as it controls cross-lingual loss contributions."
+      ],
+      "correctAnswer": "The size of the monolingual corpus for the low-resource language as it determines the effectiveness of pretraining.",
+      "explanation": "Option (A) is the correct answer according to NPTEL DLNLP Assignment 3."
+    },
+    {
+      "question": "29. Which of the following best describes the role of word embeddings in language modeling?",
+      "options": [
+        "Word embeddings convert words into one -hot encoded vectors for neural network processing.",
+        "Word embeddings represent words as dense, continuous vectors to capture semantic relationships.",
+        "Word embeddings are used to perform stemming and lemmatization in preprocessing.",
+        "Word embeddings are designed to reduce the size of the vocabulary by merging similar words."
+      ],
+      "correctAnswer": "Word embeddings represent words as dense, continuous vectors to capture semantic relationships.",
+      "explanation": "Word embeddings represent words as dense, continuous vectors to capture semantic relationships."
+    },
+    {
+      "question": "30. Which of the following tasks is most suitable for Recurrent Neural Networks (RNNs)?",
+      "options": [
+        "Image classification in static images.",
+        "Predicting the next word in a sentence.",
+        "Clustering data points in an unsupervised man ner.",
+        "Sorting a list of integers."
+      ],
+      "correctAnswer": "Predicting the next word in a sentence.",
+      "explanation": "Predicting the next word in a sentence is most suitable for RNN"
+    },
+    {
+      "question": "31. Which of the following is the primary cause of the vanishing gradient problem in deep neural networks, particularly in Recurrent Neural Networks (RNNs)?",
+      "options": [
+        "The network's weight matrices become too large, causing instability. 2. Gradients become too small during backpropagation, effectively preventing weight updates in the earlier layers.",
+        "The activation functions used in the network are too complex and cannot be computed efficiently.",
+        "The network suffers from an excessive number of layers, leading to too much redundancy in the model."
+      ],
+      "correctAnswer": "The activation functions used in the network are too complex and cannot be computed efficiently.",
+      "explanation": "The vanishing gradient problem occurs when gradients become very small during backpropagation, especially in deep or recurrent networks, making it difficult for the model to update the weights in earlier layers. This can slow down or even stop the learning process."
+    },
+    {
+      "question": "32. In a Named Entity Recognition (NER) task using the BIO tagging scheme, an input sentence has 10 tokens, and the model outputs probabilities for 5 entity classes: B- PER, I-PER, B- LOC , I-LOC , and O . If the softmax function is applied over the outputs for each token, how many probability values will the model compute for the entire sentence?",
+      "options": [
+        "5",
+        "10",
+        "50",
+        "100"
+      ],
+      "correctAnswer": "50",
+      "explanation": "For each of the 10 tokens, the model computes a probability distribution across the 5 classes. Hence, 10×5=50 probability values are computed."
+    },
+    {
+      "question": "33. In an encoder -decoder architecture for machine translation, the encoder processes an input sequence of length T with a hidden state size of H, and the decoder generates an output sequence of length T′ with a hidden state size of H′. If the encoder’s weight matrix has dimensions H×H for the hidden state transition and V in×H for the input -to-hidden transformation (where V in is the vocabulary size), and the decoder's weight matrix has dimensions H′×H′ for the hidden state transition and V out×H′ for the output -to-hidden transformation (where V out is the target vocabulary size), how many parameters are there in the encoder and decoder combined, excluding biases?",
+      "options": [
+        "V in×H+H×H+V out×H′+H′×H′",
+        "V in×H+H×H′+V out×H+H′×H",
+        "V in×H+H×H+V out×H′+H′×H′",
+        "V in×H+H×H′+V out×H+H′×H"
+      ],
+      "correctAnswer": "V in×H+H×H+V out×H′+H′×H′",
+      "explanation": "● The encoder's weight matrix for input -to-hidden has V in×H parameters, and for hidden state transitions, there are H×H parameters. ● The decoder's weight matrix for output -to-hidden has V out×H′ parameters, and for hidden state transitions, there are H′×H′ parameters. Thus, the total number of parameters is: Vin×H+H×H+V out×H′+H′×H′"
+    },
+    {
+      "question": "34. In an LSTM network, the number of parameters for the input gate is determined by the size of the input vector V and the size of the hidden state H. Assuming the LSTM has 1 input gate, 1 forget gate, 1 output gate, and 1 cell state, how many parameters are there for the input gate, excluding biases?",
+      "options": [
+        "V×H+H×H",
+        "(V+H)×H",
+        "V×H+H×1",
+        "(V+H)×1"
+      ],
+      "correctAnswer": "(V+H)×H",
+      "explanation": "For the input gate in an LSTM, the parameters consist of: Weights from the input vector V to the hidden state H, which are represented by a matrix of size V×H Weights from the previous hidden state H to the current hidden state H, represented by a matrix of size H×H Thus, the total number of parameters for the input gate is V×H + H×H = (V + H) ×H"
+    },
+    {
+      "question": "35. Suppose a language model has a vocabulary of size 5, and during decoding, the model produces the following logits for the five tokens: z = [4, 0, -2, 3, 1] Compute the probability distribution when using random sampling with temperature T=0.5. Which of the following is the final probability distribution.",
+      "options": [
+        "[0.8787,0.0002,0.000005,0.1189,0.0021]",
+        "[0.0003, 0.8787, 0.000005, 0.1188,0.0022]",
+        "[0.0002, 0.8787, 0.000006, 0.1089, 0.0125]",
+        "[0.7789,0.1001,0.000005,0.1189,0.0023]"
+      ],
+      "correctAnswer": "[0.8787,0.0002,0.000005,0.1189,0.0021]",
+      "explanation": "Scale the logits by 1/T = 1/0.5 = 2 zi′=zi/T=[8,0,−4,6,2] Compute exponential: [e^8, e^0, e^−4, e^6, e^2] e^8≈2980.96, e^0= 1, e^- 4≈0.0183, e^6≈403.43, e^2≈7.389 Compute sum of exponentials: S= 2980.96+1+0.0183+403.43+7.389=3392.80 Softmax probabilities : P0= 2980.96 / 3392.80 = 0.8787, P1 = 1/ 3392.80 =0.0002 P2=0.0183/3392.80 ≈0.000005, P3 = 403.43/3392.80=0.1189, P4 = 7.389/3392.80 = 0.0022"
+    },
+    {
+      "question": "36. Self-attention generates contextual embeddings by focusing on relevant tokens in the sequence. Given a sentence: 'The bank raised the interest rates.' How would a multi-head attention mechanism behave if one head specializes in syntactic relations and another in semantics?",
+      "options": [
+        "Both heads would attend to the same tokens in the same way",
+        "The syntactic head would focus on 'the' for 'bank,' while the semantic head focuses on 'interest'",
+        "The syntactic head would focus on 'raised' for 'bank,' while the semantic head focuses on 'interest rates'",
+        "Both heads would ignore the context beyond their respective tokens"
+      ],
+      "correctAnswer": "The syntactic head would focus on 'raised' for 'bank,' while the semantic head focuses on 'interest rates'",
+      "explanation": "The syntactic head would focus on 'raised' for 'bank,' while the semantic head focuses on 'interest rates'"
+    },
+    {
+      "question": "37. In an encoder-decoder Transformer architecture, what will happen if the positional encoding is removed from both the encoder and decoder? How would this affect tasks like machine translation?",
+      "options": [
+        "The model would completely fail to generate coherent sentences",
+        "The model would still generate sentences but ignore word order and context",
+        "The model would work normally but slower due to lack of efficiency",
+        "The model would generate longer sequences without performance degradation"
+      ],
+      "correctAnswer": "The model would still generate sentences but ignore word order and context",
+      "explanation": "The model would still generate sentences but ignore word order and context"
+    },
+    {
+      "question": "38. Imagine you are training a Transformer model on a dataset of long sequences (e.g., full books). Which attention mechanism would you use to minimize memory usage while maintaining context across long ranges? Why?",
+      "options": [
+        "Multi-head attention – to attend to multiple aspects of context",
+        "Local attention – to focus on relevant windows within the sequence",
+        "Global attention – to maintain a global view of the input",
+        "Dilated sliding window attention – to balance local and long-range dependencies efficiently"
+      ],
+      "correctAnswer": "Dilated sliding window attention – to balance local and long-range dependencies efficiently",
+      "explanation": "Dilated sliding window attention – to balance local and long-range dependencies efficiently"
+    },
+    {
+      "question": "39. Consider a Transformer model for real-time speech recognition. Which optimization strategy would you prioritize to reduce latency during inference, and why?",
+      "options": [
+        "Use multi-query attention to reduce redundant computation for each token",
+        "Increase the number of attention heads to improve parallelism",
+        "Remove positional encoding to make the model faster",
+        "Use standard self-attention without modifications"
+      ],
+      "correctAnswer": "Use multi-query attention to reduce redundant computation for each token",
+      "explanation": "Use multi-query attention to reduce redundant computation for each token"
+    },
+    {
+      "question": "40. You are designing a Transformer for image classification using Vision Transformers (ViTs). Which positional encoding technique would be most appropriate for learning fine-grained spatial relationships, and why?",
+      "options": [
+        "Sinusoidal positional encodings for their simplicity and robustness",
+        "Learned positional embeddings to adapt to specific image structures",
+        "Relative positional bias for improved accuracy in larger images",
+        "Rotary positional embeddings to reduce computational complexity"
+      ],
+      "correctAnswer": "Learned positional embeddings to adapt to specific image structures",
+      "explanation": "Learned positional embeddings to adapt to specific image structures"
+    },
+    {
+      "question": "41. Suppose you have the following query vector q = [1, 2], key vector k = [2, 1], and value vector v = [3, 4]. The scale factor for attention is √d_k where d_k = 2. Calculate the attention score and the final output of the self-attention mechanism.",
+      "options": [
+        "Attention Score: 1.5, Output: [3, 4]",
+        "Attention Score: 2.12, Output: [3.5, 4.5]",
+        "Attention Score: 0.82, Output: [2.46, 3.28]",
+        "Attention Score: 0.91, Output: [3, 4]"
+      ],
+      "correctAnswer": "Attention Score: 0.82, Output: [2.46, 3.28]",
+      "explanation": "Attention Score: 0.82, Output: [2.46, 3.28]"
+    },
+    {
+      "question": "42. You are designing a multi-head attention layer with a model dimension d = 512, 8 attention heads, and key, query, and value dimensions of d_k = d_q = d_v = 64 for each head. What will be the combined output dimension after the multi-head attention is projected back?",
+      "options": [
+        "64",
+        "512",
+        "256",
+        "1024"
+      ],
+      "correctAnswer": "512",
+      "explanation": "512"
+    },
+    {
+      "question": "43. Given a sinusoidal positional encoding function for token position p = 5 and dimension i = 2, the encoding is computed as PE(p, i) = sin(p / 10000^(2i/d)). Assume d = 512. What is the value of PE(5, 2)?",
+      "options": [
+        "0.0005",
+        "0.0314",
+        "0.0981",
+        "0.0157"
+      ],
+      "correctAnswer": "0.0314",
+      "explanation": "0.0314"
+    },
+    {
+      "question": "44. Suppose you train a Transformer decoder with the input sentence: 'I love natural language processing.' You are at the third token ('natural') with the following embedding vectors: Query (q): [0.5, 1.0] Key (k1, k2, k3): [0.2, 0.8], [0.7, 0.1], [0.5, 0.5] Value (v1, v2, v3): [1, 0], [0, 1], [1, 1] Calculate the weighted sum of values using the scaled dot-product attention mechanism.",
+      "options": [
+        "[0.75, 0.25]",
+        "[0.6, 0.8]",
+        "[0.9, 0.9]",
+        "[1.2, 1.0]"
+      ],
+      "correctAnswer": "[0.6, 0.8]",
+      "explanation": "[0.6, 0.8]"
+    },
+    {
+      "question": "45. You are tasked with improving a Transformer’s efficiency for processing sequences of length N = 10,000. You apply Linformer, which approximates the attention matrix with a low-rank representation of size k = 256. What is the new complexity for attention computation compared to the original O(N^2) complexity?",
+      "options": [
+        "O(N · k)",
+        "O(k^2)",
+        "O(N^3)",
+        "O(N · log N)"
+      ],
+      "correctAnswer": "O(N · k)",
+      "explanation": "O(N · k)"
+    },
+    {
+      "question": "46. In a span-based fine-tuning appr oach, given an input sequence x consisting of T tokens, what is the total number of possible spans that can be consider ed?",
+      "options": [
+        "T",
+        "T^2",
+        "T(T+1)2",
+        "2^T-1"
+      ],
+      "correctAnswer": "T(T+1)2",
+      "explanation": "All possible contiguous spans in the sequence, considering spans of length 1 up to T is = 1+2+3+……..T = T(T+1)/2"
+    },
+    {
+      "question": "47. Which of the following best describes transfer learning in deep learning models?",
+      "options": [
+        "Training a model from scratch on a large dataset.",
+        "Using a pre-trained model and fine-tuning it for a specific task.",
+        "Using an ensemble of multiple models for improved performance.",
+        "Training a model only on a small dataset without any pre-training."
+      ],
+      "correctAnswer": "Using a pre-trained model and fine-tuning it for a specific task.",
+      "explanation": ". Using a pre-trained model and fine-tuning it for a specific task."
+    },
+    {
+      "question": "48. Which of the following is true for ELMo?",
+      "options": [
+        "ELMo generates word representations that are independent of context, similar to traditional word embeddings like GloV e.",
+        "The representations from all layers in ELMo contribute equally to both syntactic and semantic understanding, making layer -wise differentiation unnecessary .",
+        "Lower -layer representations in ELMo primarily capture syntactic and lower -level semantic information, while higher -layer representations encode more abstract meaning and contextual nuances.",
+        "ELMo strictly requires fine-tuning all its layers during downstream tasks, and frozen biLM weights cannot be used effectively ."
+      ],
+      "correctAnswer": "Lower -layer representations in ELMo primarily capture syntactic and lower -level semantic information, while higher -layer representations encode more abstract meaning and contextual nuances.",
+      "explanation": ") Lower -layer representations capture syntax and lower -level semantics, while higher -layer representations capture higher -level semantics like meaning and context."
+    },
+    {
+      "question": "49. Why does scaling up a transformer model often lead to better performance across various NLP tasks?",
+      "options": [
+        "Larger models inherently generalize better to unseen data",
+        "Scaling up increases memorization, reducing overfitting",
+        "Transformers achieve better loss conver gence with increased size",
+        "Larger models can encode more complex data representations"
+      ],
+      "correctAnswer": "Larger models can encode more complex data representations",
+      "explanation": ") Larger models can encode more complex data representations"
+    },
+    {
+      "question": "50. How does parameter -efficient fine-tuning (PEFT) appr oaches like adapters differ from full fine-tuning?",
+      "options": [
+        "PEFT methods modify only a small subset of the model parameters",
+        "They increase the training time significantly",
+        "They require retraining the entire model from scratch",
+        "PEFT methods cannot be applied to transformer models"
+      ],
+      "correctAnswer": "PEFT methods modify only a small subset of the model parameters",
+      "explanation": ") PEFT methods modify only a small subset of the model parameters"
+    },
+    {
+      "question": "51. What is the fundamental advantage of sparse expert models like the Switch Transformer?",
+      "options": [
+        "They allow selective activation of model components, reducing computational cost",
+        "They achieve superior results without requiring additional pretraining",
+        "They eliminate the need for data augmentation techniques",
+        "They improve tokenization efficiency for low-resource languages"
+      ],
+      "correctAnswer": "They allow selective activation of model components, reducing computational cost",
+      "explanation": ") They allow selective activation of model components, reducing computational cost"
+    },
+    {
+      "question": "52. How can pretraining objectives like ELECTRA's replaced token detection impr ove efficiency over masked language modeling?",
+      "options": [
+        "By reducing the computational complexity of training",
+        "By training the model to distinguish between real and replaced tokens rather than predicting masked ones",
+        "By eliminating the need for extensive labeled datasets",
+        "By increasing the number of parameters in the model"
+      ],
+      "correctAnswer": "By training the model to distinguish between real and replaced tokens rather than predicting masked ones",
+      "explanation": ") By training the model to distinguish between real and replaced tokens rather than predicting masked ones"
+    },
+    {
+      "question": "53. In a multi-head attention mechanism with 8 heads and hidden dimension of 512, if we use a batch size of 16 with a sequence length of 64, what is the total number of operations requir ed for the attention computation across all heads (excluding feed-forward layers) ?",
+      "options": [
+        "2,097,152",
+        "16,777,216",
+        "33,554,432",
+        "67,108,864"
+      ],
+      "correctAnswer": "33,554,432",
+      "explanation": "### Explanation: For a single head in self-attention with: - Batch size (B) = 16 - Sequence length (L) = 64 - Head dimension (d) = 512/8 = 64 (since total dimension 512 is split among 8 heads) The attention computation involves: 1. Query-Key matrix multiplication: (B×L×d) × (B×L×d)ᵀ = B×L×L operations per head 2. Softmax over the attention scores: B×L×L operations per head 3. Attention-V alue multiplication: (B×L×L) × (B×L×d) = B×L×L×d operations per head For exactly 8 heads: - Query-Key multiplication: 8 × 16 × 64 × 64 = 524,288 operations - Softmax: 8 × 16 × 64 × 64 = 524,288 operations - Attention-V alue multiplication: 8 × 16 × 64 × 64 × 64 = 33,554,432 operations Total operations: 524,288 + 524,288 + 33,554,432 = 34,603,008 operations However , if we're focusing purely on the core attention dot product operations (which is common when discussing attention complexity), the answer would be: - 8 heads × 16 batch × 64 sequence × 64 sequence × 64 dimensions = 33,554,432 operations Answer: C) 33,554,432 The dominant cost in attention mechanisms is the attention-value multiplication which scales with O(B×H×L²×d), where H is the number of heads. This is why the attention mechanism becomes computationally expensive for long sequences."
+    },
+    {
+      "question": "54. Many open- domain QA models follow a retriever -reader framework. However, one major drawback of this approach is:",
+      "options": [
+        "The retriever often fails to retrieve factually correct documents",
+        "The reader module lacks the ability to generate novel answers beyond retrieved passages",
+        "The retriever is computationally expensive and requires labeled supervision for every question",
+        "The reader struggles to perform named entity recognition (NER) on retrieved passages"
+      ],
+      "correctAnswer": "The reader module lacks the ability to generate novel answers beyond retrieved passages",
+      "explanation": "Option (B) is the correct answer according to NPTEL DLNLP Assignment 7."
+    },
+    {
+      "question": "55. Dense retrievers like ColBERT differ from traditional TF- IDF/BM25 retrieval models because they:",
+      "options": [
+        "Compute sparse representations instead of dense vector embeddings",
+        "Rely on explicit term frequency and document length normalization",
+        "Use contextualized token embeddings to compare query and document representations at a finer granularity",
+        "Discard negative sampling strategies in the retrieval phase"
+      ],
+      "correctAnswer": "Use contextualized token embeddings to compare query and document representations at a finer granularity",
+      "explanation": "Option (C) is the correct answer according to NPTEL DLNLP Assignment 7."
+    },
+    {
+      "question": "56. If a multilingual QA system is fine- tuned on an English corpus but evaluated on Hindi queries, which fundamental challenge arises?",
+      "options": [
+        "The inability to align embedding spaces across languages",
+        "The loss of syntactic information due to translation errors",
+        "The increased computational complexity in the retriever module",
+        "The failure of word segmentation methods in low -resource languages"
+      ],
+      "correctAnswer": "The inability to align embedding spaces across languages",
+      "explanation": "Option (A) is the correct answer according to NPTEL DLNLP Assignment 7."
+    },
+    {
+      "question": "57. In dialogue state tracking (DST), a primary reason for switching from rule- based slot filling to machine learning- based approaches is:",
+      "options": [
+        "ML -based methods can generate entirely novel intents beyond predefined slots",
+        "Rule -based methods fail to handle multimodal conversations",
+        "ML -based methods allow tracking of implicit user preferences and dynamically adjust to ambiguous user inputs",
+        "Rule -based approaches are computationally expensive compared to transformer -based DST model s"
+      ],
+      "correctAnswer": "ML -based methods allow tracking of implicit user preferences and dynamically adjust to ambiguous user inputs",
+      "explanation": "Option (C) is the correct answer according to NPTEL DLNLP Assignment 7."
+    },
+    {
+      "question": "58. Consider an open- domain chatbot trained on large- scale internet data. Which of the following factors poses the most significant challenge to its deployment in high- stakes applications (e.g., healthcare, finance)?",
+      "options": [
+        "The model’s inability to generate grammatically correct responses",
+        "The limited size of the training corpus relative to proprietary datasets",
+        "The lack of grounding mechanisms to verify factual accuracy and prevent hallucination",
+        "The failure to handle multiple- turn dialogues effectively"
+      ],
+      "correctAnswer": "The lack of grounding mechanisms to verify factual accuracy and prevent hallucination",
+      "explanation": "Option (C) is the correct answer according to NPTEL DLNLP Assignment 7."
+    },
+    {
+      "question": "59. A major limitation of retrieval -based chatbots compared to generative models is that:",
+      "options": [
+        "They require massive amounts of labeled training data to function",
+        "They struggle to provide coherent multi -turn interactions",
+        "They cannot generate responses beyond the scope of their training corpus",
+        "They fail to incorporate user -specific personalization"
+      ],
+      "correctAnswer": "They cannot generate responses beyond the scope of their training corpus",
+      "explanation": "Option (C) is the correct answer according to NPTEL DLNLP Assignment 7."
+    },
+    {
+      "question": "60. Why do extractive summarization models often fail to perform well in abstractive summarization tasks?",
+      "options": [
+        "Extractive models do not learn semantic relationships between words and phrases",
+        "Extractive models depend on lexical similari ty rather than understanding deeper discourse structures",
+        "Extractive models cannot handle cross -document coreference resolution",
+        "Extractive models lack the computational efficiency required for abstractive summarization"
+      ],
+      "correctAnswer": "Extractive models depend on lexical similari ty rather than understanding deeper discourse structures",
+      "explanation": "Option (B) is the correct answer according to NPTEL DLNLP Assignment 7."
+    },
+    {
+      "question": "61. In long- document summarization, why might an extract -then- paraphrase approach outperform direct abstractive methods?",
+      "options": [
+        "It preserves factual consistency by constraining s ummaries to extracted content",
+        "It eliminates the need for transformer -based architectures",
+        "It does not require labeled training data for summarization",
+        "It allows for end- to-end training with a lower computational cost"
+      ],
+      "correctAnswer": "It preserves factual consistency by constraining s ummaries to extracted content",
+      "explanation": "Option (A) is the correct answer according to NPTEL DLNLP Assignment 7."
+    },
+    {
+      "question": "62. While evaluating a summarization model, why is ROUGE -2 sometimes preferred over BLEU?",
+      "options": [
+        "ROUGE -2 correlates better with human judgment for extractive summarization tasks",
+        "BLEU cannot handle long documents, whereas ROUGE -2 is designed for multi -document summarization",
+        "BLEU only considers single- token matches, while ROUGE -2 evaluates sentence structure",
+        "ROUGE -2 incorporates contextual embeddings, making it more robust for summarization"
+      ],
+      "correctAnswer": "ROUGE -2 correlates better with human judgment for extractive summarization tasks",
+      "explanation": "Option (A) is the correct answer according to NPTEL DLNLP Assignment 7."
+    },
+    {
+      "question": "63. Both dialogue systems and summarization models require sequence generation. Which of the following represents a key distinction between their architectures?",
+      "options": [
+        "Summarization models primarily use extractive methods, whereas dialogue systems rely on seq2seq architectures",
+        "Dialogue models generate text interactively based on conversational history, while summarization models optimize for information condensation in a single pass",
+        "Summarization models rely on intent classification, while dialogue systems do not",
+        "Dialogue models encode sentence embeddings, whereas summarization models use word embeddings"
+      ],
+      "correctAnswer": "Dialogue models generate text interactively based on conversational history, while summarization models optimize for information condensation in a single pass",
+      "explanation": "Option (B) is the correct answer according to NPTEL DLNLP Assignment 7."
+    },
+    {
+      "question": "64. What is the main advantage of fine -tuning a pretrained model instead of training a model from scratch?",
+      "options": [
+        "Fine -tuning requires a large amount of labeled data to work effectively.",
+        "Fine -tuning helps adapt a general model to a specific task while leveraging prior knowledge, reducing data and compute requirements.",
+        "Fine -tuning always leads to overfitting and should be avoided.",
+        "Fine -tuning removes the need for any labeled data."
+      ],
+      "correctAnswer": "Fine -tuning helps adapt a general model to a specific task while leveraging prior knowledge, reducing data and compute requirements.",
+      "explanation": "Option (B) is correct based on NPTEL DLNLP Assignment 8."
+    },
+    {
+      "question": "65. According to the Scaling Laws observed in Super -NaturalInstructions, how does increasing the number of training tasks affect model performance?",
+      "options": [
+        "Increasing tasks improves generalization to unseen tasks, demonstrating positive transfer.",
+        "More tasks always lead to overfitting and degrade generalization performance. C) The number of tasks does not impact model performance significantly.",
+        "Reducing the number of tasks helps models specialize and generalize better."
+      ],
+      "correctAnswer": "Increasing tasks improves generalization to unseen tasks, demonstrating positive transfer.",
+      "explanation": "Option (A) is correct based on NPTEL DLNLP Assignment 8."
+    },
+    {
+      "question": "66. What distinguishes FLAN (Fine -tuned LAnguage Net) models from standard pre -trained language models?",
+      "options": [
+        "FLAN models are instruction -tuned, meaning they are explicitly fine -tuned on a diverse range of tasks formatted as instructions, improving zero- shot and few -shot learning.",
+        "FLAN models do not require pretraining and are trained directly on downstream tasks.",
+        "FLAN models only work in a zero- shot setting and cannot be fine -tuned further.",
+        "FLAN models are based on a completely different architecture than transformer -based models."
+      ],
+      "correctAnswer": "FLAN models are instruction -tuned, meaning they are explicitly fine -tuned on a diverse range of tasks formatted as instructions, improving zero- shot and few -shot learning.",
+      "explanation": "Option (A) is correct based on NPTEL DLNLP Assignment 8."
+    },
+    {
+      "question": "67. Which of the following is True about RLHF?",
+      "options": [
+        "RLHF involves state transitions where the agent’s actions influence future states",
+        "RLHF does not have state transitions; actions (completions) are scored by a reward model",
+        "RLHF attribution of re ward is not done for an entire sequence of actions",
+        "RLHF does not use a policy function to determine actions, unlike standard RL."
+      ],
+      "correctAnswer": "RLHF does not have state transitions; actions (completions) are scored by a reward model",
+      "explanation": "Option (B) is correct based on NPTEL DLNLP Assignment 8."
+    },
+    {
+      "question": "68. Which of the following is False?",
+      "options": [
+        "Online reinforcement learning allows the agent to continuously adapt to changes in the environment by learning from real -time feedback.",
+        "DPO directly optimizes for preference- based feedback, rather than relying on separately developed reward models.",
+        "DPO us es computationally expensive sampling process than PPO",
+        "DPO simplifies the training framework by eliminating the need to explicitly model rewards."
+      ],
+      "correctAnswer": "DPO us es computationally expensive sampling process than PPO",
+      "explanation": "Option (C) is correct based on NPTEL DLNLP Assignment 8."
+    },
+    {
+      "question": "69. In which scenario would DPO be most beneficial?",
+      "options": [
+        "When a clear objective function is readily available for model optimization. B. When aligning a language model with human preferences in a way that avoids explicit reward modeling and complex reinforceme nt learning setups.",
+        "For tasks where rapid experimentation and fine -tuning are not necessary.",
+        "When dealing with large datasets of labeled human feedback."
+      ],
+      "correctAnswer": "For tasks where rapid experimentation and fine -tuning are not necessary.",
+      "explanation": "Option (B) is correct based on NPTEL DLNLP Assignment 8."
+    },
+    {
+      "question": "70. In RLHF the reward function R(s) is often regularized using the KL divergence between the learned policy π_ϕ and the reference policy π_0 to prevent excessive deviation. The modified reward is given by:\n\n$$R'(s) = R(s) - \\beta D_{\\text{KL}}(\\pi_\\phi(\\cdot \\mid s) \\parallel \\pi_0(\\cdot \\mid s))$$\n\nThe KL divergence is defined as:\n\n$$D_{\\text{KL}}(\\pi_\\phi \\parallel \\pi_0) = \\sum_a \\pi_\\phi(a \\mid s) \\log \\frac{\\pi_\\phi(a \\mid s)}{\\pi_0(a \\mid s)}$$\n\nConsider a state s where the action probabilities under $\\pi_\\phi$ and reference policy $\\pi_0$ are:\n• $\\pi_\\phi(a_1 \\mid s) = 0.6, \\quad \\pi_\\phi(a_2 \\mid s) = 0.4$\n• $\\pi_0(a_1 \\mid s) = 0.5, \\quad \\pi_0(a_2 \\mid s) = 0.5$\n\nCompute the KL divergence and select the correct answer:",
+      "options": [
+        "0.0704",
+        "0.0781",
+        "0.0689",
+        "0.0652"
+      ],
+      "correctAnswer": "0.0704",
+      "explanation": "$D_{\\text{KL}} = (0.6 \\times \\log(0.6/0.5)) + (0.4 \\times \\log(0.4/0.5)) = (0.6 \\times 0.182) + (0.4 \\times (-0.097)) = 0.1092 - 0.0388 = 0.0704$."
+    },
+    {
+      "question": "71. In RLHF setup, to train a reward function R(x), the optimization objective is to maximize the difference in rewards between preferred and dispreferred responses. Suppose we have a dataset of preference pairs $(x, y^+)$ and $(x, y^-)$, where $y^+$ is the preferred response and $y^-$ is the dispreferred response.\n\nThe loss function for the reward model is given as:\n\n$$\\mathcal{L} = -\\mathbb{E}_{(x, y^+, y^-)} [\\log \\sigma(R(y^+) - R(y^-))]$$\n\nIf the rewards for a given preference pair are $R(y^+) = 2.5$, and $R(y^-) = 1.0$, what is the value of the loss term for this pair for the reward model?",
+      "options": [
+        "log (1 + e^-1.5)",
+        "log (1 + e^1.5)",
+        "-log (1 + e^-1.5)",
+        "-log (1 + e^1.5)"
+      ],
+      "correctAnswer": "log (1 + e^-1.5)",
+      "explanation": "Step 1: Reward difference $R(y^+) - R(y^-) = 2.5 - 1.0 = 1.5$.\nStep 2: $\\sigma(1.5) = \\frac{1}{1 + e^{-1.5}}$, so $\\log \\sigma(1.5) = -\\log(1 + e^{-1.5})$.\nStep 3: Loss $\\mathcal{L} = -(-\\log(1 + e^{-1.5})) = \\log(1 + e^{-1.5})$."
+    },
+    {
+      "question": "72. Which of the following is False?",
+      "options": [
+        "In Few -shot prompt paradigm, for the same prompt the order in which samples are provided can not make the difference in result",
+        "In transformer circuit, different QK Circuit matrix tells us which tokens information is moved to and from in the residual stream",
+        "Induction head attends back to previous tokens that were followed by the current and/or recent tokens.",
+        "Transformer language models undergo a “phase change” early in training, during which induction heads form and simultaneously in-context learning improves dramatically."
+      ],
+      "correctAnswer": "In Few -shot prompt paradigm, for the same prompt the order in which samples are provided can not make the difference in result",
+      "explanation": "Option (A) is the correct answer according to NPTEL DLNLP Assignment 9."
+    },
+    {
+      "question": "73. Which of the following best describes the difference between zero -shot and few -shot prompting in large language models?",
+      "options": [
+        "Zero -shot prompting provides multiple examples in the prompt, whereas few -shot prompting provides no examples.",
+        "Zero -shot prompting requires a fine -tuned model, whereas few -shot prompting does not.",
+        "Zero -shot prompting relies on the model’s pre -trained knowledge without examples, while few-shot prompting includes a few examples to guide the model.",
+        "Few -shot prompting is only applicable to classification tasks, whereas zero -shot prompting works for all NLP tasks."
+      ],
+      "correctAnswer": "Zero -shot prompting relies on the model’s pre -trained knowledge without examples, while few-shot prompting includes a few examples to guide the model.",
+      "explanation": "Option (C) is the correct answer according to NPTEL DLNLP Assignment 9."
+    },
+    {
+      "question": "74. A student is solving the following mathematical problem using Chain of Thought (CoT) prompting: Problem: If a bookstore sells 3 books for $15, how much would 7 books cost at the same rate? Using CoT prompting, the model breaks down the problem step by step: The cost of one book is calculated as: 15÷3=5 The cost of 7 books is then determined as: 5×7=35 The final answer is $35. What is the main advantage of using Chain of Thought (CoT) prompting in solving mathematical problems like the one above?",
+      "options": [
+        "It allows the model to generate more creative answers instead of strictly numerical ones.",
+        "It enables the model to follow a step -by-step reasoning process, reducing errors in multi -step calculations.",
+        "It makes the model answer faster by skipping intermediate steps.",
+        "It ensures that the model always provides the correct answer, regardless of input complexity."
+      ],
+      "correctAnswer": "It enables the model to follow a step -by-step reasoning process, reducing errors in multi -step calculations.",
+      "explanation": "Option (B) is the correct answer according to NPTEL DLNLP Assignment 9."
+    },
+    {
+      "question": "75. What is the primary advantage of Tree of Thought (ToT) prompting compared to Chain of Thought (CoT) prompting in problem -solving with Large Language Models?",
+      "options": [
+        "ToT allows the model to explore multiple reasoning paths and backtrack if needed, improvi ng complex decision-making.",
+        "ToT speeds up response time by reducing the number of tokens generated.",
+        "ToT eliminates the need for intermediate reasoning steps, leading to more concise answers.",
+        "ToT relies solely on fine-tuning rather than prompting techniques."
+      ],
+      "correctAnswer": "ToT allows the model to explore multiple reasoning paths and backtrack if needed, improvi ng complex decision-making.",
+      "explanation": "Option (A) is the correct answer according to NPTEL DLNLP Assignment 9."
+    },
+    {
+      "question": "76. Toolformer is a variant of large language models that enhances reasoning by:",
+      "options": [
+        "Training on a much larger dataset without any external tools.",
+        "Dynamically calling external tools like calculators, search engines, or APIs to improve accuracy.",
+        "Using only Chain of Thought (CoT) prompting without external assistance.",
+        "Eliminating the need for tool usage by relying solely on internal knowledge."
+      ],
+      "correctAnswer": "Dynamically calling external tools like calculators, search engines, or APIs to improve accuracy.",
+      "explanation": "Option (B) is the correct answer according to NPTEL DLNLP Assignment 9."
+    },
+    {
+      "question": "77. A student is using a Program of Thought (PoT) prompting to solve the following mathematical problem: Find the sum of all even numbers from 1 to 20. Instead of solving it directly, the model generates and executes a Python program to compute the result: total = 0 for num in range(1, 21): if num % 2 == 0: total += num print(total) What is the key advantage of using Program of Thought (PoT) prompting in mathematical problem -solving?",
+      "options": [
+        "It enables models to follow a strict, predefined step-by- step reasoning structure without requiring execution.",
+        "It allows models to generate and execute code, improving accuracy for complex numerical problems.",
+        "It eliminates the need for logical rea soning by relying purely on memorized answers.",
+        "It reduces computation time by avoiding loops and conditionals in the generated solution."
+      ],
+      "correctAnswer": "It allows models to generate and execute code, improving accuracy for complex numerical problems.",
+      "explanation": "Option (B) is the correct answer according to NPTEL DLNLP Assignment 9."
+    },
+    {
+      "question": "78. Which if the following is False?",
+      "options": [
+        "Prompt-Tuning optimize the embeddings of a prompt, instead of words.",
+        "In AUTOPROMPT, for automatic token label selection, a logistic classifier is trained to predict the class label using the contextualized embedding of the [MASK] token as input.",
+        "Tool-augmented Language Model (TALM) first generates a tool input conditioned on the task input text and invokes a tool’s API by generating a delimiter",
+        "In-context learning do well for new tasks by updating gradient of the model parameters"
+      ],
+      "correctAnswer": "In-context learning do well for new tasks by updating gradient of the model parameters",
+      "explanation": "Option (D) is the correct answer according to NPTEL DLNLP Assignment 9."
+    },
+    {
+      "question": "79. A large language model is given the following in -context examples in the format of (input, output) pair as follows: (1,3) , (2,9), (3,19), (4,33) It is then asked to predict the output for Input = 5. Assuming the model correctly identifies the underlying pattern, what should be the predicted output?",
+      "options": [
+        "45",
+        "55",
+        "65",
+        "63"
+      ],
+      "correctAnswer": "55",
+      "explanation": "Option (B) is the correct answer according to NPTEL DLNLP Assignment 9."
+    },
+    {
+      "question": "80. Suppose you are using AutoPrompt with BERT for text classification with 6 classes. What is the number of learnable parameters to decide the label set for all the classes if BERT uses 1024 as the model dimension and the number of label words per class is 3?",
+      "options": [
+        "15360",
+        "18432",
+        "16406",
+        "19832"
+      ],
+      "correctAnswer": "18432",
+      "explanation": "Given: BERT's hidden size = 1024, Number of classes = 6; Number of label words per class = 3 Step 1: Compute Total Label Words Each class has 3 label words, so the total number of label words across all classes is: 6×3=18 Step 2: Compute Learnable Parameters Each label word has a 1024 -dimensional embedding, so the total number of learnable parameters is: 18×1024=18,432 The number of learnable parameters to decide the label set is 18,432."
+    },
+    {
+      "question": "81. Which of the following is False?",
+      "options": [
+        "Parameter -efficient fine tuning update a small subset of model parameters",
+        "Parameter -efficient fine tuning matches performance of full -tuning in many cases",
+        "Prefix -tuning adds a prefix of parameters, and freezes all pretrained parameters.",
+        "In parameter -effici ent fine tuning, for L layers in the decoder, there will be L adapters"
+      ],
+      "correctAnswer": "In parameter -effici ent fine tuning, for L layers in the decoder, there will be L adapters",
+      "explanation": "Option (D) is the correct answer according to NPTEL DLNLP Assignment 10."
+    },
+    {
+      "question": "82. Suppose you want to use LoRA to train the GPT -3 model, which has a model dimensionality of 12288, 48 layers and 48 attention heads, for the tasks of text simplification. You are using LoRA only for the query and key matrices, each with a rank of 16. How many parameters will need to be trained?",
+      "options": [
+        "393216",
+        "37748736",
+        "6291456",
+        "18874368"
+      ],
+      "correctAnswer": "37748736",
+      "explanation": "For each layer's query projection: ● Matrix A: 12288 × 16 = 196,608 parameters ● Matrix B: 16 × 12288 = 196,608 parameters ● Total per query projection: 393,216 parameters For each layer's key projection: ● Matrix A: 12288 × 16 = 196,608 parameters ● Matrix B: 16 × 12288 = 196,608 parameters ● Total per key projection: 393,216 parameters Total parameters per layer: 393,216 + 393,216 = 786,432 Total trainable parameters across all 48 layers: 48 × 786,432 = 37,748,736"
+    },
+    {
+      "question": "83. Suppose you want to use Adapters to t rain the GPT -3 model, which has a model dimensionality of 12288, 48 layers and 48 attention heads, for the tasks of text simplification. You are using 4 adapters per layer, each with a down -projection of 4. How many parameters will need to be trained appro ximately?",
+      "options": [
+        "221184",
+        "18874368",
+        "196608",
+        "21234432"
+      ],
+      "correctAnswer": "21234432",
+      "explanation": "For each adapter: ● Down -projection parameters: d × r = 12288 × 4 = 49,152 ● Down -projection bias: r = 4 ● Up-projection parameters: r × d = 4 × 12288 = 49,152 ● Up-projection bias: d = 12288 Total parameters per adapter: 49,152 + 4 + 49,152 + 12288 = 110,596 Since we have 4 adapters per layer and 48 layers: Total trainable parameters = 110,596 × 4 × 48 = 21,234,432"
+    },
+    {
+      "question": "84. In LoRA (Low- Rank Adaptation), what is the key mathematical insight that enables parameter efficiency?",
+      "options": [
+        "Using activation functions with higher gradients",
+        "Approximating weight updates through low-rank decomposition",
+        "Replacing attention mechanisms with simpler alternatives",
+        "Pruning redundant neurons during training"
+      ],
+      "correctAnswer": "Approximating weight updates through low-rank decomposition",
+      "explanation": "Option (B) is the correct answer according to NPTEL DLNLP Assignment 10."
+    },
+    {
+      "question": "85. The NormalFloat (NF4) format in QLoRA is specifically designed to:",
+      "options": [
+        "Handle normally distributed weights more efficiently",
+        "Implement normal vector arithmetic operations",
+        "Maintain numerical stability during backpropagation",
+        "Reduce power consumption during training"
+      ],
+      "correctAnswer": "Handle normally distributed weights more efficiently",
+      "explanation": "Option (A) is the correct answer according to NPTEL DLNLP Assignment 10."
+    },
+    {
+      "question": "86. Which of the following correctly describes the memory savings achieved with QLoRA’s Double Quantization technique?",
+      "options": [
+        "Reduces memory usage by storing both model parameters and quantization constants in FP16",
+        "Compresses both the forward and backward pass during training",
+        "Achieves compression by quantizing both model weights and quantization constants",
+        "Uses block -wise quantization for improved convergence"
+      ],
+      "correctAnswer": "Achieves compression by quantizing both model weights and quantization constants",
+      "explanation": "Option (C) is the correct answer according to NPTEL DLNLP Assignment 10."
+    },
+    {
+      "question": "87. Which of the following is False?",
+      "options": [
+        "In case of pruning, a number of parameters are set to zero, the rest are unchanged",
+        "In Quantization, no parameters are changed, upto k bits of precision",
+        "Magnitude pruning is a type of unstructured pruning",
+        "Magnitude pruning selects weights that are very close to zero"
+      ],
+      "correctAnswer": "Magnitude pruning selects weights that are very close to zero",
+      "explanation": "Option (D) is the correct answer according to NPTEL DLNLP Assignment 10."
+    },
+    {
+      "question": "88. Which of the following is False?",
+      "options": [
+        "GPU memory required for a model can vary with precision and optimizer",
+        "Sequence- level distillation maximize the probability of the output generated by the teacher",
+        "DistilBERT use only distillation based loss",
+        "In general, infixing slightly underperforms prefix"
+      ],
+      "correctAnswer": "DistilBERT use only distillation based loss",
+      "explanation": "DistilBERT use both supervised and distillation based loss"
+    },
+    {
+      "question": "89. Which of the following is False?",
+      "options": [
+        "According to scaling laws of LLMs, the performance of LLMs mainly determined by model size, dataset size and amount of compute",
+        "Larger models are more sample efficient than smaller models",
+        "Kaplan laws use dynamic learning rate schedule for the training runs",
+        "Performance of LLMs improve most if model size and dataset size are scaled up together"
+      ],
+      "correctAnswer": "Kaplan laws use dynamic learning rate schedule for the training runs",
+      "explanation": "Option (C) is correct based on NPTEL DLNLP Assignment 11."
+    },
+    {
+      "question": "90. Which of the following is /are True?",
+      "options": [
+        "Mixtral has 8x experts in feed -forward layer",
+        "LLaMa2 uses RoPE and SwiGLU",
+        "QWen model is trained on multilingual data",
+        "GEMINI does not support image inputs"
+      ],
+      "correctAnswer": "Mixtral has 8x experts in feed -forward layer / LLaMa2 uses RoPE and SwiGLU / QWen model is trained on multilingual data",
+      "explanation": "Multiple statements are correct: (A, B, C). Specifically: Mixtral has 8x experts in feed -forward layer / LLaMa2 uses RoPE and SwiGLU / QWen model is trained on multilingual data."
+    },
+    {
+      "question": "91. Choose the incorrect statement from the below options?",
+      "options": [
+        "sparse attention reduces the computation through the use of sparse operations,",
+        "Linear and Reformer models scale linearly with the sequence length",
+        "kNN lookup do averaging of tokens at long distances",
+        "In the kNN -augmented attention layer, the same queries ar e used for both the local context, and for the external memory."
+      ],
+      "correctAnswer": "kNN lookup do averaging of tokens at long distances",
+      "explanation": "Option (C) is correct based on NPTEL DLNLP Assignment 11."
+    },
+    {
+      "question": "92. What is the primary goal of Retrieval Augmented Generation (RAG)?",
+      "options": [
+        "To eliminate the need for prompt engineering in generative AI applications.",
+        "To reduce the cost of training and deploying foundation models.",
+        "To replace foundation models with smaller, more efficient models.",
+        "To improve the accuracy and relevance of responses from foundation models."
+      ],
+      "correctAnswer": "To improve the accuracy and relevance of responses from foundation models.",
+      "explanation": "Option (D) is correct based on NPTEL DLNLP Assignment 11."
+    },
+    {
+      "question": "93. Which of the following statements about the Swish activation function is correct where Swish function is defined as f(x)=x ⋅σ(βx)",
+      "options": [
+        "Here β can not be a trainable parameter, it should be always constant",
+        "When β=1.702, Swish closely approximates the GELU activation function.",
+        "As β→∞, Swish behaves like the Sigmoid function.",
+        "As β→∞, Swish behaves like the ReLU function."
+      ],
+      "correctAnswer": "When β=1.702, Swish closely approximates the GELU activation function. / As β→∞, Swish behaves like the ReLU function.",
+      "explanation": "Multiple statements are correct: (B, D). Specifically: When β=1.702, Swish closely approximates the GELU activation function. / As β→∞, Swish behaves like the ReLU function.."
+    },
+    {
+      "question": "94. Suppose you are using a Transformer model with 100 million parameters for training. For an input sequence of length 20, approximately how many FLOPs will be required in forward propagation? [2 marks]",
+      "options": [
+        "100 million",
+        "200 million",
+        "4000 million",
+        "2000 m illion"
+      ],
+      "correctAnswer": "4000 million",
+      "explanation": "For forward propagation, compute FLOPs ≈ 2 × P × N = 2 × (100 × 10^6) × 20 = 4,000 million (4 billion) FLOPs."
+    },
+    {
+      "question": "95. As per chinchilla’s scaling laws, to train a compute -optimal model of 8B parameters, how many tokens should you ideally pretrain it on?",
+      "options": [
+        "As large as possible",
+        "8 B tokens",
+        "1.6 trillion tokens",
+        "160 B tokens"
+      ],
+      "correctAnswer": "160 B tokens",
+      "explanation": "Under Chinchilla scaling laws, tokens = 20 × parameters = 20 × 8B = 160B tokens."
+    },
+    {
+      "question": "96. Suppose you are using T5 bias with n_b = 128. What will be the last index of the bucket which uses a single offset? After this index, each bucket will be used for multiple offset values.",
+      "options": [
+        "63",
+        "64",
+        "31",
+        "32"
+      ],
+      "correctAnswer": "63",
+      "explanation": "Option (A) is correct based on NPTEL DLNLP Assignment 11."
+    },
+    {
+      "question": "97. Which architectural component appears to store multilingual knowledge according to the research?",
+      "options": [
+        "Self-attention mechanisms exclusively",
+        "Feed-forward networks exclusively",
+        "Self-attention for reasoning and feed-forward structures for multilingual knowledge",
+        "Equal distribution across all components"
+      ],
+      "correctAnswer": "Self-attention for reasoning and feed-forward structures for multilingual knowledge",
+      "explanation": "- The research indicates that LLMs employ \"English for reasoning (through self-attention) and leveraging multilingual knowledge (through feed-forward structures).\""
+    },
+    {
+      "question": "98. What fundamental insight about multilingual LLMs is revealed by deactivating language-specific neur ons?",
+      "options": [
+        "Models are inherently monolingual and translation occurs post-processing",
+        "Models have redundant neurons that serve no purpose",
+        "Deactivating Chinese-specific neurons can cause the model to produce outputs in English",
+        "Neurons are universally language-agnostic throughout the model"
+      ],
+      "correctAnswer": "Deactivating Chinese-specific neurons can cause the model to produce outputs in English",
+      "explanation": "Option (C) is correct based on NPTEL DLNLP Assignment 12."
+    },
+    {
+      "question": "99. Based on the LAPE (language activation probability entropy) score, how are \"language-specific neur ons\" identified?",
+      "options": [
+        "Neurons with high entropy across all languages",
+        "Neurons that show consistent response patterns regardless of language",
+        "Neurons with consistently low activation for all languages",
+        "Neurons with low entropy , indicating preferential activation for specific languages"
+      ],
+      "correctAnswer": "Neurons with low entropy , indicating preferential activation for specific languages",
+      "explanation": "Option (D) is correct based on NPTEL DLNLP Assignment 12."
+    },
+    {
+      "question": "100. What happens when language-specific neur ons for a particular language are deactivated compar ed to when random neur ons are deactivated?",
+      "options": [
+        "Performance remains mostly unchanged in both cases",
+        "Random neuron deactivation severely impacts performance while language-specific deactivation has minimal impact",
+        "Language-specific neuron deactivation dramatically reduces performance in that language, while random deactivation has minimal impact",
+        "Both types of deactivation improve performance by reducing noise"
+      ],
+      "correctAnswer": "Language-specific neuron deactivation dramatically reduces performance in that language, while random deactivation has minimal impact",
+      "explanation": "- The results table shows that deactivating language-specific neurons reduces performance to near zero for many languages, while random neuron deactivation has minimal impact on performance."
+    },
+    {
+      "question": "101. What is the primary differ ence between Gradient Ascent (GA) unlearning and traditional fine-tuning appr oaches for LLMs?",
+      "options": [
+        "GA requires no training data at all",
+        "GA reverses the direction of gradient updates to increase loss on undesired data",
+        "GA is only applicable to transformer -based architectures",
+        "GA is exclusively used for removing copyrighted content"
+      ],
+      "correctAnswer": "GA reverses the direction of gradient updates to increase loss on undesired data",
+      "explanation": "GA reverses the direction of gradient updates to increase loss on undesired data"
+    },
+    {
+      "question": "102. Why is using KL divergence preferr ed over cross-entr opy for maintaining model performance on normal tasks during unlearning?",
+      "options": [
+        "KL diver gence preserves the original model's distribution better",
+        "Cross-entropy causes too much emphasis on incorrect outputs",
+        "KL diver gence requires fewer computational resources",
+        "Cross-entropy creates more bias in the output distribution"
+      ],
+      "correctAnswer": "KL diver gence preserves the original model's distribution better",
+      "explanation": ") KL divergence preserves the original model's distribution better"
+    },
+    {
+      "question": "103. In the practical application of unlearning to remove copyrighted content (Harry Potter), what metric should be used to evaluate the effectiveness of unlearning?",
+      "options": [
+        "Character -level edit distance between outputs",
+        "BLEU similarity score between generated completions and ground truth",
+        "Human evaluation of literary style similarity",
+        "Token-level perplexity on prompt completions"
+      ],
+      "correctAnswer": "BLEU similarity score between generated completions and ground truth",
+      "explanation": ") BLEU similarity score between generated completions and ground truth"
+    },
+    {
+      "question": "104. In the context of unlearning harmful responses, why does the Random Mismatch appr oach help preserve normal utility compar ed to simple Gradient Ascent?",
+      "options": [
+        "It introduces noise into the model parameters",
+        "It forces the model to generate uncorrelated outputs for problematic inputs",
+        "It makes the model completely ignore certain types of inputs",
+        "It replaces harmful knowledge with beneficial knowledge"
+      ],
+      "correctAnswer": "It forces the model to generate uncorrelated outputs for problematic inputs",
+      "explanation": ") It forces the model to generate uncorrelated outputs for problematic inputs"
+    },
+    {
+      "question": "105. What theor etical implication about multilingual models is most strongly supported by the finding that intermediate representations in non-English to non-English translation tasks show English tokens?",
+      "options": [
+        "Multilingual models are actually ensembles of separate monolingual models",
+        "English serves as an interlingua or conceptual bridge in multilingual models",
+        "The finding is merely an artifact of visualization techniques",
+        "Language-specific tokens are randomly distributed throughout processing"
+      ],
+      "correctAnswer": "English serves as an interlingua or conceptual bridge in multilingual models",
+      "explanation": "- The emer gence of English token probabilities during intermediate processing when translating between two non-English languages strongly suggests that English serves as an interlingua or conceptual bridge within these models, likely due to the predominance of English in training data."
+    },
+    {
+      "question": "106. What crucial insight about multilingual model architectur e is revealed by comparing the distribution of language-specific neur ons between FFN structur es and Attention structur es?",
+      "options": [
+        "Both structures contain equal numbers of language-specific neurons",
+        "FFN structures consistently contain more language-specific neurons across all layers",
+        "Attention structures are responsible for maintaining linguistic features",
+        "Language-specific neurons only appear in the encoder section of transformers"
+      ],
+      "correctAnswer": "FFN structures consistently contain more language-specific neurons across all layers",
+      "explanation": "- \"Number of language-specific neurons when processing multilingual queries\" demonstrates that FFN (Feed-Forward Network) structures consistently contain more language-specific neurons than attention structures across most layers, suggesting specialized roles in multilingual processing."
+    }
+  ]
+},
+{
+    "id": "genai-cv-full-combined-test",
+    "title": "Generative AI for Computer Vision - Full Combined Grand Test (Weeks 1-12)",
+    "subject": "Generative AI for Computer Vision",
+    "date": "22/10/2026",
+    "questions": [
+      {
+        "question": "1. Which of the following is a generative model?",
+        "options": [
+          "ResNet",
+          "U-Net",
+          "GAN",
+          "AlexNet"
+        ],
+        "correctAnswer": "GAN",
+        "explanation": "GAN (Generative Adversarial Network) is a generative model designed to synthesize new data samples that resemble the training distribution, unlike discriminative architectures such as ResNet, U-Net, and AlexNet."
+      },
+      {
+        "question": "2. The main purpose of a generative vision model is to:",
+        "options": [
+          "Classify images",
+          "Detect objects",
+          "Generate new images",
+          "Compress images"
+        ],
+        "correctAnswer": "Generate new images",
+        "explanation": "The primary purpose of a generative vision model is to learn the underlying probability distribution of images and generate new, unseen visual samples."
+      },
+      {
+        "question": "3. Which of the following is an application of generative models in computer vision?",
+        "options": [
+          "Image synthesis",
+          "Image restoration",
+          "Data augmentation",
+          "All of the above"
+        ],
+        "correctAnswer": "All of the above",
+        "explanation": "Generative models in computer vision are used for image synthesis, image restoration (super-resolution, inpainting, denoising), and synthetic data augmentation."
+      },
+      {
+        "question": "4. A joint probability distribution describes:",
+        "options": [
+          "The probability of a single random variable",
+          "The probability of two or more random variables occurring together",
+          "Only independent events",
+          "Only continuous variables"
+        ],
+        "correctAnswer": "The probability of two or more random variables occurring together",
+        "explanation": "A joint probability distribution represents the probability that two or more random variables simultaneously take on specific values."
+      },
+      {
+        "question": "5. Correlation measures:",
+        "options": [
+          "The size of a dataset",
+          "The strength and direction of the relationship between two variables",
+          "The average value of a variable",
+          "The maximum value in a dataset"
+        ],
+        "correctAnswer": "The strength and direction of the relationship between two variables",
+        "explanation": "Correlation measures both the strength and the direction of the linear relationship between two variables."
+      },
+      {
+        "question": "6. Covariance tells us:",
+        "options": [
+          "Whether two variables change together",
+          "The average of a dataset",
+          "The maximum likelihood",
+          "The number of observations"
+        ],
+        "correctAnswer": "Whether two variables change together",
+        "explanation": "Covariance indicates the directional relationship between two variables—showing whether higher values of one variable correspond to higher (or lower) values of another."
+      },
+      {
+        "question": "7. The objective of Maximum Likelihood Estimation (MLE) is to:",
+        "options": [
+          "Minimize training time",
+          "Find parameter values that make the observed data most likely",
+          "Reduce the number of features",
+          "Increase the dataset size"
+        ],
+        "correctAnswer": "Find parameter values that make the observed data most likely",
+        "explanation": "The objective of Maximum Likelihood Estimation (MLE) is to find the model parameters that maximize the likelihood of the observed training dataset."
+      },
+      {
+        "question": "8. Bayesian learning combines:",
+        "options": [
+          "Prior knowledge and observed data",
+          "Only training data",
+          "Only test data",
+          "Random initialization"
+        ],
+        "correctAnswer": "Prior knowledge and observed data",
+        "explanation": "Bayesian learning uses Bayes' theorem to combine prior knowledge (prior distribution) and observed evidence/data to compute the posterior distribution."
+      },
+      {
+        "question": "9. Bayesian learning updates model parameters as new evidence becomes available.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswer": "True",
+        "explanation": "In Bayesian inference, prior distributions are iteratively updated to posterior distributions as new empirical data or evidence becomes available."
+      },
+      {
+        "question": "10. Generative AI models can create new images that resemble the training data.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswer": "True",
+        "explanation": "Generative AI models learn the statistical distribution of training images to synthesize novel images that closely resemble the training dataset."
+      },
+      {
+        "question": "11. The basic computational unit of an artificial neural network is called:",
+        "options": [
+          "Kernel",
+          "Neuron",
+          "Compiler",
+          "Database"
+        ],
+        "correctAnswer": "Neuron",
+        "explanation": "An artificial neuron (or node/perceptron) is the fundamental computational unit of an artificial neural network."
+      },
+      {
+        "question": "12. Which of the following is an application of neural networks?",
+        "options": [
+          "Image recognition",
+          "Speech recognition",
+          "Natural language processing",
+          "All of the above"
+        ],
+        "correctAnswer": "All of the above",
+        "explanation": "Neural networks are widely applied in computer vision (image recognition), audio processing (speech recognition), and natural language processing (NLP)."
+      },
+      {
+        "question": "13. A Single Layer Perceptron (SLP) can correctly solve:",
+        "options": [
+          "Linearly separable problems",
+          "Only non-linearly separable problems",
+          "All complex problems",
+          "No classification problems"
+        ],
+        "correctAnswer": "Linearly separable problems",
+        "explanation": "A Single Layer Perceptron creates a single linear decision boundary and can only separate classes that are linearly separable."
+      },
+      {
+        "question": "14. Which of the following is a major limitation of a Single Layer Perceptron?",
+        "options": [
+          "It cannot solve linearly separable problems",
+          "It cannot solve non-linearly separable problems such as XOR",
+          "It cannot accept numerical inputs",
+          "It always requires multiple hidden layers"
+        ],
+        "correctAnswer": "It cannot solve non-linearly separable problems such as XOR",
+        "explanation": "A major limitation of a Single Layer Perceptron is that it cannot solve non-linearly separable problems like the XOR function without hidden layers."
+      },
+      {
+        "question": "15. What is the main purpose of an activation function in a neural network?",
+        "options": [
+          "To introduce non-linearity into the network",
+          "To store the training data",
+          "To increase the number of input features",
+          "To remove all network weights"
+        ],
+        "correctAnswer": "To introduce non-linearity into the network",
+        "explanation": "Activation functions introduce non-linearities into neural networks, enabling them to learn complex, non-linear relationships rather than just linear combinations."
+      },
+      {
+        "question": "16. The Softmax activation function is commonly used in the output layer for:",
+        "options": [
+          "Multi-class classification",
+          "Image resizing",
+          "Data storage",
+          "Feature normalization only"
+        ],
+        "correctAnswer": "Multi-class classification",
+        "explanation": "The Softmax activation function converts raw output logits into a probability distribution summing to 1, making it ideal for multi-class classification."
+      },
+      {
+        "question": "17. During the forward pass of a neural network:",
+        "options": [
+          "Data moves from the input layer toward the output layer",
+          "Data moves only from the output layer to the input layer",
+          "Weights are always set to zero",
+          "The training data is deleted"
+        ],
+        "correctAnswer": "Data moves from the input layer toward the output layer",
+        "explanation": "During the forward pass, input data propagates forward through successive layers (calculating weighted sums and activations) to generate predictions at the output layer."
+      },
+      {
+        "question": "18. What is the main purpose of backpropagation during neural network training?",
+        "options": [
+          "To calculate gradients and help update the network weights",
+          "To add more training samples",
+          "To remove the output layer",
+          "To increase the number of classes"
+        ],
+        "correctAnswer": "To calculate gradients and help update the network weights",
+        "explanation": "Backpropagation computes the gradients of the loss function with respect to the network weights via the chain rule, enabling optimization algorithms (like SGD) to update the weights."
+      },
+      {
+        "question": "19. Overfitting occurs when:",
+        "options": [
+          "A model performs well on training data but poorly on unseen data",
+          "A model performs equally well on all datasets",
+          "A model has no trainable parameters",
+          "Training data is never used"
+        ],
+        "correctAnswer": "A model performs well on training data but poorly on unseen data",
+        "explanation": "Overfitting happens when a model memorizes patterns and noise specific to the training set, causing it to generalize poorly to unseen validation or test data."
+      },
+      {
+        "question": "20. Which of the following techniques can help reduce overfitting?",
+        "options": [
+          "Regularization",
+          "Early stopping",
+          "Cross-validation",
+          "All of the above"
+        ],
+        "correctAnswer": "All of the above",
+        "explanation": "Techniques such as weight regularization (L1/L2), dropout, early stopping, and cross-validation are standard methods to mitigate overfitting."
+      },
+      {
+        "question": "21. CNN stands for:",
+        "options": [
+          "Computer Neural Network",
+          "Convolutional Neural Network",
+          "Connected Neural Network",
+          "Complex Neural Network"
+        ],
+        "correctAnswer": "Convolutional Neural Network",
+        "explanation": "CNN stands for Convolutional Neural Network, a deep learning architecture specialized for grid-structured data such as images."
+      },
+      {
+        "question": "22. Each neuron in a convolutional layer is connected only to:",
+        "options": [
+          "a whole input image",
+          "a group of input images",
+          "a small local region (patch) of the input image",
+          "None of the above"
+        ],
+        "correctAnswer": "a small local region (patch) of the input image",
+        "explanation": "Each neuron in a convolutional layer is connected only to a small local region (patch) of the input instead of the entire input image, defined by its receptive field."
+      },
+      {
+        "question": "23. What is the primary purpose of the convolution layer in a CNN?",
+        "options": [
+          "Reduce image size",
+          "Extract features from the input image",
+          "Store training data",
+          "Calculate loss"
+        ],
+        "correctAnswer": "Extract features from the input image",
+        "explanation": "Convolution layers apply learnable filters to extract visual features such as edges, textures, and higher-level patterns from the input image."
+      },
+      {
+        "question": "24. Pooling is mainly used to:",
+        "options": [
+          "Increase the image size",
+          "Reduce the spatial dimensions of feature maps",
+          "Add more neurons",
+          "Increase the number of filters"
+        ],
+        "correctAnswer": "Reduce the spatial dimensions of feature maps",
+        "explanation": "Pooling reduces the spatial dimensions (height and width) of feature maps, which reduces computation and parameters while providing translation invariance."
+      },
+      {
+        "question": "25. Which of the following is a famous CNN architecture?",
+        "options": [
+          "AlexNet",
+          "Decision Tree",
+          "K-Means",
+          "Naïve Bayes"
+        ],
+        "correctAnswer": "AlexNet",
+        "explanation": "AlexNet is a landmark CNN architecture designed by Alex Krizhevsky, Ilya Sutskever, and Geoffrey Hinton that won the ImageNet Large Scale Visual Recognition Challenge in 2012."
+      },
+      {
+        "question": "26. Which CNN architecture introduced the Inception module?",
+        "options": [
+          "LeNet",
+          "AlexNet",
+          "GoogLeNet",
+          "VGGNet"
+        ],
+        "correctAnswer": "GoogLeNet",
+        "explanation": "GoogLeNet (Inception v1) introduced the Inception module to perform convolutions at multiple scales (1x1, 3x3, 5x5) and pooling in parallel within the same layer."
+      },
+      {
+        "question": "27. GoogLeNet is known for using:",
+        "options": [
+          "Inception Module",
+          "Only 1 × 1 filters",
+          "No convolution layers",
+          "Only pooling layers"
+        ],
+        "correctAnswer": "Inception Module",
+        "explanation": "GoogLeNet is famous for its Inception module, which combines multiple parallel convolution operations (including 1×1, 3×3, and 5×5 filters) to capture multi-scale features efficiently."
+      },
+      {
+        "question": "28. Which problem commonly occurs when very deep neural networks are trained?",
+        "options": [
+          "Vanishing gradient problem",
+          "Database corruption",
+          "Data duplication",
+          "Image compression"
+        ],
+        "correctAnswer": "Vanishing gradient problem",
+        "explanation": "In very deep networks, backpropagated gradients can shrink exponentially through many layers, causing earlier layers to learn very slowly or stall completely (vanishing gradient problem)."
+      },
+      {
+        "question": "29. Which activation function helps reduce the vanishing gradient problem?",
+        "options": [
+          "ReLU",
+          "Linear",
+          "Step Function",
+          "Identity Function"
+        ],
+        "correctAnswer": "ReLU",
+        "explanation": "ReLU (Rectified Linear Unit) has a constant gradient of 1 for all positive inputs, avoiding gradient saturation and mitigating the vanishing gradient problem in deep networks."
+      },
+      {
+        "question": "30. True/False? Increasing the number of layers always improves the performance of a neural network.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswer": "False",
+        "explanation": "Simply making a network deeper does not always improve performance because deep networks can suffer from vanishing/exploding gradients, optimization degradation, and overfitting."
+      },
+      {
+        "question": "31. What is the main idea behind ResNet?",
+        "options": [
+          "To reduce image size",
+          "To use residual (skip) connections",
+          "To remove convolution layers",
+          "To replace activation functions"
+        ],
+        "correctAnswer": "To use residual (skip) connections",
+        "explanation": "ResNet introduces residual (skip) connections that allow information to bypass intermediate layers, enabling the training of networks with hundreds of layers."
+      },
+      {
+        "question": "32. A skip (residual) connection allows information to:",
+        "options": [
+          "Skip one or more layers",
+          "Skip the input image",
+          "Skip the output layer",
+          "Skip the loss function"
+        ],
+        "correctAnswer": "Skip one or more layers",
+        "explanation": "A skip connection directly forwards the input of a layer/block to its output by identity mapping, skipping one or more intermediate transformation layers."
+      },
+      {
+        "question": "33. What is the main advantage of skip connections?",
+        "options": [
+          "They increase image resolution.",
+          "They reduce the number of classes.",
+          "They remove pooling layers.",
+          "They help reduce the vanishing gradient problem."
+        ],
+        "correctAnswer": "They help reduce the vanishing gradient problem.",
+        "explanation": "Skip connections provide a direct highway for gradients to flow backwards during backpropagation, effectively preventing the vanishing gradient problem."
+      },
+      {
+        "question": "34. DenseNet differs from ResNet because:",
+        "options": [
+          "Each layer is connected to every previous layer.",
+          "It has no convolution layers.",
+          "It uses only fully connected layers.",
+          "It cannot perform image classification."
+        ],
+        "correctAnswer": "Each layer is connected to every previous layer.",
+        "explanation": "In DenseNet (Densely Connected Convolutional Networks), each layer receives feature maps concatenated from all preceding layers, maximizing feature reuse and gradient flow."
+      },
+      {
+        "question": "35. Which CNN architecture is specifically designed for handheld and embedded devices?",
+        "options": [
+          "AlexNet",
+          "VGGNet",
+          "MobileNet",
+          "LeNet"
+        ],
+        "correctAnswer": "MobileNet",
+        "explanation": "MobileNet uses depthwise separable convolutions to dramatically reduce parameter count and computational complexity, making it ideal for mobile and embedded devices."
+      },
+      {
+        "question": "36. EfficientNet mainly improves performance by:",
+        "options": [
+          "Removing convolution layers",
+          "Scaling network depth, width, and resolution synchronously",
+          "Using only larger filters",
+          "Eliminating activation functions"
+        ],
+        "correctAnswer": "Scaling network depth, width, and resolution synchronously",
+        "explanation": "EfficientNet introduces compound scaling, uniformly scaling network depth, width, and image resolution with a fixed compound coefficient for optimal accuracy and efficiency."
+      },
+      {
+        "question": "37. Sequence modeling is mainly used for:",
+        "options": [
+          "Processing sequential data",
+          "Image compression",
+          "Database management",
+          "Network security"
+        ],
+        "correctAnswer": "Processing sequential data",
+        "explanation": "Sequence modeling deals with sequential, time-dependent data where the order of elements carries semantic meaning, such as text, speech, and time-series."
+      },
+      {
+        "question": "38. RNN stands for:",
+        "options": [
+          "Repeated Neural Network",
+          "Residual Neural Network",
+          "Recurrent Neural Network",
+          "Random Neural Network"
+        ],
+        "correctAnswer": "Recurrent Neural Network",
+        "explanation": "RNN stands for Recurrent Neural Network, an architecture designed to process sequential data by maintaining an internal recurrent state."
+      },
+      {
+        "question": "39. Which of the following is a common application of RNN?",
+        "options": [
+          "Sorting numbers",
+          "Image resizing",
+          "Data compression",
+          "Language translation"
+        ],
+        "correctAnswer": "Language translation",
+        "explanation": "RNNs and recurrent sequence-to-sequence models are widely used for sequential applications such as machine translation, speech recognition, and language modeling."
+      },
+      {
+        "question": "40. The main feature of an RNN is that it:",
+        "options": [
+          "Has no hidden layers",
+          "Uses only convolution operations",
+          "Uses temporal context while processing sequences",
+          "Can process only images"
+        ],
+        "correctAnswer": "Uses temporal context while processing sequences",
+        "explanation": "RNNs maintain a recurring hidden state that preserves historical context across time steps, allowing the model to use temporal context while processing sequences."
+      },
+      {
+        "question": "41. What is the main purpose of Backpropagation Through Time (BPTT) in an RNN?",
+        "options": [
+          "To generate images",
+          "To train the RNN by computing gradients over time",
+          "To increase image resolution",
+          "To remove the hidden state"
+        ],
+        "correctAnswer": "To train the RNN by computing gradients over time",
+        "explanation": "BPTT unrolls the RNN across the sequence time steps and propagates gradients backward through time to update network parameters."
+      },
+      {
+        "question": "42. In a character-level RNN, the model processes:",
+        "options": [
+          "Only numerical tables",
+          "Only complete images",
+          "Individual characters in a sequence",
+          "Only audio signals"
+        ],
+        "correctAnswer": "Individual characters in a sequence",
+        "explanation": "In character-level modeling, the RNN processes one character at each time step, learning vocabulary structure, spelling, and character transitions."
+      },
+      {
+        "question": "43. Which problem is commonly associated with traditional RNNs?",
+        "options": [
+          "Vanishing gradient problem",
+          "Image resizing problem",
+          "Object detection problem",
+          "Image compression problem"
+        ],
+        "correctAnswer": "Vanishing gradient problem",
+        "explanation": "In standard RNNs, gradients propagated over many time steps undergo repeated matrix multiplications, often shrinking exponentially (vanishing gradients) and hindering long-term dependency learning."
+      },
+      {
+        "question": "44. Which neural network architecture is specifically designed to handle long-term dependencies in sequential data?",
+        "options": [
+          "CNN",
+          "LSTM",
+          "SVM",
+          "K-Means"
+        ],
+        "correctAnswer": "LSTM",
+        "explanation": "Long Short-Term Memory (LSTM) networks incorporate gating mechanisms (forget, input, and output gates) and a cell state to regulate information flow and preserve long-term dependencies."
+      },
+      {
+        "question": "45. What is the main purpose of the attention mechanism in sequence-to-sequence models?",
+        "options": [
+          "To resize images",
+          "To remove all input information",
+          "To reduce the number of classes",
+          "To focus on the most relevant parts of the input sequence"
+        ],
+        "correctAnswer": "To focus on the most relevant parts of the input sequence",
+        "explanation": "The attention mechanism enables the decoder to dynamically attend to and weigh the most relevant parts of the input sequence for each output token."
+      },
+      {
+        "question": "46. Computer vision mainly deals with:",
+        "options": [
+          "Understanding and analyzing images and videos",
+          "Managing computer networks",
+          "Designing databases",
+          "Writing operating systems"
+        ],
+        "correctAnswer": "Understanding and analyzing images and videos",
+        "explanation": "Computer vision is an interdisciplinary field of AI enabling computational systems to process, analyze, and interpret visual data from the real world."
+      },
+      {
+        "question": "47. Which of the following is a common computer vision task?",
+        "options": [
+          "Image classification",
+          "Object detection",
+          "Semantic segmentation",
+          "All of the above"
+        ],
+        "correctAnswer": "All of the above",
+        "explanation": "Image classification (labeling an image), object detection (localizing and categorizing objects with bounding boxes), and semantic segmentation (pixel-level labeling) are core tasks in computer vision."
+      },
+      {
+        "question": "48. What is image super-resolution used for?",
+        "options": [
+          "Increasing the resolution or quality of an image",
+          "Detecting passwords",
+          "Removing the image completely",
+          "Classifying text documents"
+        ],
+        "correctAnswer": "Increasing the resolution or quality of an image",
+        "explanation": "Image super-resolution reconstructs a high-resolution, sharp image from one or more degraded low-resolution input images."
+      },
+      {
+        "question": "49. Which of the following is an application of Generative AI in computer vision?",
+        "options": [
+          "Image-to-image translation",
+          "Medical image synthesis",
+          "Face synthesis",
+          "All of the above"
+        ],
+        "correctAnswer": "All of the above",
+        "explanation": "Generative AI powers numerous computer vision applications including style transfer/image translation (e.g., Pix2Pix, CycleGAN), synthetic medical imaging, and photorealistic face generation."
+      },
+      {
+        "question": "50. What is image in-painting?",
+        "options": [
+          "Converting an image into a table",
+          "Reducing the number of image classes",
+          "Filling or reconstructing missing regions of an image",
+          "Removing all colors from an image"
+        ],
+        "correctAnswer": "Filling or reconstructing missing regions of an image",
+        "explanation": "Image inpainting is the process of restoring or reconstructing missing, deteriorated, or intentionally masked parts of an image using context from surrounding regions."
+      },
+      {
+        "question": "51. What is the main goal of a generative model?",
+        "options": [
+          "To generate new data similar to the training data",
+          "To delete the training data",
+          "To sort the input data",
+          "To reduce the number of classes"
+        ],
+        "correctAnswer": "To generate new data similar to the training data",
+        "explanation": "Generative models learn the underlying true data distribution p(x) in order to sample and generate new data instances that closely resemble the training distribution."
+      },
+      {
+        "question": "52. What does Maximum Likelihood Estimation (MLE) try to find?",
+        "options": [
+          "The largest image",
+          "The smallest dataset",
+          "Parameters that make the observed data most likely",
+          "The number of classes"
+        ],
+        "correctAnswer": "Parameters that make the observed data most likely",
+        "explanation": "Maximum Likelihood Estimation estimates model parameters by selecting values that maximize the probability (likelihood) of observing the given dataset."
+      },
+      {
+        "question": "53. What is density estimation used for?",
+        "options": [
+          "Increasing image resolution",
+          "Estimating the probability distribution of data",
+          "Removing image noise only",
+          "Detecting computer viruses"
+        ],
+        "correctAnswer": "Estimating the probability distribution of data",
+        "explanation": "Density estimation involves constructing an estimate of an unobservable underlying probability density function based on observed data."
+      },
+      {
+        "question": "54. What is an autoregressive model?",
+        "options": [
+          "A model that predicts the current value using previous values",
+          "A model that only processes images",
+          "A model that does not use previous information",
+          "A model used only for data compression"
+        ],
+        "correctAnswer": "A model that predicts the current value using previous values",
+        "explanation": "An autoregressive model uses the chain rule of probability to predict each subsequent variable conditioned on all previously generated/observed values."
+      },
+      {
+        "question": "55. PixelCNN is mainly used for:",
+        "options": [
+          "Compressing text documents",
+          "Detecting computer hardware problems",
+          "Sorting image files",
+          "Generating images pixel by pixel"
+        ],
+        "correctAnswer": "Generating images pixel by pixel",
+        "explanation": "PixelCNN is a generative autoregressive neural network that generates images sequentially pixel by pixel using masked convolutions to model dependencies."
+      },
+      {
+        "question": "56. In PixelRNN, the name \"RNN\" refers to:",
+        "options": [
+          "Recurrent Neural Network",
+          "Residual Neural Network",
+          "Random Neural Network",
+          "Recursive Normal Network"
+        ],
+        "correctAnswer": "Recurrent Neural Network",
+        "explanation": "PixelRNN uses recurrent neural networks (such as Diagonal BiLSTM or Row LSTM) to model sequential pixel dependencies during image generation."
+      },
+      {
+        "question": "57. What does spatial context in an image refer to?",
+        "options": [
+          "Only the image file size",
+          "Information about the relationships between nearby or different regions in an image",
+          "The number of image classes",
+          "The image file name"
+        ],
+        "correctAnswer": "Information about the relationships between nearby or different regions in an image",
+        "explanation": "Spatial context captures geometric and positional relationships between adjacent pixels, visual patches, or semantic entities across an image."
+      },
+      {
+        "question": "58. Image captioning aims to:",
+        "options": [
+          "Change the image file format",
+          "Increase image resolution",
+          "Remove objects from an image",
+          "Generate a textual description of an image"
+        ],
+        "correctAnswer": "Generate a textual description of an image",
+        "explanation": "Image captioning bridges computer vision and natural language processing to produce natural language descriptions describing the contents of an image."
+      },
+      {
+        "question": "59. What is the main purpose of attention in image captioning?",
+        "options": [
+          "To remove all image features",
+          "To reduce the image file size",
+          "To focus on relevant parts of an image while generating a caption",
+          "To change the image color"
+        ],
+        "correctAnswer": "To focus on relevant parts of an image while generating a caption",
+        "explanation": "Attention mechanisms allow an image captioning model to dynamically focus on relevant spatial regions of the image corresponding to each generated word."
+      },
+      {
+        "question": "60. A Fully Visible Belief Network (FVBN) is a type of:",
+        "options": [
+          "Operating system",
+          "Image editing software",
+          "Database system",
+          "Generative model"
+        ],
+        "correctAnswer": "Generative model",
+        "explanation": "A Fully Visible Belief Network (FVBN) is an autoregressive generative model where all variables are observed and their joint distribution is factorized via conditional probabilities."
+      },
+      {
+        "question": "61. What is the main purpose of the attention mechanism?",
+        "options": [
+          "To focus on the most relevant parts of the input",
+          "To remove all input information",
+          "To reduce the number of classes",
+          "To increase image size"
+        ],
+        "correctAnswer": "To focus on the most relevant parts of the input",
+        "explanation": "The attention mechanism enables neural networks to compute dynamic importance weights and focus selectively on the most relevant components of the input."
+      },
+      {
+        "question": "62. In self-attention, the model mainly relates:",
+        "options": [
+          "Only the first and last elements",
+          "Only the input and output images",
+          "Different training datasets",
+          "Different parts of the same input sequence"
+        ],
+        "correctAnswer": "Different parts of the same input sequence",
+        "explanation": "Self-attention (intra-attention) relates different positions within the same input sequence to compute a contextualized representation of that sequence."
+      },
+      {
+        "question": "63. What is the purpose of masked self-attention?",
+        "options": [
+          "To prevent a position from attending to future positions",
+          "To remove all attention scores",
+          "To increase the image resolution",
+          "To remove the input sequence"
+        ],
+        "correctAnswer": "To prevent a position from attending to future positions",
+        "explanation": "Masked self-attention applies an upper-triangular mask (setting future positions to negative infinity) to prevent autoregressive models from attending to subsequent tokens during generation."
+      },
+      {
+        "question": "64. Multi-head self-attention uses:",
+        "options": [
+          "Multiple input images only",
+          "Only one attention score",
+          "Multiple attention heads to capture different relationships",
+          "No attention mechanism"
+        ],
+        "correctAnswer": "Multiple attention heads to capture different relationships",
+        "explanation": "Multi-head attention projects queries, keys, and values into multiple representation subspaces, allowing the model to jointly attend to different types of contextual relationships."
+      },
+      {
+        "question": "65. A Transformer is mainly based on:",
+        "options": [
+          "Pooling only",
+          "Attention mechanisms",
+          "Decision trees",
+          "K-means clustering"
+        ],
+        "correctAnswer": "Attention mechanisms",
+        "explanation": "Transformers rely entirely on self-attention and cross-attention mechanisms to model relationships between input elements, eliminating recurrence and convolutions."
+      },
+      {
+        "question": "66. How does a Vision Transformer (ViT) process an image?",
+        "options": [
+          "It uses only pooling layers",
+          "It converts the image directly into audio",
+          "It removes all image information",
+          "It divides the image into patches and processes them as tokens"
+        ],
+        "correctAnswer": "It divides the image into patches and processes them as tokens",
+        "explanation": "Vision Transformers divide an image into fixed-size non-overlapping patches (e.g., 16×16), linearly project them into patch embeddings, prepend a class token, add positional embeddings, and feed them into a standard Transformer encoder."
+      },
+      {
+        "question": "67. One major difference between a Transformer and a CNN is that:",
+        "options": [
+          "Transformers use attention to model relationships between input elements",
+          "Transformers cannot process images",
+          "CNNs do not have trainable parameters",
+          "CNNs can only process text"
+        ],
+        "correctAnswer": "Transformers use attention to model relationships between input elements",
+        "explanation": "Unlike CNNs that rely on localized convolution kernels with fixed receptive fields, Transformers use self-attention to model global dependencies directly across all input elements."
+      },
+      {
+        "question": "68. What is the main role of the Transformer encoder?",
+        "options": [
+          "To increase image resolution",
+          "To delete the input sequence",
+          "To transform the input into useful contextual representations",
+          "To store training data"
+        ],
+        "correctAnswer": "To transform the input into useful contextual representations",
+        "explanation": "The Transformer encoder processes the input embeddings through multi-head self-attention and feed-forward sublayers to generate rich, contextualized representations."
+      },
+      {
+        "question": "69. What is the purpose of input embedding?",
+        "options": [
+          "To convert input tokens into numerical vector representations",
+          "To remove the input tokens",
+          "To increase the number of images",
+          "To calculate the final accuracy"
+        ],
+        "correctAnswer": "To convert input tokens into numerical vector representations",
+        "explanation": "Input embedding maps discrete input tokens (such as word tokens or flattened image patches) into continuous dense vector representations suitable for neural network processing."
+      },
+      {
+        "question": "70. Why is positional encoding used in a Transformer?",
+        "options": [
+          "To remove the input sequence",
+          "To provide information about the position or order of input elements",
+          "To reduce the number of attention heads",
+          "To increase the image resolution"
+        ],
+        "correctAnswer": "To provide information about the position or order of input elements",
+        "explanation": "Because self-attention is permutation-invariant and lacks inherent recurrence or convolution, positional encodings are injected into the input embeddings to provide information about the sequential ordering of elements."
+      },
+      {
+        "question": "71. What is the main idea of a Vision Transformer (ViT)?",
+        "options": [
+          "To process images using image patches as tokens",
+          "To process only audio signals",
+          "To remove all image features",
+          "To replace images with text"
+        ],
+        "correctAnswer": "To process images using image patches as tokens",
+        "explanation": "Vision Transformer divides an image into smaller patches and treats these patches as tokens that can be processed using Transformer mechanisms."
+      },
+      {
+        "question": "72. DETR stands for:",
+        "options": [
+          "Deep Efficient Transformer Recognition",
+          "Detection Transformer",
+          "Deep Encoder Transformer Representation",
+          "Detection Training Recognition"
+        ],
+        "correctAnswer": "Detection Transformer",
+        "explanation": "DETR stands for DEtection TRansformer and uses a Transformer-based architecture for object detection."
+      },
+      {
+        "question": "73. What is a key feature of the Swin Transformer?",
+        "options": [
+          "It uses shifted windows for self-attention",
+          "It uses only fully connected layers",
+          "It does not use attention",
+          "It processes only text"
+        ],
+        "correctAnswer": "It uses shifted windows for self-attention",
+        "explanation": "Swin Transformer uses local windows for self-attention and shifts these windows between layers to allow information exchange between neighboring windows."
+      },
+      {
+        "question": "74. What is the main purpose of an Auto-Encoder?",
+        "options": [
+          "To increase the number of input features",
+          "To classify only images",
+          "To learn a compact representation of the input data",
+          "To remove the decoder"
+        ],
+        "correctAnswer": "To learn a compact representation of the input data",
+        "explanation": "An Auto-Encoder learns to encode input data into a compact representation and then reconstruct the original input."
+      },
+      {
+        "question": "75. An Auto-Encoder mainly consists of:",
+        "options": [
+          "Only an Encoder",
+          "Encoder and Decoder",
+          "Only a Decoder",
+          "Classifier and Pooling layer"
+        ],
+        "correctAnswer": "Encoder and Decoder",
+        "explanation": "An Auto-Encoder has two main parts: the encoder, which creates a compact representation, and the decoder, which reconstructs the input."
+      },
+      {
+        "question": "76. Which of the following is a difference between a Variational Auto-Encoder (VAE) and a traditional Auto-Encoder?",
+        "options": [
+          "VAE cannot generate data",
+          "VAE does not have an encoder",
+          "VAE does not have a decoder",
+          "VAE learns a probability distribution for the latent representation"
+        ],
+        "correctAnswer": "VAE learns a probability distribution for the latent representation",
+        "explanation": "A VAE learns a probability distribution over the latent space, allowing it to sample new latent representations and generate new data."
+      },
+      {
+        "question": "77. In a VAE, the typical sequence of operations is:",
+        "options": [
+          "Decoding → Encoding → Sampling",
+          "Sampling → Decoding → Encoding",
+          "Encoding → Sampling → Decoding",
+          "Decoding → Sampling → Encoding"
+        ],
+        "correctAnswer": "Encoding → Sampling → Decoding",
+        "explanation": "In a VAE, the input is first encoded into parameters of a latent distribution, a latent vector is sampled, and the decoder uses that sample to reconstruct or generate data."
+      },
+      {
+        "question": "78. In a VAE, the latent variable is generally:",
+        "options": [
+          "A sampled representation of the input",
+          "The original input image",
+          "The final output label",
+          "The training dataset"
+        ],
+        "correctAnswer": "A sampled representation of the input",
+        "explanation": "The latent variable is sampled from the distribution learned by the encoder and is used by the decoder to reconstruct or generate data."
+      },
+      {
+        "question": "79. In a VAE, why is sampling performed in the latent space?",
+        "options": [
+          "To enable generation of different possible outputs",
+          "To remove the encoder",
+          "To reduce the image resolution",
+          "To calculate classification accuracy"
+        ],
+        "correctAnswer": "To enable generation of different possible outputs",
+        "explanation": "Sampling allows a VAE to generate different data samples from its learned latent distribution."
+      },
+      {
+        "question": "80. What is the main purpose of the problem formulation in a VAE?",
+        "options": [
+          "To remove the latent space",
+          "To increase the number of images",
+          "To define how the input data and its underlying probability distribution are modelled",
+          "To replace the decoder with a CNN"
+        ],
+        "correctAnswer": "To define how the input data and its underlying probability distribution are modelled",
+        "explanation": "The problem formulation specifies how the observed data is related to latent variables and how the model can learn a useful probability distribution for generating data."
+      },
+      {
+        "question": "81. What is the main purpose of a Generative Adversarial Network (GAN)?",
+        "options": [
+          "To generate new data similar to the training data",
+          "To only classify images",
+          "To remove all training data",
+          "To perform only object detection"
+        ],
+        "correctAnswer": "To generate new data similar to the training data",
+        "explanation": "The main purpose of a Generative Adversarial Network (GAN) is to generate new, synthetic data samples that closely mimic the distribution of the training data."
+      },
+      {
+        "question": "82. A GAN mainly consists of which two networks?",
+        "options": [
+          "Encoder and Decoder",
+          "Generator and Discriminator",
+          "Classifier and Regressor",
+          "Transformer and CNN"
+        ],
+        "correctAnswer": "Generator and Discriminator",
+        "explanation": "A GAN consists of two competing neural networks: a Generator that creates synthetic data samples and a Discriminator that distinguishes between real and generated samples."
+      },
+      {
+        "question": "83. What is the main role of the Generator in a GAN?",
+        "options": [
+          "To distinguish real and fake data",
+          "To generate fake data samples",
+          "To calculate image labels",
+          "To remove noise from the dataset"
+        ],
+        "correctAnswer": "To generate fake data samples",
+        "explanation": "The Generator takes random noise as input and maps it to realistic synthetic data samples aimed at deceiving the Discriminator."
+      },
+      {
+        "question": "84. What is a common problem when training GANs?",
+        "options": [
+          "Always producing different classes",
+          "Too many input labels",
+          "No training data required",
+          "Mode collapse"
+        ],
+        "correctAnswer": "Mode collapse",
+        "explanation": "Mode collapse is a classic failure mode during GAN training where the Generator produces only a limited variety of outputs, repeatedly generating the same or similar samples."
+      },
+      {
+        "question": "85. What is the main idea of a Conditional GAN (cGAN)?",
+        "options": [
+          "It generates data based on additional information such as class labels",
+          "It removes the Generator",
+          "It does not use a Discriminator",
+          "It can only generate random noise"
+        ],
+        "correctAnswer": "It generates data based on additional information such as class labels",
+        "explanation": "Conditional GANs (cGANs) condition both the Generator and Discriminator on additional auxiliary information (such as class labels or text) to control the generation process."
+      },
+      {
+        "question": "86. What is the main purpose of Wasserstein GAN (WGAN)?",
+        "options": [
+          "To classify only text data",
+          "To remove the Generator",
+          "To improve the stability of GAN training",
+          "To increase image size only"
+        ],
+        "correctAnswer": "To improve the stability of GAN training",
+        "explanation": "Wasserstein GAN utilizes the Earth Mover's (Wasserstein-1) Distance to provide smooth, meaningful gradients everywhere, significantly improving training stability and alleviating mode collapse."
+      },
+      {
+        "question": "87. What happens during the forward diffusion process in a diffusion model?",
+        "options": [
+          "The model directly generates the final image",
+          "Noise is completely removed from the data",
+          "Images are converted into labels",
+          "Noise is gradually added to the data"
+        ],
+        "correctAnswer": "Noise is gradually added to the data",
+        "explanation": "In the forward diffusion process, Gaussian noise is gradually added to an image across discrete time steps until it becomes pure random noise."
+      },
+      {
+        "question": "88. What happens during reverse diffusion?",
+        "options": [
+          "Noise is gradually removed to generate data",
+          "More noise is continuously added",
+          "The training dataset is deleted",
+          "The model only performs classification"
+        ],
+        "correctAnswer": "Noise is gradually removed to generate data",
+        "explanation": "In reverse diffusion, a trained neural network iteratively predicts and removes noise from a random Gaussian sample to synthesize a clean, high-quality image."
+      },
+      {
+        "question": "89. What is the full form of DDPM?",
+        "options": [
+          "Designated Diffusion Prior Model",
+          "Digital Driven Diffusion Model",
+          "Denoising Diffusion Probabilistic Model",
+          "Deterministic Diffusion for Priority Management"
+        ],
+        "correctAnswer": "Denoising Diffusion Probabilistic Model",
+        "explanation": "DDPM stands for Denoising Diffusion Probabilistic Model, a foundational class of generative models introduced by Ho et al. (2020)."
+      },
+      {
+        "question": "90. What is the main purpose of the ELBO in a VAE or diffusion-model formulation?",
+        "options": [
+          "To replace the training dataset",
+          "To remove the latent variables",
+          "To increase image resolution only",
+          "To provide an objective for learning the generative model"
+        ],
+        "correctAnswer": "To provide an objective for learning the generative model",
+        "explanation": "The Evidence Lower Bound (ELBO) provides a mathematically tractable surrogate objective function to maximize the log-likelihood of observed data in latent variable models."
+      },
+      {
+        "question": "91. What is the main purpose of a Large Language Model (LLM)?",
+        "options": [
+          "To understand and generate human-like text",
+          "To only process images",
+          "To remove all text from a dataset",
+          "To perform only image classification"
+        ],
+        "correctAnswer": "To understand and generate human-like text",
+        "explanation": "An LLM is trained to process and generate text by learning patterns and relationships in large amounts of language data."
+      },
+      {
+        "question": "92. Which architecture is commonly used to build modern Large Language Models?",
+        "options": [
+          "K-Means",
+          "Decision Tree",
+          "Transformer",
+          "Support Vector Machine"
+        ],
+        "correctAnswer": "Transformer",
+        "explanation": "Modern LLMs commonly use the Transformer architecture because it can efficiently model relationships between tokens in a sequence."
+      },
+      {
+        "question": "93. What is the purpose of tokenization in an LLM?",
+        "options": [
+          "To convert text into smaller units that the model can process",
+          "To convert text directly into images",
+          "To remove the language model",
+          "To increase image resolution"
+        ],
+        "correctAnswer": "To convert text into smaller units that the model can process",
+        "explanation": "Tokenization converts text into tokens, such as words, subwords, or characters, which can then be converted into numerical representations for the model."
+      },
+      {
+        "question": "94. What is the main purpose of pre-training an LLM?",
+        "options": [
+          "To perform only object detection",
+          "To train only on one image",
+          "To remove all model parameters",
+          "To learn general patterns from a large amount of text data"
+        ],
+        "correctAnswer": "To learn general patterns from a large amount of text data",
+        "explanation": "During pre-training, an LLM learns general language patterns, relationships, and knowledge from a large collection of text data."
+      },
+      {
+        "question": "95. What is fine-tuning in an LLM?",
+        "options": [
+          "Deleting the pre-trained model",
+          "Further training a pre-trained model for a specific task or domain",
+          "Training without any data",
+          "Converting text into images"
+        ],
+        "correctAnswer": "Further training a pre-trained model for a specific task or domain",
+        "explanation": "Fine-tuning adapts a pre-trained model to perform better on a particular task, dataset, or domain."
+      },
+      {
+        "question": "96. What is the main purpose of a Vision-Language Model (VLM)?",
+        "options": [
+          "To process only numerical data",
+          "To understand information from both images and language",
+          "To process only audio signals",
+          "To remove visual information"
+        ],
+        "correctAnswer": "To understand information from both images and language",
+        "explanation": "VLMs combine visual and language information so that the model can understand relationships between images and text."
+      },
+      {
+        "question": "97. What is the role of the Vision Encoder in a VLM?",
+        "options": [
+          "To remove the language encoder",
+          "To generate only text labels",
+          "To extract useful features from images",
+          "To calculate training accuracy only"
+        ],
+        "correctAnswer": "To extract useful features from images",
+        "explanation": "The Vision Encoder converts an input image into visual feature representations that can be used by the multimodal model."
+      },
+      {
+        "question": "98. What is the purpose of Vision-Language Alignment?",
+        "options": [
+          "To align visual and textual representations in a common representation space",
+          "To remove image information",
+          "To train only the language encoder",
+          "To convert all images into audio"
+        ],
+        "correctAnswer": "To align visual and textual representations in a common representation space",
+        "explanation": "Vision-language alignment helps the model learn meaningful relationships between visual features and their corresponding textual representations."
+      },
+      {
+        "question": "99. What is the main purpose of Cross-Modal Attention in a VLM?",
+        "options": [
+          "To allow information from one modality to interact with another modality",
+          "To remove both modalities",
+          "To process only images",
+          "To process only text"
+        ],
+        "correctAnswer": "To allow information from one modality to interact with another modality",
+        "explanation": "Cross-modal attention allows information from one modality, such as vision, to influence the processing of another modality, such as language."
+      },
+      {
+        "question": "100. What is Contrastive Learning used for in Vision-Language Models?",
+        "options": [
+          "To remove all image-text pairs",
+          "To learn similar representations for matching image-text pairs",
+          "To train only an image classifier",
+          "To increase image resolution"
+        ],
+        "correctAnswer": "To learn similar representations for matching image-text pairs",
+        "explanation": "Contrastive learning encourages matching image-text pairs to have similar representations while separating unrelated image-text pairs."
+      },
+      {
+        "question": "101. What is the main purpose of the CLIP model?",
+        "options": [
+          "To remove noise from images",
+          "To compress images",
+          "To learn the relationship between images and text",
+          "To detect edges in images"
+        ],
+        "correctAnswer": "To learn the relationship between images and text",
+        "explanation": "CLIP (Contrastive Language-Image Pre-training) is designed to learn joint representations bridging images and natural language text from vast web-scale datasets."
+      },
+      {
+        "question": "102. What are the two main encoders used in CLIP?",
+        "options": [
+          "Image Encoder and Text Encoder",
+          "Encoder and Decoder",
+          "Generator and Discriminator",
+          "CNN and RNN"
+        ],
+        "correctAnswer": "Image Encoder and Text Encoder",
+        "explanation": "CLIP consists of two separate encoders: an Image Encoder (such as a ViT or ResNet) and a Text Encoder (a Transformer) that project both modalities into a shared embedding space."
+      },
+      {
+        "question": "103. What type of learning is used in CLIP to match images with their corresponding text?",
+        "options": [
+          "Reinforcement learning",
+          "Contrastive learning",
+          "Supervised regression",
+          "Clustering"
+        ],
+        "correctAnswer": "Contrastive learning",
+        "explanation": "CLIP employs contrastive learning using InfoNCE loss to maximize the cosine similarity of true image-text pairs while minimizing similarity for mismatched pairs in a batch."
+      },
+      {
+        "question": "104. One of CLIP's important capabilities is:",
+        "options": [
+          "Image compression",
+          "Zero-shot classification",
+          "Image restoration",
+          "Image segmentation only"
+        ],
+        "correctAnswer": "Zero-shot classification",
+        "explanation": "Because CLIP embeds images and text descriptions into the same space, it can classify images among unseen classes zero-shot simply by matching image embeddings to prompt embeddings (e.g., 'a photo of a [label]')."
+      },
+      {
+        "question": "105. What is the purpose of prompt engineering in CLIP?",
+        "options": [
+          "Designing suitable text prompts",
+          "Increasing image resolution",
+          "Removing the image encoder",
+          "Adding convolutional layers"
+        ],
+        "correctAnswer": "Designing suitable text prompts",
+        "explanation": "Prompt engineering in CLIP involves formulating effective text query templates (e.g., 'a photo of a {category}') to guide the text encoder and maximize classification accuracy."
+      },
+      {
+        "question": "106. What type of data is mainly used to train CLIP?",
+        "options": [
+          "Only numerical data",
+          "Only images",
+          "Only audio files",
+          "Image-text pairs"
+        ],
+        "correctAnswer": "Image-text pairs",
+        "explanation": "CLIP is trained on 400 million (image, text) pairs collected from the internet, enabling broad semantic grounding across diverse concepts."
+      },
+      {
+        "question": "107. What is multimodal fusion?",
+        "options": [
+          "Combining information from different modalities",
+          "Removing one modality",
+          "Using only image information",
+          "Converting images into labels"
+        ],
+        "correctAnswer": "Combining information from different modalities",
+        "explanation": "Multimodal fusion refers to integrating information from multiple distinct sensory or data modalities (e.g., vision, language, audio) into unified representations."
+      },
+      {
+        "question": "108. What is a Multimodal Large Language Model (MLLM) designed to process?",
+        "options": [
+          "Only numerical data",
+          "Multiple types of information such as text and images",
+          "Only images",
+          "Only audio"
+        ],
+        "correctAnswer": "Multiple types of information such as text and images",
+        "explanation": "Multimodal Large Language Models (such as LLaVA, GPT-4V, and Gemini) process, reason over, and synthesize multiple input modalities including text, vision, and diagrams."
+      },
+      {
+        "question": "109. What is the goal of Text-to-Image Generation?",
+        "options": [
+          "Generate an image from a text description",
+          "Convert an image into a text file",
+          "Compress a text document",
+          "Classify text into categories"
+        ],
+        "correctAnswer": "Generate an image from a text description",
+        "explanation": "Text-to-image generation aims to synthesize visually coherent, high-fidelity images that accurately reflect the semantics described in a natural language text prompt."
+      },
+      {
+        "question": "110. What is a major challenge in multimodal generative models?",
+        "options": [
+          "Removing all text information",
+          "Increasing keyboard speed",
+          "Reducing the number of image pixels only",
+          "Understanding and aligning information from different modalities"
+        ],
+        "correctAnswer": "Understanding and aligning information from different modalities",
+        "explanation": "A foundational challenge in multimodal generative modeling is accurately learning cross-modal alignment—binding fine-grained text concepts to spatial visual elements faithfully without hallucinations."
+      },
+      {
+        "question": "111. What is the main idea of Agentic AI?",
+        "options": [
+          "AI systems that only classify images",
+          "AI systems that only store data",
+          "AI systems that can autonomously perform tasks and take actions",
+          "AI systems that only generate text"
+        ],
+        "correctAnswer": "AI systems that can autonomously perform tasks and take actions",
+        "explanation": "Agentic AI refers to autonomous AI systems capable of perceiving an environment, formulating plans, making decisions, using tools, and executing actions to achieve specific goals."
+      },
+      {
+        "question": "112. In Agentic AI, what does the agent interact with to perform actions?",
+        "options": [
+          "The environment",
+          "Only the training dataset",
+          "The model weights",
+          "Only the system prompt"
+        ],
+        "correctAnswer": "The environment",
+        "explanation": "An AI agent operates by sensing its environment (digital tools, APIs, web interfaces, physical sensors) and executing actions that alter the state of that environment."
+      },
+      {
+        "question": "113. What is the main purpose of planning in Agentic AI?",
+        "options": [
+          "To increase the size of the model",
+          "To remove the agent's memory",
+          "To generate random actions",
+          "To decide the steps needed to achieve a goal"
+        ],
+        "correctAnswer": "To decide the steps needed to achieve a goal",
+        "explanation": "Planning allows an agent to formulate a coherent trajectory of sub-goals and actions required to accomplish a complex objective systematically."
+      },
+      {
+        "question": "114. What is task decomposition?",
+        "options": [
+          "Combining unrelated tasks into one task",
+          "Breaking a complex task into smaller subtasks",
+          "Removing all tasks from an agent",
+          "Converting text into images"
+        ],
+        "correctAnswer": "Breaking a complex task into smaller subtasks",
+        "explanation": "Task decomposition is the process of breaking down a large, multifaceted problem into smaller, manageable, and logically ordered subtasks."
+      },
+      {
+        "question": "115. What is the role of an LLM in many Agentic AI systems?",
+        "options": [
+          "It only stores images",
+          "It replaces all external tools",
+          "It acts as the agent's reasoning or decision-making brain",
+          "It only performs database backups"
+        ],
+        "correctAnswer": "It acts as the agent's reasoning or decision-making brain",
+        "explanation": "In modern agent frameworks, an LLM serves as the central cognitive controller—interpreting observations, reasoning about state, selecting tools, and formulating next steps."
+      },
+      {
+        "question": "116. What is tool use in Agentic AI?",
+        "options": [
+          "Using external tools to perform specific actions",
+          "Removing the agent's planning ability",
+          "Increasing the number of model parameters",
+          "Training only on images"
+        ],
+        "correctAnswer": "Using external tools to perform specific actions",
+        "explanation": "Tool use (function calling) allows AI agents to interact with external tools such as web search, code interpreters, calculators, and APIs to overcome the static limitations of model weights."
+      },
+      {
+        "question": "117. What is the purpose of memory in Agentic AI?",
+        "options": [
+          "To remove the system prompt",
+          "To generate random responses",
+          "To increase image resolution",
+          "To store and use relevant information from previous interactions"
+        ],
+        "correctAnswer": "To store and use relevant information from previous interactions",
+        "explanation": "Memory mechanisms (short-term context, working memory, and long-term vector storage) enable agents to recall prior steps, retain user preferences, and maintain continuity across multi-step tasks."
+      },
+      {
+        "question": "118. What is Retrieval-Augmented Generation (RAG) used for?",
+        "options": [
+          "Generating random information",
+          "Compressing the language model",
+          "Retrieving relevant information to help generate an answer",
+          "Removing all external knowledge"
+        ],
+        "correctAnswer": "Retrieving relevant information to help generate an answer",
+        "explanation": "RAG enhances generative models by fetching relevant context from external knowledge bases or documents to ground the generated response in accurate, up-to-date facts."
+      },
+      {
+        "question": "119. What is a multi-agent system?",
+        "options": [
+          "A system with multiple GPUs only",
+          "A system where multiple agents work together to solve tasks",
+          "A system without any planning",
+          "A system that uses only one agent"
+        ],
+        "correctAnswer": "A system where multiple agents work together to solve tasks",
+        "explanation": "A multi-agent system comprises multiple specialized AI agents that collaborate, divide labor, communicate, and solve complex collective problems together."
+      },
+      {
+        "question": "120. What is a major challenge of Agentic AI?",
+        "options": [
+          "Safety and reliability of autonomous actions",
+          "Reducing the number of text characters",
+          "Increasing keyboard speed",
+          "Removing all user interaction"
+        ],
+        "correctAnswer": "Safety and reliability of autonomous actions",
+        "explanation": "Ensuring safety, alignment, robustness against unexpected loops/errors, and reliability of autonomous actions with real-world impact is a primary research and operational challenge in Agentic AI."
+      }
+    ]
+  },
+  {
+    "id": "genai-cv-week-1",
+    "title": "Generative AI for Computer Vision - Week 1 Assignment 1",
+    "subject": "Generative AI for Computer Vision",
+    "date": "22/10/2026",
+    "questions": [
+      {
+        "question": "1. Which of the following is a generative model?",
+        "options": [
+          "ResNet",
+          "U-Net",
+          "GAN",
+          "AlexNet"
+        ],
+        "correctAnswer": "GAN",
+        "explanation": "GAN (Generative Adversarial Network) is a generative model designed to synthesize new data samples that resemble the training distribution, unlike discriminative architectures such as ResNet, U-Net, and AlexNet."
+      },
+      {
+        "question": "2. The main purpose of a generative vision model is to:",
+        "options": [
+          "Classify images",
+          "Detect objects",
+          "Generate new images",
+          "Compress images"
+        ],
+        "correctAnswer": "Generate new images",
+        "explanation": "The primary purpose of a generative vision model is to learn the underlying probability distribution of images and generate new, unseen visual samples."
+      },
+      {
+        "question": "3. Which of the following is an application of generative models in computer vision?",
+        "options": [
+          "Image synthesis",
+          "Image restoration",
+          "Data augmentation",
+          "All of the above"
+        ],
+        "correctAnswer": "All of the above",
+        "explanation": "Generative models in computer vision are used for image synthesis, image restoration (super-resolution, inpainting, denoising), and synthetic data augmentation."
+      },
+      {
+        "question": "4. A joint probability distribution describes:",
+        "options": [
+          "The probability of a single random variable",
+          "The probability of two or more random variables occurring together",
+          "Only independent events",
+          "Only continuous variables"
+        ],
+        "correctAnswer": "The probability of two or more random variables occurring together",
+        "explanation": "A joint probability distribution represents the probability that two or more random variables simultaneously take on specific values."
+      },
+      {
+        "question": "5. Correlation measures:",
+        "options": [
+          "The size of a dataset",
+          "The strength and direction of the relationship between two variables",
+          "The average value of a variable",
+          "The maximum value in a dataset"
+        ],
+        "correctAnswer": "The strength and direction of the relationship between two variables",
+        "explanation": "Correlation measures both the strength and the direction of the linear relationship between two variables."
+      },
+      {
+        "question": "6. Covariance tells us:",
+        "options": [
+          "Whether two variables change together",
+          "The average of a dataset",
+          "The maximum likelihood",
+          "The number of observations"
+        ],
+        "correctAnswer": "Whether two variables change together",
+        "explanation": "Covariance indicates the directional relationship between two variables—showing whether higher values of one variable correspond to higher (or lower) values of another."
+      },
+      {
+        "question": "7. The objective of Maximum Likelihood Estimation (MLE) is to:",
+        "options": [
+          "Minimize training time",
+          "Find parameter values that make the observed data most likely",
+          "Reduce the number of features",
+          "Increase the dataset size"
+        ],
+        "correctAnswer": "Find parameter values that make the observed data most likely",
+        "explanation": "The objective of Maximum Likelihood Estimation (MLE) is to find the model parameters that maximize the likelihood of the observed training dataset."
+      },
+      {
+        "question": "8. Bayesian learning combines:",
+        "options": [
+          "Prior knowledge and observed data",
+          "Only training data",
+          "Only test data",
+          "Random initialization"
+        ],
+        "correctAnswer": "Prior knowledge and observed data",
+        "explanation": "Bayesian learning uses Bayes' theorem to combine prior knowledge (prior distribution) and observed evidence/data to compute the posterior distribution."
+      },
+      {
+        "question": "9. Bayesian learning updates model parameters as new evidence becomes available.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswer": "True",
+        "explanation": "In Bayesian inference, prior distributions are iteratively updated to posterior distributions as new empirical data or evidence becomes available."
+      },
+      {
+        "question": "10. Generative AI models can create new images that resemble the training data.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswer": "True",
+        "explanation": "Generative AI models learn the statistical distribution of training images to synthesize novel images that closely resemble the training dataset."
+      }
+    ]
+  },
+  {
+    "id": "genai-cv-week-2",
+    "title": "Generative AI for Computer Vision - Week 2 Assignment 2",
+    "subject": "Generative AI for Computer Vision",
+    "date": "22/10/2026",
+    "questions": [
+      {
+        "question": "1. The basic computational unit of an artificial neural network is called:",
+        "options": [
+          "Kernel",
+          "Neuron",
+          "Compiler",
+          "Database"
+        ],
+        "correctAnswer": "Neuron",
+        "explanation": "An artificial neuron (or node/perceptron) is the fundamental computational unit of an artificial neural network."
+      },
+      {
+        "question": "2. Which of the following is an application of neural networks?",
+        "options": [
+          "Image recognition",
+          "Speech recognition",
+          "Natural language processing",
+          "All of the above"
+        ],
+        "correctAnswer": "All of the above",
+        "explanation": "Neural networks are widely applied in computer vision (image recognition), audio processing (speech recognition), and natural language processing (NLP)."
+      },
+      {
+        "question": "3. A Single Layer Perceptron (SLP) can correctly solve:",
+        "options": [
+          "Linearly separable problems",
+          "Only non-linearly separable problems",
+          "All complex problems",
+          "No classification problems"
+        ],
+        "correctAnswer": "Linearly separable problems",
+        "explanation": "A Single Layer Perceptron creates a single linear decision boundary and can only separate classes that are linearly separable."
+      },
+      {
+        "question": "4. Which of the following is a major limitation of a Single Layer Perceptron?",
+        "options": [
+          "It cannot solve linearly separable problems",
+          "It cannot solve non-linearly separable problems such as XOR",
+          "It cannot accept numerical inputs",
+          "It always requires multiple hidden layers"
+        ],
+        "correctAnswer": "It cannot solve non-linearly separable problems such as XOR",
+        "explanation": "A major limitation of a Single Layer Perceptron is that it cannot solve non-linearly separable problems like the XOR function without hidden layers."
+      },
+      {
+        "question": "5. What is the main purpose of an activation function in a neural network?",
+        "options": [
+          "To introduce non-linearity into the network",
+          "To store the training data",
+          "To increase the number of input features",
+          "To remove all network weights"
+        ],
+        "correctAnswer": "To introduce non-linearity into the network",
+        "explanation": "Activation functions introduce non-linearities into neural networks, enabling them to learn complex, non-linear relationships rather than just linear combinations."
+      },
+      {
+        "question": "6. The Softmax activation function is commonly used in the output layer for:",
+        "options": [
+          "Multi-class classification",
+          "Image resizing",
+          "Data storage",
+          "Feature normalization only"
+        ],
+        "correctAnswer": "Multi-class classification",
+        "explanation": "The Softmax activation function converts raw output logits into a probability distribution summing to 1, making it ideal for multi-class classification."
+      },
+      {
+        "question": "7. During the forward pass of a neural network:",
+        "options": [
+          "Data moves from the input layer toward the output layer",
+          "Data moves only from the output layer to the input layer",
+          "Weights are always set to zero",
+          "The training data is deleted"
+        ],
+        "correctAnswer": "Data moves from the input layer toward the output layer",
+        "explanation": "During the forward pass, input data propagates forward through successive layers (calculating weighted sums and activations) to generate predictions at the output layer."
+      },
+      {
+        "question": "8. What is the main purpose of backpropagation during neural network training?",
+        "options": [
+          "To calculate gradients and help update the network weights",
+          "To add more training samples",
+          "To remove the output layer",
+          "To increase the number of classes"
+        ],
+        "correctAnswer": "To calculate gradients and help update the network weights",
+        "explanation": "Backpropagation computes the gradients of the loss function with respect to the network weights via the chain rule, enabling optimization algorithms (like SGD) to update the weights."
+      },
+      {
+        "question": "9. Overfitting occurs when:",
+        "options": [
+          "A model performs well on training data but poorly on unseen data",
+          "A model performs equally well on all datasets",
+          "A model has no trainable parameters",
+          "Training data is never used"
+        ],
+        "correctAnswer": "A model performs well on training data but poorly on unseen data",
+        "explanation": "Overfitting happens when a model memorizes patterns and noise specific to the training set, causing it to generalize poorly to unseen validation or test data."
+      },
+      {
+        "question": "10. Which of the following techniques can help reduce overfitting?",
+        "options": [
+          "Regularization",
+          "Early stopping",
+          "Cross-validation",
+          "All of the above"
+        ],
+        "correctAnswer": "All of the above",
+        "explanation": "Techniques such as weight regularization (L1/L2), dropout, early stopping, and cross-validation are standard methods to mitigate overfitting."
+      }
+    ]
+  },
+  {
+    "id": "genai-cv-week-3",
+    "title": "Generative AI for Computer Vision - Week 3 Assignment 3",
+    "subject": "Generative AI for Computer Vision",
+    "date": "22/10/2026",
+    "questions": [
+      {
+        "question": "1. CNN stands for:",
+        "options": [
+          "Computer Neural Network",
+          "Convolutional Neural Network",
+          "Connected Neural Network",
+          "Complex Neural Network"
+        ],
+        "correctAnswer": "Convolutional Neural Network",
+        "explanation": "CNN stands for Convolutional Neural Network, a deep learning architecture specialized for grid-structured data such as images."
+      },
+      {
+        "question": "2. Each neuron in a convolutional layer is connected only to:",
+        "options": [
+          "a whole input image",
+          "a group of input images",
+          "a small local region (patch) of the input image",
+          "None of the above"
+        ],
+        "correctAnswer": "a small local region (patch) of the input image",
+        "explanation": "Each neuron in a convolutional layer is connected only to a small local region (patch) of the input instead of the entire input image, defined by its receptive field."
+      },
+      {
+        "question": "3. What is the primary purpose of the convolution layer in a CNN?",
+        "options": [
+          "Reduce image size",
+          "Extract features from the input image",
+          "Store training data",
+          "Calculate loss"
+        ],
+        "correctAnswer": "Extract features from the input image",
+        "explanation": "Convolution layers apply learnable filters to extract visual features such as edges, textures, and higher-level patterns from the input image."
+      },
+      {
+        "question": "4. Pooling is mainly used to:",
+        "options": [
+          "Increase the image size",
+          "Reduce the spatial dimensions of feature maps",
+          "Add more neurons",
+          "Increase the number of filters"
+        ],
+        "correctAnswer": "Reduce the spatial dimensions of feature maps",
+        "explanation": "Pooling reduces the spatial dimensions (height and width) of feature maps, which reduces computation and parameters while providing translation invariance."
+      },
+      {
+        "question": "5. Which of the following is a famous CNN architecture?",
+        "options": [
+          "AlexNet",
+          "Decision Tree",
+          "K-Means",
+          "Naïve Bayes"
+        ],
+        "correctAnswer": "AlexNet",
+        "explanation": "AlexNet is a landmark CNN architecture designed by Alex Krizhevsky, Ilya Sutskever, and Geoffrey Hinton that won the ImageNet Large Scale Visual Recognition Challenge in 2012."
+      },
+      {
+        "question": "6. Which CNN architecture introduced the Inception module?",
+        "options": [
+          "LeNet",
+          "AlexNet",
+          "GoogLeNet",
+          "VGGNet"
+        ],
+        "correctAnswer": "GoogLeNet",
+        "explanation": "GoogLeNet (Inception v1) introduced the Inception module to perform convolutions at multiple scales (1x1, 3x3, 5x5) and pooling in parallel within the same layer."
+      },
+      {
+        "question": "7. GoogLeNet is known for using:",
+        "options": [
+          "Inception Module",
+          "Only 1 × 1 filters",
+          "No convolution layers",
+          "Only pooling layers"
+        ],
+        "correctAnswer": "Inception Module",
+        "explanation": "GoogLeNet is famous for its Inception module, which combines multiple parallel convolution operations (including 1×1, 3×3, and 5×5 filters) to capture multi-scale features efficiently."
+      },
+      {
+        "question": "8. Which problem commonly occurs when very deep neural networks are trained?",
+        "options": [
+          "Vanishing gradient problem",
+          "Database corruption",
+          "Data duplication",
+          "Image compression"
+        ],
+        "correctAnswer": "Vanishing gradient problem",
+        "explanation": "In very deep networks, backpropagated gradients can shrink exponentially through many layers, causing earlier layers to learn very slowly or stall completely (vanishing gradient problem)."
+      },
+      {
+        "question": "9. Which activation function helps reduce the vanishing gradient problem?",
+        "options": [
+          "ReLU",
+          "Linear",
+          "Step Function",
+          "Identity Function"
+        ],
+        "correctAnswer": "ReLU",
+        "explanation": "ReLU (Rectified Linear Unit) has a constant gradient of 1 for all positive inputs, avoiding gradient saturation and mitigating the vanishing gradient problem in deep networks."
+      },
+      {
+        "question": "10. True/False? Increasing the number of layers always improves the performance of a neural network.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswer": "False",
+        "explanation": "Simply making a network deeper does not always improve performance because deep networks can suffer from vanishing/exploding gradients, optimization degradation, and overfitting."
+      }
+    ]
+  },
+  {
+    "id": "genai-cv-week-4",
+    "title": "Generative AI for Computer Vision - Week 4 Assignment 4",
+    "subject": "Generative AI for Computer Vision",
+    "date": "22/10/2026",
+    "questions": [
+      {
+        "question": "1. What is the main idea behind ResNet?",
+        "options": [
+          "To reduce image size",
+          "To use residual (skip) connections",
+          "To remove convolution layers",
+          "To replace activation functions"
+        ],
+        "correctAnswer": "To use residual (skip) connections",
+        "explanation": "ResNet introduces residual (skip) connections that allow information to bypass intermediate layers, enabling the training of networks with hundreds of layers."
+      },
+      {
+        "question": "2. A skip (residual) connection allows information to:",
+        "options": [
+          "Skip one or more layers",
+          "Skip the input image",
+          "Skip the output layer",
+          "Skip the loss function"
+        ],
+        "correctAnswer": "Skip one or more layers",
+        "explanation": "A skip connection directly forwards the input of a layer/block to its output by identity mapping, skipping one or more intermediate transformation layers."
+      },
+      {
+        "question": "3. What is the main advantage of skip connections?",
+        "options": [
+          "They increase image resolution.",
+          "They reduce the number of classes.",
+          "They remove pooling layers.",
+          "They help reduce the vanishing gradient problem."
+        ],
+        "correctAnswer": "They help reduce the vanishing gradient problem.",
+        "explanation": "Skip connections provide a direct highway for gradients to flow backwards during backpropagation, effectively preventing the vanishing gradient problem."
+      },
+      {
+        "question": "4. DenseNet differs from ResNet because:",
+        "options": [
+          "Each layer is connected to every previous layer.",
+          "It has no convolution layers.",
+          "It uses only fully connected layers.",
+          "It cannot perform image classification."
+        ],
+        "correctAnswer": "Each layer is connected to every previous layer.",
+        "explanation": "In DenseNet (Densely Connected Convolutional Networks), each layer receives feature maps concatenated from all preceding layers, maximizing feature reuse and gradient flow."
+      },
+      {
+        "question": "5. Which CNN architecture is specifically designed for handheld and embedded devices?",
+        "options": [
+          "AlexNet",
+          "VGGNet",
+          "MobileNet",
+          "LeNet"
+        ],
+        "correctAnswer": "MobileNet",
+        "explanation": "MobileNet uses depthwise separable convolutions to dramatically reduce parameter count and computational complexity, making it ideal for mobile and embedded devices."
+      },
+      {
+        "question": "6. EfficientNet mainly improves performance by:",
+        "options": [
+          "Removing convolution layers",
+          "Scaling network depth, width, and resolution synchronously",
+          "Using only larger filters",
+          "Eliminating activation functions"
+        ],
+        "correctAnswer": "Scaling network depth, width, and resolution synchronously",
+        "explanation": "EfficientNet introduces compound scaling, uniformly scaling network depth, width, and image resolution with a fixed compound coefficient for optimal accuracy and efficiency."
+      },
+      {
+        "question": "7. Sequence modeling is mainly used for:",
+        "options": [
+          "Processing sequential data",
+          "Image compression",
+          "Database management",
+          "Network security"
+        ],
+        "correctAnswer": "Processing sequential data",
+        "explanation": "Sequence modeling deals with sequential, time-dependent data where the order of elements carries semantic meaning, such as text, speech, and time-series."
+      },
+      {
+        "question": "8. RNN stands for:",
+        "options": [
+          "Repeated Neural Network",
+          "Residual Neural Network",
+          "Recurrent Neural Network",
+          "Random Neural Network"
+        ],
+        "correctAnswer": "Recurrent Neural Network",
+        "explanation": "RNN stands for Recurrent Neural Network, an architecture designed to process sequential data by maintaining an internal recurrent state."
+      },
+      {
+        "question": "9. Which of the following is a common application of RNN?",
+        "options": [
+          "Sorting numbers",
+          "Image resizing",
+          "Data compression",
+          "Language translation"
+        ],
+        "correctAnswer": "Language translation",
+        "explanation": "RNNs and recurrent sequence-to-sequence models are widely used for sequential applications such as machine translation, speech recognition, and language modeling."
+      },
+      {
+        "question": "10. The main feature of an RNN is that it:",
+        "options": [
+          "Has no hidden layers",
+          "Uses only convolution operations",
+          "Uses temporal context while processing sequences",
+          "Can process only images"
+        ],
+        "correctAnswer": "Uses temporal context while processing sequences",
+        "explanation": "RNNs maintain a recurring hidden state that preserves historical context across time steps, allowing the model to use temporal context while processing sequences."
+      }
+    ]
+  },
+  {
+    "id": "genai-cv-week-5",
+    "title": "Generative AI for Computer Vision - Week 5 Assignment 5",
+    "subject": "Generative AI for Computer Vision",
+    "date": "22/10/2026",
+    "questions": [
+      {
+        "question": "1. What is the main purpose of Backpropagation Through Time (BPTT) in an RNN?",
+        "options": [
+          "To generate images",
+          "To train the RNN by computing gradients over time",
+          "To increase image resolution",
+          "To remove the hidden state"
+        ],
+        "correctAnswer": "To train the RNN by computing gradients over time",
+        "explanation": "BPTT unrolls the RNN across the sequence time steps and propagates gradients backward through time to update network parameters."
+      },
+      {
+        "question": "2. In a character-level RNN, the model processes:",
+        "options": [
+          "Only numerical tables",
+          "Only complete images",
+          "Individual characters in a sequence",
+          "Only audio signals"
+        ],
+        "correctAnswer": "Individual characters in a sequence",
+        "explanation": "In character-level modeling, the RNN processes one character at each time step, learning vocabulary structure, spelling, and character transitions."
+      },
+      {
+        "question": "3. Which problem is commonly associated with traditional RNNs?",
+        "options": [
+          "Vanishing gradient problem",
+          "Image resizing problem",
+          "Object detection problem",
+          "Image compression problem"
+        ],
+        "correctAnswer": "Vanishing gradient problem",
+        "explanation": "In standard RNNs, gradients propagated over many time steps undergo repeated matrix multiplications, often shrinking exponentially (vanishing gradients) and hindering long-term dependency learning."
+      },
+      {
+        "question": "4. Which neural network architecture is specifically designed to handle long-term dependencies in sequential data?",
+        "options": [
+          "CNN",
+          "LSTM",
+          "SVM",
+          "K-Means"
+        ],
+        "correctAnswer": "LSTM",
+        "explanation": "Long Short-Term Memory (LSTM) networks incorporate gating mechanisms (forget, input, and output gates) and a cell state to regulate information flow and preserve long-term dependencies."
+      },
+      {
+        "question": "5. What is the main purpose of the attention mechanism in sequence-to-sequence models?",
+        "options": [
+          "To resize images",
+          "To remove all input information",
+          "To reduce the number of classes",
+          "To focus on the most relevant parts of the input sequence"
+        ],
+        "correctAnswer": "To focus on the most relevant parts of the input sequence",
+        "explanation": "The attention mechanism enables the decoder to dynamically attend to and weigh the most relevant parts of the input sequence for each output token."
+      },
+      {
+        "question": "6. Computer vision mainly deals with:",
+        "options": [
+          "Understanding and analyzing images and videos",
+          "Managing computer networks",
+          "Designing databases",
+          "Writing operating systems"
+        ],
+        "correctAnswer": "Understanding and analyzing images and videos",
+        "explanation": "Computer vision is an interdisciplinary field of AI enabling computational systems to process, analyze, and interpret visual data from the real world."
+      },
+      {
+        "question": "7. Which of the following is a common computer vision task?",
+        "options": [
+          "Image classification",
+          "Object detection",
+          "Semantic segmentation",
+          "All of the above"
+        ],
+        "correctAnswer": "All of the above",
+        "explanation": "Image classification (labeling an image), object detection (localizing and categorizing objects with bounding boxes), and semantic segmentation (pixel-level labeling) are core tasks in computer vision."
+      },
+      {
+        "question": "8. What is image super-resolution used for?",
+        "options": [
+          "Increasing the resolution or quality of an image",
+          "Detecting passwords",
+          "Removing the image completely",
+          "Classifying text documents"
+        ],
+        "correctAnswer": "Increasing the resolution or quality of an image",
+        "explanation": "Image super-resolution reconstructs a high-resolution, sharp image from one or more degraded low-resolution input images."
+      },
+      {
+        "question": "9. Which of the following is an application of Generative AI in computer vision?",
+        "options": [
+          "Image-to-image translation",
+          "Medical image synthesis",
+          "Face synthesis",
+          "All of the above"
+        ],
+        "correctAnswer": "All of the above",
+        "explanation": "Generative AI powers numerous computer vision applications including style transfer/image translation (e.g., Pix2Pix, CycleGAN), synthetic medical imaging, and photorealistic face generation."
+      },
+      {
+        "question": "10. What is image in-painting?",
+        "options": [
+          "Converting an image into a table",
+          "Reducing the number of image classes",
+          "Filling or reconstructing missing regions of an image",
+          "Removing all colors from an image"
+        ],
+        "correctAnswer": "Filling or reconstructing missing regions of an image",
+        "explanation": "Image inpainting is the process of restoring or reconstructing missing, deteriorated, or intentionally masked parts of an image using context from surrounding regions."
+      }
+    ]
+  },
+  {
+    "id": "genai-cv-week-6",
+    "title": "Generative AI for Computer Vision - Week 6 Assignment 6",
+    "subject": "Generative AI for Computer Vision",
+    "date": "22/10/2026",
+    "questions": [
+      {
+        "question": "1. What is the main goal of a generative model?",
+        "options": [
+          "To generate new data similar to the training data",
+          "To delete the training data",
+          "To sort the input data",
+          "To reduce the number of classes"
+        ],
+        "correctAnswer": "To generate new data similar to the training data",
+        "explanation": "Generative models learn the underlying true data distribution p(x) in order to sample and generate new data instances that closely resemble the training distribution."
+      },
+      {
+        "question": "2. What does Maximum Likelihood Estimation (MLE) try to find?",
+        "options": [
+          "The largest image",
+          "The smallest dataset",
+          "Parameters that make the observed data most likely",
+          "The number of classes"
+        ],
+        "correctAnswer": "Parameters that make the observed data most likely",
+        "explanation": "Maximum Likelihood Estimation estimates model parameters by selecting values that maximize the probability (likelihood) of observing the given dataset."
+      },
+      {
+        "question": "3. What is density estimation used for?",
+        "options": [
+          "Increasing image resolution",
+          "Estimating the probability distribution of data",
+          "Removing image noise only",
+          "Detecting computer viruses"
+        ],
+        "correctAnswer": "Estimating the probability distribution of data",
+        "explanation": "Density estimation involves constructing an estimate of an unobservable underlying probability density function based on observed data."
+      },
+      {
+        "question": "4. What is an autoregressive model?",
+        "options": [
+          "A model that predicts the current value using previous values",
+          "A model that only processes images",
+          "A model that does not use previous information",
+          "A model used only for data compression"
+        ],
+        "correctAnswer": "A model that predicts the current value using previous values",
+        "explanation": "An autoregressive model uses the chain rule of probability to predict each subsequent variable conditioned on all previously generated/observed values."
+      },
+      {
+        "question": "5. PixelCNN is mainly used for:",
+        "options": [
+          "Compressing text documents",
+          "Detecting computer hardware problems",
+          "Sorting image files",
+          "Generating images pixel by pixel"
+        ],
+        "correctAnswer": "Generating images pixel by pixel",
+        "explanation": "PixelCNN is a generative autoregressive neural network that generates images sequentially pixel by pixel using masked convolutions to model dependencies."
+      },
+      {
+        "question": "6. In PixelRNN, the name \"RNN\" refers to:",
+        "options": [
+          "Recurrent Neural Network",
+          "Residual Neural Network",
+          "Random Neural Network",
+          "Recursive Normal Network"
+        ],
+        "correctAnswer": "Recurrent Neural Network",
+        "explanation": "PixelRNN uses recurrent neural networks (such as Diagonal BiLSTM or Row LSTM) to model sequential pixel dependencies during image generation."
+      },
+      {
+        "question": "7. What does spatial context in an image refer to?",
+        "options": [
+          "Only the image file size",
+          "Information about the relationships between nearby or different regions in an image",
+          "The number of image classes",
+          "The image file name"
+        ],
+        "correctAnswer": "Information about the relationships between nearby or different regions in an image",
+        "explanation": "Spatial context captures geometric and positional relationships between adjacent pixels, visual patches, or semantic entities across an image."
+      },
+      {
+        "question": "8. Image captioning aims to:",
+        "options": [
+          "Change the image file format",
+          "Increase image resolution",
+          "Remove objects from an image",
+          "Generate a textual description of an image"
+        ],
+        "correctAnswer": "Generate a textual description of an image",
+        "explanation": "Image captioning bridges computer vision and natural language processing to produce natural language descriptions describing the contents of an image."
+      },
+      {
+        "question": "9. What is the main purpose of attention in image captioning?",
+        "options": [
+          "To remove all image features",
+          "To reduce the image file size",
+          "To focus on relevant parts of an image while generating a caption",
+          "To change the image color"
+        ],
+        "correctAnswer": "To focus on relevant parts of an image while generating a caption",
+        "explanation": "Attention mechanisms allow an image captioning model to dynamically focus on relevant spatial regions of the image corresponding to each generated word."
+      },
+      {
+        "question": "10. A Fully Visible Belief Network (FVBN) is a type of:",
+        "options": [
+          "Operating system",
+          "Image editing software",
+          "Database system",
+          "Generative model"
+        ],
+        "correctAnswer": "Generative model",
+        "explanation": "A Fully Visible Belief Network (FVBN) is an autoregressive generative model where all variables are observed and their joint distribution is factorized via conditional probabilities."
+      }
+    ]
+  },
+  {
+    "id": "genai-cv-week-7",
+    "title": "Generative AI for Computer Vision - Week 7 Assignment 7",
+    "subject": "Generative AI for Computer Vision",
+    "date": "22/10/2026",
+    "questions": [
+      {
+        "question": "1. What is the main purpose of the attention mechanism?",
+        "options": [
+          "To focus on the most relevant parts of the input",
+          "To remove all input information",
+          "To reduce the number of classes",
+          "To increase image size"
+        ],
+        "correctAnswer": "To focus on the most relevant parts of the input",
+        "explanation": "The attention mechanism enables neural networks to compute dynamic importance weights and focus selectively on the most relevant components of the input."
+      },
+      {
+        "question": "2. In self-attention, the model mainly relates:",
+        "options": [
+          "Only the first and last elements",
+          "Only the input and output images",
+          "Different training datasets",
+          "Different parts of the same input sequence"
+        ],
+        "correctAnswer": "Different parts of the same input sequence",
+        "explanation": "Self-attention (intra-attention) relates different positions within the same input sequence to compute a contextualized representation of that sequence."
+      },
+      {
+        "question": "3. What is the purpose of masked self-attention?",
+        "options": [
+          "To prevent a position from attending to future positions",
+          "To remove all attention scores",
+          "To increase the image resolution",
+          "To remove the input sequence"
+        ],
+        "correctAnswer": "To prevent a position from attending to future positions",
+        "explanation": "Masked self-attention applies an upper-triangular mask (setting future positions to negative infinity) to prevent autoregressive models from attending to subsequent tokens during generation."
+      },
+      {
+        "question": "4. Multi-head self-attention uses:",
+        "options": [
+          "Multiple input images only",
+          "Only one attention score",
+          "Multiple attention heads to capture different relationships",
+          "No attention mechanism"
+        ],
+        "correctAnswer": "Multiple attention heads to capture different relationships",
+        "explanation": "Multi-head attention projects queries, keys, and values into multiple representation subspaces, allowing the model to jointly attend to different types of contextual relationships."
+      },
+      {
+        "question": "5. A Transformer is mainly based on:",
+        "options": [
+          "Pooling only",
+          "Attention mechanisms",
+          "Decision trees",
+          "K-means clustering"
+        ],
+        "correctAnswer": "Attention mechanisms",
+        "explanation": "Transformers rely entirely on self-attention and cross-attention mechanisms to model relationships between input elements, eliminating recurrence and convolutions."
+      },
+      {
+        "question": "6. How does a Vision Transformer (ViT) process an image?",
+        "options": [
+          "It uses only pooling layers",
+          "It converts the image directly into audio",
+          "It removes all image information",
+          "It divides the image into patches and processes them as tokens"
+        ],
+        "correctAnswer": "It divides the image into patches and processes them as tokens",
+        "explanation": "Vision Transformers divide an image into fixed-size non-overlapping patches (e.g., 16×16), linearly project them into patch embeddings, prepend a class token, add positional embeddings, and feed them into a standard Transformer encoder."
+      },
+      {
+        "question": "7. One major difference between a Transformer and a CNN is that:",
+        "options": [
+          "Transformers use attention to model relationships between input elements",
+          "Transformers cannot process images",
+          "CNNs do not have trainable parameters",
+          "CNNs can only process text"
+        ],
+        "correctAnswer": "Transformers use attention to model relationships between input elements",
+        "explanation": "Unlike CNNs that rely on localized convolution kernels with fixed receptive fields, Transformers use self-attention to model global dependencies directly across all input elements."
+      },
+      {
+        "question": "8. What is the main role of the Transformer encoder?",
+        "options": [
+          "To increase image resolution",
+          "To delete the input sequence",
+          "To transform the input into useful contextual representations",
+          "To store training data"
+        ],
+        "correctAnswer": "To transform the input into useful contextual representations",
+        "explanation": "The Transformer encoder processes the input embeddings through multi-head self-attention and feed-forward sublayers to generate rich, contextualized representations."
+      },
+      {
+        "question": "9. What is the purpose of input embedding?",
+        "options": [
+          "To convert input tokens into numerical vector representations",
+          "To remove the input tokens",
+          "To increase the number of images",
+          "To calculate the final accuracy"
+        ],
+        "correctAnswer": "To convert input tokens into numerical vector representations",
+        "explanation": "Input embedding maps discrete input tokens (such as word tokens or flattened image patches) into continuous dense vector representations suitable for neural network processing."
+      },
+      {
+        "question": "10. Why is positional encoding used in a Transformer?",
+        "options": [
+          "To remove the input sequence",
+          "To provide information about the position or order of input elements",
+          "To reduce the number of attention heads",
+          "To increase the image resolution"
+        ],
+        "correctAnswer": "To provide information about the position or order of input elements",
+        "explanation": "Because self-attention is permutation-invariant and lacks inherent recurrence or convolution, positional encodings are injected into the input embeddings to provide information about the sequential ordering of elements."
+      }
+    ]
+  },
+  {
+    "id": "genai-cv-week-8",
+    "title": "Generative AI for Computer Vision - Week 8 Assignment 8",
+    "subject": "Generative AI for Computer Vision",
+    "date": "22/10/2026",
+    "questions": [
+      {
+        "question": "1. What is the main idea of a Vision Transformer (ViT)?",
+        "options": [
+          "To process images using image patches as tokens",
+          "To process only audio signals",
+          "To remove all image features",
+          "To replace images with text"
+        ],
+        "correctAnswer": "To process images using image patches as tokens",
+        "explanation": "Vision Transformer divides an image into smaller patches and treats these patches as tokens that can be processed using Transformer mechanisms."
+      },
+      {
+        "question": "2. DETR stands for:",
+        "options": [
+          "Deep Efficient Transformer Recognition",
+          "Detection Transformer",
+          "Deep Encoder Transformer Representation",
+          "Detection Training Recognition"
+        ],
+        "correctAnswer": "Detection Transformer",
+        "explanation": "DETR stands for DEtection TRansformer and uses a Transformer-based architecture for object detection."
+      },
+      {
+        "question": "3. What is a key feature of the Swin Transformer?",
+        "options": [
+          "It uses shifted windows for self-attention",
+          "It uses only fully connected layers",
+          "It does not use attention",
+          "It processes only text"
+        ],
+        "correctAnswer": "It uses shifted windows for self-attention",
+        "explanation": "Swin Transformer uses local windows for self-attention and shifts these windows between layers to allow information exchange between neighboring windows."
+      },
+      {
+        "question": "4. What is the main purpose of an Auto-Encoder?",
+        "options": [
+          "To increase the number of input features",
+          "To classify only images",
+          "To learn a compact representation of the input data",
+          "To remove the decoder"
+        ],
+        "correctAnswer": "To learn a compact representation of the input data",
+        "explanation": "An Auto-Encoder learns to encode input data into a compact representation and then reconstruct the original input."
+      },
+      {
+        "question": "5. An Auto-Encoder mainly consists of:",
+        "options": [
+          "Only an Encoder",
+          "Encoder and Decoder",
+          "Only a Decoder",
+          "Classifier and Pooling layer"
+        ],
+        "correctAnswer": "Encoder and Decoder",
+        "explanation": "An Auto-Encoder has two main parts: the encoder, which creates a compact representation, and the decoder, which reconstructs the input."
+      },
+      {
+        "question": "6. Which of the following is a difference between a Variational Auto-Encoder (VAE) and a traditional Auto-Encoder?",
+        "options": [
+          "VAE cannot generate data",
+          "VAE does not have an encoder",
+          "VAE does not have a decoder",
+          "VAE learns a probability distribution for the latent representation"
+        ],
+        "correctAnswer": "VAE learns a probability distribution for the latent representation",
+        "explanation": "A VAE learns a probability distribution over the latent space, allowing it to sample new latent representations and generate new data."
+      },
+      {
+        "question": "7. In a VAE, the typical sequence of operations is:",
+        "options": [
+          "Decoding → Encoding → Sampling",
+          "Sampling → Decoding → Encoding",
+          "Encoding → Sampling → Decoding",
+          "Decoding → Sampling → Encoding"
+        ],
+        "correctAnswer": "Encoding → Sampling → Decoding",
+        "explanation": "In a VAE, the input is first encoded into parameters of a latent distribution, a latent vector is sampled, and the decoder uses that sample to reconstruct or generate data."
+      },
+      {
+        "question": "8. In a VAE, the latent variable is generally:",
+        "options": [
+          "A sampled representation of the input",
+          "The original input image",
+          "The final output label",
+          "The training dataset"
+        ],
+        "correctAnswer": "A sampled representation of the input",
+        "explanation": "The latent variable is sampled from the distribution learned by the encoder and is used by the decoder to reconstruct or generate data."
+      },
+      {
+        "question": "9. In a VAE, why is sampling performed in the latent space?",
+        "options": [
+          "To enable generation of different possible outputs",
+          "To remove the encoder",
+          "To reduce the image resolution",
+          "To calculate classification accuracy"
+        ],
+        "correctAnswer": "To enable generation of different possible outputs",
+        "explanation": "Sampling allows a VAE to generate different data samples from its learned latent distribution."
+      },
+      {
+        "question": "10. What is the main purpose of the problem formulation in a VAE?",
+        "options": [
+          "To remove the latent space",
+          "To increase the number of images",
+          "To define how the input data and its underlying probability distribution are modelled",
+          "To replace the decoder with a CNN"
+        ],
+        "correctAnswer": "To define how the input data and its underlying probability distribution are modelled",
+        "explanation": "The problem formulation specifies how the observed data is related to latent variables and how the model can learn a useful probability distribution for generating data."
+      }
+    ]
+  },
+  {
+    "id": "genai-cv-week-9",
+    "title": "Generative AI for Computer Vision - Week 9 Assignment 9",
+    "subject": "Generative AI for Computer Vision",
+    "date": "22/10/2026",
+    "questions": [
+      {
+        "question": "1. What is the main purpose of a Generative Adversarial Network (GAN)?",
+        "options": [
+          "To generate new data similar to the training data",
+          "To only classify images",
+          "To remove all training data",
+          "To perform only object detection"
+        ],
+        "correctAnswer": "To generate new data similar to the training data",
+        "explanation": "The main purpose of a Generative Adversarial Network (GAN) is to generate new, synthetic data samples that closely mimic the distribution of the training data."
+      },
+      {
+        "question": "2. A GAN mainly consists of which two networks?",
+        "options": [
+          "Encoder and Decoder",
+          "Generator and Discriminator",
+          "Classifier and Regressor",
+          "Transformer and CNN"
+        ],
+        "correctAnswer": "Generator and Discriminator",
+        "explanation": "A GAN consists of two competing neural networks: a Generator that creates synthetic data samples and a Discriminator that distinguishes between real and generated samples."
+      },
+      {
+        "question": "3. What is the main role of the Generator in a GAN?",
+        "options": [
+          "To distinguish real and fake data",
+          "To generate fake data samples",
+          "To calculate image labels",
+          "To remove noise from the dataset"
+        ],
+        "correctAnswer": "To generate fake data samples",
+        "explanation": "The Generator takes random noise as input and maps it to realistic synthetic data samples aimed at deceiving the Discriminator."
+      },
+      {
+        "question": "4. What is a common problem when training GANs?",
+        "options": [
+          "Always producing different classes",
+          "Too many input labels",
+          "No training data required",
+          "Mode collapse"
+        ],
+        "correctAnswer": "Mode collapse",
+        "explanation": "Mode collapse is a classic failure mode during GAN training where the Generator produces only a limited variety of outputs, repeatedly generating the same or similar samples."
+      },
+      {
+        "question": "5. What is the main idea of a Conditional GAN (cGAN)?",
+        "options": [
+          "It generates data based on additional information such as class labels",
+          "It removes the Generator",
+          "It does not use a Discriminator",
+          "It can only generate random noise"
+        ],
+        "correctAnswer": "It generates data based on additional information such as class labels",
+        "explanation": "Conditional GANs (cGANs) condition both the Generator and Discriminator on additional auxiliary information (such as class labels or text) to control the generation process."
+      },
+      {
+        "question": "6. What is the main purpose of Wasserstein GAN (WGAN)?",
+        "options": [
+          "To classify only text data",
+          "To remove the Generator",
+          "To improve the stability of GAN training",
+          "To increase image size only"
+        ],
+        "correctAnswer": "To improve the stability of GAN training",
+        "explanation": "Wasserstein GAN utilizes the Earth Mover's (Wasserstein-1) Distance to provide smooth, meaningful gradients everywhere, significantly improving training stability and alleviating mode collapse."
+      },
+      {
+        "question": "7. What happens during the forward diffusion process in a diffusion model?",
+        "options": [
+          "The model directly generates the final image",
+          "Noise is completely removed from the data",
+          "Images are converted into labels",
+          "Noise is gradually added to the data"
+        ],
+        "correctAnswer": "Noise is gradually added to the data",
+        "explanation": "In the forward diffusion process, Gaussian noise is gradually added to an image across discrete time steps until it becomes pure random noise."
+      },
+      {
+        "question": "8. What happens during reverse diffusion?",
+        "options": [
+          "Noise is gradually removed to generate data",
+          "More noise is continuously added",
+          "The training dataset is deleted",
+          "The model only performs classification"
+        ],
+        "correctAnswer": "Noise is gradually removed to generate data",
+        "explanation": "In reverse diffusion, a trained neural network iteratively predicts and removes noise from a random Gaussian sample to synthesize a clean, high-quality image."
+      },
+      {
+        "question": "9. What is the full form of DDPM?",
+        "options": [
+          "Designated Diffusion Prior Model",
+          "Digital Driven Diffusion Model",
+          "Denoising Diffusion Probabilistic Model",
+          "Deterministic Diffusion for Priority Management"
+        ],
+        "correctAnswer": "Denoising Diffusion Probabilistic Model",
+        "explanation": "DDPM stands for Denoising Diffusion Probabilistic Model, a foundational class of generative models introduced by Ho et al. (2020)."
+      },
+      {
+        "question": "10. What is the main purpose of the ELBO in a VAE or diffusion-model formulation?",
+        "options": [
+          "To replace the training dataset",
+          "To remove the latent variables",
+          "To increase image resolution only",
+          "To provide an objective for learning the generative model"
+        ],
+        "correctAnswer": "To provide an objective for learning the generative model",
+        "explanation": "The Evidence Lower Bound (ELBO) provides a mathematically tractable surrogate objective function to maximize the log-likelihood of observed data in latent variable models."
+      }
+    ]
+  },
+  {
+    "id": "genai-cv-week-10",
+    "title": "Generative AI for Computer Vision - Week 10 Assignment 10",
+    "subject": "Generative AI for Computer Vision",
+    "date": "22/10/2026",
+    "questions": [
+      {
+        "question": "1. What is the main purpose of a Large Language Model (LLM)?",
+        "options": [
+          "To understand and generate human-like text",
+          "To only process images",
+          "To remove all text from a dataset",
+          "To perform only image classification"
+        ],
+        "correctAnswer": "To understand and generate human-like text",
+        "explanation": "An LLM is trained to process and generate text by learning patterns and relationships in large amounts of language data."
+      },
+      {
+        "question": "2. Which architecture is commonly used to build modern Large Language Models?",
+        "options": [
+          "K-Means",
+          "Decision Tree",
+          "Transformer",
+          "Support Vector Machine"
+        ],
+        "correctAnswer": "Transformer",
+        "explanation": "Modern LLMs commonly use the Transformer architecture because it can efficiently model relationships between tokens in a sequence."
+      },
+      {
+        "question": "3. What is the purpose of tokenization in an LLM?",
+        "options": [
+          "To convert text into smaller units that the model can process",
+          "To convert text directly into images",
+          "To remove the language model",
+          "To increase image resolution"
+        ],
+        "correctAnswer": "To convert text into smaller units that the model can process",
+        "explanation": "Tokenization converts text into tokens, such as words, subwords, or characters, which can then be converted into numerical representations for the model."
+      },
+      {
+        "question": "4. What is the main purpose of pre-training an LLM?",
+        "options": [
+          "To perform only object detection",
+          "To train only on one image",
+          "To remove all model parameters",
+          "To learn general patterns from a large amount of text data"
+        ],
+        "correctAnswer": "To learn general patterns from a large amount of text data",
+        "explanation": "During pre-training, an LLM learns general language patterns, relationships, and knowledge from a large collection of text data."
+      },
+      {
+        "question": "5. What is fine-tuning in an LLM?",
+        "options": [
+          "Deleting the pre-trained model",
+          "Further training a pre-trained model for a specific task or domain",
+          "Training without any data",
+          "Converting text into images"
+        ],
+        "correctAnswer": "Further training a pre-trained model for a specific task or domain",
+        "explanation": "Fine-tuning adapts a pre-trained model to perform better on a particular task, dataset, or domain."
+      },
+      {
+        "question": "6. What is the main purpose of a Vision-Language Model (VLM)?",
+        "options": [
+          "To process only numerical data",
+          "To understand information from both images and language",
+          "To process only audio signals",
+          "To remove visual information"
+        ],
+        "correctAnswer": "To understand information from both images and language",
+        "explanation": "VLMs combine visual and language information so that the model can understand relationships between images and text."
+      },
+      {
+        "question": "7. What is the role of the Vision Encoder in a VLM?",
+        "options": [
+          "To remove the language encoder",
+          "To generate only text labels",
+          "To extract useful features from images",
+          "To calculate training accuracy only"
+        ],
+        "correctAnswer": "To extract useful features from images",
+        "explanation": "The Vision Encoder converts an input image into visual feature representations that can be used by the multimodal model."
+      },
+      {
+        "question": "8. What is the purpose of Vision-Language Alignment?",
+        "options": [
+          "To align visual and textual representations in a common representation space",
+          "To remove image information",
+          "To train only the language encoder",
+          "To convert all images into audio"
+        ],
+        "correctAnswer": "To align visual and textual representations in a common representation space",
+        "explanation": "Vision-language alignment helps the model learn meaningful relationships between visual features and their corresponding textual representations."
+      },
+      {
+        "question": "9. What is the main purpose of Cross-Modal Attention in a VLM?",
+        "options": [
+          "To allow information from one modality to interact with another modality",
+          "To remove both modalities",
+          "To process only images",
+          "To process only text"
+        ],
+        "correctAnswer": "To allow information from one modality to interact with another modality",
+        "explanation": "Cross-modal attention allows information from one modality, such as vision, to influence the processing of another modality, such as language."
+      },
+      {
+        "question": "10. What is Contrastive Learning used for in Vision-Language Models?",
+        "options": [
+          "To remove all image-text pairs",
+          "To learn similar representations for matching image-text pairs",
+          "To train only an image classifier",
+          "To increase image resolution"
+        ],
+        "correctAnswer": "To learn similar representations for matching image-text pairs",
+        "explanation": "Contrastive learning encourages matching image-text pairs to have similar representations while separating unrelated image-text pairs."
+      }
+    ]
+  },
+  {
+    "id": "genai-cv-week-11",
+    "title": "Generative AI for Computer Vision - Week 11 Assignment 11",
+    "subject": "Generative AI for Computer Vision",
+    "date": "22/10/2026",
+    "questions": [
+      {
+        "question": "1. What is the main purpose of the CLIP model?",
+        "options": [
+          "To remove noise from images",
+          "To compress images",
+          "To learn the relationship between images and text",
+          "To detect edges in images"
+        ],
+        "correctAnswer": "To learn the relationship between images and text",
+        "explanation": "CLIP (Contrastive Language-Image Pre-training) is designed to learn joint representations bridging images and natural language text from vast web-scale datasets."
+      },
+      {
+        "question": "2. What are the two main encoders used in CLIP?",
+        "options": [
+          "Image Encoder and Text Encoder",
+          "Encoder and Decoder",
+          "Generator and Discriminator",
+          "CNN and RNN"
+        ],
+        "correctAnswer": "Image Encoder and Text Encoder",
+        "explanation": "CLIP consists of two separate encoders: an Image Encoder (such as a ViT or ResNet) and a Text Encoder (a Transformer) that project both modalities into a shared embedding space."
+      },
+      {
+        "question": "3. What type of learning is used in CLIP to match images with their corresponding text?",
+        "options": [
+          "Reinforcement learning",
+          "Contrastive learning",
+          "Supervised regression",
+          "Clustering"
+        ],
+        "correctAnswer": "Contrastive learning",
+        "explanation": "CLIP employs contrastive learning using InfoNCE loss to maximize the cosine similarity of true image-text pairs while minimizing similarity for mismatched pairs in a batch."
+      },
+      {
+        "question": "4. One of CLIP's important capabilities is:",
+        "options": [
+          "Image compression",
+          "Zero-shot classification",
+          "Image restoration",
+          "Image segmentation only"
+        ],
+        "correctAnswer": "Zero-shot classification",
+        "explanation": "Because CLIP embeds images and text descriptions into the same space, it can classify images among unseen classes zero-shot simply by matching image embeddings to prompt embeddings (e.g., 'a photo of a [label]')."
+      },
+      {
+        "question": "5. What is the purpose of prompt engineering in CLIP?",
+        "options": [
+          "Designing suitable text prompts",
+          "Increasing image resolution",
+          "Removing the image encoder",
+          "Adding convolutional layers"
+        ],
+        "correctAnswer": "Designing suitable text prompts",
+        "explanation": "Prompt engineering in CLIP involves formulating effective text query templates (e.g., 'a photo of a {category}') to guide the text encoder and maximize classification accuracy."
+      },
+      {
+        "question": "6. What type of data is mainly used to train CLIP?",
+        "options": [
+          "Only numerical data",
+          "Only images",
+          "Only audio files",
+          "Image-text pairs"
+        ],
+        "correctAnswer": "Image-text pairs",
+        "explanation": "CLIP is trained on 400 million (image, text) pairs collected from the internet, enabling broad semantic grounding across diverse concepts."
+      },
+      {
+        "question": "7. What is multimodal fusion?",
+        "options": [
+          "Combining information from different modalities",
+          "Removing one modality",
+          "Using only image information",
+          "Converting images into labels"
+        ],
+        "correctAnswer": "Combining information from different modalities",
+        "explanation": "Multimodal fusion refers to integrating information from multiple distinct sensory or data modalities (e.g., vision, language, audio) into unified representations."
+      },
+      {
+        "question": "8. What is a Multimodal Large Language Model (MLLM) designed to process?",
+        "options": [
+          "Only numerical data",
+          "Multiple types of information such as text and images",
+          "Only images",
+          "Only audio"
+        ],
+        "correctAnswer": "Multiple types of information such as text and images",
+        "explanation": "Multimodal Large Language Models (such as LLaVA, GPT-4V, and Gemini) process, reason over, and synthesize multiple input modalities including text, vision, and diagrams."
+      },
+      {
+        "question": "9. What is the goal of Text-to-Image Generation?",
+        "options": [
+          "Generate an image from a text description",
+          "Convert an image into a text file",
+          "Compress a text document",
+          "Classify text into categories"
+        ],
+        "correctAnswer": "Generate an image from a text description",
+        "explanation": "Text-to-image generation aims to synthesize visually coherent, high-fidelity images that accurately reflect the semantics described in a natural language text prompt."
+      },
+      {
+        "question": "10. What is a major challenge in multimodal generative models?",
+        "options": [
+          "Removing all text information",
+          "Increasing keyboard speed",
+          "Reducing the number of image pixels only",
+          "Understanding and aligning information from different modalities"
+        ],
+        "correctAnswer": "Understanding and aligning information from different modalities",
+        "explanation": "A foundational challenge in multimodal generative modeling is accurately learning cross-modal alignment—binding fine-grained text concepts to spatial visual elements faithfully without hallucinations."
+      }
+    ]
+  },
+  {
+    "id": "genai-cv-week-12",
+    "title": "Generative AI for Computer Vision - Week 12 Assignment 12",
+    "subject": "Generative AI for Computer Vision",
+    "date": "22/10/2026",
+    "questions": [
+      {
+        "question": "1. What is the main idea of Agentic AI?",
+        "options": [
+          "AI systems that only classify images",
+          "AI systems that only store data",
+          "AI systems that can autonomously perform tasks and take actions",
+          "AI systems that only generate text"
+        ],
+        "correctAnswer": "AI systems that can autonomously perform tasks and take actions",
+        "explanation": "Agentic AI refers to autonomous AI systems capable of perceiving an environment, formulating plans, making decisions, using tools, and executing actions to achieve specific goals."
+      },
+      {
+        "question": "2. In Agentic AI, what does the agent interact with to perform actions?",
+        "options": [
+          "The environment",
+          "Only the training dataset",
+          "The model weights",
+          "Only the system prompt"
+        ],
+        "correctAnswer": "The environment",
+        "explanation": "An AI agent operates by sensing its environment (digital tools, APIs, web interfaces, physical sensors) and executing actions that alter the state of that environment."
+      },
+      {
+        "question": "3. What is the main purpose of planning in Agentic AI?",
+        "options": [
+          "To increase the size of the model",
+          "To remove the agent's memory",
+          "To generate random actions",
+          "To decide the steps needed to achieve a goal"
+        ],
+        "correctAnswer": "To decide the steps needed to achieve a goal",
+        "explanation": "Planning allows an agent to formulate a coherent trajectory of sub-goals and actions required to accomplish a complex objective systematically."
+      },
+      {
+        "question": "4. What is task decomposition?",
+        "options": [
+          "Combining unrelated tasks into one task",
+          "Breaking a complex task into smaller subtasks",
+          "Removing all tasks from an agent",
+          "Converting text into images"
+        ],
+        "correctAnswer": "Breaking a complex task into smaller subtasks",
+        "explanation": "Task decomposition is the process of breaking down a large, multifaceted problem into smaller, manageable, and logically ordered subtasks."
+      },
+      {
+        "question": "5. What is the role of an LLM in many Agentic AI systems?",
+        "options": [
+          "It only stores images",
+          "It replaces all external tools",
+          "It acts as the agent's reasoning or decision-making brain",
+          "It only performs database backups"
+        ],
+        "correctAnswer": "It acts as the agent's reasoning or decision-making brain",
+        "explanation": "In modern agent frameworks, an LLM serves as the central cognitive controller—interpreting observations, reasoning about state, selecting tools, and formulating next steps."
+      },
+      {
+        "question": "6. What is tool use in Agentic AI?",
+        "options": [
+          "Using external tools to perform specific actions",
+          "Removing the agent's planning ability",
+          "Increasing the number of model parameters",
+          "Training only on images"
+        ],
+        "correctAnswer": "Using external tools to perform specific actions",
+        "explanation": "Tool use (function calling) allows AI agents to interact with external tools such as web search, code interpreters, calculators, and APIs to overcome the static limitations of model weights."
+      },
+      {
+        "question": "7. What is the purpose of memory in Agentic AI?",
+        "options": [
+          "To remove the system prompt",
+          "To generate random responses",
+          "To increase image resolution",
+          "To store and use relevant information from previous interactions"
+        ],
+        "correctAnswer": "To store and use relevant information from previous interactions",
+        "explanation": "Memory mechanisms (short-term context, working memory, and long-term vector storage) enable agents to recall prior steps, retain user preferences, and maintain continuity across multi-step tasks."
+      },
+      {
+        "question": "8. What is Retrieval-Augmented Generation (RAG) used for?",
+        "options": [
+          "Generating random information",
+          "Compressing the language model",
+          "Retrieving relevant information to help generate an answer",
+          "Removing all external knowledge"
+        ],
+        "correctAnswer": "Retrieving relevant information to help generate an answer",
+        "explanation": "RAG enhances generative models by fetching relevant context from external knowledge bases or documents to ground the generated response in accurate, up-to-date facts."
+      },
+      {
+        "question": "9. What is a multi-agent system?",
+        "options": [
+          "A system with multiple GPUs only",
+          "A system where multiple agents work together to solve tasks",
+          "A system without any planning",
+          "A system that uses only one agent"
+        ],
+        "correctAnswer": "A system where multiple agents work together to solve tasks",
+        "explanation": "A multi-agent system comprises multiple specialized AI agents that collaborate, divide labor, communicate, and solve complex collective problems together."
+      },
+      {
+        "question": "10. What is a major challenge of Agentic AI?",
+        "options": [
+          "Safety and reliability of autonomous actions",
+          "Reducing the number of text characters",
+          "Increasing keyboard speed",
+          "Removing all user interaction"
+        ],
+        "correctAnswer": "Safety and reliability of autonomous actions",
+        "explanation": "Ensuring safety, alignment, robustness against unexpected loops/errors, and reliability of autonomous actions with real-world impact is a primary research and operational challenge in Agentic AI."
+      }
+    ]
+  }
 ];
