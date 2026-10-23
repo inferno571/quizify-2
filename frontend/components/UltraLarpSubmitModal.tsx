@@ -105,7 +105,7 @@ export function UltraLarpSubmitModal({
         <div className="mb-3 sm:mb-4 flex flex-wrap items-center justify-center gap-2">
           <span className="inline-flex items-center gap-1.5 px-4 py-1.5 bg-gradient-to-r from-amber-500 via-orange-500 to-red-600 text-slate-950 font-black text-xs sm:text-sm rounded-full shadow-xl uppercase tracking-wider animate-bounce border border-amber-300">
             <Flame className="w-4 h-4 fill-slate-950" />
-            THE ULTRA LARP HAS BEEN OFFICIALLY SUBMITTED
+            THE LARP HAS BEEN OFFICIALLY SUBMITTED
           </span>
           <span className="px-3 py-1 bg-black/80 border border-amber-400 text-amber-300 font-bold text-xs rounded-full backdrop-blur-md shadow-md">
             SCHOLAR AURA: +999,999 (MAX OVERLOAD)
@@ -116,7 +116,7 @@ export function UltraLarpSubmitModal({
         <div className="relative rounded-xl sm:rounded-2xl overflow-hidden border-2 sm:border-4 border-amber-400 shadow-[0_0_80px_rgba(245,158,11,0.85)] animate-larp-glow group max-h-[38vh] sm:max-h-[44vh] flex items-center justify-center bg-black">
           <img 
             src="/larp_wide.jpg" 
-            alt="There's no limit to the ULTRA LARP" 
+            alt="There's no limit to the LARP" 
             className="w-full h-auto object-contain max-h-[36vh] sm:max-h-[42vh]"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
@@ -124,7 +124,7 @@ export function UltraLarpSubmitModal({
           <div className="absolute bottom-2 inset-x-2 flex items-center justify-between px-3 text-white text-[10px] sm:text-xs font-mono font-bold drop-shadow-md">
             <span className="text-amber-300 flex items-center gap-1">
               <Sparkles className="w-3 h-3 text-amber-400" />
-              ULTRA LARP PROTOCOL ENGAGED
+              LARP PROTOCOL ENGAGED
             </span>
             <span className="text-emerald-300">
               {answeredCount}/{totalCount} Completed
@@ -135,7 +135,7 @@ export function UltraLarpSubmitModal({
         {/* Impact Headline */}
         <div className="mt-3 sm:mt-4 space-y-1">
           <h2 className="text-2xl sm:text-4xl md:text-5xl font-black italic tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-orange-400 drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)]">
-            &ldquo;THERE&rsquo;S NO LIMIT TO THE ULTRA LARP.&rdquo;
+            &ldquo;THERE&rsquo;S NO LIMIT TO THE LARP.&rdquo;
           </h2>
           <p className="text-xs sm:text-sm font-semibold text-amber-200/90 tracking-wide drop-shadow-md">
             Generative AI for Computer Vision · 83.3% Official Empirical Win Rate Verified
@@ -183,7 +183,7 @@ export function UltraLarpSubmitModal({
             onClick={handleProceedClick}
             className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-gradient-to-r from-amber-400 via-orange-500 to-amber-500 hover:from-amber-300 hover:to-orange-400 text-slate-950 font-black text-sm sm:text-base rounded-xl transition duration-200 cursor-pointer shadow-[0_0_30px_rgba(245,158,11,0.6)] flex items-center justify-center gap-2 transform active:scale-95"
           >
-            <span>View Official Ultra LARP Results</span>
+            <span>View Official LARP Results</span>
             <ArrowRight className="w-4 h-4 text-slate-950 stroke-[3]" />
           </button>
           

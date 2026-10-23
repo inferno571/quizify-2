@@ -98,7 +98,7 @@ export function playLarpSound() {
 }
 
 /**
- * Full-screen Flash & Shockwave Overlay triggered on Acknowledge or Ultra LARP Successful
+ * Full-screen Flash & Shockwave Overlay triggered on Acknowledge or LARP Successful
  */
 export function LarpFlashOverlay({ 
   isOpen, 
@@ -106,8 +106,8 @@ export function LarpFlashOverlay({
   synthesizedSound = true,
   durationMs = 4000,
   soundName,
-  badgeText = "THE ULTRA LARP HAS BEEN OFFICIALLY ACKNOWLEDGED",
-  subText = "Ultra LARP Cascade Engaged • Zero Lectures Watched • Elite + Gold Guaranteed"
+  badgeText = "THE LARP HAS BEEN OFFICIALLY ACKNOWLEDGED",
+  subText = "LARP Cascade Engaged • Zero Lectures Watched • Elite + Gold Guaranteed"
 }: { 
   isOpen: boolean; 
   onClose: () => void;
@@ -173,7 +173,7 @@ export function LarpFlashOverlay({
         <div className="relative rounded-xl sm:rounded-2xl overflow-hidden border-2 sm:border-4 border-amber-400 shadow-[0_0_80px_rgba(245,158,11,0.8)] animate-larp-glow group max-h-[60vh] flex items-center justify-center bg-black">
           <img 
             src="/larp_wide.jpg" 
-            alt="There's no limit to the ULTRA LARP" 
+            alt="There's no limit to the LARP" 
             className="w-full h-auto object-contain max-h-[58vh]"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
@@ -182,7 +182,7 @@ export function LarpFlashOverlay({
         {/* Bottom Impact Text */}
         <div className="mt-4 sm:mt-5 space-y-1.5">
           <h2 className="text-2xl sm:text-4xl md:text-5xl font-black italic tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-orange-400 drop-shadow-[0_4px_10px_rgba(0,0,0,0.9)]">
-            &ldquo;THERE&rsquo;S NO LIMIT TO THE ULTRA LARP.&rdquo;
+            &ldquo;THERE&rsquo;S NO LIMIT TO THE LARP.&rdquo;
           </h2>
           <p className="text-xs sm:text-sm font-semibold text-amber-200/90 tracking-wide drop-shadow-md">
             {subText}
@@ -214,7 +214,7 @@ export function LarpGuideModal({ isOpen, onClose, onAcknowledge }: LarpGuideModa
 
 Over the past three months, this intensive academic journey deepened my core understanding of advanced generative paradigms, diffusion models, vision transformers, and multimodal AI.
 
-Empirical Ultra LARP findings achieved an 83.33% win rate across all 120 questions with zero lecture slides opened!
+Empirical LARP findings achieved an 83.33% win rate across all 120 questions with zero lecture slides opened!
 
 Heartfelt gratitude to the esteemed professors, course coordinators, and teaching assistants for curating such a world-class curriculum that truly challenged my problem-solving faculties.
 
@@ -225,7 +225,7 @@ Key takeaways:
 
 Continuous learning never stops! Looking forward to applying these principles to cutting-edge industry problems. 💡📈
 
-#NPTEL #IIT #ContinuousLearning #UltraLARP #GenerativeAI #ComputerVision #EliteCertification #LifelongLearner #TechExcellence`;
+#NPTEL #IIT #ContinuousLearning #LARP #GenerativeAI #ComputerVision #EliteCertification #LifelongLearner #TechExcellence`;
 
   const handleCopyLinkedIn = () => {
     navigator.clipboard.writeText(linkedInPostText);
@@ -255,14 +255,14 @@ Continuous learning never stops! Looking forward to applying these principles to
             <div>
               <div className="flex items-center gap-2">
                 <h2 className="text-base font-extrabold tracking-tight text-white flex items-center gap-1.5">
-                  The Official NPTEL ULTRA LARP Guide
+                  The Official NPTEL LARP Guide
                 </h2>
                 <span className="bg-amber-400 text-slate-950 text-[10px] font-black px-1.5 py-0.5 rounded uppercase tracking-wider">
                   2026 Edition
                 </span>
               </div>
               <p className="text-[11px] text-amber-200/80 font-medium">
-                How to ULTRA LARP in NPTEL &amp; Score 83%+ Without Studying
+                How to LARP in NPTEL &amp; Score 83%+ Without Studying
               </p>
             </div>
           </div>
@@ -287,7 +287,7 @@ Continuous learning never stops! Looking forward to applying these principles to
                 <div className="absolute -inset-1 bg-gradient-to-r from-amber-500 to-orange-600 rounded-lg blur-xs opacity-75 group-hover:opacity-100 transition duration-300"></div>
                 <img 
                   src="/larp_square.jpg" 
-                  alt="There's no limit to the ULTRA LARP meme" 
+                  alt="There's no limit to the LARP meme" 
                   className="relative w-32 sm:w-40 h-auto rounded-md object-contain shadow-2xl border-2 border-amber-400/80"
                 />
               </div>
@@ -295,10 +295,10 @@ Continuous learning never stops! Looking forward to applying these principles to
               {/* Manifesto Text */}
               <div className="flex-1 text-center sm:text-left space-y-2.5">
                 <div className="inline-flex items-center gap-1.5 bg-amber-400/20 border border-amber-400/40 px-2.5 py-0.5 rounded-full text-[10px] font-black text-amber-300 tracking-wider uppercase">
-                  <Sparkles className="w-3 h-3 text-amber-400" /> ULTRA LARP Fundamental Axiom
+                  <Sparkles className="w-3 h-3 text-amber-400" /> LARP Fundamental Axiom
                 </div>
                 <blockquote className="text-xl sm:text-2xl font-black italic tracking-wide text-amber-300 leading-tight">
-                  &ldquo;THERE&rsquo;S NO LIMIT TO THE ULTRA LARP.&rdquo;
+                  &ldquo;THERE&rsquo;S NO LIMIT TO THE LARP.&rdquo;
                 </blockquote>
                 <p className="text-xs text-slate-300 leading-relaxed">
                   How to systematically extract correct answers without opening a single lecture slide. 
@@ -661,7 +661,7 @@ Continuous learning never stops! Looking forward to applying these principles to
                   <div className="flex items-center gap-2">
                     <Trophy className="w-5 h-5 text-amber-400" />
                     <h3 className="text-sm sm:text-base font-extrabold text-amber-300 uppercase tracking-wider">
-                      Generative AI for Computer Vision (120 Questions) Official ULTRA LARP Benchmark
+                      Generative AI for Computer Vision (120 Questions) Official LARP Benchmark
                     </h3>
                   </div>
                   <span className="text-[10px] bg-amber-400/20 text-amber-300 px-2.5 py-0.5 rounded-full font-bold border border-amber-400/30">
@@ -844,7 +844,7 @@ Continuous learning never stops! Looking forward to applying these principles to
                 </div>
 
                 <div className="bg-emerald-50 dark:bg-emerald-950/40 border-l-4 border-emerald-500 p-2.5 rounded text-xs text-emerald-950 dark:text-emerald-200 font-medium leading-relaxed">
-                  <strong>Ultra LARP Takeaway:</strong> Scoring 83.33% comfortably clears the NPTEL 40% certificate threshold (+43.33% margin), guaranteeing an <strong>Elite + Gold Distinction</strong> without opening a single lecture slide!
+                  <strong>LARP Takeaway:</strong> Scoring 83.33% comfortably clears the NPTEL 40% certificate threshold (+43.33% margin), guaranteeing an <strong>Elite + Gold Distinction</strong> without opening a single lecture slide!
                 </div>
               </div>
 
@@ -855,7 +855,7 @@ Continuous learning never stops! Looking forward to applying these principles to
                   <span className="text-purple-600 dark:text-purple-400 font-bold">44.6% RE Win Rate</span>
                 </div>
                 <p className="text-gray-600 dark:text-neutral-400 leading-relaxed text-[11px]">
-                  Across both DLNLP (44.6%) and Generative AI for CV (83.33%), the Ultra LARP methods outperform random guessing (25.0%) by 2x to 3.3x, proving the universal psychometric validity of professor distractor patterns.
+                  Across both DLNLP (44.6%) and Generative AI for CV (83.33%), the LARP methods outperform random guessing (25.0%) by 2x to 3.3x, proving the universal psychometric validity of professor distractor patterns.
                 </p>
               </div>
 
@@ -1051,7 +1051,7 @@ Continuous learning never stops! Looking forward to applying these principles to
                   2. The Mandatory Waiting Hour Performance
                 </h4>
                 <p className="text-gray-600 dark:text-neutral-400 leading-relaxed">
-                  Using the Longest Option Theorem and the Ultra LARP Cascade, you will finish your 50 questions in under 20 minutes. 
+                  Using the Longest Option Theorem and the LARP Cascade, you will finish your 50 questions in under 20 minutes. 
                   However, TCS iON does not let anyone leave before 60 minutes. Do NOT click submit early and sleep on the desk. 
                   Solemnly click through the review palette looking like you are deeply pondering mathematical edge-cases.
                 </p>
@@ -1064,7 +1064,7 @@ Continuous learning never stops! Looking forward to applying these principles to
             <div className="space-y-3 text-xs animate-in fade-in duration-150">
               <div className="flex items-center justify-between bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-900 p-3 rounded-xl">
                 <div>
-                  <div className="font-bold text-blue-900 dark:text-blue-200">Pre-Formatted LinkedIn Ultra LARP Victory Post</div>
+                  <div className="font-bold text-blue-900 dark:text-blue-200">Pre-Formatted LinkedIn LARP Victory Post</div>
                   <div className="text-[11px] text-blue-700 dark:text-blue-300">One-click copy to celebrate your glorious certificate with the world.</div>
                 </div>
                 <button
@@ -1095,7 +1095,7 @@ Continuous learning never stops! Looking forward to applying these principles to
             className="px-4 py-2 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-slate-950 font-black text-xs rounded-lg transition cursor-pointer shadow-md flex items-center gap-1.5 transform active:scale-95"
           >
             <Flame className="w-3.5 h-3.5 fill-slate-950" />
-            Acknowledge the Ultra LARP
+            Acknowledge the LARP
           </button>
         </div>
       </div>
@@ -1144,7 +1144,7 @@ export function LarpGuideButton() {
 }
 
 /**
- * Mid-Quiz "Ultra LARP Successful" Button
+ * Mid-Quiz "LARP Successful" Button
  * Plays a randomly selected meme sound and the cinematic overlay.
  */
 export function LarpSuccessfulButton({ 
@@ -1198,7 +1198,7 @@ export function LarpSuccessfulButton({
         </span>
         <Flame className="w-3.5 h-3.5 fill-slate-950 text-slate-950 group-hover:scale-125 transition-transform" />
         <span className="tracking-tight uppercase font-extrabold whitespace-nowrap">
-          Ultra LARP Successful
+          LARP Successful
         </span>
         <Sparkles className="w-3 h-3 text-slate-950 opacity-90 group-hover:rotate-12 transition-transform" />
       </button>
@@ -1207,7 +1207,7 @@ export function LarpSuccessfulButton({
       <LarpFlashOverlay 
         isOpen={isFlashing} 
         onClose={close}
-        badgeText="🔥 ULTRA LARP SUCCESSFUL — THEOREM ENGAGED!"
+        badgeText="🔥 LARP SUCCESSFUL — THEOREM ENGAGED!"
         synthesizedSound={false}
         durationMs={Math.max(4000, ((sound?.duration ?? 3) + 0.5) * 1000)}
         soundName={sound?.name}

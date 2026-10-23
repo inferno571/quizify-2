@@ -16,9 +16,9 @@ const artwork = {
     caption: "hope.exe is not responding",
   },
   larp: {
-    eyebrow: "CLUTCH MODE // ULTRA LARP AURA +999999",
+    eyebrow: "CLUTCH MODE // AURA +999",
     title: "NO LIMIT.",
-    caption: "the exam is temporary. the ultra larp lore is forever.",
+    caption: "the exam is temporary. the lore is forever.",
   },
 };
 

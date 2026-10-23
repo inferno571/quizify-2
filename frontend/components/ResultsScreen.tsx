@@ -389,7 +389,7 @@ export function ResultsScreen({
                 {isGenAICV && (
                   <span className="bg-gradient-to-r from-amber-500/20 to-orange-500/20 text-amber-600 dark:text-amber-300 text-xs font-black px-2.5 py-0.5 rounded-full border border-amber-400/60 uppercase tracking-wide flex items-center gap-1 shadow-xs">
                     <Flame className="w-3.5 h-3.5 fill-amber-500 text-amber-500" />
-                    ULTRA LARP VERIFIED
+                    LARP VERIFIED
                   </span>
                 )}
 

@@ -71,7 +71,7 @@ export function QuizScreen({ quiz, onComplete, onExit }: QuizScreenProps) {
 
   const { theme, setTheme } = useTheme();
 
-  // Compulsory Ultra LARP Theme for Generative AI for Computer Vision
+  // Compulsory LARP Theme for Generative AI for Computer Vision
   useEffect(() => {
     if (isGenAICV && theme !== 'larp') {
       setTheme('larp');
@@ -790,14 +790,14 @@ export function QuizScreen({ quiz, onComplete, onExit }: QuizScreenProps) {
             </span>
           </div>
 
-          {/* Theme Toggle or Compulsory Ultra LARP Badge */}
+          {/* Theme Toggle or Compulsory LARP Badge */}
           {isGenAICV ? (
             <div 
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gradient-to-r from-amber-500/20 via-orange-500/25 to-amber-500/20 border border-amber-400 text-amber-300 shadow-[0_0_15px_rgba(245,158,11,0.35)] animate-pulse"
-              title="Ultra LARP Theme is strictly compulsory for Generative AI for Computer Vision"
+              title="LARP Theme is strictly compulsory for Generative AI for Computer Vision"
             >
               <Flame className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
-              <span className="text-xs font-black tracking-tight uppercase whitespace-nowrap">ULTRA LARP LOCKED</span>
+              <span className="text-xs font-black tracking-tight uppercase whitespace-nowrap">LARP LOCKED</span>
             </div>
           ) : (
             <ThemeToggle compact />
