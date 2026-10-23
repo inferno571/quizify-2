@@ -21,7 +21,8 @@ import {
   Swords,
   UserCheck,
   Edit2,
-  Check
+  Check,
+  Flame
 } from 'lucide-react';
 import { PlayerNameModal } from './PlayerNameModal';
 import { getSavedProgress, saveQuizProgress, clearQuizProgress } from '../lib/storage';
@@ -30,6 +31,8 @@ import { LarpGuideButton } from './LarpGuideModal';
 import { QuizReactionButton } from './QuizReactionButton';
 import { ThemeToggle } from './ThemeToggle';
 import { QuizThemeSurface } from './QuizThemeSurface';
+import { useTheme } from './ThemeProvider';
+import { UltraLarpSubmitModal } from './UltraLarpSubmitModal';
 
 
 const SAKSHAM_NAME = 'Saksham Sooden';
@@ -61,6 +64,22 @@ function isMSQ(correctAnswer: string | string[]): boolean {
 }
 
 export function QuizScreen({ quiz, onComplete, onExit }: QuizScreenProps) {
+  const isGenAICV = 
+    quiz.subject === 'Generative AI for Computer Vision' || 
+    quiz.id.startsWith('genai_cv') || 
+    quiz.id.startsWith('genai-cv');
+
+  const { theme, setTheme } = useTheme();
+
+  // Compulsory Ultra LARP Theme for Generative AI for Computer Vision
+  useEffect(() => {
+    if (isGenAICV && theme !== 'larp') {
+      setTheme('larp');
+    }
+  }, [isGenAICV, theme, setTheme]);
+
+  const [showUltraLarpSubmit, setShowUltraLarpSubmit] = useState(false);
+
   // Check for saved in-progress session for this quiz
   const initialSaved = typeof window !== 'undefined' ? getSavedProgress(quiz.id) : null;
 
@@ -471,10 +490,7 @@ export function QuizScreen({ quiz, onComplete, onExit }: QuizScreenProps) {
     setShowConfirmSubmit(true);
   };
 
-  const confirmSubmit = () => {
-    setShowConfirmSubmit(false);
-    clearQuizProgress(quiz.id);
-
+  const executeFinalSubmit = () => {
     const effectiveP2Answers: Record<number, string | string[]> = {};
     quiz.questions.forEach((_, idx) => {
       if (conflictQuestions.has(idx)) {
@@ -495,6 +511,17 @@ export function QuizScreen({ quiz, onComplete, onExit }: QuizScreenProps) {
         conflictQuestions: Array.from(conflictQuestions),
       } : undefined
     );
+  };
+
+  const confirmSubmit = () => {
+    setShowConfirmSubmit(false);
+    clearQuizProgress(quiz.id);
+
+    if (isGenAICV) {
+      setShowUltraLarpSubmit(true);
+    } else {
+      executeFinalSubmit();
+    }
   };
 
   const handleRestartFresh = () => {
@@ -763,8 +790,18 @@ export function QuizScreen({ quiz, onComplete, onExit }: QuizScreenProps) {
             </span>
           </div>
 
-          {/* Theme Toggle */}
-          <ThemeToggle compact />
+          {/* Theme Toggle or Compulsory Ultra LARP Badge */}
+          {isGenAICV ? (
+            <div 
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gradient-to-r from-amber-500/20 via-orange-500/25 to-amber-500/20 border border-amber-400 text-amber-300 shadow-[0_0_15px_rgba(245,158,11,0.35)] animate-pulse"
+              title="Ultra LARP Theme is strictly compulsory for Generative AI for Computer Vision"
+            >
+              <Flame className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
+              <span className="text-xs font-black tracking-tight uppercase whitespace-nowrap">ULTRA LARP LOCKED</span>
+            </div>
+          ) : (
+            <ThemeToggle compact />
+          )}
           <button type="button" className="lg:hidden px-3 py-1.5 rounded-lg bg-white/10 text-white border border-white/20 text-xs"
             aria-expanded={showQuestionPalette} aria-controls="question-palette"
             onClick={() => setShowQuestionPalette(value => !value)}>
@@ -1523,6 +1560,17 @@ export function QuizScreen({ quiz, onComplete, onExit }: QuizScreenProps) {
         onConfirm={handleConfirmNewUser}
         onCancel={() => setShowChangeUserModal(false)}
       />
+
+      {showUltraLarpSubmit && (
+        <UltraLarpSubmitModal
+          isOpen={showUltraLarpSubmit}
+          quizTitle={quiz.title}
+          answeredCount={Object.keys(answers).length}
+          totalCount={quiz.questions.length}
+          playerName={playerName || 'Scholar'}
+          onProceed={executeFinalSubmit}
+        />
+      )}
     </div>
   );
 }

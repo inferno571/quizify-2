@@ -15,7 +15,9 @@ import {
   HelpCircle,
   Users,
   Swords,
-  Scale
+  Scale,
+  Flame,
+  Sparkles
 } from 'lucide-react';
 import { Leaderboard } from './Leaderboard';
 import { MathText } from './MathText';
@@ -89,6 +91,11 @@ export function ResultsScreen({
     const saved = localStorage.getItem('quizify_player_name');
     if (saved) setPlayerName(saved);
   }, []);
+
+  const isGenAICV = 
+    quiz.subject === 'Generative AI for Computer Vision' || 
+    quiz.id.startsWith('genai_cv') || 
+    quiz.id.startsWith('genai-cv');
 
   const p1DisplayName = player1Name || playerName || 'Player 1';
   const p2DisplayName = player2Name || 'Player 2';
@@ -374,10 +381,17 @@ export function ResultsScreen({
       ) : (
         <div className="bg-surface rounded-xl border border-outline dark:border-outline p-6 shadow-sm mb-6 flex flex-col md:flex-row justify-between items-center gap-6">
            <div>
-              <div className="flex items-center gap-2 mb-1.5">
+              <div className="flex flex-wrap items-center gap-2 mb-1.5">
                 <span className="bg-orange-100 dark:bg-orange-950/50 text-orange-700 dark:text-orange-400 text-xs font-bold px-2.5 py-0.5 rounded-full border border-orange-200 dark:border-orange-800 uppercase tracking-wide">
                   Quizify 5 Pro Ultra
                 </span>
+
+                {isGenAICV && (
+                  <span className="bg-gradient-to-r from-amber-500/20 to-orange-500/20 text-amber-600 dark:text-amber-300 text-xs font-black px-2.5 py-0.5 rounded-full border border-amber-400/60 uppercase tracking-wide flex items-center gap-1 shadow-xs">
+                    <Flame className="w-3.5 h-3.5 fill-amber-500 text-amber-500" />
+                    ULTRA LARP VERIFIED
+                  </span>
+                )}
 
                 <span className="text-xs text-gray-500 dark:text-neutral-400 font-medium">
                   Made by <span className="text-gray-800 dark:text-neutral-200 font-semibold">Saksham Sooden</span>

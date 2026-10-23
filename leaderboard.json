@@ -305,6 +305,22 @@
       "totalQuestions": 10,
       "percentage": 100,
       "submittedAt": "2026-10-22T19:00:00.945Z"
+    },
+    {
+      "name": "Saksham Sooden",
+      "quizId": "genai-cv-week-4",
+      "score": 10,
+      "totalQuestions": 10,
+      "percentage": 100,
+      "submittedAt": "2026-10-22T19:02:08.475Z"
+    },
+    {
+      "name": "Saksham Sooden",
+      "quizId": "genai-cv-week-12",
+      "score": 0,
+      "totalQuestions": 10,
+      "percentage": 0,
+      "submittedAt": "2026-10-23T14:05:54.614Z"
     }
   ]
 }

@@ -78,11 +78,11 @@ export const THEMES: ThemeDefinition[] = [
   },
   {
     id: 'larp',
-    name: 'LARP (No Limit)',
+    name: 'Ultra LARP (No Limit)',
     category: 'meme',
     isDark: true,
     icon: '🏆',
-    description: 'Wide LARP poster backdrop & golden aura',
+    description: 'Ultra LARP poster backdrop & golden aura',
     accentColor: '#f59e0b',
     previewBg: '#1c1503',
     borderPreview: '#f59e0b',

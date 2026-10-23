@@ -6,10 +6,12 @@ import { PlayerNameModal } from '../../../components/PlayerNameModal';
 import { getQuizzes, getAttempts, saveAttempts, clearQuizProgress } from '../../../lib/storage';
 import { DEFAULT_QUIZZES } from '../../../lib/defaultQuizzes';
 import { Quiz, QuizAttempt } from '../../../lib/types';
+import { useTheme } from '../../../components/ThemeProvider';
 
 export default function QuizPage() {
   const params = useParams();
   const router = useRouter();
+  const { theme, setTheme } = useTheme();
   const [quiz, setQuiz] = useState<Quiz | null>(null);
   const [playerName, setPlayerName] = useState<string | null>(null);
   const [showNameModal, setShowNameModal] = useState(false);
@@ -24,6 +26,13 @@ export default function QuizPage() {
 
     if (found) {
       setQuiz(found);
+      const isGenAICV = 
+        found.subject === 'Generative AI for Computer Vision' || 
+        found.id.startsWith('genai_cv') || 
+        found.id.startsWith('genai-cv');
+      if (isGenAICV && theme !== 'larp') {
+        setTheme('larp');
+      }
     } else {
       router.push('/dashboard');
       return;

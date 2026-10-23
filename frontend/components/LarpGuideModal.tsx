@@ -16,14 +16,18 @@ import {
   Clock, 
   ShieldCheck, 
   Zap, 
-  Award,
-  ChevronRight,
-  Calculator,
-  FileText,
-  AlertTriangle,
-  Scale,
-  GitFork,
-  Binary
+  Award, 
+  ChevronRight, 
+  Calculator, 
+  FileText, 
+  AlertTriangle, 
+  Scale, 
+  GitFork, 
+  Binary, 
+  Ban, 
+  Layers, 
+  ArrowRight,
+  BarChart3
 } from 'lucide-react';
 
 /**
@@ -94,7 +98,7 @@ export function playLarpSound() {
 }
 
 /**
- * Full-screen Flash & Shockwave Overlay triggered on Acknowledge or LARP Successful
+ * Full-screen Flash & Shockwave Overlay triggered on Acknowledge or Ultra LARP Successful
  */
 export function LarpFlashOverlay({ 
   isOpen, 
@@ -102,8 +106,8 @@ export function LarpFlashOverlay({
   synthesizedSound = true,
   durationMs = 4000,
   soundName,
-  badgeText = "THE LARP HAS BEEN OFFICIALLY ACKNOWLEDGED",
-  subText = "Longest Option Theorem Engaged • Zero Lectures Watched • Elite + Gold Guaranteed"
+  badgeText = "THE ULTRA LARP HAS BEEN OFFICIALLY ACKNOWLEDGED",
+  subText = "Ultra LARP Cascade Engaged • Zero Lectures Watched • Elite + Gold Guaranteed"
 }: { 
   isOpen: boolean; 
   onClose: () => void;
@@ -161,7 +165,7 @@ export function LarpFlashOverlay({
             {badgeText}
           </span>
           <span className="px-3 py-1 bg-black/60 border border-amber-400/80 text-amber-300 font-bold text-xs rounded-full backdrop-blur-xs">
-            SCHOLAR AURA: 100,000+
+            SCHOLAR AURA: +999,999 (MAX LEVEL)
           </span>
         </div>
 
@@ -169,7 +173,7 @@ export function LarpFlashOverlay({
         <div className="relative rounded-xl sm:rounded-2xl overflow-hidden border-2 sm:border-4 border-amber-400 shadow-[0_0_80px_rgba(245,158,11,0.8)] animate-larp-glow group max-h-[60vh] flex items-center justify-center bg-black">
           <img 
             src="/larp_wide.jpg" 
-            alt="There's no limit to the LARP" 
+            alt="There's no limit to the ULTRA LARP" 
             className="w-full h-auto object-contain max-h-[58vh]"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
@@ -178,13 +182,13 @@ export function LarpFlashOverlay({
         {/* Bottom Impact Text */}
         <div className="mt-4 sm:mt-5 space-y-1.5">
           <h2 className="text-2xl sm:text-4xl md:text-5xl font-black italic tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-orange-400 drop-shadow-[0_4px_10px_rgba(0,0,0,0.9)]">
-            &ldquo;THERE&rsquo;S NO LIMIT TO THE LARP.&rdquo;
+            &ldquo;THERE&rsquo;S NO LIMIT TO THE ULTRA LARP.&rdquo;
           </h2>
           <p className="text-xs sm:text-sm font-semibold text-amber-200/90 tracking-wide drop-shadow-md">
             {subText}
           </p>
           <div className="pt-2 text-[11px] text-gray-400 font-medium">
-            {soundName && <p className="mb-1 text-amber-300">Meme: {soundName} · Random pick</p>}
+            {soundName && <p className="mb-1 text-amber-300">Meme Sound: {soundName}</p>}
             (Click anywhere or press Esc to dismiss)
           </div>
         </div>
@@ -201,25 +205,27 @@ interface LarpGuideModalProps {
 }
 
 export function LarpGuideModal({ isOpen, onClose, onAcknowledge }: LarpGuideModalProps) {
-  const [activeTab, setActiveTab] = useState<'longest' | 'reverse' | 'methods' | 'center' | 'linkedin'>('longest');
+  const [activeTab, setActiveTab] = useState<'longest' | 'antionly' | 'reverse' | 'methods' | 'benchmark' | 'center' | 'linkedin'>('longest');
   const [copiedLinkedIn, setCopiedLinkedIn] = useState(false);
 
   if (!isOpen) return null;
 
-  const linkedInPostText = `🚀 Thrilled to share that I have successfully completed the 12-week NPTEL Online Certification in [Course Name] with an Elite + Gold distinction from IIT Madras / IIT Kharagpur! 🎓✨
+  const linkedInPostText = `🚀 Thrilled to share that I have successfully completed the 12-week NPTEL Online Certification in Generative AI for Computer Vision with an Elite + Gold distinction from IIT Madras / IIT Kharagpur! 🎓✨
 
-Over the past three months, this intensive academic journey deepened my core understanding of advanced theoretical paradigms, mathematical foundations, and real-world implementations.
+Over the past three months, this intensive academic journey deepened my core understanding of advanced generative paradigms, diffusion models, vision transformers, and multimodal AI.
 
-Heartfelt gratitude to the esteemed professors, course coordinators, and teaching assistants for curating such a rigorous, world-class curriculum that truly challenged my problem-solving faculties.
+Empirical Ultra LARP findings achieved an 83.33% win rate across all 120 questions with zero lecture slides opened!
+
+Heartfelt gratitude to the esteemed professors, course coordinators, and teaching assistants for curating such a world-class curriculum that truly challenged my problem-solving faculties.
 
 Key takeaways:
 🔹 Advanced conceptual frameworks and algorithmic depth
-🔹 Rigorous continuous evaluations and proctored examinations
+🔹 Distractor pruning and Anti-Only elimination heuristics
 🔹 Discipline, deep technical curiosity, and perseverance
 
 Continuous learning never stops! Looking forward to applying these principles to cutting-edge industry problems. 💡📈
 
-#NPTEL #IIT #ContinuousLearning #EngineeringGrind #EliteCertification #LifelongLearner #TechExcellence`;
+#NPTEL #IIT #ContinuousLearning #UltraLARP #GenerativeAI #ComputerVision #EliteCertification #LifelongLearner #TechExcellence`;
 
   const handleCopyLinkedIn = () => {
     navigator.clipboard.writeText(linkedInPostText);
@@ -249,14 +255,14 @@ Continuous learning never stops! Looking forward to applying these principles to
             <div>
               <div className="flex items-center gap-2">
                 <h2 className="text-base font-extrabold tracking-tight text-white flex items-center gap-1.5">
-                  The Official NPTEL LARP Guide
+                  The Official NPTEL ULTRA LARP Guide
                 </h2>
                 <span className="bg-amber-400 text-slate-950 text-[10px] font-black px-1.5 py-0.5 rounded uppercase tracking-wider">
                   2026 Edition
                 </span>
               </div>
               <p className="text-[11px] text-amber-200/80 font-medium">
-                How to LARP in NPTEL &amp; Score 90%+ Without Studying
+                How to ULTRA LARP in NPTEL &amp; Score 83%+ Without Studying
               </p>
             </div>
           </div>
@@ -281,7 +287,7 @@ Continuous learning never stops! Looking forward to applying these principles to
                 <div className="absolute -inset-1 bg-gradient-to-r from-amber-500 to-orange-600 rounded-lg blur-xs opacity-75 group-hover:opacity-100 transition duration-300"></div>
                 <img 
                   src="/larp_square.jpg" 
-                  alt="There's no limit to the LARP meme" 
+                  alt="There's no limit to the ULTRA LARP meme" 
                   className="relative w-32 sm:w-40 h-auto rounded-md object-contain shadow-2xl border-2 border-amber-400/80"
                 />
               </div>
@@ -289,14 +295,14 @@ Continuous learning never stops! Looking forward to applying these principles to
               {/* Manifesto Text */}
               <div className="flex-1 text-center sm:text-left space-y-2.5">
                 <div className="inline-flex items-center gap-1.5 bg-amber-400/20 border border-amber-400/40 px-2.5 py-0.5 rounded-full text-[10px] font-black text-amber-300 tracking-wider uppercase">
-                  <Sparkles className="w-3 h-3 text-amber-400" /> Fundamental Axiom
+                  <Sparkles className="w-3 h-3 text-amber-400" /> ULTRA LARP Fundamental Axiom
                 </div>
                 <blockquote className="text-xl sm:text-2xl font-black italic tracking-wide text-amber-300 leading-tight">
-                  &ldquo;THERE&rsquo;S NO LIMIT TO THE LARP.&rdquo;
+                  &ldquo;THERE&rsquo;S NO LIMIT TO THE ULTRA LARP.&rdquo;
                 </blockquote>
                 <p className="text-xs text-slate-300 leading-relaxed">
                   How to systematically extract correct answers without opening a single lecture slide. 
-                  Master the <strong>Longest Option Theorem</strong>, <strong>Lexical Word Overlap</strong>, and <strong>Ballpark Math Convergence</strong>.
+                  Master the <strong>Anti-Only Axiom</strong>, the <strong>Longest Option Theorem</strong>, the <strong>Multi-Method Cascade</strong>, and <strong>Reverse Engineering</strong>.
                 </p>
 
                 {/* Stat Badges */}
@@ -306,12 +312,12 @@ Continuous learning never stops! Looking forward to applying these principles to
                     <div className="text-sm font-black text-white">0.00 hrs</div>
                   </div>
                   <div className="bg-white/10 rounded-lg p-2 border border-white/10 text-center">
-                    <div className="text-[10px] text-amber-300 font-semibold uppercase">Longest Option</div>
-                    <div className="text-sm font-black text-emerald-400">Primary Rule</div>
+                    <div className="text-[10px] text-amber-300 font-semibold uppercase">GenAI CV Win Rate</div>
+                    <div className="text-sm font-black text-emerald-400">83.3% (#1)</div>
                   </div>
                   <div className="bg-white/10 rounded-lg p-2 border border-white/10 text-center">
-                    <div className="text-[10px] text-amber-300 font-semibold uppercase">Exam Speed</div>
-                    <div className="text-sm font-black text-cyan-400">18 Mins</div>
+                    <div className="text-[10px] text-amber-300 font-semibold uppercase">Anti-Only Filter</div>
+                    <div className="text-sm font-black text-cyan-400">100% Trap Pruned</div>
                   </div>
                   <div className="bg-white/10 rounded-lg p-2 border border-white/10 text-center">
                     <div className="text-[10px] text-amber-300 font-semibold uppercase">Scholarly Aura</div>
@@ -326,7 +332,7 @@ Continuous learning never stops! Looking forward to applying these principles to
           <div className="flex border-b border-gray-200 dark:border-outline gap-1 overflow-x-auto pb-px">
             <button
               onClick={() => setActiveTab('longest')}
-              className={`flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold rounded-t-lg transition whitespace-nowrap cursor-pointer ${
+              className={`flex items-center gap-1.5 px-3 py-2 text-xs font-bold rounded-t-lg transition whitespace-nowrap cursor-pointer ${
                 activeTab === 'longest'
                   ? 'bg-surface text-orange-600 dark:text-orange-400 border-t-2 border-orange-500 border-x border-gray-200 dark:border-x-neutral-800 shadow-xs'
                   : 'text-gray-600 dark:text-neutral-400 hover:text-gray-900 dark:hover:text-neutral-100 hover:bg-gray-100 dark:hover:bg-surface-hover'
@@ -336,48 +342,70 @@ Continuous learning never stops! Looking forward to applying these principles to
               1. Longest Option Theorem
             </button>
             <button
+              onClick={() => setActiveTab('antionly')}
+              className={`flex items-center gap-1.5 px-3 py-2 text-xs font-bold rounded-t-lg transition whitespace-nowrap cursor-pointer ${
+                activeTab === 'antionly'
+                  ? 'bg-surface text-amber-600 dark:text-amber-400 border-t-2 border-amber-500 border-x border-gray-200 dark:border-x-neutral-800 shadow-xs'
+                  : 'text-gray-600 dark:text-neutral-400 hover:text-gray-900 dark:hover:text-neutral-100 hover:bg-gray-100 dark:hover:bg-surface-hover'
+              }`}
+            >
+              <Ban className="w-3.5 h-3.5 text-amber-500" />
+              2. Anti-Only &amp; Cascade (NEW! 🔥)
+            </button>
+            <button
+              onClick={() => setActiveTab('benchmark')}
+              className={`flex items-center gap-1.5 px-3 py-2 text-xs font-bold rounded-t-lg transition whitespace-nowrap cursor-pointer ${
+                activeTab === 'benchmark'
+                  ? 'bg-surface text-emerald-600 dark:text-emerald-400 border-t-2 border-emerald-500 border-x border-gray-200 dark:border-x-neutral-800 shadow-xs'
+                  : 'text-gray-600 dark:text-neutral-400 hover:text-gray-900 dark:hover:text-neutral-100 hover:bg-gray-100 dark:hover:bg-surface-hover'
+              }`}
+            >
+              <Trophy className="w-3.5 h-3.5 text-emerald-500" />
+              3. GenAI CV Benchmark (83.3%)
+            </button>
+            <button
               onClick={() => setActiveTab('reverse')}
-              className={`flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold rounded-t-lg transition whitespace-nowrap cursor-pointer ${
+              className={`flex items-center gap-1.5 px-3 py-2 text-xs font-bold rounded-t-lg transition whitespace-nowrap cursor-pointer ${
                 activeTab === 'reverse'
                   ? 'bg-surface text-orange-600 dark:text-orange-400 border-t-2 border-orange-500 border-x border-gray-200 dark:border-x-neutral-800 shadow-xs'
                   : 'text-gray-600 dark:text-neutral-400 hover:text-gray-900 dark:hover:text-neutral-100 hover:bg-gray-100 dark:hover:bg-surface-hover'
               }`}
             >
               <GitFork className="w-3.5 h-3.5" />
-              2. Reverse Engineering (New!)
+              4. Reverse Engineering
             </button>
             <button
               onClick={() => setActiveTab('methods')}
-              className={`flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold rounded-t-lg transition whitespace-nowrap cursor-pointer ${
+              className={`flex items-center gap-1.5 px-3 py-2 text-xs font-bold rounded-t-lg transition whitespace-nowrap cursor-pointer ${
                 activeTab === 'methods'
                   ? 'bg-surface text-orange-600 dark:text-orange-400 border-t-2 border-orange-500 border-x border-gray-200 dark:border-x-neutral-800 shadow-xs'
                   : 'text-gray-600 dark:text-neutral-400 hover:text-gray-900 dark:hover:text-neutral-100 hover:bg-gray-100 dark:hover:bg-surface-hover'
               }`}
             >
               <Zap className="w-3.5 h-3.5" />
-              3. Matching Words &amp; Math Ballpark
+              5. Matching Words &amp; Math
             </button>
             <button
               onClick={() => setActiveTab('center')}
-              className={`flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold rounded-t-lg transition whitespace-nowrap cursor-pointer ${
+              className={`flex items-center gap-1.5 px-3 py-2 text-xs font-bold rounded-t-lg transition whitespace-nowrap cursor-pointer ${
                 activeTab === 'center'
                   ? 'bg-surface text-orange-600 dark:text-orange-400 border-t-2 border-orange-500 border-x border-gray-200 dark:border-x-neutral-800 shadow-xs'
                   : 'text-gray-600 dark:text-neutral-400 hover:text-gray-900 dark:hover:text-neutral-100 hover:bg-gray-100 dark:hover:bg-surface-hover'
               }`}
             >
               <ShieldCheck className="w-3.5 h-3.5" />
-              4. TCS iON Protocol
+              6. TCS iON Protocol
             </button>
             <button
               onClick={() => setActiveTab('linkedin')}
-              className={`flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold rounded-t-lg transition whitespace-nowrap cursor-pointer ${
+              className={`flex items-center gap-1.5 px-3 py-2 text-xs font-bold rounded-t-lg transition whitespace-nowrap cursor-pointer ${
                 activeTab === 'linkedin'
                   ? 'bg-surface text-orange-600 dark:text-orange-400 border-t-2 border-orange-500 border-x border-gray-200 dark:border-x-neutral-800 shadow-xs'
                   : 'text-gray-600 dark:text-neutral-400 hover:text-gray-900 dark:hover:text-neutral-100 hover:bg-gray-100 dark:hover:bg-surface-hover'
               }`}
             >
               <Award className="w-3.5 h-3.5" />
-              5. LinkedIn Post
+              7. LinkedIn Post
             </button>
           </div>
 
@@ -430,7 +458,7 @@ Continuous learning never stops! Looking forward to applying these principles to
 
                 <div className="bg-emerald-50 dark:bg-emerald-950/40 border-l-4 border-emerald-500 p-2.5 rounded text-xs text-emerald-950 dark:text-emerald-200 font-medium leading-relaxed">
                   <strong>The Word Count Verdict:</strong> If one option has noticeably more words than the other three, 
-                  <strong> lock it in immediately</strong>. The longest words method has an almost 100% empirical success rate in NPTEL tests.
+                  <strong> lock it in immediately</strong>. The longest words method has an 80.0% empirical success rate alone in GenAI for CV.
                 </div>
               </div>
 
@@ -446,41 +474,395 @@ Continuous learning never stops! Looking forward to applying these principles to
                         Tiebreaker: Character Count (Use with Caution)
                       </h3>
                       <span className="inline-flex items-center gap-1 text-[10px] text-amber-800 dark:text-amber-300 font-bold bg-amber-50 dark:bg-amber-950/40 px-2 py-0.5 rounded border border-amber-300 dark:border-amber-700">
-                        <AlertTriangle className="w-3 h-3 text-amber-600 dark:text-amber-400" /> NOT 100% GUARANTEED
+                        <AlertTriangle className="w-3 h-3 text-amber-600 dark:text-amber-400" /> TIEBREAKER RESOLUTION
                       </span>
                     </div>
                   </div>
                 </div>
 
                 <p className="text-xs text-gray-700 dark:text-neutral-300 leading-relaxed">
-                  If two or more options are tied with the <strong>exact same number of words</strong>, proceed to the character-level inspection:
+                  If two or more options are tied with the <strong>exact same number of words</strong>, count total characters (including specialized technical terminology like <em>&ldquo;heteroscedasticity&rdquo;</em> vs <em>&ldquo;variability&rdquo;</em>).
                 </p>
-
-                <ul className="text-xs text-gray-700 dark:text-neutral-300 space-y-2 list-disc pl-5">
-                  <li>
-                    Count total characters (including alphabet letters, hyphens, and punctuation).
-                  </li>
-                  <li>
-                    Select the option with the <strong>longest total character length</strong> (indicating longer, more specialized terminology like <em>&ldquo;heteroscedasticity&rdquo;</em> vs <em>&ldquo;variability&rdquo;</em>).
-                  </li>
-                </ul>
-
-                <div className="bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 p-3 rounded text-xs text-amber-950 dark:text-amber-200 space-y-1">
-                  <div className="font-bold flex items-center gap-1 text-amber-900 dark:text-amber-300">
-                    <AlertTriangle className="w-3.5 h-3.5 text-amber-700 dark:text-amber-400" />
-                    Crucial Caveat &amp; Warning:
-                  </div>
-                  <p className="leading-relaxed">
-                    While the <strong>longest words method always works</strong>, the character count tiebreaker method is 
-                    <strong> not 100% guaranteed to work</strong>. Formatting artifacts, hyphenated terms, or font spacing can skew character counts. 
-                    Use character counting strictly as a secondary fallback with caution.
-                  </p>
-                </div>
               </div>
             </div>
           )}
 
-          {/* TAB 2: REVERSE ENGINEERING AXIOM (NEW 2026) */}
+          {/* TAB 2: ANTI-ONLY & MULTI-CASCADE (NEW AXIOMS) */}
+          {activeTab === 'antionly' && (
+            <div className="space-y-4 animate-in fade-in duration-150">
+              
+              {/* Header Box */}
+              <div className="bg-gradient-to-r from-amber-950/40 via-red-950/40 to-orange-950/40 p-4 sm:p-5 rounded-xl border border-amber-600/60 shadow-xs space-y-3">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                  <div className="flex items-center gap-2">
+                    <span className="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 font-black text-sm flex items-center justify-center shrink-0 border border-amber-500/40">
+                      <Ban className="w-4 h-4 text-amber-400" />
+                    </span>
+                    <div>
+                      <h3 className="text-sm sm:text-base font-extrabold text-gray-900 dark:text-white flex items-center gap-2">
+                        Axiom 3: The Anti-Absolute (&ldquo;Never Choose &lsquo;Only&rsquo;&rdquo;) Axiom
+                        <span className="text-[10px] bg-red-500/20 text-red-300 px-2 py-0.5 rounded-full font-black uppercase tracking-wider border border-red-500/30">
+                          100% Trap Proof
+                        </span>
+                      </h3>
+                      <span className="text-xs text-amber-300 font-medium">
+                        Negative Distractor Pruning &bull; Absolute Qualifier Elimination
+                      </span>
+                    </div>
+                  </div>
+                  <div className="text-[11px] font-bold text-emerald-300 bg-emerald-950/60 px-2.5 py-1 rounded-md border border-emerald-800 self-start sm:self-auto">
+                    44/44 Traps Eliminated (0% Error Rate)
+                  </div>
+                </div>
+
+                <p className="text-xs text-gray-700 dark:text-neutral-300 leading-relaxed">
+                  When creating multiple-choice questions in machine learning and computer vision, professors invent quick false distractors by inserting restrictive absolute qualifiers like <strong>&ldquo;only&rdquo;</strong> (e.g., <em>&ldquo;Only continuous variables&rdquo;</em>, <em>&ldquo;Only training data&rdquo;</em>, <em>&ldquo;CNNs can only process text&rdquo;</em>, <em>&ldquo;Pooling only&rdquo;</em>).
+                  In AI, principles are almost never absolute. Therefore, <strong>options containing &ldquo;only&rdquo; are guaranteed trap distractors</strong>.
+                </p>
+              </div>
+
+              {/* Empirical Proof */}
+              <div className="bg-surface p-4 sm:p-5 rounded-xl border border-gray-200 dark:border-outline shadow-xs space-y-3">
+                <div className="flex items-center gap-2">
+                  <span className="w-7 h-7 rounded-lg bg-red-100 dark:bg-red-950/80 text-red-800 dark:text-red-300 font-black text-xs flex items-center justify-center shrink-0">
+                    3A
+                  </span>
+                  <div>
+                    <h4 className="text-sm font-extrabold text-gray-900 dark:text-white">
+                      The &ldquo;Never Choose &lsquo;Only&rsquo;&rdquo; Verification (120 Questions)
+                    </h4>
+                    <span className="text-[10px] text-gray-500 dark:text-neutral-400 font-semibold">
+                      Real exam findings in Generative AI for Computer Vision
+                    </span>
+                  </div>
+                </div>
+
+                <div className="bg-slate-50 dark:bg-surface p-3.5 rounded-xl border border-slate-200 dark:border-outline text-xs space-y-2 font-mono">
+                  <div className="text-gray-500 dark:text-neutral-400 text-[11px] font-sans font-bold flex items-center justify-between">
+                    <span>Real Exam Case Study (Week 1, Q4):</span>
+                    <span className="text-red-500 font-mono text-[10px]">Filter &lsquo;Only&rsquo; (2 Traps Detected)</span>
+                  </div>
+
+                  <div className="space-y-1.5 pt-1">
+                    <div className="text-gray-700 dark:text-neutral-300 p-2 rounded-lg bg-gray-50 dark:bg-surface border border-gray-200 dark:border-neutral-900">
+                      A) The probability of a single random variable <span className="text-gray-400 text-[10px]">(7 words)</span>
+                    </div>
+
+                    <div className="text-emerald-800 dark:text-emerald-300 font-bold bg-emerald-50 dark:bg-emerald-950/50 p-2 rounded-lg border border-emerald-300 dark:border-emerald-800 flex items-center justify-between">
+                      <div>
+                        B) The probability of two or more random variables occurring together <span className="text-[10px] text-emerald-600 dark:text-emerald-400">(10 words)</span>
+                      </div>
+                      <span className="text-[10px] bg-emerald-200 dark:bg-emerald-900/60 text-emerald-900 dark:text-emerald-200 px-1.5 py-0.5 rounded font-sans font-black">
+                        CORRECT &bull; LOCK IN
+                      </span>
+                    </div>
+
+                    <div className="text-red-800 dark:text-red-300 p-2 rounded-lg bg-red-50 dark:bg-red-950/30 border border-red-300 dark:border-red-900 line-through opacity-75">
+                      C) Only independent events <span className="text-[10px] font-sans ml-2">[ELIMINATED: Contains &lsquo;Only&rsquo;]</span>
+                    </div>
+
+                    <div className="text-red-800 dark:text-red-300 p-2 rounded-lg bg-red-50 dark:bg-red-950/30 border border-red-300 dark:border-red-900 line-through opacity-75">
+                      D) Only continuous variables <span className="text-[10px] font-sans ml-2">[ELIMINATED: Contains &lsquo;Only&rsquo;]</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-red-50 dark:bg-red-950/40 border-l-4 border-red-500 p-2.5 rounded text-xs text-red-950 dark:text-red-200 font-medium leading-relaxed">
+                  <strong>The Empirical Anti-Only Rule:</strong> In 44 out of 120 questions across all 12 weeks, options contained &ldquo;only&rdquo;. 
+                  In <strong>0 out of 44 questions (0.00%)</strong> was &ldquo;only&rdquo; the correct answer! Instantly strike out any option containing &ldquo;only&rdquo;.
+                </div>
+              </div>
+
+              {/* Master Multi-Method Priority Cascade */}
+              <div className="bg-surface p-4 sm:p-5 rounded-xl border border-gray-200 dark:border-outline shadow-xs space-y-3">
+                <div className="flex items-center gap-2">
+                  <span className="w-7 h-7 rounded-lg bg-purple-100 dark:bg-purple-950/80 text-purple-800 dark:text-purple-300 font-black text-xs flex items-center justify-center shrink-0">
+                    <Layers className="w-4 h-4 text-purple-600 dark:text-purple-400" />
+                  </span>
+                  <div>
+                    <h4 className="text-sm font-extrabold text-gray-900 dark:text-white">
+                      The Prioritized Multi-Method Decision Cascade
+                    </h4>
+                    <span className="text-[10px] text-purple-700 dark:text-purple-400 font-semibold">
+                      How to use ALL LARP methods simultaneously on every single question
+                    </span>
+                  </div>
+                </div>
+
+                <p className="text-xs text-gray-700 dark:text-neutral-300 leading-relaxed">
+                  Never rely on just one heuristic. On every single exam question, execute the prioritized waterfall:
+                </p>
+
+                <div className="space-y-2 text-xs">
+                  <div className="flex items-start gap-2.5 p-2 rounded-lg bg-red-50 dark:bg-red-950/30 border border-red-200 dark:border-red-900">
+                    <span className="w-5 h-5 rounded-full bg-red-500 text-white font-black text-[10px] flex items-center justify-center shrink-0 mt-0.5">1</span>
+                    <div>
+                      <strong className="text-red-900 dark:text-red-300">Priority 1 (Negative Filter): The Anti-Only Axiom</strong>
+                      <p className="text-[11px] text-red-800 dark:text-red-200">Prune any option containing the restrictive word &ldquo;only&rdquo;. Prunes 52 bad distractors with 100% precision.</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-2.5 p-2 rounded-lg bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-900">
+                    <span className="w-5 h-5 rounded-full bg-emerald-500 text-white font-black text-[10px] flex items-center justify-center shrink-0 mt-0.5">2</span>
+                    <div>
+                      <strong className="text-emerald-900 dark:text-emerald-300">Priority 2 (Universal Inclusivity): &ldquo;All of the above&rdquo;</strong>
+                      <p className="text-[11px] text-emerald-800 dark:text-emerald-200">If &ldquo;All of the above&rdquo; survives in the candidate pool, lock it in immediately (5/5 correct, 100% win rate).</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-2.5 p-2 rounded-lg bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-900">
+                    <span className="w-5 h-5 rounded-full bg-amber-500 text-white font-black text-[10px] flex items-center justify-center shrink-0 mt-0.5">3</span>
+                    <div>
+                      <strong className="text-amber-900 dark:text-amber-300">Priority 3: The Longest Option Theorem (Word Count Primary)</strong>
+                      <p className="text-[11px] text-amber-800 dark:text-amber-200">Select the option with the highest total word count. Professors qualify correct answers with rigorous definitions.</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-2.5 p-2 rounded-lg bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-900">
+                    <span className="w-5 h-5 rounded-full bg-blue-500 text-white font-black text-[10px] flex items-center justify-center shrink-0 mt-0.5">4</span>
+                    <div>
+                      <strong className="text-blue-900 dark:text-blue-300">Priority 4: Character Count Tiebreaker</strong>
+                      <p className="text-[11px] text-blue-800 dark:text-blue-200">When word counts are identical, count characters. Longer characters denote specialized technical terms.</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-2.5 p-2 rounded-lg bg-indigo-50 dark:bg-indigo-950/30 border border-indigo-200 dark:border-indigo-900">
+                    <span className="w-5 h-5 rounded-full bg-indigo-500 text-white font-black text-[10px] flex items-center justify-center shrink-0 mt-0.5">5</span>
+                    <div>
+                      <strong className="text-indigo-900 dark:text-indigo-300">Priority 5: Lexical Alignment (Matching Words Heuristic)</strong>
+                      <p className="text-[11px] text-indigo-800 dark:text-indigo-200">If options are closely tied, count overlapping non-trivial keywords from the question stem.</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-2.5 p-2 rounded-lg bg-purple-50 dark:bg-purple-950/30 border border-purple-200 dark:border-purple-900">
+                    <span className="w-5 h-5 rounded-full bg-purple-500 text-white font-black text-[10px] flex items-center justify-center shrink-0 mt-0.5">6</span>
+                    <div>
+                      <strong className="text-purple-900 dark:text-purple-300">Priority 6: Distractor Intersection (Reverse Engineering Modal Modes)</strong>
+                      <p className="text-[11px] text-purple-800 dark:text-purple-200">For multi-tuple and numerical coordinate options, pick the component mode in the crossfire.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-gradient-to-r from-amber-500/20 via-orange-500/20 to-amber-500/20 p-3 rounded-lg border border-amber-500/40 text-xs text-amber-300 font-bold text-center">
+                  Result of Prioritized Cascade: 83.33% (100 / 120 Questions Correct) on Generative AI for Computer Vision!
+                </div>
+              </div>
+
+            </div>
+          )}
+
+          {/* TAB 3: OFFICIAL BENCHMARK SCORECARD */}
+          {activeTab === 'benchmark' && (
+            <div className="space-y-4 animate-in fade-in duration-150">
+              
+              {/* Grand Benchmark Header */}
+              <div className="bg-gradient-to-br from-slate-900 to-black text-white p-4 sm:p-5 rounded-xl border border-neutral-800 shadow-md space-y-3">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <Trophy className="w-5 h-5 text-amber-400" />
+                    <h3 className="text-sm sm:text-base font-extrabold text-amber-300 uppercase tracking-wider">
+                      Generative AI for Computer Vision (120 Questions) Official ULTRA LARP Benchmark
+                    </h3>
+                  </div>
+                  <span className="text-[10px] bg-amber-400/20 text-amber-300 px-2.5 py-0.5 rounded-full font-bold border border-amber-400/30">
+                    Weeks 1–12 Complete
+                  </span>
+                </div>
+
+                <p className="text-xs text-neutral-300 leading-relaxed">
+                  Rigorous empirical evaluation performed across all 12 weekly assignments (120 multiple choice questions) in 
+                  <strong> Generative AI for Computer Vision</strong> from IIT Madras &amp; Kharagpur.
+                </p>
+
+                {/* Top Metrics Cards */}
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-2 text-center text-xs pt-1">
+                  <div className="bg-white/5 border border-amber-500/60 rounded-lg p-2.5 shadow-sm">
+                    <div className="text-[10px] text-amber-300 font-bold">Multi-Cascade</div>
+                    <div className="text-lg font-black text-amber-400">83.33%</div>
+                    <div className="text-[9px] text-neutral-400">100/120 (#1 Best)</div>
+                  </div>
+                  <div className="bg-white/5 border border-emerald-500/40 rounded-lg p-2.5 shadow-sm">
+                    <div className="text-[10px] text-emerald-300 font-bold">Longest Option</div>
+                    <div className="text-lg font-black text-emerald-400">80.00%</div>
+                    <div className="text-[9px] text-neutral-400">96/120 correct</div>
+                  </div>
+                  <div className="bg-white/5 border border-blue-500/40 rounded-lg p-2.5 shadow-sm">
+                    <div className="text-[10px] text-blue-300 font-bold">Lexical Overlap</div>
+                    <div className="text-lg font-black text-blue-400">75.83%</div>
+                    <div className="text-[9px] text-neutral-400">91/120 correct</div>
+                  </div>
+                  <div className="bg-white/5 border border-purple-500/40 rounded-lg p-2.5 shadow-sm">
+                    <div className="text-[10px] text-purple-300 font-bold">Reverse Eng.</div>
+                    <div className="text-lg font-black text-purple-400">61.67%</div>
+                    <div className="text-[9px] text-neutral-400">74/120 correct</div>
+                  </div>
+                  <div className="bg-white/5 border border-cyan-500/40 rounded-lg p-2.5 shadow-sm">
+                    <div className="text-[10px] text-cyan-300 font-bold">Anti-Only Filter</div>
+                    <div className="text-lg font-black text-cyan-400">100% Trap</div>
+                    <div className="text-[9px] text-neutral-400">44/44 eliminated</div>
+                  </div>
+                  <div className="bg-white/5 border border-red-500/30 rounded-lg p-2.5 shadow-sm">
+                    <div className="text-[10px] text-red-300 font-bold">Blind Guess</div>
+                    <div className="text-lg font-black text-red-400">25.00%</div>
+                    <div className="text-[9px] text-neutral-400">Baseline (30/120)</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* 12-Week Detailed Breakdown Table */}
+              <div className="bg-surface p-4 sm:p-5 rounded-xl border border-gray-200 dark:border-outline shadow-xs space-y-3">
+                <div className="flex items-center justify-between">
+                  <h4 className="text-sm font-extrabold text-gray-900 dark:text-white flex items-center gap-1.5">
+                    <BarChart3 className="w-4 h-4 text-orange-500" />
+                    Week-by-Week Empirical Breakdown (GenAI for CV)
+                  </h4>
+                  <span className="text-[10px] text-emerald-600 dark:text-emerald-400 font-bold bg-emerald-50 dark:bg-emerald-950/40 px-2 py-0.5 rounded border border-emerald-200 dark:border-emerald-800">
+                    Elite + Gold Standard
+                  </span>
+                </div>
+
+                <div className="overflow-x-auto">
+                  <table className="w-full text-left text-xs font-mono">
+                    <thead className="bg-slate-100 dark:bg-surface-muted text-gray-700 dark:text-neutral-300 text-[11px] font-sans">
+                      <tr>
+                        <th className="p-2 rounded-l">Week</th>
+                        <th className="p-2">Subject Module</th>
+                        <th className="p-2 text-center">Longest</th>
+                        <th className="p-2 text-center">Lexical</th>
+                        <th className="p-2 text-center">Reverse</th>
+                        <th className="p-2 text-center rounded-r text-amber-600 dark:text-amber-400 font-black">Ultra Cascade</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-gray-200 dark:divide-neutral-800 text-[11px]">
+                      <tr>
+                        <td className="p-2 font-bold">W1</td>
+                        <td className="p-2 font-sans">Foundations of Generative Models &amp; Probability</td>
+                        <td className="p-2 text-center">70%</td>
+                        <td className="p-2 text-center">70%</td>
+                        <td className="p-2 text-center">40%</td>
+                        <td className="p-2 text-center font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-50/50 dark:bg-emerald-950/20">70% (7/10)</td>
+                      </tr>
+                      <tr>
+                        <td className="p-2 font-bold">W2</td>
+                        <td className="p-2 font-sans">Deep Neural Networks &amp; Backpropagation</td>
+                        <td className="p-2 text-center">70%</td>
+                        <td className="p-2 text-center">70%</td>
+                        <td className="p-2 text-center">60%</td>
+                        <td className="p-2 text-center font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-50/50 dark:bg-emerald-950/20">90% (9/10)</td>
+                      </tr>
+                      <tr>
+                        <td className="p-2 font-bold">W3</td>
+                        <td className="p-2 font-sans">CNNs &amp; Computer Vision Foundations</td>
+                        <td className="p-2 text-center">70%</td>
+                        <td className="p-2 text-center">70%</td>
+                        <td className="p-2 text-center">60%</td>
+                        <td className="p-2 text-center font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-50/50 dark:bg-emerald-950/20">70% (7/10)</td>
+                      </tr>
+                      <tr className="bg-amber-50/50 dark:bg-amber-950/20 font-bold">
+                        <td className="p-2 text-amber-600 dark:text-amber-400">W4 🔥</td>
+                        <td className="p-2 font-sans text-amber-900 dark:text-amber-200">Advanced Architectures &amp; Sequence Models</td>
+                        <td className="p-2 text-center">100%</td>
+                        <td className="p-2 text-center">100%</td>
+                        <td className="p-2 text-center">90%</td>
+                        <td className="p-2 text-center font-black text-amber-600 dark:text-amber-400 bg-amber-100/50 dark:bg-amber-900/40">100% (10/10)</td>
+                      </tr>
+                      <tr>
+                        <td className="p-2 font-bold">W5</td>
+                        <td className="p-2 font-sans">Context, Attention &amp; Representation Learning</td>
+                        <td className="p-2 text-center">80%</td>
+                        <td className="p-2 text-center">70%</td>
+                        <td className="p-2 text-center">60%</td>
+                        <td className="p-2 text-center font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-50/50 dark:bg-emerald-950/20">90% (9/10)</td>
+                      </tr>
+                      <tr>
+                        <td className="p-2 font-bold">W6</td>
+                        <td className="p-2 font-sans">Transformers &amp; Vision Transformers (ViT)</td>
+                        <td className="p-2 text-center">90%</td>
+                        <td className="p-2 text-center">90%</td>
+                        <td className="p-2 text-center">70%</td>
+                        <td className="p-2 text-center font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-50/50 dark:bg-emerald-950/20">90% (9/10)</td>
+                      </tr>
+                      <tr>
+                        <td className="p-2 font-bold">W7</td>
+                        <td className="p-2 font-sans">Vision Transformers &amp; Auto-Encoders</td>
+                        <td className="p-2 text-center">90%</td>
+                        <td className="p-2 text-center">80%</td>
+                        <td className="p-2 text-center">70%</td>
+                        <td className="p-2 text-center font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-50/50 dark:bg-emerald-950/20">90% (9/10)</td>
+                      </tr>
+                      <tr>
+                        <td className="p-2 font-bold">W8</td>
+                        <td className="p-2 font-sans">Variational Auto-Encoders (VAEs)</td>
+                        <td className="p-2 text-center">70%</td>
+                        <td className="p-2 text-center">70%</td>
+                        <td className="p-2 text-center">80%</td>
+                        <td className="p-2 text-center font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-50/50 dark:bg-emerald-950/20">70% (7/10)</td>
+                      </tr>
+                      <tr>
+                        <td className="p-2 font-bold">W9</td>
+                        <td className="p-2 font-sans">GANs &amp; Diffusion Models</td>
+                        <td className="p-2 text-center">60%</td>
+                        <td className="p-2 text-center">60%</td>
+                        <td className="p-2 text-center">60%</td>
+                        <td className="p-2 text-center font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-50/50 dark:bg-emerald-950/20">60% (6/10)</td>
+                      </tr>
+                      <tr>
+                        <td className="p-2 font-bold">W10</td>
+                        <td className="p-2 font-sans">Diffusion Models &amp; Large Language Models</td>
+                        <td className="p-2 text-center">90%</td>
+                        <td className="p-2 text-center">70%</td>
+                        <td className="p-2 text-center">60%</td>
+                        <td className="p-2 text-center font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-50/50 dark:bg-emerald-950/20">90% (9/10)</td>
+                      </tr>
+                      <tr>
+                        <td className="p-2 font-bold">W11</td>
+                        <td className="p-2 font-sans">Vision-Language Models (VLMs) &amp; Multimodal AI</td>
+                        <td className="p-2 text-center">80%</td>
+                        <td className="p-2 text-center">80%</td>
+                        <td className="p-2 text-center">40%</td>
+                        <td className="p-2 text-center font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-50/50 dark:bg-emerald-950/20">90% (9/10)</td>
+                      </tr>
+                      <tr>
+                        <td className="p-2 font-bold">W12</td>
+                        <td className="p-2 font-sans">Multimodal Systems &amp; Agentic AI</td>
+                        <td className="p-2 text-center">90%</td>
+                        <td className="p-2 text-center">80%</td>
+                        <td className="p-2 text-center">50%</td>
+                        <td className="p-2 text-center font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-50/50 dark:bg-emerald-950/20">90% (9/10)</td>
+                      </tr>
+                    </tbody>
+                    <tfoot className="bg-slate-900 text-white font-bold">
+                      <tr>
+                        <td className="p-2" colSpan={2}>GRAND TOTAL (120 Questions)</td>
+                        <td className="p-2 text-center text-emerald-400">80.0%</td>
+                        <td className="p-2 text-center text-blue-400">75.8%</td>
+                        <td className="p-2 text-center text-purple-400">61.7%</td>
+                        <td className="p-2 text-center text-amber-400 font-black text-sm bg-amber-500/20">83.33% (100/120)</td>
+                      </tr>
+                    </tfoot>
+                  </table>
+                </div>
+
+                <div className="bg-emerald-50 dark:bg-emerald-950/40 border-l-4 border-emerald-500 p-2.5 rounded text-xs text-emerald-950 dark:text-emerald-200 font-medium leading-relaxed">
+                  <strong>Ultra LARP Takeaway:</strong> Scoring 83.33% comfortably clears the NPTEL 40% certificate threshold (+43.33% margin), guaranteeing an <strong>Elite + Gold Distinction</strong> without opening a single lecture slide!
+                </div>
+              </div>
+
+              {/* DLNLP Comparison Card */}
+              <div className="bg-slate-100 dark:bg-surface-muted p-3.5 rounded-xl border border-gray-300 dark:border-outline text-xs space-y-1.5">
+                <div className="font-bold text-gray-900 dark:text-white flex items-center justify-between">
+                  <span>Deep Learning &amp; NLP (101 Questions) Benchmark Comparison</span>
+                  <span className="text-purple-600 dark:text-purple-400 font-bold">44.6% RE Win Rate</span>
+                </div>
+                <p className="text-gray-600 dark:text-neutral-400 leading-relaxed text-[11px]">
+                  Across both DLNLP (44.6%) and Generative AI for CV (83.33%), the Ultra LARP methods outperform random guessing (25.0%) by 2x to 3.3x, proving the universal psychometric validity of professor distractor patterns.
+                </p>
+              </div>
+
+            </div>
+          )}
+
+          {/* TAB 4: REVERSE ENGINEERING AXIOM */}
           {activeTab === 'reverse' && (
             <div className="space-y-4 animate-in fade-in duration-150">
               
@@ -495,7 +877,7 @@ Continuous learning never stops! Looking forward to applying these principles to
                       <h3 className="text-sm sm:text-base font-extrabold text-gray-900 dark:text-white flex items-center gap-2">
                         Axiom 2: The Reverse Engineering Principle
                         <span className="text-[10px] bg-purple-500/20 text-purple-700 dark:text-purple-300 px-2 py-0.5 rounded-full font-black uppercase tracking-wider border border-purple-500/30">
-                          New Axiom
+                          Axiom
                         </span>
                       </h3>
                       <span className="text-xs text-purple-700 dark:text-purple-300 font-medium">
@@ -504,7 +886,7 @@ Continuous learning never stops! Looking forward to applying these principles to
                     </div>
                   </div>
                   <div className="text-[11px] font-bold text-emerald-800 dark:text-emerald-300 bg-emerald-100/70 dark:bg-emerald-950/60 px-2.5 py-1 rounded-md border border-emerald-300 dark:border-emerald-800 self-start sm:self-auto">
-                    44.6% Accuracy on DL &amp; NLP (Outperforms all axioms!)
+                    44.6% on DLNLP &bull; 61.7% on GenAI CV
                   </div>
                 </div>
 
@@ -516,11 +898,11 @@ Continuous learning never stops! Looking forward to applying these principles to
                 </p>
               </div>
 
-              {/* Core Mechanism & User's Exact Audio Example */}
+              {/* Core Mechanism */}
               <div className="bg-surface p-4 sm:p-5 rounded-xl border border-gray-200 dark:border-outline shadow-xs space-y-3">
                 <div className="flex items-center gap-2">
                   <span className="w-7 h-7 rounded-lg bg-indigo-100 dark:bg-indigo-950/80 text-indigo-800 dark:text-indigo-300 font-black text-xs flex items-center justify-center shrink-0">
-                    2A
+                    4A
                   </span>
                   <div>
                     <h4 className="text-sm font-extrabold text-gray-900 dark:text-white">
@@ -582,118 +964,14 @@ Continuous learning never stops! Looking forward to applying these principles to
 
                 <div className="bg-purple-50 dark:bg-purple-950/40 border-l-4 border-purple-500 p-2.5 rounded text-xs text-purple-950 dark:text-purple-200 font-medium leading-relaxed">
                   <strong>The Reverse Engineering Verdict:</strong> Options sharing components isolate the exact variables the professor was testing. 
-                  The option that sits at the center of the crossfire (sharing elements with multiple neighbors) is almost always the calculated answer.
-                </div>
-              </div>
-
-              {/* Sub-Rule 2B: Two-Part Coordinate / Tuple Convergence */}
-              <div className="bg-surface p-4 sm:p-5 rounded-xl border border-gray-200 dark:border-outline shadow-xs space-y-3">
-                <div className="flex items-center gap-2">
-                  <span className="w-7 h-7 rounded-lg bg-purple-100 dark:bg-purple-950/80 text-purple-800 dark:text-purple-300 font-black text-xs flex items-center justify-center shrink-0">
-                    2B
-                  </span>
-                  <div>
-                    <h4 className="text-sm font-extrabold text-gray-900 dark:text-white">
-                      Tuple &amp; Multi-Value De-Composition
-                    </h4>
-                    <span className="text-[10px] text-purple-700 dark:text-purple-400 font-semibold">
-                      Real DLNLP Assignment Proofs (Week 10, Q6 &amp; Week 3, Q3)
-                    </span>
-                  </div>
-                </div>
-
-                <p className="text-xs text-gray-700 dark:text-neutral-300 leading-relaxed">
-                  In Deep Learning &amp; NLP quizzes, questions frequently ask for two outputs (e.g. weights &amp; biases, vocabulary dimensions, or bounds). 
-                  Split each option by the separator (<code>and</code>, <code>;</code>, or <code>,</code>) and vote on position 1 and position 2:
-                </p>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
-                  {/* Case 1 */}
-                  <div className="bg-slate-50 dark:bg-surface p-3 rounded-lg border border-slate-200 dark:border-outline space-y-1.5">
-                    <div className="font-bold text-gray-900 dark:text-neutral-200 flex items-center justify-between text-[11px]">
-                      <span>DLNLP Week 10, Q6</span>
-                      <span className="text-emerald-700 dark:text-emerald-400 font-bold">100% Reverse Match</span>
-                    </div>
-                    <div className="font-mono text-[11px] space-y-1 text-gray-600 dark:text-neutral-400">
-                      <div>A) 0 and 4 <span className="text-gray-400">(Pos 1: 0, Pos 2: 4)</span></div>
-                      <div>B) 1 and 3 <span className="text-gray-400">(Pos 1: 1, Pos 2: 3)</span></div>
-                      <div className="text-emerald-700 dark:text-emerald-300 font-bold bg-emerald-50 dark:bg-emerald-950/60 px-1.5 py-0.5 rounded border border-emerald-300 dark:border-emerald-800">
-                        C) 0 and 3 &larr; Mode(Pos 1)=0, Mode(Pos 2)=3
-                      </div>
-                      <div>D) 3 and 0 <span className="text-gray-400">(Inversion trap)</span></div>
-                    </div>
-                    <p className="text-[11px] text-gray-500 dark:text-neutral-400 pt-1">
-                      Longest option fails here because all options have 3 words. <strong>Reverse Engineering solves it in 2 seconds.</strong>
-                    </p>
-                  </div>
-
-                  {/* Case 2 */}
-                  <div className="bg-slate-50 dark:bg-surface p-3 rounded-lg border border-slate-200 dark:border-outline space-y-1.5">
-                    <div className="font-bold text-gray-900 dark:text-neutral-200 flex items-center justify-between text-[11px]">
-                      <span>DLNLP Week 3, Q3 (Skip-Gram Pairs)</span>
-                      <span className="text-emerald-700 dark:text-emerald-400 font-bold">Rescued by Axiom 2</span>
-                    </div>
-                    <div className="font-mono text-[11px] space-y-1 text-gray-600 dark:text-neutral-400">
-                      <div>A) 32 pairs; 4 with charge as target.</div>
-                      <div className="text-emerald-700 dark:text-emerald-300 font-bold bg-emerald-50 dark:bg-emerald-950/60 px-1.5 py-0.5 rounded border border-emerald-300 dark:border-emerald-800">
-                        B) 20 pairs; 4 with charge as target. &larr; WINNER
-                      </div>
-                      <div>C) 20 pairs; 2 with charge as target.</div>
-                      <div>D) 14 pairs; 4 with charge as target.</div>
-                    </div>
-                    <p className="text-[11px] text-gray-500 dark:text-neutral-400 pt-1">
-                      Clause 1 Mode: <code>20 pairs</code> (2x). Clause 2 Mode: <code>4 with charge...</code> (3x). Modal intersection is <strong>Option B</strong>!
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* DLNLP Empirical Benchmark Scorecard */}
-              <div className="bg-gradient-to-br from-slate-900 to-black text-white p-4 sm:p-5 rounded-xl border border-neutral-800 shadow-md space-y-3">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-2">
-                    <Trophy className="w-4 h-4 text-amber-400" />
-                    <h4 className="text-xs sm:text-sm font-bold text-amber-300 uppercase tracking-wider">
-                      Deep Learning &amp; NLP (101 Questions) Official LARP Benchmark
-                    </h4>
-                  </div>
-                  <span className="text-[10px] text-neutral-400">12 Weekly Assignments</span>
-                </div>
-
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center text-xs">
-                  <div className="bg-white/5 border border-purple-500/40 rounded-lg p-2.5">
-                    <div className="text-[10px] text-purple-300 font-bold">Reverse Engineering</div>
-                    <div className="text-lg font-black text-purple-400">44.6%</div>
-                    <div className="text-[9px] text-neutral-400">45/101 correct (#1 Best)</div>
-                  </div>
-                  <div className="bg-white/5 border border-white/10 rounded-lg p-2.5">
-                    <div className="text-[10px] text-amber-300 font-bold">Longest Words</div>
-                    <div className="text-lg font-black text-emerald-400">40.6%</div>
-                    <div className="text-[9px] text-neutral-400">41/101 correct</div>
-                  </div>
-                  <div className="bg-white/5 border border-white/10 rounded-lg p-2.5">
-                    <div className="text-[10px] text-blue-300 font-bold">Lexical Overlap</div>
-                    <div className="text-lg font-black text-blue-400">37.6%</div>
-                    <div className="text-[9px] text-neutral-400">38/101 correct</div>
-                  </div>
-                  <div className="bg-white/5 border border-white/10 rounded-lg p-2.5">
-                    <div className="text-[10px] text-red-300 font-bold">Random Guess</div>
-                    <div className="text-lg font-black text-red-400">25.0%</div>
-                    <div className="text-[9px] text-neutral-400">Blind baseline</div>
-                  </div>
-                </div>
-
-                <div className="text-[11px] text-neutral-300 leading-relaxed bg-white/5 p-2.5 rounded-lg border border-white/5">
-                  <strong>Key Takeaway for Exam Day:</strong> In conceptual weeks (e.g. Transformers &amp; Word Embeddings), use <strong>Longest Option</strong> (up to 71.4% win rate). 
-                  In computational weeks (e.g. Week 10 &amp; Week 11), switch to <strong>Reverse Engineering</strong> (70.0% &ndash; 71.4% win rate). 
-                  Both comfortably pass the NPTEL 40% certificate threshold with zero study time!
+                  The option that sits at the center of the crossfire is almost always the calculated answer.
                 </div>
               </div>
 
             </div>
           )}
 
-          {/* TAB 3: MATCHING WORDS & MATH BALLPARK */}
+          {/* TAB 5: MATCHING WORDS & MATH BALLPARK */}
           {activeTab === 'methods' && (
             <div className="space-y-4 animate-in fade-in duration-150">
               
@@ -701,7 +979,7 @@ Continuous learning never stops! Looking forward to applying these principles to
               <div className="bg-surface p-4 sm:p-5 rounded-xl border border-gray-200 dark:border-outline shadow-xs space-y-3">
                 <div className="flex items-center gap-2">
                   <span className="w-7 h-7 rounded-lg bg-blue-100 dark:bg-blue-950/80 text-blue-800 dark:text-blue-300 font-black text-xs flex items-center justify-center shrink-0">
-                    #2
+                    #5
                   </span>
                   <div>
                     <h3 className="text-sm font-extrabold text-gray-900 dark:text-white">
@@ -727,19 +1005,13 @@ Continuous learning never stops! Looking forward to applying these principles to
                     <strong> pick that option</strong>. Choose the option that shares the <strong>highest number of words in common</strong> with the question stem.
                   </p>
                 </div>
-
-                <div className="text-xs text-gray-600 dark:text-neutral-400 bg-slate-50 dark:bg-surface p-2.5 rounded border border-gray-200 dark:border-outline leading-relaxed">
-                  <strong>Why this works:</strong> IIT professors copy questions straight from their slide definitions. 
-                  The slide header contains keywords X and Y, and the correct bullet point contains X and Y again. 
-                  Distractors are generated off the top of their head and lack that direct lexical fingerprint.
-                </div>
               </div>
 
               {/* Method 3: Brute-Force Mathematical Ballpark Convergence */}
               <div className="bg-surface p-4 sm:p-5 rounded-xl border border-gray-200 dark:border-outline shadow-xs space-y-3">
                 <div className="flex items-center gap-2">
                   <span className="w-7 h-7 rounded-lg bg-purple-100 dark:bg-purple-950/80 text-purple-800 dark:text-purple-300 font-black text-xs flex items-center justify-center shrink-0">
-                    #3
+                    #6
                   </span>
                   <div>
                     <h3 className="text-sm font-extrabold text-gray-900 dark:text-white">
@@ -752,68 +1024,15 @@ Continuous learning never stops! Looking forward to applying these principles to
                 </div>
 
                 <p className="text-xs text-gray-700 dark:text-neutral-300 leading-relaxed">
-                  Facing a complex physics, ML, or HR numerical problem with zero idea what equation to use? Execute the brute-force sweep:
-                </p>
-
-                <div className="bg-purple-50/60 dark:bg-purple-950/40 p-3 rounded-lg border border-purple-200 dark:border-purple-900/60 text-xs space-y-2">
-                  <div className="font-bold text-purple-950 dark:text-purple-200 flex items-center gap-1.5">
-                    <Calculator className="w-3.5 h-3.5 text-purple-700 dark:text-purple-400" />
-                    The Arithmetic Convergence Algorithm:
-                  </div>
-                  <ol className="list-decimal pl-5 space-y-1.5 text-purple-900 dark:text-purple-200 leading-relaxed">
-                    <li>Extract <strong>every single number</strong> given in the question stem (e.g. <em>N</em> = 50, <em>p</em> = 0.4).</li>
-                    <li>
-                      Perform primitive mathematical operations with those numbers:
-                      <ul className="list-disc pl-4 mt-1.5 space-y-1 text-[11px] text-purple-800 dark:text-purple-300">
-                        <li><strong>Multiply them:</strong> <span className="font-semibold text-purple-950 dark:text-purple-100">50 × 0.4 = 20</span></li>
-                        <li><strong>Divide them:</strong> <span className="font-semibold text-purple-950 dark:text-purple-100">50 / 0.4 = 125</span> or <span className="font-semibold text-purple-950 dark:text-purple-100">0.4 / 50 = 0.008</span></li>
-                        <li><strong>Add/Subtract them:</strong> <span className="font-semibold text-purple-950 dark:text-purple-100">50 + 0.4 = 50.4</span> or <span className="font-semibold text-purple-950 dark:text-purple-100">50 - 0.4 = 49.6</span></li>
-                        <li><strong>Divide product by 2 or 100:</strong> <span className="font-semibold text-purple-950 dark:text-purple-100">(50 × 0.4) / 2 = 10</span></li>
-                      </ul>
-                    </li>
-                    <li>
-                      Compare your results against the 4 options: <strong>choose whichever option is closest or in the same approximate ballpark / order of magnitude</strong>.
-                    </li>
-                  </ol>
-                </div>
-
-                <div className="text-xs text-gray-600 dark:text-neutral-400 bg-slate-50 dark:bg-surface p-2.5 rounded border border-gray-200 dark:border-outline leading-relaxed">
-                  <strong>Why this works:</strong> NPTEL questions rarely involve mystery transcendental constants. 
-                  Formulas are almost always products, ratios, or linear combinations of the given parameters. 
-                  Simple multiplication or division hits the exact answer or its decimal multiple &gt;70% of the time.
-                </div>
-              </div>
-
-              {/* Bonus LARP Method: Decimal Outlier Elimination */}
-              <div className="bg-surface p-4 sm:p-5 rounded-xl border border-gray-200 dark:border-outline shadow-xs space-y-2">
-                <div className="flex items-center gap-2">
-                  <span className="w-7 h-7 rounded-lg bg-orange-100 dark:bg-orange-950/80 text-orange-800 dark:text-orange-300 font-black text-xs flex items-center justify-center shrink-0">
-                    #4
-                  </span>
-                  <div>
-                    <h3 className="text-sm font-extrabold text-gray-900 dark:text-white">
-                      Decimal Outlier Elimination (Distractor Twins)
-                    </h3>
-                    <span className="text-[10px] text-orange-700 dark:text-orange-400 font-semibold">
-                      Spotting professor copy-paste distractors
-                    </span>
-                  </div>
-                </div>
-
-                <p className="text-xs text-gray-700 dark:text-neutral-300 leading-relaxed">
-                  If the 4 numerical options are: <strong>A) 0.15</strong>, <strong>B) 14.8</strong>, <strong>C) 15.2</strong>, and <strong>D) 1500</strong>:
-                </p>
-                <p className="text-xs text-gray-600 dark:text-neutral-400 leading-relaxed">
-                  Immediately eliminate <strong>A</strong> (too small) and <strong>D</strong> (too large). 
-                  Professors create quick distractors by moving the decimal point (multiplying or dividing by 10 or 100). 
-                  The true correct answer is always flanked closely by its legitimate calculation twin (<strong>B</strong> or <strong>C</strong>).
+                  Facing a complex physics, ML, or HR numerical problem with zero idea what equation to use?
+                  Multiply, divide, or add all numbers given in the question stem. Choose whichever option is closest or in the same order of magnitude.
                 </p>
               </div>
 
             </div>
           )}
 
-          {/* TAB 3: TCS iON CENTER PROTOCOL */}
+          {/* TAB 6: TCS iON CENTER PROTOCOL */}
           {activeTab === 'center' && (
             <div className="space-y-3.5 text-xs text-gray-700 dark:text-neutral-300 animate-in fade-in duration-150">
               <div className="bg-surface p-4 rounded-xl border border-gray-200 dark:border-outline shadow-xs space-y-2">
@@ -832,7 +1051,7 @@ Continuous learning never stops! Looking forward to applying these principles to
                   2. The Mandatory Waiting Hour Performance
                 </h4>
                 <p className="text-gray-600 dark:text-neutral-400 leading-relaxed">
-                  Using the Longest Option Theorem and Lexical Overlap, you will finish your 50 questions in under 20 minutes. 
+                  Using the Longest Option Theorem and the Ultra LARP Cascade, you will finish your 50 questions in under 20 minutes. 
                   However, TCS iON does not let anyone leave before 60 minutes. Do NOT click submit early and sleep on the desk. 
                   Solemnly click through the review palette looking like you are deeply pondering mathematical edge-cases.
                 </p>
@@ -840,12 +1059,12 @@ Continuous learning never stops! Looking forward to applying these principles to
             </div>
           )}
 
-          {/* TAB 4: LINKEDIN TEMPLATE */}
+          {/* TAB 7: LINKEDIN TEMPLATE */}
           {activeTab === 'linkedin' && (
             <div className="space-y-3 text-xs animate-in fade-in duration-150">
               <div className="flex items-center justify-between bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-900 p-3 rounded-xl">
                 <div>
-                  <div className="font-bold text-blue-900 dark:text-blue-200">Pre-Formatted LinkedIn Victory Post</div>
+                  <div className="font-bold text-blue-900 dark:text-blue-200">Pre-Formatted LinkedIn Ultra LARP Victory Post</div>
                   <div className="text-[11px] text-blue-700 dark:text-blue-300">One-click copy to celebrate your glorious certificate with the world.</div>
                 </div>
                 <button
@@ -876,7 +1095,7 @@ Continuous learning never stops! Looking forward to applying these principles to
             className="px-4 py-2 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-slate-950 font-black text-xs rounded-lg transition cursor-pointer shadow-md flex items-center gap-1.5 transform active:scale-95"
           >
             <Flame className="w-3.5 h-3.5 fill-slate-950" />
-            Acknowledge the LARP
+            Acknowledge the Ultra LARP
           </button>
         </div>
       </div>
@@ -885,7 +1104,7 @@ Continuous learning never stops! Looking forward to applying these principles to
 }
 
 /**
- * Top-Right Button that toggles the LARP guide modal and triggers the full-screen flash on acknowledge
+ * Top-Right Button that toggles the Ultra LARP guide modal and triggers the full-screen flash on acknowledge
  */
 export function LarpGuideButton() {
   const [isOpen, setIsOpen] = useState(false);
@@ -896,14 +1115,14 @@ export function LarpGuideButton() {
       <button
         onClick={() => setIsOpen(true)}
         className="group relative inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold transition-all duration-200 cursor-pointer shadow-xs border bg-gradient-to-r from-amber-500/10 via-orange-500/10 to-amber-500/15 border-amber-400/60 hover:border-amber-500 text-amber-900 dark:text-amber-300 hover:text-orange-950 dark:hover:text-amber-100 hover:shadow-amber-500/10 dark:bg-amber-950/30"
-        title="Open the In-Depth NPTEL LARP Guide"
+        title="Open the In-Depth NPTEL Ultra LARP Guide"
       >
         <span className="relative flex h-2 w-2">
           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
           <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
         </span>
         <Flame className="w-3.5 h-3.5 text-orange-600 fill-orange-500 group-hover:scale-110 transition-transform" />
-        <span className="font-extrabold tracking-tight">LARP Guide</span>
+        <span className="font-extrabold tracking-tight">Ultra LARP Guide</span>
         <span className="bg-amber-400/80 text-slate-950 text-[9px] font-black px-1.5 py-0.2 rounded-full uppercase tracking-tighter">
           NPTEL
         </span>
@@ -925,7 +1144,7 @@ export function LarpGuideButton() {
 }
 
 /**
- * Mid-Quiz "LARP Successful" Button
+ * Mid-Quiz "Ultra LARP Successful" Button
  * Plays a randomly selected meme sound and the cinematic overlay.
  */
 export function LarpSuccessfulButton({ 
@@ -979,7 +1198,7 @@ export function LarpSuccessfulButton({
         </span>
         <Flame className="w-3.5 h-3.5 fill-slate-950 text-slate-950 group-hover:scale-125 transition-transform" />
         <span className="tracking-tight uppercase font-extrabold whitespace-nowrap">
-          LARP Successful
+          Ultra LARP Successful
         </span>
         <Sparkles className="w-3 h-3 text-slate-950 opacity-90 group-hover:rotate-12 transition-transform" />
       </button>
@@ -988,13 +1207,12 @@ export function LarpSuccessfulButton({
       <LarpFlashOverlay 
         isOpen={isFlashing} 
         onClose={close}
-        badgeText="🔥 LARP SUCCESSFUL — THEOREM ENGAGED!"
+        badgeText="🔥 ULTRA LARP SUCCESSFUL — THEOREM ENGAGED!"
         synthesizedSound={false}
         durationMs={Math.max(4000, ((sound?.duration ?? 3) + 0.5) * 1000)}
         soundName={sound?.name}
-        subText="Distractor Eliminated • Longest Option Locked • Elite + Gold Certificate Guaranteed"
+        subText="Anti-Only Filter Applied • Longest Option Locked • Elite + Gold Certificate Guaranteed"
       />
     </>
   );
 }
-
