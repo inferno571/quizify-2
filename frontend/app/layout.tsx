@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import { themeInitScript } from '../lib/themes';
 import 'katex/dist/katex.min.css';
+import { Analytics } from '@vercel/analytics/next';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -36,6 +37,7 @@ export default function RootLayout({
           <NgrokHeaderInterceptor />
           {children}
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
